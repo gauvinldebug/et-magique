@@ -3,11 +3,13 @@ layout: ../layouts/Texte.astro
 titre: Mentions légales
 ---
 
-**Éditeur du site :** à compléter (nom de l'éditeur ou de la structure, adresse de contact).
+**Éditeur du site :** Maths et Magique, site personnel et non professionnel, gratuit et sans publicité. Conformément à l'article 6, III, 2 de la loi n° 2004-575 du 21 juin 2004 pour la confiance dans l'économie numérique (LCEN), l'éditeur, personne physique agissant à titre non professionnel, a choisi de ne pas rendre public son nom ; ses coordonnées d'identification ont été communiquées à l'hébergeur ci-dessous.
 
-**Contact :** à compléter.
+**Directeur de la publication :** l'éditeur du site, joignable à l'adresse ci-dessous.
 
-**Hébergeur :** Netlify, Inc., 101 2nd Street, San Francisco, CA 94105, États-Unis. netlify.com
+**Contact :** [gauvinl@icloud.com](mailto:gauvinl@icloud.com), ou le [cahier de demandes](/demandes/) du site.
+
+**Hébergeur :** Netlify, Inc., 512 2nd Street, Suite 200, San Francisco, CA 94107, États-Unis. Site : [netlify.com](https://www.netlify.com/).
 
 ## Droits d'auteur
 

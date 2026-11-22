@@ -4,8 +4,8 @@ export const SITE = {
   nom: 'Et Magique',
   domaine: 'etmagique.fr',
   url: 'https://etmagique.fr',
-  // Contact affiché dans les mentions légales (à compléter par Louison).
-  contact: 'contact@etmagique.fr',
+  // Contact affiché dans les mentions légales.
+  contact: 'gauvinl@icloud.com',
 };
 
 export type Matiere = {
