@@ -1,0 +1,129 @@
+# Exercices corrigés, du plus facile au type contrôle.
+# type d'étape : init (vert), her (orange), conc (bleu), calcul, methode, piege (rouge)
+exercices:
+  - titre: Résoudre avec le discriminant
+    difficulte: 1
+    type: application
+    enonce: |
+      Résoudre dans $\mathbb{R}$.
+      1. $\corange{x}^2 - 5\corange{x} + 6 = 0$
+      2. $4\corange{x}^2 - 4\corange{x} + 1 = 0$
+      3. $2\corange{x}^2 + \corange{x} + 3 = 0$
+    indice: Calcule $\Delta = b^2 - 4ac$ à chaque fois.
+    etapes:
+      - type: calcul
+        titre: Question 1
+        texte: >-
+          $\Delta = 25 - 24 = 1 > 0$. $\corange{x}_1 = \frac{5 - 1}{2} = 2$ et $\corange{x}_2 = \frac{5 + 1}{2} = 3$. $S = \{2\,;3\}$.
+      - type: calcul
+        titre: Question 2
+        texte: >-
+          $\Delta = 16 - 16 = 0$. Racine double $\corange{x}_0 = \frac{4}{8} = \frac{1}{2}$. $S = \left\{\frac{1}{2}\right\}$.
+      - type: calcul
+        titre: Question 3
+        texte: >-
+          $\Delta = 1 - 24 = -23 < 0$. Pas de racine réelle, $S = \varnothing$.
+        note: le jet ne touche pas le bassin
+
+  - titre: Sans discriminant
+    difficulte: 1
+    type: methode
+    enonce: |
+      Résoudre dans $\mathbb{R}$, sans calculer $\Delta$.
+      1. $5\corange{x}^2 + 2\corange{x} = 0$
+      2. $3\corange{x}^2 - 27 = 0$
+    indice: Factorise par $\corange{x}$ pour la première, isole $\corange{x}^2$ pour la seconde.
+    etapes:
+      - type: calcul
+        titre: Question 1
+        texte: >-
+          $\corange{x}(5\corange{x} + 2) = 0 \iff \corange{x} = 0$ ou $\corange{x} = -\frac{2}{5}$.
+      - type: calcul
+        titre: Question 2
+        texte: >-
+          $\corange{x}^2 = 9 \iff \corange{x} = 3$ ou $\corange{x} = -3$.
+        note: deux solutions, pas une seule
+
+  - titre: Forme canonique et sommet
+    difficulte: 2
+    type: methode
+    enonce: |
+      Soit $\cbleu{f}(\corange{x}) = 2\corange{x}^2 - 8\corange{x} + 3$.
+      1. Déterminer la forme canonique de $\cbleu{f}$.
+      2. En déduire les variations de $\cbleu{f}$ et son extremum.
+    indice: Calcule $\alpha = -\frac{b}{2a}$ puis $\beta = \cbleu{f}(\alpha)$.
+    etapes:
+      - type: calcul
+        titre: Le sommet
+        texte: $\alpha = -\frac{-8}{4} = 2$ et $\beta = \cbleu{f}(2) = 8 - 16 + 3 = -5$.
+      - type: calcul
+        titre: La forme canonique
+        texte: $\cbleu{f}(\corange{x}) = 2(\corange{x} - 2)^2 - 5$.
+      - type: conc
+        titre: Les variations
+        texte: $a = 2 > 0$, la parabole est un bol. <mark>$\cbleu{f}$ est décroissante sur $]-\infty\,;2]$, croissante sur $[2\,;+\infty[$, avec un minimum égal à $-5$ en 2</mark>.
+
+  - titre: Une inéquation
+    difficulte: 2
+    type: application
+    enonce: |
+      Résoudre dans $\mathbb{R}$ l'inéquation $-\corange{x}^2 + 2\corange{x} + 8 \ge 0$.
+    indice: Trouve les racines, puis utilise le signe de $a$.
+    etapes:
+      - type: calcul
+        titre: Les racines
+        texte: >-
+          $\Delta = 4 + 32 = 36$. $\corange{x}_1 = \frac{-2 - 6}{-2} = 4$ et $\corange{x}_2 = \frac{-2 + 6}{-2} = -2$.
+      - type: piege
+        titre: Le signe de a
+        texte: >-
+          $a = -1 < 0$ : le trinôme est négatif à l'extérieur des racines et **positif entre** elles.
+        note: a négatif, le jet d'eau
+      - type: conc
+        titre: Conclusion
+        texte: <mark>$S = [-2\,;4]$</mark>.
+
+  - titre: Racine évidente
+    difficulte: 2
+    type: methode
+    enonce: |
+      Soit $P(\corange{x}) = 3\corange{x}^2 - 7\corange{x} + 4$.
+      1. Vérifier que 1 est racine de $P$.
+      2. Trouver l'autre racine sans calculer $\Delta$, puis factoriser $P$.
+    indice: Le produit des racines vaut $\frac{c}{a}$.
+    etapes:
+      - type: calcul
+        titre: Question 1
+        texte: $P(1) = 3 - 7 + 4 = 0$, donc 1 est racine.
+      - type: calcul
+        titre: Question 2, l'autre racine
+        texte: $1 \times \corange{x}_2 = \frac{4}{3}$, donc $\corange{x}_2 = \frac{4}{3}$.
+      - type: conc
+        titre: La factorisation
+        texte: <mark>$P(\corange{x}) = 3(\corange{x} - 1)\left(\corange{x} - \frac{4}{3}\right) = (\corange{x} - 1)(3\corange{x} - 4)$</mark>.
+
+  - titre: Problème de bénéfice
+    difficulte: 3
+    type: bac
+    enonce: |
+      Une entreprise fabrique $\corange{x}$ centaines d'objets ($0 \le \corange{x} \le 10$). Son bénéfice, en milliers d'euros, est $B(\corange{x}) = -\corange{x}^2 + 8\corange{x} - 7$.
+      1. Pour quelles quantités l'entreprise est-elle rentable ($B(\corange{x}) > 0$) ?
+      2. Quelle quantité donne un bénéfice maximal ? Quel est ce bénéfice ?
+    indice: 1 est une racine évidente.
+    etapes:
+      - type: calcul
+        titre: Les racines
+        texte: >-
+          $B(1) = -1 + 8 - 7 = 0$. Le produit des racines vaut $\frac{-7}{-1} = 7$, donc l'autre racine est 7.
+      - type: calcul
+        titre: Question 1
+        texte: >-
+          $a = -1 < 0$, donc $B(\corange{x}) > 0$ strictement entre les racines : $\corange{x} \in\, ]1\,;7[$. L'entreprise est rentable entre 100 et 700 objets.
+      - type: calcul
+        titre: Question 2
+        texte: >-
+          Le sommet est en $\alpha = -\frac{8}{-2} = 4$, et $B(4) = -16 + 32 - 7 = 9$.
+        note: au milieu des racines, par symétrie
+      - type: conc
+        titre: Conclusion
+        texte: <mark>Le bénéfice est maximal pour 400 objets, il vaut 9 000 €</mark>.

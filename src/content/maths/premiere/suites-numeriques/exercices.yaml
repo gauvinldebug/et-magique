@@ -1,0 +1,113 @@
+# Exercices corrigés, du plus facile au type contrôle.
+# type d'étape : init (vert), her (orange), conc (bleu), calcul, methode, piege (rouge)
+exercices:
+  - titre: Calculer des termes
+    difficulte: 1
+    type: application
+    enonce: |
+      1. Soit $\un = \corange{n}^2 - 3\corange{n}$. Calculer $\uz$, $u_1$ et $u_5$.
+      2. Soit $v_0 = 2$ et $v_{\corange{n}+1} = 3v_{\corange{n}} - 1$. Calculer $v_1$, $v_2$ et $v_3$.
+    indice: Dans la question 2, chaque terme se calcule à partir du précédent.
+    etapes:
+      - type: calcul
+        titre: Question 1
+        texte: $\uz = 0$, $u_1 = 1 - 3 = -2$, $u_5 = 25 - 15 = 10$.
+      - type: calcul
+        titre: Question 2
+        texte: $v_1 = 3 \times 2 - 1 = 5$, $v_2 = 3 \times 5 - 1 = 14$, $v_3 = 3 \times 14 - 1 = 41$.
+        note: on avance marche par marche
+
+  - titre: Prouver qu'une suite est arithmétique
+    difficulte: 1
+    type: methode
+    enonce: |
+      Soit $\un = \dfrac{3\corange{n} - 1}{2}$. Montrer que $\cbleu{u}$ est arithmétique et donner sa raison et son premier terme.
+    indice: Calcule $\unn - \un$.
+    etapes:
+      - type: calcul
+        titre: La différence
+        texte: $\unn - \un = \frac{3(\corange{n} + 1) - 1}{2} - \frac{3\corange{n} - 1}{2} = \frac{3}{2}$.
+      - type: conc
+        titre: Conclusion
+        texte: La différence est constante, donc <mark>$\cbleu{u}$ est arithmétique de raison $\frac{3}{2}$ et de premier terme $\uz = -\frac{1}{2}$</mark>.
+
+  - titre: Un pourcentage
+    difficulte: 2
+    type: application
+    enonce: |
+      Une ville compte 20 000 habitants en 2025. Sa population baisse de 2 % par an. On note $p_{\corange{n}}$ la population en $2025 + \corange{n}$.
+      1. Exprimer $p_{\corange{n}+1}$ en fonction de $p_{\corange{n}}$. Quelle est la nature de la suite ?
+      2. Exprimer $p_{\corange{n}}$ en fonction de $\corange{n}$ et estimer la population en 2035.
+    indice: Baisser de 2 %, c'est multiplier par $0{,}98$.
+    etapes:
+      - type: calcul
+        titre: Question 1
+        texte: $p_{\corange{n}+1} = 0{,}98\,p_{\corange{n}}$. La suite est géométrique de raison $0{,}98$, de premier terme $p_0 = 20\,000$.
+        note: la photocopieuse en mode réduction
+      - type: calcul
+        titre: Question 2
+        texte: $p_{\corange{n}} = 20\,000 \times 0{,}98^{\corange{n}}$ et $p_{10} = 20\,000 \times 0{,}98^{10} \approx 16\,341$.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>Environ 16 341 habitants en 2035</mark>.
+
+  - titre: Somme de termes
+    difficulte: 2
+    type: methode
+    enonce: |
+      1. Calculer $S = 7 + 11 + 15 + \dots + 87$.
+      2. Calculer $T = 3 + 6 + 12 + \dots + 3 \times 2^{9}$.
+    indice: Commence par compter le nombre de termes.
+    etapes:
+      - type: calcul
+        titre: Question 1, le nombre de termes
+        texte: Suite arithmétique de raison 4. $87 = 7 + 4k$ donne $k = 20$, donc il y a 21 termes.
+        note: 20 marches, 21 termes
+      - type: calcul
+        titre: Question 1, la somme
+        texte: $S = 21 \times \frac{7 + 87}{2} = 21 \times 47 = 987$.
+      - type: calcul
+        titre: Question 2
+        texte: >-
+          Suite géométrique de raison 2, de $3 \times 2^0$ à $3 \times 2^9$ : 10 termes. $T = 3 \times \frac{1 - 2^{10}}{1 - 2} = 3 \times 1\,023 = 3\,069$.
+
+  - titre: Variations d'une suite
+    difficulte: 2
+    type: methode
+    enonce: |
+      Étudier le sens de variation de la suite définie pour $\corange{n} \ge 0$ par $\un = \corange{n}^2 - 6\corange{n} + 1$.
+    indice: Calcule $\unn - \un$ et étudie son signe.
+    etapes:
+      - type: calcul
+        titre: La différence
+        texte: >-
+          $\unn - \un = (\corange{n} + 1)^2 - 6(\corange{n} + 1) + 1 - \corange{n}^2 + 6\corange{n} - 1 = 2\corange{n} - 5$.
+      - type: methode
+        titre: Le signe
+        texte: $2\corange{n} - 5 \ge 0 \iff \corange{n} \ge 2{,}5$, soit $\corange{n} \ge 3$.
+      - type: conc
+        titre: Conclusion
+        texte: >-
+          <mark>La suite est décroissante jusqu'au rang 3, puis croissante à partir du rang 3</mark> : $\uz > u_1 > u_2 > u_3$ et $u_3 < u_4 < \dots$
+
+  - titre: Suite auxiliaire
+    difficulte: 3
+    type: bac
+    enonce: |
+      Soit $\uz = 5$ et $\unn = 0{,}5\,\un + 3$. On pose $v_{\corange{n}} = \un - 6$.
+      1. Montrer que $\cbleu{v}$ est géométrique.
+      2. En déduire $\un$ en fonction de $\corange{n}$.
+      3. Que deviennent les termes de $\cbleu{u}$ quand $\corange{n}$ devient grand ?
+    indice: Exprime $v_{\corange{n}+1}$ en fonction de $\un$, puis de $v_{\corange{n}}$.
+    etapes:
+      - type: calcul
+        titre: Question 1
+        texte: >-
+          $v_{\corange{n}+1} = \unn - 6 = 0{,}5\un + 3 - 6 = 0{,}5\un - 3 = 0{,}5(\un - 6) = 0{,}5\,v_{\corange{n}}$. $\cbleu{v}$ est géométrique de raison $0{,}5$, avec $v_0 = 5 - 6 = -1$.
+        note: on factorise par 0,5
+      - type: calcul
+        titre: Question 2
+        texte: $v_{\corange{n}} = -0{,}5^{\corange{n}}$, donc $\un = v_{\corange{n}} + 6 = 6 - 0{,}5^{\corange{n}}$.
+      - type: conc
+        titre: Question 3
+        texte: $0{,}5^{\corange{n}}$ devient aussi proche de 0 qu'on veut, donc <mark>les termes de $\cbleu{u}$ se rapprochent de 6</mark>.

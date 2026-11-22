@@ -1,0 +1,55 @@
+questions:
+  - question: Le nombre dérivé $\cbleu{f}'(a)$ est…
+    choix:
+      - la pente de la tangente au point d'abscisse $a$
+      - la valeur de $\cbleu{f}$ en $a$
+      - l'ordonnée à l'origine de la tangente
+      - l'aire sous la courbe
+    bonne: 0
+    explication: C'est la pente de la droite qu'on voit à la loupe autour du point.
+    revoir: cours
+
+  - question: La dérivée de $\corange{x}^5$ est…
+    choix: ['$5\corange{x}^4$', '$\corange{x}^4$', '$5\corange{x}^5$', '$4\corange{x}^5$']
+    bonne: 0
+    explication: $(\corange{x}^n)' = n\corange{x}^{n-1}$.
+    revoir: cours
+
+  - question: La dérivée de $\dfrac{1}{\corange{x}}$ est…
+    choix: ['$\ln \corange{x}$', '$-\dfrac{1}{\corange{x}^2}$', '$\dfrac{1}{\corange{x}^2}$', '$-\dfrac{1}{\corange{x}}$']
+    bonne: 1
+    explication: Formule à connaître. La fonction inverse est décroissante sur chaque intervalle, la dérivée est négative.
+    revoir: cours
+
+  - question: La dérivée de $\corange{x}\sqrt{\corange{x}}$ (pour $\corange{x} > 0$) est…
+    choix: ['$\dfrac{1}{2\sqrt{\corange{x}}}$', '$\sqrt{\corange{x}} + \dfrac{\corange{x}}{2\sqrt{\corange{x}}}$', '$\dfrac{\corange{x}}{2\sqrt{\corange{x}}}$', '$1 + \dfrac{1}{2\sqrt{\corange{x}}}$']
+    bonne: 1
+    explication: >-
+      $(uv)' = u'v + uv'$ avec $u = \corange{x}$ et $v = \sqrt{\corange{x}}$. On peut simplifier en $\frac{3}{2}\sqrt{\corange{x}}$.
+    revoir: cours
+
+  - question: Si $\cbleu{f}(2) = 3$ et $\cbleu{f}'(2) = -1$, la tangente en 2 a pour équation…
+    choix: ['$y = -\corange{x} + 5$', '$y = 3\corange{x} - 1$', '$y = -\corange{x} + 3$', '$y = -\corange{x} - 1$']
+    bonne: 0
+    explication: $y = -1(\corange{x} - 2) + 3 = -\corange{x} + 5$.
+    revoir: exercices
+
+  - question: Si $\cbleu{f}'(\corange{x}) > 0$ sur $[0\,;5]$, alors $\cbleu{f}$ est…
+    choix: ["positive sur $[0\\,;5]$", "croissante sur $[0\\,;5]$", "décroissante sur $[0\\,;5]$", "constante sur $[0\\,;5]$"]
+    bonne: 1
+    explication: Le signe de la dérivée donne les variations, pas le signe de $\cbleu{f}$.
+    revoir: cours
+
+  - question: La dérivée de $(3\corange{x} + 1)^2$ est…
+    choix: ['$2(3\corange{x} + 1)$', '$6(3\corange{x} + 1)$', '$3(3\corange{x} + 1)^2$', '$9\corange{x}$']
+    bonne: 1
+    explication: >-
+      $(\cbleu{f}(a\corange{x} + b))' = a\cbleu{f}'(a\corange{x} + b)$ avec $\cbleu{f}(X) = X^2$, donc $3 \times 2(3\corange{x} + 1)$.
+    revoir: cours
+
+  - question: Le taux d'accroissement de $\corange{x}^2$ entre 1 et $1 + h$ vaut…
+    choix: ['$2 + h$', '$2h + h^2$', '$h$', '$2$']
+    bonne: 0
+    explication: >-
+      $\frac{(1 + h)^2 - 1}{h} = \frac{2h + h^2}{h} = 2 + h$, qui tend vers 2 quand $h \to 0$.
+    revoir: cours

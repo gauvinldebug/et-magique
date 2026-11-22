@@ -1,0 +1,116 @@
+# Exercices corrigés, du plus facile au type contrôle.
+# type d'étape : init (vert), her (orange), conc (bleu), calcul, methode, piege (rouge)
+exercices:
+  - titre: Nombre dérivé par la définition
+    difficulte: 1
+    type: methode
+    enonce: |
+      Soit $\cbleu{f}(\corange{x}) = \corange{x}^2 + 3\corange{x}$. Calculer le taux d'accroissement de $\cbleu{f}$ entre 2 et $2 + h$, puis en déduire $\cbleu{f}'(2)$.
+    indice: Développe $\cbleu{f}(2 + h)$, puis simplifie par $h$.
+    etapes:
+      - type: calcul
+        titre: Les valeurs
+        texte: $\cbleu{f}(2 + h) = 4 + 4h + h^2 + 6 + 3h = 10 + 7h + h^2$ et $\cbleu{f}(2) = 10$.
+      - type: calcul
+        titre: Le taux
+        texte: $\frac{\cbleu{f}(2 + h) - \cbleu{f}(2)}{h} = \frac{7h + h^2}{h} = 7 + h$.
+        note: on zoome, h tend vers 0
+      - type: conc
+        titre: Conclusion
+        texte: Quand $h \to 0$, $7 + h \to 7$, donc <mark>$\cbleu{f}'(2) = 7$</mark>.
+
+  - titre: Calculer des dérivées
+    difficulte: 1
+    type: application
+    enonce: |
+      Dériver les fonctions suivantes.
+      1. $\cbleu{f}(\corange{x}) = 4\corange{x}^3 - 5\corange{x}^2 + 2\corange{x} - 7$
+      2. $g(\corange{x}) = \dfrac{3}{\corange{x}} + 2\sqrt{\corange{x}}$ sur $]0\,;+\infty[$
+      3. $h(\corange{x}) = (2\corange{x} - 1)(\corange{x}^2 + 3)$
+    indice: Question 3, formule du produit.
+    etapes:
+      - type: calcul
+        titre: Question 1
+        texte: $\cbleu{f}'(\corange{x}) = 12\corange{x}^2 - 10\corange{x} + 2$.
+      - type: calcul
+        titre: Question 2
+        texte: $g'(\corange{x}) = -\frac{3}{\corange{x}^2} + \frac{2}{2\sqrt{\corange{x}}} = -\frac{3}{\corange{x}^2} + \frac{1}{\sqrt{\corange{x}}}$.
+      - type: calcul
+        titre: Question 3
+        texte: >-
+          $u = 2\corange{x} - 1$, $u' = 2$, $v = \corange{x}^2 + 3$, $v' = 2\corange{x}$. $h'(\corange{x}) = 2(\corange{x}^2 + 3) + (2\corange{x} - 1) \times 2\corange{x} = 6\corange{x}^2 - 2\corange{x} + 6$.
+        note: u'v + uv'
+
+  - titre: La dérivée d'un quotient
+    difficulte: 2
+    type: application
+    enonce: |
+      Dériver $\cbleu{f}(\corange{x}) = \dfrac{2\corange{x} + 1}{\corange{x} - 3}$ sur $]3\,;+\infty[$ et en déduire ses variations.
+    indice: $\left(\frac{u}{v}\right)' = \frac{u'v - uv'}{v^2}$.
+    etapes:
+      - type: calcul
+        titre: La dérivée
+        texte: >-
+          $\cbleu{f}'(\corange{x}) = \frac{2(\corange{x} - 3) - (2\corange{x} + 1) \times 1}{(\corange{x} - 3)^2} = \frac{-7}{(\corange{x} - 3)^2}$.
+      - type: methode
+        titre: Le signe
+        texte: Le numérateur vaut $-7 < 0$ et le dénominateur est un carré, positif. Donc $\cbleu{f}'(\corange{x}) < 0$.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>$\cbleu{f}$ est décroissante sur $]3\,;+\infty[$</mark>.
+
+  - titre: Équation de tangente
+    difficulte: 2
+    type: methode
+    enonce: |
+      Soit $\cbleu{f}(\corange{x}) = \corange{x}^3 - 2\corange{x} + 1$. Déterminer l'équation de la tangente à la courbe au point d'abscisse 1.
+    indice: Calcule $\cbleu{f}(1)$ et $\cbleu{f}'(1)$.
+    etapes:
+      - type: calcul
+        titre: Les valeurs
+        texte: $\cbleu{f}(1) = 1 - 2 + 1 = 0$ ; $\cbleu{f}'(\corange{x}) = 3\corange{x}^2 - 2$, donc $\cbleu{f}'(1) = 1$.
+      - type: calcul
+        titre: La formule
+        texte: $y = \cbleu{f}'(1)(\corange{x} - 1) + \cbleu{f}(1) = 1 \times (\corange{x} - 1) + 0$.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>La tangente a pour équation $y = \corange{x} - 1$</mark>.
+
+  - titre: Le piège du signe
+    difficulte: 2
+    type: piege
+    enonce: |
+      On donne la courbe d'une fonction $\cbleu{f}$ qui reste sous l'axe des abscisses sur $[0\,;4]$ mais qui monte de $-5$ à $-1$. Un élève dit : « $\cbleu{f}$ est négative, donc $\cbleu{f}'$ est négative. » A-t-il raison ?
+    indice: Qu'est-ce qui donne le signe de $\cbleu{f}'$ ?
+    etapes:
+      - type: piege
+        titre: La confusion
+        texte: L'élève confond le signe de $\cbleu{f}$ (au-dessus ou en dessous de l'axe) et le signe de $\cbleu{f}'$ (la courbe monte ou descend).
+      - type: methode
+        titre: À la loupe
+        texte: La courbe monte, donc ses tangentes montent, leurs pentes sont positives.
+        note: on regarde si ça monte
+      - type: conc
+        titre: Conclusion
+        texte: <mark>L'élève a tort, $\cbleu{f}' \ge 0$ sur $[0\,;4]$</mark> même si $\cbleu{f} < 0$.
+
+  - titre: Optimisation
+    difficulte: 3
+    type: bac
+    enonce: |
+      On veut fabriquer une boîte sans couvercle à partir d'une plaque carrée de 12 cm de côté, en découpant un carré de côté $\corange{x}$ cm à chaque coin, puis en relevant les bords. Le volume est $V(\corange{x}) = \corange{x}(12 - 2\corange{x})^2$ pour $\corange{x} \in [0\,;6]$.
+      1. Montrer que $V'(\corange{x}) = 12(\corange{x} - 2)(\corange{x} - 6)$.
+      2. Pour quelle valeur de $\corange{x}$ le volume est-il maximal ? Quel est ce volume ?
+    indice: Développe $V(\corange{x}) = 4\corange{x}^3 - 48\corange{x}^2 + 144\corange{x}$.
+    etapes:
+      - type: calcul
+        titre: Question 1
+        texte: >-
+          $V(\corange{x}) = 4\corange{x}^3 - 48\corange{x}^2 + 144\corange{x}$, donc $V'(\corange{x}) = 12\corange{x}^2 - 96\corange{x} + 144 = 12(\corange{x}^2 - 8\corange{x} + 12) = 12(\corange{x} - 2)(\corange{x} - 6)$.
+      - type: methode
+        titre: Le signe
+        texte: Sur $[0\,;6]$, $\corange{x} - 6 \le 0$. Donc $V'(\corange{x}) \ge 0$ sur $[0\,;2]$ et $V'(\corange{x}) \le 0$ sur $[2\,;6]$.
+        note: la tangente est horizontale en 2
+      - type: conc
+        titre: Question 2
+        texte: $V$ est croissante puis décroissante, <mark>le volume est maximal pour $\corange{x} = 2$ cm</mark>, et vaut $V(2) = 2 \times 8^2 = 128$ cm³.

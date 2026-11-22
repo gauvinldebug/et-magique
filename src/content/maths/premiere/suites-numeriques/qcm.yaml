@@ -1,0 +1,48 @@
+questions:
+  - question: La suite définie par $\un = 5 - 2\corange{n}$ est…
+    choix: ["arithmétique de raison $-2$", "arithmétique de raison 5", "géométrique de raison $-2$", "ni l'une ni l'autre"]
+    bonne: 0
+    explication: $\unn - \un = 5 - 2(\corange{n} + 1) - 5 + 2\corange{n} = -2$, une constante.
+    revoir: cours
+
+  - question: $\cbleu{u}$ est géométrique de raison 3 avec $\uz = 2$. $u_4$ vaut…
+    choix: ['$14$', '$162$', '$54$', '$24$']
+    bonne: 1
+    explication: $u_4 = 2 \times 3^4 = 2 \times 81 = 162$.
+    revoir: cours
+
+  - question: Un prix augmente de 5 % par an. La suite des prix est…
+    choix: ["arithmétique de raison 5", "géométrique de raison 0,05", "géométrique de raison 1,05", "arithmétique de raison 1,05"]
+    bonne: 2
+    explication: Augmenter de 5 %, c'est multiplier par 1,05. La photocopieuse, pas l'escalier.
+    revoir: cours
+
+  - question: Que vaut $1 + 2 + 3 + \dots + 100$ ?
+    choix: ['$5\,000$', '$5\,050$', '$10\,100$', '$4\,950$']
+    bonne: 1
+    explication: $\frac{100 \times 101}{2} = 5\,050$.
+    revoir: cours
+
+  - question: $\cbleu{u}$ est arithmétique, $u_3 = 10$ et $u_7 = 22$. La raison vaut…
+    choix: ['$3$', '$12$', '$4$', '$\frac{22}{10}$']
+    bonne: 0
+    explication: $u_7 = u_3 + 4r$, donc $4r = 12$ et $r = 3$.
+    revoir: exercices
+
+  - question: Que vaut $1 + 2 + 4 + 8 + \dots + 2^{9}$ ?
+    choix: ['$1\,023$', '$1\,024$', '$512$', '$2\,047$']
+    bonne: 0
+    explication: $\frac{1 - 2^{10}}{1 - 2} = 2^{10} - 1 = 1\,023$.
+    revoir: cours
+
+  - question: La suite $\un = 100 \times 0{,}9^{\corange{n}}$ est…
+    choix: ["croissante", "décroissante", "constante", "ni croissante ni décroissante"]
+    bonne: 1
+    explication: Géométrique de raison $0{,}9$, entre 0 et 1, avec un premier terme positif.
+    revoir: cours
+
+  - question: Combien y a-t-il de termes dans la somme $\uz + u_1 + \dots + u_{20}$ ?
+    choix: ['$20$', '$21$', '$19$', '$22$']
+    bonne: 1
+    explication: De 0 à 20, il y a 21 termes. Piège classique.
+    revoir: cours

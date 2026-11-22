@@ -1,0 +1,50 @@
+questions:
+  - question: Le discriminant de $2\corange{x}^2 - 3\corange{x} + 1$ vaut…
+    choix: ['$1$', '$17$', '$-1$', '$9$']
+    bonne: 0
+    explication: $\Delta = (-3)^2 - 4 \times 2 \times 1 = 9 - 8 = 1$.
+    revoir: cours
+
+  - question: Combien de solutions réelles a l'équation $\corange{x}^2 + \corange{x} + 1 = 0$ ?
+    choix: ['$0$', '$1$', '$2$', "une infinité"]
+    bonne: 0
+    explication: $\Delta = 1 - 4 = -3 < 0$. Le jet d'eau ne touche jamais le bassin.
+    revoir: cours
+
+  - question: Le sommet de la parabole de $\corange{x}^2 - 4\corange{x} + 7$ est…
+    choix: ['$S(2\,;3)$', '$S(-2\,;19)$', '$S(4\,;7)$', '$S(2\,;7)$']
+    bonne: 0
+    explication: $\alpha = -\frac{-4}{2} = 2$ et $\beta = 4 - 8 + 7 = 3$.
+    revoir: cours
+
+  - question: La forme canonique de $\corange{x}^2 + 6\corange{x} + 2$ est…
+    choix: ['$(\corange{x} + 3)^2 - 7$', '$(\corange{x} + 3)^2 + 2$', '$(\corange{x} - 3)^2 - 7$', '$(\corange{x} + 6)^2 - 34$']
+    bonne: 0
+    explication: $(\corange{x} + 3)^2 = \corange{x}^2 + 6\corange{x} + 9$, donc il faut retirer 7.
+    revoir: cours
+
+  - question: $-2(\corange{x} - 1)(\corange{x} - 4)$ est positif pour…
+    choix: ['$\corange{x} \in [1\,;4]$', '$\corange{x} \le 1$ ou $\corange{x} \ge 4$', 'tout réel', 'aucun réel']
+    bonne: 0
+    explication: $a = -2 < 0$, donc le trinôme est du signe contraire de $a$, positif, entre les racines.
+    revoir: cours
+
+  - question: Les solutions de $3\corange{x}^2 - 12\corange{x} = 0$ sont…
+    choix: ['$0$ et $4$', '$0$ et $-4$', '$4$ seulement', '$2$ et $-2$']
+    bonne: 0
+    explication: >-
+      On factorise par $3\corange{x}$ sans calculer $\Delta$ : $3\corange{x}(\corange{x} - 4) = 0$.
+    revoir: exercices
+
+  - question: $1$ est racine de $2\corange{x}^2 + \corange{x} - 3$. L'autre racine est…
+    choix: ['$-\frac{3}{2}$', '$\frac{3}{2}$', '$-3$', '$3$']
+    bonne: 0
+    explication: Le produit des racines vaut $\frac{c}{a} = -\frac{3}{2}$, donc l'autre racine est $-\frac{3}{2}$.
+    revoir: cours
+
+  - question: Si $a > 0$ et $\Delta < 0$, alors le trinôme est…
+    choix: ["toujours positif", "toujours négatif", "nul en un point", "positif puis négatif"]
+    bonne: 0
+    explication: >-
+      Sans racine, le trinôme garde le signe de $a$ : le bol ne touche jamais l'axe.
+    revoir: cours
