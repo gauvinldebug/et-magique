@@ -1,0 +1,39 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../../layouts/Base.astro';
+import { cheminsMatieres } from '../../../lib/matieres-paths';
+export const getStaticPaths = cheminsMatieres;
+const { matiere } = Astro.props;
+const annales = (await getCollection('annales')).filter((a) => a.data.matiere === matiere.slug).sort((a, b) => b.data.annee - a.data.annee);
+const groupes = [
+  { id: 'bac', titre: 'Bac' },
+  { id: 'brevet', titre: 'Brevet' },
+  { id: 'bac-blanc', titre: 'Bac blanc, avec les vidéos d’entraînement' },
+  { id: 'brevet-blanc', titre: 'Brevet blanc, avec les vidéos d’entraînement' },
+];
+---
+<Base titre="Annales du bac et du brevet" description="Sujets du bac et du brevet de maths avec corrigés détaillés, et sujets blancs liés aux vidéos d'entraînement." matiere={matiere.slug} actif="annales">
+  <div class="page-feuille cahier">
+    <div class="feuille">
+      <div>
+        <h1>Annales</h1>
+        <p style="color:var(--encre-2)">Les vrais sujets, corrigés pas à pas, et des sujets blancs pour t'entraîner.</p>
+      </div>
+      {groupes.map((g) => {
+        const items = annales.filter((a) => a.data.examen === g.id);
+        return (
+          <div style="display:grid;gap:20px">
+            <h2>{g.titre}</h2>
+            {items.length ? (
+              <ul class="liste-ch">
+                {items.map((a) => <li><a href={`/${matiere.slug}/annales/${a.id}/`}><span class="n">{a.data.annee}</span><b>{a.data.titre}</b><span class="badge">Corrigé</span></a></li>)}
+              </ul>
+            ) : (
+              <p class="vide">Les premiers sujets corrigés arrivent avec les vidéos d'entraînement. <a href="/demandes/">Demander un sujet</a></p>
+            )}
+          </div>
+        );
+      })}
+    </div>
+  </div>
+</Base>

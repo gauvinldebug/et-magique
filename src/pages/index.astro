@@ -1,0 +1,28 @@
+---
+// etmagique.fr : la porte d'entrée, une matière par chaîne YouTube.
+import Base from '../layouts/Base.astro';
+import { MATIERES } from '../data/site';
+---
+<Base titre="Et Magique : les cours de la 6e à la terminale, enfin clairs" description="Vidéos, cours, exercices corrigés et QCM gratuits, de la 6e à la terminale. Sans compte, sans publicité." sansEntete>
+  <div class="page-feuille cahier" style="max-width:900px">
+    <div class="feuille" style="min-height:70vh;align-content:center">
+      <div style="display:grid;gap:20px">
+        <span class="wordmark" style="font-size:2.4rem">Et Magique<svg class="spark" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1.5 C12.9 8 16 11.1 22.5 12 C16 12.9 12.9 16 12 22.5 C11.1 16 8 12.9 1.5 12 C8 11.1 11.1 8 12 1.5Z"/></svg></span>
+        <h1>Les cours de la 6e à la terminale, <mark>enfin clairs</mark>.</h1>
+        <p style="color:var(--encre-2)">Une chaîne YouTube et un site par matière. Gratuit, sans compte, sans publicité.</p>
+      </div>
+      <ul class="liste-ch" style="max-width:520px">
+        {MATIERES.map((m) => (
+          <li>
+            {m.active ? (
+              <a href={`/${m.slug}/`}><span class="n" style={`color:${m.couleur}`}>●</span><b style={`color:${m.couleur}`}>{m.nom} et Magique</b><span class="badge">En ligne</span></a>
+            ) : (
+              <div class="later"><span class="n">○</span><span>{m.nom} et Magique</span><span class="badge gris">Bientôt</span></div>
+            )}
+          </li>
+        ))}
+      </ul>
+      <p class="aide"><a href="/a-propos/">À propos</a> · <a href="/confidentialite/">Confidentialité</a> · <a href="/mentions-legales/">Mentions légales</a></p>
+    </div>
+  </div>
+</Base>

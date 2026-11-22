@@ -1,0 +1,77 @@
+questions:
+  - question: Dans un raisonnement par récurrence, l'initialisation consiste à…
+    choix:
+      - vérifier que la propriété est vraie au premier rang
+      - supposer que la propriété est vraie au rang $\corange{k}$
+      - démontrer que la propriété est vraie au rang $\corange{k+1}$
+      - calculer les dix premiers termes
+    bonne: 0
+    explication: C'est le premier domino qui tombe. On vérifie la propriété au premier rang, souvent $\corange{n} = 0$.
+    revoir: video
+
+  - question: L'hypothèse de récurrence, c'est…
+    choix:
+      - supposer $P(\corange{n})$ vraie pour tout $\corange{n}$
+      - supposer $P(\corange{k})$ vraie pour un entier $\corange{k}$ quelconque
+      - vérifier $P(0)$
+      - conclure
+    bonne: 1
+    explication: On suppose la propriété vraie à UN rang $\corange{k}$. La supposer vraie pour tout $\corange{n}$, ce serait supposer ce qu'on veut démontrer.
+    revoir: cours
+
+  - question: Avec $\uz = 2$ et $\unn = \frac{1}{3}\un + 2$, combien vaut $\cbleu{u}_{\corange{1}}$ ?
+    choix: ['$\frac{8}{3}$', '$\frac{2}{3}$', '$4$', '$\frac{7}{3}$']
+    bonne: 0
+    explication: $\cbleu{u}_{\corange{1}} = \frac{1}{3} \times 2 + 2 = \frac{2}{3} + \frac{6}{3} = \frac{8}{3}$.
+    revoir: video
+
+  - question: On a démontré l'hérédité, mais l'initialisation est fausse. Alors…
+    choix:
+      - la propriété est vraie quand même
+      - la propriété est vraie à partir du rang 1
+      - on n'a rien démontré
+      - la propriété est fausse pour tout $\corange{n}$
+    bonne: 2
+    explication: >-
+      Sans le premier domino, rien ne tombe. C'est le piège du chapitre : « $\un > 3$ » est héréditaire, et pourtant faux.
+    revoir: cours
+
+  - question: La propriété est à démontrer pour tout $\corange{n} \ge 1$. On fait l'initialisation…
+    choix: ['au rang 0', 'au rang 1', 'au rang 2', "on n'en fait pas"]
+    bonne: 1
+    explication: On initialise au premier rang concerné, ici $\corange{n} = 1$.
+    revoir: cours
+
+  - question: On sait que $\uk \le 3$. On multiplie par $\frac{1}{3}$. On obtient…
+    choix: ['$\frac{1}{3}\uk \le 1$', '$\frac{1}{3}\uk \ge 1$', '$\frac{1}{3}\uk \le 3$', '$\uk \le 1$']
+    bonne: 0
+    explication: $\frac{1}{3}$ est positif, donc le sens de l'inégalité ne change pas, et $3 \times \frac{1}{3} = 1$.
+    revoir: exercices
+
+  - question: On sait que $\uk \le 3$. On multiplie par $-2$. On obtient…
+    choix: ['$-2\uk \le -6$', '$-2\uk \ge -6$', '$-2\uk \le 6$', '$-2\uk \ge 6$']
+    bonne: 1
+    explication: Multiplier par un nombre négatif change le sens de l'inégalité.
+    revoir: exercices
+
+  - question: Pour montrer par récurrence qu'une suite est croissante, la propriété $P(\corange{n})$ est…
+    choix: ['$\un \le 3$', '$\un \le \unn$', '$\un \ge 0$', '$\unn = \un + 1$']
+    bonne: 1
+    explication: Croissante veut dire que chaque terme est inférieur ou égal au suivant.
+    revoir: exercices
+
+  - question: Une suite est croissante et majorée par 3. Alors…
+    choix:
+      - elle converge
+      - elle tend vers $+\infty$
+      - elle converge forcément vers 3
+      - on ne peut rien dire
+    bonne: 0
+    explication: Croissante et majorée, donc convergente. Sa limite est inférieure ou égale à 3, mais ce n'est pas forcément 3.
+    revoir: cours
+
+  - question: On suppose $2^{\corange{k}} \ge \corange{k} + 1$. En multipliant par 2, on obtient $2^{\corange{k}+1} \ge$ …
+    choix: ['$\corange{k} + 2$', '$2\corange{k} + 2$', '$2\corange{k} + 1$', '$\corange{k} + 1$']
+    bonne: 1
+    explication: $2 \times (\corange{k} + 1) = 2\corange{k} + 2$. Et comme $2\corange{k} + 2 \ge \corange{k} + 2$, on a bien la propriété au rang $\corange{k+1}$.
+    revoir: exercices

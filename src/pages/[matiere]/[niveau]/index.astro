@@ -1,0 +1,34 @@
+---
+import Base from '../../../layouts/Base.astro';
+import { NIVEAUX, MATIERES } from '../../../data/site';
+import { programmeNiveau } from '../../../lib/contenu';
+export async function getStaticPaths() {
+  return MATIERES.filter((m) => m.active).flatMap((m) => NIVEAUX.map((n) => ({ params: { matiere: m.slug, niveau: n.slug }, props: { matiere: m, niveau: n } })));
+}
+const { matiere, niveau } = Astro.props;
+const liste = await programmeNiveau(matiere.slug, niveau.slug);
+const nbDispo = liste.filter((c) => c.dispo).length;
+---
+<Base titre={`${matiere.nom} en ${niveau.nom} : tous les chapitres`} description={`Les chapitres de maths de ${niveau.nom} : vidéos, cours, exercices corrigés et QCM gratuits.`} matiere={matiere.slug} niveau={niveau.slug}>
+  <div class="page-feuille cahier">
+    <div class="feuille">
+      <div>
+        <div class="crumb"><a href={`/${matiere.slug}/`}>Accueil</a> › <b>{niveau.nom}</b></div>
+        <h1>{niveau.nom}{niveau.sousTitre ? <span style="font-weight:500;color:var(--encre-2)"> · {niveau.sousTitre}</span> : null}</h1>
+        <p style="color:var(--encre-2)">{nbDispo === 0 ? 'Les chapitres arrivent bientôt. Dis-nous lequel tu veux en premier.' : `${nbDispo} chapitre${nbDispo > 1 ? 's' : ''} en ligne, les autres arrivent.`}</p>
+      </div>
+      <ul class="liste-ch">
+        {liste.map((c, i) => (
+          <li>
+            {c.dispo ? (
+              <a href={`/${matiere.slug}/${niveau.slug}/${c.slug}/`}><span class="n">{i + 1}</span><b>{c.titre}</b><span class="badge">{c.video ? 'Vidéo' : 'Nouveau'}</span></a>
+            ) : (
+              <div class="later"><span class="n">{i + 1}</span><span>{c.titre}</span><span class="badge gris">Bientôt</span></div>
+            )}
+          </li>
+        ))}
+      </ul>
+      <div class="nextstep"><span>Un chapitre te manque ?</span><a class="btn ghost" href={`/demandes/?niveau=${niveau.slug}`}>Le demander</a></div>
+    </div>
+  </div>
+</Base>

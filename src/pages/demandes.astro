@@ -1,0 +1,106 @@
+---
+import Base from '../layouts/Base.astro';
+import { NIVEAUX } from '../data/site';
+---
+<Base titre="Demandes : un chapitre, une erreur, une question" description="Demande un chapitre, signale une erreur ou pose une question. Sans compte." actif="demandes">
+  <div class="page-feuille cahier">
+    <div class="feuille">
+      <div>
+        <h1>Le cahier de <mark>demandes</mark></h1>
+        <p style="color:var(--encre-2)">Un chapitre qui te manque, une erreur repérée, une question sur le site : écris-le ici. Sans compte.</p>
+      </div>
+      <div class="deux-col">
+        <form class="form" data-demande novalidate>
+          <h2>Faire une demande</h2>
+          <div>
+            <span class="lbl2">C'est pour…</span>
+            <div class="typechips" style="margin-top:8px" role="radiogroup" aria-label="Type de demande">
+              <label><input type="radio" name="type" value="chapitre" checked /><span>Un chapitre</span></label>
+              <label><input type="radio" name="type" value="erreur" /><span>Une erreur</span></label>
+              <label><input type="radio" name="type" value="question" /><span>Une question</span></label>
+              <label><input type="radio" name="type" value="autre" /><span>Autre</span></label>
+            </div>
+          </div>
+          <div><label for="d-niveau">Ton niveau</label>
+            <select id="d-niveau" name="niveau">{[...NIVEAUX].reverse().map((n) => <option value={n.slug}>{n.nom}</option>)}<option value="autre">Autre</option></select>
+          </div>
+          <div><label for="d-msg" data-msg-label>Le chapitre que tu voudrais</label><textarea id="d-msg" name="message" maxlength="1000" required placeholder="Par exemple : les limites de suites, avec des exercices type bac."></textarea></div>
+          <div><label for="d-mail">Ton e‑mail, si tu veux une réponse</label><input id="d-mail" name="email" type="email" placeholder="facultatif" autocomplete="email" /><small>Moins de 15 ans ? Pas besoin d'e‑mail : suis ta demande sur le tableau.</small></div>
+          <input class="hp" type="text" name="site" tabindex="-1" autocomplete="off" aria-hidden="true" />
+          <input type="hidden" name="page" />
+          <button type="submit" class="btn jaune">Envoyer ma demande</button>
+          <p data-retour hidden role="status"></p>
+        </form>
+        <div class="board">
+          <h2>Le tableau des demandes</h2>
+          <p style="color:var(--encre-2)">Les chapitres que vous attendez le plus. Clique sur « moi aussi » pour les faire monter.</p>
+          <div data-tableau style="display:grid;gap:20px"><p class="vide">Chargement…</p></div>
+          <p class="aide">Les erreurs et les questions ne sont pas publiques. Les demandes de chapitre apparaissent ici une fois relues.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</Base>
+
+<script>
+  const f = document.querySelector<HTMLFormElement>('[data-demande]')!;
+  const t0 = Date.now();
+  const params = new URLSearchParams(location.search);
+  const sel = f.elements.namedItem('niveau') as HTMLSelectElement;
+  if (params.get('niveau')) sel.value = params.get('niveau')!;
+  if (params.get('type')) (f.querySelector(`input[name=type][value="${params.get('type')}"]`) as HTMLInputElement | null)?.click();
+  (f.elements.namedItem('page') as HTMLInputElement).value = params.get('page') ?? '';
+  const lbl = f.querySelector<HTMLElement>('[data-msg-label]')!;
+  const msg = f.elements.namedItem('message') as HTMLTextAreaElement;
+  const textes: Record<string, [string, string]> = {
+    chapitre: ['Le chapitre que tu voudrais', 'Par exemple : les limites de suites, avec des exercices type bac.'],
+    erreur: ["L'erreur que tu as vue", 'Par exemple : exercice 4, ligne 3, il manque un signe moins.'],
+    question: ['Ta question', 'Une question sur le site, une vidéo, un chapitre…'],
+    autre: ['Ton message', ''],
+  };
+  const maj = () => { const v = (f.elements.namedItem('type') as RadioNodeList).value; lbl.textContent = textes[v][0]; msg.placeholder = textes[v][1]; };
+  f.querySelectorAll('input[name=type]').forEach((r) => r.addEventListener('change', maj));
+  maj();
+
+  f.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const out = f.querySelector<HTMLElement>('[data-retour]')!;
+    const btn = f.querySelector<HTMLButtonElement>('button[type=submit]')!;
+    btn.disabled = true;
+    try {
+      const r = await fetch('/api/demandes', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ ...Object.fromEntries(new FormData(f)), t0 }) });
+      const j = await r.json();
+      out.hidden = false;
+      out.className = j.ok ? 'msg-ok' : 'msg-err';
+      out.innerHTML = j.ok ? `<b>Merci, c'est noté !</b> Ta demande porte le numéro <b>${j.id}</b>.` : String(j.erreur);
+      if (j.ok) { msg.value = ''; (window as any).umami?.track('demande-envoyee'); }
+    } catch {
+      out.hidden = false; out.className = 'msg-err'; out.textContent = 'Le serveur ne répond pas. Réessaie dans un instant.';
+    } finally { btn.disabled = false; }
+  });
+
+  // Tableau public
+  const box = document.querySelector<HTMLElement>('[data-tableau]')!;
+  const noms: Record<string, string> = { prevu: 'Prévu', 'en-cours': 'En cours', fait: 'Fait' };
+  const esc = (s: string) => s.replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]!);
+  const votes = (() => { try { return new Set<number>(JSON.parse(localStorage.getItem('votes') ?? '[]')); } catch { return new Set<number>(); } })();
+  const garder = () => { try { localStorage.setItem('votes', JSON.stringify([...votes])); } catch { /* rien */ } };
+  async function charger() {
+    try {
+      const r = await fetch('/api/tableau');
+      const items: { id: number; titre: string; statut: string; note: string; votes: number }[] = await r.json();
+      if (!items.length) { box.innerHTML = '<p class="vide">Pas encore de demande affichée. Sois le premier !</p>'; return; }
+      box.innerHTML = items.map((d) => `<div class="req"><b>${esc(d.titre)}</b><button type="button" class="vote" data-id="${d.id}" aria-pressed="${votes.has(d.id)}"><span>${d.votes}</span><small>moi aussi</small></button><small><span class="stat ${d.statut}">${noms[d.statut] ?? ''}</span>${esc(d.note || `demandé ${d.votes} fois`)}</small></div>`).join('');
+      box.querySelectorAll<HTMLButtonElement>('.vote').forEach((b) => b.addEventListener('click', async () => {
+        const id = Number(b.dataset.id);
+        if (votes.has(id)) return;
+        votes.add(id); garder(); b.setAttribute('aria-pressed', 'true');
+        const n = b.querySelector('span')!; n.textContent = String(Number(n.textContent) + 1);
+        try { await fetch('/api/tableau', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ id }) }); } catch { /* rien */ }
+      }));
+    } catch {
+      box.innerHTML = '<p class="vide">Le tableau se charge une fois le site en ligne.</p>';
+    }
+  }
+  charger();
+</script>

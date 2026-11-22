@@ -1,0 +1,59 @@
+---
+// Lecteur YouTube « léger » : rien n'est chargé depuis YouTube (ni cookie, ni traceur)
+// tant que l'élève n'a pas cliqué. Ensuite : youtube-nocookie.com.
+interface Props { youtube?: string; titre: string; statique?: boolean }
+const { youtube, titre, statique = false } = Astro.props;
+---
+{youtube && statique ? (
+  <div class="thumb"><img src={`https://i.ytimg.com/vi/${youtube}/hqdefault.jpg`} alt="" loading="lazy" referrerpolicy="no-referrer" /><span class="play"><i></i></span></div>
+) : youtube ? (
+  <button type="button" class="thumb" data-yt={youtube} data-umami-event="video-lancee" aria-label={`Lancer la vidéo : ${titre}`}>
+    <img src={`https://i.ytimg.com/vi/${youtube}/hqdefault.jpg`} alt="" loading="lazy" referrerpolicy="no-referrer" />
+    <span class="play"><i></i></span>
+  </button>
+) : (
+  <div class="thumb" role="img" aria-label="Vidéo bientôt en ligne">
+    <svg viewBox="0 0 1600 900" aria-hidden="true">
+      <rect width="1600" height="900" style="fill:var(--carte)"/>
+      <text x="110" y="170" style="fill:var(--encre);font-family:var(--f-titre);font-weight:800" font-size="84">La récurrence,</text>
+      <text x="110" y="270" style="fill:var(--terme);font-family:var(--f-titre);font-weight:800" font-size="84">c'est des dominos</text>
+      <line x1="110" y1="720" x2="1500" y2="720" style="stroke:var(--trait);stroke-width:3"/>
+      <rect x="200" y="460" width="60" height="260" rx="8" style="fill:var(--ok)" transform="rotate(25 260 720)"/>
+      <rect x="370" y="460" width="60" height="260" rx="8" style="fill:var(--terme)" transform="rotate(14 430 720)"/>
+      <rect x="540" y="460" width="60" height="260" rx="8" style="fill:var(--terme)" transform="rotate(5 600 720)"/>
+      <rect x="710" y="460" width="60" height="260" rx="8" style="fill:var(--terme)"/>
+      <rect x="880" y="460" width="60" height="260" rx="8" style="fill:var(--terme)"/>
+      <rect x="1050" y="460" width="60" height="260" rx="8" style="fill:var(--terme)" opacity=".6"/>
+      <rect x="1220" y="460" width="60" height="260" rx="8" style="fill:var(--terme)" opacity=".3"/>
+    </svg>
+    <span class="bientot">Vidéo bientôt en ligne</span>
+  </div>
+)}
+
+<script>
+  const secondes = (t: string) => t.split(':').reduce((a, b) => a * 60 + Number(b), 0);
+  function lancer(btn: HTMLElement, debut = 0) {
+    const id = btn.dataset.yt;
+    if (!id) return;
+    const f = document.createElement('iframe');
+    f.src = `https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0&start=${debut}`;
+    f.title = btn.getAttribute('aria-label') ?? 'Vidéo';
+    f.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
+    f.allowFullscreen = true;
+    const box = document.createElement('div');
+    box.className = 'thumb';
+    box.dataset.yt = id;
+    box.appendChild(f);
+    btn.replaceWith(box);
+  }
+  document.querySelectorAll<HTMLElement>('button[data-yt]').forEach((b) => b.addEventListener('click', () => lancer(b)));
+  document.querySelectorAll<HTMLAnchorElement>('[data-t]').forEach((a) =>
+    a.addEventListener('click', (e) => {
+      const player = document.querySelector<HTMLElement>('[data-yt]');
+      if (!player) return;
+      e.preventDefault();
+      lancer(player, secondes(a.dataset.t!));
+      player.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }),
+  );
+</script>

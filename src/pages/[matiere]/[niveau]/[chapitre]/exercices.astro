@@ -1,0 +1,84 @@
+---
+import Chapitre from '../../../../layouts/Chapitre.astro';
+import { cheminsChapitres } from '../../../../lib/routes';
+import { existe } from '../../../../lib/fichiers';
+import { md } from '../../../../lib/markdown';
+export const getStaticPaths = cheminsChapitres;
+const p = Astro.props;
+const { pdf } = p.chapitre.data;
+const types = { application: 'Application', methode: 'Méthode', bac: 'Type bac', brevet: 'Type brevet', piege: 'Piège' };
+---
+<Chapitre {...p} onglet="exercices">
+  <div class="reveal-bar no-print" style="justify-content:space-between">
+    <span style="color:var(--encre-2);font-size:.92rem">Cherche d'abord. Ouvre la correction une étape à la fois, seulement quand tu bloques.</span>
+    {existe(pdf.exercices) && <a class="btn ghost" href={pdf.exercices} download data-umami-event="exercices-pdf">Télécharger en PDF</a>}
+  </div>
+  <div class="exos">
+    {p.exercices.map((ex, n) => (
+      <article class="exo cahier" id={`exercice-${n + 1}`} data-exo={n + 1}>
+        <div class="exo-in">
+          <span class="mgn" style="top:47px;font-size:1.4rem">Ex. {n + 1}</span>
+          <div class="exo-top">
+            <h2>{ex.titre}</h2>
+            <span class="diff" title={`Difficulté ${ex.difficulte} sur 3`} aria-label={`Difficulté ${ex.difficulte} sur 3`}>
+              {[1, 2, 3].map((d) => <i class={d <= ex.difficulte ? 'on' : ''}></i>)}
+            </span>
+            <span class={`tag ${ex.type}`}>{types[ex.type]}</span>
+          </div>
+          <div class="enonce" set:html={md(ex.enonce)} />
+          {ex.indice && <div class="indice-box cache-indice" hidden data-indice><span class="note">Indice</span><div set:html={md(ex.indice)} /></div>}
+          <div style="display:grid;gap:20px" data-steps>
+            {ex.etapes.map((e, s) => (
+              <div class={`stp ${e.type} cache`} data-s={s + 1}>
+                <span class="num">{s + 1}</span>
+                <span class="lab">{e.titre}</span>
+                <div class="texte" set:html={md(e.texte)} />
+                {e.note && <span class="note">← {e.note}</span>}
+              </div>
+            ))}
+          </div>
+          <div class="reveal-bar no-print" data-bar>
+            <button type="button" class="btn" data-next>Voir l'étape 1</button>
+            {ex.indice && <button type="button" class="btn ghost" data-hint>Un indice</button>}
+            <button type="button" class="btn ghost" data-all>Tout afficher</button>
+            <small data-count>{ex.etapes.length} étapes</small>
+          </div>
+        </div>
+      </article>
+    ))}
+  </div>
+</Chapitre>
+
+<script>
+  const track = (e: string, d?: object) => (window as any).umami?.track(e, d);
+  document.querySelectorAll<HTMLElement>('[data-exo]').forEach((exo) => {
+    const steps = [...exo.querySelectorAll<HTMLElement>('.stp')];
+    const next = exo.querySelector<HTMLButtonElement>('[data-next]')!;
+    const all = exo.querySelector<HTMLButtonElement>('[data-all]')!;
+    const count = exo.querySelector<HTMLElement>('[data-count]')!;
+    let shown = 0;
+    const update = () => {
+      steps.forEach((s, i) => s.classList.toggle('cache', i >= shown));
+      if (shown >= steps.length) {
+        next.hidden = true; all.hidden = true;
+        count.textContent = 'Correction complète.';
+      } else {
+        next.textContent = shown === 0 ? "Voir l'étape 1" : `Étape suivante (${shown + 1}/${steps.length})`;
+        count.textContent = shown === 0 ? `${steps.length} étapes` : `${shown} sur ${steps.length}`;
+      }
+    };
+    next.addEventListener('click', () => {
+      shown++;
+      const s = steps[shown - 1];
+      s.classList.add('just');
+      update();
+      if (shown === 1) track('exercice-ouvert', { exercice: exo.dataset.exo });
+    });
+    all.addEventListener('click', () => { shown = steps.length; update(); });
+    exo.querySelector('[data-hint]')?.addEventListener('click', (e) => {
+      const box = exo.querySelector<HTMLElement>('[data-indice]');
+      if (box) box.hidden = false;
+      (e.currentTarget as HTMLElement).hidden = true;
+    });
+  });
+</script>

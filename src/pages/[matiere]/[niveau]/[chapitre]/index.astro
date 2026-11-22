@@ -1,0 +1,41 @@
+---
+import Chapitre from '../../../../layouts/Chapitre.astro';
+import Video from '../../../../components/Video.astro';
+import { cheminsChapitres } from '../../../../lib/routes';
+import { existe } from '../../../../lib/fichiers';
+export const getStaticPaths = cheminsChapitres;
+const p = Astro.props;
+const { video, pdf } = p.chapitre.data;
+const base = `/${p.matiere.slug}/${p.niveau.slug}/${p.chapitre.slug}`;
+---
+<Chapitre {...p} onglet="video">
+  <div class="ch-grid">
+    <div style="display:grid;gap:20px">
+      <Video youtube={video.youtube} titre={p.chapitre.data.titre} />
+      <p style="color:var(--encre-2)">{p.chapitre.data.description}</p>
+    </div>
+    <div class="side">
+      {video.chapitres.length > 0 && (
+        <div>
+          <div class="k">Dans la vidéo{video.duree ? ` · ${video.duree}` : ''}</div>
+          <ol class="toc">
+            {video.chapitres.map((c) =>
+              video.youtube ? (
+                <li><a href={`https://www.youtube.com/watch?v=${video.youtube}&t=${c.t.split(':').reduce((a, b) => a * 60 + Number(b), 0)}s`} data-t={c.t}><b>{c.t}</b>{c.titre}</a></li>
+              ) : (
+                <li><span><b>{c.t}</b>{c.titre}</span></li>
+              ),
+            )}
+          </ol>
+        </div>
+      )}
+      {p.fiche && (
+        existe(pdf.fiche) ? (
+          <a class="dl fiche" href={pdf.fiche} download data-umami-event="fiche-telechargee"><span class="ic">FICHE</span><div><b>Fiche de révision</b><small>1 page, en PDF à imprimer</small></div></a>
+        ) : (
+          <a class="dl fiche" href={`${base}/fiche/`}><span class="ic">FICHE</span><div><b>Fiche de révision</b><small>1 page, à imprimer</small></div></a>
+        )
+      )}
+    </div>
+  </div>
+</Chapitre>

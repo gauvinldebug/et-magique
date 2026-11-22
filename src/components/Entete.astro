@@ -1,0 +1,146 @@
+---
+// En-tête : logo, menu « Chapitres » à intercalaires (ordinateur), menu plein écran (téléphone).
+import Logo from './Logo.astro';
+import { NIVEAUX, matiere as getMatiere } from '../data/site';
+import { menuMatiere } from '../lib/contenu';
+
+interface Props { matiere?: string; niveau?: string; actif?: string }
+const { matiere = 'maths', niveau, actif } = Astro.props;
+const m = getMatiere(matiere)!;
+const menu = await menuMatiere(matiere);
+const niveauOuvert = niveau ?? 'terminale';
+const base = `/${matiere}`;
+const liens = [
+  { href: `${base}/annales/`, titre: 'Annales', sous: 'bac et brevet', id: 'annales' },
+  { href: `${base}/planning-bac/`, titre: 'Planning bac', sous: 'un e‑mail par semaine', id: 'planning' },
+  { href: '/demandes/', titre: 'Demandes', sous: 'chapitre, erreur, question', id: 'demandes' },
+];
+const grouped = ['Collège', 'Lycée'].map((cycle) => ({ cycle, niveaux: NIVEAUX.filter((n) => n.cycle === cycle) }));
+---
+<header class="s-nav" data-entete>
+  <div class="wrap">
+    <Logo matiere={m.nom} href={`${base}/`} />
+    <nav aria-label="Menu principal">
+      <button type="button" aria-expanded="false" aria-controls="mega" data-mega-btn>Chapitres <span class="chev"></span></button>
+      {liens.map((l) => <a href={l.href} aria-current={actif === l.id ? 'page' : undefined}>{l.titre}</a>)}
+    </nav>
+    <a class="search" href={`${base}/recherche/`} data-search-link>Rechercher <kbd>/</kbd></a>
+    <button type="button" class="burger" aria-expanded="false" aria-controls="ph-menu" aria-label="Ouvrir le menu" data-burger><span></span></button>
+  </div>
+
+  <div class="mega" id="mega" hidden>
+    <div class="wrap">
+      <div class="tabs-lvl" role="tablist" aria-label="Niveaux">
+        {grouped.map((g) => (
+          <>
+            <span class="grp">{g.cycle}</span>
+            {g.niveaux.map((n) => (
+              <button type="button" role="tab" id={`lv-${n.slug}`} aria-controls={`lp-${n.slug}`} aria-selected={n.slug === niveauOuvert ? 'true' : 'false'} data-lvl={n.slug}><i></i>{n.nom}</button>
+            ))}
+          </>
+        ))}
+      </div>
+      {NIVEAUX.map((n) => (
+        <div class="mega-list" role="tabpanel" id={`lp-${n.slug}`} aria-labelledby={`lv-${n.slug}`} hidden={n.slug !== niveauOuvert}>
+          <a class="k" href={`${base}/${n.slug}/`} style="text-decoration:none">{n.nom}{n.sousTitre ? ` · ${n.sousTitre}` : ''} ›</a>
+          <ul>
+            {menu[n.slug].map((c, i) => (
+              <li class={c.dispo ? 'dispo' : 'later'}>
+                {c.dispo ? (
+                  <a href={`${base}/${n.slug}/${c.slug}/`}><span class="ch">{i + 1}</span>{c.titre}<span class="badge">{c.video ? 'Vidéo' : 'Nouveau'}</span></a>
+                ) : (
+                  <span><span class="ch">{i + 1}</span>{c.titre}</span>
+                )}
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+      <div class="mega-side">
+        <span class="k">Aussi</span>
+        <a class="carte-lien" href={`${base}/fiches/`}><b>Fiches de révision</b><small>1 page par chapitre</small></a>
+        <a class="carte-lien" href={`${base}/annales/`}><b>Annales</b><small>Sujets et corrigés</small></a>
+        <a class="carte-lien" href="/demandes/"><b>Faire une demande</b><small>Un chapitre, une erreur</small></a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="ph-menu" id="ph-menu" hidden data-ph-menu>
+  <form class="s-search" action={`${base}/recherche/`} method="get" role="search" style="margin:0">
+    <input type="search" name="q" placeholder="Chercher un chapitre…" aria-label="Chercher un chapitre" />
+    <button type="submit">Chercher</button>
+  </form>
+  <div>
+    <div class="k" style="margin-bottom:8px">Ton niveau</div>
+    <div class="lvl-grid">
+      {NIVEAUX.map((n) => <a href={`${base}/${n.slug}/`} aria-current={n.slug === niveau ? 'true' : undefined}>{n.court}</a>)}
+      <a href={`${base}/`} style="font-size:.85rem;display:grid;place-items:center">Tout</a>
+    </div>
+  </div>
+  <div class="menu-links">
+    <a href={`${base}/fiches/`}><span>Fiches de révision <small>1 page par chapitre</small></span></a>
+    {liens.map((l) => <a href={l.href}><span>{l.titre} <small>{l.sous}</small></span></a>)}
+  </div>
+</div>
+
+<nav class="tabbar" aria-label="Raccourcis">
+  <a href={`${base}/`} aria-current={actif === 'accueil' ? 'page' : undefined}>
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg>Accueil
+  </a>
+  <button type="button" data-burger-tab aria-controls="ph-menu">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16M4 12h16M4 19h10"/></svg>Chapitres
+  </button>
+  <a href={`${base}/fiches/`} aria-current={actif === 'fiches' ? 'page' : undefined}>
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h9l4 4v14H6z"/><path d="M9 12l2 2 4-4"/></svg>Réviser
+  </a>
+  <a href={`${base}/recherche/`} aria-current={actif === 'recherche' ? 'page' : undefined}>
+    <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></svg>Chercher
+  </a>
+</nav>
+
+<script>
+  const megaBtn = document.querySelector<HTMLButtonElement>('[data-mega-btn]');
+  const mega = document.getElementById('mega');
+  const setMega = (open: boolean) => {
+    if (!megaBtn || !mega) return;
+    megaBtn.setAttribute('aria-expanded', String(open));
+    mega.hidden = !open;
+  };
+  megaBtn?.addEventListener('click', () => setMega(mega!.hidden));
+  document.querySelectorAll<HTMLButtonElement>('[data-lvl]').forEach((tab) => {
+    const show = () => {
+      document.querySelectorAll('[data-lvl]').forEach((t) => t.setAttribute('aria-selected', String(t === tab)));
+      document.querySelectorAll<HTMLElement>('.mega-list').forEach((p) => (p.hidden = p.id !== `lp-${tab.dataset.lvl}`));
+    };
+    tab.addEventListener('click', show);
+    tab.addEventListener('mouseenter', show);
+  });
+  document.addEventListener('click', (e) => {
+    const t = e.target as Node;
+    if (mega && !mega.hidden && !mega.contains(t) && !megaBtn?.contains(t)) setMega(false);
+  });
+
+  const phMenu = document.querySelector<HTMLElement>('[data-ph-menu]');
+  const burger = document.querySelector<HTMLButtonElement>('[data-burger]');
+  const setPh = (open: boolean) => {
+    if (!phMenu || !burger) return;
+    phMenu.hidden = !open;
+    burger.setAttribute('aria-expanded', String(open));
+    burger.setAttribute('aria-label', open ? 'Fermer le menu' : 'Ouvrir le menu');
+    burger.classList.toggle('x', open);
+    document.body.style.overflow = open ? 'hidden' : '';
+  };
+  burger?.addEventListener('click', () => setPh(phMenu!.hidden));
+  document.querySelector('[data-burger-tab]')?.addEventListener('click', () => setPh(phMenu!.hidden));
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') { setMega(false); setPh(false); }
+    const el = e.target as HTMLElement;
+    if (e.key === '/' && !/INPUT|TEXTAREA|SELECT/.test(el.tagName) && !el.isContentEditable) {
+      e.preventDefault();
+      const link = document.querySelector<HTMLAnchorElement>('[data-search-link]');
+      if (link) location.href = link.href;
+    }
+  });
+</script>
