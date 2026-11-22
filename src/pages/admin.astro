@@ -146,8 +146,9 @@ const umamiShare = import.meta.env.PUBLIC_UMAMI_SHARE_URL;
     const i = await (await api('/api/admin/inscriptions')).json();
     const noms: Record<string, string> = { terminale: 'Terminale', premiere: 'Première', '3e': '3e', autre: 'Autre' };
     document.querySelector<HTMLElement>('[data-ins]')!.innerHTML =
-      `<div class="tile"><small>Inscrits</small><b>${i.total ?? 0}</b></div><div class="tile"><small>dont moins de 15 ans</small><b>${i.moins15 ?? 0}</b></div>` +
-      Object.entries(i.parNiveau ?? {}).map(([k, v]) => `<div class="tile"><small>${esc(noms[k] ?? k)}</small><b>${v}</b></div>`).join('');
+      `<div class="tile"><small>Inscrits</small><b>${i.total ?? 0}</b></div><div class="tile"><small>dont confirmés</small><b>${i.confirmes ?? 0}</b></div><div class="tile"><small>dont moins de 15 ans</small><b>${i.moins15 ?? 0}</b></div>` +
+      Object.entries(i.parNiveau ?? {}).map(([k, v]) => `<div class="tile"><small>${esc(noms[k] ?? k)}</small><b>${v}</b></div>`).join('') +
+      (i.brevo ? `<p class="aide" style="grid-column:1/-1">Dernière erreur d'envoi d'e-mail (${esc(new Date(i.brevo.date).toLocaleString('fr-FR'))}) : <b>${esc(i.brevo.detail)}</b> ${esc(i.brevo.message ?? '')}</p>` : '');
   }
 
   function afficher() {

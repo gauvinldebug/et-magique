@@ -4,8 +4,8 @@ import Base from '../layouts/Base.astro';
 import { MATIERES } from '../data/site';
 ---
 <Base titre="Et Magique : les cours de la 6e à la terminale, enfin clairs" description="Vidéos, cours, exercices corrigés et QCM gratuits, de la 6e à la terminale. Sans compte, sans publicité." sansEntete>
-  <div class="page-feuille cahier" style="max-width:900px">
-    <div class="feuille" style="min-height:70vh;align-content:center">
+  <div class="page-feuille cahier">
+    <div class="feuille" style="min-height:70vh;align-content:center;max-width:none">
       <div style="display:grid;gap:20px">
         <span class="wordmark" style="font-size:2.4rem">Et Magique<svg class="spark" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1.5 C12.9 8 16 11.1 22.5 12 C16 12.9 12.9 16 12 22.5 C11.1 16 8 12.9 1.5 12 C8 11.1 11.1 8 12 1.5Z"/></svg></span>
         <h1>Les cours de la 6e à la terminale, <mark>enfin clairs</mark>.</h1>
@@ -22,6 +22,12 @@ import { MATIERES } from '../data/site';
           </li>
         ))}
       </ul>
+      {MATIERES.filter((m) => m.active && m.youtube).map((m) => (
+        <a class="yt-menu" style="max-width:520px" href={m.youtube} target="_blank" rel="noopener" data-umami-event="chaine-portail">
+          <svg viewBox="0 0 28 20" aria-hidden="true"><rect width="28" height="20" rx="5" fill="#FF0033"/><path d="M11 5.5v9l8-4.5z" fill="#fff"/></svg>
+          <span><b>La chaîne YouTube {m.nom} et Magique</b><small>Toutes les vidéos, chapitre par chapitre ↗</small></span>
+        </a>
+      ))}
       <p class="aide"><a href="/a-propos/">À propos</a> · <a href="/confidentialite/">Confidentialité</a> · <a href="/mentions-legales/">Mentions légales</a></p>
     </div>
   </div>

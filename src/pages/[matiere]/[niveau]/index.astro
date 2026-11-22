@@ -21,7 +21,7 @@ const nbDispo = liste.filter((c) => c.dispo).length;
         {liste.map((c, i) => (
           <li>
             {c.dispo ? (
-              <a href={`/${matiere.slug}/${niveau.slug}/${c.slug}/`}><span class="n">{i + 1}</span><b>{c.titre}</b><span class="badge">{c.video ? 'Vidéo' : 'Nouveau'}</span></a>
+              <a href={`/${matiere.slug}/${niveau.slug}/${c.slug}/`}><span class="n">{i + 1}</span><b>{c.titre}</b>{c.nouveau ? <span class="badge">Nouveau</span> : c.video ? <span class="badge gris">Vidéo</span> : <span></span>}</a>
             ) : (
               <div class="later"><span class="n">{i + 1}</span><span>{c.titre}</span><span class="badge gris">Bientôt</span></div>
             )}

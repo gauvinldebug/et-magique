@@ -51,5 +51,17 @@ const pleinTitre = titre.includes('Magique') ? titre : `${titre} · Maths et Mag
       <slot />
     </main>
     {!sansEntete && <Pied />}
+    <script is:inline>
+      // Hébergement Netlify gratuit : un badge « Powered by Netlify » obligatoire s'affiche en bas à droite.
+      // On le détecte pour laisser de la place sous la barre de menu du bas au lieu de la masquer.
+      (function () {
+        var r = document.documentElement;
+        var voir = function () { if (document.getElementById('nl-badge-frame')) { r.classList.add('nf-badge'); return true; } };
+        if (voir()) return;
+        var o = new MutationObserver(function () { if (voir()) o.disconnect(); });
+        o.observe(document.documentElement, { childList: true, subtree: true });
+        setTimeout(function () { o.disconnect(); }, 10000);
+      })();
+    </script>
   </body>
 </html>
