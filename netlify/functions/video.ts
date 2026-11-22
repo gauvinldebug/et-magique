@@ -16,9 +16,12 @@ export default async (req: Request) => {
   const t = norm(u.searchParams.get('t') ?? '');
   const chaine = process.env.YOUTUBE_CHANNEL_ID || CHAINES[m];
   let id: string | undefined;
+  let flux = '';
   if (chaine && n && c) {
     try {
-      const xml = await (await fetch(`https://www.youtube.com/feeds/videos.xml?channel_id=${chaine}`)).text();
+      const r = await fetch(`https://www.youtube.com/feeds/videos.xml?channel_id=${chaine}`, { headers: { 'user-agent': 'Mozilla/5.0 (compatible; et-magique/1.0)', 'accept-language': 'fr' } });
+      const xml = await r.text();
+      flux = `${r.status} ${(xml.match(/<entry>/g) ?? []).length}`;
       const videos = [...xml.matchAll(/<entry>([\s\S]*?)<\/entry>/g)].map(([, e]) => ({
         id: e.match(/<yt:videoId>([^<]+)/)?.[1] ?? '',
         titre: decode(e.match(/<title>([^<]*)/)?.[1] ?? ''),
@@ -26,13 +29,13 @@ export default async (req: Request) => {
       }));
       const lien = new RegExp(`/(?:r|qr|${m})/${n}/${c}(?![\\w-])`);
       id = (videos.find((v) => lien.test(v.description)) ?? (t ? videos.find((v) => norm(v.titre).includes(t)) : undefined))?.id;
-    } catch { /* flux illisible : pas de vidéo */ }
+    } catch (e) { flux = `erreur ${(e as Error).message}`; }
   }
-  return new Response(JSON.stringify({ id: id ?? null }), {
+  return new Response(JSON.stringify({ id: id ?? null, flux }), {
     headers: {
       'content-type': 'application/json; charset=utf-8',
       'cache-control': 'public, max-age=0, must-revalidate',
-      'netlify-cdn-cache-control': 'public, durable, s-maxage=1800, stale-while-revalidate=600',
+      'netlify-cdn-cache-control': 'public, durable, s-maxage=900, stale-while-revalidate=600',
     },
   });
 };
