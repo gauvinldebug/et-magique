@@ -1,0 +1,123 @@
+# Exercices corrigés, du plus facile au type contrôle.
+# type d'étape : init (vert), her (orange), conc (bleu), calcul, methode, piege (rouge)
+exercices:
+  - titre: Lire un tableau
+    difficulte: 1
+    type: application
+    enonce: |
+      Dans un lycée de 500 élèves, 200 font du sport, dont 120 filles. Parmi les 300 qui ne font pas de sport, 140 sont des filles. On choisit un élève au hasard. $S$ : « il fait du sport », $F$ : « c'est une fille ».
+      1. Calculer $P(F)$ et $P_S(F)$.
+      2. Calculer $P_F(S)$.
+    indice: Sachant $S$, on n'éclaire que les 200 sportifs.
+    etapes:
+      - type: calcul
+        titre: Question 1
+        texte: $P(F) = \frac{120 + 140}{500} = \frac{260}{500} = 0{,}52$ et $P_S(F) = \frac{120}{200} = 0{,}6$.
+        note: le projecteur sur les sportifs
+      - type: calcul
+        titre: Question 2
+        texte: $P_F(S) = \frac{120}{260} \approx 0{,}46$.
+      - type: conc
+        titre: Conclusion
+        texte: >-
+          <mark>$P_S(F) = 0{,}6$ mais $P_F(S) \approx 0{,}46$</mark> : changer de projecteur change le résultat.
+
+  - titre: Un arbre complet
+    difficulte: 1
+    type: methode
+    enonce: |
+      Une urne A contient 3 boules rouges et 2 noires, une urne B contient 1 rouge et 4 noires. On lance une pièce : pile, on tire dans A ; face, dans B. $R$ : « la boule est rouge ».
+      1. Construire l'arbre.
+      2. Calculer $P(R)$.
+    indice: Deux chemins mènent à $R$.
+    etapes:
+      - type: calcul
+        titre: L'arbre
+        texte: >-
+          Premier niveau, $P(A) = P(B) = 0{,}5$. Second niveau, $P_A(R) = 0{,}6$, $P_A(\bar{R}) = 0{,}4$, $P_B(R) = 0{,}2$, $P_B(\bar{R}) = 0{,}8$.
+      - type: calcul
+        titre: Les chemins
+        texte: $P(A \cap R) = 0{,}5 \times 0{,}6 = 0{,}3$ et $P(B \cap R) = 0{,}5 \times 0{,}2 = 0{,}1$.
+      - type: conc
+        titre: Probabilités totales
+        texte: <mark>$P(R) = 0{,}3 + 0{,}1 = 0{,}4$</mark>.
+
+  - titre: Remonter l'arbre
+    difficulte: 2
+    type: methode
+    enonce: |
+      On reprend l'exercice précédent. La boule tirée est rouge. Quelle est la probabilité qu'elle vienne de l'urne A ?
+    indice: On cherche $P_R(A)$, alors que l'arbre commence par $A$.
+    etapes:
+      - type: methode
+        titre: Ce qu'on cherche
+        texte: On éclaire les boules rouges et on regarde la proportion qui vient de A, c'est $P_R(A)$.
+        note: on déplace le projecteur
+      - type: calcul
+        titre: La formule
+        texte: $P_R(A) = \frac{P(A \cap R)}{P(R)} = \frac{0{,}3}{0{,}4} = 0{,}75$.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>Il y a 75 % de chances que la boule vienne de A</mark>.
+
+  - titre: Indépendants ou pas
+    difficulte: 2
+    type: application
+    enonce: |
+      On lance un dé équilibré. $A$ : « le résultat est pair », $B$ : « le résultat est inférieur ou égal à 2 », $C$ : « le résultat est inférieur ou égal à 3 ».
+      $A$ et $B$ sont-ils indépendants ? Et $A$ et $C$ ?
+    indice: Compare $P(A \cap B)$ et $P(A) \times P(B)$.
+    etapes:
+      - type: calcul
+        titre: A et B
+        texte: $A \cap B = \{2\}$, $P(A \cap B) = \frac{1}{6}$ et $P(A)P(B) = \frac{1}{2} \times \frac{1}{3} = \frac{1}{6}$. Indépendants.
+      - type: calcul
+        titre: A et C
+        texte: $A \cap C = \{2\}$, $P(A \cap C) = \frac{1}{6}$ et $P(A)P(C) = \frac{1}{2} \times \frac{1}{2} = \frac{1}{4}$. Pas indépendants.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>$A$ et $B$ sont indépendants, $A$ et $C$ ne le sont pas</mark>. On ne devine pas l'indépendance, on la calcule.
+
+  - titre: Le test de dépistage
+    difficulte: 3
+    type: piege
+    enonce: |
+      Une maladie touche 2 % d'une population. Un test est positif chez 95 % des malades et chez 5 % des personnes saines.
+      1. Calculer la probabilité qu'un test soit positif.
+      2. Une personne a un test positif. Quelle est la probabilité qu'elle soit malade ?
+    indice: $M$ « malade », $T$ « positif ». On cherche $P_T(M)$.
+    etapes:
+      - type: calcul
+        titre: Les chemins
+        texte: $P(M \cap T) = 0{,}02 \times 0{,}95 = 0{,}019$ et $P(\bar{M} \cap T) = 0{,}98 \times 0{,}05 = 0{,}049$.
+      - type: calcul
+        titre: Question 1
+        texte: $P(T) = 0{,}019 + 0{,}049 = 0{,}068$.
+      - type: piege
+        titre: Question 2, le piège
+        texte: >-
+          On pourrait répondre 0,95. Mais 0,95 est $P_M(T)$, la probabilité d'être positif quand on est malade. On cherche l'inverse.
+        note: on éclaire les positifs
+      - type: conc
+        titre: Conclusion
+        texte: <mark>$P_T(M) = \frac{0{,}019}{0{,}068} \approx 0{,}28$</mark>. Un test positif ne donne qu'environ 28 % de chances d'être malade.
+
+  - titre: Un jeu, espérance
+    difficulte: 2
+    type: bac
+    enonce: |
+      On tire une carte dans un jeu de 32 cartes. As : on gagne 10 €. Figure (roi, dame, valet) : on gagne 2 €. Sinon, on perd 3 €. $X$ est le gain.
+      1. Donner la loi de $X$.
+      2. Calculer $E(X)$. Le jeu est-il favorable ?
+    indice: 4 as, 12 figures et 16 autres cartes.
+    etapes:
+      - type: calcul
+        titre: Question 1
+        texte: $P(X = 10) = \frac{4}{32} = \frac{1}{8}$, $P(X = 2) = \frac{12}{32} = \frac{3}{8}$, $P(X = -3) = \frac{16}{32} = \frac{1}{2}$.
+      - type: calcul
+        titre: Question 2
+        texte: $E(X) = \frac{1}{8} \times 10 + \frac{3}{8} \times 2 - \frac{1}{2} \times 3 = 1{,}25 + 0{,}75 - 1{,}5 = 0{,}5$.
+      - type: conc
+        titre: Conclusion
+        texte: >-
+          <mark>$E(X) = 0{,}5$ €, le jeu est favorable au joueur</mark> : il gagne en moyenne 50 centimes par partie.

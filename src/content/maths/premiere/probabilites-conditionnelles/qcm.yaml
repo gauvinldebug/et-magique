@@ -1,0 +1,48 @@
+questions:
+  - question: $P(A) = 0{,}4$ et $P(A \cap B) = 0{,}1$. Alors $P_A(B)$ vaut…
+    choix: ['$0{,}04$', '$0{,}25$', '$0{,}5$', '$4$']
+    bonne: 1
+    explication: $\frac{0{,}1}{0{,}4} = 0{,}25$.
+    revoir: cours
+
+  - question: Sur un arbre pondéré, la probabilité d'un chemin s'obtient en…
+    choix: ["additionnant les branches", "multipliant les branches", "prenant la dernière branche", "divisant les branches"]
+    bonne: 1
+    explication: $P(A \cap B) = P(A) \times P_A(B)$.
+    revoir: cours
+
+  - question: $P(A) = 0{,}3$, $P_A(B) = 0{,}5$, $P_{\bar{A}}(B) = 0{,}2$. Alors $P(B)$ vaut…
+    choix: ['$0{,}7$', '$0{,}29$', '$0{,}15$', '$0{,}35$']
+    bonne: 1
+    explication: $0{,}3 \times 0{,}5 + 0{,}7 \times 0{,}2 = 0{,}15 + 0{,}14 = 0{,}29$.
+    revoir: exercices
+
+  - question: $A$ et $B$ sont indépendants, $P(A) = 0{,}5$ et $P(B) = 0{,}4$. Alors $P(A \cap B)$ vaut…
+    choix: ['$0{,}9$', '$0{,}2$', '$0{,}1$', '$0$']
+    bonne: 1
+    explication: Par indépendance, $0{,}5 \times 0{,}4 = 0{,}2$.
+    revoir: cours
+
+  - question: Deux événements incompatibles de probabilités non nulles sont…
+    choix: ["toujours indépendants", "jamais indépendants", "parfois indépendants", "égaux"]
+    bonne: 1
+    explication: $P(A \cap B) = 0$ alors que $P(A)P(B) > 0$.
+    revoir: cours
+
+  - question: Sur la branche qui va de $A$ vers $B$ dans un arbre, on écrit…
+    choix: ['$P(B)$', '$P(A \cap B)$', '$P_A(B)$', '$P_B(A)$']
+    bonne: 2
+    explication: Au second niveau, ce sont les probabilités sachant l'événement du premier niveau.
+    revoir: cours
+
+  - question: Si $P_A(B) = P(B)$, alors…
+    choix: ["$A$ et $B$ sont incompatibles", "$A$ et $B$ sont indépendants", "$P(A) = P(B)$", "$P(A \\cap B) = 0$"]
+    bonne: 1
+    explication: Savoir que $A$ est réalisé ne change rien pour $B$.
+    revoir: cours
+
+  - question: Un jeu rapporte 10 € avec la probabilité 0,1 et fait perdre 2 € sinon. L'espérance du gain vaut…
+    choix: ['$1$ €', '$-0{,}8$ €', '$-1$ €', '$0{,}2$ €']
+    bonne: 1
+    explication: $0{,}1 \times 10 + 0{,}9 \times (-2) = 1 - 1{,}8 = -0{,}8$. Le jeu est défavorable.
+    revoir: exercices

@@ -1,0 +1,48 @@
+questions:
+  - question: Si $\vec{u}(2\,;-3)$ et $\vec{v}(4\,;1)$, alors $\vec{u} \cdot \vec{v}$ vaut…
+    choix: ['$5$', '$11$', '$8$', '$-3$']
+    bonne: 0
+    explication: $2 \times 4 + (-3) \times 1 = 8 - 3 = 5$.
+    revoir: cours
+
+  - question: Les vecteurs $\vec{u}(3\,;2)$ et $\vec{v}(-2\,;3)$ sont…
+    choix: ["colinéaires", "orthogonaux", "égaux", "de produit scalaire 12"]
+    bonne: 1
+    explication: $3 \times (-2) + 2 \times 3 = 0$.
+    revoir: cours
+
+  - question: $\|\vec{u}\| = 4$, $\|\vec{v}\| = 3$ et l'angle entre eux vaut $60°$. Alors $\vec{u} \cdot \vec{v}$ vaut…
+    choix: ['$12$', '$6$', '$6\sqrt{3}$', '$7$']
+    bonne: 1
+    explication: $4 \times 3 \times \cos 60° = 12 \times \frac{1}{2} = 6$.
+    revoir: cours
+
+  - question: Si l'angle entre $\vec{u}$ et $\vec{v}$ est obtus, $\vec{u} \cdot \vec{v}$ est…
+    choix: ["positif", "négatif", "nul", "on ne peut pas savoir"]
+    bonne: 1
+    explication: L'ombre de $\vec{v}$ part dans le sens opposé à $\vec{u}$, et $\cos$ est négatif pour un angle obtus.
+    revoir: cours
+
+  - question: Dans un triangle, $b = 4$, $c = 6$ et $\hat{A} = 90°$. Al-Kashi donne $a^2 = \dots$
+    choix: ['$52$', '$28$', '$100$', '$10$']
+    bonne: 0
+    explication: $\cos 90° = 0$, on retrouve Pythagore, $16 + 36 = 52$.
+    revoir: cours
+
+  - question: La droite d'équation $3x - y + 2 = 0$ a pour vecteur normal…
+    choix: ['$(3\,;-1)$', '$(1\,;3)$', '$(-1\,;3)$', '$(3\,;2)$']
+    bonne: 0
+    explication: On lit les coefficients de $x$ et $y$. Le vecteur $(1\,;3)$ est un vecteur directeur.
+    revoir: cours
+
+  - question: Le cercle de centre $(1\,;-2)$ et de rayon 3 a pour équation…
+    choix: ['$(x - 1)^2 + (y + 2)^2 = 9$', '$(x + 1)^2 + (y - 2)^2 = 9$', '$(x - 1)^2 + (y + 2)^2 = 3$', '$x^2 + y^2 = 9$']
+    bonne: 0
+    explication: $(x - x_0)^2 + (y - y_0)^2 = r^2$, avec $y - (-2) = y + 2$.
+    revoir: cours
+
+  - question: $\vec{u} \cdot \vec{u}$ est égal à…
+    choix: ['$0$', '$\|\vec{u}\|$', '$\|\vec{u}\|^2$', '$2\|\vec{u}\|$']
+    bonne: 2
+    explication: Un vecteur fait un angle nul avec lui-même, $\cos 0 = 1$.
+    revoir: cours
