@@ -6,18 +6,18 @@ ordre: 2
 publie: 2026-11-22
 video:
   youtube: ""
-  duree: 12 min
+  duree: 10 min
   chapitres:
     - { t: "0:00", titre: "Bonjour et objectif" }
-    - { t: "0:15", titre: "Le problème" }
-    - { t: "1:10", titre: "La fourmi et le drapeau" }
-    - { t: "2:40", titre: "Définitions et limites à connaître" }
-    - { t: "4:40", titre: "Opérations et formes indéterminées" }
-    - { t: "6:25", titre: "Comparaison et gendarmes" }
-    - { t: "7:40", titre: "La limite monotone" }
-    - { t: "8:40", titre: "Exercice type bac" }
-    - { t: "10:55", titre: "Les pièges" }
-    - { t: "12:10", titre: "À toi" }
+    - { t: "0:09", titre: "Le problème" }
+    - { t: "0:59", titre: "La fourmi et le drapeau" }
+    - { t: "1:50", titre: "Définitions et limites à connaître" }
+    - { t: "3:20", titre: "Opérations et formes indéterminées" }
+    - { t: "4:43", titre: "Comparaison et gendarmes" }
+    - { t: "5:33", titre: "La limite monotone" }
+    - { t: "6:09", titre: "Exercice type bac" }
+    - { t: "7:40", titre: "Les pièges" }
+    - { t: "8:25", titre: "À toi" }
 piege: "**La barrière n'est pas le drapeau.** Une suite croissante et majorée par 3 converge, mais pas forcément vers 3 : elle est aussi majorée par 4, et par 100. Le théorème dit que la limite existe, pas combien elle vaut."
 pdf:
   cours: /pdf/maths/terminale/limites-de-suites-cours.pdf
