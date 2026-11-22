@@ -6,29 +6,20 @@ import { existe } from '../../../../lib/fichiers';
 export const getStaticPaths = cheminsChapitres;
 const p = Astro.props;
 const { video, pdf } = p.chapitre.data;
+// Les time codes restent dans la description YouTube : sur le site, un clic sur la vidéo suffit.
 const base = `/${p.matiere.slug}/${p.niveau.slug}/${p.chapitre.slug}`;
 ---
 <Chapitre {...p} onglet="video">
   <div class="ch-grid">
     <div style="display:grid;gap:20px">
-      <Video youtube={video.youtube} titre={p.chapitre.data.titre} />
+      <Video youtube={video.youtube} titre={p.chapitre.data.titre} matiere={p.matiere.slug} niveau={p.niveau.slug} chapitre={p.chapitre.slug} court={p.chapitre.data.court} />
       <p style="color:var(--encre-2)">{p.chapitre.data.description}</p>
     </div>
     <div class="side">
-      {video.chapitres.length > 0 && (
-        <div>
-          <div class="k">Dans la vidéo{video.duree ? ` · ${video.duree}` : ''}</div>
-          <ol class="toc">
-            {video.chapitres.map((c) =>
-              video.youtube ? (
-                <li><a href={`https://www.youtube.com/watch?v=${video.youtube}&t=${c.t.split(':').reduce((a, b) => a * 60 + Number(b), 0)}s`} target="_blank" rel="noopener"><b>{c.t}</b>{c.titre}</a></li>
-              ) : (
-                <li><span><b>{c.t}</b>{c.titre}</span></li>
-              ),
-            )}
-          </ol>
-        </div>
-      )}
+      <div class="k">Dans ce chapitre</div>
+      <a class="dl" href={`${base}/cours/`}><span class="ic">COURS</span><div><b>Le cours</b><small>À lire ou imprimer</small></div></a>
+      <a class="dl" href={`${base}/exercices/`}><span class="ic">EXOS</span><div><b>Exercices corrigés</b><small>Étape par étape</small></div></a>
+      <a class="dl" href={`${base}/qcm/`}><span class="ic">QCM</span><div><b>Le QCM</b><small>Pour vérifier que c'est compris</small></div></a>
       {p.fiche && (
         existe(pdf.fiche) ? (
           <a class="dl fiche" href={pdf.fiche} download data-umami-event="fiche-telechargee"><span class="ic">FICHE</span><div><b>Fiche de révision</b><small>1 page, en PDF à imprimer</small></div></a>

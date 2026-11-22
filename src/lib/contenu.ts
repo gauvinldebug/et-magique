@@ -58,9 +58,12 @@ export async function complements(id: string) {
   };
 }
 
-/** Le chapitre le plus récent (date de sa vidéo YouTube, sinon date de publication) : le seul marqué « Nouveau ». */
+/** Le dernier chapitre mis en ligne (date de publication, puis ordre dans le programme) : le seul marqué « Nouveau ».
+ *  Dès qu'un nouveau chapitre est publié, le badge quitte automatiquement le précédent. */
 export async function dernierChapitre(matiere: string) {
-  const date = (c: Awaited<ReturnType<typeof chapitresPublies>>[number]) =>
-    new Date((c.data.video as { date?: string }).date ?? c.data.publie).getTime();
-  return (await chapitresPublies()).filter((c) => c.matiere === matiere).sort((a, b) => date(b) - date(a))[0];
+  const jour = (c: Awaited<ReturnType<typeof chapitresPublies>>[number]) => new Date(c.data.publie).getTime();
+  const rangNiveau = (n: string) => NIVEAUX.findIndex((x) => x.slug === n);
+  return (await chapitresPublies())
+    .filter((c) => c.matiere === matiere)
+    .sort((a, b) => jour(b) - jour(a) || rangNiveau(b.niveau) - rangNiveau(a.niveau) || (b.data.ordre ?? 0) - (a.data.ordre ?? 0))[0];
 }

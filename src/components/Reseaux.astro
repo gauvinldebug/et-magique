@@ -1,0 +1,19 @@
+---
+// Liens vers les réseaux de la matière (YouTube, Instagram). TikTok s'ajoutera ici quand le compte existera.
+import { matiere as getMatiere } from '../data/site';
+interface Props { matiere?: string; libelles?: boolean }
+const { matiere = 'maths', libelles = false } = Astro.props;
+const m = getMatiere(matiere);
+const liens = [
+  m?.youtube && { nom: 'YouTube', href: m.youtube, icone: '<rect x="1" y="4" width="22" height="16" rx="4.5" fill="#FF0033"/><path d="M10 8.5v7l6-3.5z" fill="#fff"/>' },
+  m?.instagram && { nom: 'Instagram', href: m.instagram, icone: '<defs><linearGradient id="ig" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#FEDA75"/><stop offset=".35" stop-color="#FA7E1E"/><stop offset=".65" stop-color="#D62976"/><stop offset="1" stop-color="#4F5BD5"/></linearGradient></defs><rect x="2" y="2" width="20" height="20" rx="6" fill="url(#ig)"/><circle cx="12" cy="12" r="4.3" fill="none" stroke="#fff" stroke-width="1.9"/><circle cx="17.3" cy="6.7" r="1.2" fill="#fff"/>' },
+].filter(Boolean) as { nom: string; href: string; icone: string }[];
+---
+<div class="reseaux">
+  {liens.map((l) => (
+    <a href={l.href} target="_blank" rel="noopener" data-umami-event={`reseau-${l.nom.toLowerCase()}`} aria-label={`${m?.nom} et Magique sur ${l.nom} (nouvel onglet)`}>
+      <svg viewBox="0 0 24 24" aria-hidden="true" set:html={l.icone} />
+      {libelles && <span>{l.nom}</span>}
+    </a>
+  ))}
+</div>
