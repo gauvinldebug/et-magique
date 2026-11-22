@@ -1,0 +1,143 @@
+# Exercices corrigés, du plus facile au type bac.
+# type d'étape : init (vert), her (orange), conc (bleu), calcul, methode, piege (rouge)
+exercices:
+  - titre: Justifier une continuité
+    difficulte: 1
+    type: application
+    enonce: |
+      Justifier que la fonction $\cbleu{f}(\corange{x}) = \dfrac{\mathrm{e}^{\corange{x}} + \corange{x}^2}{\corange{x}^2 + 1}$ est continue sur $\mathbb{R}$.
+    indice: Regarde le numérateur, le dénominateur, et vérifie que le dénominateur ne s'annule jamais.
+    etapes:
+      - type: calcul
+        titre: Numérateur et dénominateur
+        texte: $\mathrm{e}^{\corange{x}}$ et $\corange{x}^2$ sont continues sur $\mathbb{R}$, donc leur somme aussi. $\corange{x}^2 + 1$ est un polynôme, continu sur $\mathbb{R}$.
+      - type: methode
+        titre: Le dénominateur ne s'annule pas
+        texte: Pour tout réel $\corange{x}$, $\corange{x}^2 + 1 \ge 1 > 0$.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>$\cbleu{f}$ est continue sur $\mathbb{R}$</mark> comme quotient de fonctions continues dont le dénominateur ne s'annule pas.
+
+  - titre: Au moins une solution
+    difficulte: 1
+    type: application
+    enonce: |
+      Soit $\cbleu{f}(\corange{x}) = \corange{x}^3 - 4\corange{x} + 1$. Montrer que l'équation $\cbleu{f}(\corange{x}) = 0$ admet au moins une solution dans $[0\,;1]$.
+    indice: Calcule $\cbleu{f}(0)$ et $\cbleu{f}(1)$.
+    etapes:
+      - type: calcul
+        titre: Les images des bornes
+        texte: $\cbleu{f}(0) = 1 > 0$ et $\cbleu{f}(1) = 1 - 4 + 1 = -2 < 0$.
+      - type: methode
+        titre: Les hypothèses du TVI
+        texte: $\cbleu{f}$ est un polynôme, donc continue sur $[0\,;1]$, et $0$ est compris entre $\cbleu{f}(1)$ et $\cbleu{f}(0)$.
+        note: le crayon passe de +1 à -2
+      - type: conc
+        titre: Conclusion
+        texte: D'après le théorème des valeurs intermédiaires, <mark>l'équation $\cbleu{f}(\corange{x}) = 0$ admet au moins une solution dans $[0\,;1]$</mark>.
+
+  - titre: Une unique solution
+    difficulte: 2
+    type: methode
+    enonce: |
+      Soit $\cbleu{f}(\corange{x}) = \mathrm{e}^{\corange{x}} + \corange{x}$ sur $\mathbb{R}$.
+      1. Étudier les variations de $\cbleu{f}$.
+      2. Montrer que $\cbleu{f}(\corange{x}) = 0$ admet une unique solution $\alpha$ dans $[-1\,;0]$.
+    indice: $\mathrm{e}^{-1} \approx 0{,}37$.
+    etapes:
+      - type: calcul
+        titre: Les variations
+        texte: $\cbleu{f}'(\corange{x}) = \mathrm{e}^{\corange{x}} + 1 > 0$, donc $\cbleu{f}$ est strictement croissante sur $\mathbb{R}$.
+      - type: calcul
+        titre: Les images
+        texte: $\cbleu{f}(-1) = \mathrm{e}^{-1} - 1 \approx -0{,}63 < 0$ et $\cbleu{f}(0) = 1 > 0$.
+      - type: conc
+        titre: Conclusion
+        texte: >-
+          $\cbleu{f}$ est continue (car dérivable) et strictement croissante sur $[-1\,;0]$, et $0$ est compris entre $\cbleu{f}(-1)$ et $\cbleu{f}(0)$. D'après le corollaire du TVI, <mark>l'équation admet une unique solution $\alpha$ dans $[-1\,;0]$</mark>.
+
+  - titre: Encadrer par balayage
+    difficulte: 2
+    type: methode
+    enonce: |
+      On reprend $\cbleu{f}(\corange{x}) = \mathrm{e}^{\corange{x}} + \corange{x}$ et la solution $\alpha \in [-1\,;0]$ de $\cbleu{f}(\corange{x}) = 0$.
+      Donner un encadrement de $\alpha$ d'amplitude $0{,}1$, puis $0{,}01$.
+    indice: Calcule $\cbleu{f}(-0{,}6)$ et $\cbleu{f}(-0{,}5)$.
+    etapes:
+      - type: calcul
+        titre: Pas de 0,1
+        texte: >-
+          $\cbleu{f}(-0{,}6) \approx 0{,}549 - 0{,}6 = -0{,}051 < 0$ et $\cbleu{f}(-0{,}5) \approx 0{,}607 - 0{,}5 = 0{,}107 > 0$. Donc $-0{,}6 < \alpha < -0{,}5$.
+      - type: calcul
+        titre: Pas de 0,01
+        texte: >-
+          $\cbleu{f}(-0{,}57) \approx 0{,}566 - 0{,}57 = -0{,}004 < 0$ et $\cbleu{f}(-0{,}56) \approx 0{,}571 - 0{,}56 = 0{,}011 > 0$.
+        note: on cherche où le signe change
+      - type: conc
+        titre: Conclusion
+        texte: <mark>$-0{,}57 < \alpha < -0{,}56$</mark>.
+
+  - titre: Le piège de l'unicité
+    difficulte: 2
+    type: piege
+    enonce: |
+      Soit $\cbleu{f}(\corange{x}) = \corange{x}^2 - 2$ sur $[-2\,;2]$. On a $\cbleu{f}(-2) = 2$ et $\cbleu{f}(2) = 2$.
+      Un élève affirme : « 0 n'est pas compris entre $\cbleu{f}(-2)$ et $\cbleu{f}(2)$, donc l'équation $\cbleu{f}(\corange{x}) = 0$ n'a pas de solution. » A-t-il raison ?
+    indice: Le TVI donne une condition suffisante, pas nécessaire.
+    etapes:
+      - type: piege
+        titre: L'erreur
+        texte: >-
+          Le TVI dit : si $k$ est entre les images des bornes, alors il y a une solution. Il ne dit rien quand ce n'est pas le cas.
+      - type: calcul
+        titre: Le contre-exemple
+        texte: $\cbleu{f}(\sqrt{2}) = 2 - 2 = 0$, et $\sqrt{2} \in [-2\,;2]$. Il y a même deux solutions, $\sqrt{2}$ et $-\sqrt{2}$.
+        note: le crayon descend puis remonte
+      - type: conc
+        titre: Conclusion
+        texte: <mark>L'élève a tort</mark>. Pour conclure avec le TVI, il faut découper l'intervalle là où la fonction change de sens de variation, ici en 0.
+
+  - titre: La limite d'une suite récurrente
+    difficulte: 2
+    type: application
+    enonce: |
+      On admet que la suite définie par $\uz = 1$ et $\unn = \dfrac{\un + 4}{\un + 1}$ converge vers un réel $\ell > 0$. Déterminer $\ell$.
+    indice: La fonction $\corange{x} \mapsto \frac{\corange{x} + 4}{\corange{x} + 1}$ est continue sur $[0\,;+\infty[$.
+    etapes:
+      - type: methode
+        titre: On utilise la continuité
+        texte: La fonction $\cbleu{f}(\corange{x}) = \frac{\corange{x} + 4}{\corange{x} + 1}$ est continue en $\ell > 0$, donc $\ell = \cbleu{f}(\ell)$.
+      - type: calcul
+        titre: On résout
+        texte: >-
+          $\ell(\ell + 1) = \ell + 4$, donc $\ell^2 = 4$, soit $\ell = 2$ ou $\ell = -2$.
+      - type: conc
+        titre: Conclusion
+        texte: Comme $\ell > 0$, <mark>$\ell = 2$</mark>.
+
+  - titre: Étude type bac
+    difficulte: 3
+    type: bac
+    enonce: |
+      Soit $g$ définie sur $[0\,;+\infty[$ par $g(\corange{x}) = \corange{x}^3 - 3\corange{x} - 3$.
+      1. Étudier les variations de $g$ sur $[0\,;+\infty[$.
+      2. Montrer que $g(\corange{x}) = 0$ admet une unique solution $\alpha$ sur $[0\,;+\infty[$, et que $2 < \alpha < 3$.
+      3. En déduire le signe de $g$ sur $[0\,;+\infty[$.
+    indice: >-
+      $g'(\corange{x}) = 3(\corange{x}^2 - 1)$. Sur $[0\,;1]$, regarde le signe de $g$ directement.
+    etapes:
+      - type: calcul
+        titre: Question 1
+        texte: >-
+          $g'(\corange{x}) = 3\corange{x}^2 - 3 = 3(\corange{x} - 1)(\corange{x} + 1)$. Sur $[0\,;+\infty[$, $\corange{x} + 1 > 0$, donc $g'$ est du signe de $\corange{x} - 1$ : $g$ est décroissante sur $[0\,;1]$ et croissante sur $[1\,;+\infty[$.
+      - type: methode
+        titre: Question 2, sur [0 ; 1]
+        texte: $g(0) = -3$ et $g(1) = -5$. Comme $g$ est décroissante sur $[0\,;1]$, $g(\corange{x}) \le -3 < 0$ sur cet intervalle. Pas de solution.
+        note: on découpe là où le sens change
+      - type: calcul
+        titre: Question 2, sur [1 ; +∞[
+        texte: >-
+          $g$ est continue et strictement croissante sur $[1\,;+\infty[$, $g(1) = -5 < 0$ et $\lim\limits_{+\infty} g = +\infty$. D'après le corollaire du TVI, $g(\corange{x}) = 0$ a une unique solution $\alpha$ sur $[1\,;+\infty[$. De plus $g(2) = -1 < 0$ et $g(3) = 15 > 0$, donc $2 < \alpha < 3$.
+      - type: conc
+        titre: Question 3
+        texte: <mark>$g(\corange{x}) < 0$ sur $[0\,;\alpha[$, $g(\alpha) = 0$ et $g(\corange{x}) > 0$ sur $]\alpha\,;+\infty[$</mark>.

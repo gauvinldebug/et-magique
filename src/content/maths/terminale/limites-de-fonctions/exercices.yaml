@@ -1,0 +1,158 @@
+# Exercices corrigés, du plus facile au type bac.
+# type d'étape : init (vert), her (orange), conc (bleu), calcul, methode, piege (rouge)
+exercices:
+  - titre: Un polynôme en l'infini
+    difficulte: 1
+    type: methode
+    enonce: |
+      Déterminer $\lim\limits_{\corange{x} \to -\infty} (\corange{x}^3 + 2\corange{x}^2 - 5)$.
+    indice: $\corange{x}^3 \to -\infty$ et $2\corange{x}^2 \to +\infty$. Factorise par le terme de plus haut degré.
+    etapes:
+      - type: piege
+        titre: On repère la forme indéterminée
+        texte: >-
+          En $-\infty$ : $\corange{x}^3 \to -\infty$ et $2\corange{x}^2 \to +\infty$. C'est la forme $\infty - \infty$.
+      - type: calcul
+        titre: On factorise par x³
+        texte: |
+          $$\corange{x}^3 + 2\corange{x}^2 - 5 = \corange{x}^3\left(1 + \frac{2}{\corange{x}} - \frac{5}{\corange{x}^3}\right)$$
+          La parenthèse tend vers $1 + 0 - 0 = 1$.
+        note: le plus haut degré décide
+      - type: conc
+        titre: Conclusion
+        texte: Par produit, $\corange{x}^3 \to -\infty$ et la parenthèse tend vers 1, donc <mark>la limite vaut $-\infty$</mark>.
+
+  - titre: Une asymptote horizontale
+    difficulte: 1
+    type: application
+    enonce: |
+      Soit $\cbleu{f}(\corange{x}) = \dfrac{4\corange{x} - 1}{2\corange{x} + 3}$ sur $\left]-\frac{3}{2}\,;+\infty\right[$.
+      Déterminer la limite de $\cbleu{f}$ en $+\infty$ et interpréter graphiquement.
+    indice: Factorise en haut et en bas par $\corange{x}$.
+    etapes:
+      - type: calcul
+        titre: On factorise par x
+        texte: |
+          $$\cbleu{f}(\corange{x}) = \frac{\corange{x}\left(4 - \frac{1}{\corange{x}}\right)}{\corange{x}\left(2 + \frac{3}{\corange{x}}\right)} = \frac{4 - \frac{1}{\corange{x}}}{2 + \frac{3}{\corange{x}}}$$
+      - type: calcul
+        titre: On passe à la limite
+        texte: Le numérateur tend vers 4, le dénominateur vers 2. Par quotient, $\lim\limits_{+\infty} \cbleu{f} = 2$.
+      - type: conc
+        titre: Interprétation
+        texte: <mark>La droite $y = 2$ est asymptote horizontale</mark> à la courbe de $\cbleu{f}$ en $+\infty$. C'est le rail du train.
+
+  - titre: Limite à gauche, limite à droite
+    difficulte: 2
+    type: methode
+    enonce: |
+      Soit $\cbleu{f}(\corange{x}) = \dfrac{\corange{x} + 1}{\corange{x} - 3}$, définie sur $\mathbb{R} \setminus \{3\}$.
+      Déterminer les limites de $\cbleu{f}$ en $3^-$ et en $3^+$. Que peut-on en déduire ?
+    indice: Le numérateur tend vers 4. Regarde le signe du dénominateur de chaque côté de 3.
+    etapes:
+      - type: calcul
+        titre: Le numérateur
+        texte: Quand $\corange{x} \to 3$, $\corange{x} + 1 \to 4$, un nombre positif.
+      - type: methode
+        titre: Le signe du dénominateur
+        texte: >-
+          Si $\corange{x} < 3$, $\corange{x} - 3 < 0$ : il tend vers $0^-$. Si $\corange{x} > 3$, $\corange{x} - 3 > 0$ : il tend vers $0^+$.
+        note: c'est le signe qui décide
+      - type: calcul
+        titre: Les deux limites
+        texte: Par quotient, $\lim\limits_{3^-} \cbleu{f} = \frac{4}{0^-} = -\infty$ et $\lim\limits_{3^+} \cbleu{f} = \frac{4}{0^+} = +\infty$.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>La droite $x = 3$ est asymptote verticale</mark> à la courbe de $\cbleu{f}$.
+
+  - titre: Croissances comparées
+    difficulte: 2
+    type: application
+    enonce: |
+      1. Déterminer $\lim\limits_{\corange{x} \to +\infty} (\mathrm{e}^{\corange{x}} - \corange{x}^2)$.
+      2. Déterminer $\lim\limits_{\corange{x} \to -\infty} (\corange{x} + 2)\,\mathrm{e}^{\corange{x}}$.
+    indice: >-
+      Question 1 : factorise par $\mathrm{e}^{\corange{x}}$. Question 2 : développe en $\corange{x}\mathrm{e}^{\corange{x}} + 2\mathrm{e}^{\corange{x}}$.
+    etapes:
+      - type: piege
+        titre: Question 1, la forme indéterminée
+        texte: >-
+          $\mathrm{e}^{\corange{x}} \to +\infty$ et $\corange{x}^2 \to +\infty$ : forme $\infty - \infty$.
+      - type: calcul
+        titre: On factorise par l'exponentielle
+        texte: |
+          $$\mathrm{e}^{\corange{x}} - \corange{x}^2 = \mathrm{e}^{\corange{x}}\left(1 - \frac{\corange{x}^2}{\mathrm{e}^{\corange{x}}}\right)$$
+          Par croissances comparées, $\frac{\mathrm{e}^{\corange{x}}}{\corange{x}^2} \to +\infty$, donc $\frac{\corange{x}^2}{\mathrm{e}^{\corange{x}}} \to 0$ et la parenthèse tend vers 1. La limite vaut <mark>$+\infty$</mark>.
+      - type: calcul
+        titre: Question 2
+        texte: >-
+          $(\corange{x} + 2)\mathrm{e}^{\corange{x}} = \corange{x}\mathrm{e}^{\corange{x}} + 2\mathrm{e}^{\corange{x}}$. Par croissances comparées, $\corange{x}\mathrm{e}^{\corange{x}} \to 0$ en $-\infty$, et $2\mathrm{e}^{\corange{x}} \to 0$.
+      - type: conc
+        titre: Conclusion
+        texte: >-
+          Par somme, <mark>la limite vaut 0</mark> : la droite $y = 0$ est asymptote horizontale en $-\infty$.
+
+  - titre: Une composée
+    difficulte: 2
+    type: application
+    enonce: |
+      Déterminer $\lim\limits_{\corange{x} \to +\infty} \mathrm{e}^{\frac{2\corange{x} + 1}{\corange{x}}}$ et $\lim\limits_{\corange{x} \to +\infty} \sqrt{\corange{x}^2 + 1}$.
+    indice: Commence par la limite de ce qui est à l'intérieur.
+    etapes:
+      - type: calcul
+        titre: Première limite, l'intérieur
+        texte: $\frac{2\corange{x} + 1}{\corange{x}} = 2 + \frac{1}{\corange{x}} \to 2$.
+      - type: calcul
+        titre: Première limite, l'extérieur
+        texte: $\mathrm{e}^{X} \to \mathrm{e}^2$ quand $X \to 2$. Par composition, la limite vaut <mark>$\mathrm{e}^2$</mark>.
+      - type: calcul
+        titre: Seconde limite
+        texte: L'intérieur $\corange{x}^2 + 1 \to +\infty$, et $\sqrt{X} \to +\infty$ quand $X \to +\infty$. Par composition, la limite vaut <mark>$+\infty$</mark>.
+
+  - titre: Les gendarmes
+    difficulte: 2
+    type: methode
+    enonce: |
+      Déterminer $\lim\limits_{\corange{x} \to +\infty} \dfrac{\corange{x} + \sin \corange{x}}{\corange{x}}$.
+    indice: Encadre $\sin \corange{x}$ entre $-1$ et $1$.
+    etapes:
+      - type: calcul
+        titre: On simplifie
+        texte: Pour $\corange{x} > 0$, $\dfrac{\corange{x} + \sin \corange{x}}{\corange{x}} = 1 + \dfrac{\sin \corange{x}}{\corange{x}}$.
+      - type: calcul
+        titre: On encadre
+        texte: |
+          Comme $-1 \le \sin \corange{x} \le 1$ et $\corange{x} > 0$ :
+          $$1 - \frac{1}{\corange{x}} \le 1 + \frac{\sin \corange{x}}{\corange{x}} \le 1 + \frac{1}{\corange{x}}$$
+        note: on divise par x positif, le sens ne change pas
+      - type: conc
+        titre: Conclusion
+        texte: Les deux bornes tendent vers 1. D'après le théorème des gendarmes, <mark>la limite vaut 1</mark>.
+
+  - titre: Étude complète type bac
+    difficulte: 3
+    type: bac
+    enonce: |
+      Soit $\cbleu{f}$ définie sur $\mathbb{R}$ par $\cbleu{f}(\corange{x}) = (2\corange{x} - 1)\,\mathrm{e}^{-\corange{x}}$.
+      1. Déterminer la limite de $\cbleu{f}$ en $-\infty$.
+      2. Déterminer la limite de $\cbleu{f}$ en $+\infty$. Interpréter graphiquement.
+    indice: >-
+      En $+\infty$, écris $\cbleu{f}(\corange{x}) = \frac{2\corange{x}}{\mathrm{e}^{\corange{x}}} - \frac{1}{\mathrm{e}^{\corange{x}}}$.
+    etapes:
+      - type: calcul
+        titre: Question 1
+        texte: >-
+          En $-\infty$ : $2\corange{x} - 1 \to -\infty$ et $-\corange{x} \to +\infty$ donc $\mathrm{e}^{-\corange{x}} \to +\infty$. Par produit, $\lim\limits_{-\infty} \cbleu{f} = -\infty$. Pas de forme indéterminée.
+      - type: piege
+        titre: Question 2, la forme indéterminée
+        texte: >-
+          En $+\infty$ : $2\corange{x} - 1 \to +\infty$ et $\mathrm{e}^{-\corange{x}} \to 0$. C'est la forme $\infty \times 0$.
+      - type: calcul
+        titre: On réécrit
+        texte: |
+          $$\cbleu{f}(\corange{x}) = \frac{2\corange{x} - 1}{\mathrm{e}^{\corange{x}}} = 2 \times \frac{\corange{x}}{\mathrm{e}^{\corange{x}}} - \frac{1}{\mathrm{e}^{\corange{x}}}$$
+          Par croissances comparées, $\frac{\corange{x}}{\mathrm{e}^{\corange{x}}} \to 0$, et $\frac{1}{\mathrm{e}^{\corange{x}}} \to 0$.
+        note: l'exponentielle gagne
+      - type: conc
+        titre: Conclusion
+        texte: >-
+          <mark>$\lim\limits_{+\infty} \cbleu{f} = 0$</mark> : la droite $y = 0$ est asymptote horizontale à la courbe en $+\infty$.

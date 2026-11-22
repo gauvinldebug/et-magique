@@ -1,0 +1,55 @@
+questions:
+  - question: Que vaut $\ln(\mathrm{e}^{3})$ ?
+    choix: ['$3$', '$\mathrm{e}^3$', '$3\mathrm{e}$', '$\ln 3$']
+    bonne: 0
+    explication: Le logarithme fait le chemin retour de l'exponentielle, $\ln(\mathrm{e}^{\corange{x}}) = \corange{x}$.
+    revoir: cours
+
+  - question: $\ln 12$ est égal à…
+    choix: ['$\ln 3 \times \ln 4$', '$\ln 3 + \ln 4$', '$\ln 10 + \ln 2$', '$2\ln 6$']
+    bonne: 1
+    explication: $12 = 3 \times 4$ et le logarithme transforme le produit en somme. Attention, $\ln 10 + \ln 2 = \ln 20$ et $2\ln 6 = \ln 36$.
+    revoir: cours
+
+  - question: $\ln(\corange{x}) = 2$ a pour solution…
+    choix: ['$\corange{x} = \ln 2$', '$\corange{x} = \mathrm{e}^2$', '$\corange{x} = 2\mathrm{e}$', '$\corange{x} = \sqrt{\mathrm{e}}$']
+    bonne: 1
+    explication: $\ln \corange{x} = k \iff \corange{x} = \mathrm{e}^{k}$.
+    revoir: cours
+
+  - question: Quelle est la dérivée de $\ln(\corange{x}^2 + 1)$ ?
+    choix: ['$\dfrac{1}{\corange{x}^2 + 1}$', '$\dfrac{2\corange{x}}{\corange{x}^2 + 1}$', '$2\corange{x}\ln(\corange{x}^2 + 1)$', '$\dfrac{2}{\corange{x}}$']
+    bonne: 1
+    explication: $(\ln u)' = \frac{u'}{u}$ avec $u = \corange{x}^2 + 1$ et $u' = 2\corange{x}$.
+    revoir: cours
+
+  - question: Que vaut $\lim\limits_{\corange{x} \to +\infty} \dfrac{\ln \corange{x}}{\corange{x}}$ ?
+    choix: ['$0$', '$1$', '$+\infty$', "pas de limite"]
+    bonne: 0
+    explication: Croissances comparées, face à une puissance de $\corange{x}$ le logarithme perd toujours.
+    revoir: cours
+
+  - question: L'inéquation $0{,}5^{\corange{n}} < 0{,}01$ équivaut à…
+    choix: ['$\corange{n} < \dfrac{\ln 0{,}01}{\ln 0{,}5}$', '$\corange{n} > \dfrac{\ln 0{,}01}{\ln 0{,}5}$', '$\corange{n} < \ln 0{,}02$', '$\corange{n} > 0{,}02$']
+    bonne: 1
+    explication: $\corange{n}\ln 0{,}5 < \ln 0{,}01$, et $\ln 0{,}5 < 0$, donc diviser change le sens. On trouve $\corange{n} > 6{,}64$, soit $\corange{n} \ge 7$.
+    revoir: exercices
+
+  - question: Sur quel ensemble l'expression $\ln(3 - \corange{x})$ est-elle définie ?
+    choix: ['$]3\,;+\infty[$', '$]-\infty\,;3[$', '$]0\,;3[$', '$\mathbb{R}$']
+    bonne: 1
+    explication: Il faut $3 - \corange{x} > 0$, soit $\corange{x} < 3$.
+    revoir: cours
+
+  - question: Que vaut $\lim\limits_{\corange{x} \to 0^+} \corange{x}\ln \corange{x}$ ?
+    choix: ['$-\infty$', '$0$', '$1$', '$+\infty$']
+    bonne: 1
+    explication: >-
+      Forme $0 \times (-\infty)$ levée par croissances comparées : $\corange{x}^n \ln \corange{x} \to 0$ en $0^+$.
+    revoir: cours
+
+  - question: La fonction $\ln$ est…
+    choix: ["convexe sur $]0\\,;+\\infty[$", "concave sur $]0\\,;+\\infty[$", "décroissante sur $]0\\,;1[$", "positive sur $]0\\,;+\\infty[$"]
+    bonne: 1
+    explication: $\ln''(\corange{x}) = -\frac{1}{\corange{x}^2} < 0$. Elle est croissante partout et négative sur $]0\,;1[$.
+    revoir: cours

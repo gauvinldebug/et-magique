@@ -1,0 +1,67 @@
+questions:
+  - question: Que vaut $\lim\limits_{\corange{x} \to -\infty} \mathrm{e}^{\corange{x}}$ ?
+    choix: ['$-\infty$', '$0$', '$1$', '$+\infty$']
+    bonne: 1
+    explication: Quand $\corange{x}$ part vers $-\infty$, $\mathrm{e}^{\corange{x}}$ se colle à 0 par au-dessus. La droite $y = 0$ est asymptote horizontale.
+    revoir: cours
+
+  - question: Que vaut $\lim\limits_{\corange{x} \to 0^-} \dfrac{1}{\corange{x}}$ ?
+    choix: ['$0$', '$+\infty$', '$-\infty$', "pas de limite"]
+    bonne: 2
+    explication: Pour $\corange{x}$ négatif et proche de 0, $\frac{1}{\corange{x}}$ est un grand nombre négatif.
+    revoir: cours
+
+  - question: Si $\lim\limits_{\corange{x} \to +\infty} \cbleu{f}(\corange{x}) = 4$, alors…
+    choix:
+      - la droite $x = 4$ est asymptote verticale
+      - la droite $y = 4$ est asymptote horizontale en $+\infty$
+      - $\cbleu{f}(4) = +\infty$
+      - $\cbleu{f}$ est majorée par 4
+    bonne: 1
+    explication: Une limite finie en l'infini donne un rail horizontal. Un rail vertical vient d'une limite infinie en un réel.
+    revoir: cours
+
+  - question: Que vaut $\lim\limits_{\corange{x} \to +\infty} \dfrac{\mathrm{e}^{\corange{x}}}{\corange{x}^5}$ ?
+    choix: ['$0$', '$1$', '$5$', '$+\infty$']
+    bonne: 3
+    explication: Croissances comparées, l'exponentielle l'emporte sur toute puissance de $\corange{x}$.
+    revoir: cours
+
+  - question: Que vaut $\lim\limits_{\corange{x} \to +\infty} \dfrac{3\corange{x}^2 + \corange{x}}{1 - \corange{x}^2}$ ?
+    choix: ['$3$', '$-3$', '$+\infty$', '$0$']
+    bonne: 1
+    explication: >-
+      On factorise par $\corange{x}^2$ : $\dfrac{3 + \frac{1}{\corange{x}}}{\frac{1}{\corange{x}^2} - 1} \to \dfrac{3}{-1} = -3$.
+    revoir: exercices
+
+  - question: Que vaut $\lim\limits_{\corange{x} \to -\infty} \corange{x}^3\,\mathrm{e}^{\corange{x}}$ ?
+    choix: ['$-\infty$', '$0$', '$+\infty$', "pas de limite"]
+    bonne: 1
+    explication: Croissances comparées en $-\infty$, $\corange{x}^n\mathrm{e}^{\corange{x}} \to 0$. L'exponentielle écrase la puissance.
+    revoir: cours
+
+  - question: Que vaut $\lim\limits_{\corange{x} \to +\infty} \mathrm{e}^{\frac{1}{\corange{x}}}$ ?
+    choix: ['$0$', '$1$', '$\mathrm{e}$', '$+\infty$']
+    bonne: 1
+    explication: L'intérieur $\frac{1}{\corange{x}} \to 0$, puis $\mathrm{e}^{X} \to \mathrm{e}^0 = 1$ quand $X \to 0$. Par composition, la limite vaut 1.
+    revoir: cours
+
+  - question: Pour montrer que $\lim\limits_{+\infty} \dfrac{\sin \corange{x}}{\corange{x}} = 0$, on utilise…
+    choix:
+      - les croissances comparées
+      - le théorème des gendarmes
+      - la limite d'une composée
+      - une factorisation par $\corange{x}$
+    bonne: 1
+    explication: $-1 \le \sin \corange{x} \le 1$ donne $-\frac{1}{\corange{x}} \le \frac{\sin \corange{x}}{\corange{x}} \le \frac{1}{\corange{x}}$ pour $\corange{x} > 0$, et les deux bornes tendent vers 0.
+    revoir: cours
+
+  - question: La courbe de $\cbleu{f}(\corange{x}) = \dfrac{2\corange{x}}{\corange{x} + 1}$ admet pour asymptotes…
+    choix:
+      - $x = 2$ et $y = -1$
+      - $x = -1$ et $y = 2$
+      - $x = -1$ seulement
+      - $y = 2$ seulement
+    bonne: 1
+    explication: En $\pm\infty$, $\cbleu{f}(\corange{x}) \to 2$ (rail horizontal $y = 2$). En $-1$, le dénominateur s'annule et pas le numérateur, donc limite infinie (rail vertical $x = -1$).
+    revoir: exercices
