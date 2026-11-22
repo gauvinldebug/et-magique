@@ -1,0 +1,131 @@
+# Exercices corrigés, du plus facile au type bac.
+# type d'étape : init (vert), her (orange), conc (bleu), calcul, methode, piege (rouge)
+exercices:
+  - titre: Une représentation paramétrique
+    difficulte: 1
+    type: application
+    enonce: |
+      Soit $A(2\,;-1\,;0)$ et $B(4\,;1\,;3)$.
+      1. Donner une représentation paramétrique de la droite $(AB)$.
+      2. Le point $C(8\,;5\,;9)$ appartient-il à $(AB)$ ?
+    indice: Prends $\overrightarrow{AB}$ comme vecteur directeur.
+    etapes:
+      - type: calcul
+        titre: Question 1
+        texte: >-
+          $\overrightarrow{AB}(2\,;2\,;3)$. Une représentation est $x = 2 + 2t$, $y = -1 + 2t$, $z = 3t$, $t \in \mathbb{R}$.
+      - type: calcul
+        titre: Question 2
+        texte: >-
+          $8 = 2 + 2t$ donne $t = 3$ ; $5 = -1 + 2t$ donne $t = 3$ ; $9 = 3t$ donne $t = 3$.
+        note: le même t partout
+      - type: conc
+        titre: Conclusion
+        texte: <mark>$C$ appartient à $(AB)$</mark>, avec $t = 3$.
+
+  - titre: Équation d'un plan
+    difficulte: 1
+    type: methode
+    enonce: |
+      Déterminer une équation cartésienne du plan $\mathcal{P}$ passant par $A(1\,;-2\,;4)$ et de vecteur normal $\vec{n}(3\,;1\,;-2)$.
+    indice: L'équation est de la forme $3x + y - 2z + d = 0$.
+    etapes:
+      - type: calcul
+        titre: La forme
+        texte: $\mathcal{P}$ a une équation $3x + y - 2z + d = 0$.
+      - type: calcul
+        titre: On trouve d
+        texte: $A \in \mathcal{P}$, donc $3 - 2 - 8 + d = 0$, soit $d = 7$.
+      - type: conc
+        titre: Conclusion
+        texte: >-
+          <mark>$\mathcal{P} : 3x + y - 2z + 7 = 0$</mark>.
+
+  - titre: Un vecteur normal au plan (ABC)
+    difficulte: 2
+    type: methode
+    enonce: |
+      Soit $A(1\,;0\,;0)$, $B(0\,;2\,;0)$ et $C(0\,;0\,;3)$.
+      1. Montrer que $\vec{n}(6\,;3\,;2)$ est normal au plan $(ABC)$.
+      2. En déduire une équation du plan $(ABC)$.
+    indice: Calcule $\vec{n} \cdot \overrightarrow{AB}$ et $\vec{n} \cdot \overrightarrow{AC}$.
+    etapes:
+      - type: calcul
+        titre: Les vecteurs du plan
+        texte: $\overrightarrow{AB}(-1\,;2\,;0)$ et $\overrightarrow{AC}(-1\,;0\,;3)$, non colinéaires.
+      - type: calcul
+        titre: Les produits scalaires
+        texte: $\vec{n} \cdot \overrightarrow{AB} = -6 + 6 + 0 = 0$ et $\vec{n} \cdot \overrightarrow{AC} = -6 + 0 + 6 = 0$. Donc $\vec{n}$ est normal à $(ABC)$.
+        note: orthogonal à deux vecteurs non colinéaires
+      - type: conc
+        titre: L'équation
+        texte: >-
+          $6x + 3y + 2z + d = 0$ et $A$ donne $6 + d = 0$, donc <mark>$(ABC) : 6x + 3y + 2z - 6 = 0$</mark>.
+
+  - titre: Intersection d'une droite et d'un plan
+    difficulte: 2
+    type: application
+    enonce: |
+      Soit $\mathcal{P} : x + 2y - z - 3 = 0$ et la droite $d$ : $x = 1 + t$, $y = 2 - t$, $z = 3t$.
+      Déterminer le point d'intersection de $d$ et $\mathcal{P}$.
+    indice: Remplace $x$, $y$, $z$ dans l'équation du plan.
+    etapes:
+      - type: methode
+        titre: Ils sont bien sécants
+        texte: $\vec{u}(1\,;-1\,;3)$ et $\vec{n}(1\,;2\,;-1)$ donnent $\vec{u} \cdot \vec{n} = 1 - 2 - 3 = -4 \ne 0$. La droite n'est pas parallèle au plan.
+      - type: calcul
+        titre: On remplace
+        texte: $(1 + t) + 2(2 - t) - 3t - 3 = 0 \iff 2 - 4t = 0 \iff t = \frac{1}{2}$.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>Le point d'intersection est $\left(\frac{3}{2}\,;\frac{3}{2}\,;\frac{3}{2}\right)$</mark>.
+
+  - titre: Le projeté orthogonal, type bac
+    difficulte: 3
+    type: bac
+    enonce: |
+      Soit $\mathcal{P} : 2x - y + 2z - 1 = 0$ et le point $M(3\,;1\,;4)$.
+      1. Donner une représentation paramétrique de la droite $\Delta$ passant par $M$ et orthogonale à $\mathcal{P}$.
+      2. Déterminer les coordonnées du projeté orthogonal $H$ de $M$ sur $\mathcal{P}$.
+      3. En déduire la distance du point $M$ au plan $\mathcal{P}$.
+    indice: $\Delta$ est dirigée par le vecteur normal $\vec{n}(2\,;-1\,;2)$.
+    etapes:
+      - type: calcul
+        titre: Question 1
+        texte: >-
+          $\Delta$ est dirigée par $\vec{n}(2\,;-1\,;2)$ : $x = 3 + 2t$, $y = 1 - t$, $z = 4 + 2t$.
+        note: on descend le long du mât
+      - type: calcul
+        titre: Question 2
+        texte: >-
+          $2(3 + 2t) - (1 - t) + 2(4 + 2t) - 1 = 0 \iff 12 + 9t = 0 \iff t = -\frac{4}{3}$. Donc $H\left(\frac{1}{3}\,;\frac{7}{3}\,;\frac{4}{3}\right)$.
+      - type: calcul
+        titre: Question 3
+        texte: >-
+          $\overrightarrow{MH} = -\frac{4}{3}\vec{n}$, donc $MH = \frac{4}{3}\|\vec{n}\| = \frac{4}{3} \times \sqrt{4 + 1 + 4} = \frac{4}{3} \times 3 = 4$.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>La distance de $M$ au plan $\mathcal{P}$ vaut 4</mark>.
+
+  - titre: Droites non coplanaires
+    difficulte: 3
+    type: piege
+    enonce: |
+      Soit $d_1$ : $x = t$, $y = 1 + t$, $z = 0$ et $d_2$ : $x = 1$, $y = s$, $z = 1 + s$ ($t, s \in \mathbb{R}$).
+      Montrer que $d_1$ et $d_2$ ne sont ni parallèles, ni sécantes.
+    indice: Pour l'intersection, il faut résoudre un système à deux inconnues $t$ et $s$, avec deux paramètres différents.
+    etapes:
+      - type: calcul
+        titre: Pas parallèles
+        texte: $\vec{u}_1(1\,;1\,;0)$ et $\vec{u}_2(0\,;1\,;1)$ ne sont pas colinéaires (la première coordonnée de $\vec{u}_2$ est nulle, pas celle de $\vec{u}_1$).
+      - type: piege
+        titre: Deux paramètres différents
+        texte: On n'utilise pas la même lettre pour les deux droites, sinon on force les drones à se croiser au même instant.
+        note: t et s, pas t et t
+      - type: calcul
+        titre: Pas sécantes
+        texte: >-
+          On résout $t = 1$, $1 + t = s$, $0 = 1 + s$. Les deux premières donnent $s = 2$, la troisième $s = -1$ : contradiction.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>$d_1$ et $d_2$ sont non coplanaires</mark>.

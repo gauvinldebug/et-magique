@@ -1,0 +1,48 @@
+questions:
+  - question: Combien de codes à 3 chiffres (de 000 à 999) peut-on former ?
+    choix: ['$720$', '$1000$', '$120$', '$30$']
+    bonne: 1
+    explication: Ce sont des 3-uplets de chiffres, avec répétition, donc $10^3 = 1000$.
+    revoir: cours
+
+  - question: De combien de façons peut-on attribuer l'or, l'argent et le bronze à 10 athlètes ?
+    choix: ['$1000$', '$720$', '$120$', '$30$']
+    bonne: 1
+    explication: L'ordre compte, pas de répétition, donc $10 \times 9 \times 8 = 720$.
+    revoir: cours
+
+  - question: Combien de comités de 3 personnes peut-on former parmi 10 ?
+    choix: ['$720$', '$120$', '$30$', '$1000$']
+    bonne: 1
+    explication: Un comité n'a pas d'ordre, donc $\binom{10}{3} = \frac{720}{3!} = 120$.
+    revoir: cours
+
+  - question: Que vaut $\binom{7}{5}$ ?
+    choix: ['$35$', '$21$', '$42$', '$7$']
+    bonne: 1
+    explication: Par symétrie, $\binom{7}{5} = \binom{7}{2} = \frac{7 \times 6}{2} = 21$.
+    revoir: cours
+
+  - question: Combien de façons de ranger 6 livres différents sur une étagère ?
+    choix: ['$36$', '$720$', '$46\,656$', '$21$']
+    bonne: 1
+    explication: Ce sont les permutations de 6 éléments, $6! = 720$.
+    revoir: cours
+
+  - question: Combien de parties possède un ensemble à 5 éléments ?
+    choix: ['$5$', '$25$', '$32$', '$120$']
+    bonne: 2
+    explication: Chaque élément est dedans ou dehors, donc $2^5 = 32$.
+    revoir: cours
+
+  - question: La relation de Pascal donne $\binom{9}{4} + \binom{9}{5} = \dots$
+    choix: ['$\binom{9}{9}$', '$\binom{10}{5}$', '$\binom{18}{9}$', '$\binom{10}{9}$']
+    bonne: 1
+    explication: $\binom{n}{k} + \binom{n}{k+1} = \binom{n+1}{k+1}$ avec $n = 9$ et $k = 4$.
+    revoir: cours
+
+  - question: Dans une classe de 12 filles et 10 garçons, combien de délégations de 2 filles et 1 garçon ?
+    choix: ['$66 + 10$', '$66 \times 10$', '$\binom{22}{3}$', '$12 \times 11 \times 10$']
+    bonne: 1
+    explication: On choisit les filles ($\binom{12}{2} = 66$) et le garçon (10) en même temps, on multiplie, soit 660.
+    revoir: exercices

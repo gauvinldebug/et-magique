@@ -1,0 +1,52 @@
+questions:
+  - question: Laquelle de ces situations est modélisée par une loi binomiale ?
+    choix:
+      - On tire 3 cartes sans remise et on compte les cœurs.
+      - On lance 20 fois un dé et on compte les 6.
+      - On lance un dé jusqu'à obtenir un 6 et on compte les lancers.
+      - On mesure la taille de 20 élèves.
+    bonne: 1
+    explication: Les lancers de dé sont identiques et indépendants, avec deux issues (6 ou pas 6). C'est $\mathcal{B}(20\,;\frac{1}{6})$.
+    revoir: cours
+
+  - question: Si $X \sim \mathcal{B}(5\,;0{,}2)$, alors $P(X = 0)$ vaut…
+    choix: ['$0{,}2^5$', '$0{,}8^5$', '$1 - 0{,}2^5$', '$0$']
+    bonne: 1
+    explication: Aucun succès, c'est 5 échecs de probabilité $0{,}8$ chacun.
+    revoir: cours
+
+  - question: Si $X \sim \mathcal{B}(4\,;0{,}5)$, $P(X = 2)$ vaut…
+    choix: ['$0{,}25$', '$0{,}375$', '$0{,}5$', '$0{,}0625$']
+    bonne: 1
+    explication: $\binom{4}{2} \times 0{,}5^2 \times 0{,}5^2 = 6 \times 0{,}0625 = 0{,}375$.
+    revoir: cours
+
+  - question: Si $X \sim \mathcal{B}(50\,;0{,}3)$, l'espérance de $X$ vaut…
+    choix: ['$0{,}3$', '$10{,}5$', '$15$', '$35$']
+    bonne: 2
+    explication: $E(X) = np = 50 \times 0{,}3 = 15$.
+    revoir: cours
+
+  - question: Si $X \sim \mathcal{B}(100\,;0{,}5)$, la variance de $X$ vaut…
+    choix: ['$50$', '$25$', '$5$', '$0{,}25$']
+    bonne: 1
+    explication: $V(X) = np(1 - p) = 100 \times 0{,}5 \times 0{,}5 = 25$, et l'écart type vaut 5.
+    revoir: cours
+
+  - question: $P(X \ge 3)$ est égal à…
+    choix: ['$1 - P(X \le 3)$', '$1 - P(X \le 2)$', '$1 - P(X = 3)$', '$P(X \le 3)$']
+    bonne: 1
+    explication: Le contraire de « au moins 3 » est « au plus 2 ».
+    revoir: cours
+
+  - question: Le nombre de chemins menant à 3 succès sur 7 épreuves est…
+    choix: ['$21$', '$35$', '$7$', '$2^7$']
+    bonne: 1
+    explication: Il faut placer les 3 succès parmi les 7 épreuves, $\binom{7}{3} = 35$.
+    revoir: cours
+
+  - question: Pour que $1 - 0{,}9^{n} \ge 0{,}95$, il faut…
+    choix: ['$n \ge 28$', '$n \ge 29$', '$n \le 28$', '$n \ge 10$']
+    bonne: 1
+    explication: $n \ge \frac{\ln 0{,}05}{\ln 0{,}9} \approx 28{,}4$, donc $n \ge 29$.
+    revoir: exercices

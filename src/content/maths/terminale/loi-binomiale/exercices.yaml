@@ -1,0 +1,110 @@
+# Exercices corrigés, du plus facile au type bac.
+# type d'étape : init (vert), her (orange), conc (bleu), calcul, methode, piege (rouge)
+exercices:
+  - titre: Reconnaître et calculer
+    difficulte: 1
+    type: application
+    enonce: |
+      On lance 6 fois une pièce équilibrée. $X$ est le nombre de « pile ».
+      1. Justifier que $X$ suit une loi binomiale.
+      2. Calculer $P(X = 2)$ et $E(X)$.
+    indice: Un lancer, deux issues. Les lancers sont indépendants.
+    etapes:
+      - type: methode
+        titre: Question 1
+        texte: >-
+          On répète 6 fois, de façon identique et indépendante, une épreuve à deux issues : « pile », de probabilité 0,5. $X$ compte les succès, donc $X \sim \mathcal{B}(6\,;0{,}5)$.
+      - type: calcul
+        titre: Question 2
+        texte: $P(X = 2) = \binom{6}{2} \times 0{,}5^2 \times 0{,}5^4 = 15 \times 0{,}5^6 = \frac{15}{64} \approx 0{,}234$.
+      - type: conc
+        titre: Espérance
+        texte: <mark>$E(X) = 6 \times 0{,}5 = 3$</mark> piles en moyenne.
+
+  - titre: Au moins un succès
+    difficulte: 1
+    type: methode
+    enonce: |
+      Un QCM a 8 questions à 4 choix. Un élève répond au hasard. $X$ est le nombre de bonnes réponses.
+      Calculer la probabilité d'avoir au moins une bonne réponse.
+    indice: Passe par l'événement contraire.
+    etapes:
+      - type: methode
+        titre: La loi
+        texte: $X \sim \mathcal{B}(8\,;0{,}25)$ (8 questions indépendantes, une chance sur 4 à chaque fois).
+      - type: calcul
+        titre: Le contraire
+        texte: $P(X = 0) = 0{,}75^8 \approx 0{,}100$.
+        note: aucun = toutes fausses
+      - type: conc
+        titre: Conclusion
+        texte: <mark>$P(X \ge 1) = 1 - 0{,}75^8 \approx 0{,}900$</mark>.
+
+  - titre: Avec la calculatrice
+    difficulte: 2
+    type: application
+    enonce: |
+      Dans une usine, 4 % des pièces sont défectueuses. On prélève 50 pièces, la production est assez grande pour assimiler le prélèvement à un tirage avec remise. $X$ est le nombre de pièces défectueuses.
+      1. Calculer $P(X \le 2)$.
+      2. Calculer $P(X \ge 3)$.
+      3. Calculer $E(X)$ et interpréter.
+    indice: $X \sim \mathcal{B}(50\,;0{,}04)$. Utilise binomFRép.
+    etapes:
+      - type: calcul
+        titre: Question 1
+        texte: À la calculatrice, $P(X \le 2) \approx 0{,}677$.
+      - type: calcul
+        titre: Question 2
+        texte: $P(X \ge 3) = 1 - P(X \le 2) \approx 0{,}323$.
+        note: au moins 3 = 1 - au plus 2
+      - type: conc
+        titre: Question 3
+        texte: <mark>$E(X) = 50 \times 0{,}04 = 2$</mark>. Sur un grand nombre de prélèvements de 50 pièces, on trouve en moyenne 2 pièces défectueuses.
+
+  - titre: Le piège du sans remise
+    difficulte: 2
+    type: piege
+    enonce: |
+      Une urne contient 3 boules rouges et 2 boules bleues. On tire 2 boules **sans remise**. Un élève dit que le nombre $X$ de boules rouges suit $\mathcal{B}(2\,;0{,}6)$. Calculer $P(X = 2)$ avec sa formule, puis la vraie valeur.
+    indice: Fais un arbre. Après un premier tirage rouge, il ne reste que 2 rouges sur 4 boules.
+    etapes:
+      - type: calcul
+        titre: Avec la formule de l'élève
+        texte: $\binom{2}{2} \times 0{,}6^2 = 0{,}36$.
+      - type: piege
+        titre: Pourquoi c'est faux
+        texte: >-
+          Sans remise, les tirages ne sont pas indépendants : la probabilité de rouge au second tirage dépend du premier.
+      - type: calcul
+        titre: La vraie valeur
+        texte: $P(X = 2) = \frac{3}{5} \times \frac{2}{4} = 0{,}3$.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>$P(X = 2) = 0{,}3$, pas $0{,}36$</mark>. Ce n'est pas une loi binomiale.
+
+  - titre: Un seuil, type bac
+    difficulte: 3
+    type: bac
+    enonce: |
+      Un joueur de fléchettes atteint le centre de la cible avec une probabilité de 0,15 à chaque lancer, indépendamment des autres.
+      1. Il lance 20 fléchettes. Quelle est la probabilité qu'il atteigne le centre exactement 3 fois ?
+      2. Combien de fléchettes doit-il lancer, au minimum, pour que la probabilité d'atteindre au moins une fois le centre dépasse 0,99 ?
+    indice: >-
+      Question 2 : $1 - 0{,}85^n \ge 0{,}99$. Résous avec le logarithme.
+    etapes:
+      - type: calcul
+        titre: Question 1
+        texte: >-
+          $X \sim \mathcal{B}(20\,;0{,}15)$, $P(X = 3) = \binom{20}{3} \times 0{,}15^3 \times 0{,}85^{17} \approx 0{,}243$.
+      - type: calcul
+        titre: Question 2, l'inéquation
+        texte: >-
+          Avec $n$ lancers, $P(X \ge 1) = 1 - 0{,}85^n$. On veut $1 - 0{,}85^n \ge 0{,}99 \iff 0{,}85^n \le 0{,}01$.
+      - type: piege
+        titre: Le passage au logarithme
+        texte: >-
+          $n\ln 0{,}85 \le \ln 0{,}01$, et $\ln 0{,}85 < 0$, donc $n \ge \frac{\ln 0{,}01}{\ln 0{,}85} \approx 28{,}3$.
+        note: le sens change
+      - type: conc
+        titre: Conclusion
+        texte: <mark>Il doit lancer au moins 29 fléchettes</mark>.
