@@ -1,6 +1,7 @@
 ---
 import Base from '../../../layouts/Base.astro';
 import { cheminsMatieres } from '../../../lib/matieres-paths';
+import Recherche from '../../../components/Recherche.astro';
 export const getStaticPaths = cheminsMatieres;
 const { matiere } = Astro.props;
 ---
@@ -8,10 +9,8 @@ const { matiere } = Astro.props;
   <div class="page-feuille cahier">
     <div class="feuille">
       <h1>Rechercher</h1>
-      <form class="s-search" role="search" data-search style="margin:0;max-width:640px">
-        <input type="search" name="q" placeholder="récurrence, fractions, Pythagore…" aria-label="Rechercher" autofocus />
-        <button type="submit">Chercher</button>
-      </form>
+      <div style="max-width:640px"><Recherche id="rq-page" autofocus /></div>
+      <h2 data-plein-titre hidden>Dans les cours et les exercices</h2>
       <ul class="liste-ch" data-results style="max-width:720px"></ul>
       <p class="aide" data-info></p>
     </div>
@@ -19,14 +18,14 @@ const { matiere } = Astro.props;
 </Base>
 
 <script>
-  const form = document.querySelector<HTMLFormElement>('[data-search]')!;
-  const input = form.querySelector('input')!;
+  const input = document.getElementById('rq-page') as HTMLInputElement;
+  const plein = document.querySelector<HTMLElement>('[data-plein-titre]')!;
   const list = document.querySelector<HTMLElement>('[data-results]')!;
   const info = document.querySelector<HTMLElement>('[data-info]')!;
   let pf: any;
   const esc = (s: string) => s.replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]!);
   async function chercher(q: string) {
-    if (!q.trim()) { list.innerHTML = ''; info.textContent = ''; return; }
+    if (!q.trim()) { list.innerHTML = ''; info.textContent = ''; plein.hidden = true; return; }
     try {
       const chemin = '/pagefind/pagefind.js';
       pf ??= await import(/* @vite-ignore */ chemin);
@@ -37,12 +36,12 @@ const { matiere } = Astro.props;
     const r = await pf.debouncedSearch(q, {}, 200);
     if (!r) return;
     const data = await Promise.all(r.results.slice(0, 12).map((x: any) => x.data()));
+    plein.hidden = !data.length;
     list.innerHTML = data.map((d: any) => `<li><a href="${esc(d.url)}"><span class="n">›</span><span><b>${esc(d.meta.title ?? '')}</b><br><small style="color:var(--encre-2)">${d.excerpt}</small></span><span></span></a></li>`).join('');
-    info.textContent = data.length ? '' : 'Rien trouvé. Ce chapitre n’existe peut-être pas encore : demande-le !';
+    info.textContent = '';
   }
   const q0 = new URLSearchParams(location.search).get('q') ?? '';
   input.value = q0;
   chercher(q0);
   input.addEventListener('input', () => chercher(input.value));
-  form.addEventListener('submit', (e) => { e.preventDefault(); history.replaceState(null, '', `?q=${encodeURIComponent(input.value)}`); chercher(input.value); });
 </script>

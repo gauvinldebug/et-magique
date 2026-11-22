@@ -32,7 +32,15 @@ for (const [m, n, c] of chapitres) {
     if (!r || r.status() !== 200) continue;
     await page.emulateMedia({ media: 'print' });
     const out = join('public/pdf', m, n, `${c}-${quoi}.pdf`);
-    await page.pdf({ path: out, format: 'A4', printBackground: true, margin: { top: '12mm', bottom: '12mm', left: '10mm', right: '10mm' } });
+    await page.pdf({
+      path: out, format: 'A4', printBackground: true,
+      margin: { top: '12mm', bottom: '14mm', left: '10mm', right: '10mm' },
+      displayHeaderFooter: true,
+      headerTemplate: '<div style="width:100%;font:7.5px sans-serif;color:#8A93A3;padding:0 10mm;text-align:right">etmagique.fr · © Maths et Magique</div>',
+      footerTemplate: `<div style="width:100%;font:7.5px sans-serif;color:#8A93A3;padding:0 10mm;display:flex;justify-content:space-between">
+        <span>© Maths et Magique · etmagique.fr/${m}/${n}/${c}/ · Tous droits réservés : usage personnel uniquement, republication et usage commercial interdits</span>
+        <span><span class="pageNumber"></span>/<span class="totalPages"></span></span></div>`,
+    });
     console.log('✓', out);
   }
 }

@@ -1,6 +1,7 @@
 ---
 // En-tête : logo, menu « Chapitres » à intercalaires (ordinateur), menu plein écran (téléphone).
 import Logo from './Logo.astro';
+import Recherche from './Recherche.astro';
 import { NIVEAUX, matiere as getMatiere } from '../data/site';
 import { menuMatiere } from '../lib/contenu';
 
@@ -24,7 +25,12 @@ const grouped = ['Collège', 'Lycée'].map((cycle) => ({ cycle, niveaux: NIVEAUX
       <button type="button" aria-expanded="false" aria-controls="mega" data-mega-btn>Chapitres <span class="chev"></span></button>
       {liens.map((l) => <a href={l.href} aria-current={actif === l.id ? 'page' : undefined}>{l.titre}</a>)}
     </nav>
-    <a class="search" href={`${base}/recherche/`} data-search-link>Rechercher <kbd>/</kbd></a>
+    <div class="nav-rq"><Recherche id="rq-entete" placeholder="Rechercher  /" compact /></div>
+    {m.youtube && (
+      <a class="btn-yt" href={m.youtube} target="_blank" rel="noopener" data-umami-event="chaine-entete" aria-label="La chaîne YouTube Maths et Magique (nouvel onglet)">
+        <svg viewBox="0 0 28 20" aria-hidden="true"><rect width="28" height="20" rx="5" fill="#FF0033"/><path d="M11 5.5v9l8-4.5z" fill="#fff"/></svg><span>La chaîne</span>
+      </a>
+    )}
     <button type="button" class="burger" aria-expanded="false" aria-controls="ph-menu" aria-label="Ouvrir le menu" data-burger><span></span></button>
   </div>
 
@@ -47,7 +53,7 @@ const grouped = ['Collège', 'Lycée'].map((cycle) => ({ cycle, niveaux: NIVEAUX
             {menu[n.slug].map((c, i) => (
               <li class={c.dispo ? 'dispo' : 'later'}>
                 {c.dispo ? (
-                  <a href={`${base}/${n.slug}/${c.slug}/`}><span class="ch">{i + 1}</span>{c.titre}<span class="badge">{c.video ? 'Vidéo' : 'Nouveau'}</span></a>
+                  <a href={`${base}/${n.slug}/${c.slug}/`}><span class="ch">{i + 1}</span>{c.titre}{c.nouveau ? <span class="badge">Nouveau</span> : c.video ? <span class="badge gris">Vidéo</span> : null}</a>
                 ) : (
                   <span><span class="ch">{i + 1}</span>{c.titre}</span>
                 )}
@@ -67,10 +73,7 @@ const grouped = ['Collège', 'Lycée'].map((cycle) => ({ cycle, niveaux: NIVEAUX
 </header>
 
 <div class="ph-menu" id="ph-menu" hidden data-ph-menu>
-  <form class="s-search" action={`${base}/recherche/`} method="get" role="search" style="margin:0">
-    <input type="search" name="q" placeholder="Chercher un chapitre…" aria-label="Chercher un chapitre" />
-    <button type="submit">Chercher</button>
-  </form>
+  <Recherche id="rq-menu" placeholder="Chercher un chapitre…" />
   <div>
     <div class="k" style="margin-bottom:8px">Ton niveau</div>
     <div class="lvl-grid">
@@ -78,6 +81,12 @@ const grouped = ['Collège', 'Lycée'].map((cycle) => ({ cycle, niveaux: NIVEAUX
       <a href={`${base}/`} style="font-size:.85rem;display:grid;place-items:center">Tout</a>
     </div>
   </div>
+  {m.youtube && (
+    <a class="yt-menu" href={m.youtube} target="_blank" rel="noopener" data-umami-event="chaine-menu">
+      <svg viewBox="0 0 28 20" aria-hidden="true"><rect width="28" height="20" rx="5" fill="#FF0033"/><path d="M11 5.5v9l8-4.5z" fill="#fff"/></svg>
+      <span><b>Voir la chaîne YouTube</b><small>Toutes les vidéos Maths et Magique</small></span>
+    </a>
+  )}
   <div class="menu-links">
     <a href={`${base}/fiches/`}><span>Fiches de révision <small>1 page par chapitre</small></span></a>
     {liens.map((l) => <a href={l.href}><span>{l.titre} <small>{l.sous}</small></span></a>)}
@@ -139,8 +148,9 @@ const grouped = ['Collège', 'Lycée'].map((cycle) => ({ cycle, niveaux: NIVEAUX
     const el = e.target as HTMLElement;
     if (e.key === '/' && !/INPUT|TEXTAREA|SELECT/.test(el.tagName) && !el.isContentEditable) {
       e.preventDefault();
-      const link = document.querySelector<HTMLAnchorElement>('[data-search-link]');
-      if (link) location.href = link.href;
+      const champ = document.getElementById('rq-entete') as HTMLInputElement | null;
+      if (champ && champ.offsetParent) champ.focus();
+      else location.href = '/maths/recherche/';
     }
   });
 </script>
