@@ -30,7 +30,11 @@ export default async (req: Request, ctx: Context) => {
 
   // E-mail de confirmation (double opt-in) : l'inscription ne compte qu'après le clic.
   const envoye = await envoyerConfirmation(req, { cle, email, prenom, moins15: age === 'moins15' });
-  if (!envoye) return erreur("L'inscription n'a pas marché, réessaie plus tard.", 502);
+  if (!envoye.ok) {
+    // Dernière erreur d'envoi, visible dans l'espace admin pour diagnostiquer (clé, IP bloquée, expéditeur…).
+    await store('limites').setJSON('brevo/derniere-erreur', { date: new Date().toISOString(), detail: envoye.detail, message: envoye.message });
+    return erreur(`L'inscription n'a pas marché (${envoye.detail}), réessaie plus tard.`, 502);
+  }
   return json({ ok: true });
 };
 
