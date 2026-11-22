@@ -62,7 +62,8 @@ export default async (req: Request, ctx: Context) => {
     }
     const parNiveau: Record<string, number> = {};
     items.forEach((i) => { parNiveau[i.niveau] = (parNiveau[i.niveau] ?? 0) + 1; });
-    return json({ ok: true, total: items.length, moins15: items.filter((i) => i.age === 'moins15').length, parNiveau });
+    const brevo = await store('limites').get('brevo/derniere-erreur', { type: 'json' });
+    return json({ ok: true, total: items.length, confirmes: items.filter((i) => i.statut === 'confirme').length, moins15: items.filter((i) => i.age === 'moins15').length, parNiveau, brevo });
   }
 
   return erreur('Route inconnue', 404);

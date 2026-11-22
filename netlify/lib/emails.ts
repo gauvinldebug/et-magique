@@ -21,7 +21,7 @@ export async function brevo(chemin: string, corps: unknown) {
 export async function envoyerConfirmation(req: Request, p: { cle: string; email: string; prenom: string; moins15: boolean }) {
   if (!process.env.BREVO_API_KEY || !process.env.BREVO_EXPEDITEUR) {
     console.error('Brevo non configuré : BREVO_API_KEY et BREVO_EXPEDITEUR manquent');
-    return false;
+    return { ok: false, detail: 'Brevo non configuré', message: '' };
   }
   const lien = `${new URL(req.url).origin}/api/confirmer?c=${p.cle}&s=${signer(p.cle)}`;
   const bonjour = p.prenom ? `Bonjour ${esc(p.prenom)},` : 'Bonjour,';
@@ -45,6 +45,11 @@ export async function envoyerConfirmation(req: Request, p: { cle: string; email:
     htmlContent: html,
     tags: ['confirmation'],
   });
-  if (!r.ok) console.error('Brevo', r.status, r.texte);
-  return r.ok;
+  if (!r.ok) {
+    console.error('Brevo', r.status, r.texte);
+    let code = '';
+    try { code = String(JSON.parse(r.texte).code || ''); } catch {}
+    return { ok: false, detail: `Brevo ${r.status}${code ? ' ' + code : ''}`, message: r.texte.slice(0, 300) };
+  }
+  return { ok: true, detail: '', message: '' };
 }
