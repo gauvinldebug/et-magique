@@ -1,0 +1,125 @@
+# Exercices corrigés, du plus facile au type bac.
+# type d'étape : init (vert), her (orange), conc (bleu), calcul, methode, piege (rouge)
+exercices:
+  - titre: Le bon outil
+    difficulte: 1
+    type: methode
+    enonce: |
+      Dans chaque cas, dire s'il s'agit de $k$-uplets, d'arrangements ou de combinaisons, puis calculer.
+      1. Le nombre de mots de passe de 4 lettres (26 lettres possibles).
+      2. Le nombre de façons d'élire un président et un trésorier dans un club de 20 membres.
+      3. Le nombre de façons de choisir 4 élèves parmi 25 pour une sortie.
+    indice: Pose-toi deux questions, l'ordre compte-t-il, les répétitions sont-elles possibles.
+    etapes:
+      - type: calcul
+        titre: Question 1
+        texte: Ordre important, répétitions possibles, ce sont des 4-uplets. $26^4 = 456\,976$.
+      - type: calcul
+        titre: Question 2
+        texte: Ordre important (les rôles sont différents), sans répétition, ce sont des arrangements. $20 \times 19 = 380$.
+        note: le podium à 2 marches
+      - type: calcul
+        titre: Question 3
+        texte: Ordre sans importance, ce sont des combinaisons. $\binom{25}{4} = \frac{25 \times 24 \times 23 \times 22}{24} = 12\,650$.
+
+  - titre: Calculer des coefficients binomiaux
+    difficulte: 1
+    type: application
+    enonce: |
+      Calculer $\binom{8}{3}$, $\binom{8}{5}$ et $\binom{20}{18}$ sans calculatrice.
+    indice: Utilise la symétrie pour les deux derniers.
+    etapes:
+      - type: calcul
+        titre: Le premier
+        texte: $\binom{8}{3} = \frac{8 \times 7 \times 6}{3 \times 2 \times 1} = 56$.
+      - type: calcul
+        titre: Le deuxième
+        texte: Par symétrie, $\binom{8}{5} = \binom{8}{3} = 56$.
+      - type: calcul
+        titre: Le troisième
+        texte: $\binom{20}{18} = \binom{20}{2} = \frac{20 \times 19}{2} = 190$.
+
+  - titre: Au moins un
+    difficulte: 2
+    type: methode
+    enonce: |
+      Une urne contient 6 boules rouges et 4 boules vertes. On tire simultanément 3 boules.
+      1. Combien de tirages possibles ?
+      2. Combien de tirages contiennent au moins une boule verte ?
+    indice: Compte les tirages sans aucune boule verte.
+    etapes:
+      - type: calcul
+        titre: Question 1
+        texte: Tirage simultané, donc sans ordre. $\binom{10}{3} = 120$ tirages.
+      - type: methode
+        titre: Le contraire
+        texte: >-
+          Le contraire de « au moins une verte » est « aucune verte », c'est-à-dire 3 rouges : $\binom{6}{3} = 20$ tirages.
+        note: on compte le contraire
+      - type: conc
+        titre: Question 2
+        texte: <mark>$120 - 20 = 100$ tirages</mark> contiennent au moins une boule verte.
+
+  - titre: Deux groupes en même temps
+    difficulte: 2
+    type: application
+    enonce: |
+      Dans une classe de 15 filles et 13 garçons, on forme une équipe de 5 élèves.
+      1. Combien d'équipes de 3 filles et 2 garçons ?
+      2. Combien d'équipes ont au plus un garçon ?
+    indice: Pour la question 2, sépare les cas « 0 garçon » et « 1 garçon », puis additionne.
+    etapes:
+      - type: calcul
+        titre: Question 1
+        texte: $\binom{15}{3} \times \binom{13}{2} = 455 \times 78 = 35\,490$.
+        note: et = on multiplie
+      - type: calcul
+        titre: Question 2, 0 garçon
+        texte: $\binom{15}{5} = 3\,003$.
+      - type: calcul
+        titre: Question 2, 1 garçon
+        texte: $\binom{15}{4} \times \binom{13}{1} = 1\,365 \times 13 = 17\,745$.
+      - type: conc
+        titre: Conclusion
+        texte: Les deux cas ne se recoupent pas, on additionne, <mark>$3\,003 + 17\,745 = 20\,748$ équipes</mark>.
+
+  - titre: Les anagrammes
+    difficulte: 2
+    type: piege
+    enonce: |
+      Combien d'anagrammes (mots, ayant un sens ou non) peut-on former avec les lettres du mot MATHS ? Et avec celles du mot ELLE ?
+    indice: Dans ELLE, échanger les deux L ne change pas le mot.
+    etapes:
+      - type: calcul
+        titre: MATHS
+        texte: 5 lettres toutes différentes, ce sont les permutations, $5! = 120$.
+      - type: piege
+        titre: ELLE, le piège
+        texte: >-
+          $4! = 24$ compte chaque mot plusieurs fois : échanger les deux E ou les deux L donne le même mot.
+      - type: conc
+        titre: ELLE, le bon calcul
+        texte: On divise par $2!$ pour les E et par $2!$ pour les L, <mark>$\frac{24}{2 \times 2} = 6$ anagrammes</mark>. On peut aussi choisir les 2 places des E parmi 4, $\binom{4}{2} = 6$.
+
+  - titre: Démontrer avec les combinaisons
+    difficulte: 3
+    type: bac
+    enonce: |
+      1. Montrer par le calcul que $k\binom{n}{k} = n\binom{n-1}{k-1}$ pour $1 \le k \le n$.
+      2. Interpréter cette égalité en comptant de deux façons le nombre de façons de choisir, dans un groupe de $n$ personnes, un comité de $k$ personnes avec un président parmi elles.
+    indice: Écris les deux membres avec des factorielles.
+    etapes:
+      - type: calcul
+        titre: Question 1
+        texte: >-
+          $k\binom{n}{k} = k \times \frac{n!}{k!\,(n-k)!} = \frac{n!}{(k-1)!\,(n-k)!}$ et $n\binom{n-1}{k-1} = n \times \frac{(n-1)!}{(k-1)!\,(n-k)!} = \frac{n!}{(k-1)!\,(n-k)!}$. Les deux sont égaux.
+      - type: methode
+        titre: Première façon de compter
+        texte: Je choisis le comité ($\binom{n}{k}$ façons), puis le président parmi ses $k$ membres ($k$ façons). Total $k\binom{n}{k}$.
+      - type: methode
+        titre: Seconde façon de compter
+        texte: Je choisis d'abord le président ($n$ façons), puis les $k - 1$ autres membres parmi les $n - 1$ restants. Total $n\binom{n-1}{k-1}$.
+        note: même ensemble, compté deux fois
+      - type: conc
+        titre: Conclusion
+        texte: <mark>On compte le même ensemble de deux façons</mark>, d'où l'égalité.

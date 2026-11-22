@@ -1,0 +1,52 @@
+questions:
+  - question: Si $E(X) = 3$ et $E(Y) = 5$, alors $E(2X - Y)$ vaut…
+    choix: ['$1$', '$-2$', '$11$', '$6$']
+    bonne: 0
+    explication: Par linéarité, $2 \times 3 - 5 = 1$. C'est vrai même si $X$ et $Y$ ne sont pas indépendantes.
+    revoir: cours
+
+  - question: Si $V(X) = 4$, alors $V(3X + 1)$ vaut…
+    choix: ['$13$', '$12$', '$36$', '$37$']
+    bonne: 2
+    explication: $V(aX + b) = a^2V(X) = 9 \times 4 = 36$. La constante ne change pas la dispersion.
+    revoir: cours
+
+  - question: $X$ et $Y$ sont indépendantes, $V(X) = 2$ et $V(Y) = 3$. $V(X - Y)$ vaut…
+    choix: ['$-1$', '$1$', '$5$', '$6$']
+    bonne: 2
+    explication: $V(X - Y) = V(X) + (-1)^2V(Y) = 2 + 3 = 5$.
+    revoir: cours
+
+  - question: Pour un échantillon de taille $n$ d'une loi de variance $V$, la variance de la moyenne $M_n$ vaut…
+    choix: ['$nV$', '$V$', '$\frac{V}{n}$', '$\frac{V}{n^2}$']
+    bonne: 2
+    explication: $V(M_n) = \frac{1}{n^2} \times nV = \frac{V}{n}$.
+    revoir: cours
+
+  - question: $E(X) = 20$ et $V(X) = 4$. Bienaymé-Tchebychev donne $P(|X - 20| \ge 5) \le \dots$
+    choix: ['$0{,}8$', '$0{,}16$', '$0{,}2$', '$0{,}04$']
+    bonne: 1
+    explication: $\frac{V}{\delta^2} = \frac{4}{25} = 0{,}16$.
+    revoir: cours
+
+  - question: Que dit la loi des grands nombres ?
+    choix:
+      - La moyenne d'un échantillon est toujours égale à l'espérance.
+      - La probabilité que la moyenne s'écarte de l'espérance tend vers 0 quand $n$ grandit.
+      - Après une série de « pile », « face » devient plus probable.
+      - La variance de la moyenne augmente avec $n$.
+    bonne: 1
+    explication: La moyenne n'est jamais garantie égale à l'espérance, mais l'écart devient de plus en plus improbable. Et la pièce n'a pas de mémoire.
+    revoir: cours
+
+  - question: Une variable de Bernoulli de paramètre $p$ a pour variance…
+    choix: ['$p$', '$p^2$', '$p(1 - p)$', '$1 - p$']
+    bonne: 2
+    explication: $E(X^2) - E(X)^2 = p - p^2 = p(1 - p)$.
+    revoir: cours
+
+  - question: Avec l'inégalité de concentration, pour garantir $P(|M_n - \mu| \ge 0{,}1) \le 0{,}05$ avec $V = 1$, il faut…
+    choix: ['$n \ge 200$', '$n \ge 2\,000$', '$n \ge 20$', '$n \ge 20\,000$']
+    bonne: 1
+    explication: $\frac{1}{n \times 0{,}01} \le 0{,}05 \iff n \ge \frac{1}{0{,}0005} = 2\,000$.
+    revoir: exercices

@@ -1,0 +1,121 @@
+# Exercices corrigés, du plus facile au type bac.
+# type d'étape : init (vert), her (orange), conc (bleu), calcul, methode, piege (rouge)
+exercices:
+  - titre: Espérance et variance d'une somme
+    difficulte: 1
+    type: application
+    enonce: |
+      $X$ et $Y$ sont indépendantes, avec $E(X) = 4$, $V(X) = 2$, $E(Y) = -1$, $V(Y) = 3$.
+      Calculer $E(X + Y)$, $V(X + Y)$, $E(3X - 2Y)$ et $V(3X - 2Y)$.
+    indice: Les coefficients sortent au carré dans la variance.
+    etapes:
+      - type: calcul
+        titre: La somme
+        texte: $E(X + Y) = 4 - 1 = 3$ et, par indépendance, $V(X + Y) = 2 + 3 = 5$.
+      - type: calcul
+        titre: Espérance de 3X − 2Y
+        texte: $E(3X - 2Y) = 3 \times 4 - 2 \times (-1) = 14$.
+      - type: calcul
+        titre: Variance de 3X − 2Y
+        texte: $V(3X - 2Y) = 9V(X) + 4V(Y) = 18 + 12 = 30$.
+        note: (-2)² = 4, les variances s'ajoutent
+
+  - titre: Bienaymé-Tchebychev
+    difficulte: 1
+    type: methode
+    enonce: |
+      Le temps d'attente $T$ (en minutes) à un guichet a pour espérance 12 et pour écart type 3.
+      Minorer la probabilité que le temps d'attente soit strictement compris entre 6 et 18 minutes.
+    indice: $6 < T < 18 \iff |T - 12| < 6$.
+    etapes:
+      - type: calcul
+        titre: La variance
+        texte: $V(T) = 3^2 = 9$.
+      - type: calcul
+        titre: L'inégalité
+        texte: $P(|T - 12| \ge 6) \le \frac{9}{36} = 0{,}25$.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>$P(6 < T < 18) \ge 1 - 0{,}25 = 0{,}75$</mark>.
+
+  - titre: Une moyenne d'échantillon
+    difficulte: 2
+    type: application
+    enonce: |
+      On lance 100 fois un dé équilibré. $M$ est la moyenne des résultats.
+      1. Calculer l'espérance et la variance d'un lancer.
+      2. En déduire $E(M)$ et $V(M)$.
+    indice: $E(X^2) = \frac{1 + 4 + 9 + 16 + 25 + 36}{6} = \frac{91}{6}$, et $V(X) = E(X^2) - E(X)^2$.
+    etapes:
+      - type: calcul
+        titre: Un lancer
+        texte: $E(X) = \frac{21}{6} = 3{,}5$ et $V(X) = \frac{91}{6} - 3{,}5^2 = \frac{91}{6} - \frac{49}{4} = \frac{35}{12}$.
+      - type: calcul
+        titre: La moyenne
+        texte: $E(M) = 3{,}5$ et $V(M) = \frac{35/12}{100} = \frac{35}{1\,200} \approx 0{,}029$.
+        note: la variance est divisée par n
+      - type: conc
+        titre: Interprétation
+        texte: <mark>La moyenne de 100 lancers varie beaucoup moins qu'un lancer seul</mark>, autour de 3,5.
+
+  - titre: Quelle taille d'échantillon ?
+    difficulte: 2
+    type: methode
+    enonce: |
+      Une pièce truquée donne « pile » avec une probabilité $p$ inconnue. On la lance $n$ fois et on note $F_n$ la fréquence de « pile ».
+      On admet que $V(F_n) = \frac{p(1 - p)}{n} \le \frac{1}{4n}$.
+      Combien de lancers faut-il pour que $P(|F_n - p| \ge 0{,}05) \le 0{,}1$ ?
+    indice: Utilise l'inégalité de concentration avec $V \le \frac{1}{4}$.
+    etapes:
+      - type: calcul
+        titre: L'inégalité
+        texte: $P(|F_n - p| \ge 0{,}05) \le \frac{V(F_n)}{0{,}05^2} \le \frac{1}{4n \times 0{,}0025} = \frac{100}{n}$.
+      - type: calcul
+        titre: La condition
+        texte: Il suffit que $\frac{100}{n} \le 0{,}1$, soit $n \ge 1\,000$.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>1 000 lancers suffisent</mark>, quelle que soit la valeur de $p$.
+
+  - titre: Le piège de la variance
+    difficulte: 2
+    type: piege
+    enonce: |
+      Un élève dit : « $X$ a une variance de 5. Donc $X + X$ et $2X$ ont la même variance, $5 + 5 = 10$. » A-t-il raison ?
+    indice: $X$ et $X$ sont-elles indépendantes ?
+    etapes:
+      - type: piege
+        titre: L'erreur
+        texte: L'additivité des variances exige l'indépendance. Or $X$ n'est pas indépendante d'elle-même.
+      - type: calcul
+        titre: Le bon calcul
+        texte: $X + X = 2X$, donc $V(2X) = 2^2 \times 5 = 20$.
+        note: le coefficient sort au carré
+      - type: conc
+        titre: Conclusion
+        texte: <mark>L'élève a tort, la variance vaut 20</mark>.
+
+  - titre: Contrôle qualité, type bac
+    difficulte: 3
+    type: bac
+    enonce: |
+      Une machine remplit des paquets de riz. La masse d'un paquet (en g) est une variable aléatoire d'espérance 1 000 et de variance 25. On prélève un échantillon de $n$ paquets, de masses indépendantes, et on note $M_n$ leur masse moyenne.
+      1. Donner $E(M_n)$ et $V(M_n)$.
+      2. Pour $n = 50$, minorer $P(999 < M_n < 1\,001)$.
+      3. Déterminer la plus petite taille $n$ telle que $P(|M_n - 1\,000| \ge 1) \le 0{,}01$.
+    indice: Inégalité de concentration avec $\delta = 1$.
+    etapes:
+      - type: calcul
+        titre: Question 1
+        texte: $E(M_n) = 1\,000$ et $V(M_n) = \frac{25}{n}$.
+      - type: calcul
+        titre: Question 2
+        texte: >-
+          $P(|M_{50} - 1\,000| \ge 1) \le \frac{25}{50 \times 1^2} = 0{,}5$, donc $P(999 < M_{50} < 1\,001) \ge 0{,}5$.
+      - type: calcul
+        titre: Question 3
+        texte: Il suffit que $\frac{25}{n} \le 0{,}01$, soit $n \ge 2\,500$.
+        note: on résout en n
+      - type: conc
+        titre: Conclusion
+        texte: <mark>Un échantillon de 2 500 paquets garantit la précision voulue</mark> avec l'inégalité de concentration.
