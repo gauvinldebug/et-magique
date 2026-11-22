@@ -11,7 +11,7 @@ pdf:
   cours: /pdf/maths/premiere/fonction-exponentielle-cours.pdf
   fiche: /pdf/maths/premiere/fonction-exponentielle-fiche.pdf
   exercices: /pdf/maths/premiere/fonction-exponentielle-exercices.pdf
-suivant: produit-scalaire
+suivant: trigonometrie
 ---
 
 ## Le problème

@@ -1,0 +1,172 @@
+# Exercices corrigés, du plus facile au type contrôle.
+# type d'étape : init (vert), her (orange), conc (bleu), calcul, methode, piege (rouge)
+exercices:
+  - titre: Suivre un programme à la main
+    difficulte: 1
+    type: application
+    enonce: |
+      Que contiennent `a` et `b` à la fin de ce programme ?
+
+      ```python
+      a = 3
+      b = 5
+      a = a + b
+      b = a - b
+      a = a - b
+      ```
+    indice: Fais un tableau avec une ligne par instruction.
+    etapes:
+      - type: calcul
+        titre: Ligne par ligne
+        texte: >-
+          Après les deux premières lignes, a = 3 et b = 5. Puis a = 8. Puis b = 8 − 5 = 3. Puis a = 8 − 3 = 5.
+        note: une ligne à la fois
+      - type: conc
+        titre: Conclusion
+        texte: >-
+          <mark>a = 5 et b = 3</mark> : le programme a échangé les contenus des deux variables.
+
+  - titre: Une fonction avec une condition
+    difficulte: 1
+    type: methode
+    enonce: |
+      Écrire une fonction `mention(note)` qui renvoie « TB » si la note est au moins 16, « B » si elle est au moins 14, « AB » si elle est au moins 12, et « aucune » sinon.
+    indice: Utilise `if`, `elif` et `else`, en commençant par la plus haute mention.
+    etapes:
+      - type: methode
+        titre: L'ordre des tests
+        texte: On teste d'abord 16, sinon une note de 17 serait classée « AB » dès le premier test de 12.
+      - type: calcul
+        titre: Le programme
+        texte: |
+          ```python
+          def mention(note):
+              if note >= 16:
+                  return "TB"
+              elif note >= 14:
+                  return "B"
+              elif note >= 12:
+                  return "AB"
+              else:
+                  return "aucune"
+          ```
+
+  - titre: Terme d'une suite
+    difficulte: 2
+    type: methode
+    enonce: |
+      Soit $u_0 = 5$ et $u_{n+1} = 0{,}5\,u_n + 3$. Écrire une fonction `terme(n)` qui renvoie $u_n$, puis calculer `terme(3)` à la main.
+    indice: Une boucle `for` qui fait `n` tours.
+    etapes:
+      - type: calcul
+        titre: Le programme
+        texte: |
+          ```python
+          def terme(n):
+              u = 5
+              for k in range(n):
+                  u = 0.5 * u + 3
+              return u
+          ```
+      - type: calcul
+        titre: À la main
+        texte: $u_1 = 5{,}5$, $u_2 = 5{,}75$, $u_3 = 5{,}875$.
+        note: trois tours de boucle
+      - type: conc
+        titre: Conclusion
+        texte: <mark>terme(3) renvoie 5.875</mark>.
+
+  - titre: Algorithme de seuil
+    difficulte: 2
+    type: methode
+    enonce: |
+      Un capital de 2 000 € est placé à 3 % par an. Écrire un programme qui affiche le nombre d'années nécessaires pour que le capital dépasse 3 000 €. Quel résultat affiche-t-il ?
+    indice: Augmenter de 3 %, c'est multiplier par 1,03.
+    etapes:
+      - type: calcul
+        titre: Le programme
+        texte: |
+          ```python
+          c = 2000
+          n = 0
+          while c <= 3000:
+              c = 1.03 * c
+              n = n + 1
+          print(n)
+          ```
+      - type: calcul
+        titre: Le résultat
+        texte: >-
+          $2\,000 \times 1{,}03^{13} \approx 2\,937$ et $2\,000 \times 1{,}03^{14} \approx 3\,025$.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>Le programme affiche 14</mark>.
+
+  - titre: Le piège du range
+    difficulte: 2
+    type: piege
+    enonce: |
+      Un élève veut calculer $S = 1 + 2 + \dots + 10$ et écrit :
+
+      ```python
+      S = 0
+      for k in range(10):
+          S = S + k
+      print(S)
+      ```
+
+      Qu'affiche son programme ? Le corriger.
+    indice: Quelles valeurs prend `k` ?
+    etapes:
+      - type: piege
+        titre: L'erreur
+        texte: k prend les valeurs de 0 à 9. Le programme calcule $0 + 1 + \dots + 9 = 45$, il oublie 10.
+      - type: calcul
+        titre: La correction
+        texte: |
+          Il faut `range(1, 11)`, qui va de 1 à 10 :
+
+          ```python
+          S = 0
+          for k in range(1, 11):
+              S = S + k
+          print(S)
+          ```
+        note: on s'arrête avant 11
+      - type: conc
+        titre: Conclusion
+        texte: <mark>Le programme corrigé affiche 55</mark>.
+
+  - titre: Liste et moyenne
+    difficulte: 3
+    type: bac
+    enonce: |
+      Écrire une fonction `moyenne(L)` qui renvoie la moyenne des nombres d'une liste `L`, puis une fonction `au_dessus(L)` qui renvoie la liste des valeurs strictement supérieures à la moyenne. Tester avec `L = [12, 8, 15, 9, 16]`.
+    indice: Parcours la liste avec `for x in L:`.
+    etapes:
+      - type: calcul
+        titre: La moyenne
+        texte: |
+          ```python
+          def moyenne(L):
+              s = 0
+              for x in L:
+                  s = s + x
+              return s / len(L)
+          ```
+      - type: calcul
+        titre: Les valeurs au-dessus
+        texte: |
+          ```python
+          def au_dessus(L):
+              m = moyenne(L)
+              R = []
+              for x in L:
+                  if x > m:
+                      R.append(x)
+              return R
+          ```
+        note: on réutilise la première fonction
+      - type: conc
+        titre: Le test
+        texte: La moyenne vaut $\frac{60}{5} = 12$, donc <mark>au_dessus(L) renvoie [15, 16]</mark>.

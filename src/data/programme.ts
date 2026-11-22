@@ -51,8 +51,11 @@ export const PROGRAMME: Record<string, Record<string, ChapitreProgramme[]>> = {
       { slug: 'suites-numeriques', titre: 'Suites numériques' },
       { slug: 'derivation', titre: 'Dérivation' },
       { slug: 'fonction-exponentielle', titre: 'Fonction exponentielle' },
+      { slug: 'trigonometrie', titre: 'Trigonométrie' },
       { slug: 'produit-scalaire', titre: 'Produit scalaire' },
       { slug: 'probabilites-conditionnelles', titre: 'Probabilités conditionnelles' },
+      { slug: 'variables-aleatoires', titre: 'Variables aléatoires' },
+      { slug: 'algorithmique', titre: 'Algorithmique et programmation' },
     ],
     terminale: [
       { slug: 'suites-et-recurrence', titre: 'Suites et récurrence' },

@@ -2,7 +2,7 @@
 titre: Le produit scalaire
 court: Produit scalaire
 description: Le produit scalaire expliqué avec une lampe et une ombre, ses quatre formules (projection, cosinus, coordonnées, normes), l'orthogonalité, le théorème d'Al-Kashi et les équations de droites et de cercles, avec des exercices corrigés. Première spécialité maths.
-ordre: 5
+ordre: 6
 publie: 2026-11-22T20:41:00
 video:
   youtube: ""

@@ -2,7 +2,7 @@
 titre: Probabilités conditionnelles et indépendance
 court: Probabilités conditionnelles
 description: Les probabilités conditionnelles expliquées avec un projecteur qui n'éclaire qu'une partie de la salle, les arbres pondérés, la formule des probabilités totales, l'indépendance et les variables aléatoires, avec des exercices corrigés. Première spécialité maths.
-ordre: 6
+ordre: 7
 publie: 2026-11-22T20:42:00
 video:
   youtube: ""
@@ -11,6 +11,7 @@ pdf:
   cours: /pdf/maths/premiere/probabilites-conditionnelles-cours.pdf
   fiche: /pdf/maths/premiere/probabilites-conditionnelles-fiche.pdf
   exercices: /pdf/maths/premiere/probabilites-conditionnelles-exercices.pdf
+suivant: variables-aleatoires
 ---
 
 ## Le problème

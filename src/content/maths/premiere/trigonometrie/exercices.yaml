@@ -1,0 +1,105 @@
+# Exercices corrigés, du plus facile au type contrôle.
+# type d'étape : init (vert), her (orange), conc (bleu), calcul, methode, piege (rouge)
+exercices:
+  - titre: Convertir
+    difficulte: 1
+    type: application
+    enonce: |
+      1. Convertir en radians : 45°, 150°, 270°.
+      2. Convertir en degrés : $\frac{\pi}{5}$, $\frac{7\pi}{6}$.
+    indice: $180° = \pi$ rad.
+    etapes:
+      - type: calcul
+        titre: Question 1
+        texte: $45° = \frac{\pi}{4}$, $150° = \frac{150\pi}{180} = \frac{5\pi}{6}$, $270° = \frac{3\pi}{2}$.
+      - type: calcul
+        titre: Question 2
+        texte: $\frac{\pi}{5} = \frac{180°}{5} = 36°$ et $\frac{7\pi}{6} = \frac{7 \times 180°}{6} = 210°$.
+        note: on remplace π par 180°
+
+  - titre: Mesure principale
+    difficulte: 1
+    type: methode
+    enonce: |
+      Déterminer la mesure principale de $\frac{17\pi}{4}$ et de $-\frac{11\pi}{3}$.
+    indice: Retire ou ajoute des tours complets ($2\pi = \frac{8\pi}{4} = \frac{6\pi}{3}$).
+    etapes:
+      - type: calcul
+        titre: Premier réel
+        texte: $\frac{17\pi}{4} = \frac{\pi}{4} + \frac{16\pi}{4} = \frac{\pi}{4} + 2 \times 2\pi$. Mesure principale $\frac{\pi}{4}$.
+      - type: calcul
+        titre: Second réel
+        texte: $-\frac{11\pi}{3} = \frac{\pi}{3} - \frac{12\pi}{3} = \frac{\pi}{3} - 2 \times 2\pi$. Mesure principale $\frac{\pi}{3}$.
+        note: on enlève des tours de fil
+
+  - titre: Angles associés
+    difficulte: 2
+    type: methode
+    enonce: |
+      Calculer sans calculatrice $\cos\frac{3\pi}{4}$, $\sin\frac{4\pi}{3}$ et $\sin\left(-\frac{5\pi}{6}\right)$.
+    indice: Écris chaque angle à partir de $\pi$ et d'une valeur remarquable.
+    etapes:
+      - type: calcul
+        titre: Premier
+        texte: $\frac{3\pi}{4} = \pi - \frac{\pi}{4}$, donc $\cos\frac{3\pi}{4} = -\cos\frac{\pi}{4} = -\frac{\sqrt{2}}{2}$.
+      - type: calcul
+        titre: Deuxième
+        texte: $\frac{4\pi}{3} = \pi + \frac{\pi}{3}$, donc $\sin\frac{4\pi}{3} = -\sin\frac{\pi}{3} = -\frac{\sqrt{3}}{2}$.
+      - type: calcul
+        titre: Troisième
+        texte: $\sin\left(-\frac{5\pi}{6}\right) = -\sin\frac{5\pi}{6} = -\sin\left(\pi - \frac{\pi}{6}\right) = -\sin\frac{\pi}{6} = -\frac{1}{2}$.
+        note: on vérifie le signe sur le cercle
+
+  - titre: Retrouver le cosinus
+    difficulte: 2
+    type: application
+    enonce: |
+      On sait que $\corange{x} \in \left]-\frac{\pi}{2}\,;0\right[$ et $\cos \corange{x} = \frac{5}{13}$. Calculer $\sin \corange{x}$.
+    indice: Dans quel quart du cercle tombe $\corange{x}$ ?
+    etapes:
+      - type: calcul
+        titre: Le carré
+        texte: $\sin^2 \corange{x} = 1 - \frac{25}{169} = \frac{144}{169}$, donc $\sin \corange{x} = \frac{12}{13}$ ou $-\frac{12}{13}$.
+      - type: methode
+        titre: Le signe
+        texte: $\corange{x}$ est entre $-\frac{\pi}{2}$ et 0, le point est en bas à droite du cercle, son ordonnée est négative.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>$\sin \corange{x} = -\frac{12}{13}$</mark>.
+
+  - titre: Résoudre sur le cercle
+    difficulte: 2
+    type: methode
+    enonce: |
+      Résoudre dans $]-\pi\,;\pi]$.
+      1. $2\sin \corange{x} = \sqrt{3}$
+      2. $\cos \corange{x} = -\frac{\sqrt{2}}{2}$
+    indice: Deux points du cercle par équation.
+    etapes:
+      - type: calcul
+        titre: Question 1
+        texte: >-
+          $\sin \corange{x} = \frac{\sqrt{3}}{2}$. La droite horizontale d'ordonnée $\frac{\sqrt{3}}{2}$ coupe le cercle en $\frac{\pi}{3}$ et $\pi - \frac{\pi}{3} = \frac{2\pi}{3}$. $S = \left\{\frac{\pi}{3}\,;\frac{2\pi}{3}\right\}$.
+      - type: calcul
+        titre: Question 2
+        texte: >-
+          La droite verticale d'abscisse $-\frac{\sqrt{2}}{2}$ coupe le cercle en $\frac{3\pi}{4}$ et $-\frac{3\pi}{4}$. $S = \left\{-\frac{3\pi}{4}\,;\frac{3\pi}{4}\right\}$.
+        note: deux points par tour
+
+  - titre: Le piège de la calculatrice
+    difficulte: 2
+    type: piege
+    enonce: |
+      Un élève calcule $\cos(\pi)$ à la calculatrice et obtient $0{,}9985$. Il en conclut que $\cos(\pi) \approx 1$. Où est l'erreur ? Que vaut vraiment $\cos(\pi)$ ?
+    indice: Dans quel mode est la calculatrice ?
+    etapes:
+      - type: piege
+        titre: L'erreur
+        texte: >-
+          La calculatrice est en degrés. Elle a calculé le cosinus de $3{,}14$ degrés, un angle minuscule, d'où un résultat proche de 1.
+      - type: calcul
+        titre: Sur le cercle
+        texte: Un demi-tour de fil ($\pi$) amène au point $(-1\,;0)$.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>$\cos(\pi) = -1$</mark>. Il faut régler la calculatrice en radians.
