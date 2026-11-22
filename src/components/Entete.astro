@@ -26,6 +26,11 @@ const grouped = ['Collège', 'Lycée'].map((cycle) => ({ cycle, niveaux: NIVEAUX
       {liens.map((l) => <a href={l.href} aria-current={actif === l.id ? 'page' : undefined}>{l.titre}</a>)}
     </nav>
     <div class="nav-rq"><Recherche id="rq-entete" placeholder="Rechercher  /" compact /></div>
+    {m.youtube && (
+      <a class="btn-yt" href={m.youtube} target="_blank" rel="noopener" data-umami-event="chaine-entete" aria-label="La chaîne YouTube Maths et Magique (nouvel onglet)">
+        <svg viewBox="0 0 28 20" aria-hidden="true"><rect width="28" height="20" rx="5" fill="#FF0033"/><path d="M11 5.5v9l8-4.5z" fill="#fff"/></svg><span>La chaîne</span>
+      </a>
+    )}
     <button type="button" class="burger" aria-expanded="false" aria-controls="ph-menu" aria-label="Ouvrir le menu" data-burger><span></span></button>
   </div>
 
@@ -76,6 +81,12 @@ const grouped = ['Collège', 'Lycée'].map((cycle) => ({ cycle, niveaux: NIVEAUX
       <a href={`${base}/`} style="font-size:.85rem;display:grid;place-items:center">Tout</a>
     </div>
   </div>
+  {m.youtube && (
+    <a class="yt-menu" href={m.youtube} target="_blank" rel="noopener" data-umami-event="chaine-menu">
+      <svg viewBox="0 0 28 20" aria-hidden="true"><rect width="28" height="20" rx="5" fill="#FF0033"/><path d="M11 5.5v9l8-4.5z" fill="#fff"/></svg>
+      <span><b>Voir la chaîne YouTube</b><small>Toutes les vidéos Maths et Magique</small></span>
+    </a>
+  )}
   <div class="menu-links">
     <a href={`${base}/fiches/`}><span>Fiches de révision <small>1 page par chapitre</small></span></a>
     {liens.map((l) => <a href={l.href}><span>{l.titre} <small>{l.sous}</small></span></a>)}

@@ -2,6 +2,7 @@
 import Base from '../../layouts/Base.astro';
 import Video from '../../components/Video.astro';
 import Recherche from '../../components/Recherche.astro';
+import Chaine from '../../components/Chaine.astro';
 import { NIVEAUX } from '../../data/site';
 import { dernierChapitre } from '../../lib/contenu';
 import { cheminsMatieres } from '../../lib/matieres-paths';
@@ -32,6 +33,7 @@ const nv = dernier && NIVEAUX.find((n) => n.slug === dernier.niveau);
           </div>
         )}
       </div>
+      {matiere.youtube && <Chaine url={matiere.youtube} nom={`${matiere.nom} et Magique`} />}
       <div class="band">
         <div><h2>Bac 2027 : ton planning de travail</h2><p>Chaque semaine jusqu'à l'épreuve, un e‑mail avec les chapitres à revoir et les exercices à faire.</p></div>
         <a class="btn jaune" href={`/${matiere.slug}/planning-bac/`}>Recevoir mon planning</a>

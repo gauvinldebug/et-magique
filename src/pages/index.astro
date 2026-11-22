@@ -22,6 +22,12 @@ import { MATIERES } from '../data/site';
           </li>
         ))}
       </ul>
+      {MATIERES.filter((m) => m.active && m.youtube).map((m) => (
+        <a class="yt-menu" style="max-width:520px" href={m.youtube} target="_blank" rel="noopener" data-umami-event="chaine-portail">
+          <svg viewBox="0 0 28 20" aria-hidden="true"><rect width="28" height="20" rx="5" fill="#FF0033"/><path d="M11 5.5v9l8-4.5z" fill="#fff"/></svg>
+          <span><b>La chaîne YouTube {m.nom} et Magique</b><small>Toutes les vidéos, chapitre par chapitre ↗</small></span>
+        </a>
+      ))}
       <p class="aide"><a href="/a-propos/">À propos</a> · <a href="/confidentialite/">Confidentialité</a> · <a href="/mentions-legales/">Mentions légales</a></p>
     </div>
   </div>

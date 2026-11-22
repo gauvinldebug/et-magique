@@ -9,12 +9,12 @@ titre: Mentions légales
 
 **Hébergeur :** Netlify, Inc., 101 2nd Street, San Francisco, CA 94105, États-Unis. netlify.com
 
-## Licence
+## Droits d'auteur
 
-Les vidéos, cours, exercices, corrigés, QCM et fiches de Maths et Magique sont © Maths et Magique, publiés sous licence **[Creative Commons BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/deed.fr)**. Concrètement :
+Les vidéos, cours, exercices, corrigés, QCM, fiches et illustrations de Maths et Magique sont © Maths et Magique, **tous droits réservés** (Code de la propriété intellectuelle, articles L.111-1 et L.122-4).
 
-- **Tu peux** les utiliser pour apprendre, les imprimer, les partager tels quels avec ta classe ou tes élèves, en citant « Maths et Magique, etmagique.fr » avec un lien.
-- **Tu ne peux pas** les modifier puis les republier, ni les utiliser dans un cadre commercial (vente, site ou chaîne avec publicité, cours payants), ni republier les vidéos ailleurs que sur la chaîne YouTube officielle.
+- **Autorisé :** les regarder, les lire, les télécharger et les imprimer pour ton usage personnel (réviser, apprendre), et partager le **lien** vers le site ou la chaîne.
+- **Interdit sans accord écrit :** copier, republier ou modifier tout ou partie du contenu (sur un site, un réseau social, une chaîne ou un document), et toute utilisation commerciale (vente, cours payants, site ou chaîne avec publicité, plateforme payante).
 
 Pour toute autre utilisation, écris-nous via le [cahier de demandes](/demandes/).
 
