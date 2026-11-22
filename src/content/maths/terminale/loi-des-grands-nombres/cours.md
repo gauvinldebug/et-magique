@@ -41,7 +41,7 @@ Pour des variables aléatoires $X$ et $Y$ et des réels $a$ et $b$ :
 
 </div>
 
-Exemple : une loi binomiale $\mathcal{B}(n\,;p)$ est la somme de $n$ variables de Bernoulli indépendantes, chacune d'espérance $p$ et de variance $p(1 - p)$. On retrouve $E = np$ et $V = np(1 - p)$.
+Exemple : une [loi binomiale](/maths/terminale/loi-binomiale/cours/) $\mathcal{B}(n\,;p)$ est la somme de $n$ variables de Bernoulli indépendantes, chacune d'espérance $p$ et de variance $p(1 - p)$. On retrouve $E = np$ et $V = np(1 - p)$.
 
 ## Échantillon et moyenne
 

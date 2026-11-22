@@ -14,11 +14,14 @@ const onglets: { id: Onglet; href: string; titre: string; n?: number }[] = [
 ];
 const i = onglets.findIndex((o) => o.id === onglet);
 const prochain = onglets[i + 1];
+// Les mots qui désignent une autre partie du chapitre sont des liens directs.
+const lien = (href: string, texte: string) => `<a href="${href}">${texte}</a>`;
+const fiche = lien(`${base}/fiche/`, 'la fiche de révision');
 const phrases: Record<Onglet, string> = {
-  video: 'Vu la vidéo ? Relis le cours, puis passe aux exercices.',
-  cours: 'Le cours est clair ? Passe aux exercices.',
-  exercices: 'Fini les exercices ? Teste-toi avec le QCM.',
-  qcm: 'Prêt pour la suite ?',
+  video: `Vu la vidéo ? Relis ${lien(`${base}/cours/`, 'le cours')}, puis passe aux ${lien(`${base}/exercices/`, 'exercices')}.`,
+  cours: `Le cours est clair ? Passe aux ${lien(`${base}/exercices/`, 'exercices')}, et garde ${fiche} pour réviser.`,
+  exercices: `Fini les exercices ? Teste-toi avec le ${lien(`${base}/qcm/`, 'QCM')}, ou relis ${lien(`${base}/cours/`, 'le cours')}.`,
+  qcm: `Prêt pour la suite ? Garde ${fiche} pour réviser avant le contrôle.`,
 };
 const titre = titrePage ?? (onglet === 'video' ? chapitre.data.titre : `${chapitre.data.court} : ${onglets[i].titre.toLowerCase()}`);
 ---
@@ -36,7 +39,7 @@ const titre = titrePage ?? (onglet === 'video' ? chapitre.data.titre : `${chapit
       </nav>
       <slot />
       <div class="nextstep">
-        <span>{phrases[onglet]}</span>
+        <span set:html={phrases[onglet]} />
         {prochain ? (
           <a class="btn" href={prochain.href}>{prochain.id === 'cours' ? 'Lire le cours' : prochain.id === 'exercices' ? 'Faire les exercices' : 'Faire le QCM'} →</a>
         ) : Astro.props.suivant?.publie ? (

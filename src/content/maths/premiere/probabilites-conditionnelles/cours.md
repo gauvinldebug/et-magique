@@ -110,4 +110,4 @@ $$
 
 </div>
 
-L'espérance est la valeur moyenne obtenue sur un très grand nombre de répétitions. Dans un jeu, $E(X) > 0$ veut dire qu'il est favorable au joueur.
+L'espérance est la valeur moyenne obtenue sur un très grand nombre de répétitions. Tout est détaillé dans le chapitre [Variables aléatoires](/maths/premiere/variables-aleatoires/cours/). Dans un jeu, $E(X) > 0$ veut dire qu'il est favorable au joueur.

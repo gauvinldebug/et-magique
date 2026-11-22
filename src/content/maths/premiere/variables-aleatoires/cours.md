@@ -91,4 +91,4 @@ Si le forain double tous les gains et ajoute 1 € de bonus à chaque partie, le
 
 ## Répéter l'expérience
 
-Simule le stand 10 000 fois à l'ordinateur et calcule le gain moyen : tu trouveras un nombre très proche de $-0{,}33$. C'est le sens concret de l'espérance, que la **loi des grands nombres** rendra précis en Terminale.
+Simule le stand 10 000 fois à l'ordinateur et calcule le gain moyen : tu trouveras un nombre très proche de $-0{,}33$. C'est le sens concret de l'espérance, que la [loi des grands nombres](/maths/terminale/loi-des-grands-nombres/cours/) rendra précis en Terminale.

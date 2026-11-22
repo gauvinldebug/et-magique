@@ -94,4 +94,4 @@ Si $\unn = \cbleu{f}(\un)$, si la suite $\cbleu{u}$ converge vers $\cvert{\ell}$
 
 </div>
 
-C'est ce qui permet de trouver la limite d'une suite récurrente : avec $\unn = \frac{1}{3}\un + 2$, la limite vérifie $\ell = \frac{1}{3}\ell + 2$, donc $\ell = 3$.
+C'est ce qui permet de trouver la [limite d'une suite](/maths/terminale/limites-de-suites/cours/) récurrente : avec $\unn = \frac{1}{3}\un + 2$, la limite vérifie $\ell = \frac{1}{3}\ell + 2$, donc $\ell = 3$.
