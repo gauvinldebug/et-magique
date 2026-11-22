@@ -1,6 +1,11 @@
 [build]
   command = "npm run build"
   publish = "dist"
+  # ÉCONOMIE DE CRÉDITS (offre gratuite : 300 crédits/mois, 15 par mise en ligne).
+  # La production n'est reconstruite que si le message du commit contient [publier]
+  # (titre de la PR fusionnée). On regroupe donc les changements puis on publie une fois.
+  # Les aperçus de PR (deploy previews) restent construits.
+  ignore = "if [ \"$CONTEXT\" != \"production\" ]; then exit 1; fi; if git log -1 --pretty=%B | grep -q '\\[publier\\]'; then exit 1; else exit 0; fi"
 
 [build.environment]
   NODE_VERSION = "22"
