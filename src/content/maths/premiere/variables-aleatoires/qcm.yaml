@@ -1,0 +1,48 @@
+questions:
+  - question: $X$ prend les valeurs 1, 2 et 5 avec les probabilités 0,2 ; 0,5 et $p$. Alors $p$ vaut…
+    choix: ['$0{,}3$', '$0{,}5$', '$0{,}7$', '$1$']
+    bonne: 0
+    explication: La somme des probabilités vaut 1, donc $p = 1 - 0{,}2 - 0{,}5 = 0{,}3$.
+    revoir: cours
+
+  - question: Avec la loi précédente, $E(X)$ vaut…
+    choix: ['$2{,}7$', '$2{,}5$', '$8$', '$1$']
+    bonne: 0
+    explication: $0{,}2 \times 1 + 0{,}5 \times 2 + 0{,}3 \times 5 = 0{,}2 + 1 + 1{,}5 = 2{,}7$.
+    revoir: cours
+
+  - question: Un jeu est équitable si…
+    choix: ['$E(X) = 0$', '$V(X) = 0$', '$E(X) = 1$', '$P(X > 0) = 0{,}5$']
+    bonne: 0
+    explication: En moyenne, ni le joueur ni l'organisateur ne gagne.
+    revoir: cours
+
+  - question: Si $E(X) = 4$, alors $E(3X - 2)$ vaut…
+    choix: ['$10$', '$12$', '$14$', '$4$']
+    bonne: 0
+    explication: $3 \times 4 - 2 = 10$.
+    revoir: cours
+
+  - question: Si $V(X) = 5$, alors $V(-2X + 7)$ vaut…
+    choix: ['$-3$', '$-10$', '$20$', '$27$']
+    bonne: 2
+    explication: $(-2)^2 \times 5 = 20$. Le $+ 7$ ne change pas la dispersion.
+    revoir: cours
+
+  - question: On lance un dé équilibré, $X$ est le résultat. $E(X)$ vaut…
+    choix: ['$3$', '$3{,}5$', '$4$', '$6$']
+    bonne: 1
+    explication: $\frac{1 + 2 + 3 + 4 + 5 + 6}{6} = 3{,}5$, même si aucune face ne porte 3,5.
+    revoir: cours
+
+  - question: Si $E(X) = 2$ et $E(X^2) = 7$, alors $V(X)$ vaut…
+    choix: ['$5$', '$3$', '$9$', '$\sqrt{3}$']
+    bonne: 1
+    explication: $V(X) = E(X^2) - E(X)^2 = 7 - 4 = 3$.
+    revoir: cours
+
+  - question: L'écart type de $X$ est exprimé…
+    choix: ["sans unité", "dans la même unité que $X$", "dans l'unité de $X$ au carré", "en pourcentage"]
+    bonne: 1
+    explication: C'est la racine de la variance, qui est en unité au carré.
+    revoir: cours

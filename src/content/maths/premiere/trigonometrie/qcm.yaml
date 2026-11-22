@@ -1,0 +1,48 @@
+questions:
+  - question: Combien mesure un angle de 120° en radians ?
+    choix: ['$\frac{\pi}{3}$', '$\frac{2\pi}{3}$', '$\frac{3\pi}{4}$', '$\frac{5\pi}{6}$']
+    bonne: 1
+    explication: $120 \times \frac{\pi}{180} = \frac{2\pi}{3}$.
+    revoir: cours
+
+  - question: Que vaut $\sin\left(\frac{\pi}{6}\right)$ ?
+    choix: ['$\frac{1}{2}$', '$\frac{\sqrt{3}}{2}$', '$\frac{\sqrt{2}}{2}$', '$1$']
+    bonne: 0
+    explication: Valeur à connaître, et $\cos\left(\frac{\pi}{6}\right) = \frac{\sqrt{3}}{2}$.
+    revoir: cours
+
+  - question: Quelle est la mesure principale de $\frac{7\pi}{3}$ ?
+    choix: ['$\frac{\pi}{3}$', '$-\frac{\pi}{3}$', '$\frac{4\pi}{3}$', '$\frac{7\pi}{3}$']
+    bonne: 0
+    explication: $\frac{7\pi}{3} = \frac{\pi}{3} + 2\pi$, un tour de fil en plus.
+    revoir: cours
+
+  - question: Que vaut $\cos(\pi)$ ?
+    choix: ['$0$', '$1$', '$-1$', '$\pi$']
+    bonne: 2
+    explication: Un demi-tour amène le fil au point $(-1\,;0)$.
+    revoir: cours
+
+  - question: $\cos\left(\frac{5\pi}{6}\right)$ est égal à…
+    choix: ['$\frac{\sqrt{3}}{2}$', '$-\frac{\sqrt{3}}{2}$', '$\frac{1}{2}$', '$-\frac{1}{2}$']
+    bonne: 1
+    explication: $\frac{5\pi}{6} = \pi - \frac{\pi}{6}$, et $\cos(\pi - \corange{x}) = -\cos \corange{x}$.
+    revoir: exercices
+
+  - question: Si $\sin \corange{x} = 0{,}6$ et $\cos \corange{x} < 0$, alors $\cos \corange{x}$ vaut…
+    choix: ['$0{,}4$', '$-0{,}4$', '$0{,}8$', '$-0{,}8$']
+    bonne: 3
+    explication: $\cos^2 \corange{x} = 1 - 0{,}36 = 0{,}64$, et $\cos \corange{x} < 0$.
+    revoir: cours
+
+  - question: La fonction $\cos$ est…
+    choix: ["paire", "impaire", "ni paire ni impaire", "croissante sur $\\mathbb{R}$"]
+    bonne: 0
+    explication: $\cos(-\corange{x}) = \cos \corange{x}$.
+    revoir: cours
+
+  - question: Les solutions de $\sin \corange{x} = 1$ dans $]-\pi\,;\pi]$ sont…
+    choix: ['$\frac{\pi}{2}$ seulement', '$\frac{\pi}{2}$ et $-\frac{\pi}{2}$', '$0$ et $\pi$', '$\pi$ seulement']
+    bonne: 0
+    explication: Une seule fois par tour le fil arrive tout en haut, au point $(0\,;1)$.
+    revoir: cours

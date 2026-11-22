@@ -1,0 +1,50 @@
+questions:
+  - question: Après `a = 4` puis `a = a * 2 + 1`, que contient `a` ?
+    choix: ['$4$', '$8$', '$9$', '$10$']
+    bonne: 2
+    explication: On calcule à droite avec l'ancienne valeur, $4 \times 2 + 1 = 9$, puis on range dans `a`.
+    revoir: cours
+
+  - question: Quelles valeurs prend `k` dans `for k in range(4)` ?
+    choix: ["1, 2, 3, 4", "0, 1, 2, 3", "0, 1, 2, 3, 4", "4 seulement"]
+    bonne: 1
+    explication: range(4) commence à 0 et s'arrête avant 4, soit 4 tours.
+    revoir: cours
+
+  - question: Comment écrit-on $x^3$ en Python ?
+    choix: ['`x^3`', '`x**3`', '`x*3`', '`pow3(x)`']
+    bonne: 1
+    explication: >-
+      En Python, `^` est une autre opération. La puissance s'écrit `**`.
+    revoir: cours
+
+  - question: Quelle boucle utiliser pour trouver le premier rang où une suite dépasse 100 ?
+    choix: ["une boucle for", "une boucle while", "une condition if seule", "une liste"]
+    bonne: 1
+    explication: On ne sait pas combien de tours il faudra, on répète tant que le seuil n'est pas dépassé.
+    revoir: cours
+
+  - question: Que vaut `L[1]` si `L = [7, 3, 9]` ?
+    choix: ['$7$', '$3$', '$9$', "une erreur"]
+    bonne: 1
+    explication: Les positions commencent à 0, donc `L[1]` est le deuxième élément.
+    revoir: cours
+
+  - question: Quel test vérifie que `x` est égal à 5 ?
+    choix: ['`x = 5`', '`x == 5`', '`x := 5`', '`x != 5`']
+    bonne: 1
+    explication: Un seul `=` range une valeur, deux `==` comparent.
+    revoir: cours
+
+  - question: >-
+      Avec `u = 1` puis `for k in range(3): u = 2 * u`, que vaut `u` à la fin ?
+    choix: ['$4$', '$6$', '$8$', '$16$']
+    bonne: 2
+    explication: Trois tours, $1 \to 2 \to 4 \to 8$.
+    revoir: exercices
+
+  - question: Que renvoie `[2*k for k in range(4)]` ?
+    choix: ['`[2, 4, 6, 8]`', '`[0, 2, 4, 6]`', '`[0, 1, 2, 3]`', '`[0, 2, 4, 6, 8]`']
+    bonne: 1
+    explication: k vaut 0, 1, 2, 3, et on range le double de chaque valeur.
+    revoir: cours

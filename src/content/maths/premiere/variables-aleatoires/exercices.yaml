@@ -1,0 +1,116 @@
+# Exercices corrigés, du plus facile au type contrôle.
+# type d'étape : init (vert), her (orange), conc (bleu), calcul, methode, piege (rouge)
+exercices:
+  - titre: Compléter une loi
+    difficulte: 1
+    type: application
+    enonce: |
+      $X$ prend les valeurs $-1$, $0$, $2$ et $4$ avec $P(X = -1) = 0{,}3$, $P(X = 0) = 0{,}1$, $P(X = 2) = 0{,}4$.
+      1. Calculer $P(X = 4)$.
+      2. Calculer $P(X \ge 0)$ et $E(X)$.
+    indice: La somme des probabilités vaut 1.
+    etapes:
+      - type: calcul
+        titre: Question 1
+        texte: $P(X = 4) = 1 - 0{,}3 - 0{,}1 - 0{,}4 = 0{,}2$.
+      - type: calcul
+        titre: Question 2
+        texte: >-
+          $P(X \ge 0) = 0{,}1 + 0{,}4 + 0{,}2 = 0{,}7$ et $E(X) = -0{,}3 + 0 + 0{,}8 + 0{,}8 = 1{,}3$.
+
+  - titre: Le jeu de la roue
+    difficulte: 1
+    type: methode
+    enonce: |
+      Une roue a 10 secteurs identiques : 1 rouge, 3 bleus, 6 blancs. Une partie coûte 3 €. Rouge : on reçoit 15 € ; bleu : on reçoit 4 € ; blanc : rien. $X$ est le gain net.
+      1. Donner la loi de $X$.
+      2. Le jeu est-il favorable au joueur ?
+    indice: Gain net = somme reçue moins la mise.
+    etapes:
+      - type: calcul
+        titre: Question 1
+        texte: >-
+          $X$ vaut $15 - 3 = 12$ avec la probabilité $0{,}1$, $4 - 3 = 1$ avec $0{,}3$, et $-3$ avec $0{,}6$.
+        note: on retire la mise
+      - type: calcul
+        titre: Question 2
+        texte: $E(X) = 0{,}1 \times 12 + 0{,}3 \times 1 + 0{,}6 \times (-3) = 1{,}2 + 0{,}3 - 1{,}8 = -0{,}3$.
+      - type: conc
+        titre: Conclusion
+        texte: >-
+          <mark>$E(X) = -0{,}3$ €, le jeu est défavorable au joueur</mark> : il perd 30 centimes par partie en moyenne.
+
+  - titre: Variance et écart type
+    difficulte: 2
+    type: application
+    enonce: |
+      On reprend le jeu de la roue. Calculer $V(X)$ et $\sigma(X)$.
+    indice: Calcule d'abord $E(X^2)$.
+    etapes:
+      - type: calcul
+        titre: E(X²)
+        texte: $E(X^2) = 0{,}1 \times 144 + 0{,}3 \times 1 + 0{,}6 \times 9 = 14{,}4 + 0{,}3 + 5{,}4 = 20{,}1$.
+      - type: calcul
+        titre: La variance
+        texte: $V(X) = 20{,}1 - (-0{,}3)^2 = 20{,}1 - 0{,}09 = 20{,}01$.
+      - type: conc
+        titre: L'écart type
+        texte: >-
+          <mark>$\sigma(X) \approx 4{,}47$ €</mark> : les gains sont très dispersés autour de la moyenne.
+
+  - titre: Rendre le jeu équitable
+    difficulte: 2
+    type: methode
+    enonce: |
+      Toujours avec la roue : quelle somme $s$ faut-il donner pour le secteur rouge (au lieu de 15 €) pour que le jeu devienne équitable ?
+    indice: Le gain net pour le rouge devient $s - 3$.
+    etapes:
+      - type: calcul
+        titre: L'espérance
+        texte: $E(X) = 0{,}1(s - 3) + 0{,}3 \times 1 + 0{,}6 \times (-3) = 0{,}1s - 0{,}3 + 0{,}3 - 1{,}8 = 0{,}1s - 1{,}8$.
+      - type: calcul
+        titre: La condition
+        texte: $E(X) = 0 \iff 0{,}1s = 1{,}8 \iff s = 18$.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>Il faut donner 18 € pour le secteur rouge</mark>.
+
+  - titre: Transformation affine
+    difficulte: 2
+    type: piege
+    enonce: |
+      La note $X$ d'un contrôle a pour espérance 9 et pour écart type 3. Le professeur décide de multiplier toutes les notes par 1,2 puis d'ajouter 1 point. Un élève dit : « la nouvelle moyenne est 11,8 et le nouvel écart type est 4,6 ». A-t-il raison ?
+    indice: $Y = 1{,}2X + 1$. Le $+ 1$ ne change pas l'écart type.
+    etapes:
+      - type: calcul
+        titre: L'espérance
+        texte: $E(Y) = 1{,}2 \times 9 + 1 = 11{,}8$. Juste.
+      - type: piege
+        titre: L'écart type
+        texte: >-
+          L'élève a fait $1{,}2 \times 3 + 1 = 4{,}6$. Mais ajouter 1 point à tout le monde décale les notes sans les écarter.
+        note: le +1 disparaît
+      - type: conc
+        titre: Conclusion
+        texte: <mark>$\sigma(Y) = 1{,}2 \times 3 = 3{,}6$</mark>. L'élève a tort pour l'écart type.
+
+  - titre: Tirages successifs
+    difficulte: 3
+    type: bac
+    enonce: |
+      Une urne contient 2 boules rouges et 3 noires. On tire successivement 2 boules **avec remise**. On gagne 5 € par boule rouge et on perd 2 € par boule noire. $X$ est le gain.
+      1. Donner la loi de $X$.
+      2. Calculer $E(X)$.
+    indice: Fais un arbre, $P(R) = 0{,}4$ à chaque tirage.
+    etapes:
+      - type: calcul
+        titre: Les valeurs
+        texte: 2 rouges, $X = 10$ ; 1 rouge et 1 noire, $X = 3$ ; 2 noires, $X = -4$.
+      - type: calcul
+        titre: Question 1
+        texte: >-
+          $P(X = 10) = 0{,}4^2 = 0{,}16$ ; $P(X = 3) = 2 \times 0{,}4 \times 0{,}6 = 0{,}48$ (deux chemins) ; $P(X = -4) = 0{,}6^2 = 0{,}36$.
+        note: deux chemins pour une rouge
+      - type: conc
+        titre: Question 2
+        texte: $E(X) = 1{,}6 + 1{,}44 - 1{,}44 = 1{,}6$. <mark>On gagne en moyenne 1,60 € par partie</mark>.
