@@ -1,0 +1,105 @@
+---
+// Barre de recherche rapide : suggestions pendant la frappe, recherches récentes avant de taper,
+// Entrée = va directement au premier chapitre trouvé.
+interface Props { placeholder?: string; id: string; autofocus?: boolean; compact?: boolean }
+const { placeholder = 'Cherche un chapitre : récurrence, fractions…', id, autofocus = false, compact = false } = Astro.props;
+---
+<div class:list={['rq', { compact }]} data-rq>
+  <form class="s-search" role="search" action="/maths/recherche/" method="get" style="margin:0">
+    <input
+      type="search" name="q" id={id} placeholder={placeholder} autocomplete="off" spellcheck="false"
+      role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls={`${id}-liste`} aria-label="Chercher un chapitre"
+      autofocus={autofocus}
+    />
+    {!compact && <button type="submit">Chercher</button>}
+  </form>
+  <div class="rq-pop" id={`${id}-liste`} role="listbox" hidden></div>
+</div>
+
+<script>
+  type Item = { t: string; s: string; u: string; k: string; d: 0 | 1 };
+  let index: Promise<Item[]> | undefined;
+  const charger = (): Promise<Item[]> => (index ??= fetch('/recherche.json').then((r) => r.json() as Promise<Item[]>).catch(() => [] as Item[]));
+  const norm = (s: string) => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
+  const esc = (s: string) => s.replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]!);
+  const CLE = 'recherches-recentes';
+  const recents = (): { t: string; s: string; u: string }[] => { try { return JSON.parse(localStorage.getItem(CLE) ?? '[]'); } catch { return []; } };
+  const retenir = (it: { t: string; s: string; u: string }) => {
+    try { localStorage.setItem(CLE, JSON.stringify([it, ...recents().filter((r) => r.u !== it.u)].slice(0, 5))); } catch { /* navigation privée */ }
+  };
+
+  function chercher(items: Item[], q: string) {
+    const mots = norm(q).split(/[^a-z0-9]+/).filter(Boolean);
+    if (!mots.length) return [];
+    return items
+      .map((it) => {
+        const t = norm(it.t), k = norm(it.k);
+        let score = 0;
+        for (const m of mots) {
+          if (new RegExp(`\\b${m}`).test(t)) score += 3;
+          else if (t.includes(m)) score += 2;
+          else if (new RegExp(`\\b${m}`).test(k)) score += 1;
+          else return { it, score: -1 };
+        }
+        return { it, score: score + it.d * 2 };
+      })
+      .filter((x) => x.score > 0)
+      .sort((a, b) => b.score - a.score)
+      .slice(0, 7)
+      .map((x) => x.it);
+  }
+
+  document.querySelectorAll<HTMLElement>('[data-rq]').forEach((box) => {
+    const input = box.querySelector('input')!;
+    const pop = box.querySelector<HTMLElement>('.rq-pop')!;
+    let liste: { t: string; s: string; u: string }[] = [];
+    let actif = -1;
+    const ouvrir = (o: boolean) => { pop.hidden = !o; input.setAttribute('aria-expanded', String(o)); };
+    const dessiner = (titre: string, items: { t: string; s: string; u: string }[], vide = '') => {
+      liste = items; actif = -1;
+      pop.innerHTML = (titre ? `<div class="rq-titre">${titre}</div>` : '') +
+        (items.length
+          ? items.map((it, i) => `<a role="option" id="${input.id}-o${i}" href="${esc(it.u)}" data-i="${i}"><b>${esc(it.t)}</b><small>${esc(it.s)}</small></a>`).join('')
+          : `<div class="rq-vide">${vide}</div>`);
+      ouvrir(true);
+    };
+    const maj = async () => {
+      const q = input.value.trim();
+      if (!q) {
+        const r = recents();
+        const items = await charger();
+        if (r.length) dessiner('Recherches récentes', r);
+        else dessiner('Suggestions', items.filter((i) => i.d && !/^Tous/.test(i.t)).slice(0, 5));
+        return;
+      }
+      const res = chercher(await charger(), q);
+      dessiner('', res, `Rien pour « ${esc(q)} ». <a href="/demandes/?type=chapitre&chapitre=${encodeURIComponent(q)}">Demander ce chapitre</a>`);
+    };
+    const surligner = (i: number) => {
+      const opts = [...pop.querySelectorAll<HTMLElement>('[role=option]')];
+      if (!opts.length) return;
+      actif = (i + opts.length) % opts.length;
+      opts.forEach((o, j) => o.setAttribute('aria-selected', String(j === actif)));
+      input.setAttribute('aria-activedescendant', opts[actif].id);
+    };
+    input.addEventListener('focus', maj);
+    input.addEventListener('input', maj);
+    input.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowDown') { e.preventDefault(); surligner(actif + 1); }
+      else if (e.key === 'ArrowUp') { e.preventDefault(); surligner(actif - 1); }
+      else if (e.key === 'Escape') { ouvrir(false); input.blur(); }
+    });
+    box.querySelector('form')!.addEventListener('submit', async (e) => {
+      const q = input.value.trim();
+      if (!q) { e.preventDefault(); return; }
+      const cible = actif >= 0 ? liste[actif] : chercher(await charger(), q)[0];
+      if (cible) { e.preventDefault(); retenir(cible); location.href = cible.u; }
+    });
+    pop.addEventListener('mousedown', (e) => e.preventDefault());
+    pop.addEventListener('click', (e) => {
+      const a = (e.target as HTMLElement).closest<HTMLAnchorElement>('a[data-i]');
+      if (a) retenir(liste[Number(a.dataset.i)]);
+    });
+    input.addEventListener('blur', () => setTimeout(() => ouvrir(false), 120));
+  });
+</script>

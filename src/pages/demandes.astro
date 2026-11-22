@@ -50,6 +50,7 @@ import { NIVEAUX } from '../data/site';
   if (params.get('niveau')) sel.value = params.get('niveau')!;
   if (params.get('type')) (f.querySelector(`input[name=type][value="${params.get('type')}"]`) as HTMLInputElement | null)?.click();
   (f.elements.namedItem('page') as HTMLInputElement).value = params.get('page') ?? '';
+  const chap = params.get('chapitre');
   const lbl = f.querySelector<HTMLElement>('[data-msg-label]')!;
   const msg = f.elements.namedItem('message') as HTMLTextAreaElement;
   const textes: Record<string, [string, string]> = {
@@ -61,6 +62,7 @@ import { NIVEAUX } from '../data/site';
   const maj = () => { const v = (f.elements.namedItem('type') as RadioNodeList).value; lbl.textContent = textes[v][0]; msg.placeholder = textes[v][1]; };
   f.querySelectorAll('input[name=type]').forEach((r) => r.addEventListener('change', maj));
   maj();
+  if (chap) msg.value = `Le chapitre « ${chap} », s'il te plaît !`;
 
   f.addEventListener('submit', async (e) => {
     e.preventDefault();

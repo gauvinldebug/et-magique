@@ -2,38 +2,105 @@
 import { getCollection } from 'astro:content';
 import Base from '../../../layouts/Base.astro';
 import { cheminsMatieres } from '../../../lib/matieres-paths';
+import { sujetsBac, chapitresAnnales, THEMES, SOURCE_ANNALES } from '../../../lib/annales';
 export const getStaticPaths = cheminsMatieres;
 const { matiere } = Astro.props;
-const annales = (await getCollection('annales')).filter((a) => a.data.matiere === matiere.slug).sort((a, b) => b.data.annee - a.data.annee);
-const groupes = [
-  { id: 'bac', titre: 'Bac' },
-  { id: 'brevet', titre: 'Brevet' },
-  { id: 'bac-blanc', titre: 'Bac blanc, avec les vidéos d’entraînement' },
-  { id: 'brevet-blanc', titre: 'Brevet blanc, avec les vidéos d’entraînement' },
-];
+const corrigesMaison = (await getCollection('annales')).filter((a) => a.data.matiere === matiere.slug).sort((a, b) => b.data.annee - a.data.annee);
+const annees = [...new Set(sujetsBac.map((s) => s.annee))];
+const chapitres = chapitresAnnales();
 ---
-<Base titre="Annales du bac et du brevet" description="Sujets du bac et du brevet de maths avec corrigés détaillés, et sujets blancs liés aux vidéos d'entraînement." matiere={matiere.slug} actif="annales">
+<Base titre="Annales du bac de maths : sujets et corrigés" description="Tous les sujets du bac de spécialité maths depuis 2021, avec corrigés, classés par année et par chapitre." matiere={matiere.slug} actif="annales">
   <div class="page-feuille cahier">
     <div class="feuille">
       <div>
-        <h1>Annales</h1>
-        <p style="color:var(--encre-2)">Les vrais sujets, corrigés pas à pas, et des sujets blancs pour t'entraîner.</p>
+        <h1>Annales du bac</h1>
+        <p style="color:var(--encre-2)">Tous les sujets de spécialité maths depuis 2021, avec leur corrigé. Choisis un chapitre pour ne voir que les sujets qui en parlent.</p>
       </div>
-      {groupes.map((g) => {
-        const items = annales.filter((a) => a.data.examen === g.id);
-        return (
-          <div style="display:grid;gap:20px">
-            <h2>{g.titre}</h2>
-            {items.length ? (
-              <ul class="liste-ch">
-                {items.map((a) => <li><a href={`/${matiere.slug}/annales/${a.id}/`}><span class="n">{a.data.annee}</span><b>{a.data.titre}</b><span class="badge">Corrigé</span></a></li>)}
-              </ul>
-            ) : (
-              <p class="vide">Les premiers sujets corrigés arrivent avec les vidéos d'entraînement. <a href="/demandes/">Demander un sujet</a></p>
-            )}
-          </div>
-        );
-      })}
+
+      <div class="filtres" role="group" aria-label="Filtrer par chapitre" data-filtres>
+        <button type="button" aria-pressed="true" data-ch="">Tous</button>
+        {chapitres.map((c) => <button type="button" aria-pressed="false" data-ch={c.slug}>{c.titre}</button>)}
+      </div>
+
+      {annees.map((a) => (
+        <section class="annee" data-annee>
+          <h2>Bac {a}</h2>
+          <ul class="sujets">
+            {sujetsBac.filter((s) => s.annee === a).map((s) => (
+              <li data-chapitres={s.exercices.flatMap((e) => e.chapitres).join(' ')}>
+                <div class="sj-titre">
+                  <b>{s.titre}</b>
+                  <span class="sj-exos">
+                    {s.exercices.map((e) => <span class={`th ${e.theme}`} data-ch={e.chapitres.join(' ')} title={`Exercice ${e.n}`}>{e.n}. {THEMES[e.theme]}</span>)}
+                  </span>
+                </div>
+                <div class="sj-liens">
+                  <a class="btn ghost" href={s.sujet} target="_blank" rel="noopener" data-umami-event="annale-sujet">Sujet <span aria-hidden="true">↗</span></a>
+                  {s.corrige && <a class="btn ghost" href={s.corrige} target="_blank" rel="noopener" data-umami-event="annale-corrige">Corrigé <span aria-hidden="true">↗</span></a>}
+                </div>
+              </li>
+            ))}
+          </ul>
+        </section>
+      ))}
+      <p class="vide" data-aucun hidden>Aucun sujet pour ce chapitre pour l'instant.</p>
+
+      <p class="aide">Sujets et corrigés publiés par l'<a href={SOURCE_ANNALES.page} target="_blank" rel="noopener">APMEP</a> (Association des professeurs de mathématiques de l'enseignement public), sur leur site. Le classement par chapitre est fait automatiquement d'après le texte des sujets : il peut se tromper sur un exercice.</p>
+
+      {corrigesMaison.length > 0 && (
+        <div style="display:grid;gap:20px">
+          <h2>Corrigés en vidéo et sujets blancs</h2>
+          <ul class="liste-ch">
+            {corrigesMaison.map((a) => <li><a href={`/${matiere.slug}/annales/${a.id}/`}><span class="n">{a.data.annee}</span><b>{a.data.titre}</b><span class="badge">Corrigé</span></a></li>)}
+          </ul>
+        </div>
+      )}
+      <p class="aide">Le brevet arrive bientôt. <a href="/demandes/">Demander un sujet</a></p>
     </div>
   </div>
 </Base>
+
+<style>
+  .filtres { display: flex; flex-wrap: wrap; gap: 8px; }
+  .filtres button { min-height: 32px; padding: 0 12px; border-radius: 999px; border: 1px solid var(--trait); background: var(--carte); font-size: .86rem; font-weight: 600; cursor: pointer; }
+  .filtres button[aria-pressed="true"] { background: var(--terme); border-color: var(--terme); color: #fff; }
+  .annee { display: grid; gap: 20px; }
+  .sujets { list-style: none; margin: 0; padding: 0; display: grid; }
+  .sujets li { display: flex; flex-wrap: wrap; gap: 10px 16px; align-items: center; justify-content: space-between; padding: 10px 0 9px; border-bottom: 1px dashed var(--trait); }
+  .sj-titre { display: grid; gap: 6px; min-width: 0; }
+  .sj-exos { display: flex; flex-wrap: wrap; gap: 6px; }
+  .th { font-size: .72rem; font-weight: 700; line-height: 18px; padding: 0 7px; border-radius: 5px; background: var(--papier); color: var(--encre-2); }
+  .th.suites { background: var(--terme-doux); color: var(--terme); }
+  .th.fonctions { background: var(--indice-doux); color: var(--indice); }
+  .th.espace { background: var(--ok-doux); color: var(--ok); }
+  .th.probas { background: var(--piege-doux); color: var(--piege); }
+  .th.off { opacity: .35; }
+  .sj-liens { display: flex; gap: 8px; }
+  .sj-liens .btn { padding: 6px 12px; }
+</style>
+
+<script>
+  const boutons = [...document.querySelectorAll<HTMLButtonElement>('[data-filtres] button')];
+  const appliquer = (ch: string) => {
+    boutons.forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.ch === ch)));
+    let total = 0;
+    document.querySelectorAll<HTMLElement>('[data-annee]').forEach((sec) => {
+      let n = 0;
+      sec.querySelectorAll<HTMLElement>('li[data-chapitres]').forEach((li) => {
+        const ok = !ch || li.dataset.chapitres!.split(' ').includes(ch);
+        li.hidden = !ok;
+        if (ok) n++;
+        li.querySelectorAll<HTMLElement>('.th').forEach((t) => t.classList.toggle('off', !!ch && !t.dataset.ch!.split(' ').includes(ch)));
+      });
+      sec.hidden = n === 0;
+      total += n;
+    });
+    document.querySelector<HTMLElement>('[data-aucun]')!.hidden = total > 0;
+    const u = new URL(location.href);
+    ch ? u.searchParams.set('chapitre', ch) : u.searchParams.delete('chapitre');
+    history.replaceState(null, '', u);
+  };
+  boutons.forEach((b) => b.addEventListener('click', () => appliquer(b.dataset.ch!)));
+  const depart = new URLSearchParams(location.search).get('chapitre');
+  if (depart) appliquer(depart);
+</script>

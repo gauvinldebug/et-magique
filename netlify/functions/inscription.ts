@@ -1,9 +1,10 @@
 // POST /api/inscription : inscription au planning de révision par e-mail.
 // Moins de 15 ans : c'est un parent qui s'inscrit avec son adresse et confirme (RGPD, art. 8 ; loi française : 15 ans).
-// Double confirmation par e-mail via Brevo dès que BREVO_API_KEY est configurée.
+// Double confirmation : un e-mail avec un lien à cliquer (envoyé par Brevo, voir ../lib/emails.ts).
 import type { Config, Context } from '@netlify/functions';
 import { createHash } from 'node:crypto';
 import { store, json, erreur, empreinte, limiter, nettoyer, emailValide } from '../lib/outils';
+import { envoyerConfirmation } from '../lib/emails';
 
 const NIVEAUX = ['terminale', 'premiere', '3e', 'autre'];
 
@@ -27,25 +28,9 @@ export default async (req: Request, ctx: Context) => {
     email, prenom, niveau, age, date: new Date().toISOString(), statut: 'a-confirmer',
   });
 
-  // Brevo : e-mail de double confirmation (le contact n'est ajouté à la liste qu'après le clic).
-  const key = process.env.BREVO_API_KEY;
-  if (key && process.env.BREVO_LIST_ID && process.env.BREVO_DOI_TEMPLATE_ID) {
-    const r = await fetch('https://api.brevo.com/v3/contacts/doubleOptinConfirmation', {
-      method: 'POST',
-      headers: { 'api-key': key, 'content-type': 'application/json', accept: 'application/json' },
-      body: JSON.stringify({
-        email,
-        attributes: { PRENOM: prenom, NIVEAU: niveau, MOINS_15: age === 'moins15' },
-        includeListIds: [Number(process.env.BREVO_LIST_ID)],
-        templateId: Number(process.env.BREVO_DOI_TEMPLATE_ID),
-        redirectionUrl: `${new URL(req.url).origin}/maths/planning-bac/merci/`,
-      }),
-    });
-    if (!r.ok && r.status !== 204) {
-      console.error('Brevo', r.status, await r.text());
-      return erreur("L'inscription n'a pas marché, réessaie plus tard.", 502);
-    }
-  }
+  // E-mail de confirmation (double opt-in) : l'inscription ne compte qu'après le clic.
+  const envoye = await envoyerConfirmation(req, { cle, email, prenom, moins15: age === 'moins15' });
+  if (!envoye) return erreur("L'inscription n'a pas marché, réessaie plus tard.", 502);
   return json({ ok: true });
 };
 

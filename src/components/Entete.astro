@@ -1,6 +1,7 @@
 ---
 // En-tête : logo, menu « Chapitres » à intercalaires (ordinateur), menu plein écran (téléphone).
 import Logo from './Logo.astro';
+import Recherche from './Recherche.astro';
 import { NIVEAUX, matiere as getMatiere } from '../data/site';
 import { menuMatiere } from '../lib/contenu';
 
@@ -24,7 +25,7 @@ const grouped = ['Collège', 'Lycée'].map((cycle) => ({ cycle, niveaux: NIVEAUX
       <button type="button" aria-expanded="false" aria-controls="mega" data-mega-btn>Chapitres <span class="chev"></span></button>
       {liens.map((l) => <a href={l.href} aria-current={actif === l.id ? 'page' : undefined}>{l.titre}</a>)}
     </nav>
-    <a class="search" href={`${base}/recherche/`} data-search-link>Rechercher <kbd>/</kbd></a>
+    <div class="nav-rq"><Recherche id="rq-entete" placeholder="Rechercher  /" compact /></div>
     <button type="button" class="burger" aria-expanded="false" aria-controls="ph-menu" aria-label="Ouvrir le menu" data-burger><span></span></button>
   </div>
 
@@ -47,7 +48,7 @@ const grouped = ['Collège', 'Lycée'].map((cycle) => ({ cycle, niveaux: NIVEAUX
             {menu[n.slug].map((c, i) => (
               <li class={c.dispo ? 'dispo' : 'later'}>
                 {c.dispo ? (
-                  <a href={`${base}/${n.slug}/${c.slug}/`}><span class="ch">{i + 1}</span>{c.titre}<span class="badge">{c.video ? 'Vidéo' : 'Nouveau'}</span></a>
+                  <a href={`${base}/${n.slug}/${c.slug}/`}><span class="ch">{i + 1}</span>{c.titre}{c.nouveau ? <span class="badge">Nouveau</span> : c.video ? <span class="badge gris">Vidéo</span> : null}</a>
                 ) : (
                   <span><span class="ch">{i + 1}</span>{c.titre}</span>
                 )}
@@ -67,10 +68,7 @@ const grouped = ['Collège', 'Lycée'].map((cycle) => ({ cycle, niveaux: NIVEAUX
 </header>
 
 <div class="ph-menu" id="ph-menu" hidden data-ph-menu>
-  <form class="s-search" action={`${base}/recherche/`} method="get" role="search" style="margin:0">
-    <input type="search" name="q" placeholder="Chercher un chapitre…" aria-label="Chercher un chapitre" />
-    <button type="submit">Chercher</button>
-  </form>
+  <Recherche id="rq-menu" placeholder="Chercher un chapitre…" />
   <div>
     <div class="k" style="margin-bottom:8px">Ton niveau</div>
     <div class="lvl-grid">
@@ -139,8 +137,9 @@ const grouped = ['Collège', 'Lycée'].map((cycle) => ({ cycle, niveaux: NIVEAUX
     const el = e.target as HTMLElement;
     if (e.key === '/' && !/INPUT|TEXTAREA|SELECT/.test(el.tagName) && !el.isContentEditable) {
       e.preventDefault();
-      const link = document.querySelector<HTMLAnchorElement>('[data-search-link]');
-      if (link) location.href = link.href;
+      const champ = document.getElementById('rq-entete') as HTMLInputElement | null;
+      if (champ && champ.offsetParent) champ.focus();
+      else location.href = '/maths/recherche/';
     }
   });
 </script>

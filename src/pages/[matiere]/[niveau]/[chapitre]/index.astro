@@ -21,7 +21,7 @@ const base = `/${p.matiere.slug}/${p.niveau.slug}/${p.chapitre.slug}`;
           <ol class="toc">
             {video.chapitres.map((c) =>
               video.youtube ? (
-                <li><a href={`https://www.youtube.com/watch?v=${video.youtube}&t=${c.t.split(':').reduce((a, b) => a * 60 + Number(b), 0)}s`} data-t={c.t}><b>{c.t}</b>{c.titre}</a></li>
+                <li><a href={`https://www.youtube.com/watch?v=${video.youtube}&t=${c.t.split(':').reduce((a, b) => a * 60 + Number(b), 0)}s`} target="_blank" rel="noopener"><b>{c.t}</b>{c.titre}</a></li>
               ) : (
                 <li><span><b>{c.t}</b>{c.titre}</span></li>
               ),

@@ -1,0 +1,4083 @@
+{
+ "source": "APMEP",
+ "page": "https://www.apmep.fr/Annales-Terminale-Generale",
+ "sujets": [
+  {
+   "annee": 2021,
+   "titre": "Sujet 0 session 2021",
+   "sujet": "https://www.apmep.fr/IMG/pdf/epreuve_0_specialite_21-3.pdf",
+   "corrige": "https://www.apmep.fr/IMG/pdf/Corrige_epreuve_0_specialite_21_FH.pdf",
+   "exercices": [
+    {
+     "n": 1,
+     "theme": "suites",
+     "chapitres": [
+      "limites-de-suites"
+     ]
+    },
+    {
+     "n": 2,
+     "theme": "espace",
+     "chapitres": [
+      "geometrie-dans-l-espace"
+     ]
+    },
+    {
+     "n": 3,
+     "theme": "probas",
+     "chapitres": []
+    },
+    {
+     "n": "A",
+     "theme": "fonctions",
+     "chapitres": [
+      "logarithme-neperien",
+      "derivation-et-convexite",
+      "limites-de-fonctions"
+     ]
+    },
+    {
+     "n": "B",
+     "theme": "suites",
+     "chapitres": [
+      "limites-de-suites"
+     ]
+    }
+   ]
+  },
+  {
+   "annee": 2021,
+   "titre": "Sujet 1 15 mars 2021",
+   "sujet": "https://www.apmep.fr/IMG/pdf/TS_EDS_1_15_mars_2021_DV_2-2.pdf",
+   "corrige": "https://www.apmep.fr/IMG/pdf/Corrige_EDS_1_15_03_2021_DV.pdf",
+   "exercices": [
+    {
+     "n": "A",
+     "theme": "suites",
+     "chapitres": [
+      "suites-et-recurrence",
+      "limites-de-suites"
+     ]
+    },
+    {
+     "n": "B",
+     "theme": "fonctions",
+     "chapitres": [
+      "logarithme-neperien",
+      "derivation-et-convexite",
+      "limites-de-fonctions"
+     ]
+    }
+   ]
+  },
+  {
+   "annee": 2021,
+   "titre": "Sujet 2 15 mars 2021",
+   "sujet": "https://www.apmep.fr/IMG/pdf/ts_eds_2_15_mars_2021_dv_2.pdf",
+   "corrige": "https://www.apmep.fr/IMG/pdf/corrige_eds_2_15_03_2021_fh2.pdf",
+   "exercices": [
+    {
+     "n": "A",
+     "theme": "fonctions",
+     "chapitres": []
+    },
+    {
+     "n": "B",
+     "theme": "fonctions",
+     "chapitres": [
+      "logarithme-neperien",
+      "limites-de-fonctions"
+     ]
+    }
+   ]
+  },
+  {
+   "annee": 2021,
+   "titre": "Amérique du Nord mai 2021 (candidats libres)",
+   "sujet": "https://www.apmep.fr/IMG/pdf/Bac_spe_Amerique_Nord_mai_2021_DV_FH3-2.pdf",
+   "corrige": "https://www.apmep.fr/IMG/pdf/Corrige_S_AmeriqueNord_juin_2021_DV-2.pdf",
+   "exercices": [
+    {
+     "n": 1,
+     "theme": "probas",
+     "chapitres": []
+    },
+    {
+     "n": 2,
+     "theme": "suites",
+     "chapitres": [
+      "suites-et-recurrence",
+      "limites-de-suites"
+     ]
+    },
+    {
+     "n": 3,
+     "theme": "espace",
+     "chapitres": [
+      "geometrie-dans-l-espace"
+     ]
+    },
+    {
+     "n": "A",
+     "theme": "fonctions",
+     "chapitres": [
+      "derivation-et-convexite"
+     ]
+    },
+    {
+     "n": "B",
+     "theme": "fonctions",
+     "chapitres": [
+      "logarithme-neperien",
+      "derivation-et-convexite",
+      "limites-de-fonctions"
+     ]
+    }
+   ]
+  },
+  {
+   "annee": 2021,
+   "titre": "Polynésie 2 juin 2021 (candidats libres)",
+   "sujet": "https://www.apmep.fr/IMG/pdf/polynesie_2_2021_spe_dv_fh.pdf",
+   "corrige": "https://www.apmep.fr/IMG/pdf/Corrige__Polynesie_2_spe_juin_2021_DV_2-2.pdf",
+   "exercices": [
+    {
+     "n": 1,
+     "theme": "suites",
+     "chapitres": [
+      "suites-et-recurrence",
+      "limites-de-suites"
+     ]
+    },
+    {
+     "n": 2,
+     "theme": "probas",
+     "chapitres": []
+    },
+    {
+     "n": 3,
+     "theme": "espace",
+     "chapitres": [
+      "geometrie-dans-l-espace"
+     ]
+    },
+    {
+     "n": "A",
+     "theme": "fonctions",
+     "chapitres": [
+      "derivation-et-convexite",
+      "primitives-et-equations-differentielles",
+      "limites-de-fonctions"
+     ]
+    },
+    {
+     "n": "B",
+     "theme": "fonctions",
+     "chapitres": [
+      "logarithme-neperien"
+     ]
+    }
+   ]
+  },
+  {
+   "annee": 2021,
+   "titre": "Asie 7 juin 2021 (candidats libres)",
+   "sujet": "https://www.apmep.fr/IMG/pdf/Asie_spe_J1_7_06_2021_DV-2.pdf",
+   "corrige": "https://www.apmep.fr/IMG/pdf/Corrige_Asie_speJ1_7_06_2021_DV.pdf",
+   "exercices": [
+    {
+     "n": 1,
+     "theme": "suites",
+     "chapitres": [
+      "suites-et-recurrence",
+      "limites-de-suites"
+     ]
+    },
+    {
+     "n": 2,
+     "theme": "espace",
+     "chapitres": [
+      "geometrie-dans-l-espace"
+     ]
+    },
+    {
+     "n": 3,
+     "theme": "probas",
+     "chapitres": [
+      "loi-binomiale",
+      "denombrement"
+     ]
+    },
+    {
+     "n": "A",
+     "theme": "fonctions",
+     "chapitres": [
+      "logarithme-neperien",
+      "derivation-et-convexite",
+      "limites-de-fonctions"
+     ]
+    },
+    {
+     "n": "B",
+     "theme": "fonctions",
+     "chapitres": [
+      "primitives-et-equations-differentielles",
+      "limites-de-fonctions"
+     ]
+    }
+   ]
+  },
+  {
+   "annee": 2021,
+   "titre": "Asie 8 juin 2021 (candidats libres)",
+   "sujet": "https://www.apmep.fr/IMG/pdf/Asie_spe_J2_8_06_2021_DV-2.pdf",
+   "corrige": "https://www.apmep.fr/IMG/pdf/Corrige_Asie_spe_J2_8_06_2021_DV-3.pdf",
+   "exercices": [
+    {
+     "n": 1,
+     "theme": "fonctions",
+     "chapitres": [
+      "derivation-et-convexite",
+      "limites-de-fonctions"
+     ]
+    },
+    {
+     "n": 2,
+     "theme": "espace",
+     "chapitres": [
+      "geometrie-dans-l-espace"
+     ]
+    },
+    {
+     "n": 3,
+     "theme": "probas",
+     "chapitres": []
+    },
+    {
+     "n": "A",
+     "theme": "suites",
+     "chapitres": [
+      "limites-de-suites"
+     ]
+    },
+    {
+     "n": "B",
+     "theme": "suites",
+     "chapitres": [
+      "suites-et-recurrence",
+      "limites-de-suites"
+     ]
+    }
+   ]
+  },
+  {
+   "annee": 2021,
+   "titre": "Métropole 7 juin 2021 (candidats libres)",
+   "sujet": "https://www.apmep.fr/IMG/pdf/specialite_metropole_juin2021_jcs_1_.pdf",
+   "corrige": "https://www.apmep.fr/IMG/pdf/Corrige_spe_Metropole_7_06_2021_DV_2-2.pdf",
+   "exercices": [
+    {
+     "n": 1,
+     "theme": "fonctions",
+     "chapitres": [
+      "derivation-et-convexite",
+      "limites-de-fonctions"
+     ]
+    },
+    {
+     "n": 2,
+     "theme": "probas",
+     "chapitres": [
+      "loi-binomiale"
+     ]
+    },
+    {
+     "n": 3,
+     "theme": "suites",
+     "chapitres": [
+      "suites-et-recurrence",
+      "limites-de-suites"
+     ]
+    },
+    {
+     "n": "A",
+     "theme": "espace",
+     "chapitres": [
+      "geometrie-dans-l-espace"
+     ]
+    },
+    {
+     "n": "B",
+     "theme": "fonctions",
+     "chapitres": [
+      "derivation-et-convexite",
+      "primitives-et-equations-differentielles",
+      "limites-de-fonctions"
+     ]
+    }
+   ]
+  },
+  {
+   "annee": 2021,
+   "titre": "Métropole 8 juin 2021 (candidats libres)",
+   "sujet": "https://www.apmep.fr/IMG/pdf/Metropole_spe_sujet2_8_juin_2021_DV.pdf",
+   "corrige": "https://www.apmep.fr/IMG/pdf/corrige_spe_metropole_8_06_2021_dv_2.pdf",
+   "exercices": [
+    {
+     "n": 1,
+     "theme": "espace",
+     "chapitres": [
+      "geometrie-dans-l-espace"
+     ]
+    },
+    {
+     "n": 2,
+     "theme": "suites",
+     "chapitres": []
+    },
+    {
+     "n": 3,
+     "theme": "suites",
+     "chapitres": [
+      "suites-et-recurrence",
+      "limites-de-suites"
+     ]
+    },
+    {
+     "n": "A",
+     "theme": "fonctions",
+     "chapitres": [
+      "logarithme-neperien",
+      "limites-de-fonctions"
+     ]
+    },
+    {
+     "n": "B",
+     "theme": "fonctions",
+     "chapitres": [
+      "derivation-et-convexite",
+      "limites-de-fonctions"
+     ]
+    }
+   ]
+  },
+  {
+   "annee": 2021,
+   "titre": "Centres étrangers 9 juin 2021 (candidats libres)",
+   "sujet": "https://www.apmep.fr/IMG/pdf/centres_etrangers_1_spe_11_06_2021_dv_fh.pdf",
+   "corrige": "https://www.apmep.fr/IMG/pdf/Corrige_Centres_etrangers_1_spe_11_06_2021_FH-2.pdf",
+   "exercices": [
+    {
+     "n": 1,
+     "theme": "fonctions",
+     "chapitres": []
+    },
+    {
+     "n": 2,
+     "theme": "probas",
+     "chapitres": []
+    },
+    {
+     "n": 3,
+     "theme": "suites",
+     "chapitres": [
+      "suites-et-recurrence",
+      "limites-de-suites"
+     ]
+    },
+    {
+     "n": "A",
+     "theme": "espace",
+     "chapitres": [
+      "geometrie-dans-l-espace"
+     ]
+    },
+    {
+     "n": "B",
+     "theme": "fonctions",
+     "chapitres": [
+      "primitives-et-equations-differentielles"
+     ]
+    }
+   ]
+  },
+  {
+   "annee": 2021,
+   "titre": "Centres étrangers 10 juin 2021 (candidats libres)",
+   "sujet": "https://www.apmep.fr/IMG/pdf/centres_etrangers_spe_07_2021_dv.pdf",
+   "corrige": "https://www.apmep.fr/IMG/pdf/Corrige_Etranger_spe_2_juin_2021_DV-2.pdf",
+   "exercices": [
+    {
+     "n": 1,
+     "theme": "suites",
+     "chapitres": [
+      "limites-de-suites"
+     ]
+    },
+    {
+     "n": 2,
+     "theme": "suites",
+     "chapitres": [
+      "suites-et-recurrence",
+      "limites-de-suites"
+     ]
+    },
+    {
+     "n": 3,
+     "theme": "suites",
+     "chapitres": []
+    },
+    {
+     "n": "A",
+     "theme": "suites",
+     "chapitres": []
+    },
+    {
+     "n": "B",
+     "theme": "fonctions",
+     "chapitres": [
+      "primitives-et-equations-differentielles"
+     ]
+    }
+   ]
+  },
+  {
+   "annee": 2021,
+   "titre": "Métropole 13 septembre 2021 J1 (candidats libres)",
+   "sujet": "https://www.apmep.fr/IMG/pdf/Spe_13_Metropole_sept_2021_J1DV-2.pdf",
+   "corrige": "https://www.apmep.fr/IMG/pdf/corrige_spe_13_9_2021_j1_dv-2-2.pdf",
+   "exercices": [
+    {
+     "n": 1,
+     "theme": "suites",
+     "chapitres": [
+      "suites-et-recurrence",
+      "limites-de-suites"
+     ]
+    },
+    {
+     "n": "A",
+     "theme": "espace",
+     "chapitres": [
+      "geometrie-dans-l-espace"
+     ]
+    },
+    {
+     "n": "B",
+     "theme": "fonctions",
+     "chapitres": [
+      "logarithme-neperien",
+      "limites-de-fonctions"
+     ]
+    }
+   ]
+  },
+  {
+   "annee": 2021,
+   "titre": "Métropole 13 septembre 2021 J2 (candidats libres)",
+   "sujet": "https://www.apmep.fr/IMG/pdf/spe_13_metropole_septembre_2021_j2_dv.pdf",
+   "corrige": "https://www.apmep.fr/IMG/pdf/Corrige_spe_Metropole_13_09_2021_J2_DV-3-2.pdf",
+   "exercices": [
+    {
+     "n": 1,
+     "theme": "probas",
+     "chapitres": []
+    },
+    {
+     "n": 2,
+     "theme": "espace",
+     "chapitres": [
+      "geometrie-dans-l-espace"
+     ]
+    },
+    {
+     "n": 3,
+     "theme": "fonctions",
+     "chapitres": [
+      "limites-de-fonctions"
+     ]
+    },
+    {
+     "n": "A",
+     "theme": "suites",
+     "chapitres": [
+      "suites-et-recurrence",
+      "limites-de-suites"
+     ]
+    },
+    {
+     "n": "B",
+     "theme": "fonctions",
+     "chapitres": [
+      "logarithme-neperien",
+      "limites-de-fonctions"
+     ]
+    }
+   ]
+  },
+  {
+   "annee": 2022,
+   "titre": "Polynésie 4 mai 2022 sujet 1",
+   "sujet": "https://www.apmep.fr/IMG/pdf/spe_polynesie_1_4_mai_2022_dv_fh_2.pdf",
+   "corrige": "https://www.apmep.fr/IMG/pdf/Corrige_Polynesie_1_mai_2022_Lognonne_FH-2.pdf",
+   "exercices": [
+    {
+     "n": 1,
+     "theme": "fonctions",
+     "chapitres": [
+      "logarithme-neperien",
+      "derivation-et-convexite",
+      "primitives-et-equations-differentielles",
+      "limites-de-fonctions"
+     ]
+    },
+    {
+     "n": 2,
+     "theme": "probas",
+     "chapitres": []
+    },
+    {
+     "n": 3,
+     "theme": "suites",
+     "chapitres": [
+      "suites-et-recurrence",
+      "limites-de-suites"
+     ]
+    },
+    {
+     "n": 4,
+     "theme": "espace",
+     "chapitres": [
+      "geometrie-dans-l-espace"
+     ]
+    }
+   ]
+  },
+  {
+   "annee": 2022,
+   "titre": "Polynésie 5 mai 2022 sujet 2",
+   "sujet": "https://www.apmep.fr/IMG/pdf/spe_Polynesie_2_6_mai_2022_DV_2-2.pdf",
+   "corrige": "https://www.apmep.fr/IMG/pdf/corrige__spe_polynesie_2_5_mai_2022_fk.pdf",
+   "exercices": [
+    {
+     "n": 1,
+     "theme": "fonctions",
+     "chapitres": [
+      "logarithme-neperien",
+      "primitives-et-equations-differentielles",
+      "limites-de-fonctions"
+     ]
+    },
+    {
+     "n": 2,
+     "theme": "suites",
+     "chapitres": []
+    },
+    {
+     "n": 3,
+     "theme": "suites",
+     "chapitres": [
+      "suites-et-recurrence",
+      "limites-de-suites"
+     ]
+    },
+    {
+     "n": 4,
+     "theme": "espace",
+     "chapitres": [
+      "geometrie-dans-l-espace"
+     ]
+    }
+   ]
+  },
+  {
+   "annee": 2022,
+   "titre": "Métropole Antilles-Guyane 11 mai 2022 sujet 1",
+   "sujet": "https://www.apmep.fr/IMG/pdf/Spe_Metropole_1_11_mai_2022_DV-2.pdf",
+   "corrige": "https://www.apmep.fr/IMG/pdf/Corrige_Spe1_metropole_1_11_mai_2022_RR-3.pdf",
+   "exercices": [
+    {
+     "n": 1,
+     "theme": "suites",
+     "chapitres": [
+      "suites-et-recurrence",
+      "limites-de-suites"
+     ]
+    },
+    {
+     "n": 2,
+     "theme": "espace",
+     "chapitres": [
+      "geometrie-dans-l-espace"
+     ]
+    },
+    {
+     "n": 3,
+     "theme": "probas",
+     "chapitres": [
+      "loi-binomiale"
+     ]
+    },
+    {
+     "n": 4,
+     "theme": "fonctions",
+     "chapitres": [
+      "logarithme-neperien",
+      "derivation-et-convexite",
+      "primitives-et-equations-differentielles",
+      "limites-de-fonctions"
+     ]
+    }
+   ]
+  },
+  {
+   "annee": 2022,
+   "titre": "Métropole Antilles-Guyane 12 mai 2022 sujet 2",
+   "sujet": "https://www.apmep.fr/IMG/pdf/spe_metropole_12_mai_2022_dv.pdf",
+   "corrige": "https://www.apmep.fr/IMG/pdf/Corrige_spe_metropole_2_12_mai_2022_DV-3.pdf",
+   "exercices": [
+    {
+     "n": 1,
+     "theme": "suites",
+     "chapitres": []
+    },
+    {
+     "n": 2,
+     "theme": "suites",
+     "chapitres": [
+      "limites-de-suites"
+     ]
+    },
+    {
+     "n": 3,
+     "theme": "espace",
+     "chapitres": [
+      "geometrie-dans-l-espace"
+     ]
+    },
+    {
+     "n": 4,
+     "theme": "fonctions",
+     "chapitres": [
+      "limites-de-fonctions"
+     ]
+    }
+   ]
+  },
+  {
+   "annee": 2022,
+   "titre": "Centres étrangers 11 mai 2022 sujet 1",
+   "sujet": "https://www.apmep.fr/IMG/pdf/Spe_centres_etrangers_1_11_mai_2022_DV-2.pdf",
+   "corrige": "https://www.apmep.fr/IMG/pdf/Corrige_Etranger_spe_1_11__mai_2022_DV-3.pdf",
+   "exercices": [
+    {
+     "n": 1,
+     "theme": "fonctions",
+     "chapitres": [
+      "logarithme-neperien",
+      "derivation-et-convexite",
+      "primitives-et-equations-differentielles"
+     ]
+    },
+    {
+     "n": 2,
+     "theme": "espace",
+     "chapitres": [
+      "geometrie-dans-l-espace"
+     ]
+    },
+    {
+     "n": 3,
+     "theme": "suites",
+     "chapitres": [
+      "limites-de-suites"
+     ]
+    },
+    {
+     "n": 4,
+     "theme": "probas",
+     "chapitres": [
+      "loi-binomiale"
+     ]
+    }
+   ]
+  },
+  {
+   "annee": 2022,
+   "titre": "Centres étrangers 12 mai 2022 sujet 2",
+   "sujet": "https://www.apmep.fr/IMG/pdf/Spe_Etranger_2_12_mai_2022_DV-2.pdf",
+   "corrige": "https://www.apmep.fr/IMG/pdf/Corrige_Spe_Etranger_2_12_mai_2022_RR-2.pdf",
+   "exercices": [
+    {
+     "n": 1,
+     "theme": "fonctions",
+     "chapitres": [
+      "derivation-et-convexite",
+      "primitives-et-equations-differentielles"
+     ]
+    },
+    {
+     "n": 2,
+     "theme": "suites",
+     "chapitres": [
+      "suites-et-recurrence",
+      "limites-de-suites"
+     ]
+    },
+    {
+     "n": 3,
+     "theme": "espace",
+     "chapitres": [
+      "geometrie-dans-l-espace"
+     ]
+    },
+    {
+     "n": 4,
+     "theme": "probas",
+     "chapitres": []
+    }
+   ]
+  },
+  {
+   "annee": 2022,
+   "titre": "Asie 17 mai 2022 sujet 1",
+   "sujet": "https://www.apmep.fr/IMG/pdf/Asie_spe_17_mai_2022_J1_DV-2.pdf",
+   "corrige": "https://www.apmep.fr/IMG/pdf/Corrige_Asie_spe_17_mai_2022_DV-2.pdf",
+   "exercices": [
+    {
+     "n": 1,
+     "theme": "probas",
+     "chapitres": [
+      "loi-binomiale"
+     ]
+    },
+    {
+     "n": 2,
+     "theme": "suites",
+     "chapitres": [
+      "suites-et-recurrence",
+      "limites-de-suites"
+     ]
+    },
+    {
+     "n": 3,
+     "theme": "espace",
+     "chapitres": [
+      "geometrie-dans-l-espace"
+     ]
+    },
+    {
+     "n": 4,
+     "theme": "fonctions",
+     "chapitres": [
+      "logarithme-neperien",
+      "derivation-et-convexite",
+      "limites-de-fonctions"
+     ]
+    }
+   ]
+  },
+  {
+   "annee": 2022,
+   "titre": "Asie 18 mai 2022 sujet 2",
+   "sujet": "https://www.apmep.fr/IMG/pdf/asie_spe_18_mai_2022_j2_dv.pdf",
+   "corrige": "https://www.apmep.fr/IMG/pdf/Corrige_Asie_spe_18_mai_2022_DV_2-3.pdf",
+   "exercices": [
+    {
+     "n": 1,
+     "theme": "espace",
+     "chapitres": [
+      "geometrie-dans-l-espace"
+     ]
+    },
+    {
+     "n": 2,
+     "theme": "fonctions",
+     "chapitres": [
+      "logarithme-neperien",
+      "derivation-et-convexite",
+      "limites-de-fonctions"
+     ]
+    },
+    {
+     "n": 3,
+     "theme": "probas",
+     "chapitres": [
+      "loi-binomiale"
+     ]
+    },
+    {
+     "n": 4,
+     "theme": "suites",
+     "chapitres": [
+      "suites-et-recurrence",
+      "limites-de-suites"
+     ]
+    }
+   ]
+  },
+  {
+   "annee": 2022,
+   "titre": "Centres étrangers groupe 1 18 mai 2022 sujet 1",
+   "sujet": "https://www.apmep.fr/IMG/pdf/Madagascar_spe_18_mai_2022_DV-2.pdf",
+   "corrige": "https://www.apmep.fr/IMG/pdf/Corrige_Madagascar_J1_mai_2022_DV-2.pdf",
+   "exercices": [
+    {
+     "n": 1,
+     "theme": "suites",
+     "chapitres": []
+    },
+    {
+     "n": 2,
+     "theme": "fonctions",
+     "chapitres": [
+      "logarithme-neperien",
+      "derivation-et-convexite",
+      "limites-de-fonctions"
+     ]
+    },
+    {
+     "n": 3,
+     "theme": "fonctions",
+     "chapitres": [
+      "logarithme-neperien",
+      "limites-de-fonctions"
+     ]
+    },
+    {
+     "n": 4,
+     "theme": "espace",
+     "chapitres": [
+      "geometrie-dans-l-espace"
+     ]
+    }
+   ]
+  },
+  {
+   "annee": 2022,
+   "titre": "Centres étrangers groupe 1 19 mai 2022 sujet 2",
+   "sujet": "https://www.apmep.fr/IMG/pdf/Madagascar_spe_19_mai_2022_DV-2.pdf",
+   "corrige": "https://www.apmep.fr/IMG/pdf/Corrige_Spe_Madagascar_spe_19_mai_2022_RR-2.pdf",
+   "exercices": [
+    {
+     "n": 1,
+     "theme": "probas",
+     "chapitres": [
+      "loi-binomiale"
+     ]
+    },
+    {
+     "n": 2,
+     "theme": "espace",
+     "chapitres": [
+      "geometrie-dans-l-espace"
+     ]
+    },
+    {
+     "n": 3,
+     "theme": "suites",
+     "chapitres": []
+    },
+    {
+     "n": 4,
+     "theme": "fonctions",
+     "chapitres": [
+      "logarithme-neperien",
+      "limites-de-fonctions"
+     ]
+    }
+   ]
+  },
+  {
+   "annee": 2022,
+   "titre": "Amérique du Nord 18 mai 2022 sujet 1",
+   "sujet": "https://www.apmep.fr/IMG/pdf/amerique_nord_spe_18_mai_2022_dv.pdf",
+   "corrige": "https://www.apmep.fr/IMG/pdf/Corrige_Spe1_Amerique_Nord_1_18_mai_2022_RR-2.pdf",
+   "exercices": [
+    {
+     "n": 1,
+     "theme": "probas",
+     "chapitres": []
+    },
+    {
+     "n": 2,
+     "theme": "suites",
+     "chapitres": [
+      "suites-et-recurrence",
+      "limites-de-suites"
+     ]
+    },
+    {
+     "n": 3,
+     "theme": "espace",
+     "chapitres": [
+      "geometrie-dans-l-espace"
+     ]
+    },
+    {
+     "n": 4,
+     "theme": "fonctions",
+     "chapitres": [
+      "derivation-et-convexite"
+     ]
+    }
+   ]
+  },
+  {
+   "annee": 2022,
+   "titre": "Amérique du Nord 19 mai 2022 sujet 2",
+   "sujet": "https://www.apmep.fr/IMG/pdf/Amerique_Nord_spe_19_mai_2022_DV-2.pdf",
+   "corrige": "https://www.apmep.fr/IMG/pdf/Corrige_Spe_Amerique_Nord_21_19_mai_2022_RR-2.pdf",
+   "exercices": [
+    {
+     "n": 1,
+     "theme": "probas",
+     "chapitres": []
+    },
+    {
+     "n": 2,
+     "theme": "fonctions",
+     "chapitres": [
+      "derivation-et-convexite"
+     ]
+    },
+    {
+     "n": 3,
+     "theme": "espace",
+     "chapitres": [
+      "geometrie-dans-l-espace"
+     ]
+    },
+    {
+     "n": 4,
+     "theme": "fonctions",
+     "chapitres": [
+      "logarithme-neperien"
+     ]
+    }
+   ]
+  },
+  {
+   "annee": 2022,
+   "titre": "Polynésie 30 août 2022 sujet 1",
+   "sujet": "https://www.apmep.fr/IMG/pdf/Polynesie_spe_J1_sept_2022_DV.pdf",
+   "corrige": "https://www.apmep.fr/IMG/pdf/Corrige_Polynesie_spe_J1_sept_2022_FH-2.pdf",
+   "exercices": [
+    {
+     "n": 1,
+     "theme": "suites",
+     "chapitres": []
+    },
+    {
+     "n": 2,
+     "theme": "suites",
+     "chapitres": [
+      "suites-et-recurrence",
+      "limites-de-suites"
+     ]
+    },
+    {
+     "n": 3,
+     "theme": "fonctions",
+     "chapitres": [
+      "logarithme-neperien",
+      "derivation-et-convexite",
+      "primitives-et-equations-differentielles",
+      "limites-de-fonctions"
+     ]
+    },
+    {
+     "n": 4,
+     "theme": "espace",
+     "chapitres": [
+      "geometrie-dans-l-espace"
+     ]
+    }
+   ]
+  },
+  {
+   "annee": 2022,
+   "titre": "Métropole, Antilles-Guyane 8 septembre 2022 sujet 1",
+   "sujet": "https://www.apmep.fr/IMG/pdf/Bac_spe_Metropole_J1_sept_2022_DV_2-2.pdf",
+   "corrige": "https://www.apmep.fr/IMG/pdf/Corrige_spe_Metropole_J1_sept_2022_DV_2-2.pdf",
+   "exercices": [
+    {
+     "n": 1,
+     "theme": "suites",
+     "chapitres": [
+      "limites-de-suites"
+     ]
+    },
+    {
+     "n": 2,
+     "theme": "probas",
+     "chapitres": []
+    },
+    {
+     "n": 3,
+     "theme": "suites",
+     "chapitres": [
+      "suites-et-recurrence",
+      "limites-de-suites"
+     ]
+    },
+    {
+     "n": 4,
+     "theme": "espace",
+     "chapitres": [
+      "geometrie-dans-l-espace"
+     ]
+    }
+   ]
+  },
+  {
+   "annee": 2022,
+   "titre": "Métropole, Antilles-Guyane 9 septembre 2022 sujet 2",
+   "sujet": "https://www.apmep.fr/IMG/pdf/Bac_spe_Metropole_J2_sept_2022_DV_2-3.pdf",
+   "corrige": "https://www.apmep.fr/IMG/pdf/Corrige_Bac_spe_Metropole_J2_sept_2022_FH-2.pdf",
+   "exercices": [
+    {
+     "n": 1,
+     "theme": "probas",
+     "chapitres": [
+      "loi-binomiale"
+     ]
+    },
+    {
+     "n": 2,
+     "theme": "fonctions",
+     "chapitres": [
+      "derivation-et-convexite",
+      "primitives-et-equations-differentielles"
+     ]
+    },
+    {
+     "n": 3,
+     "theme": "suites",
+     "chapitres": [
+      "suites-et-recurrence",
+      "limites-de-suites"
+     ]
+    },
+    {
+     "n": 4,
+     "theme": "espace",
+     "chapitres": [
+      "geometrie-dans-l-espace"
+     ]
+    }
+   ]
+  },
+  {
+   "annee": 2022,
+   "titre": "Amérique du Sud 26 septembre 2022 sujet 1",
+   "sujet": "https://www.apmep.fr/IMG/pdf/spe_amerique_sud_26_sept_2022_dv.pdf",
+   "corrige": "https://www.apmep.fr/IMG/pdf/corrige_spe_amerique_sud_26_sept_2022_fh.pdf",
+   "exercices": [
+    {
+     "n": 1,
+     "theme": "probas",
+     "chapitres": []
+    },
+    {
+     "n": 2,
+     "theme": "suites",
+     "chapitres": [
+      "suites-et-recurrence",
+      "limites-de-suites"
+     ]
+    },
+    {
+     "n": 3,
+     "theme": "fonctions",
+     "chapitres": [
+      "logarithme-neperien",
+      "derivation-et-convexite"
+     ]
+    },
+    {
+     "n": 4,
+     "theme": "espace",
+     "chapitres": [
+      "geometrie-dans-l-espace"
+     ]
+    }
+   ]
+  },
+  {
+   "annee": 2022,
+   "titre": "Amérique du Sud 27 septembre 2022 sujet 2",
+   "sujet": "https://www.apmep.fr/IMG/pdf/spe_amerique_sud_27_sept_2022_dv.pdf",
+   "corrige": "https://www.apmep.fr/IMG/pdf/Corrige_spe_Am-_SudJ2_sept_2022_DV_2-2.pdf",
+   "exercices": [
+    {
+     "n": 1,
+     "theme": "probas",
+     "chapitres": [
+      "loi-binomiale"
+     ]
+    },
+    {
+     "n": 2,
+     "theme": "fonctions",
+     "chapitres": [
+      "logarithme-neperien",
+      "derivation-et-convexite",
+      "limites-de-fonctions"
+     ]
+    },
+    {
+     "n": 3,
+     "theme": "suites",
+     "chapitres": [
+      "suites-et-recurrence",
+      "limites-de-suites"
+     ]
+    },
+    {
+     "n": 4,
+     "theme": "espace",
+     "chapitres": [
+      "geometrie-dans-l-espace"
+     ]
+    }
+   ]
+  },
+  {
+   "annee": 2022,
+   "titre": "Nouvelle-Calédonie 26 octobre 2022 sujet 1",
+   "sujet": "https://www.apmep.fr/IMG/pdf/caledonie_spe_26_10_2022J1_dv.pdf",
+   "corrige": "https://www.apmep.fr/IMG/pdf/corrige_J1_caledonie_26_10_2022_dv.pdf",
+   "exercices": [
+    {
+     "n": 1,
+     "theme": "fonctions",
+     "chapitres": [
+      "logarithme-neperien",
+      "derivation-et-convexite"
+     ]
+    },
+    {
+     "n": 2,
+     "theme": "suites",
+     "chapitres": [
+      "suites-et-recurrence",
+      "limites-de-suites"
+     ]
+    },
+    {
+     "n": 3,
+     "theme": "espace",
+     "chapitres": [
+      "geometrie-dans-l-espace"
+     ]
+    },
+    {
+     "n": 4,
+     "theme": "suites",
+     "chapitres": []
+    }
+   ]
+  },
+  {
+   "annee": 2022,
+   "titre": "Nouvelle-Calédonie 27 octobre 2022 sujet 2",
+   "sujet": "https://www.apmep.fr/IMG/pdf/caledonie_spe_27_10_2022_J2_dv.pdf",
+   "corrige": "https://www.apmep.fr/IMG/pdf/corrige_caledonie_j2_27_10_2022_dv.pdf",
+   "exercices": [
+    {
+     "n": 1,
+     "theme": "probas",
+     "chapitres": [
+      "loi-binomiale"
+     ]
+    },
+    {
+     "n": 2,
+     "theme": "fonctions",
+     "chapitres": [
+      "logarithme-neperien",
+      "derivation-et-convexite",
+      "limites-de-fonctions"
+     ]
+    },
+    {
+     "n": 3,
+     "theme": "espace",
+     "chapitres": [
+      "geometrie-dans-l-espace"
+     ]
+    },
+    {
+     "n": 4,
+     "theme": "suites",
+     "chapitres": [
+      "limites-de-suites"
+     ]
+    }
+   ]
+  },
+  {
+   "annee": 2023,
+   "titre": "Centres étrangers groupe I sujet 1 13 mars 2023",
+   "sujet": "https://www.apmep.fr/IMG/pdf/Bac_spe_Madagascar_DV_13_mars_2023_2.pdf",
+   "corrige": "https://www.apmep.fr/IMG/pdf/Corrige_Etranger_spe_1_13_mars_2023_FK.pdf",
+   "exercices": [
+    {
+     "n": 1,
+     "theme": "fonctions",
+     "chapitres": [
+      "logarithme-neperien",
+      "primitives-et-equations-differentielles"
+     ]
+    },
+    {
+     "n": 2,
+     "theme": "suites",
+     "chapitres": [
+      "suites-et-recurrence",
+      "limites-de-suites"
+     ]
+    },
+    {
+     "n": 3,
+     "theme": "espace",
+     "chapitres": [
+      "geometrie-dans-l-espace"
+     ]
+    },
+    {
+     "n": 4,
+     "theme": "suites",
+     "chapitres": []
+    }
+   ]
+  },
+  {
+   "annee": 2023,
+   "titre": "Centres étrangers groupe I sujet 2 14 mars 2023",
+   "sujet": "https://www.apmep.fr/IMG/pdf/Bac_spe_DV_madagascar_J2_14_mars_2023.pdf",
+   "corrige": "https://www.apmep.fr/IMG/pdf/Corrige_Etranger_spe_2_14_mars_2023_VT.pdf",
+   "exercices": [
+    {
+     "n": 1,
+     "theme": "fonctions",
+     "chapitres": [
+      "derivation-et-convexite",
+      "primitives-et-equations-differentielles"
+     ]
+    },
+    {
+     "n": 2,
+     "theme": "suites",
+     "chapitres": [
+      "suites-et-recurrence",
+      "limites-de-suites"
+     ]
+    },
+    {
+     "n": 3,
+     "theme": "espace",
+     "chapitres": [
+      "geometrie-dans-l-espace"
+     ]
+    },
+    {
+     "n": 4,
+     "theme": "suites",
+     "chapitres": []
+    }
+   ]
+  },
+  {
+   "annee": 2023,
+   "titre": "Polynésie sujet 1 13 mars 2023",
+   "sujet": "https://www.apmep.fr/IMG/pdf/Terminale_spe_Polynesie_DV_3_mars_2023.pdf",
+   "corrige": "https://www.apmep.fr/IMG/pdf/Corrige__Polynesie_13_mars_2023_DV.pdf",
+   "exercices": [
+    {
+     "n": 1,
+     "theme": "probas",
+     "chapitres": []
+    },
+    {
+     "n": 2,
+     "theme": "espace",
+     "chapitres": [
+      "geometrie-dans-l-espace"
+     ]
+    },
+    {
+     "n": 3,
+     "theme": "fonctions",
+     "chapitres": [
+      "logarithme-neperien",
+      "derivation-et-convexite",
+      "primitives-et-equations-differentielles"
+     ]
+    },
+    {
+     "n": 4,
+     "theme": "suites",
+     "chapitres": [
+      "suites-et-recurrence",
+      "limites-de-suites"
+     ]
+    }
+   ]
+  },
+  {
+   "annee": 2023,
+   "titre": "Polynésie sujet 2 14 mars 2023",
+   "sujet": "https://www.apmep.fr/IMG/pdf/Terminale_spe_Polynesie_J2_14_mars_2023_DV.pdf",
+   "corrige": "https://www.apmep.fr/IMG/pdf/Corrige_Polyne_sie_spe_2_14_mars_2023_VT.pdf",
+   "exercices": [
+    {
+     "n": 1,
+     "theme": "suites",
+     "chapitres": [
+      "limites-de-suites"
+     ]
+    },
+    {
+     "n": 2,
+     "theme": "espace",
+     "chapitres": [
+      "geometrie-dans-l-espace"
+     ]
+    },
+    {
+     "n": 3,
+     "theme": "fonctions",
+     "chapitres": [
+      "derivation-et-convexite",
+      "limites-de-fonctions"
+     ]
+    },
+    {
+     "n": 4,
+     "theme": "fonctions",
+     "chapitres": [
+      "logarithme-neperien",
+      "derivation-et-convexite"
+     ]
+    }
+   ]
+  },
+  {
+   "annee": 2023,
+   "titre": "Métropole, Antilles-Guyane sujet 1 20 mars 2023",
+   "sujet": "https://www.apmep.fr/IMG/pdf/Metropole_spe_J1_20_mars_2023_DV.pdf",
+   "corrige": "https://www.apmep.fr/IMG/pdf/Corrige_Metropole_spe_J1_20_mars_2023_FH_2.pdf",
+   "exercices": [
+    {
+     "n": 1,
+     "theme": "probas",
+     "chapitres": [
+      "loi-binomiale"
+     ]
+    },
+    {
+     "n": 2,
+     "theme": "fonctions",
+     "chapitres": [
+      "logarithme-neperien",
+      "limites-de-fonctions"
+     ]
+    },
+    {
+     "n": 3,
+     "theme": "suites",
+     "chapitres": [
+      "suites-et-recurrence"
+     ]
+    },
+    {
+     "n": 4,
+     "theme": "espace",
+     "chapitres": [
+      "geometrie-dans-l-espace"
+     ]
+    }
+   ]
+  },
+  {
+   "annee": 2023,
+   "titre": "Métropole, Antilles-Guyane sujet 2 21 mars 2023",
+   "sujet": "https://www.apmep.fr/IMG/pdf/Metropole_J2_21_mars_2023_DV.pdf",
+   "corrige": "https://www.apmep.fr/IMG/pdf/Corrige_Metropole_J2_21_mars_2023_FH_2.pdf",
+   "exercices": [
+    {
+     "n": 1,
+     "theme": "probas",
+     "chapitres": []
+    },
+    {
+     "n": 2,
+     "theme": "suites",
+     "chapitres": [
+      "suites-et-recurrence",
+      "limites-de-suites"
+     ]
+    },
+    {
+     "n": 3,
+     "theme": "espace",
+     "chapitres": [
+      "geometrie-dans-l-espace"
+     ]
+    },
+    {
+     "n": 4,
+     "theme": "fonctions",
+     "chapitres": [
+      "logarithme-neperien",
+      "derivation-et-convexite",
+      "limites-de-fonctions"
+     ]
+    }
+   ]
+  },
+  {
+   "annee": 2023,
+   "titre": "Centres étrangers groupe 2 sujet 1 21 mars 2023",
+   "sujet": "https://www.apmep.fr/IMG/pdf/Etranger_EuropeJ1_21_mars_2023_DV.pdf",
+   "corrige": "https://www.apmep.fr/IMG/pdf/Corrige_Europe_J1_21_mars_2023_DV.pdf",
+   "exercices": [
+    {
+     "n": 1,
+     "theme": "fonctions",
+     "chapitres": [
+      "logarithme-neperien",
+      "limites-de-fonctions"
+     ]
+    },
+    {
+     "n": 2,
+     "theme": "probas",
+     "chapitres": []
+    },
+    {
+     "n": 3,
+     "theme": "suites",
+     "chapitres": [
+      "limites-de-suites"
+     ]
+    },
+    {
+     "n": 4,
+     "theme": "espace",
+     "chapitres": [
+      "geometrie-dans-l-espace"
+     ]
+    }
+   ]
+  },
+  {
+   "annee": 2023,
+   "titre": "Centres étrangers groupe 2 sujet 2 22 mars 2023",
+   "sujet": "https://www.apmep.fr/IMG/pdf/Etranger_Europe_J2_22_mars_2023-2.pdf",
+   "corrige": "https://www.apmep.fr/IMG/pdf/Corrige_spe_Europe_22_mars_2023_DV-2.pdf",
+   "exercices": [
+    {
+     "n": 1,
+     "theme": "fonctions",
+     "chapitres": [
+      "derivation-et-convexite",
+      "limites-de-fonctions"
+     ]
+    },
+    {
+     "n": 2,
+     "theme": "suites",
+     "chapitres": [
+      "suites-et-recurrence",
+      "limites-de-suites"
+     ]
+    },
+    {
+     "n": 3,
+     "theme": "espace",
+     "chapitres": [
+      "geometrie-dans-l-espace"
+     ]
+    },
+    {
+     "n": 4,
+     "theme": "probas",
+     "chapitres": []
+    }
+   ]
+  },
+  {
+   "annee": 2023,
+   "titre": "Asie sujet 1 23 mars 2023",
+   "sujet": "https://www.apmep.fr/IMG/pdf/Asie_spe_J1_23_mars_2023_DV.pdf",
+   "corrige": "https://www.apmep.fr/IMG/pdf/Corrige__Asie_spe_J1_23_mars_2023_FK.pdf",
+   "exercices": [
+    {
+     "n": 1,
+     "theme": "suites",
+     "chapitres": [
+      "suites-et-recurrence",
+      "limites-de-suites"
+     ]
+    },
+    {
+     "n": 2,
+     "theme": "espace",
+     "chapitres": [
+      "geometrie-dans-l-espace"
+     ]
+    },
+    {
+     "n": 3,
+     "theme": "fonctions",
+     "chapitres": [
+      "logarithme-neperien",
+      "limites-de-fonctions"
+     ]
+    },
+    {
+     "n": 4,
+     "theme": "probas",
+     "chapitres": []
+    }
+   ]
+  },
+  {
+   "annee": 2023,
+   "titre": "Asie sujet 2 24 mars 2023",
+   "sujet": "https://www.apmep.fr/IMG/pdf/Bac_spe_Asie_J2_24_mars_2023_DV.pdf",
+   "corrige": "https://www.apmep.fr/IMG/pdf/Corrige_Asie_J2_24_mars_2023_DV.pdf",
+   "exercices": [
+    {
+     "n": 1,
+     "theme": "espace",
+     "chapitres": [
+      "geometrie-dans-l-espace"
+     ]
+    },
+    {
+     "n": 2,
+     "theme": "fonctions",
+     "chapitres": [
+      "logarithme-neperien",
+      "limites-de-fonctions"
+     ]
+    },
+    {
+     "n": 3,
+     "theme": "suites",
+     "chapitres": [
+      "suites-et-recurrence",
+      "limites-de-suites"
+     ]
+    },
+    {
+     "n": 4,
+     "theme": "suites",
+     "chapitres": []
+    }
+   ]
+  },
+  {
+   "annee": 2023,
+   "titre": "Amérique du Nord sujet 1 27 mars 2023",
+   "sujet": "https://www.apmep.fr/IMG/pdf/Bac_spe_Ame_rique_N_J1_27_mars.pdf",
+   "corrige": "https://www.apmep.fr/IMG/pdf/Corrige_Amerique_N_J1_27_mars_FK.pdf",
+   "exercices": [
+    {
+     "n": 1,
+     "theme": "probas",
+     "chapitres": [
+      "loi-binomiale"
+     ]
+    },
+    {
+     "n": 2,
+     "theme": "fonctions",
+     "chapitres": [
+      "logarithme-neperien",
+      "derivation-et-convexite",
+      "limites-de-fonctions"
+     ]
+    },
+    {
+     "n": 3,
+     "theme": "espace",
+     "chapitres": [
+      "geometrie-dans-l-espace"
+     ]
+    },
+    {
+     "n": 4,
+     "theme": "suites",
+     "chapitres": [
+      "suites-et-recurrence",
+      "limites-de-suites"
+     ]
+    }
+   ]
+  },
+  {
+   "annee": 2023,
+   "titre": "La Réunion sujet 1 28 mars 2023",
+   "sujet": "https://www.apmep.fr/IMG/pdf/La_Reunion_spe_J1_28_mars_2023_DV.pdf",
+   "corrige": "https://www.apmep.fr/IMG/pdf/Corrige_La_Reunion_spe_J1_28_mars_2023_FH_2.pdf",
+   "exercices": [
+    {
+     "n": 1,
+     "theme": "probas",
+     "chapitres": [
+      "loi-binomiale"
+     ]
+    },
+    {
+     "n": 2,
+     "theme": "fonctions",
+     "chapitres": [
+      "logarithme-neperien",
+      "derivation-et-convexite",
+      "primitives-et-equations-differentielles",
+      "limites-de-fonctions"
+     ]
+    },
+    {
+     "n": 3,
+     "theme": "suites",
+     "chapitres": [
+      "suites-et-recurrence",
+      "limites-de-suites"
+     ]
+    },
+    {
+     "n": 4,
+     "theme": "espace",
+     "chapitres": [
+      "geometrie-dans-l-espace"
+     ]
+    }
+   ]
+  },
+  {
+   "annee": 2023,
+   "titre": "Amérique du Nord sujet 2 28 mars 2023",
+   "sujet": "https://www.apmep.fr/IMG/pdf/Bac_spe_Amerique_Nord_J2_DV_28_mars_2023.pdf",
+   "corrige": "https://www.apmep.fr/IMG/pdf/Corrige_Bac_spe_Amerique_Nord_J2_28_mars_2023_FH.pdf",
+   "exercices": [
+    {
+     "n": 1,
+     "theme": "fonctions",
+     "chapitres": [
+      "derivation-et-convexite",
+      "limites-de-fonctions"
+     ]
+    },
+    {
+     "n": 2,
+     "theme": "suites",
+     "chapitres": [
+      "suites-et-recurrence",
+      "limites-de-suites"
+     ]
+    },
+    {
+     "n": 3,
+     "theme": "espace",
+     "chapitres": [
+      "geometrie-dans-l-espace"
+     ]
+    },
+    {
+     "n": 4,
+     "theme": "suites",
+     "chapitres": [
+      "limites-de-suites"
+     ]
+    }
+   ]
+  },
+  {
+   "annee": 2023,
+   "titre": "La Réunion sujet 2 29 mars 2023",
+   "sujet": "https://www.apmep.fr/IMG/pdf/La_Reunion_spe_J2_DV_29_mars_2023.pdf",
+   "corrige": "https://www.apmep.fr/IMG/pdf/Corrige_spe_La_Reunion_J2_29_mars_2023_DV.pdf",
+   "exercices": [
+    {
+     "n": 1,
+     "theme": "suites",
+     "chapitres": []
+    },
+    {
+     "n": 2,
+     "theme": "suites",
+     "chapitres": [
+      "suites-et-recurrence",
+      "limites-de-suites"
+     ]
+    },
+    {
+     "n": 3,
+     "theme": "espace",
+     "chapitres": [
+      "geometrie-dans-l-espace"
+     ]
+    },
+    {
+     "n": 4,
+     "theme": "fonctions",
+     "chapitres": [
+      "logarithme-neperien",
+      "derivation-et-convexite",
+      "limites-de-fonctions"
+     ]
+    }
+   ]
+  },
+  {
+   "annee": 2023,
+   "titre": "Nouvelle-Calédonie sujet 1 28 août 2023",
+   "sujet": "https://www.apmep.fr/IMG/pdf/Caledonie_J1_28_08_23_DV_2.pdf",
+   "corrige": "https://www.apmep.fr/IMG/pdf/Corrige_EDS-2023-NC_sujet1_SD.pdf",
+   "exercices": [
+    {
+     "n": 1,
+     "theme": "probas",
+     "chapitres": [
+      "loi-binomiale"
+     ]
+    },
+    {
+     "n": 2,
+     "theme": "suites",
+     "chapitres": [
+      "suites-et-recurrence",
+      "limites-de-suites"
+     ]
+    },
+    {
+     "n": 3,
+     "theme": "espace",
+     "chapitres": [
+      "geometrie-dans-l-espace"
+     ]
+    },
+    {
+     "n": 4,
+     "theme": "fonctions",
+     "chapitres": [
+      "logarithme-neperien",
+      "limites-de-fonctions"
+     ]
+    }
+   ]
+  },
+  {
+   "annee": 2023,
+   "titre": "Nouvelle-Calédonie sujet 2 29 août 2023",
+   "sujet": "https://www.apmep.fr/IMG/pdf/Caledonie_spe_J2_29_08_23_DV.pdf",
+   "corrige": "https://www.apmep.fr/IMG/pdf/Corrige_Caledonie_spe_J2_29_08_23_FH.pdf",
+   "exercices": [
+    {
+     "n": 1,
+     "theme": "espace",
+     "chapitres": [
+      "geometrie-dans-l-espace"
+     ]
+    },
+    {
+     "n": 2,
+     "theme": "fonctions",
+     "chapitres": [
+      "derivation-et-convexite",
+      "limites-de-fonctions"
+     ]
+    },
+    {
+     "n": 3,
+     "theme": "suites",
+     "chapitres": [
+      "suites-et-recurrence",
+      "limites-de-suites"
+     ]
+    },
+    {
+     "n": 4,
+     "theme": "probas",
+     "chapitres": []
+    }
+   ]
+  },
+  {
+   "annee": 2023,
+   "titre": "Métropole, Antilles-Guyane sujet 1 11 septembre 2023",
+   "sujet": "https://www.apmep.fr/IMG/pdf/Spe_J1_11_9_2023_Metropole_DV.pdf",
+   "corrige": "https://www.apmep.fr/IMG/pdf/Corrige_J1_spe_11_sept_2023_DV.pdf",
+   "exercices": [
+    {
+     "n": 1,
+     "theme": "suites",
+     "chapitres": [
+      "limites-de-suites"
+     ]
+    },
+    {
+     "n": 2,
+     "theme": "espace",
+     "chapitres": [
+      "geometrie-dans-l-espace"
+     ]
+    },
+    {
+     "n": 3,
+     "theme": "probas",
+     "chapitres": []
+    },
+    {
+     "n": 4,
+     "theme": "fonctions",
+     "chapitres": [
+      "logarithme-neperien",
+      "derivation-et-convexite",
+      "limites-de-fonctions"
+     ]
+    }
+   ]
+  },
+  {
+   "annee": 2023,
+   "titre": "Métropole, Antilles-Guyane sujet 2 12 septembre 2023",
+   "sujet": "https://www.apmep.fr/IMG/pdf/Bac_Spe_Metropole_Reunion_FK_12_septembre_2023.pdf",
+   "corrige": "https://www.apmep.fr/IMG/pdf/Corr_Spe_Metropole_Reunion_12_sept_23_FH.pdf",
+   "exercices": [
+    {
+     "n": 1,
+     "theme": "suites",
+     "chapitres": []
+    },
+    {
+     "n": 2,
+     "theme": "fonctions",
+     "chapitres": [
+      "logarithme-neperien",
+      "derivation-et-convexite",
+      "limites-de-fonctions"
+     ]
+    },
+    {
+     "n": 3,
+     "theme": "suites",
+     "chapitres": [
+      "suites-et-recurrence",
+      "limites-de-suites"
+     ]
+    },
+    {
+     "n": 4,
+     "theme": "espace",
+     "chapitres": [
+      "geometrie-dans-l-espace"
+     ]
+    }
+   ]
+  },
+  {
+   "annee": 2023,
+   "titre": "Polynésie sujet 1 septembre 2023",
+   "sujet": "https://www.apmep.fr/IMG/pdf/Spe_Polynesie_sept_2023.pdf",
+   "corrige": "https://www.apmep.fr/IMG/pdf/Corrige_Spe_Polynesie_sept_2023_FH.pdf",
+   "exercices": [
+    {
+     "n": 1,
+     "theme": "suites",
+     "chapitres": []
+    },
+    {
+     "n": 2,
+     "theme": "fonctions",
+     "chapitres": [
+      "derivation-et-convexite",
+      "limites-de-fonctions"
+     ]
+    },
+    {
+     "n": 3,
+     "theme": "suites",
+     "chapitres": [
+      "suites-et-recurrence",
+      "limites-de-suites"
+     ]
+    },
+    {
+     "n": 4,
+     "theme": "espace",
+     "chapitres": [
+      "geometrie-dans-l-espace"
+     ]
+    }
+   ]
+  },
+  {
+   "annee": 2023,
+   "titre": "Amérique du Sud sujet 1 26 septembre 2023",
+   "sujet": "https://www.apmep.fr/IMG/pdf/Spe_J1_Ameri_Sud_26_9_2023_DV_2.pdf",
+   "corrige": "https://www.apmep.fr/IMG/pdf/Corrige_J1_Am_Sud_26_9_2023_DV.pdf",
+   "exercices": [
+    {
+     "n": 1,
+     "theme": "fonctions",
+     "chapitres": [
+      "logarithme-neperien"
+     ]
+    },
+    {
+     "n": 2,
+     "theme": "probas",
+     "chapitres": []
+    },
+    {
+     "n": 3,
+     "theme": "espace",
+     "chapitres": [
+      "geometrie-dans-l-espace"
+     ]
+    },
+    {
+     "n": 4,
+     "theme": "suites",
+     "chapitres": [
+      "suites-et-recurrence",
+      "limites-de-suites"
+     ]
+    }
+   ]
+  },
+  {
+   "annee": 2023,
+   "titre": "Amérique du Sud sujet 2 27 septembre 2023",
+   "sujet": "https://www.apmep.fr/IMG/pdf/Spe_J2_Am_du_Sud_27_9_2023_DV_2.pdf",
+   "corrige": "https://www.apmep.fr/IMG/pdf/Corr_Spe_J2_Am_du_Sud_27_9_2023_DV_3.pdf",
+   "exercices": [
+    {
+     "n": 1,
+     "theme": "probas",
+     "chapitres": [
+      "loi-binomiale"
+     ]
+    },
+    {
+     "n": 2,
+     "theme": "espace",
+     "chapitres": [
+      "geometrie-dans-l-espace"
+     ]
+    },
+    {
+     "n": 3,
+     "theme": "suites",
+     "chapitres": [
+      "suites-et-recurrence",
+      "limites-de-suites"
+     ]
+    },
+    {
+     "n": 4,
+     "theme": "fonctions",
+     "chapitres": [
+      "logarithme-neperien",
+      "limites-de-fonctions"
+     ]
+    }
+   ]
+  },
+  {
+   "annee": 2024,
+   "titre": "Sujet 0 - 2024",
+   "sujet": "https://www.apmep.fr/IMG/pdf/Exercices_0_2024_FK_2.pdf",
+   "corrige": "https://www.apmep.fr/IMG/pdf/Corrige_Exercices_0_2024_FH4-2.pdf",
+   "exercices": [
+    {
+     "n": 1,
+     "theme": "fonctions",
+     "chapitres": [
+      "primitives-et-equations-differentielles"
+     ]
+    },
+    {
+     "n": 2,
+     "theme": "fonctions",
+     "chapitres": [
+      "primitives-et-equations-differentielles",
+      "limites-de-fonctions"
+     ]
+    },
+    {
+     "n": 3,
+     "theme": "probas",
+     "chapitres": [
+      "loi-binomiale",
+      "loi-des-grands-nombres"
+     ]
+    },
+    {
+     "n": 4,
+     "theme": "espace",
+     "chapitres": [
+      "geometrie-dans-l-espace"
+     ]
+    },
+    {
+     "n": 5,
+     "theme": "fonctions",
+     "chapitres": [
+      "derivation-et-convexite",
+      "fonctions-trigonometriques"
+     ]
+    },
+    {
+     "n": 6,
+     "theme": "suites",
+     "chapitres": []
+    },
+    {
+     "n": 7,
+     "theme": "fonctions",
+     "chapitres": [
+      "logarithme-neperien"
+     ]
+    },
+    {
+     "n": 8,
+     "theme": "suites",
+     "chapitres": []
+    }
+   ]
+  },
+  {
+   "annee": 2024,
+   "titre": "Amérique du Nord jour 1 21 mai 2024",
+   "sujet": "https://www.apmep.fr/IMG/pdf/Spe_Amerique_Nord21_05_2024_DV.pdf",
+   "corrige": "https://www.apmep.fr/IMG/pdf/Corrige_spe_Amerique_Nord_J1_2024_DV.pdf",
+   "exercices": [
+    {
+     "n": 1,
+     "theme": "suites",
+     "chapitres": []
+    },
+    {
+     "n": 2,
+     "theme": "espace",
+     "chapitres": [
+      "geometrie-dans-l-espace"
+     ]
+    },
+    {
+     "n": 3,
+     "theme": "fonctions",
+     "chapitres": [
+      "logarithme-neperien",
+      "derivation-et-convexite",
+      "limites-de-fonctions"
+     ]
+    },
+    {
+     "n": 4,
+     "theme": "suites",
+     "chapitres": [
+      "limites-de-suites"
+     ]
+    }
+   ]
+  },
+  {
+   "annee": 2024,
+   "titre": "Amérique du Nord jour 2 22 mai 2024",
+   "sujet": "https://www.apmep.fr/IMG/pdf/Spe__Ame_rique_Nord_J2_22_mai_2024.pdf",
+   "corrige": "https://www.apmep.fr/IMG/pdf/Corrige_spe_Amerique_Nord_22_05_2024_DV.pdf",
+   "exercices": []
+  },
+  {
+   "annee": 2024,
+   "titre": "Centres étrangers jour 1 5 juin 2024",
+   "sujet": "https://www.apmep.fr/IMG/pdf/Etranger_J1_spe_5_06_2024_DV.pdf",
+   "corrige": "https://www.apmep.fr/IMG/pdf/Corrige_Spe_cialite_centre_e_trangers_groupe_1_jour_1_5_juin_24_.pdf",
+   "exercices": [
+    {
+     "n": 1,
+     "theme": "probas",
+     "chapitres": []
+    },
+    {
+     "n": 2,
+     "theme": "suites",
+     "chapitres": [
+      "suites-et-recurrence",
+      "limites-de-suites"
+     ]
+    },
+    {
+     "n": 3,
+     "theme": "fonctions",
+     "chapitres": [
+      "primitives-et-equations-differentielles",
+      "fonctions-trigonometriques"
+     ]
+    },
+    {
+     "n": 4,
+     "theme": "espace",
+     "chapitres": [
+      "geometrie-dans-l-espace"
+     ]
+    }
+   ]
+  },
+  {
+   "annee": 2024,
+   "titre": "Centres étrangers jour 2 5 juin 2024",
+   "sujet": "https://www.apmep.fr/IMG/pdf/Etranger_spe_J2_6_06_2024_DV.pdf",
+   "corrige": "https://www.apmep.fr/IMG/pdf/Corrige_Etranger_spe_J2_6_06_2024_FK_VT.pdf",
+   "exercices": [
+    {
+     "n": 1,
+     "theme": "probas",
+     "chapitres": [
+      "denombrement"
+     ]
+    },
+    {
+     "n": 2,
+     "theme": "fonctions",
+     "chapitres": [
+      "derivation-et-convexite",
+      "limites-de-fonctions"
+     ]
+    },
+    {
+     "n": 3,
+     "theme": "espace",
+     "chapitres": [
+      "geometrie-dans-l-espace"
+     ]
+    },
+    {
+     "n": 4,
+     "theme": "suites",
+     "chapitres": [
+      "suites-et-recurrence",
+      "limites-de-suites"
+     ]
+    }
+   ]
+  },
+  {
+   "annee": 2024,
+   "titre": "Centres étrangers Suède jour 1 6 juin 2024",
+   "sujet": "https://www.apmep.fr/IMG/pdf/Spe_Suede_7_06_2024_DV.pdf",
+   "corrige": "https://www.apmep.fr/IMG/pdf/Corrige__Spe_Centres_e_trangers_J1bis_07_06_2024.pdf",
+   "exercices": [
+    {
+     "n": 1,
+     "theme": "suites",
+     "chapitres": [
+      "limites-de-suites"
+     ]
+    },
+    {
+     "n": 2,
+     "theme": "probas",
+     "chapitres": []
+    },
+    {
+     "n": 3,
+     "theme": "fonctions",
+     "chapitres": [
+      "limites-de-fonctions"
+     ]
+    },
+    {
+     "n": 4,
+     "theme": "suites",
+     "chapitres": []
+    }
+   ]
+  },
+  {
+   "annee": 2024,
+   "titre": "Asie jour 1 10 juin 2024",
+   "sujet": "https://www.apmep.fr/IMG/pdf/Spe_Asie_J1_10_06_2024_DV.pdf",
+   "corrige": "https://www.apmep.fr/IMG/pdf/Corrige__Asie_spe_J1_24_mars_2024_VT_FK.pdf",
+   "exercices": [
+    {
+     "n": 1,
+     "theme": "fonctions",
+     "chapitres": [
+      "derivation-et-convexite",
+      "integration",
+      "primitives-et-equations-differentielles"
+     ]
+    },
+    {
+     "n": 2,
+     "theme": "espace",
+     "chapitres": [
+      "geometrie-dans-l-espace"
+     ]
+    },
+    {
+     "n": 3,
+     "theme": "probas",
+     "chapitres": [
+      "loi-binomiale"
+     ]
+    },
+    {
+     "n": 4,
+     "theme": "suites",
+     "chapitres": [
+      "limites-de-suites"
+     ]
+    }
+   ]
+  },
+  {
+   "annee": 2024,
+   "titre": "Asie jour 2 11 juin 2024",
+   "sujet": "https://www.apmep.fr/IMG/pdf/Spe_Asie_11_06_2024_DV.pdf",
+   "corrige": "https://www.apmep.fr/IMG/pdf/Corrige_Spe_Asie_11_06_2024_VT.pdf",
+   "exercices": [
+    {
+     "n": 1,
+     "theme": "fonctions",
+     "chapitres": [
+      "logarithme-neperien",
+      "limites-de-fonctions"
+     ]
+    },
+    {
+     "n": 2,
+     "theme": "suites",
+     "chapitres": [
+      "limites-de-suites"
+     ]
+    },
+    {
+     "n": 3,
+     "theme": "fonctions",
+     "chapitres": [
+      "logarithme-neperien",
+      "derivation-et-convexite",
+      "primitives-et-equations-differentielles"
+     ]
+    },
+    {
+     "n": 4,
+     "theme": "espace",
+     "chapitres": [
+      "geometrie-dans-l-espace"
+     ]
+    }
+   ]
+  },
+  {
+   "annee": 2024,
+   "titre": "Métropole, Antilles-Guyane jour 1 19 juin 2024",
+   "sujet": "https://www.apmep.fr/IMG/pdf/Metropole_J1_spe_19_06_2024_VTFK.pdf",
+   "corrige": "https://www.apmep.fr/IMG/pdf/Corrige-spe_J1_Metropole_19_06_2024_DV.pdf",
+   "exercices": [
+    {
+     "n": 1,
+     "theme": "suites",
+     "chapitres": [
+      "limites-de-suites"
+     ]
+    },
+    {
+     "n": 2,
+     "theme": "probas",
+     "chapitres": [
+      "loi-binomiale",
+      "loi-des-grands-nombres"
+     ]
+    },
+    {
+     "n": 3,
+     "theme": "espace",
+     "chapitres": [
+      "geometrie-dans-l-espace"
+     ]
+    },
+    {
+     "n": 4,
+     "theme": "fonctions",
+     "chapitres": [
+      "logarithme-neperien",
+      "derivation-et-convexite",
+      "limites-de-fonctions"
+     ]
+    }
+   ]
+  },
+  {
+   "annee": 2024,
+   "titre": "Métropole, Antilles-Guyane jour 1 (secours) 19 juin 2024",
+   "sujet": "https://www.apmep.fr/IMG/pdf/Spe_MetropoleJ1devoile_19_06_2024_DV.pdf",
+   "corrige": "https://www.apmep.fr/IMG/pdf/CorrigeSpe_Metropole_J1_secours_19_06_2024_DV_3.pdf",
+   "exercices": [
+    {
+     "n": 1,
+     "theme": "espace",
+     "chapitres": [
+      "geometrie-dans-l-espace"
+     ]
+    },
+    {
+     "n": 2,
+     "theme": "probas",
+     "chapitres": [
+      "loi-des-grands-nombres"
+     ]
+    },
+    {
+     "n": 3,
+     "theme": "suites",
+     "chapitres": [
+      "suites-et-recurrence",
+      "limites-de-suites"
+     ]
+    },
+    {
+     "n": 4,
+     "theme": "fonctions",
+     "chapitres": [
+      "logarithme-neperien",
+      "derivation-et-convexite",
+      "limites-de-fonctions"
+     ]
+    }
+   ]
+  },
+  {
+   "annee": 2024,
+   "titre": "Métropole, Antilles-Guyane jour 2 20 juin 2024",
+   "sujet": "https://www.apmep.fr/IMG/pdf/Me_tropole_J2_spe_20_06_2024_VTFK.pdf",
+   "corrige": "https://www.apmep.fr/IMG/pdf/Corrige__Me_tropole_J2_spe_20_06_2024_FK.pdf",
+   "exercices": [
+    {
+     "n": 1,
+     "theme": "probas",
+     "chapitres": [
+      "loi-binomiale",
+      "loi-des-grands-nombres"
+     ]
+    },
+    {
+     "n": 2,
+     "theme": "suites",
+     "chapitres": [
+      "suites-et-recurrence",
+      "limites-de-suites"
+     ]
+    },
+    {
+     "n": 3,
+     "theme": "fonctions",
+     "chapitres": [
+      "logarithme-neperien",
+      "derivation-et-convexite",
+      "limites-de-fonctions"
+     ]
+    },
+    {
+     "n": 4,
+     "theme": "espace",
+     "chapitres": [
+      "geometrie-dans-l-espace"
+     ]
+    }
+   ]
+  },
+  {
+   "annee": 2024,
+   "titre": "Métropole, Antilles-Guyane jour 2 (sujet dévoilé) 20 juin 2024",
+   "sujet": "https://www.apmep.fr/IMG/pdf/Spe_Metropole_devoile_J2_20_06_2024_DV_2.pdf",
+   "corrige": "https://www.apmep.fr/IMG/pdf/Corrige_spe_Metro_devoile_20_06_2024_DV.pdf",
+   "exercices": [
+    {
+     "n": 1,
+     "theme": "probas",
+     "chapitres": [
+      "loi-binomiale",
+      "loi-des-grands-nombres"
+     ]
+    },
+    {
+     "n": 2,
+     "theme": "espace",
+     "chapitres": [
+      "geometrie-dans-l-espace"
+     ]
+    },
+    {
+     "n": 3,
+     "theme": "suites",
+     "chapitres": [
+      "suites-et-recurrence",
+      "limites-de-suites"
+     ]
+    },
+    {
+     "n": 4,
+     "theme": "fonctions",
+     "chapitres": [
+      "derivation-et-convexite",
+      "primitives-et-equations-differentielles",
+      "limites-de-fonctions"
+     ]
+    }
+   ]
+  },
+  {
+   "annee": 2024,
+   "titre": "Polynésie jour 1 19 juin 2024",
+   "sujet": "https://www.apmep.fr/IMG/pdf/Spe_Polynesie_J1_19_06_2024_DV__2.pdf",
+   "corrige": "https://www.apmep.fr/IMG/pdf/Corrige_spe_PolynesieJ1_19_06_2024_DV_2.pdf",
+   "exercices": [
+    {
+     "n": 1,
+     "theme": "espace",
+     "chapitres": [
+      "geometrie-dans-l-espace"
+     ]
+    },
+    {
+     "n": 2,
+     "theme": "fonctions",
+     "chapitres": [
+      "integration",
+      "primitives-et-equations-differentielles"
+     ]
+    },
+    {
+     "n": 3,
+     "theme": "probas",
+     "chapitres": []
+    },
+    {
+     "n": 4,
+     "theme": "suites",
+     "chapitres": [
+      "suites-et-recurrence",
+      "limites-de-suites"
+     ]
+    }
+   ]
+  },
+  {
+   "annee": 2024,
+   "titre": "Polynésie jour 2 20 juin 2024",
+   "sujet": "https://www.apmep.fr/IMG/pdf/Spe_Polynesie_J2_20_06_2024_DV.pdf",
+   "corrige": "https://www.apmep.fr/IMG/pdf/Corrige_bis_Polynesie_20_06_2024_DV.pdf",
+   "exercices": [
+    {
+     "n": 1,
+     "theme": "probas",
+     "chapitres": []
+    },
+    {
+     "n": 2,
+     "theme": "suites",
+     "chapitres": []
+    },
+    {
+     "n": 3,
+     "theme": "suites",
+     "chapitres": [
+      "suites-et-recurrence",
+      "limites-de-suites"
+     ]
+    },
+    {
+     "n": 4,
+     "theme": "espace",
+     "chapitres": [
+      "geometrie-dans-l-espace"
+     ]
+    }
+   ]
+  },
+  {
+   "annee": 2024,
+   "titre": "Polynésie jour 1 5 septembre 2024",
+   "sujet": "https://www.apmep.fr/IMG/pdf/Spe_Polynesie_9_09_2024_DV.pdf",
+   "corrige": "https://www.apmep.fr/IMG/pdf/Corrige_Spe_Polynesie_9_09_2024_FH.pdf",
+   "exercices": [
+    {
+     "n": 1,
+     "theme": "probas",
+     "chapitres": []
+    },
+    {
+     "n": 2,
+     "theme": "fonctions",
+     "chapitres": [
+      "logarithme-neperien",
+      "primitives-et-equations-differentielles"
+     ]
+    },
+    {
+     "n": 3,
+     "theme": "espace",
+     "chapitres": [
+      "geometrie-dans-l-espace"
+     ]
+    },
+    {
+     "n": 4,
+     "theme": "espace",
+     "chapitres": [
+      "geometrie-dans-l-espace"
+     ]
+    }
+   ]
+  },
+  {
+   "annee": 2024,
+   "titre": "Métropole, Antilles-Guyane jour 1 11 septembre 2024",
+   "sujet": "https://www.apmep.fr/IMG/pdf/Spe_J1_Metropole_11_09_2024_DV_2.pdf",
+   "corrige": "https://www.apmep.fr/IMG/pdf/Corrrige_Spe_J1_Metropole_11_09_2024_FH.pdf",
+   "exercices": [
+    {
+     "n": 1,
+     "theme": "espace",
+     "chapitres": [
+      "geometrie-dans-l-espace"
+     ]
+    },
+    {
+     "n": 2,
+     "theme": "fonctions",
+     "chapitres": [
+      "logarithme-neperien",
+      "limites-de-fonctions"
+     ]
+    },
+    {
+     "n": 3,
+     "theme": "suites",
+     "chapitres": [
+      "suites-et-recurrence",
+      "limites-de-suites"
+     ]
+    },
+    {
+     "n": 4,
+     "theme": "probas",
+     "chapitres": [
+      "loi-binomiale",
+      "loi-des-grands-nombres"
+     ]
+    }
+   ]
+  },
+  {
+   "annee": 2024,
+   "titre": "Métropole, Antilles-Guyane jour 2 12 septembre 2024",
+   "sujet": "https://www.apmep.fr/IMG/pdf/Spe_J2_12_09_2024_Metropole_DV.pdf",
+   "corrige": "https://www.apmep.fr/IMG/pdf/Corrige_spe_J2_12_09_2024_Metro_DV_2.pdf",
+   "exercices": [
+    {
+     "n": 1,
+     "theme": "espace",
+     "chapitres": [
+      "geometrie-dans-l-espace"
+     ]
+    },
+    {
+     "n": 2,
+     "theme": "suites",
+     "chapitres": [
+      "suites-et-recurrence",
+      "limites-de-suites"
+     ]
+    },
+    {
+     "n": 3,
+     "theme": "fonctions",
+     "chapitres": [
+      "logarithme-neperien",
+      "derivation-et-convexite",
+      "primitives-et-equations-differentielles",
+      "limites-de-fonctions"
+     ]
+    },
+    {
+     "n": 4,
+     "theme": "suites",
+     "chapitres": [
+      "limites-de-suites"
+     ]
+    }
+   ]
+  },
+  {
+   "annee": 2024,
+   "titre": "Amérique du Sud jour 1 21 novembre 2024",
+   "sujet": "https://www.apmep.fr/IMG/pdf/SpeJ1_21_11_2024_Ameri_Sud_DV_2.pdf",
+   "corrige": "https://www.apmep.fr/IMG/pdf/Corrige_Am_du_Sud_21_11_2024_DVFHYM.pdf",
+   "exercices": [
+    {
+     "n": 1,
+     "theme": "fonctions",
+     "chapitres": [
+      "primitives-et-equations-differentielles"
+     ]
+    },
+    {
+     "n": 2,
+     "theme": "probas",
+     "chapitres": []
+    },
+    {
+     "n": 3,
+     "theme": "suites",
+     "chapitres": []
+    },
+    {
+     "n": 4,
+     "theme": "espace",
+     "chapitres": [
+      "geometrie-dans-l-espace"
+     ]
+    }
+   ]
+  },
+  {
+   "annee": 2024,
+   "titre": "Amérique du Sud jour 2 22 novembre 2024",
+   "sujet": "https://www.apmep.fr/IMG/pdf/SpeJ2_22_11_2024_Am_du_Sud_DV.pdf",
+   "corrige": "https://www.apmep.fr/IMG/pdf/Corrige_SpeJ2_22_11_2024_Am_du_Sud_FHDV.pdf",
+   "exercices": [
+    {
+     "n": 1,
+     "theme": "probas",
+     "chapitres": [
+      "loi-binomiale"
+     ]
+    },
+    {
+     "n": 2,
+     "theme": "suites",
+     "chapitres": []
+    },
+    {
+     "n": 3,
+     "theme": "fonctions",
+     "chapitres": [
+      "limites-de-fonctions"
+     ]
+    },
+    {
+     "n": 4,
+     "theme": "espace",
+     "chapitres": [
+      "geometrie-dans-l-espace"
+     ]
+    }
+   ]
+  },
+  {
+   "annee": 2025,
+   "titre": "Amérique du Nord jour 1 21 mai 2025",
+   "sujet": "https://www.apmep.fr/IMG/pdf/Ame_rique_du_Nord_J1_spe_21_05_2025_FK.pdf",
+   "corrige": "https://www.apmep.fr/IMG/pdf/Corrige_Ame_rique_du_Nord_J1_spe_21_05_2025_FK_VT.pdf",
+   "exercices": [
+    {
+     "n": 1,
+     "theme": "probas",
+     "chapitres": [
+      "loi-binomiale"
+     ]
+    },
+    {
+     "n": 2,
+     "theme": "suites",
+     "chapitres": [
+      "suites-et-recurrence",
+      "limites-de-suites"
+     ]
+    },
+    {
+     "n": 3,
+     "theme": "espace",
+     "chapitres": [
+      "geometrie-dans-l-espace"
+     ]
+    },
+    {
+     "n": 4,
+     "theme": "fonctions",
+     "chapitres": [
+      "primitives-et-equations-differentielles",
+      "limites-de-fonctions"
+     ]
+    }
+   ]
+  },
+  {
+   "annee": 2025,
+   "titre": "Amérique du Nord jour 2 22 mai 2025",
+   "sujet": "https://www.apmep.fr/IMG/pdf/Amerique_du_Nord_J2_spe_22_05_2025_DV_FK.pdf",
+   "corrige": "https://www.apmep.fr/IMG/pdf/Corrige_Am_du_Nord_J2_2025_DV_2.pdf",
+   "exercices": [
+    {
+     "n": 1,
+     "theme": "probas",
+     "chapitres": [
+      "loi-binomiale",
+      "loi-des-grands-nombres"
+     ]
+    },
+    {
+     "n": 2,
+     "theme": "suites",
+     "chapitres": [
+      "suites-et-recurrence",
+      "limites-de-suites"
+     ]
+    },
+    {
+     "n": 3,
+     "theme": "espace",
+     "chapitres": [
+      "geometrie-dans-l-espace"
+     ]
+    },
+    {
+     "n": 4,
+     "theme": "fonctions",
+     "chapitres": [
+      "derivation-et-convexite",
+      "integration",
+      "fonctions-trigonometriques"
+     ]
+    }
+   ]
+  },
+  {
+   "annee": 2025,
+   "titre": "Amérique du Nord jour 2 (secours) 22 mai 2025",
+   "sujet": "https://www.apmep.fr/IMG/pdf/Amerique_du_Nord_J2_secours_spe_22_05_2025_FK.pdf",
+   "corrige": "https://www.apmep.fr/IMG/pdf/Corrige__Ame_rique_du_Nord_J2_secours_spe_22_05_2025_FK.pdf",
+   "exercices": [
+    {
+     "n": 1,
+     "theme": "fonctions",
+     "chapitres": [
+      "derivation-et-convexite",
+      "limites-de-fonctions"
+     ]
+    },
+    {
+     "n": 2,
+     "theme": "espace",
+     "chapitres": [
+      "geometrie-dans-l-espace"
+     ]
+    },
+    {
+     "n": 3,
+     "theme": "probas",
+     "chapitres": []
+    },
+    {
+     "n": 4,
+     "theme": "suites",
+     "chapitres": [
+      "suites-et-recurrence",
+      "limites-de-suites"
+     ]
+    }
+   ]
+  },
+  {
+   "annee": 2025,
+   "titre": "Asie jour 1 11 juin 2025",
+   "sujet": "https://www.apmep.fr/IMG/pdf/Asie_spe_J1_11_06_2025_DV.pdf",
+   "corrige": "https://www.apmep.fr/IMG/pdf/Corrige__Asie_J1_11_06_2025_VTFK.pdf",
+   "exercices": [
+    {
+     "n": 1,
+     "theme": "espace",
+     "chapitres": [
+      "geometrie-dans-l-espace"
+     ]
+    },
+    {
+     "n": 2,
+     "theme": "probas",
+     "chapitres": [
+      "loi-binomiale",
+      "loi-des-grands-nombres"
+     ]
+    },
+    {
+     "n": 3,
+     "theme": "suites",
+     "chapitres": [
+      "suites-et-recurrence"
+     ]
+    },
+    {
+     "n": 4,
+     "theme": "fonctions",
+     "chapitres": [
+      "derivation-et-convexite",
+      "limites-de-fonctions"
+     ]
+    }
+   ]
+  },
+  {
+   "annee": 2025,
+   "titre": "Asie jour 2 12 juin 2025",
+   "sujet": "https://www.apmep.fr/IMG/pdf/Asie_speJ2_12_06_2025_VTFK.pdf",
+   "corrige": "https://www.apmep.fr/IMG/pdf/Corrige_bis_Asie_spe_J2_12_06_2025_BS.pdf",
+   "exercices": [
+    {
+     "n": 1,
+     "theme": "probas",
+     "chapitres": [
+      "loi-binomiale"
+     ]
+    },
+    {
+     "n": 2,
+     "theme": "suites",
+     "chapitres": [
+      "suites-et-recurrence",
+      "limites-de-suites"
+     ]
+    },
+    {
+     "n": 3,
+     "theme": "espace",
+     "chapitres": [
+      "geometrie-dans-l-espace"
+     ]
+    },
+    {
+     "n": 4,
+     "theme": "fonctions",
+     "chapitres": [
+      "primitives-et-equations-differentielles"
+     ]
+    }
+   ]
+  },
+  {
+   "annee": 2025,
+   "titre": "Centres étrangers jour 1 12 juin 2025",
+   "sujet": "https://www.apmep.fr/IMG/pdf/Etranger_spe_J1_12_06_2025_DV.pdf",
+   "corrige": "https://www.apmep.fr/IMG/pdf/Corrige__centre_etranger_J1_12_06_2025_VT.pdf",
+   "exercices": [
+    {
+     "n": 1,
+     "theme": "probas",
+     "chapitres": [
+      "loi-binomiale",
+      "loi-des-grands-nombres"
+     ]
+    },
+    {
+     "n": 2,
+     "theme": "espace",
+     "chapitres": [
+      "geometrie-dans-l-espace"
+     ]
+    },
+    {
+     "n": 3,
+     "theme": "suites",
+     "chapitres": [
+      "suites-et-recurrence",
+      "limites-de-suites"
+     ]
+    },
+    {
+     "n": 4,
+     "theme": "fonctions",
+     "chapitres": [
+      "primitives-et-equations-differentielles"
+     ]
+    }
+   ]
+  },
+  {
+   "annee": 2025,
+   "titre": "Centres étrangers jour 2 13 juin 2025",
+   "sujet": "https://www.apmep.fr/IMG/pdf/Etranger_spe_J2_13_06_2025_DV.pdf",
+   "corrige": "https://www.apmep.fr/IMG/pdf/Corrige_Etranger_spe_J2_13_06_2025__RRoux.pdf",
+   "exercices": [
+    {
+     "n": 1,
+     "theme": "suites",
+     "chapitres": [
+      "suites-et-recurrence",
+      "limites-de-suites"
+     ]
+    },
+    {
+     "n": 2,
+     "theme": "fonctions",
+     "chapitres": [
+      "primitives-et-equations-differentielles"
+     ]
+    },
+    {
+     "n": 3,
+     "theme": "probas",
+     "chapitres": [
+      "loi-binomiale",
+      "loi-des-grands-nombres"
+     ]
+    },
+    {
+     "n": 4,
+     "theme": "espace",
+     "chapitres": [
+      "geometrie-dans-l-espace"
+     ]
+    }
+   ]
+  },
+  {
+   "annee": 2025,
+   "titre": "Métropole jour 1 17 juin 2025",
+   "sujet": "https://www.apmep.fr/IMG/pdf/Metro_J1_17_06_2025_DV.pdf",
+   "corrige": "https://www.apmep.fr/IMG/pdf/Corrige__Me_tropole_spe_J1_17_06_2025_VTFK.pdf",
+   "exercices": [
+    {
+     "n": 1,
+     "theme": "probas",
+     "chapitres": [
+      "loi-binomiale",
+      "loi-des-grands-nombres"
+     ]
+    },
+    {
+     "n": 2,
+     "theme": "fonctions",
+     "chapitres": [
+      "logarithme-neperien",
+      "derivation-et-convexite",
+      "limites-de-fonctions"
+     ]
+    },
+    {
+     "n": 3,
+     "theme": "espace",
+     "chapitres": [
+      "geometrie-dans-l-espace"
+     ]
+    },
+    {
+     "n": 4,
+     "theme": "suites",
+     "chapitres": [
+      "limites-de-suites"
+     ]
+    }
+   ]
+  },
+  {
+   "annee": 2025,
+   "titre": "Métropole jour 2 18 juin 2025",
+   "sujet": "https://www.apmep.fr/IMG/pdf/Metropole__spe_J2_18_06_2025_DV_2.pdf",
+   "corrige": "https://www.apmep.fr/IMG/pdf/Corrige_spe_Metropole_18_06_2025_DV.pdf",
+   "exercices": [
+    {
+     "n": 1,
+     "theme": "probas",
+     "chapitres": [
+      "loi-binomiale",
+      "loi-des-grands-nombres"
+     ]
+    },
+    {
+     "n": 2,
+     "theme": "espace",
+     "chapitres": [
+      "geometrie-dans-l-espace"
+     ]
+    },
+    {
+     "n": 3,
+     "theme": "fonctions",
+     "chapitres": [
+      "logarithme-neperien",
+      "derivation-et-convexite"
+     ]
+    },
+    {
+     "n": 4,
+     "theme": "fonctions",
+     "chapitres": [
+      "primitives-et-equations-differentielles",
+      "limites-de-fonctions"
+     ]
+    }
+   ]
+  },
+  {
+   "annee": 2025,
+   "titre": "Polynésie jour 1 17 juin 2025",
+   "sujet": "https://www.apmep.fr/IMG/pdf/Polynesie_spe_J1_17_06_2025_DV_2.pdf",
+   "corrige": "https://www.apmep.fr/IMG/pdf/Corrige__Polynesie_spe_J1_17_06_2025_VTFK_2.pdf",
+   "exercices": [
+    {
+     "n": 1,
+     "theme": "probas",
+     "chapitres": [
+      "loi-binomiale",
+      "loi-des-grands-nombres"
+     ]
+    },
+    {
+     "n": 2,
+     "theme": "espace",
+     "chapitres": [
+      "geometrie-dans-l-espace"
+     ]
+    },
+    {
+     "n": 3,
+     "theme": "fonctions",
+     "chapitres": [
+      "integration",
+      "limites-de-fonctions"
+     ]
+    },
+    {
+     "n": 4,
+     "theme": "fonctions",
+     "chapitres": [
+      "logarithme-neperien",
+      "derivation-et-convexite",
+      "primitives-et-equations-differentielles",
+      "fonctions-trigonometriques"
+     ]
+    }
+   ]
+  },
+  {
+   "annee": 2025,
+   "titre": "Polynésie jour 2 18 juin 2025",
+   "sujet": "https://www.apmep.fr/IMG/pdf/Polynesie_spe_J2_18_06_2025_DV.pdf",
+   "corrige": "https://www.apmep.fr/IMG/pdf/Corrige_Polynesie_spe_J2_18_06_2025_FK.pdf",
+   "exercices": [
+    {
+     "n": 1,
+     "theme": "probas",
+     "chapitres": []
+    },
+    {
+     "n": 2,
+     "theme": "fonctions",
+     "chapitres": [
+      "logarithme-neperien",
+      "derivation-et-convexite",
+      "limites-de-fonctions"
+     ]
+    },
+    {
+     "n": 3,
+     "theme": "espace",
+     "chapitres": [
+      "geometrie-dans-l-espace"
+     ]
+    },
+    {
+     "n": 4,
+     "theme": "suites",
+     "chapitres": []
+    }
+   ]
+  },
+  {
+   "annee": 2025,
+   "titre": "Polynésie jour 1 2 septembre 2025",
+   "sujet": "https://www.apmep.fr/IMG/pdf/Polynesie_spe_J1_02_09_2025_FK_VT_DV_2.pdf",
+   "corrige": "https://www.apmep.fr/IMG/pdf/Corrige_Polynesie_spe_J1_02_09_2025_FH.pdf",
+   "exercices": [
+    {
+     "n": 1,
+     "theme": "probas",
+     "chapitres": [
+      "loi-binomiale",
+      "loi-des-grands-nombres"
+     ]
+    },
+    {
+     "n": 2,
+     "theme": "fonctions",
+     "chapitres": [
+      "logarithme-neperien",
+      "derivation-et-convexite",
+      "primitives-et-equations-differentielles",
+      "limites-de-fonctions"
+     ]
+    },
+    {
+     "n": 3,
+     "theme": "suites",
+     "chapitres": [
+      "suites-et-recurrence",
+      "limites-de-suites"
+     ]
+    },
+    {
+     "n": 4,
+     "theme": "espace",
+     "chapitres": [
+      "geometrie-dans-l-espace"
+     ]
+    }
+   ]
+  },
+  {
+   "annee": 2025,
+   "titre": "Asie jour 1 5 septembre juin 2025",
+   "sujet": "https://www.apmep.fr/IMG/pdf/Asie_spe_J1_05_09_2025_FK.pdf",
+   "corrige": "https://www.apmep.fr/IMG/pdf/Corrige_Asie_spe_J1_05_09_2025_FH.pdf",
+   "exercices": [
+    {
+     "n": 1,
+     "theme": "fonctions",
+     "chapitres": [
+      "derivation-et-convexite",
+      "primitives-et-equations-differentielles",
+      "limites-de-fonctions"
+     ]
+    },
+    {
+     "n": 2,
+     "theme": "espace",
+     "chapitres": [
+      "geometrie-dans-l-espace"
+     ]
+    },
+    {
+     "n": 3,
+     "theme": "probas",
+     "chapitres": []
+    },
+    {
+     "n": 4,
+     "theme": "probas",
+     "chapitres": []
+    }
+   ]
+  },
+  {
+   "annee": 2025,
+   "titre": "Métropole jour 1 9 septembre juin 2025",
+   "sujet": "https://www.apmep.fr/IMG/pdf/Metropole_J1_sept_2025_DV_2.pdf",
+   "corrige": "https://www.apmep.fr/IMG/pdf/Corrige__Metropole_J1_sept_2025_FK.pdf",
+   "exercices": [
+    {
+     "n": 1,
+     "theme": "fonctions",
+     "chapitres": [
+      "primitives-et-equations-differentielles"
+     ]
+    },
+    {
+     "n": 2,
+     "theme": "espace",
+     "chapitres": [
+      "geometrie-dans-l-espace"
+     ]
+    },
+    {
+     "n": 3,
+     "theme": "suites",
+     "chapitres": [
+      "suites-et-recurrence",
+      "limites-de-suites"
+     ]
+    },
+    {
+     "n": 4,
+     "theme": "probas",
+     "chapitres": [
+      "denombrement"
+     ]
+    }
+   ]
+  },
+  {
+   "annee": 2025,
+   "titre": "Métropole jour 2 10 septembre juin 2025",
+   "sujet": "https://www.apmep.fr/IMG/pdf/Metropole_J2_sept_2025_DV.pdf",
+   "corrige": "https://www.apmep.fr/IMG/pdf/Corrige_Metropole_spe_J2_10_09_2025_AP3.pdf",
+   "exercices": [
+    {
+     "n": 1,
+     "theme": "suites",
+     "chapitres": [
+      "suites-et-recurrence",
+      "limites-de-suites"
+     ]
+    },
+    {
+     "n": 2,
+     "theme": "fonctions",
+     "chapitres": [
+      "logarithme-neperien",
+      "derivation-et-convexite",
+      "primitives-et-equations-differentielles",
+      "fonctions-trigonometriques"
+     ]
+    },
+    {
+     "n": 3,
+     "theme": "fonctions",
+     "chapitres": [
+      "logarithme-neperien"
+     ]
+    },
+    {
+     "n": 4,
+     "theme": "espace",
+     "chapitres": [
+      "geometrie-dans-l-espace"
+     ]
+    }
+   ]
+  },
+  {
+   "annee": 2025,
+   "titre": "Amérique du Sud jour 1 13 novembre 2025",
+   "sujet": "https://www.apmep.fr/IMG/pdf/Ameri_du_Sud_J1__13_11_2025_DV.pdf",
+   "corrige": "https://www.apmep.fr/IMG/pdf/Corrige_Ameri_du_Sud_J1__13_11_2025_FH.pdf",
+   "exercices": [
+    {
+     "n": 1,
+     "theme": "suites",
+     "chapitres": [
+      "suites-et-recurrence",
+      "limites-de-suites"
+     ]
+    },
+    {
+     "n": 2,
+     "theme": "probas",
+     "chapitres": [
+      "loi-binomiale"
+     ]
+    },
+    {
+     "n": 3,
+     "theme": "fonctions",
+     "chapitres": [
+      "derivation-et-convexite",
+      "primitives-et-equations-differentielles",
+      "limites-de-fonctions"
+     ]
+    },
+    {
+     "n": 4,
+     "theme": "espace",
+     "chapitres": [
+      "geometrie-dans-l-espace"
+     ]
+    }
+   ]
+  },
+  {
+   "annee": 2025,
+   "titre": "Amérique du Sud jour 2 14 novembre 2025",
+   "sujet": "https://www.apmep.fr/IMG/pdf/Ame_du_Sud_J2_14_11_2025_DV.pdf",
+   "corrige": "https://www.apmep.fr/IMG/pdf/Corrige_Am_du_Sud_J2_nov_2025_DV.pdf",
+   "exercices": [
+    {
+     "n": 1,
+     "theme": "probas",
+     "chapitres": [
+      "loi-des-grands-nombres"
+     ]
+    },
+    {
+     "n": 2,
+     "theme": "espace",
+     "chapitres": [
+      "geometrie-dans-l-espace"
+     ]
+    },
+    {
+     "n": 3,
+     "theme": "suites",
+     "chapitres": [
+      "suites-et-recurrence",
+      "limites-de-suites"
+     ]
+    },
+    {
+     "n": 4,
+     "theme": "fonctions",
+     "chapitres": [
+      "primitives-et-equations-differentielles",
+      "limites-de-fonctions"
+     ]
+    }
+   ]
+  },
+  {
+   "annee": 2025,
+   "titre": "Nouvelle Calédonie jour 1 20 novembre 2025",
+   "sujet": "https://www.apmep.fr/IMG/pdf/Caledonie_J1_20_11_2025_DV_2.pdf",
+   "corrige": "https://www.apmep.fr/IMG/pdf/Corrige_EDS_NC_sujet1-20-11_SD_2.pdf",
+   "exercices": [
+    {
+     "n": 1,
+     "theme": "probas",
+     "chapitres": [
+      "loi-des-grands-nombres"
+     ]
+    },
+    {
+     "n": 2,
+     "theme": "espace",
+     "chapitres": [
+      "geometrie-dans-l-espace"
+     ]
+    },
+    {
+     "n": 3,
+     "theme": "suites",
+     "chapitres": [
+      "limites-de-suites"
+     ]
+    },
+    {
+     "n": 4,
+     "theme": "fonctions",
+     "chapitres": [
+      "logarithme-neperien",
+      "derivation-et-convexite",
+      "primitives-et-equations-differentielles",
+      "fonctions-trigonometriques"
+     ]
+    }
+   ]
+  },
+  {
+   "annee": 2025,
+   "titre": "Nouvelle Calédonie jour 2 21 novembre 2025",
+   "sujet": "https://www.apmep.fr/IMG/pdf/Caledonie_J2_21_11_2025_DV.pdf",
+   "corrige": "https://www.apmep.fr/IMG/pdf/Corrige_EDS_NC_sujet2-21-11_2025_SD_2.pdf",
+   "exercices": [
+    {
+     "n": 1,
+     "theme": "espace",
+     "chapitres": [
+      "geometrie-dans-l-espace"
+     ]
+    },
+    {
+     "n": 2,
+     "theme": "probas",
+     "chapitres": [
+      "loi-des-grands-nombres"
+     ]
+    },
+    {
+     "n": 3,
+     "theme": "suites",
+     "chapitres": [
+      "suites-et-recurrence",
+      "limites-de-suites"
+     ]
+    },
+    {
+     "n": 4,
+     "theme": "fonctions",
+     "chapitres": [
+      "logarithme-neperien",
+      "limites-de-fonctions"
+     ]
+    }
+   ]
+  },
+  {
+   "annee": 2026,
+   "titre": "Amérique du Nord jour 1 20 mai 2026",
+   "sujet": "https://www.apmep.fr/IMG/pdf/Amerique_du_Nord_J1_spe_20_05_2026_FK.pdf",
+   "corrige": "https://www.apmep.fr/IMG/pdf/BAC_general_Specialite_corrige_J1_Amerique__du_Nord_2026_VT-v2.pdf",
+   "exercices": [
+    {
+     "n": 1,
+     "theme": "probas",
+     "chapitres": [
+      "loi-binomiale",
+      "loi-des-grands-nombres"
+     ]
+    },
+    {
+     "n": 2,
+     "theme": "suites",
+     "chapitres": [
+      "limites-de-suites"
+     ]
+    },
+    {
+     "n": 3,
+     "theme": "espace",
+     "chapitres": [
+      "geometrie-dans-l-espace"
+     ]
+    },
+    {
+     "n": 4,
+     "theme": "fonctions",
+     "chapitres": [
+      "logarithme-neperien",
+      "derivation-et-convexite",
+      "limites-de-fonctions"
+     ]
+    }
+   ]
+  },
+  {
+   "annee": 2026,
+   "titre": "Amérique du Nord jour 2 21 mai 2026",
+   "sujet": "https://www.apmep.fr/IMG/pdf/Amerique_du_Nord_21_05_2026_DV-2.pdf",
+   "corrige": "https://www.apmep.fr/IMG/pdf/Corrige_Amerique_du_Nord_J2_21_05_2026_VT_FH_2.pdf",
+   "exercices": [
+    {
+     "n": 1,
+     "theme": "probas",
+     "chapitres": [
+      "loi-binomiale",
+      "loi-des-grands-nombres"
+     ]
+    },
+    {
+     "n": 2,
+     "theme": "suites",
+     "chapitres": [
+      "suites-et-recurrence",
+      "limites-de-suites"
+     ]
+    },
+    {
+     "n": 3,
+     "theme": "espace",
+     "chapitres": [
+      "geometrie-dans-l-espace"
+     ]
+    },
+    {
+     "n": 4,
+     "theme": "fonctions",
+     "chapitres": [
+      "logarithme-neperien",
+      "limites-de-fonctions"
+     ]
+    }
+   ]
+  },
+  {
+   "annee": 2026,
+   "titre": "Asie jour 1 9 juin 2026",
+   "sujet": "https://www.apmep.fr/IMG/pdf/BAC_Specialite_Sujet_2026_J1_Asie_FK.pdf",
+   "corrige": "https://www.apmep.fr/IMG/pdf/Corrige_BAC_Specialite_2026_J1_Asie_FK.pdf",
+   "exercices": [
+    {
+     "n": 1,
+     "theme": "suites",
+     "chapitres": [
+      "limites-de-suites"
+     ]
+    },
+    {
+     "n": 2,
+     "theme": "probas",
+     "chapitres": [
+      "loi-binomiale"
+     ]
+    },
+    {
+     "n": 3,
+     "theme": "espace",
+     "chapitres": [
+      "geometrie-dans-l-espace"
+     ]
+    },
+    {
+     "n": 4,
+     "theme": "fonctions",
+     "chapitres": [
+      "fonctions-trigonometriques",
+      "limites-de-fonctions"
+     ]
+    }
+   ]
+  },
+  {
+   "annee": 2026,
+   "titre": "Asie jour 2 10 juin 2026",
+   "sujet": "https://www.apmep.fr/IMG/pdf/BAC_Spe_J2_Asie_juin_2026_FK.pdf",
+   "corrige": "https://www.apmep.fr/IMG/pdf/BAC_generale_specialite_J2_Corrige_2026-06-10_Asie_FP-v2.pdf",
+   "exercices": [
+    {
+     "n": 1,
+     "theme": "suites",
+     "chapitres": [
+      "suites-et-recurrence",
+      "limites-de-suites"
+     ]
+    },
+    {
+     "n": 2,
+     "theme": "probas",
+     "chapitres": [
+      "loi-binomiale"
+     ]
+    },
+    {
+     "n": 3,
+     "theme": "espace",
+     "chapitres": [
+      "geometrie-dans-l-espace"
+     ]
+    },
+    {
+     "n": 4,
+     "theme": "fonctions",
+     "chapitres": [
+      "derivation-et-convexite",
+      "primitives-et-equations-differentielles",
+      "fonctions-trigonometriques"
+     ]
+    }
+   ]
+  },
+  {
+   "annee": 2026,
+   "titre": "Centres étrangers jour 1 10 juin 2026",
+   "sujet": "https://www.apmep.fr/IMG/pdf/BAC_Specialite_Sujet_2026_J1_Centres_Etrangers_FK-v3-2.pdf",
+   "corrige": "https://www.apmep.fr/IMG/pdf/Bac_Specialite_Corrige_2026_J1_Centres_Etrangers_VT_v2.pdf",
+   "exercices": [
+    {
+     "n": 1,
+     "theme": "probas",
+     "chapitres": [
+      "loi-binomiale",
+      "loi-des-grands-nombres"
+     ]
+    },
+    {
+     "n": 2,
+     "theme": "suites",
+     "chapitres": []
+    },
+    {
+     "n": 3,
+     "theme": "espace",
+     "chapitres": [
+      "geometrie-dans-l-espace"
+     ]
+    },
+    {
+     "n": 4,
+     "theme": "fonctions",
+     "chapitres": [
+      "logarithme-neperien",
+      "derivation-et-convexite",
+      "limites-de-fonctions"
+     ]
+    }
+   ]
+  },
+  {
+   "annee": 2026,
+   "titre": "Centres étrangers jour 2 11 juin 2026",
+   "sujet": "https://www.apmep.fr/IMG/pdf/BAC_generale_specialite_J2_Sujet_2026-06-11_Centres-etrangers_FK-v4.pdf",
+   "corrige": "https://www.apmep.fr/IMG/pdf/BAC_generale_specialite_J2_Corrige_2026-06-11_Centres-etrangers_VT-v3.pdf",
+   "exercices": [
+    {
+     "n": 1,
+     "theme": "espace",
+     "chapitres": [
+      "geometrie-dans-l-espace"
+     ]
+    },
+    {
+     "n": 2,
+     "theme": "probas",
+     "chapitres": [
+      "loi-binomiale"
+     ]
+    },
+    {
+     "n": 3,
+     "theme": "fonctions",
+     "chapitres": [
+      "logarithme-neperien",
+      "limites-de-fonctions"
+     ]
+    },
+    {
+     "n": 4,
+     "theme": "fonctions",
+     "chapitres": [
+      "integration",
+      "primitives-et-equations-differentielles",
+      "limites-de-fonctions"
+     ]
+    }
+   ]
+  },
+  {
+   "annee": 2026,
+   "titre": "Antilles, Guyane jour 1 16 juin 2026",
+   "sujet": "https://www.apmep.fr/IMG/pdf/Bac_generale_specialite_J1_Sujet_2026-06-16_Antilles-Guyane_DV-v2.pdf",
+   "corrige": "https://www.apmep.fr/IMG/pdf/BAC_generale_specialite_J1_Corrige_2026_06_16_Antilles-Guyane_VT-v1.pdf",
+   "exercices": [
+    {
+     "n": 1,
+     "theme": "probas",
+     "chapitres": [
+      "loi-des-grands-nombres"
+     ]
+    },
+    {
+     "n": 2,
+     "theme": "suites",
+     "chapitres": [
+      "suites-et-recurrence",
+      "limites-de-suites"
+     ]
+    },
+    {
+     "n": 3,
+     "theme": "espace",
+     "chapitres": [
+      "geometrie-dans-l-espace"
+     ]
+    },
+    {
+     "n": 4,
+     "theme": "fonctions",
+     "chapitres": [
+      "logarithme-neperien",
+      "derivation-et-convexite",
+      "limites-de-fonctions"
+     ]
+    }
+   ]
+  },
+  {
+   "annee": 2026,
+   "titre": "Antilles, Guyane jour 2 17 juin 2026",
+   "sujet": "https://www.apmep.fr/IMG/pdf/BAC_generale_specialite_J2_Sujet_2026-06-17_Antilles-Guyane_FK-v1.pdf",
+   "corrige": "https://www.apmep.fr/IMG/pdf/BAC_generale_specialite_J2_Corrige_2026-06-17_Antilles-Guyane_VT-v3.pdf",
+   "exercices": [
+    {
+     "n": 1,
+     "theme": "probas",
+     "chapitres": [
+      "loi-binomiale",
+      "loi-des-grands-nombres"
+     ]
+    },
+    {
+     "n": 2,
+     "theme": "espace",
+     "chapitres": [
+      "geometrie-dans-l-espace"
+     ]
+    },
+    {
+     "n": 3,
+     "theme": "fonctions",
+     "chapitres": [
+      "logarithme-neperien",
+      "primitives-et-equations-differentielles",
+      "fonctions-trigonometriques",
+      "limites-de-fonctions"
+     ]
+    },
+    {
+     "n": 4,
+     "theme": "fonctions",
+     "chapitres": [
+      "logarithme-neperien",
+      "derivation-et-convexite",
+      "primitives-et-equations-differentielles",
+      "limites-de-fonctions"
+     ]
+    }
+   ]
+  },
+  {
+   "annee": 2026,
+   "titre": "Polynésie jour 1 16 juin 2026",
+   "sujet": "https://www.apmep.fr/IMG/pdf/Bac_spe_Polynesie_J1_16_06_2026_DV.pdf",
+   "corrige": "https://www.apmep.fr/IMG/pdf/CorrigeBac_spe_Polynesie_J1__16_06_2026_FH-2.pdf",
+   "exercices": [
+    {
+     "n": 1,
+     "theme": "probas",
+     "chapitres": []
+    },
+    {
+     "n": 2,
+     "theme": "fonctions",
+     "chapitres": [
+      "derivation-et-convexite",
+      "primitives-et-equations-differentielles",
+      "fonctions-trigonometriques",
+      "limites-de-fonctions"
+     ]
+    },
+    {
+     "n": 3,
+     "theme": "suites",
+     "chapitres": [
+      "suites-et-recurrence",
+      "limites-de-suites"
+     ]
+    },
+    {
+     "n": 4,
+     "theme": "espace",
+     "chapitres": [
+      "geometrie-dans-l-espace"
+     ]
+    }
+   ]
+  },
+  {
+   "annee": 2026,
+   "titre": "Polynésie jour 2 17 juin 2026",
+   "sujet": "https://www.apmep.fr/IMG/pdf/BAC_generale_specialite_J2_Sujet_2026-06-17_Polynesie_DV-v2.pdf",
+   "corrige": "https://www.apmep.fr/IMG/pdf/BAC_generale_specialite_J2_Corrige_2026-06-17_Polynesie_DV-v1.pdf",
+   "exercices": [
+    {
+     "n": 1,
+     "theme": "probas",
+     "chapitres": [
+      "loi-binomiale",
+      "loi-des-grands-nombres"
+     ]
+    },
+    {
+     "n": 2,
+     "theme": "fonctions",
+     "chapitres": [
+      "logarithme-neperien"
+     ]
+    },
+    {
+     "n": 3,
+     "theme": "espace",
+     "chapitres": [
+      "geometrie-dans-l-espace"
+     ]
+    },
+    {
+     "n": 4,
+     "theme": "suites",
+     "chapitres": [
+      "limites-de-suites"
+     ]
+    }
+   ]
+  },
+  {
+   "annee": 2026,
+   "titre": "Métropole jour 1 16 juin 2026",
+   "sujet": "https://www.apmep.fr/IMG/pdf/BAC_General_Specialite_Sujet_J1_metropole_FK-v2.pdf",
+   "corrige": "https://www.apmep.fr/IMG/pdf/BAC_General_Specialite_Corrige_J1_metropole_FK-v3.pdf",
+   "exercices": [
+    {
+     "n": 1,
+     "theme": "probas",
+     "chapitres": [
+      "loi-des-grands-nombres"
+     ]
+    },
+    {
+     "n": 2,
+     "theme": "espace",
+     "chapitres": [
+      "geometrie-dans-l-espace"
+     ]
+    },
+    {
+     "n": 3,
+     "theme": "suites",
+     "chapitres": [
+      "suites-et-recurrence",
+      "limites-de-suites"
+     ]
+    },
+    {
+     "n": 4,
+     "theme": "fonctions",
+     "chapitres": [
+      "logarithme-neperien",
+      "limites-de-fonctions"
+     ]
+    }
+   ]
+  },
+  {
+   "annee": 2026,
+   "titre": "Métropole jour 2 17 juin 2026",
+   "sujet": "https://www.apmep.fr/IMG/pdf/BAC_generale_specialite_J2_2026-06-17_Metropole_FK-v4.pdf",
+   "corrige": "https://www.apmep.fr/IMG/pdf/BAC_generale_specialite_J2_Corrige_2026-06-17_Metropole_FK-v2.pdf",
+   "exercices": [
+    {
+     "n": 1,
+     "theme": "espace",
+     "chapitres": [
+      "geometrie-dans-l-espace"
+     ]
+    },
+    {
+     "n": 2,
+     "theme": "fonctions",
+     "chapitres": [
+      "primitives-et-equations-differentielles",
+      "limites-de-fonctions"
+     ]
+    },
+    {
+     "n": 3,
+     "theme": "probas",
+     "chapitres": [
+      "loi-des-grands-nombres"
+     ]
+    },
+    {
+     "n": 4,
+     "theme": "fonctions",
+     "chapitres": [
+      "integration",
+      "primitives-et-equations-differentielles",
+      "limites-de-fonctions"
+     ]
+    }
+   ]
+  },
+  {
+   "annee": 2026,
+   "titre": "Métropole jour 1 8 septembre 2026",
+   "sujet": "https://www.apmep.fr/IMG/pdf/Metropole_J_spe_8osep_2026.pdf",
+   "corrige": "https://www.apmep.fr/IMG/pdf/Corrige_Metropole_J1_spe_8_sept_2026_FB.pdf",
+   "exercices": [
+    {
+     "n": 1,
+     "theme": "probas",
+     "chapitres": [
+      "loi-binomiale",
+      "loi-des-grands-nombres"
+     ]
+    },
+    {
+     "n": 2,
+     "theme": "suites",
+     "chapitres": [
+      "suites-et-recurrence",
+      "limites-de-suites"
+     ]
+    },
+    {
+     "n": 3,
+     "theme": "espace",
+     "chapitres": [
+      "geometrie-dans-l-espace"
+     ]
+    },
+    {
+     "n": 4,
+     "theme": "fonctions",
+     "chapitres": [
+      "primitives-et-equations-differentielles"
+     ]
+    }
+   ]
+  },
+  {
+   "annee": 2026,
+   "titre": "Métropole jour 2 9 septembre 2026",
+   "sujet": "https://www.apmep.fr/IMG/pdf/BAC_generale_specialite_J2_Sujet_2025-09-09_Metropole_DV-v2.pdf",
+   "corrige": "https://www.apmep.fr/IMG/pdf/BAC_generale_specialite_J2_Corrige_2026-09-09_Metropole_LB-v1.pdf",
+   "exercices": [
+    {
+     "n": 1,
+     "theme": "probas",
+     "chapitres": [
+      "loi-binomiale"
+     ]
+    },
+    {
+     "n": 2,
+     "theme": "fonctions",
+     "chapitres": [
+      "primitives-et-equations-differentielles",
+      "limites-de-fonctions"
+     ]
+    },
+    {
+     "n": 3,
+     "theme": "suites",
+     "chapitres": []
+    },
+    {
+     "n": 4,
+     "theme": "espace",
+     "chapitres": [
+      "geometrie-dans-l-espace"
+     ]
+    }
+   ]
+  },
+  {
+   "annee": 2026,
+   "titre": "Amérique du Sud jour 1 12 novembre 2026",
+   "sujet": "https://www.apmep.fr/IMG/pdf/BAC_generale_specialite_J1_Sujet_2026-11-12_Amerique-du-Sud_DV-v5.pdf",
+   "corrige": "https://www.apmep.fr/IMG/pdf/BAC_generale_specialite_J1_Corrige_2026-11-12_Amerique-du-Sud_ES-2.pdf",
+   "exercices": [
+    {
+     "n": 1,
+     "theme": "probas",
+     "chapitres": [
+      "loi-binomiale",
+      "loi-des-grands-nombres"
+     ]
+    },
+    {
+     "n": 2,
+     "theme": "espace",
+     "chapitres": [
+      "geometrie-dans-l-espace"
+     ]
+    },
+    {
+     "n": 3,
+     "theme": "fonctions",
+     "chapitres": [
+      "derivation-et-convexite",
+      "primitives-et-equations-differentielles"
+     ]
+    },
+    {
+     "n": 4,
+     "theme": "fonctions",
+     "chapitres": [
+      "logarithme-neperien",
+      "limites-de-fonctions"
+     ]
+    }
+   ]
+  },
+  {
+   "annee": 2026,
+   "titre": "Amérique du Sud jour 2 13 novembre 2026",
+   "sujet": "https://www.apmep.fr/IMG/pdf/BAC_generale_specialite_J2_Sujet_2026-11-13_Amerique-du-Sud_DV-1.pdf",
+   "corrige": "https://www.apmep.fr/IMG/pdf/BAC_generale_specialite_J2_Corrige_2026-11-13_Amerique-du-Sud_AP-1-2.pdf",
+   "exercices": [
+    {
+     "n": 1,
+     "theme": "probas",
+     "chapitres": [
+      "loi-binomiale",
+      "loi-des-grands-nombres"
+     ]
+    },
+    {
+     "n": 2,
+     "theme": "suites",
+     "chapitres": [
+      "suites-et-recurrence",
+      "limites-de-suites"
+     ]
+    },
+    {
+     "n": 3,
+     "theme": "fonctions",
+     "chapitres": [
+      "logarithme-neperien",
+      "derivation-et-convexite",
+      "integration",
+      "primitives-et-equations-differentielles"
+     ]
+    },
+    {
+     "n": 4,
+     "theme": "espace",
+     "chapitres": [
+      "geometrie-dans-l-espace"
+     ]
+    }
+   ]
+  },
+  {
+   "annee": 2026,
+   "titre": "Nouvelle-Calédonie jour 1 19 novembre 2026",
+   "sujet": "https://www.apmep.fr/IMG/pdf/BAC_generale_spe_J1_19-11-2026_Nouvelle-Caledonie_SD.pdf",
+   "corrige": "https://www.apmep.fr/IMG/pdf/BAC_general_spe_J1_Corrige_19-11-2026_Nouvelle-Caledonie_SD.pdf",
+   "exercices": [
+    {
+     "n": 2,
+     "theme": "fonctions",
+     "chapitres": [
+      "logarithme-neperien",
+      "derivation-et-convexite",
+      "integration",
+      "primitives-et-equations-differentielles",
+      "fonctions-trigonometriques",
+      "limites-de-fonctions"
+     ]
+    }
+   ]
+  },
+  {
+   "annee": 2026,
+   "titre": "Nouvelle-Calédonie jour 2 20 novembre 2026",
+   "sujet": "https://www.apmep.fr/IMG/pdf/BAC_general_spe_J2_20-11-2026_Nouvelle-Caledonie_DV.pdf",
+   "corrige": null,
+   "exercices": [
+    {
+     "n": 2,
+     "theme": "espace",
+     "chapitres": [
+      "geometrie-dans-l-espace"
+     ]
+    },
+    {
+     "n": 3,
+     "theme": "suites",
+     "chapitres": [
+      "limites-de-suites"
+     ]
+    },
+    {
+     "n": 4,
+     "theme": "fonctions",
+     "chapitres": [
+      "logarithme-neperien",
+      "derivation-et-convexite",
+      "limites-de-fonctions"
+     ]
+    }
+   ]
+  }
+ ]
+}

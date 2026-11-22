@@ -11,7 +11,7 @@ On compte les visites avec Umami, un outil sans cookie qui ne collecte aucune do
 
 ## Vidéos YouTube
 
-Les vidéos ne se chargent que quand tu cliques dessus, depuis youtube-nocookie.com. Avant le clic, aucune donnée n'est envoyée à YouTube.
+Les vidéos se regardent sur YouTube : un clic sur la vignette ouvre la vidéo sur youtube.com. Le site n'intègre aucun lecteur YouTube, donc YouTube ne dépose rien tant que tu restes ici.
 
 ## Le planning de révision par e-mail
 

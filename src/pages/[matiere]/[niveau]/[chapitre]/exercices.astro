@@ -3,9 +3,11 @@ import Chapitre from '../../../../layouts/Chapitre.astro';
 import { cheminsChapitres } from '../../../../lib/routes';
 import { existe } from '../../../../lib/fichiers';
 import { md } from '../../../../lib/markdown';
+import { sujetsDuChapitre } from '../../../../lib/annales';
 export const getStaticPaths = cheminsChapitres;
 const p = Astro.props;
 const { pdf } = p.chapitre.data;
+const annales = p.matiere.slug === 'maths' && p.niveau.slug === 'terminale' ? sujetsDuChapitre(p.chapitre.slug) : [];
 const types = { application: 'Application', methode: 'Méthode', bac: 'Type bac', brevet: 'Type brevet', piege: 'Piège' };
 ---
 <Chapitre {...p} onglet="exercices">
@@ -47,6 +49,17 @@ const types = { application: 'Application', methode: 'Méthode', bac: 'Type bac'
       </article>
     ))}
   </div>
+  {annales.length > 0 && (
+    <section style="display:grid;gap:20px">
+      <h2>Au bac, sur ce chapitre</h2>
+      <ul class="liste-ch">
+        {annales.slice(0, 6).map((s) => (
+          <li><a href={s.corrige ?? s.sujet} target="_blank" rel="noopener" data-umami-event="annale-chapitre"><span class="n">{s.annee}</span><span><b>{s.titre}</b> <small style="color:var(--encre-2)">· exercice{s.exos.length > 1 ? 's' : ''} {s.exos.join(', ')}</small></span><span class="badge">{s.corrige ? 'Corrigé' : 'Sujet'} ↗</span></a></li>
+        ))}
+      </ul>
+      <div><a class="btn ghost" href={`/maths/annales/?chapitre=${p.chapitre.slug}`}>Les {annales.length} sujets qui en parlent</a></div>
+    </section>
+  )}
 </Chapitre>
 
 <script>
