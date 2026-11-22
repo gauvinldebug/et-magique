@@ -1,0 +1,164 @@
+# Exercices corrigés, du plus facile au type bac.
+# type d'étape : init (vert), her (orange), conc (bleu), calcul, methode, piege (rouge)
+exercices:
+  - titre: Une limite par opérations
+    difficulte: 1
+    type: application
+    enonce: |
+      Déterminer la limite de la suite définie pour tout $\corange{n} \ge 1$ par $\un = 4 - \frac{5}{\corange{n}} + \frac{1}{\corange{n}^2}$.
+    indice: Utilise les limites de référence de $\frac{1}{\corange{n}}$ et $\frac{1}{\corange{n}^2}$.
+    etapes:
+      - type: calcul
+        titre: Les limites de référence
+        texte: $\lim \frac{1}{\corange{n}} = 0$ donc $\lim \frac{5}{\corange{n}} = 0$, et $\lim \frac{1}{\corange{n}^2} = 0$.
+      - type: conc
+        titre: Conclusion
+        texte: Par somme, $\un \to 4 - 0 + 0$, donc <mark>$\lim \un = 4$</mark>. Pas de forme indéterminée ici.
+
+  - titre: Lever un « ∞ − ∞ »
+    difficulte: 1
+    type: methode
+    enonce: |
+      Déterminer la limite de $\un = \corange{n}^3 - 5\corange{n}^2 + 1$.
+    indice: $\corange{n}^3 \to +\infty$ et $5\corange{n}^2 \to +\infty$. Factorise par le terme le plus fort.
+    etapes:
+      - type: piege
+        titre: On repère la forme indéterminée
+        texte: >-
+          $\corange{n}^3 \to +\infty$ et $-5\corange{n}^2 \to -\infty$ : c'est la forme $\infty - \infty$. Les règles ne permettent pas de conclure directement.
+      - type: calcul
+        titre: On factorise par le terme le plus fort
+        texte: |
+          $$\un = \corange{n}^3\left(1 - \frac{5}{\corange{n}} + \frac{1}{\corange{n}^3}\right)$$
+          La parenthèse tend vers $1 - 0 + 0 = 1$.
+        note: la fourmi la plus rapide décide
+      - type: conc
+        titre: Conclusion
+        texte: >-
+          Par produit, $\corange{n}^3 \times (\text{quelque chose} \to 1) \to +\infty$ : <mark>$\lim \un = +\infty$</mark>.
+
+  - titre: Lever un « ∞ / ∞ »
+    difficulte: 2
+    type: methode
+    enonce: |
+      Déterminer la limite de $\un = \dfrac{3\corange{n}^2 - \corange{n}}{\corange{n}^2 + 4}$.
+    indice: Factorise en haut et en bas par $\corange{n}^2$.
+    etapes:
+      - type: piege
+        titre: La forme indéterminée
+        texte: >-
+          Le numérateur et le dénominateur tendent vers $+\infty$ : forme $\frac{\infty}{\infty}$.
+      - type: calcul
+        titre: On factorise par n²
+        texte: |
+          $$\un = \frac{\corange{n}^2\left(3 - \frac{1}{\corange{n}}\right)}{\corange{n}^2\left(1 + \frac{4}{\corange{n}^2}\right)} = \frac{3 - \frac{1}{\corange{n}}}{1 + \frac{4}{\corange{n}^2}}$$
+        note: les n² se simplifient
+      - type: conc
+        titre: Conclusion
+        texte: Le numérateur tend vers 3, le dénominateur vers 1. Par quotient, <mark>$\lim \un = 3$</mark>.
+
+  - titre: Avec des puissances
+    difficulte: 2
+    type: application
+    enonce: |
+      1. Déterminer la limite de $\un = 5 \times 0{,}8^{\corange{n}} + 2$.
+      2. Déterminer la limite de $w_{\corange{n}} = 2^{\corange{n}} - 3^{\corange{n}}$.
+    indice: >-
+      Pour la question 2, c'est un « ∞ − ∞ » : factorise par $3^{\corange{n}}$, la puissance la plus forte.
+    etapes:
+      - type: calcul
+        titre: Question 1
+        texte: $-1 < 0{,}8 < 1$, donc $0{,}8^{\corange{n}} \to 0$. Par opérations, $\un \to 5 \times 0 + 2$, donc <mark>$\lim \un = 2$</mark>.
+      - type: piege
+        titre: Question 2, la forme indéterminée
+        texte: >-
+          $2^{\corange{n}} \to +\infty$ et $3^{\corange{n}} \to +\infty$ (car $2 > 1$ et $3 > 1$) : forme $\infty - \infty$.
+      - type: calcul
+        titre: On factorise par 3ⁿ
+        texte: |
+          $$w_{\corange{n}} = 3^{\corange{n}}\left(\left(\tfrac{2}{3}\right)^{\corange{n}} - 1\right)$$
+          Or $-1 < \frac{2}{3} < 1$, donc $\left(\frac{2}{3}\right)^{\corange{n}} \to 0$ et la parenthèse tend vers $-1$.
+        note: 2ⁿ / 3ⁿ = (2/3)ⁿ
+      - type: conc
+        titre: Conclusion
+        texte: Par produit, $3^{\corange{n}} \to +\infty$ et la parenthèse $\to -1$, donc <mark>$\lim w_{\corange{n}} = -\infty$</mark>.
+
+  - titre: Les gendarmes
+    difficulte: 2
+    type: methode
+    enonce: |
+      Pour tout $\corange{n} \ge 1$, on pose $\un = \dfrac{2\corange{n} + (-1)^{\corange{n}}}{\corange{n}}$. Déterminer la limite de $\cbleu{u}$.
+    indice: $(-1)^{\corange{n}}$ vaut $1$ ou $-1$. Encadre $\un$ entre deux suites qui ont la même limite.
+    etapes:
+      - type: calcul
+        titre: On encadre
+        texte: |
+          Pour tout $\corange{n}$, $-1 \le (-1)^{\corange{n}} \le 1$. On ajoute $2\corange{n}$, puis on divise par $\corange{n} > 0$ :
+          $$2 - \frac{1}{\corange{n}} \le \un \le 2 + \frac{1}{\corange{n}}$$
+        note: diviser par n positif ne change pas le sens
+      - type: calcul
+        titre: Les deux gendarmes
+        texte: $\frac{1}{\corange{n}} \to 0$, donc $2 - \frac{1}{\corange{n}} \to 2$ et $2 + \frac{1}{\corange{n}} \to 2$. Même limite des deux côtés.
+      - type: conc
+        titre: Conclusion
+        texte: D'après le théorème des gendarmes, <mark>$\lim \un = 2$</mark>.
+
+  - titre: Par comparaison
+    difficulte: 2
+    type: application
+    enonce: |
+      On pose $\un = \corange{n}^2 + (-1)^{\corange{n}}\corange{n}$. Montrer que $\lim \un = +\infty$.
+    indice: Minore $\un$ par une suite qui tend vers $+\infty$.
+    etapes:
+      - type: calcul
+        titre: On minore
+        texte: $(-1)^{\corange{n}}\corange{n} \ge -\corange{n}$, donc $\un \ge \corange{n}^2 - \corange{n} = \corange{n}(\corange{n} - 1)$.
+      - type: calcul
+        titre: La suite qui minore
+        texte: $\corange{n} \to +\infty$ et $\corange{n} - 1 \to +\infty$, donc par produit $\corange{n}(\corange{n} - 1) \to +\infty$.
+        note: on a factorisé pour éviter ∞ − ∞
+      - type: conc
+        titre: Conclusion
+        texte: Par comparaison, <mark>$\lim \un = +\infty$</mark>.
+
+  - titre: La suite auxiliaire
+    difficulte: 3
+    type: bac
+    enonce: |
+      Soit $\cbleu{u}$ la suite définie par $\uz = 1$ et $\unn = 0{,}5\,\un + 3$. On pose $v_{\corange{n}} = \un - 6$.
+      1. Montrer que $v$ est géométrique.
+      2. Exprimer $\un$ en fonction de $\corange{n}$.
+      3. En déduire la limite de $\cbleu{u}$.
+    indice: Calcule $v_{\corange{n}+1} = \unn - 6$, remplace $\unn$, puis factorise par $0{,}5$.
+    etapes:
+      - type: calcul
+        titre: 1. v est géométrique
+        texte: |
+          $$v_{\corange{n}+1} = \unn - 6 = 0{,}5\,\un + 3 - 6 = 0{,}5\,\un - 3 = 0{,}5\left(\un - 6\right) = 0{,}5\,v_{\corange{n}}$$
+          $v$ est géométrique de raison $0{,}5$, de premier terme $v_0 = \uz - 6 = -5$.
+        note: 0,5 × 6 = 3, d'où la factorisation
+      - type: calcul
+        titre: 2. Formule explicite
+        texte: $v_{\corange{n}} = -5 \times 0{,}5^{\corange{n}}$, et $\un = v_{\corange{n}} + 6 = 6 - 5 \times 0{,}5^{\corange{n}}$.
+      - type: conc
+        titre: 3. La limite
+        texte: >-
+          $-1 < 0{,}5 < 1$, donc $0{,}5^{\corange{n}} \to 0$. Par opérations, <mark>$\lim \un = 6$</mark> : la suite converge vers 6.
+
+  - titre: Le piège du majorant
+    difficulte: 2
+    type: piege
+    enonce: |
+      Un élève écrit : « La suite $\un = 3 - \left(\frac{1}{3}\right)^{\corange{n}}$ est croissante et majorée par 10, donc elle converge vers 10. » Où est l'erreur ?
+    indice: Le théorème de la limite monotone dit-il combien vaut la limite ?
+    etapes:
+      - type: piege
+        titre: L'erreur
+        texte: Croissante et majorée, c'est vrai, donc la suite **converge**. Mais le théorème dit seulement que la limite existe. Il ne dit pas qu'elle est égale au majorant.
+        note: la barrière n'est pas le drapeau
+      - type: calcul
+        titre: La vraie limite
+        texte: $\left(\frac{1}{3}\right)^{\corange{n}} \to 0$, donc $\un \to 3$. La suite est majorée par 10, mais aussi par 3, par 4, par 100…
+      - type: conc
+        titre: Conclusion
+        texte: <mark>$\lim \un = 3$</mark>, pas 10. Pour trouver la limite, il faut un calcul (ici, la formule explicite).

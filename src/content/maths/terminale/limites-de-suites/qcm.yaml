@@ -1,0 +1,83 @@
+questions:
+  - question: Dire que $\lim \un = 3$, c'est dire que…
+    choix:
+      - $\un$ finit par être égal à 3
+      - tout intervalle ouvert contenant 3 contient tous les $\un$ à partir d'un certain rang
+      - $\un \le 3$ pour tout $\corange{n}$
+      - $\un$ s'approche de 3 à chaque terme
+    bonne: 1
+    explication: C'est la bande autour du drapeau. La suite n'a pas besoin d'atteindre 3, ni d'être en dessous.
+    revoir: video
+
+  - question: Quelle est la limite de $0{,}9^{\corange{n}}$ ?
+    choix: ['$0$', '$1$', '$+\infty$', "pas de limite"]
+    bonne: 0
+    explication: $-1 < 0{,}9 < 1$, donc $0{,}9^{\corange{n}} \to 0$.
+    revoir: cours
+
+  - question: Quelle est la limite de $1{,}01^{\corange{n}}$ ?
+    choix: ['$0$', '$1$', '$1{,}01$', '$+\infty$']
+    bonne: 3
+    explication: $1{,}01 > 1$, donc $1{,}01^{\corange{n}} \to +\infty$, même si ça monte lentement au début.
+    revoir: cours
+
+  - question: Laquelle n'est PAS une forme indéterminée ?
+    choix: ['$\infty - \infty$', '$\infty + \infty$', '$0 \times \infty$', '$\frac{\infty}{\infty}$']
+    bonne: 1
+    explication: $+\infty + (+\infty) = +\infty$. Les quatre formes indéterminées sont $\infty - \infty$, $0 \times \infty$, $\frac{\infty}{\infty}$ et $\frac{0}{0}$.
+    revoir: video
+
+  - question: Pour lever l'indétermination de $\corange{n}^2 - 7\corange{n}$, on…
+    choix:
+      - écrit que $\infty - \infty = 0$
+      - factorise par $\corange{n}^2$
+      - factorise par 7
+      - calcule les premiers termes
+    bonne: 1
+    explication: >-
+      On factorise par le terme le plus fort, $\corange{n}^2$ : $\corange{n}^2\left(1 - \frac{7}{\corange{n}}\right) \to +\infty$.
+    revoir: cours
+
+  - question: Quelle est la limite de $\dfrac{4\corange{n} + 1}{2\corange{n} - 3}$ ?
+    choix: ['$4$', '$2$', '$-\frac{1}{3}$', '$+\infty$']
+    bonne: 1
+    explication: >-
+      On factorise par $\corange{n}$ en haut et en bas : $\frac{4 + 1/\corange{n}}{2 - 3/\corange{n}} \to \frac{4}{2} = 2$.
+    revoir: exercices
+
+  - question: Une suite est croissante et majorée par 5. Alors…
+    choix:
+      - elle converge vers 5
+      - elle converge, vers une limite inférieure ou égale à 5
+      - elle tend vers $+\infty$
+      - on ne peut rien dire
+    bonne: 1
+    explication: La barrière n'est pas le drapeau. Le théorème de la limite monotone garantit la convergence, pas la valeur de la limite.
+    revoir: video
+
+  - question: On sait que $1 - \frac{1}{\corange{n}} \le \un \le 1 + \frac{2}{\corange{n}}$. Alors…
+    choix:
+      - $\lim \un = 1$
+      - $\lim \un = 2$
+      - on ne peut rien dire, les bornes sont différentes
+      - $\cbleu{u}$ diverge
+    bonne: 0
+    explication: Les deux gendarmes tendent tous les deux vers 1, même s'ils ne sont pas égaux. D'après le théorème des gendarmes, $\lim \un = 1$.
+    revoir: cours
+
+  - question: Une suite croissante…
+    choix:
+      - tend toujours vers $+\infty$
+      - converge toujours
+      - converge si elle est majorée, tend vers $+\infty$ sinon
+      - n'a jamais de limite
+    bonne: 2
+    explication: Notre suite $3 - \left(\frac{1}{3}\right)^{\corange{n}}$ est croissante et tend vers 3. Sans majorant, une suite croissante tend vers $+\infty$.
+    revoir: cours
+
+  - question: La suite $(-1)^{\corange{n}}$…
+    choix: ['tend vers 0', 'tend vers 1', "n'a pas de limite", 'tend vers $-1$']
+    bonne: 2
+    explication: >-
+      Elle vaut 1, −1, 1, −1… Aucun drapeau ne marche : elle diverge sans limite.
+    revoir: video
