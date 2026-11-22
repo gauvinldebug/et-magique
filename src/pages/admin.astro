@@ -25,6 +25,7 @@ const umamiShare = import.meta.env.PUBLIC_UMAMI_SHARE_URL;
         <button type="button" role="tab" aria-selected="true" data-tab="dem">Demandes <span class="cnt" data-cnt></span></button>
         <button type="button" role="tab" aria-selected="false" data-tab="stats">Statistiques</button>
         <button type="button" role="tab" aria-selected="false" data-tab="ins">Inscriptions</button>
+        <button type="button" role="tab" aria-selected="false" data-tab="mails">E-mails</button>
       </div>
 
       <section class="wrap adm-body" data-panel="dem">
@@ -53,6 +54,11 @@ const umamiShare = import.meta.env.PUBLIC_UMAMI_SHARE_URL;
         <div class="tiles" data-ins></div>
         <p><a class="btn ghost" href="#" data-csv>Exporter en CSV</a></p>
         <p class="fnote">Les inscrits confirment leur adresse par e‑mail (Brevo). Moins de 15 ans : c'est l'adresse d'un parent.</p>
+      </section>
+
+      <section class="wrap adm-body" data-panel="mails" hidden>
+        <p class="fnote">Rien ne part tout seul, sauf la confirmation et la bienvenue à l'inscription. Pour une annonce ou un planning : <b>Test</b> l'envoie seulement à ton adresse d'envoi, puis <b>Envoyer aux inscrits</b>. Personne ne reçoit deux fois le même e-mail.</p>
+        <div class="inbox" data-mails></div>
       </section>
     </div>
   </div>
@@ -90,6 +96,10 @@ const umamiShare = import.meta.env.PUBLIC_UMAMI_SHARE_URL;
   .tile small { color: var(--encre-2); }
   .tile b { font-family: var(--f-titre); font-size: 1.8rem; }
   .panel { background: var(--carte); border: 1px solid var(--trait); border-radius: 12px; padding: 18px; display: grid; gap: 10px; }
+  .mrow { display: grid; grid-template-columns: 1fr auto; gap: 8px 14px; align-items: center; background: var(--carte); border: 1px solid var(--trait); border-radius: 12px; padding: 14px; }
+  .mrow .meta { font-size: .82rem; color: var(--encre-2); }
+  .mrow .ctrl { display: flex; gap: 8px; flex-wrap: wrap; }
+  .mrow [data-res] { grid-column: 1 / -1; margin: 0; font-size: .88rem; }
   .adm-frame { width: 100%; height: 80vh; border: 1px solid var(--trait); border-radius: 12px; background: #fff; }
 </style>
 
@@ -151,10 +161,47 @@ const umamiShare = import.meta.env.PUBLIC_UMAMI_SHARE_URL;
       (i.brevo ? `<p class="aide" style="grid-column:1/-1">Dernière erreur d'envoi d'e-mail (${esc(new Date(i.brevo.date).toLocaleString('fr-FR'))}) : <b>${esc(i.brevo.detail)}</b> ${esc(i.brevo.message ?? '')}</p>` : '');
   }
 
+  type M = { id: string; type: string; nom: string; pret: boolean; attente?: string; envoyes: number; cible: number };
+  async function chargerMails() {
+    const box = document.querySelector<HTMLElement>('[data-mails]')!;
+    const j = await (await api('/api/admin/emails')).json();
+    const liste: M[] = j.emails ?? [];
+    box.innerHTML = liste.map((m) => `
+      <div class="mrow" data-id="${esc(m.id)}">
+        <div><b>${esc(m.nom)}</b><div class="meta">${m.type === 'test' ? 'aperçu, envoyé seulement à toi' : `${m.envoyes} envoyé(s) · ${m.cible} inscrit(s) concerné(s)${m.pret ? '' : ` · <span style="color:var(--piege)">${esc(m.attente ?? 'pas prêt')}</span>`}`}</div></div>
+        <div class="ctrl"><button type="button" class="btn ghost" data-test>Test</button>${m.type === 'test' ? '' : `<button type="button" class="btn" data-go ${m.pret && m.cible > m.envoyes ? '' : 'disabled'}>Envoyer aux inscrits</button>`}</div>
+        <p data-res hidden></p>
+      </div>`).join('');
+    box.querySelectorAll<HTMLElement>('.mrow').forEach((row) => {
+      const id = row.dataset.id!;
+      const res = row.querySelector<HTMLElement>('[data-res]')!;
+      const dire = (ok: boolean, t: string) => { res.hidden = false; res.className = ok ? 'msg-ok' : 'msg-err'; res.textContent = t; };
+      row.querySelector('[data-test]')!.addEventListener('click', async () => {
+        const j = await (await api('/api/admin/emails', { method: 'POST', body: JSON.stringify({ id, test: true }) })).json();
+        dire(j.ok, j.ok ? `Test envoyé à ${j.test}.` : j.erreur);
+      });
+      row.querySelector<HTMLButtonElement>('[data-go]')?.addEventListener('click', async (e) => {
+        const btn = e.currentTarget as HTMLButtonElement;
+        const m = liste.find((x) => x.id === id)!;
+        if (!confirm(`Envoyer « ${m.nom} » à ${m.cible - m.envoyes} inscrit(s) ? Impossible d'annuler.`)) return;
+        btn.disabled = true;
+        let total = 0;
+        for (;;) {
+          const j = await (await api('/api/admin/emails', { method: 'POST', body: JSON.stringify({ id }) })).json();
+          total += j.envoyes ?? 0;
+          if (!j.ok) { dire(false, j.erreur); break; }
+          dire(true, `${total} envoyé(s), ${j.reste} restant(s)…`);
+          if (!j.reste) { dire(true, `Terminé : ${total} e-mail(s) envoyé(s).`); break; }
+        }
+        chargerMails().catch(() => {});
+      });
+    });
+  }
+
   function afficher() {
     const ok = !!get();
     login.hidden = ok; app.hidden = !ok; deco.hidden = !ok;
-    if (ok) charger().catch(() => {});
+    if (ok) { charger().catch(() => {}); chargerMails().catch(() => {}); }
   }
 
   login.addEventListener('submit', async (e) => {
