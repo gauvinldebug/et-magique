@@ -1,0 +1,121 @@
+# Exercices corrigés, du plus facile au type contrôle.
+# type d'étape : init (vert), her (orange), conc (bleu), calcul, methode, piege (rouge)
+exercices:
+  - titre: Simplifier
+    difficulte: 1
+    type: application
+    enonce: |
+      Simplifier.
+      1. $A = \mathrm{e}^{4} \times \mathrm{e}^{-1}$
+      2. $B = \dfrac{\mathrm{e}^{3\corange{x}} \times \mathrm{e}^{-\corange{x}}}{\mathrm{e}^{2}}$
+      3. $C = (\mathrm{e}^{\corange{x}} + \mathrm{e}^{-\corange{x}})^2$
+    indice: Question 3, identité remarquable, et $\mathrm{e}^{\corange{x}}\mathrm{e}^{-\corange{x}} = 1$.
+    etapes:
+      - type: calcul
+        titre: Question 1
+        texte: $A = \mathrm{e}^{4 - 1} = \mathrm{e}^{3}$.
+      - type: calcul
+        titre: Question 2
+        texte: $B = \mathrm{e}^{3\corange{x} - \corange{x} - 2} = \mathrm{e}^{2\corange{x} - 2}$.
+      - type: calcul
+        titre: Question 3
+        texte: $C = \mathrm{e}^{2\corange{x}} + 2\mathrm{e}^{\corange{x}}\mathrm{e}^{-\corange{x}} + \mathrm{e}^{-2\corange{x}} = \mathrm{e}^{2\corange{x}} + 2 + \mathrm{e}^{-2\corange{x}}$.
+        note: e^x × e^-x = e^0 = 1
+
+  - titre: Équations et inéquations
+    difficulte: 1
+    type: methode
+    enonce: |
+      Résoudre dans $\mathbb{R}$.
+      1. $\mathrm{e}^{\corange{x}^2 - 3} = \mathrm{e}^{-2\corange{x}}$
+      2. $\mathrm{e}^{5\corange{x} - 2} < 1$
+    indice: $1 = \mathrm{e}^{0}$.
+    etapes:
+      - type: calcul
+        titre: Question 1
+        texte: >-
+          $\corange{x}^2 - 3 = -2\corange{x} \iff \corange{x}^2 + 2\corange{x} - 3 = 0$. $\Delta = 16$, les solutions sont $1$ et $-3$.
+      - type: calcul
+        titre: Question 2
+        texte: >-
+          $\mathrm{e}^{5\corange{x} - 2} < \mathrm{e}^{0} \iff 5\corange{x} - 2 < 0 \iff \corange{x} < \frac{2}{5}$.
+        note: exp est strictement croissante
+
+  - titre: Dériver avec l'exponentielle
+    difficulte: 2
+    type: application
+    enonce: |
+      Dériver les fonctions suivantes sur $\mathbb{R}$.
+      1. $\cbleu{f}(\corange{x}) = 3\mathrm{e}^{2\corange{x}} - 5\corange{x}$
+      2. $g(\corange{x}) = (\corange{x}^2 + 1)\mathrm{e}^{\corange{x}}$
+      3. $h(\corange{x}) = \dfrac{\mathrm{e}^{\corange{x}}}{\corange{x}^2 + 1}$
+    indice: Produit et quotient. Factorise par $\mathrm{e}^{\corange{x}}$ à la fin.
+    etapes:
+      - type: calcul
+        titre: Question 1
+        texte: $\cbleu{f}'(\corange{x}) = 6\mathrm{e}^{2\corange{x}} - 5$.
+      - type: calcul
+        titre: Question 2
+        texte: $g'(\corange{x}) = 2\corange{x}\mathrm{e}^{\corange{x}} + (\corange{x}^2 + 1)\mathrm{e}^{\corange{x}} = (\corange{x}^2 + 2\corange{x} + 1)\mathrm{e}^{\corange{x}} = (\corange{x} + 1)^2\mathrm{e}^{\corange{x}}$.
+      - type: calcul
+        titre: Question 3
+        texte: >-
+          $h'(\corange{x}) = \frac{\mathrm{e}^{\corange{x}}(\corange{x}^2 + 1) - \mathrm{e}^{\corange{x}} \times 2\corange{x}}{(\corange{x}^2 + 1)^2} = \frac{(\corange{x} - 1)^2\mathrm{e}^{\corange{x}}}{(\corange{x}^2 + 1)^2}$.
+        note: on reconnaît (x - 1)²
+
+  - titre: Étude de variations
+    difficulte: 2
+    type: methode
+    enonce: |
+      Soit $\cbleu{f}(\corange{x}) = (2\corange{x} - 4)\mathrm{e}^{\corange{x}}$ sur $\mathbb{R}$.
+      1. Calculer $\cbleu{f}'(\corange{x})$.
+      2. Dresser le tableau de variations de $\cbleu{f}$.
+    indice: $\cbleu{f}'(\corange{x})$ est du signe de son facteur affine.
+    etapes:
+      - type: calcul
+        titre: Question 1
+        texte: $\cbleu{f}'(\corange{x}) = 2\mathrm{e}^{\corange{x}} + (2\corange{x} - 4)\mathrm{e}^{\corange{x}} = (2\corange{x} - 2)\mathrm{e}^{\corange{x}}$.
+      - type: methode
+        titre: Le signe
+        texte: $\mathrm{e}^{\corange{x}} > 0$, donc $\cbleu{f}'$ est du signe de $2\corange{x} - 2$, négatif avant 1, positif après.
+        note: l'exponentielle ne change jamais le signe
+      - type: conc
+        titre: Question 2
+        texte: <mark>$\cbleu{f}$ est décroissante sur $]-\infty\,;1]$, croissante sur $[1\,;+\infty[$</mark>, avec un minimum $\cbleu{f}(1) = -2\mathrm{e}$.
+
+  - titre: Le piège de la somme
+    difficulte: 2
+    type: piege
+    enonce: |
+      Un élève écrit : « $\mathrm{e}^{\corange{x}} + \mathrm{e}^{\corange{x}} = \mathrm{e}^{2\corange{x}}$ ». A-t-il raison ? Tester avec $\corange{x} = 0$, puis corriger.
+    indice: Que vaut chaque membre pour $\corange{x} = 0$ ?
+    etapes:
+      - type: calcul
+        titre: Le test
+        texte: Pour $\corange{x} = 0$, à gauche $1 + 1 = 2$, à droite $\mathrm{e}^0 = 1$. L'égalité est fausse.
+      - type: piege
+        titre: L'erreur
+        texte: L'élève a confondu avec $\mathrm{e}^{\corange{x}} \times \mathrm{e}^{\corange{x}} = \mathrm{e}^{2\corange{x}}$.
+      - type: conc
+        titre: La correction
+        texte: <mark>$\mathrm{e}^{\corange{x}} + \mathrm{e}^{\corange{x}} = 2\mathrm{e}^{\corange{x}}$</mark>, comme $a + a = 2a$.
+
+  - titre: Médicament dans le sang
+    difficulte: 3
+    type: bac
+    enonce: |
+      La concentration d'un médicament dans le sang (en mg/L) est $C(t) = 20\corange{t}\,\mathrm{e}^{-0{,}5\corange{t}}$, pour $\corange{t} \ge 0$ en heures.
+      1. Montrer que $C'(\corange{t}) = (20 - 10\corange{t})\mathrm{e}^{-0{,}5\corange{t}}$.
+      2. À quel instant la concentration est-elle maximale ? Donner cette concentration à $0{,}1$ près.
+    indice: Dérivée d'un produit avec $u = 20\corange{t}$ et $v = \mathrm{e}^{-0{,}5\corange{t}}$.
+    etapes:
+      - type: calcul
+        titre: Question 1
+        texte: >-
+          $C'(\corange{t}) = 20\mathrm{e}^{-0{,}5\corange{t}} + 20\corange{t} \times (-0{,}5)\mathrm{e}^{-0{,}5\corange{t}} = (20 - 10\corange{t})\mathrm{e}^{-0{,}5\corange{t}}$.
+      - type: methode
+        titre: Le signe
+        texte: $C'(\corange{t})$ est du signe de $20 - 10\corange{t}$, positif sur $[0\,;2]$, négatif ensuite.
+      - type: conc
+        titre: Question 2
+        texte: <mark>La concentration est maximale au bout de 2 heures</mark>, et vaut $C(2) = 40\mathrm{e}^{-1} \approx 14{,}7$ mg/L.
