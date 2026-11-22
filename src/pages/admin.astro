@@ -1,0 +1,183 @@
+---
+// Espace admin privé : statistiques (Umami) et boîte des demandes.
+// La page est publique mais vide : tout passe par l'API, protégée par ADMIN_PASSWORD.
+import Base from '../layouts/Base.astro';
+import Logo from '../components/Logo.astro';
+const umamiShare = import.meta.env.PUBLIC_UMAMI_SHARE_URL;
+---
+<Base titre="Admin" indexer={false} sansEntete>
+  <div class="adm">
+    <div class="adm-top wrap">
+      <Logo />
+      <span class="adm-badge">Admin</span>
+      <button type="button" class="btn ghost" data-deco hidden style="margin-left:auto">Se déconnecter</button>
+    </div>
+
+    <form class="form wrap adm-login" data-login>
+      <h1 style="font-size:1.6rem">Connexion</h1>
+      <div><label for="mdp">Mot de passe</label><input id="mdp" type="password" autocomplete="current-password" required /></div>
+      <button class="btn" type="submit">Entrer</button>
+      <p data-login-err class="msg-err" hidden></p>
+    </form>
+
+    <div data-app hidden>
+      <div class="wrap adm-tabs" role="tablist">
+        <button type="button" role="tab" aria-selected="true" data-tab="dem">Demandes <span class="cnt" data-cnt></span></button>
+        <button type="button" role="tab" aria-selected="false" data-tab="stats">Statistiques</button>
+        <button type="button" role="tab" aria-selected="false" data-tab="ins">Inscriptions</button>
+      </div>
+
+      <section class="wrap adm-body" data-panel="dem">
+        <div class="period" data-filtres>
+          <button type="button" class="on" data-f="nouvelle">À lire</button>
+          <button type="button" data-f="actives">En cours</button>
+          <button type="button" data-f="fait">Faites</button>
+          <button type="button" data-f="toutes">Toutes</button>
+        </div>
+        <div class="inbox" data-inbox></div>
+        <p class="fnote">Une demande de chapitre n'apparaît sur le tableau public que si tu lui donnes un <b>titre public</b> et le statut Prévu, En cours ou Fait. Les erreurs et les questions restent privées.</p>
+      </section>
+
+      <section class="wrap adm-body" data-panel="stats" hidden>
+        {umamiShare ? (
+          <iframe src={umamiShare} title="Statistiques Umami" class="adm-frame" loading="lazy"></iframe>
+        ) : (
+          <div class="panel">
+            <h2>Les statistiques arrivent avec Umami</h2>
+            <p>Crée le site sur Umami Cloud, puis ajoute dans Netlify les variables <code>PUBLIC_UMAMI_ID</code> et <code>PUBLIC_UMAMI_SHARE_URL</code> (le lien de partage du tableau de bord). Les stats s'afficheront ici : visiteurs, pages, provenance (YouTube, QR code, Google) et le parcours vidéo → exercices → QCM.</p>
+          </div>
+        )}
+      </section>
+
+      <section class="wrap adm-body" data-panel="ins" hidden>
+        <div class="tiles" data-ins></div>
+        <p><a class="btn ghost" href="#" data-csv>Exporter en CSV</a></p>
+        <p class="fnote">Les inscrits confirment leur adresse par e‑mail (Brevo). Moins de 15 ans : c'est l'adresse d'un parent.</p>
+      </section>
+    </div>
+  </div>
+</Base>
+
+<style is:global>
+  .adm { min-height: 100vh; background: var(--papier); padding-bottom: 60px; }
+  .adm-top { display: flex; align-items: center; gap: 14px; height: 64px; border-bottom: 1px solid var(--trait); }
+  .adm-top .wordmark { font-size: 1.2rem; }
+  .adm-badge { font-size: .76rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; background: #FFE066; color: #1B2433; padding: 2px 8px; border-radius: 5px; }
+  .adm-login { padding-top: 60px; }
+  .adm-tabs { display: flex; gap: 4px; border-bottom: 2px solid var(--trait); margin-top: 20px; }
+  .adm-tabs button { background: none; border: 0; padding: 10px 14px; font-weight: 600; color: var(--encre-2); border-bottom: 3px solid transparent; margin-bottom: -2px; cursor: pointer; }
+  .adm-tabs button[aria-selected="true"] { color: var(--terme); border-bottom-color: var(--terme); }
+  .cnt { font-size: .72rem; background: var(--piege); color: #fff; border-radius: 999px; padding: 0 7px; margin-left: 4px; }
+  .cnt:empty { display: none; }
+  .adm-body { display: grid; gap: 16px; padding-top: 20px; }
+  .period { display: flex; flex-wrap: wrap; gap: 6px; }
+  .period button { border: 1px solid var(--trait); background: var(--carte); border-radius: 999px; padding: 4px 12px; font-size: .86rem; cursor: pointer; }
+  .period button.on { background: var(--encre); color: var(--papier); border-color: var(--encre); }
+  .inbox { display: grid; gap: 10px; }
+  .irow { display: grid; grid-template-columns: auto 1fr auto; gap: 8px 14px; align-items: start; background: var(--carte); border: 1px solid var(--trait); border-radius: 12px; padding: 14px; }
+  .irow p { margin: 0; white-space: pre-wrap; overflow-wrap: anywhere; }
+  .irow .meta { font-size: .8rem; color: var(--encre-2); }
+  .irow .ctrl { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+  .irow input, .irow select { height: 34px; border: 1px solid var(--trait); border-radius: 8px; background: var(--feuille); color: var(--encre); padding: 0 10px; font: inherit; font-size: .88rem; }
+  .irow input { flex: 1; min-width: 180px; }
+  .ty2 { font-size: .7rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; padding: 2px 8px; border-radius: 5px; background: var(--terme-doux); color: var(--terme); }
+  .ty2.erreur { background: var(--piege-doux); color: var(--piege); }
+  .ty2.question { background: var(--indice-doux); color: var(--indice); }
+  .ty2.autre { background: var(--papier); color: var(--encre-2); }
+  .fnote { font-size: .86rem; color: var(--encre-2); }
+  .tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; }
+  .tile { background: var(--carte); border: 1px solid var(--trait); border-radius: 12px; padding: 14px; display: grid; gap: 4px; }
+  .tile small { color: var(--encre-2); }
+  .tile b { font-family: var(--f-titre); font-size: 1.8rem; }
+  .panel { background: var(--carte); border: 1px solid var(--trait); border-radius: 12px; padding: 18px; display: grid; gap: 10px; }
+  .adm-frame { width: 100%; height: 80vh; border: 1px solid var(--trait); border-radius: 12px; background: #fff; }
+</style>
+
+<script>
+  const K = 'admin-jeton';
+  const get = () => { try { return sessionStorage.getItem(K); } catch { return null; } };
+  const set = (v: string | null) => { try { v ? sessionStorage.setItem(K, v) : sessionStorage.removeItem(K); } catch { /* rien */ } };
+  const login = document.querySelector<HTMLFormElement>('[data-login]')!;
+  const app = document.querySelector<HTMLElement>('[data-app]')!;
+  const deco = document.querySelector<HTMLButtonElement>('[data-deco]')!;
+  const esc = (s: string) => String(s ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]!);
+
+  async function api(path: string, init: RequestInit = {}) {
+    const r = await fetch(path, { ...init, headers: { 'content-type': 'application/json', authorization: `Bearer ${get()}`, ...(init.headers ?? {}) } });
+    if (r.status === 401) { set(null); afficher(); throw new Error('401'); }
+    return r;
+  }
+
+  type D = { id: number; type: string; niveau: string; message: string; page?: string; email?: string; date: string; statut: string; titrePublic?: string; notePublique?: string; votes: number };
+  let demandes: D[] = [];
+  let filtre = 'nouvelle';
+  const STATUTS: [string, string][] = [['nouvelle', 'Nouvelle'], ['prevu', 'Prévu'], ['en-cours', 'En cours'], ['fait', 'Faite'], ['refusee', 'Refusée']];
+
+  function rendre() {
+    const box = document.querySelector<HTMLElement>('[data-inbox]')!;
+    const liste = demandes.filter((d) => filtre === 'toutes' || (filtre === 'actives' ? ['prevu', 'en-cours'].includes(d.statut) : d.statut === filtre));
+    document.querySelector<HTMLElement>('[data-cnt]')!.textContent = String(demandes.filter((d) => d.statut === 'nouvelle').length || '');
+    box.innerHTML = liste.length ? liste.map((d) => `
+      <div class="irow" data-id="${d.id}">
+        <span class="ty2 ${d.type}">${esc(d.type)}</span>
+        <div><p>${esc(d.message)}</p><div class="meta">n° ${d.id} · ${esc(d.niveau)} · ${new Date(d.date).toLocaleString('fr-FR')}${d.votes > 1 ? ` · ${d.votes} élèves` : ''}${d.page ? ` · <a href="${esc(d.page)}">${esc(d.page)}</a>` : ''}${d.email ? ` · <a href="mailto:${esc(d.email)}">${esc(d.email)}</a>` : ''}</div></div>
+        <select aria-label="Statut" data-statut>${STATUTS.map(([v, t]) => `<option value="${v}" ${v === d.statut ? 'selected' : ''}>${t}</option>`).join('')}</select>
+        ${d.type === 'chapitre' ? `<div class="ctrl"><input data-titre placeholder="Titre public, ex. « Limites de suites (Tle) »" value="${esc(d.titrePublic ?? '')}" maxlength="80"><input data-note placeholder="Note publique, ex. « en décembre »" value="${esc(d.notePublique ?? '')}" maxlength="60"><button type="button" class="btn" data-save>Enregistrer</button></div>` : ''}
+      </div>`).join('') : '<p class="fnote">Rien ici.</p>';
+    box.querySelectorAll<HTMLElement>('.irow').forEach((row) => {
+      const id = Number(row.dataset.id);
+      const save = async (extra: object) => {
+        const r = await api('/api/admin/demandes', { method: 'PATCH', body: JSON.stringify({ id, ...extra }) });
+        const j = await r.json();
+        if (j.ok) { demandes = demandes.map((d) => (d.id === id ? j.demande : d)); rendre(); }
+      };
+      row.querySelector<HTMLSelectElement>('[data-statut]')!.addEventListener('change', (e) => save({ statut: (e.target as HTMLSelectElement).value }));
+      row.querySelector('[data-save]')?.addEventListener('click', () => save({
+        titrePublic: row.querySelector<HTMLInputElement>('[data-titre]')!.value,
+        notePublique: row.querySelector<HTMLInputElement>('[data-note]')!.value,
+      }));
+    });
+  }
+
+  async function charger() {
+    const r = await api('/api/admin/demandes');
+    demandes = (await r.json()).demandes ?? [];
+    rendre();
+    const i = await (await api('/api/admin/inscriptions')).json();
+    const noms: Record<string, string> = { terminale: 'Terminale', premiere: 'Première', '3e': '3e', autre: 'Autre' };
+    document.querySelector<HTMLElement>('[data-ins]')!.innerHTML =
+      `<div class="tile"><small>Inscrits</small><b>${i.total ?? 0}</b></div><div class="tile"><small>dont moins de 15 ans</small><b>${i.moins15 ?? 0}</b></div>` +
+      Object.entries(i.parNiveau ?? {}).map(([k, v]) => `<div class="tile"><small>${esc(noms[k] ?? k)}</small><b>${v}</b></div>`).join('');
+  }
+
+  function afficher() {
+    const ok = !!get();
+    login.hidden = ok; app.hidden = !ok; deco.hidden = !ok;
+    if (ok) charger().catch(() => {});
+  }
+
+  login.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const err = login.querySelector<HTMLElement>('[data-login-err]')!;
+    const r = await fetch('/api/admin/connexion', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ motDePasse: (document.getElementById('mdp') as HTMLInputElement).value }) }).catch(() => null);
+    const j = r ? await r.json().catch(() => ({})) : { erreur: 'Serveur injoignable.' };
+    if (j.ok) { set(j.jeton); afficher(); } else { err.hidden = false; err.textContent = j.erreur ?? 'Erreur'; }
+  });
+  deco.addEventListener('click', () => { set(null); afficher(); });
+  document.querySelectorAll<HTMLButtonElement>('[data-tab]').forEach((t) => t.addEventListener('click', () => {
+    document.querySelectorAll('[data-tab]').forEach((x) => x.setAttribute('aria-selected', String(x === t)));
+    document.querySelectorAll<HTMLElement>('[data-panel]').forEach((p) => (p.hidden = p.dataset.panel !== t.dataset.tab));
+  }));
+  document.querySelectorAll<HTMLButtonElement>('[data-f]').forEach((b) => b.addEventListener('click', () => {
+    filtre = b.dataset.f!;
+    document.querySelectorAll('[data-f]').forEach((x) => x.classList.toggle('on', x === b));
+    rendre();
+  }));
+  document.querySelector('[data-csv]')!.addEventListener('click', async (e) => {
+    e.preventDefault();
+    const r = await api('/api/admin/inscriptions?format=csv');
+    const url = URL.createObjectURL(await r.blob());
+    const a = document.createElement('a'); a.href = url; a.download = 'inscriptions.csv'; a.click(); URL.revokeObjectURL(url);
+  });
+  afficher();
+</script>

@@ -1,0 +1,55 @@
+---
+import '@fontsource-variable/inter';
+import '@fontsource-variable/bricolage-grotesque';
+import '@fontsource/caveat/600.css';
+import 'katex/dist/katex.min.css';
+import '../styles/global.css';
+import Entete from '../components/Entete.astro';
+import Pied from '../components/Pied.astro';
+import { SITE } from '../data/site';
+
+interface Props {
+  titre: string;
+  description?: string;
+  matiere?: string;
+  niveau?: string;
+  actif?: string;
+  indexer?: boolean; // false : pas dans Google ni dans la recherche du site
+  sansEntete?: boolean;
+}
+const { titre, description = 'Les maths de la 6e à la terminale, enfin claires. Vidéos, cours, exercices corrigés pas à pas et QCM. Gratuit, sans compte.', matiere = 'maths', niveau, actif, indexer = true, sansEntete = false } = Astro.props;
+const canonical = new URL(Astro.url.pathname, SITE.url);
+const umamiId = import.meta.env.PUBLIC_UMAMI_ID;
+const umamiSrc = import.meta.env.PUBLIC_UMAMI_SRC || 'https://cloud.umami.is/script.js';
+const pleinTitre = titre.includes('Magique') ? titre : `${titre} · Maths et Magique`;
+---
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <script is:inline>document.documentElement.classList.add('js')</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>{pleinTitre}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#1B2230" media="(prefers-color-scheme: dark)" />
+    <meta property="og:title" content={pleinTitre} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:url" content={canonical} />
+    {!indexer && <meta name="robots" content="noindex" />}
+    {umamiId && <script defer src={umamiSrc} data-website-id={umamiId} data-domains="etmagique.fr,www.etmagique.fr"></script>}
+    <slot name="head" />
+  </head>
+  <body>
+    <a class="sr-only" href="#contenu">Aller au contenu</a>
+    {!sansEntete && <Entete matiere={matiere} niveau={niveau} actif={actif} />}
+    <main id="contenu" data-pagefind-body={indexer ? '' : undefined}>
+      <slot />
+    </main>
+    {!sansEntete && <Pied />}
+  </body>
+</html>

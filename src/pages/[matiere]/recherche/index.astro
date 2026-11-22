@@ -1,0 +1,48 @@
+---
+import Base from '../../../layouts/Base.astro';
+import { cheminsMatieres } from '../../../lib/matieres-paths';
+export const getStaticPaths = cheminsMatieres;
+const { matiere } = Astro.props;
+---
+<Base titre="Rechercher" matiere={matiere.slug} actif="recherche" indexer={false}>
+  <div class="page-feuille cahier">
+    <div class="feuille">
+      <h1>Rechercher</h1>
+      <form class="s-search" role="search" data-search style="margin:0;max-width:640px">
+        <input type="search" name="q" placeholder="récurrence, fractions, Pythagore…" aria-label="Rechercher" autofocus />
+        <button type="submit">Chercher</button>
+      </form>
+      <ul class="liste-ch" data-results style="max-width:720px"></ul>
+      <p class="aide" data-info></p>
+    </div>
+  </div>
+</Base>
+
+<script>
+  const form = document.querySelector<HTMLFormElement>('[data-search]')!;
+  const input = form.querySelector('input')!;
+  const list = document.querySelector<HTMLElement>('[data-results]')!;
+  const info = document.querySelector<HTMLElement>('[data-info]')!;
+  let pf: any;
+  const esc = (s: string) => s.replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]!);
+  async function chercher(q: string) {
+    if (!q.trim()) { list.innerHTML = ''; info.textContent = ''; return; }
+    try {
+      const chemin = '/pagefind/pagefind.js';
+      pf ??= await import(/* @vite-ignore */ chemin);
+    } catch {
+      info.textContent = "La recherche marche une fois le site construit (npm run build).";
+      return;
+    }
+    const r = await pf.debouncedSearch(q, {}, 200);
+    if (!r) return;
+    const data = await Promise.all(r.results.slice(0, 12).map((x: any) => x.data()));
+    list.innerHTML = data.map((d: any) => `<li><a href="${esc(d.url)}"><span class="n">›</span><span><b>${esc(d.meta.title ?? '')}</b><br><small style="color:var(--encre-2)">${d.excerpt}</small></span><span></span></a></li>`).join('');
+    info.textContent = data.length ? '' : 'Rien trouvé. Ce chapitre n’existe peut-être pas encore : demande-le !';
+  }
+  const q0 = new URLSearchParams(location.search).get('q') ?? '';
+  input.value = q0;
+  chercher(q0);
+  input.addEventListener('input', () => chercher(input.value));
+  form.addEventListener('submit', (e) => { e.preventDefault(); history.replaceState(null, '', `?q=${encodeURIComponent(input.value)}`); chercher(input.value); });
+</script>

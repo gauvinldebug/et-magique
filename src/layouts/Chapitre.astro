@@ -1,0 +1,51 @@
+---
+import Base from './Base.astro';
+import type { ChapitreProps } from '../lib/routes';
+
+type Onglet = 'video' | 'cours' | 'exercices' | 'qcm';
+interface Props extends ChapitreProps { onglet: Onglet; titrePage?: string }
+const { chapitre, niveau, matiere, exercices, qcm, onglet, titrePage } = Astro.props;
+const base = `/${matiere.slug}/${niveau.slug}/${chapitre.slug}`;
+const onglets: { id: Onglet; href: string; titre: string; n?: number }[] = [
+  { id: 'video', href: `${base}/`, titre: 'Vidéo' },
+  { id: 'cours', href: `${base}/cours/`, titre: 'Cours' },
+  { id: 'exercices', href: `${base}/exercices/`, titre: 'Exercices', n: exercices.length },
+  { id: 'qcm', href: `${base}/qcm/`, titre: 'QCM', n: qcm.length },
+];
+const i = onglets.findIndex((o) => o.id === onglet);
+const prochain = onglets[i + 1];
+const phrases: Record<Onglet, string> = {
+  video: 'Vu la vidéo ? Relis le cours, puis passe aux exercices.',
+  cours: 'Le cours est clair ? Passe aux exercices.',
+  exercices: 'Fini les exercices ? Teste-toi avec le QCM.',
+  qcm: 'Prêt pour la suite ?',
+};
+const titre = titrePage ?? (onglet === 'video' ? chapitre.data.titre : `${chapitre.data.court} : ${onglets[i].titre.toLowerCase()}`);
+---
+<Base titre={`${titre} · ${niveau.nom}`} description={chapitre.data.description} matiere={matiere.slug} niveau={niveau.slug}>
+  <div class="page-feuille cahier">
+    <div class="feuille">
+      <div>
+        <div class="crumb"><a href={`/${matiere.slug}/${niveau.slug}/`}>{niveau.nom}</a> › <b>{chapitre.data.court}</b></div>
+        <h1 data-pagefind-meta="title">{chapitre.data.titre}</h1>
+      </div>
+      <nav class="ch-tabs" aria-label="Parties du chapitre">
+        {onglets.map((o) => (
+          <a href={o.href} aria-current={o.id === onglet ? 'page' : undefined}>{o.titre}{o.n ? <small>{o.n}</small> : null}</a>
+        ))}
+      </nav>
+      <slot />
+      <div class="nextstep">
+        <span>{phrases[onglet]}</span>
+        {prochain ? (
+          <a class="btn" href={prochain.href}>{prochain.id === 'cours' ? 'Lire le cours' : prochain.id === 'exercices' ? 'Faire les exercices' : 'Faire le QCM'} →</a>
+        ) : Astro.props.suivant?.publie ? (
+          <a class="btn" href={`/${matiere.slug}/${niveau.slug}/${Astro.props.suivant.slug}/`}>{Astro.props.suivant.titre} →</a>
+        ) : (
+          <a class="btn ghost" href={`/${matiere.slug}/${niveau.slug}/`}>Tous les chapitres de {niveau.nom}</a>
+        )}
+      </div>
+      <p class="aide no-print">Une erreur dans cette page ? <a href={`/demandes/?type=erreur&niveau=${niveau.slug}&page=${encodeURIComponent(Astro.url.pathname)}`}>Signale-la</a>, je corrige vite.</p>
+    </div>
+  </div>
+</Base>

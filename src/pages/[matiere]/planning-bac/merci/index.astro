@@ -1,0 +1,13 @@
+---
+import Base from '../../../../layouts/Base.astro';
+import { cheminsMatieres } from '../../../../lib/matieres-paths';
+export const getStaticPaths = cheminsMatieres;
+const { matiere } = Astro.props;
+---
+<Base titre="Inscription confirmée" matiere={matiere.slug} indexer={false}>
+  <div class="page-feuille cahier"><div class="feuille">
+    <h1>C'est confirmé <mark>!</mark></h1>
+    <p>Le premier planning arrive dans ta boîte la semaine prochaine. En attendant, commence par un chapitre.</p>
+    <div><a class="btn" href={`/${matiere.slug}/terminale/`}>Voir les chapitres</a></div>
+  </div></div>
+</Base>

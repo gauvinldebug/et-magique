@@ -1,0 +1,7 @@
+---
+interface Props { matiere?: string; href?: string; size?: string }
+const { matiere = 'Maths', href = '/maths/', size } = Astro.props;
+---
+<a class="wordmark" href={href} style={size ? `font-size:${size}` : undefined} aria-label={`${matiere} et Magique, accueil`}>
+  {matiere && <span class="mat">{matiere}</span>}<span class="et">et</span><span>Magique</span><svg class="spark" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1.5 C12.9 8 16 11.1 22.5 12 C16 12.9 12.9 16 12 22.5 C11.1 16 8 12.9 1.5 12 C8 11.1 11.1 8 12 1.5Z"/></svg>
+</a>

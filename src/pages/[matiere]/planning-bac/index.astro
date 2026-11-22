@@ -1,0 +1,79 @@
+---
+import Base from '../../../layouts/Base.astro';
+import { cheminsMatieres } from '../../../lib/matieres-paths';
+export const getStaticPaths = cheminsMatieres;
+const { matiere } = Astro.props;
+---
+<Base titre="Planning de révision du bac par e-mail" description="Chaque semaine jusqu'au bac, un e-mail avec les chapitres à revoir et les exercices à faire. Gratuit." matiere={matiere.slug} actif="planning">
+  <div class="page-feuille cahier">
+    <div class="feuille">
+      <div class="deux-col">
+        <div style="display:grid;gap:20px">
+          <h1>Ton planning de travail, <mark>chaque semaine</mark> jusqu'à l'épreuve</h1>
+          <p>Un e‑mail par semaine avec les chapitres à revoir, la vidéo à regarder et les exercices à faire. Le dernier mois, deux e‑mails par semaine.</p>
+          <ul class="prose" style="padding-left:22px">
+            <li>Gratuit, et tu te désinscris en un clic.</li>
+            <li>Ton e‑mail sert seulement à t'envoyer le planning. Il n'est jamais revendu ni partagé.</li>
+            <li>Bac, et bientôt brevet.</li>
+          </ul>
+        </div>
+        <form class="form" data-inscription novalidate>
+          <h2>Je m'inscris</h2>
+          <div>
+            <span class="lbl2">Ton âge</span>
+            <div class="typechips" style="margin-top:8px" role="radiogroup" aria-label="Ton âge">
+              <label><input type="radio" name="age" value="15plus" checked /><span>15 ans ou plus</span></label>
+              <label><input type="radio" name="age" value="moins15" /><span>Moins de 15 ans</span></label>
+            </div>
+          </div>
+          <p class="msg-ok" data-parent hidden>Avant 15 ans, la loi demande l'accord d'un parent. <b>C'est donc un parent qui s'inscrit avec son e‑mail</b> : il reçoit un message pour confirmer, puis le planning arrive chez lui.</p>
+          <div><label for="i-prenom">Prénom <small style="display:inline">(facultatif)</small></label><input id="i-prenom" name="prenom" type="text" maxlength="40" autocomplete="given-name" /></div>
+          <div><label for="i-email" data-email-label>Ton e‑mail</label><input id="i-email" name="email" type="email" required autocomplete="email" /></div>
+          <div><label for="i-niveau">Examen préparé</label>
+            <select id="i-niveau" name="niveau"><option value="terminale">Bac, terminale (spécialité maths)</option><option value="premiere">Bac, première (épreuve anticipée)</option><option value="3e">Brevet, 3e</option><option value="autre">Autre</option></select>
+          </div>
+          <label class="check"><input type="checkbox" name="accord" /><span data-accord>J'accepte de recevoir le planning par e‑mail. Je peux me désinscrire à tout moment.</span></label>
+          <input class="hp" type="text" name="site" tabindex="-1" autocomplete="off" aria-hidden="true" />
+          <button type="submit" class="btn jaune">Recevoir mon planning</button>
+          <p class="aide">Tu recevras un e‑mail pour confirmer ton adresse. <a href="/confidentialite/">Ce qu'on fait de tes données</a></p>
+          <p data-retour hidden role="status"></p>
+        </form>
+      </div>
+    </div>
+  </div>
+</Base>
+
+<script>
+  const f = document.querySelector<HTMLFormElement>('[data-inscription]');
+  if (f) {
+    const parent = f.querySelector<HTMLElement>('[data-parent]')!;
+    const lbl = f.querySelector<HTMLElement>('[data-email-label]')!;
+    const acc = f.querySelector<HTMLElement>('[data-accord]')!;
+    const maj = () => {
+      const moins = (f.elements.namedItem('age') as RadioNodeList).value === 'moins15';
+      parent.hidden = !moins;
+      lbl.textContent = moins ? "L'e‑mail d'un parent" : 'Ton e‑mail';
+      acc.textContent = moins
+        ? "Je suis le parent (ou responsable légal) et j'accepte que mon enfant reçoive le planning à cette adresse. Désinscription à tout moment."
+        : "J'accepte de recevoir le planning par e‑mail. Je peux me désinscrire à tout moment.";
+    };
+    f.querySelectorAll('input[name="age"]').forEach((r) => r.addEventListener('change', maj));
+    f.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const out = f.querySelector<HTMLElement>('[data-retour]')!;
+      const data = Object.fromEntries(new FormData(f)) as Record<string, string>;
+      const btn = f.querySelector<HTMLButtonElement>('button[type=submit]')!;
+      btn.disabled = true;
+      try {
+        const r = await fetch('/api/inscription', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ ...data, accord: !!data.accord }) });
+        const j = await r.json();
+        out.hidden = false;
+        out.className = j.ok ? 'msg-ok' : 'msg-err';
+        out.textContent = j.ok ? 'C’est presque fini : ouvre l’e‑mail de confirmation et clique sur le lien.' : j.erreur;
+        if (j.ok) { f.reset(); maj(); (window as any).umami?.track('inscription-planning'); }
+      } catch {
+        out.hidden = false; out.className = 'msg-err'; out.textContent = "Le serveur ne répond pas. Réessaie dans un instant.";
+      } finally { btn.disabled = false; }
+    });
+  }
+</script>

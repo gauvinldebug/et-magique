@@ -1,0 +1,32 @@
+---
+import Base from '../../../layouts/Base.astro';
+import { NIVEAUX } from '../../../data/site';
+import { chapitresPublies, complements } from '../../../lib/contenu';
+import { cheminsMatieres } from '../../../lib/matieres-paths';
+import { existe } from '../../../lib/fichiers';
+export const getStaticPaths = cheminsMatieres;
+const { matiere } = Astro.props;
+const chapitres = (await chapitresPublies()).filter((c) => c.matiere === matiere.slug);
+const avecFiche = (await Promise.all(chapitres.map(async (c) => ({ c, f: (await complements(c.id)).fiche })))).filter((x) => x.f);
+const parNiveau = NIVEAUX.map((n) => ({ n, items: avecFiche.filter((x) => x.c.niveau === n.slug) })).filter((g) => g.items.length);
+---
+<Base titre="Fiches de révision" description="Une fiche d'une page par chapitre, à imprimer : la méthode, les questions types et les pièges." matiere={matiere.slug} actif="fiches">
+  <div class="page-feuille cahier">
+    <div class="feuille">
+      <div>
+        <h1>Fiches de révision</h1>
+        <p style="color:var(--encre-2)">Une page par chapitre : la méthode, les questions types, les pièges. À imprimer et à relire la veille du contrôle.</p>
+      </div>
+      {parNiveau.map((g) => (
+        <div style="display:grid;gap:20px">
+          <h2>{g.n.nom}</h2>
+          <div class="cartes">
+            {g.items.map(({ c }) => (
+              <a class="dl fiche" href={existe(c.data.pdf.fiche) ? c.data.pdf.fiche : `/${c.matiere}/${c.niveau}/${c.slug}/fiche/`}><span class="ic">FICHE</span><div><b>{c.data.court}</b><small>{existe(c.data.pdf.fiche) ? 'PDF, 1 page' : '1 page à imprimer'}</small></div></a>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</Base>

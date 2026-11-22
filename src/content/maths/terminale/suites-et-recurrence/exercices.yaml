@@ -1,0 +1,139 @@
+# Exercices corrigés, du plus facile au type bac.
+# type d'étape : init (vert), her (orange), conc (bleu), calcul, methode, piege (rouge)
+exercices:
+  - titre: Montrer qu'une suite est minorée
+    difficulte: 1
+    type: application
+    enonce: |
+      Soit $\cbleu{u}$ la suite définie par $\uz = 2$ et $\unn = \frac{1}{3}\un + 2$.
+      Démontrer par récurrence que pour tout entier naturel $\corange{n}$, $\un \ge 2$.
+    indice: >-
+      Dans l'hérédité, pars de $\uk \ge 2$ et refais les opérations de la formule : $\times \frac{1}{3}$, puis $+2$.
+    etapes:
+      - type: init
+        titre: Initialisation
+        texte: $\uz = 2$ et $2 \ge 2$. La propriété est vraie au rang 0.
+      - type: her
+        titre: Hérédité
+        texte: |
+          On suppose que $\uk \ge 2$ pour un entier $\corange{k}$ quelconque.
+          En multipliant par $\frac{1}{3}$, qui est positif : $\frac{1}{3}\uk \ge \frac{2}{3}$.
+          En ajoutant 2 : $\ukk \ge \frac{8}{3}$. Or $\frac{8}{3} \ge 2$, donc $\ukk \ge 2$.
+        note: on s'est bien servi de l'hypothèse
+      - type: conc
+        titre: Conclusion
+        texte: Par récurrence, pour tout entier naturel $\corange{n}$, <mark>$\un \ge 2$</mark>.
+
+  - titre: La somme des premiers entiers
+    difficulte: 2
+    type: methode
+    enonce: |
+      Démontrer par récurrence que pour tout entier $\corange{n} \ge 1$ :
+      $$1 + 2 + \cdots + \corange{n} = \frac{\corange{n}(\corange{n}+1)}{2}$$
+    indice: La somme jusqu'à $\corange{k+1}$, c'est la somme jusqu'à $\corange{k}$, plus $\corange{k+1}$.
+    etapes:
+      - type: init
+        titre: Initialisation
+        texte: Au rang 1, la somme vaut 1, et $\frac{1 \times 2}{2} = 1$. La propriété est vraie au rang 1.
+        note: la somme commence à 1, on initialise à 1
+      - type: her
+        titre: Hérédité
+        texte: |
+          On suppose que $1 + 2 + \cdots + \corange{k} = \frac{\corange{k}(\corange{k}+1)}{2}$ pour un entier $\corange{k} \ge 1$.
+          Alors :
+          $$1 + \cdots + \corange{k} + (\corange{k}+1) = \frac{\corange{k}(\corange{k}+1)}{2} + (\corange{k}+1) = \frac{(\corange{k}+1)(\corange{k}+2)}{2}$$
+          C'est bien la formule au rang $\corange{k+1}$.
+        note: on factorise par (k + 1)
+      - type: conc
+        titre: Conclusion
+        texte: Par récurrence, pour tout $\corange{n} \ge 1$, <mark>$1 + 2 + \cdots + \corange{n} = \frac{\corange{n}(\corange{n}+1)}{2}$</mark>.
+
+  - titre: Montrer qu'une suite est croissante
+    difficulte: 2
+    type: bac
+    enonce: |
+      Soit $\cbleu{u}$ la suite définie par $\uz = 0$ et $\unn = \frac{1}{3}\un + 2$.
+      Montrer que pour tout entier naturel $\corange{n}$, $\un \le \unn$. Que peut-on en déduire ?
+    indice: >-
+      La propriété à démontrer est $P(\corange{n})$ : « $\un \le \unn$ ». Il y a donc deux termes à chaque rang.
+    etapes:
+      - type: init
+        titre: Initialisation
+        texte: $\uz = 0$ et $\cbleu{u}_{\corange{1}} = \frac{1}{3} \times 0 + 2 = 2$, donc $\uz \le \cbleu{u}_{\corange{1}}$. La propriété est vraie au rang 0.
+      - type: her
+        titre: Hérédité
+        texte: |
+          On suppose $\uk \le \ukk$. On multiplie par $\frac{1}{3}$, qui est positif, donc l'ordre ne change pas :
+          $\frac{1}{3}\uk \le \frac{1}{3}\ukk$. On ajoute 2 : $\frac{1}{3}\uk + 2 \le \frac{1}{3}\ukk + 2$, c'est-à-dire $\ukk \le \ukkk$.
+        note: à gauche on reconnaît u(k+1), à droite u(k+2)
+      - type: conc
+        titre: Conclusion
+        texte: >-
+          Par récurrence, $\un \le \unn$ pour tout $\corange{n}$ : <mark>la suite est croissante</mark>.
+
+  - titre: Démontrer une formule explicite
+    difficulte: 2
+    type: application
+    enonce: |
+      Soit $\cbleu{u}$ la suite définie par $\uz = 1$ et $\unn = 2\un + 1$.
+      Démontrer que pour tout entier naturel $\corange{n}$, $\un = 2^{\corange{n}+1} - 1$.
+    indice: Remplace $\uk$ par $2^{\corange{k}+1} - 1$ dans la formule de la suite.
+    etapes:
+      - type: init
+        titre: Initialisation
+        texte: $2^{0+1} - 1 = 2 - 1 = 1 = \uz$. La propriété est vraie au rang 0.
+      - type: her
+        titre: Hérédité
+        texte: |
+          On suppose $\uk = 2^{\corange{k}+1} - 1$. Alors
+          $$\ukk = 2\uk + 1 = 2\left(2^{\corange{k}+1} - 1\right) + 1 = 2^{\corange{k}+2} - 2 + 1 = 2^{\corange{k}+2} - 1$$
+          C'est la formule au rang $\corange{k+1}$.
+        note: 2 × 2^(k+1) = 2^(k+2)
+      - type: conc
+        titre: Conclusion
+        texte: Par récurrence, pour tout entier naturel $\corange{n}$, <mark>$\un = 2^{\corange{n}+1} - 1$</mark>.
+
+  - titre: Une divisibilité
+    difficulte: 3
+    type: methode
+    enonce: Démontrer par récurrence que pour tout entier naturel $\corange{n}$, $4^{\corange{n}} - 1$ est divisible par 3.
+    indice: « Divisible par 3 » veut dire « s'écrit $3m$ avec $m$ entier ». Écris $4^{\corange{k}+1} = 4 \times 4^{\corange{k}}$.
+    etapes:
+      - type: init
+        titre: Initialisation
+        texte: $4^0 - 1 = 0 = 3 \times 0$, divisible par 3. La propriété est vraie au rang 0.
+      - type: her
+        titre: Hérédité
+        texte: |
+          On suppose que $4^{\corange{k}} - 1 = 3m$ avec $m$ entier, donc $4^{\corange{k}} = 3m + 1$. Alors
+          $$4^{\corange{k}+1} - 1 = 4 \times 4^{\corange{k}} - 1 = 4(3m + 1) - 1 = 12m + 3 = 3(4m + 1)$$
+          et $4m + 1$ est un entier : $4^{\corange{k}+1} - 1$ est divisible par 3.
+        note: on fait apparaître l'hypothèse dans le calcul
+      - type: conc
+        titre: Conclusion
+        texte: Par récurrence, pour tout entier naturel $\corange{n}$, <mark>$4^{\corange{n}} - 1$ est divisible par 3</mark>.
+
+  - titre: L'inégalité de Bernoulli
+    difficulte: 3
+    type: bac
+    enonce: |
+      Soit $a$ un réel strictement positif. Démontrer que pour tout entier naturel $\corange{n}$ :
+      $$(1 + a)^{\corange{n}} \ge 1 + \corange{n}a$$
+    indice: Multiplie l'hypothèse par $(1 + a)$, qui est positif, puis développe.
+    etapes:
+      - type: init
+        titre: Initialisation
+        texte: $(1 + a)^0 = 1$ et $1 + 0 \times a = 1$, donc $1 \ge 1$. La propriété est vraie au rang 0.
+      - type: her
+        titre: Hérédité
+        texte: |
+          On suppose $(1 + a)^{\corange{k}} \ge 1 + \corange{k}a$. On multiplie par $1 + a$, qui est positif :
+          $$(1 + a)^{\corange{k}+1} \ge (1 + \corange{k}a)(1 + a) = 1 + (\corange{k}+1)a + \corange{k}a^2$$
+          Or $\corange{k}a^2 \ge 0$, donc $(1 + a)^{\corange{k}+1} \ge 1 + (\corange{k}+1)a$.
+        note: on « jette » un terme positif
+      - type: conc
+        titre: Conclusion
+        texte: Par récurrence, pour tout entier naturel $\corange{n}$, <mark>$(1 + a)^{\corange{n}} \ge 1 + \corange{n}a$</mark>.
+      - type: methode
+        titre: Pour aller plus loin
+        texte: Comme $1 + \corange{n}a$ tend vers $+\infty$, on en déduira au chapitre suivant que $q^{\corange{n}}$ tend vers $+\infty$ quand $q > 1$.

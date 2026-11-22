@@ -1,0 +1,23 @@
+---
+import { render } from 'astro:content';
+import Chapitre from '../../../../layouts/Chapitre.astro';
+import { cheminsChapitres } from '../../../../lib/routes';
+import { existe } from '../../../../lib/fichiers';
+import { md } from '../../../../lib/markdown';
+export const getStaticPaths = cheminsChapitres;
+const p = Astro.props;
+const { Content } = await render(p.chapitre);
+const { pdf, piege } = p.chapitre.data;
+---
+<Chapitre {...p} onglet="cours">
+  <div class="ch-grid">
+    <article class="prose"><Content /></article>
+    <aside class="side" style="position:sticky;top:80px">
+      {existe(pdf.cours) && <a class="dl" href={pdf.cours} download data-umami-event="cours-pdf"><span class="ic">PDF</span><div><b>Le cours en PDF</b><small>à imprimer ou garder</small></div></a>}
+      {existe(pdf.fiche) && <a class="dl fiche" href={pdf.fiche} download data-umami-event="fiche-telechargee"><span class="ic">FICHE</span><div><b>Fiche de révision</b><small>1 page</small></div></a>}
+      {piege && (
+        <div class="piege"><span class="k">Le piège du chapitre</span><div set:html={md(piege)} /></div>
+      )}
+    </aside>
+  </div>
+</Chapitre>

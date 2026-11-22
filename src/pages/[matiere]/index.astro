@@ -1,0 +1,46 @@
+---
+import Base from '../../layouts/Base.astro';
+import Video from '../../components/Video.astro';
+import { NIVEAUX } from '../../data/site';
+import { chapitresPublies } from '../../lib/contenu';
+import { cheminsMatieres } from '../../lib/matieres-paths';
+export const getStaticPaths = cheminsMatieres;
+const { matiere } = Astro.props;
+const derniers = (await chapitresPublies())
+  .filter((c) => c.matiere === matiere.slug)
+  .sort((a, b) => b.data.publie.getTime() - a.data.publie.getTime());
+const dernier = derniers[0];
+const nv = dernier && NIVEAUX.find((n) => n.slug === dernier.niveau);
+---
+<Base titre="Maths et Magique : les maths de la 6e à la terminale, enfin claires" matiere={matiere.slug} actif="accueil">
+  <div class="page-feuille cahier">
+    <div class="feuille">
+      <div class="s-hero">
+        <div>
+          <h1>Tout le programme de maths, expliqué en vidéo et <mark>corrigé pas à pas</mark>.</h1>
+          <p class="lead">De la 6e à la terminale. Gratuit, sans compte, sans publicité.</p>
+          <form class="s-search" action={`/${matiere.slug}/recherche/`} method="get" role="search">
+            <input type="search" name="q" placeholder="Cherche un chapitre : récurrence, fractions…" aria-label="Chercher un chapitre" />
+            <button type="submit">Chercher</button>
+          </form>
+          <div class="levels" aria-label="Choisis ton niveau">
+            {NIVEAUX.map((n) => <a href={`/${matiere.slug}/${n.slug}/`}>{n.court}</a>)}
+          </div>
+        </div>
+        {dernier && nv && (
+          <div style="display:grid;gap:10px">
+            <div class="k">Nouveau chapitre</div>
+            <a href={`/${matiere.slug}/${dernier.niveau}/${dernier.slug}/`} style="display:grid;gap:10px;color:inherit;text-decoration:none">
+              <Video youtube={dernier.data.video.youtube} titre={dernier.data.titre} statique />
+              <span style="font-weight:600;font-size:.95rem">{nv.nom} · {dernier.data.court}</span>
+            </a>
+          </div>
+        )}
+      </div>
+      <div class="band">
+        <div><h2>Bac 2027 : ton planning de travail</h2><p>Chaque semaine jusqu'à l'épreuve, un e‑mail avec les chapitres à revoir et les exercices à faire.</p></div>
+        <a class="btn jaune" href={`/${matiere.slug}/planning-bac/`}>Recevoir mon planning</a>
+      </div>
+    </div>
+  </div>
+</Base>

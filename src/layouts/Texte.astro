@@ -1,0 +1,14 @@
+---
+import Base from './Base.astro';
+interface Props { titre?: string; description?: string; frontmatter?: { titre: string; description?: string } }
+const titre = Astro.props.frontmatter?.titre ?? Astro.props.titre ?? '';
+const description = Astro.props.frontmatter?.description ?? Astro.props.description;
+---
+<Base titre={titre} description={description}>
+  <div class="page-feuille cahier">
+    <div class="feuille">
+      <h1>{titre}</h1>
+      <article class="prose"><slot /></article>
+    </div>
+  </div>
+</Base>
