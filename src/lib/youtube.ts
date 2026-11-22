@@ -27,7 +27,7 @@ export function videosChaine(matiere = 'maths'): Promise<VideoYT[]> {
         const id = await idChaine(m.youtube, m.youtubeId);
         if (!id) return [];
         const xml = await (await fetch(`https://www.youtube.com/feeds/videos.xml?channel_id=${id}`)).text();
-        return [...xml.matchAll(/<entry>([\s\S]*?)<\/entry>/g)].map(([, e]) => ({
+        return [...xml.matchAll(/<entry>([\s\S]*?)<\/entry>/g)].filter(([, e]) => !/\/shorts\//.test(e) && !/#shorts/i.test(e.match(/<title>([^<]*)/)?.[1] ?? '')).map(([, e]) => ({
           id: e.match(/<yt:videoId>([^<]+)/)?.[1] ?? '',
           titre: decode(e.match(/<title>([^<]*)/)?.[1] ?? ''),
           description: decode(e.match(/<media:description>([\s\S]*?)<\/media:description>/)?.[1] ?? ''),

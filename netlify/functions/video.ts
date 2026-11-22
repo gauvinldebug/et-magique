@@ -1,5 +1,6 @@
 // GET /api/video?m=maths&n=terminale&c=limites-de-suites&t=Limites%20de%20suites
 // Cherche dans le flux RSS de la chaîne la vidéo d'un chapitre (lien du chapitre dans la description, sinon titre).
+// Les Shorts sont ignorés : seule la vidéo longue est rattachée au chapitre.
 // Sert aux pages construites avant la sortie de la vidéo : la vignette apparaît dès que la vidéo est en ligne,
 // sans attendre une reconstruction du site. Réponse mise en cache 30 min par le CDN de Netlify.
 import type { Config } from '@netlify/functions';
@@ -22,7 +23,7 @@ export default async (req: Request) => {
       const r = await fetch(`https://www.youtube.com/feeds/videos.xml?channel_id=${chaine}`, { headers: { 'user-agent': 'Mozilla/5.0 (compatible; et-magique/1.0)', 'accept-language': 'fr' } });
       const xml = await r.text();
       flux = `${r.status} ${(xml.match(/<entry>/g) ?? []).length}`;
-      const videos = [...xml.matchAll(/<entry>([\s\S]*?)<\/entry>/g)].map(([, e]) => ({
+      const videos = [...xml.matchAll(/<entry>([\s\S]*?)<\/entry>/g)].filter(([, e]) => !/\/shorts\//.test(e) && !/#shorts/i.test(e.match(/<title>([^<]*)/)?.[1] ?? '')).map(([, e]) => ({
         id: e.match(/<yt:videoId>([^<]+)/)?.[1] ?? '',
         titre: decode(e.match(/<title>([^<]*)/)?.[1] ?? ''),
         description: decode(e.match(/<media:description>([\s\S]*?)<\/media:description>/)?.[1] ?? ''),
