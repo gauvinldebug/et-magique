@@ -41,7 +41,7 @@ const pleinTitre = titre.includes('Magique') ? titre : `${titre} · Maths et Mag
     <meta property="og:locale" content="fr_FR" />
     <meta property="og:url" content={canonical} />
     {!indexer && <meta name="robots" content="noindex" />}
-    {umamiId && <script defer src={umamiSrc} data-website-id={umamiId} data-domains="etmagique.fr,www.etmagique.fr"></script>}
+    {umamiId && <script defer src={umamiSrc} data-website-id={umamiId} data-domains="etmagique.fr,www.etmagique.fr,et-magique.netlify.app"></script>}
     <slot name="head" />
   </head>
   <body>

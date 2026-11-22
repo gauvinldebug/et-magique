@@ -2,8 +2,10 @@
 
 export const SITE = {
   nom: 'Et Magique',
-  domaine: 'etmagique.fr',
-  url: 'https://etmagique.fr',
+  // Adresse publique actuelle. À passer en etmagique.fr (variable SITE_URL sur Netlify) le jour où le domaine est acheté :
+  // Google ignore les pages dont l'adresse canonique pointe vers un domaine qui ne répond pas.
+  domaine: new URL(import.meta.env.SITE).host,
+  url: import.meta.env.SITE.replace(/\/$/, ''),
   // Contact affiché dans les mentions légales (à compléter par Louison).
   contact: 'contact@etmagique.fr',
 };
