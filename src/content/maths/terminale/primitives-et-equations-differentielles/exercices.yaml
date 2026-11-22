@@ -1,0 +1,136 @@
+# Exercices corrigés, du plus facile au type bac.
+# type d'étape : init (vert), her (orange), conc (bleu), calcul, methode, piege (rouge)
+exercices:
+  - titre: Des primitives directes
+    difficulte: 1
+    type: application
+    enonce: |
+      Déterminer une primitive de chaque fonction.
+      1. $\cbleu{f}(\corange{x}) = 4\corange{x}^3 - 2\corange{x} + 5$ sur $\mathbb{R}$
+      2. $g(\corange{x}) = \dfrac{3}{\corange{x}} + \dfrac{1}{\corange{x}^2}$ sur $]0\,;+\infty[$
+      3. $h(\corange{x}) = 2\cos \corange{x} - \mathrm{e}^{\corange{x}}$ sur $\mathbb{R}$
+    indice: $\frac{1}{\corange{x}^2} = \corange{x}^{-2}$.
+    etapes:
+      - type: calcul
+        titre: Question 1
+        texte: $F(\corange{x}) = \corange{x}^4 - \corange{x}^2 + 5\corange{x}$.
+      - type: calcul
+        titre: Question 2
+        texte: >-
+          $\corange{x}^{-2}$ a pour primitive $\frac{\corange{x}^{-1}}{-1} = -\frac{1}{\corange{x}}$. Donc $G(\corange{x}) = 3\ln \corange{x} - \frac{1}{\corange{x}}$.
+      - type: calcul
+        titre: Question 3
+        texte: $H(\corange{x}) = 2\sin \corange{x} - \mathrm{e}^{\corange{x}}$.
+        note: on vérifie en dérivant
+
+  - titre: Des formes composées
+    difficulte: 2
+    type: methode
+    enonce: |
+      Déterminer une primitive de chaque fonction.
+      1. $\cbleu{f}(\corange{x}) = \corange{x}\,\mathrm{e}^{\corange{x}^2}$ sur $\mathbb{R}$
+      2. $g(\corange{x}) = \dfrac{\corange{x}}{\corange{x}^2 + 4}$ sur $\mathbb{R}$
+      3. $h(\corange{x}) = (2\corange{x} + 1)^3$ sur $\mathbb{R}$
+    indice: Repère la forme ($u'\mathrm{e}^{u}$, $\frac{u'}{u}$, $u'u^n$) et ajuste le facteur qui manque.
+    etapes:
+      - type: calcul
+        titre: Question 1
+        texte: >-
+          Avec $u = \corange{x}^2$, $u' = 2\corange{x}$. Or $\cbleu{f} = \frac{1}{2} \times 2\corange{x}\,\mathrm{e}^{\corange{x}^2} = \frac{1}{2}u'\mathrm{e}^{u}$, donc $F(\corange{x}) = \frac{1}{2}\mathrm{e}^{\corange{x}^2}$.
+        note: il manque un 2, on le compense
+      - type: calcul
+        titre: Question 2
+        texte: >-
+          Avec $u = \corange{x}^2 + 4 > 0$, $g = \frac{1}{2}\frac{u'}{u}$, donc $G(\corange{x}) = \frac{1}{2}\ln(\corange{x}^2 + 4)$.
+      - type: calcul
+        titre: Question 3
+        texte: >-
+          Avec $u = 2\corange{x} + 1$, $u' = 2$, $h = \frac{1}{2}u'u^3$, donc $H(\corange{x}) = \frac{1}{2} \times \frac{(2\corange{x} + 1)^4}{4} = \frac{(2\corange{x} + 1)^4}{8}$.
+
+  - titre: La primitive qui passe par un point
+    difficulte: 1
+    type: application
+    enonce: |
+      Déterminer la primitive $F$ de $\cbleu{f}(\corange{x}) = 6\corange{x}^2 - 4$ sur $\mathbb{R}$ telle que $F(1) = 3$.
+    indice: Écris toutes les primitives, avec le $+ C$, puis utilise $F(1) = 3$.
+    etapes:
+      - type: calcul
+        titre: Toutes les primitives
+        texte: $F(\corange{x}) = 2\corange{x}^3 - 4\corange{x} + C$.
+      - type: init
+        titre: Le point de départ
+        texte: $F(1) = 2 - 4 + C = C - 2 = 3$, donc $C = 5$.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>$F(\corange{x}) = 2\corange{x}^3 - 4\corange{x} + 5$</mark>.
+
+  - titre: Une équation y' = ay + b
+    difficulte: 2
+    type: methode
+    enonce: |
+      Résoudre l'équation différentielle $(E)$ : $y' = -0{,}5y + 10$, puis déterminer la solution $\cbleu{f}$ telle que $\cbleu{f}(0) = 4$. Quelle est la limite de $\cbleu{f}$ en $+\infty$ ?
+    indice: Les solutions sont $C\mathrm{e}^{a\corange{x}} - \frac{b}{a}$.
+    etapes:
+      - type: calcul
+        titre: La solution d'équilibre
+        texte: $-\frac{b}{a} = -\frac{10}{-0{,}5} = 20$. On vérifie que $-0{,}5 \times 20 + 10 = 0$.
+      - type: calcul
+        titre: Les solutions
+        texte: Les solutions de $(E)$ sont les fonctions $\corange{x} \mapsto C\mathrm{e}^{-0{,}5\corange{x}} + 20$.
+      - type: init
+        titre: La condition initiale
+        texte: $\cbleu{f}(0) = C + 20 = 4$, donc $C = -16$ et $\cbleu{f}(\corange{x}) = 20 - 16\mathrm{e}^{-0{,}5\corange{x}}$.
+      - type: conc
+        titre: La limite
+        texte: >-
+          $\mathrm{e}^{-0{,}5\corange{x}} \to 0$ en $+\infty$, donc <mark>$\lim\limits_{+\infty} \cbleu{f} = 20$</mark> : la solution rejoint l'équilibre.
+
+  - titre: Le refroidissement du café
+    difficulte: 2
+    type: application
+    enonce: |
+      Un café à 80 °C est posé dans une pièce à 20 °C. Sa température $T(t)$ (en °C, $t$ en minutes) vérifie $T' = -0{,}1\,(T - 20)$ et $T(0) = 80$.
+      1. Exprimer $T(t)$.
+      2. Au bout de combien de temps le café descend-il sous 40 °C ?
+    indice: Développe, $T' = -0{,}1T + 2$.
+    etapes:
+      - type: calcul
+        titre: Question 1, les solutions
+        texte: >-
+          $T' = -0{,}1T + 2$. La solution constante est $-\frac{2}{-0{,}1} = 20$, donc $T(t) = C\mathrm{e}^{-0{,}1t} + 20$.
+      - type: init
+        titre: Question 1, la condition initiale
+        texte: $T(0) = C + 20 = 80$, donc $C = 60$ et $T(t) = 60\mathrm{e}^{-0{,}1t} + 20$.
+      - type: calcul
+        titre: Question 2
+        texte: >-
+          $T(t) < 40 \iff \mathrm{e}^{-0{,}1t} < \frac{1}{3} \iff -0{,}1t < \ln\frac{1}{3} \iff t > 10\ln 3 \approx 11$.
+        note: diviser par -0,1 change le sens
+      - type: conc
+        titre: Conclusion
+        texte: <mark>Le café passe sous 40 °C au bout d'environ 11 minutes</mark>.
+
+  - titre: Équation avec second membre, type bac
+    difficulte: 3
+    type: bac
+    enonce: |
+      On considère l'équation $(E)$ : $y' = 2y - 4\corange{x}$.
+      1. Déterminer les réels $a$ et $b$ tels que $p(\corange{x}) = a\corange{x} + b$ soit solution de $(E)$.
+      2. Résoudre $(E)$.
+      3. Déterminer la solution $\cbleu{f}$ telle que $\cbleu{f}(0) = 3$.
+    indice: Calcule $p'$ et identifie les coefficients de $2p - 4\corange{x}$.
+    etapes:
+      - type: calcul
+        titre: Question 1
+        texte: >-
+          $p' = a$ et $2p - 4\corange{x} = (2a - 4)\corange{x} + 2b$. Par identification, $2a - 4 = 0$ et $2b = a$, donc $a = 2$ et $b = 1$ : $p(\corange{x}) = 2\corange{x} + 1$.
+      - type: calcul
+        titre: Question 2
+        texte: >-
+          Les solutions de $y' = 2y$ sont $C\mathrm{e}^{2\corange{x}}$. Les solutions de $(E)$ sont donc $\corange{x} \mapsto C\mathrm{e}^{2\corange{x}} + 2\corange{x} + 1$.
+      - type: init
+        titre: Question 3
+        texte: $\cbleu{f}(0) = C + 1 = 3$, donc $C = 2$.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>$\cbleu{f}(\corange{x}) = 2\mathrm{e}^{2\corange{x}} + 2\corange{x} + 1$</mark>. Vérification, $\cbleu{f}' = 4\mathrm{e}^{2\corange{x}} + 2$ et $2\cbleu{f} - 4\corange{x} = 4\mathrm{e}^{2\corange{x}} + 2$.

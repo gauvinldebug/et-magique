@@ -1,0 +1,121 @@
+# Exercices corrigés, du plus facile au type bac.
+# type d'étape : init (vert), her (orange), conc (bleu), calcul, methode, piege (rouge)
+exercices:
+  - titre: Utiliser cos² + sin² = 1
+    difficulte: 1
+    type: application
+    enonce: |
+      On sait que $\corange{x} \in \left[\frac{\pi}{2}\,;\pi\right]$ et que $\sin \corange{x} = \frac{3}{5}$. Calculer $\cos \corange{x}$.
+    indice: Sur $\left[\frac{\pi}{2}\,;\pi\right]$, quel est le signe de $\cos \corange{x}$ ?
+    etapes:
+      - type: calcul
+        titre: Le carré
+        texte: $\cos^2 \corange{x} = 1 - \sin^2 \corange{x} = 1 - \frac{9}{25} = \frac{16}{25}$, donc $\cos \corange{x} = \frac{4}{5}$ ou $\cos \corange{x} = -\frac{4}{5}$.
+      - type: methode
+        titre: Le signe
+        texte: Sur $\left[\frac{\pi}{2}\,;\pi\right]$, la nacelle est à gauche du centre, donc $\cos \corange{x} \le 0$.
+        note: on regarde le cercle
+      - type: conc
+        titre: Conclusion
+        texte: <mark>$\cos \corange{x} = -\frac{4}{5}$</mark>.
+
+  - titre: Résoudre une équation
+    difficulte: 1
+    type: methode
+    enonce: |
+      Résoudre dans $]-\pi\,;\pi]$ l'équation $2\cos \corange{x} + \sqrt{2} = 0$.
+    indice: Isole $\cos \corange{x}$, puis reconnais une valeur remarquable.
+    etapes:
+      - type: calcul
+        titre: On isole le cosinus
+        texte: $\cos \corange{x} = -\frac{\sqrt{2}}{2}$.
+      - type: calcul
+        titre: Une valeur remarquable
+        texte: >-
+          $\cos \frac{3\pi}{4} = -\frac{\sqrt{2}}{2}$, donc $\cos \corange{x} = \cos \frac{3\pi}{4} \iff \corange{x} = \frac{3\pi}{4} + 2k\pi$ ou $\corange{x} = -\frac{3\pi}{4} + 2k\pi$.
+      - type: conc
+        titre: Conclusion
+        texte: Dans $]-\pi\,;\pi]$, <mark>$S = \left\{-\frac{3\pi}{4}\,;\frac{3\pi}{4}\right\}$</mark>.
+
+  - titre: Dériver des fonctions trigonométriques
+    difficulte: 1
+    type: application
+    enonce: |
+      Dériver les fonctions suivantes sur $\mathbb{R}$.
+      1. $\cbleu{f}(\corange{x}) = 3\sin(2\corange{x}) - \cos \corange{x}$
+      2. $g(\corange{x}) = \corange{x}\cos \corange{x}$
+      3. $h(\corange{x}) = \mathrm{e}^{\sin \corange{x}}$
+    indice: Question 2, dérivée d'un produit. Question 3, $(\mathrm{e}^{u})' = u'\mathrm{e}^{u}$.
+    etapes:
+      - type: calcul
+        titre: Question 1
+        texte: $\cbleu{f}'(\corange{x}) = 3 \times 2\cos(2\corange{x}) + \sin \corange{x} = 6\cos(2\corange{x}) + \sin \corange{x}$.
+      - type: calcul
+        titre: Question 2
+        texte: $g'(\corange{x}) = \cos \corange{x} - \corange{x}\sin \corange{x}$.
+      - type: calcul
+        titre: Question 3
+        texte: $h'(\corange{x}) = \cos \corange{x}\,\mathrm{e}^{\sin \corange{x}}$.
+        note: u = sin x, u' = cos x
+
+  - titre: Parité et périodicité
+    difficulte: 2
+    type: methode
+    enonce: |
+      Soit $\cbleu{f}(\corange{x}) = \cos(2\corange{x}) + \cos^2 \corange{x}$.
+      1. Montrer que $\cbleu{f}$ est paire.
+      2. Montrer que $\cbleu{f}$ est $\pi$-périodique.
+      3. Sur quel intervalle suffit-il de l'étudier ?
+    indice: Calcule $\cbleu{f}(-\corange{x})$, puis $\cbleu{f}(\corange{x} + \pi)$, en utilisant $\cos(\corange{x} + \pi) = -\cos \corange{x}$.
+    etapes:
+      - type: calcul
+        titre: Question 1
+        texte: >-
+          $\cbleu{f}(-\corange{x}) = \cos(-2\corange{x}) + \cos^2(-\corange{x}) = \cos(2\corange{x}) + \cos^2 \corange{x} = \cbleu{f}(\corange{x})$, car $\cos$ est paire. $\cbleu{f}$ est paire.
+      - type: calcul
+        titre: Question 2
+        texte: >-
+          $\cbleu{f}(\corange{x} + \pi) = \cos(2\corange{x} + 2\pi) + (-\cos \corange{x})^2 = \cos(2\corange{x}) + \cos^2 \corange{x} = \cbleu{f}(\corange{x})$.
+      - type: conc
+        titre: Question 3
+        texte: Par périodicité, on étudie sur un intervalle de longueur $\pi$, par exemple $\left[-\frac{\pi}{2}\,;\frac{\pi}{2}\right]$, puis par parité sur la moitié, <mark>$\left[0\,;\frac{\pi}{2}\right]$</mark>.
+
+  - titre: Une limite avec les gendarmes
+    difficulte: 2
+    type: application
+    enonce: |
+      Déterminer $\lim\limits_{\corange{x} \to +\infty} \dfrac{2 + \cos \corange{x}}{\corange{x}}$.
+    indice: Encadre $2 + \cos \corange{x}$.
+    etapes:
+      - type: calcul
+        titre: On encadre
+        texte: $-1 \le \cos \corange{x} \le 1$ donc $1 \le 2 + \cos \corange{x} \le 3$. Pour $\corange{x} > 0$, $\frac{1}{\corange{x}} \le \frac{2 + \cos \corange{x}}{\corange{x}} \le \frac{3}{\corange{x}}$.
+      - type: conc
+        titre: Conclusion
+        texte: Les deux bornes tendent vers 0. D'après le théorème des gendarmes, <mark>la limite vaut 0</mark>.
+
+  - titre: Étude type bac
+    difficulte: 3
+    type: bac
+    enonce: |
+      Soit $\cbleu{f}$ définie sur $[0\,;\pi]$ par $\cbleu{f}(\corange{x}) = \corange{x} - 2\sin \corange{x}$.
+      1. Calculer $\cbleu{f}'(\corange{x})$.
+      2. Résoudre $\cbleu{f}'(\corange{x}) \ge 0$ sur $[0\,;\pi]$.
+      3. Dresser le tableau de variations de $\cbleu{f}$.
+    indice: $\cos \corange{x} \le \frac{1}{2}$ sur $[0\,;\pi]$ quand $\corange{x} \ge \frac{\pi}{3}$ (cos est décroissante sur cet intervalle).
+    etapes:
+      - type: calcul
+        titre: Question 1
+        texte: $\cbleu{f}'(\corange{x}) = 1 - 2\cos \corange{x}$.
+      - type: methode
+        titre: Question 2
+        texte: >-
+          $\cbleu{f}'(\corange{x}) \ge 0 \iff \cos \corange{x} \le \frac{1}{2}$. Sur $[0\,;\pi]$, $\cos$ est décroissante et $\cos \frac{\pi}{3} = \frac{1}{2}$, donc $\cos \corange{x} \le \frac{1}{2} \iff \corange{x} \in \left[\frac{\pi}{3}\,;\pi\right]$.
+        note: cos décroît sur [0 ; π]
+      - type: calcul
+        titre: Question 3, les valeurs
+        texte: >-
+          $\cbleu{f}(0) = 0$, $\cbleu{f}\left(\frac{\pi}{3}\right) = \frac{\pi}{3} - 2 \times \frac{\sqrt{3}}{2} = \frac{\pi}{3} - \sqrt{3} \approx -0{,}68$, $\cbleu{f}(\pi) = \pi$.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>$\cbleu{f}$ est décroissante sur $\left[0\,;\frac{\pi}{3}\right]$ et croissante sur $\left[\frac{\pi}{3}\,;\pi\right]$</mark>, avec un minimum égal à $\frac{\pi}{3} - \sqrt{3}$.

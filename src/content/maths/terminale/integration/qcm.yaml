@@ -1,0 +1,48 @@
+questions:
+  - question: Que vaut $\displaystyle\int_0^2 3\corange{x}^2\,\mathrm{d}\corange{x}$ ?
+    choix: ['$6$', '$8$', '$12$', '$4$']
+    bonne: 1
+    explication: Une primitive est $\corange{x}^3$, donc $2^3 - 0^3 = 8$.
+    revoir: cours
+
+  - question: Que vaut $\displaystyle\int_0^1 \mathrm{e}^{\corange{x}}\,\mathrm{d}\corange{x}$ ?
+    choix: ['$\mathrm{e}$', '$\mathrm{e} - 1$', '$1$', '$\mathrm{e} + 1$']
+    bonne: 1
+    explication: $\big[\mathrm{e}^{\corange{x}}\big]_0^1 = \mathrm{e}^1 - \mathrm{e}^0 = \mathrm{e} - 1$.
+    revoir: cours
+
+  - question: Si $\cbleu{f} \le 0$ sur $[a\,;b]$ avec $a < b$, alors $\int_a^b \cbleu{f}$ est…
+    choix: ["positive", "négative", "nulle", "on ne peut pas savoir"]
+    bonne: 1
+    explication: Par positivité de l'intégrale appliquée à $-\cbleu{f} \ge 0$. La voiture recule.
+    revoir: cours
+
+  - question: $\displaystyle\int_1^3 \cbleu{f} = 5$ et $\displaystyle\int_3^4 \cbleu{f} = -2$. Alors $\displaystyle\int_1^4 \cbleu{f}$ vaut…
+    choix: ['$7$', '$3$', '$-10$', '$-3$']
+    bonne: 1
+    explication: Relation de Chasles, $5 + (-2) = 3$.
+    revoir: cours
+
+  - question: La valeur moyenne de $\cbleu{f}(\corange{x}) = 2\corange{x}$ sur $[0\,;4]$ est…
+    choix: ['$16$', '$8$', '$4$', '$2$']
+    bonne: 2
+    explication: $\int_0^4 2\corange{x}\,\mathrm{d}\corange{x} = 16$, puis $\frac{16}{4 - 0} = 4$.
+    revoir: cours
+
+  - question: Que vaut $\displaystyle\int_0^{\pi} \sin \corange{x}\,\mathrm{d}\corange{x}$ ?
+    choix: ['$0$', '$1$', '$2$', '$-2$']
+    bonne: 2
+    explication: $\big[-\cos \corange{x}\big]_0^{\pi} = -\cos\pi + \cos 0 = 1 + 1 = 2$.
+    revoir: exercices
+
+  - question: L'aire entre les courbes de $\cbleu{f}$ et $g$ sur $[a\,;b]$, avec $g \le \cbleu{f}$, vaut…
+    choix: ['$\int_a^b (g - \cbleu{f})$', '$\int_a^b (\cbleu{f} - g)$', '$\int_a^b \cbleu{f} \times \int_a^b g$', '$\int_a^b (\cbleu{f} + g)$']
+    bonne: 1
+    explication: Toujours celle du haut moins celle du bas.
+    revoir: cours
+
+  - question: Pour calculer $\int_1^{\mathrm{e}} \corange{x}\ln \corange{x}\,\mathrm{d}\corange{x}$ par parties, on pose plutôt…
+    choix: ['$u = \corange{x}$ et $v'' = \ln \corange{x}$', '$u = \ln \corange{x}$ et $v'' = \corange{x}$', '$u = \corange{x}\ln \corange{x}$ et $v'' = 1$', "on ne peut pas"]
+    bonne: 1
+    explication: $\ln \corange{x}$ se simplifie en dérivant ($\frac{1}{\corange{x}}$), et on sait primitiver $\corange{x}$.
+    revoir: cours
