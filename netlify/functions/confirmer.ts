@@ -1,7 +1,8 @@
 // GET /api/confirmer?c=…&s=… : le lien de l'e-mail de confirmation.
 import type { Config } from '@netlify/functions';
 import { store } from '../lib/outils';
-import { signer, brevo } from '../lib/emails';
+import { signer, brevo, envoyer, lienDesinscription } from '../lib/emails';
+import { bienvenue } from '../lib/newsletters';
 
 export default async (req: Request) => {
   const u = new URL(req.url);
@@ -22,6 +23,10 @@ export default async (req: Request) => {
         updateEnabled: true,
       });
     }
+    // E-mail de bienvenue : une seule fois, au premier clic sur le lien.
+    const m = bienvenue(u.origin, { cle: c, email: ins.email, prenom: ins.prenom, niveau: ins.niveau, age: ins.age });
+    const r = await envoyer({ email: ins.email, sujet: m.sujet, html: m.html, tag: 'bienvenue', desinscription: lienDesinscription(u.origin, c) });
+    if (!r.ok) await store('limites').setJSON('brevo/derniere-erreur', { date: new Date().toISOString(), detail: r.detail, message: r.message });
   }
   return Response.redirect(`${u.origin}/maths/planning-bac/merci/`, 302);
 };

@@ -1,0 +1,18 @@
+---
+import Base from '../layouts/Base.astro';
+---
+<Base titre="Désinscription" indexer={false}>
+  <div class="page-feuille cahier"><div class="feuille">
+    <h1 data-ok>C'est fait, tu ne recevras plus <mark>aucun e-mail</mark>.</h1>
+    <p data-ok>Le site reste là, gratuit, avec toutes les vidéos et les exercices. Tu peux te réinscrire quand tu veux.</p>
+    <h1 data-ko hidden>Ce lien ne marche <mark>pas</mark>.</h1>
+    <p data-ko hidden>Il est peut-être incomplet. Clique à nouveau sur « Me désinscrire » en bas d'un de nos e-mails, ou écris-nous par la page des demandes.</p>
+    <div style="display:flex;gap:10px;flex-wrap:wrap"><a class="btn" href="/maths/">Retour au site</a><a class="btn ghost" href="/maths/planning-bac/">Me réinscrire</a></div>
+  </div></div>
+</Base>
+<script>
+  if (new URLSearchParams(location.search).get('lien') === 'invalide') {
+    document.querySelectorAll<HTMLElement>('[data-ok]').forEach((e) => (e.hidden = true));
+    document.querySelectorAll<HTMLElement>('[data-ko]').forEach((e) => (e.hidden = false));
+  }
+</script>
