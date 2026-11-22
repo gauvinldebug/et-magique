@@ -1,19 +1,19 @@
 ---
 // Vignette de la vidéo : un clic ouvre la vidéo sur YouTube (nouvel onglet).
 // Aucun lecteur YouTube n'est chargé sur le site, donc aucun cookie ni traceur.
-interface Props { youtube?: string; titre: string; statique?: boolean }
-const { youtube, titre, statique = false } = Astro.props;
+// Si la vidéo n'était pas encore sortie quand le site a été construit, la page la cherche
+// au chargement (/api/video) et affiche la vignette dès qu'elle est en ligne.
+interface Props { youtube?: string; titre: string; matiere?: string; niveau?: string; chapitre?: string; court?: string }
+const { youtube, titre, matiere, niveau, chapitre, court } = Astro.props;
 ---
-{youtube && statique ? (
-  <div class="thumb"><img src={`https://i.ytimg.com/vi/${youtube}/hqdefault.jpg`} alt="" loading="lazy" referrerpolicy="no-referrer" /><span class="play"><i></i></span></div>
-) : youtube ? (
+{youtube ? (
   <a class="thumb" href={`https://www.youtube.com/watch?v=${youtube}`} target="_blank" rel="noopener" data-umami-event="video-youtube" aria-label={`Regarder sur YouTube : ${titre}`}>
     <img src={`https://i.ytimg.com/vi/${youtube}/hqdefault.jpg`} alt="" loading="lazy" referrerpolicy="no-referrer" />
     <span class="play"><i></i></span>
-    <span class="bientot yt">Regarder sur YouTube ↗</span>
+    <span class="bientot yt">Regarder sur YouTube</span>
   </a>
 ) : (
-  <div class="thumb" role="img" aria-label="Vidéo bientôt en ligne">
+  <div class="thumb" role="img" aria-label="Vidéo bientôt en ligne" data-video-attente={niveau && chapitre ? `m=${matiere ?? 'maths'}&n=${niveau}&c=${chapitre}&t=${encodeURIComponent(court ?? titre)}` : undefined} data-titre={titre}>
     <svg viewBox="0 0 1600 900" aria-hidden="true">
       <rect width="1600" height="900" style="fill:var(--carte)"/>
       <foreignObject x="110" y="120" width="1380" height="420"><div style="font-family:var(--f-titre);font-weight:800;font-size:96px;line-height:1.1;color:var(--encre)">{titre}</div></foreignObject>
@@ -22,3 +22,22 @@ const { youtube, titre, statique = false } = Astro.props;
     <span class="bientot">Vidéo bientôt en ligne</span>
   </div>
 )}
+
+<script>
+  document.querySelectorAll<HTMLElement>('[data-video-attente]').forEach(async (el) => {
+    try {
+      const r = await fetch(`/api/video?${el.dataset.videoAttente}`);
+      const { id } = await r.json();
+      if (!id || !/^[\w-]{11}$/.test(id)) return;
+      const a = document.createElement('a');
+      a.className = 'thumb';
+      a.href = `https://www.youtube.com/watch?v=${id}`;
+      a.target = '_blank';
+      a.rel = 'noopener';
+      a.dataset.umamiEvent = 'video-youtube';
+      a.setAttribute('aria-label', `Regarder sur YouTube : ${el.dataset.titre ?? ''}`);
+      a.innerHTML = `<img src="https://i.ytimg.com/vi/${id}/hqdefault.jpg" alt="" loading="lazy" referrerpolicy="no-referrer" /><span class="play"><i></i></span><span class="bientot yt">Regarder sur YouTube</span>`;
+      el.replaceWith(a);
+    } catch { /* hors ligne : on garde « Vidéo bientôt en ligne » */ }
+  });
+</script>

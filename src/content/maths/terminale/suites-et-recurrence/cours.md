@@ -5,7 +5,7 @@ description: Le raisonnement par récurrence expliqué avec des dominos, la mét
 ordre: 1
 publie: 2026-11-22
 video:
-  youtube: ""
+  youtube: "HrNc7dBiWTQ"
   duree: 10 min
   chapitres:
     - { t: "0:00", titre: "Bonjour et objectif" }

@@ -1,6 +1,7 @@
 ---
 // Bandeau « La chaîne YouTube » : bouton + QR code (scanné depuis un ordinateur avec le téléphone).
 import QRCode from 'qrcode';
+import Reseaux from './Reseaux.astro';
 interface Props { url: string; nom?: string }
 const { url, nom = 'Maths et Magique' } = Astro.props;
 const abonnement = `${url}${url.includes('?') ? '&' : '?'}sub_confirmation=1`;
@@ -15,6 +16,7 @@ const qr = await QRCode.toString(abonnement, { type: 'svg', margin: 1, errorCorr
       <svg viewBox="0 0 28 20" aria-hidden="true"><rect width="28" height="20" rx="5" fill="#fff"/><path d="M11 5.5v9l8-4.5z" fill="#FF0033"/></svg>
       Voir la chaîne et s'abonner
     </a>
+    <div class="portail-reseaux"><span>Suis-nous aussi</span><Reseaux libelles /></div>
   </div>
   <figure class="chaine-qr">
     <Fragment set:html={qr} />

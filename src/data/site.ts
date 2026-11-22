@@ -13,11 +13,13 @@ export type Matiere = {
   nom: string; // premier mot du logo : « Maths » et Magique
   couleur: string; // variable CSS de la matière
   youtube?: string; // URL de la chaîne
+  youtubeId?: string; // identifiant de la chaîne (UC…), pour lire son flux RSS
+  instagram?: string; // URL du compte Instagram
   active: boolean;
 };
 
 export const MATIERES: Matiere[] = [
-  { slug: 'maths', nom: 'Maths', couleur: 'var(--terme)', youtube: 'https://www.youtube.com/@mathsetmagique', active: true },
+  { slug: 'maths', nom: 'Maths', couleur: 'var(--terme)', youtube: 'https://www.youtube.com/@mathsetmagique', youtubeId: 'UChNsi3Kbyr6fey6cAJy6I5A', instagram: 'https://www.instagram.com/maths_et_magique/', active: true },
   { slug: 'physique', nom: 'Physique', couleur: 'var(--physique)', active: false },
   { slug: 'svt', nom: 'SVT', couleur: 'var(--svt)', active: false },
   { slug: 'histoire', nom: 'Histoire', couleur: 'var(--histoire)', active: false },

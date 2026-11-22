@@ -8,8 +8,8 @@ export type VideoYT = { id: string; titre: string; description: string; date: st
 
 const cache = new Map<string, Promise<VideoYT[]>>();
 
-async function idChaine(handleUrl: string): Promise<string | undefined> {
-  const env = import.meta.env.YOUTUBE_CHANNEL_ID || process.env.YOUTUBE_CHANNEL_ID;
+async function idChaine(handleUrl: string, connu?: string): Promise<string | undefined> {
+  const env = import.meta.env.YOUTUBE_CHANNEL_ID || process.env.YOUTUBE_CHANNEL_ID || connu;
   if (env) return env;
   const r = await fetch(handleUrl, { headers: { 'accept-language': 'fr' } });
   const html = await r.text();
@@ -24,7 +24,7 @@ export function videosChaine(matiere = 'maths'): Promise<VideoYT[]> {
       const m = MATIERES.find((x) => x.slug === matiere);
       if (!m?.youtube) return [];
       try {
-        const id = await idChaine(m.youtube);
+        const id = await idChaine(m.youtube, m.youtubeId);
         if (!id) return [];
         const xml = await (await fetch(`https://www.youtube.com/feeds/videos.xml?channel_id=${id}`)).text();
         return [...xml.matchAll(/<entry>([\s\S]*?)<\/entry>/g)].map(([, e]) => ({

@@ -6,7 +6,7 @@ import 'katex/dist/katex.min.css';
 import '../styles/global.css';
 import Entete from '../components/Entete.astro';
 import Pied from '../components/Pied.astro';
-import { SITE } from '../data/site';
+import { MATIERES } from '../data/site';
 
 interface Props {
   titre: string;
@@ -18,7 +18,18 @@ interface Props {
   sansEntete?: boolean;
 }
 const { titre, description = 'Les maths de la 6e à la terminale, enfin claires. Vidéos, cours, exercices corrigés pas à pas et QCM. Gratuit, sans compte.', matiere = 'maths', niveau, actif, indexer = true, sansEntete = false } = Astro.props;
-const canonical = new URL(Astro.url.pathname, SITE.url);
+const site = Astro.site ?? new URL('https://et-magique.netlify.app');
+const canonical = new URL(Astro.url.pathname, site);
+const ogImage = new URL('/og.png', site);
+const verifGoogle = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
+const m = MATIERES[0];
+const ld = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    { '@type': 'EducationalOrganization', '@id': `${site.origin}/#org`, name: 'Maths et Magique', alternateName: ['Et Magique', 'Maths & Magique', 'mathsetmagique'], url: site.origin, logo: new URL('/favicon.svg', site).href, sameAs: [m.youtube, m.instagram].filter(Boolean) },
+    { '@type': 'WebSite', '@id': `${site.origin}/#site`, name: 'Maths et Magique', alternateName: 'Et Magique', url: site.origin, inLanguage: 'fr-FR', publisher: { '@id': `${site.origin}/#org` } },
+  ],
+};
 const umamiId = import.meta.env.PUBLIC_UMAMI_ID;
 const umamiSrc = import.meta.env.PUBLIC_UMAMI_SRC || 'https://cloud.umami.is/script.js';
 const pleinTitre = titre.includes('Magique') ? titre : `${titre} · Maths et Magique`;
@@ -40,8 +51,15 @@ const pleinTitre = titre.includes('Magique') ? titre : `${titre} · Maths et Mag
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="fr_FR" />
     <meta property="og:url" content={canonical} />
+    <meta property="og:site_name" content="Maths et Magique" />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    {verifGoogle && <meta name="google-site-verification" content={verifGoogle} />}
+    {indexer && <script type="application/ld+json" set:html={JSON.stringify(ld)} />}
     {!indexer && <meta name="robots" content="noindex" />}
-    {umamiId && <script defer src={umamiSrc} data-website-id={umamiId} data-domains="etmagique.fr,www.etmagique.fr"></script>}
+    {umamiId && <script defer src={umamiSrc} data-website-id={umamiId} data-domains={`etmagique.fr,www.etmagique.fr,${site.host}`}></script>}
     <slot name="head" />
   </head>
   <body>
