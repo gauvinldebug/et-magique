@@ -1,0 +1,49 @@
+questions:
+  - question: Une primitive de $3\corange{x}^2$ est…
+    choix: ['$6\corange{x}$', '$\corange{x}^3$', '$3\corange{x}^3$', '$\corange{x}^3 + 3\corange{x}$']
+    bonne: 1
+    explication: La dérivée de $\corange{x}^3$ est $3\corange{x}^2$.
+    revoir: cours
+
+  - question: Une primitive de $\mathrm{e}^{2\corange{x}}$ est…
+    choix: ['$\mathrm{e}^{2\corange{x}}$', '$2\mathrm{e}^{2\corange{x}}$', '$\frac{1}{2}\mathrm{e}^{2\corange{x}}$', '$\mathrm{e}^{\corange{x}^2}$']
+    bonne: 2
+    explication: La dérivée de $\frac{1}{2}\mathrm{e}^{2\corange{x}}$ est $\frac{1}{2} \times 2\mathrm{e}^{2\corange{x}} = \mathrm{e}^{2\corange{x}}$.
+    revoir: cours
+
+  - question: Une primitive de $\dfrac{2\corange{x}}{\corange{x}^2 + 1}$ est…
+    choix: ['$\ln(\corange{x}^2 + 1)$', '$\dfrac{1}{\corange{x}^2 + 1}$', '$2\ln \corange{x}$', '$\corange{x}^2\ln(\corange{x}^2 + 1)$']
+    bonne: 0
+    explication: C'est la forme $\frac{u'}{u}$ avec $u = \corange{x}^2 + 1 > 0$.
+    revoir: cours
+
+  - question: Si $F$ et $G$ sont deux primitives de la même fonction sur un intervalle, alors…
+    choix: ['$F = G$', '$F - G$ est constante', '$F \times G$ est constante', '$F + G = 0$']
+    bonne: 1
+    explication: Deux primitives diffèrent d'une constante. Ce sont deux voitures à la même vitesse, parties de points différents.
+    revoir: cours
+
+  - question: Les solutions de $y' = -2y$ sont les fonctions…
+    choix: ['$C\mathrm{e}^{2\corange{x}}$', '$C\mathrm{e}^{-2\corange{x}}$', '$-2\mathrm{e}^{\corange{x}}$', '$\mathrm{e}^{-2\corange{x}} + C$']
+    bonne: 1
+    explication: Les solutions de $y' = ay$ sont $C\mathrm{e}^{a\corange{x}}$, ici $a = -2$.
+    revoir: cours
+
+  - question: La solution constante de $y' = 3y - 6$ est…
+    choix: ['$y = 6$', '$y = 2$', '$y = -2$', '$y = 3$']
+    bonne: 1
+    explication: >-
+      $-\frac{b}{a} = -\frac{-6}{3} = 2$. On vérifie que $3 \times 2 - 6 = 0$.
+    revoir: cours
+
+  - question: La solution de $y' = y$ telle que $y(0) = 5$ est…
+    choix: ['$5\mathrm{e}^{\corange{x}}$', '$\mathrm{e}^{\corange{x}} + 5$', '$\mathrm{e}^{5\corange{x}}$', '$5\corange{x}$']
+    bonne: 0
+    explication: Les solutions sont $C\mathrm{e}^{\corange{x}}$, et $y(0) = C = 5$.
+    revoir: exercices
+
+  - question: Une primitive de $\cos(2\corange{x})$ est…
+    choix: ['$\sin(2\corange{x})$', '$2\sin(2\corange{x})$', '$\frac{1}{2}\sin(2\corange{x})$', '$-\frac{1}{2}\sin(2\corange{x})$']
+    bonne: 2
+    explication: La dérivée de $\frac{1}{2}\sin(2\corange{x})$ est $\frac{1}{2} \times 2\cos(2\corange{x}) = \cos(2\corange{x})$.
+    revoir: cours

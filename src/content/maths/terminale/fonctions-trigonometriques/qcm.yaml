@@ -1,0 +1,48 @@
+questions:
+  - question: Que vaut $\cos\left(\frac{\pi}{3}\right)$ ?
+    choix: ['$\frac{1}{2}$', '$\frac{\sqrt{3}}{2}$', '$\frac{\sqrt{2}}{2}$', '$0$']
+    bonne: 0
+    explication: Valeur à connaître. $\sin\left(\frac{\pi}{3}\right)$ vaut $\frac{\sqrt{3}}{2}$.
+    revoir: cours
+
+  - question: La fonction $\sin$ est…
+    choix: ["paire", "impaire", "ni paire ni impaire", "constante"]
+    bonne: 1
+    explication: $\sin(-\corange{x}) = -\sin \corange{x}$, sa courbe est symétrique par rapport à l'origine.
+    revoir: cours
+
+  - question: Quelle est la dérivée de $\cos(3\corange{x})$ ?
+    choix: ['$\sin(3\corange{x})$', '$-\sin(3\corange{x})$', '$-3\sin(3\corange{x})$', '$3\sin(3\corange{x})$']
+    bonne: 2
+    explication: $(\cos(a\corange{x} + b))' = -a\sin(a\corange{x} + b)$, ici $a = 3$.
+    revoir: cours
+
+  - question: Sur $[0\,;\pi]$, la fonction $\cos$ est…
+    choix: ["croissante", "décroissante", "croissante puis décroissante", "constante"]
+    bonne: 1
+    explication: Sa dérivée $-\sin \corange{x}$ est négative sur $[0\,;\pi]$. La nacelle va de droite à gauche.
+    revoir: cours
+
+  - question: Les solutions de $\sin \corange{x} = \frac{1}{2}$ dans $[0\,;2\pi[$ sont…
+    choix: ['$\frac{\pi}{6}$ seulement', '$\frac{\pi}{6}$ et $\frac{5\pi}{6}$', '$\frac{\pi}{6}$ et $-\frac{\pi}{6}$', '$\frac{\pi}{3}$ et $\frac{2\pi}{3}$']
+    bonne: 1
+    explication: $\sin \corange{x} = \sin a \iff \corange{x} = a$ ou $\corange{x} = \pi - a$ (à $2\pi$ près), avec $a = \frac{\pi}{6}$.
+    revoir: exercices
+
+  - question: Que vaut $\lim\limits_{\corange{x} \to 0} \dfrac{\sin \corange{x}}{\corange{x}}$ ?
+    choix: ['$0$', '$1$', '$+\infty$', "pas de limite"]
+    bonne: 1
+    explication: C'est le nombre dérivé de $\sin$ en 0, qui vaut $\cos 0 = 1$.
+    revoir: cours
+
+  - question: $\cos(\pi - \corange{x})$ est égal à…
+    choix: ['$\cos \corange{x}$', '$-\cos \corange{x}$', '$\sin \corange{x}$', '$-\sin \corange{x}$']
+    bonne: 1
+    explication: Le point d'angle $\pi - \corange{x}$ est le symétrique par rapport à l'axe vertical, l'abscisse change de signe.
+    revoir: cours
+
+  - question: Si $\cos \corange{x} = 0{,}6$ et $\sin \corange{x} > 0$, alors $\sin \corange{x}$ vaut…
+    choix: ['$0{,}4$', '$0{,}8$', '$0{,}64$', '$0{,}36$']
+    bonne: 1
+    explication: $\sin^2 \corange{x} = 1 - 0{,}36 = 0{,}64$ et $\sin \corange{x} > 0$, donc $\sin \corange{x} = 0{,}8$.
+    revoir: cours

@@ -1,0 +1,127 @@
+# Exercices corrigés, du plus facile au type bac.
+# type d'étape : init (vert), her (orange), conc (bleu), calcul, methode, piege (rouge)
+exercices:
+  - titre: Calculer des intégrales
+    difficulte: 1
+    type: application
+    enonce: |
+      Calculer.
+      1. $I = \displaystyle\int_{-1}^{2} (\corange{x}^2 - 2\corange{x} + 3)\,\mathrm{d}\corange{x}$
+      2. $J = \displaystyle\int_1^{\mathrm{e}} \frac{2}{\corange{x}}\,\mathrm{d}\corange{x}$
+      3. $K = \displaystyle\int_0^{\ln 2} \mathrm{e}^{2\corange{x}}\,\mathrm{d}\corange{x}$
+    indice: Une primitive de $\mathrm{e}^{2\corange{x}}$ est $\frac{1}{2}\mathrm{e}^{2\corange{x}}$, et $\mathrm{e}^{2\ln 2} = 4$.
+    etapes:
+      - type: calcul
+        titre: Question 1
+        texte: >-
+          $I = \left[\frac{\corange{x}^3}{3} - \corange{x}^2 + 3\corange{x}\right]_{-1}^{2} = \left(\frac{8}{3} - 4 + 6\right) - \left(-\frac{1}{3} - 1 - 3\right) = \frac{14}{3} + \frac{13}{3} = 9$.
+      - type: calcul
+        titre: Question 2
+        texte: $J = \big[2\ln \corange{x}\big]_1^{\mathrm{e}} = 2\ln \mathrm{e} - 2\ln 1 = 2$.
+      - type: calcul
+        titre: Question 3
+        texte: $K = \left[\frac{1}{2}\mathrm{e}^{2\corange{x}}\right]_0^{\ln 2} = \frac{1}{2}(4 - 1) = \frac{3}{2}$.
+        note: on vérifie le signe, f est positive
+
+  - titre: Une aire sous une courbe
+    difficulte: 1
+    type: application
+    enonce: |
+      Calculer l'aire du domaine compris entre la courbe de $\cbleu{f}(\corange{x}) = \sqrt{\corange{x}}$, l'axe des abscisses et les droites $x = 0$ et $x = 4$.
+    indice: $\sqrt{\corange{x}} = \corange{x}^{1/2}$, une primitive est $\frac{2}{3}\corange{x}^{3/2}$.
+    etapes:
+      - type: methode
+        titre: La fonction est positive
+        texte: $\sqrt{\corange{x}} \ge 0$ sur $[0\,;4]$, donc l'aire est égale à l'intégrale.
+      - type: calcul
+        titre: Le calcul
+        texte: $\displaystyle\int_0^4 \sqrt{\corange{x}}\,\mathrm{d}\corange{x} = \left[\frac{2}{3}\corange{x}\sqrt{\corange{x}}\right]_0^4 = \frac{2}{3} \times 4 \times 2 = \frac{16}{3}$.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>L'aire vaut $\frac{16}{3}$ unités d'aire</mark>, environ 5,33.
+
+  - titre: Le piège de l'aire négative
+    difficulte: 2
+    type: piege
+    enonce: |
+      Soit $\cbleu{f}(\corange{x}) = \corange{x}^2 - 1$.
+      1. Calculer $\displaystyle\int_0^2 \cbleu{f}(\corange{x})\,\mathrm{d}\corange{x}$.
+      2. Calculer l'aire du domaine compris entre la courbe, l'axe des abscisses et les droites $x = 0$ et $x = 2$.
+    indice: $\cbleu{f}$ change de signe en 1.
+    etapes:
+      - type: calcul
+        titre: Question 1
+        texte: $\int_0^2 (\corange{x}^2 - 1)\,\mathrm{d}\corange{x} = \left[\frac{\corange{x}^3}{3} - \corange{x}\right]_0^2 = \frac{8}{3} - 2 = \frac{2}{3}$.
+      - type: piege
+        titre: Ce n'est pas l'aire
+        texte: >-
+          $\cbleu{f} \le 0$ sur $[0\,;1]$ et $\cbleu{f} \ge 0$ sur $[1\,;2]$. L'intégrale compte la partie sous l'axe en négatif.
+        note: on découpe en 1
+      - type: calcul
+        titre: Question 2, on découpe
+        texte: >-
+          $\int_0^1 \cbleu{f} = \frac{1}{3} - 1 = -\frac{2}{3}$ et $\int_1^2 \cbleu{f} = \frac{2}{3} - \left(-\frac{2}{3}\right) = \frac{4}{3}$. L'aire vaut $\frac{2}{3} + \frac{4}{3} = 2$.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>L'aire vaut 2 u.a.</mark>, alors que l'intégrale vaut $\frac{2}{3}$.
+
+  - titre: Aire entre deux courbes
+    difficulte: 2
+    type: methode
+    enonce: |
+      Calculer l'aire du domaine compris entre les courbes de $\cbleu{f}(\corange{x}) = \corange{x}$ et $g(\corange{x}) = \corange{x}^2$ sur $[0\,;1]$.
+    indice: Sur $[0\,;1]$, laquelle est au-dessus ?
+    etapes:
+      - type: methode
+        titre: Qui est en haut ?
+        texte: $\corange{x} - \corange{x}^2 = \corange{x}(1 - \corange{x}) \ge 0$ sur $[0\,;1]$, donc la courbe de $\cbleu{f}$ est au-dessus.
+      - type: calcul
+        titre: Le calcul
+        texte: $\displaystyle\int_0^1 (\corange{x} - \corange{x}^2)\,\mathrm{d}\corange{x} = \left[\frac{\corange{x}^2}{2} - \frac{\corange{x}^3}{3}\right]_0^1 = \frac{1}{2} - \frac{1}{3} = \frac{1}{6}$.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>L'aire vaut $\frac{1}{6}$ u.a.</mark>
+
+  - titre: Une intégration par parties
+    difficulte: 2
+    type: methode
+    enonce: |
+      Calculer $I = \displaystyle\int_1^{\mathrm{e}} \ln \corange{x}\,\mathrm{d}\corange{x}$.
+    indice: Écris $\ln \corange{x} = 1 \times \ln \corange{x}$, avec $u = \ln \corange{x}$ et $v' = 1$.
+    etapes:
+      - type: calcul
+        titre: Le choix
+        texte: $u = \ln \corange{x}$, $u' = \frac{1}{\corange{x}}$ ; $v' = 1$, $v = \corange{x}$.
+      - type: calcul
+        titre: La formule
+        texte: $I = \big[\corange{x}\ln \corange{x}\big]_1^{\mathrm{e}} - \displaystyle\int_1^{\mathrm{e}} \frac{1}{\corange{x}} \times \corange{x}\,\mathrm{d}\corange{x} = (\mathrm{e} - 0) - \int_1^{\mathrm{e}} 1\,\mathrm{d}\corange{x}$.
+        note: le ln a disparu
+      - type: conc
+        titre: Conclusion
+        texte: $I = \mathrm{e} - (\mathrm{e} - 1)$, donc <mark>$I = 1$</mark>.
+
+  - titre: Suite d'intégrales, type bac
+    difficulte: 3
+    type: bac
+    enonce: |
+      Pour tout entier $\corange{n} \ge 0$, on pose $I_{\corange{n}} = \displaystyle\int_0^1 \corange{x}^{\corange{n}}\,\mathrm{e}^{-\corange{x}}\,\mathrm{d}\corange{x}$.
+      1. Montrer que $I_{\corange{n}} \ge 0$ pour tout $\corange{n}$.
+      2. Montrer que la suite $(I_{\corange{n}})$ est décroissante.
+      3. En déduire qu'elle converge.
+    indice: Pour la question 2, compare $\corange{x}^{\corange{n}+1}$ et $\corange{x}^{\corange{n}}$ sur $[0\,;1]$.
+    etapes:
+      - type: calcul
+        titre: Question 1
+        texte: Sur $[0\,;1]$, $\corange{x}^{\corange{n}} \ge 0$ et $\mathrm{e}^{-\corange{x}} > 0$. Par positivité de l'intégrale ($0 \le 1$), $I_{\corange{n}} \ge 0$.
+      - type: methode
+        titre: Question 2, la différence
+        texte: >-
+          Par linéarité, $I_{\corange{n}+1} - I_{\corange{n}} = \displaystyle\int_0^1 \corange{x}^{\corange{n}}(\corange{x} - 1)\,\mathrm{e}^{-\corange{x}}\,\mathrm{d}\corange{x}$.
+      - type: calcul
+        titre: Question 2, le signe
+        texte: >-
+          Sur $[0\,;1]$, $\corange{x} - 1 \le 0$, $\corange{x}^{\corange{n}} \ge 0$ et $\mathrm{e}^{-\corange{x}} > 0$, donc la fonction intégrée est négative et $I_{\corange{n}+1} - I_{\corange{n}} \le 0$. La suite est décroissante.
+        note: on étudie le signe de ce qui est dans l'intégrale
+      - type: conc
+        titre: Question 3
+        texte: La suite $(I_{\corange{n}})$ est décroissante et minorée par 0. D'après le théorème de la limite monotone, <mark>elle converge</mark>.
