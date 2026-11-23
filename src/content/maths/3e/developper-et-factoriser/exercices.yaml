@@ -1,0 +1,90 @@
+# Exercices corrigés, du plus facile au type brevet.
+# type d'étape : init (vert), her (orange), conc (bleu), calcul, methode, piege (rouge)
+exercices:
+  - titre: Défaire la valise
+    difficulte: 1
+    type: application
+    enonce: |
+      Développer et réduire.
+      1. $A = 4(2\corange{x} - 3)$
+      2. $B = (\corange{x} + 2)(\corange{x} + 5)$
+      3. $C = (\corange{x} - 7)^2$
+    indice: Pour C, utilise $(a - b)^2$.
+    etapes:
+      - type: calcul
+        titre: Question 1
+        texte: $A = 8\corange{x} - 12$.
+      - type: calcul
+        titre: Question 2
+        texte: $B = \corange{x}^2 + 5\corange{x} + 2\corange{x} + 10 = \corange{x}^2 + 7\corange{x} + 10$.
+      - type: conc
+        titre: Question 3
+        texte: <mark>$C = \corange{x}^2 - 14\corange{x} + 49$</mark>.
+        note: le double produit
+
+  - titre: Refaire la valise
+    difficulte: 1
+    type: application
+    enonce: |
+      Factoriser.
+      1. $D = 5\corange{x} + 15$
+      2. $E = \corange{x}^2 - 3\corange{x}$
+      3. $F = 9\corange{x}^2 - 16$
+    indice: Facteur commun pour D et E, identité pour F.
+    etapes:
+      - type: calcul
+        titre: Question 1
+        texte: $D = 5(\corange{x} + 3)$.
+      - type: calcul
+        titre: Question 2
+        texte: $E = \corange{x}(\corange{x} - 3)$.
+      - type: conc
+        titre: Question 3
+        texte: <mark>$F = (3\corange{x})^2 - 4^2 = (3\corange{x} - 4)(3\corange{x} + 4)$</mark>.
+
+  - titre: Le signe moins
+    difficulte: 2
+    type: piege
+    enonce: |
+      Développer et réduire $G = (2\corange{x} + 1)^2 - (\corange{x} - 3)(\corange{x} + 2)$.
+    indice: Développe chaque morceau entre parenthèses avant d'enlever le moins.
+    etapes:
+      - type: calcul
+        titre: Les deux morceaux
+        texte: >-
+          $(2\corange{x} + 1)^2 = 4\corange{x}^2 + 4\corange{x} + 1$ et $(\corange{x} - 3)(\corange{x} + 2) = \corange{x}^2 - \corange{x} - 6$.
+      - type: piege
+        titre: Enlever les parenthèses
+        texte: >-
+          $G = 4\corange{x}^2 + 4\corange{x} + 1 - \corange{x}^2 + \corange{x} + 6$. Tous les signes du second morceau changent.
+        note: le moins agit sur tout
+      - type: conc
+        titre: Conclusion
+        texte: <mark>$G = 3\corange{x}^2 + 5\corange{x} + 7$</mark>.
+
+  - titre: Programme de calcul
+    difficulte: 3
+    type: brevet
+    enonce: |
+      Voici un programme de calcul.
+      - Choisir un nombre.
+      - Lui ajouter 4.
+      - Multiplier le résultat par le nombre de départ.
+      - Ajouter 4.
+      1. Montrer qu'avec 3 au départ, on obtient 25.
+      2. Montrer que le résultat est toujours un carré.
+      3. Quels nombres de départ donnent 0 ?
+    indice: Note $\corange{x}$ le nombre de départ, et reconnais une identité.
+    etapes:
+      - type: calcul
+        titre: Question 1
+        texte: $3 + 4 = 7$, $7 \times 3 = 21$, $21 + 4 = 25$.
+      - type: calcul
+        titre: Question 2
+        texte: >-
+          $(\corange{x} + 4)\corange{x} + 4 = \corange{x}^2 + 4\corange{x} + 4 = (\corange{x} + 2)^2$.
+        note: identité (a + b)²
+      - type: conc
+        titre: Question 3
+        texte: >-
+          $(\corange{x} + 2)^2 = 0 \iff \corange{x} + 2 = 0$. <mark>Seul le nombre $-2$ donne 0</mark>.

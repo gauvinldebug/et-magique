@@ -1,0 +1,30 @@
+questions:
+  - question: Une probabilité peut valoir…
+    choix: ['$0{,}75$', '$1{,}5$', '$-0{,}2$', '$150\,\%$']
+    bonne: 0
+    explication: Une probabilité est toujours entre 0 et 1.
+    revoir: cours
+
+  - question: Si $P(A) = 0{,}35$, alors $P(\text{non } A) = $…
+    choix: ['$0{,}65$', '$0{,}35$', '$1{,}35$', '$0$']
+    bonne: 0
+    explication: $1 - 0{,}35 = 0{,}65$.
+    revoir: cours
+
+  - question: On lance une pièce deux fois. La probabilité d'obtenir deux fois pile est…
+    choix: ['$\frac{1}{4}$', '$\frac{1}{2}$', '$\frac{1}{3}$', '$1$']
+    bonne: 0
+    explication: On multiplie sur le chemin, $\frac{1}{2} \times \frac{1}{2}$.
+    revoir: cours
+
+  - question: On tire une carte dans un jeu de 32 cartes. $P(\text{as})$ vaut…
+    choix: ['$\frac{1}{8}$', '$\frac{1}{4}$', '$\frac{1}{32}$', '$\frac{4}{52}$']
+    bonne: 0
+    explication: 4 as sur 32 cartes, $\frac{4}{32} = \frac{1}{8}$.
+    revoir: exercices
+
+  - question: On lance un dé 20 fois et on obtient 6 cinq fois. On peut dire que…
+    choix: ['la fréquence du 6 est $0{,}25$, ce n''est pas la probabilité', 'le dé est truqué', 'la probabilité du 6 est $0{,}25$', 'c''est impossible']
+    bonne: 0
+    explication: Sur 20 lancers, la fréquence peut s'éloigner de $\frac{1}{6}$. Il faudrait beaucoup plus de lancers.
+    revoir: cours

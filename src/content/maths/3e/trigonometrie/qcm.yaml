@@ -1,0 +1,30 @@
+questions:
+  - question: Dans un triangle rectangle, $\sin \widehat{A}$ est égal à…
+    choix: ['$\frac{\text{opposé}}{\text{hypoténuse}}$', '$\frac{\text{adjacent}}{\text{hypoténuse}}$', '$\frac{\text{opposé}}{\text{adjacent}}$', '$\frac{\text{hypoténuse}}{\text{opposé}}$']
+    bonne: 0
+    explication: SOH, Sinus Opposé Hypoténuse.
+    revoir: cours
+
+  - question: On connaît l'angle et le côté adjacent, on cherche le côté opposé. On utilise…
+    choix: ['la tangente', 'le cosinus', 'le sinus', 'Pythagore']
+    bonne: 0
+    explication: TOA, la tangente relie l'opposé et l'adjacent.
+    revoir: cours
+
+  - question: Si $\cos \widehat{A} = 0{,}5$, alors $\widehat{A}$ vaut…
+    choix: ['$60°$', '$30°$', '$45°$', '$0{,}5°$']
+    bonne: 0
+    explication: $\cos^{-1}(0{,}5) = 60°$.
+    revoir: cours
+
+  - question: Le cosinus d'un angle aigu peut-il valoir $1{,}2$ ?
+    choix: ['non, jamais', 'oui', 'seulement si l''angle est grand', 'seulement en radians']
+    bonne: 0
+    explication: L'hypoténuse est le plus grand côté, donc le rapport est inférieur à 1.
+    revoir: cours
+
+  - question: Hypoténuse 10 cm et angle 30°. Le côté opposé mesure…
+    choix: ['$5$ cm', '$8{,}7$ cm', '$10$ cm', '$3$ cm']
+    bonne: 0
+    explication: $10 \times \sin 30° = 10 \times 0{,}5 = 5$.
+    revoir: exercices

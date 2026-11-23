@@ -1,0 +1,30 @@
+questions:
+  - question: Lequel de ces nombres est premier ?
+    choix: ['$37$', '$39$', '$1$', '$57$']
+    bonne: 0
+    explication: $39 = 3 \times 13$, $57 = 3 \times 19$, et 1 n'est pas premier.
+    revoir: cours
+
+  - question: La décomposition de $72$ en facteurs premiers est…
+    choix: ['$2^3 \times 3^2$', '$8 \times 9$', '$2^2 \times 3^3$', '$2 \times 36$']
+    bonne: 0
+    explication: $72 = 2 \times 2 \times 2 \times 3 \times 3$. 8 et 9 ne sont pas premiers.
+    revoir: cours
+
+  - question: 2 742 est divisible par…
+    choix: ['$2$ et $3$', '$2$ seulement', '$3$ seulement', '$9$']
+    bonne: 0
+    explication: Il est pair, et $2 + 7 + 4 + 2 = 15$ est divisible par 3 mais pas par 9.
+    revoir: cours
+
+  - question: La forme irréductible de $\dfrac{84}{60}$ est…
+    choix: ['$\dfrac{7}{5}$', '$\dfrac{42}{30}$', '$\dfrac{14}{10}$', '$\dfrac{21}{15}$']
+    bonne: 0
+    explication: $84 = 2^2 \times 3 \times 7$ et $60 = 2^2 \times 3 \times 5$. On barre $2^2 \times 3$.
+    revoir: exercices
+
+  - question: Le plus grand nombre qui divise à la fois 24 et 36 est…
+    choix: ['$12$', '$6$', '$4$', '$72$']
+    bonne: 0
+    explication: $24 = 2^3 \times 3$ et $36 = 2^2 \times 3^2$. Briques communes, $2^2 \times 3 = 12$.
+    revoir: exercices
