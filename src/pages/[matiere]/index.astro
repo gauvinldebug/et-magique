@@ -17,7 +17,7 @@ const nv = dernier && NIVEAUX.find((n) => n.slug === dernier.niveau);
       <div class="s-hero">
         <div>
           <h1>Tout le programme de maths, expliqué en vidéo et <mark>corrigé pas à pas</mark>.</h1>
-          <p class="lead">De la 6e à la terminale. Gratuit, sans compte, sans publicité.</p>
+          <p class="lead">De la 6e à la terminale, options comprises. Gratuit, sans compte, sans publicité.</p>
           <div style="margin-top:20px"><Recherche id="rq-accueil" /></div>
           <div class="levels" aria-label="Choisis ton niveau">
             {NIVEAUX.map((n) => <a href={`/${matiere.slug}/${n.slug}/`}>{n.court}</a>)}
