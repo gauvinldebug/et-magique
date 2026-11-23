@@ -1,6 +1,7 @@
 ---
 import Base from './Base.astro';
 import EnteteImpression from '../components/EnteteImpression.astro';
+import Bandeau from '../components/Bandeau.astro';
 import type { ChapitreProps } from '../lib/routes';
 
 type Onglet = 'video' | 'cours' | 'exercices' | 'qcm';
@@ -30,10 +31,10 @@ const titre = titrePage ?? (onglet === 'video' ? chapitre.data.titre : `${chapit
   <div class="page-feuille cahier">
     <div class="feuille">
       <EnteteImpression niveau={niveau.slug} niveauNom={niveau.nom} type={{ video: 'Cours', cours: 'Cours', exercices: 'Exercices corrigés', qcm: 'QCM' }[onglet]} titre={chapitre.data.titre} adresse={`etmagique.fr${base}/`} />
-      <div class="no-print">
+      <Bandeau niveau={niveau.slug} petit>
         <div class="crumb"><a href={`/${matiere.slug}/${niveau.slug}/`}>{niveau.nom}</a> › <b>{chapitre.data.court}</b></div>
         <h1 data-pagefind-meta="title">{chapitre.data.titre}</h1>
-      </div>
+      </Bandeau>
       <nav class="ch-tabs" aria-label="Parties du chapitre">
         {onglets.map((o) => (
           <a href={o.href} aria-current={o.id === onglet ? 'page' : undefined}>{o.titre}{o.n ? <small>{o.n}</small> : null}</a>

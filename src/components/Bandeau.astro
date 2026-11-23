@@ -1,0 +1,16 @@
+---
+// Bandeau en affiche en tête des pages niveau et chapitre : l'aplat a la couleur du niveau
+// (la même que sa tuile dans le sommaire) et quatre formes qui bougent un peu au défilement.
+import { teinteNiveau, styleTeinte } from '../data/affiches';
+interface Props { niveau: string; petit?: boolean }
+const { niveau, petit = false } = Astro.props;
+---
+<header class:list={['bandeau', 'no-print', { petit }]} style={styleTeinte(teinteNiveau(niveau))} data-scroll>
+  <svg class="bandeau-formes" viewBox="0 0 600 400" preserveAspectRatio="xMaxYMid slice" aria-hidden="true">
+    <circle class="f-rond" cx="430" cy="150" r="150" style="fill:var(--f1)" />
+    <polygon class="f-tri" points="250,400 360,210 470,400" style="fill:var(--f2)" />
+    <rect class="f-carre" x="500" y="270" width="80" height="80" style="fill:var(--f3)" />
+    <path class="f-courbe" d="M180 420 Q 420 -120 640 300" fill="none" stroke-width="7" pathLength="1" style="stroke:var(--f4)" />
+  </svg>
+  <div class="bandeau-txt"><slot /></div>
+</header>

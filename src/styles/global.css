@@ -531,15 +531,11 @@ mark, .hl { background: none; color: inherit; padding: 0 .05em; box-shadow: inse
 /* Barre des matières, en haut de chaque site de matière */
 .gbar { background: var(--nuit); color: #fff; font-size: .86rem; }
 .gbar > .wrap { display: flex; align-items: center; gap: 24px; height: 38px; }
-.gbar a, .gbar span { color: #fff; text-decoration: none; }
+.gbar a { color: #fff; text-decoration: none; }
 .gbar-home { display: inline-flex; align-items: center; gap: 8px; font-weight: 700; }
 .gbar-home:hover { color: var(--jaune); }
 .gbar-chev, .ph-retour svg { width: 12px; height: 12px; fill: none; stroke: currentColor; stroke-width: 2.4; }
 .gbar-court { display: none; }
-.gbar nav { display: flex; gap: 22px; margin-left: auto; }
-.gbar nav a[aria-current="page"] { color: var(--jaune); }
-.gbar nav a:hover { color: var(--jaune); }
-.gbar nav span { opacity: .5; cursor: default; }
 .ph-retour { display: inline-flex; align-items: center; gap: 8px; font-weight: 700; color: var(--encre); text-decoration: none; }
 
 /* En-tête : blanc, filet épais */
@@ -720,7 +716,7 @@ a.poster:hover { color: var(--txt); transform: translate(-4px, -4px); box-shadow
   .p-affiches li:first-child .poster { min-height: 320px; }
 }
 @media (max-width: 760px) {
-  .gbar nav span, .gbar-long { display: none; }
+  .gbar-long { display: none; }
   .gbar-court { display: inline; }
   .ah { min-height: 0; }
   .ah-tete { flex-wrap: wrap; gap: 8px 20px; }
@@ -856,3 +852,89 @@ a.poster:hover { color: var(--txt); transform: translate(-4px, -4px); box-shadow
   .hs-textes p:last-child { font-size: 1rem; }
 }
 @media print { .hs.hs-actif { height: auto; } .hs-actif .hs-scene { position: static; height: auto; } .hs-actif .hs-textes li { opacity: 1; transform: none; grid-area: auto; } }
+
+/* ==========================================================================
+   Affiche, version 3 : barre des matières, pied de page, bandeaux des pages
+   ========================================================================== */
+/* Petite affiche de matière (barre du haut, pied de page) */
+.gbar-mini { display: inline-grid; place-items: center; flex: none; width: 26px; height: 26px; border-radius: 3px; background: var(--fond); overflow: hidden; }
+.gbar-mini svg { width: 20px; height: 20px; display: block; }
+
+/* Barre du haut : un bouton retour franc, puis les matières en petites affiches */
+.gbar { background: var(--nuit); color: #fff; font-size: .9rem; }
+.gbar > .wrap { display: flex; align-items: center; gap: 20px; height: 52px; }
+.gbar-home { display: inline-flex; align-items: center; gap: 10px; flex: none; height: 36px; padding: 0 16px 0 5px; border-radius: 999px; background: var(--jaune); color: var(--ink) !important; font-weight: 700; text-decoration: none; transition: background-color .15s var(--ease), transform .15s var(--ease); }
+.gbar-home:hover { background: #fff; color: var(--ink) !important; transform: translateX(-2px); }
+.gbar-fleche { display: grid; place-items: center; width: 26px; height: 26px; border-radius: 50%; background: var(--ink); }
+.gbar-fleche svg { width: 16px; height: 16px; fill: none; stroke: var(--jaune); stroke-width: 2.6; stroke-linecap: round; stroke-linejoin: round; }
+.gbar nav { display: flex; gap: 6px; margin-left: auto; overflow-x: auto; scrollbar-width: none; }
+.gbar nav::-webkit-scrollbar { display: none; }
+.gbar nav a, .gbar nav > span { display: inline-flex; align-items: center; gap: 8px; flex: none; height: 36px; padding: 0 12px 0 5px; border-radius: 999px; color: #fff; text-decoration: none; font-weight: 600; box-shadow: none; transition: background-color .15s var(--ease); }
+.gbar nav a:hover { background: rgba(255, 255, 255, .12); color: #fff; }
+.gbar nav a[aria-current="page"] { background: #fff; color: var(--ink); box-shadow: none; }
+.gbar nav a[aria-current="page"]:hover { background: var(--jaune); color: var(--ink); }
+.gbar nav .gbar-bientot { opacity: .5; cursor: default; }
+@media (max-width: 760px) {
+  .gbar > .wrap { gap: 10px; height: 50px; }
+  .gbar-home { padding-right: 12px; }
+  .gbar nav { gap: 2px; }
+  .gbar nav a, .gbar nav > span { padding-right: 5px; }
+  .gbar nav a > span:last-child, .gbar nav > span > span:last-child { display: none; }
+  .gbar nav a[aria-current="page"] > span:last-child { display: inline; }
+  .gbar nav a[aria-current="page"] { padding-right: 12px; }
+}
+
+/* Pied de page en affiche */
+.pied { position: relative; background: var(--nuit); color: #fff; border: 0; margin-top: 48px; font-size: .95rem; }
+.pied-arc { stroke: var(--encre); }
+.pied-frise { display: block; width: 100%; height: 80px; position: absolute; left: 0; bottom: 100%; }
+.pied .wrap { display: grid; padding-block: 0; }
+.pied-grille { grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr) minmax(0, 1fr); gap: 40px clamp(24px, 5vw, 72px); padding-top: 56px !important; padding-bottom: 40px !important; }
+.pied-logo { font-family: var(--f-titre); font-weight: 800; font-stretch: 75%; letter-spacing: -.04em; font-size: clamp(2.6rem, 5vw, 4rem); line-height: .9; color: #fff; text-decoration: none; }
+.pied-logo:hover { color: var(--jaune); }
+.pied-marque { display: grid; gap: 16px; align-content: start; justify-items: start; margin-top: -14px; }
+.pied-marque p { color: rgba(255, 255, 255, .8); max-width: 34ch; line-height: 1.5; }
+.pied-col h2 { font-size: .85rem; font-weight: 700; font-stretch: 100%; color: var(--jaune); letter-spacing: .02em; margin-bottom: 14px; }
+.pied-col ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.pied-col a, .pied-col .pied-bientot { display: inline-flex; align-items: center; gap: 10px; color: #fff; text-decoration: none; font-weight: 600; }
+.pied-col a:hover { color: var(--jaune); }
+.pied-bientot { opacity: .55; }
+.pied-bientot small { font-weight: 500; font-size: .78rem; }
+.pied-droits { padding-block: 0 28px !important; }
+.pied-droits::before { content: ""; display: block; border-top: 1px solid rgba(255, 255, 255, .15); margin-bottom: 20px; }
+.pied-droits p { font-size: .8rem; color: rgba(255, 255, 255, .65); max-width: 80ch; }
+.pied-droits a { color: rgba(255, 255, 255, .85); }
+.nf-badge .pied-droits { padding-bottom: 80px !important; }
+@media (max-width: 760px) {
+  .pied-grille { grid-template-columns: 1fr 1fr; padding-top: 44px !important; }
+  .pied-marque { grid-column: 1 / -1; margin-top: 0; }
+  .pied-frise { height: 48px; }
+  .pied { margin-top: 32px; }
+}
+@media (max-width: 1000px) { .pied { padding-bottom: var(--tabbar-h, 0px); } }
+
+/* Bandeau des pages niveau et chapitre */
+.bandeau { position: relative; overflow: hidden; isolation: isolate; background: var(--fond); color: var(--txt); border-radius: 4px; padding: clamp(28px, 5vw, 56px); padding-right: max(clamp(28px, 5vw, 56px), 38%); min-height: 260px; display: flex; align-items: flex-end; }
+.bandeau.petit { min-height: 200px; }
+.bandeau-formes { position: absolute; right: 0; top: 0; height: 100%; width: 46%; z-index: -1; pointer-events: none; }
+.bandeau-txt { display: grid; gap: 10px; }
+.bandeau .crumb, .bandeau .crumb a, .bandeau .crumb b { color: var(--txt); }
+.bandeau .crumb a { opacity: .85; }
+.bandeau h1 { color: var(--txt); font-size: clamp(2.6rem, 6vw, 5.4rem) !important; }
+.bandeau.petit h1 { font-size: clamp(2.2rem, 4.6vw, 4rem) !important; }
+.bandeau h1 .sous { font-weight: 600; opacity: .8; }
+.bandeau p { font-size: 1.05rem; color: var(--txt); opacity: .9; }
+.page-feuille > .feuille:has(.bandeau)::before { display: none; }
+.page-feuille > .feuille:has(.bandeau) > :first-child { padding-right: 0; }
+.page-feuille > .feuille:has(.bandeau) > .bandeau { padding-right: max(clamp(28px, 5vw, 56px), 38%); }
+.anim .bandeau-formes > * { animation: pose .8s cubic-bezier(.2, .9, .3, 1.2) both; }
+.anim .bandeau-formes .f-tri { animation-delay: .1s; }
+.anim .bandeau-formes .f-carre { animation-delay: .2s; }
+.anim .bandeau-formes .f-courbe { animation: trace 1.1s .15s ease-out both; stroke-dasharray: 1; }
+@media (max-width: 760px) {
+  .bandeau, .page-feuille > .feuille:has(.bandeau) > .bandeau { padding: 24px 20px 150px; min-height: 0; }
+  .bandeau.petit, .page-feuille > .feuille:has(.bandeau) > .bandeau.petit { padding-bottom: 120px; }
+  .bandeau-formes { width: 100%; height: 140px; top: auto; bottom: 0; }
+  .bandeau.petit .bandeau-formes { height: 110px; }
+}
+@media print { .bandeau { display: none !important; } }
