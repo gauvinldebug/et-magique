@@ -1,41 +1,39 @@
 ---
 import Base from '../../layouts/Base.astro';
-import Video from '../../components/Video.astro';
+import DerniereVideo from '../../components/DerniereVideo.astro';
 import Recherche from '../../components/Recherche.astro';
 import Chaine from '../../components/Chaine.astro';
-import { NIVEAUX } from '../../data/site';
-import { dernierChapitre } from '../../lib/contenu';
+import Sommaire from '../../components/Sommaire.astro';
 import { cheminsMatieres } from '../../lib/matieres-paths';
 export const getStaticPaths = cheminsMatieres;
 const { matiere } = Astro.props;
-const dernier = await dernierChapitre(matiere.slug);
-const nv = dernier && NIVEAUX.find((n) => n.slug === dernier.niveau);
 ---
 <Base titre="Maths et Magique : les maths de la 6e à la terminale, enfin claires" description="Maths et Magique : tout le programme de maths de la 6e à la terminale en vidéo, avec cours, exercices corrigés pas à pas, QCM, fiches et annales du bac. Gratuit, sans compte, sans publicité." matiere={matiere.slug} actif="accueil">
   <div class="page-feuille cahier">
-    <div class="feuille">
-      <div class="s-hero">
-        <div>
-          <h1>Tout le programme de maths, expliqué en vidéo et <mark>corrigé pas à pas</mark>.</h1>
-          <p class="lead">De la 6e à la terminale, options comprises. Gratuit, sans compte, sans publicité.</p>
-          <div style="margin-top:20px"><Recherche id="rq-accueil" /></div>
-          <div class="levels" aria-label="Choisis ton niveau">
-            {NIVEAUX.map((n) => <a href={`/${matiere.slug}/${n.slug}/`}>{n.court}</a>)}
-          </div>
+    <div class="feuille" style="gap:clamp(56px, 7vw, 96px)">
+      <div class="m-hero">
+        <svg class="m-hero-formes" viewBox="0 0 700 520" preserveAspectRatio="xMaxYMax slice" aria-hidden="true">
+          <circle cx="520" cy="170" r="250" fill="#F2E94E" />
+          <polygon points="180,520 360,210 540,520" fill="#FF7AA8" />
+          <path d="M40 560 Q 380 -140 760 420" fill="none" stroke="#fff" stroke-width="9" />
+          <rect x="560" y="390" width="110" height="110" fill="#1A1A40" />
+        </svg>
+        <h1>Tout le programme de maths, expliqué simplement.</h1>
+        <div class="m-hero-txt">
+          <p>De la 6e à la terminale, options comprises. Vidéo, cours, exercices corrigés et QCM pour chaque chapitre. Gratuit, sans compte, sans publicité.</p>
+          <Recherche id="rq-accueil" />
         </div>
-        {dernier && nv && (
-          <div style="display:grid;gap:10px">
-            <div class="k">Nouveau chapitre</div>
-            <Video youtube={dernier.data.video.youtube} titre={dernier.data.titre} matiere={matiere.slug} niveau={dernier.niveau} chapitre={dernier.slug} court={dernier.data.court} />
-            <a href={`/${matiere.slug}/${dernier.niveau}/${dernier.slug}/`} style="font-weight:600;font-size:.95rem">{nv.nom} · {dernier.data.court} : cours, exercices et QCM</a>
-          </div>
-        )}
       </div>
-      {matiere.youtube && <Chaine url={matiere.youtube} nom={`${matiere.nom} et Magique`} />}
+      <Sommaire matiere={matiere.slug} />
+      <section class="bloc" aria-labelledby="t-video">
+        <h2 id="t-video">Dernière vidéo</h2>
+        <div class="bloc-c"><DerniereVideo matiere={matiere.slug} /></div>
+      </section>
       <div class="band">
         <div><h2>Bac 2027 : ton planning de travail</h2><p>Chaque semaine jusqu'à l'épreuve, un e‑mail avec les chapitres à revoir et les exercices à faire.</p></div>
-        <a class="btn jaune" href={`/${matiere.slug}/planning-bac/`}>Recevoir mon planning</a>
+        <a class="btn" href={`/${matiere.slug}/planning-bac/`}>Recevoir mon planning</a>
       </div>
+      {matiere.youtube && <Chaine url={matiere.youtube} nom={`${matiere.nom} et Magique`} />}
     </div>
   </div>
 </Base>
