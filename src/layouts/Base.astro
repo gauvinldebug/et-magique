@@ -69,7 +69,7 @@ const pleinTitre = titre.includes('Magique') ? titre : `${titre} · ${marque(get
     <main id="contenu" data-pagefind-body={indexer ? '' : undefined}>
       <slot />
     </main>
-    {!sansEntete && <Pied />}
+    {!sansEntete && <Pied matiere={matiere} />}
     <script is:inline>
       // Hébergement Netlify gratuit : un badge « Powered by Netlify » obligatoire s'affiche en bas à droite.
       // On le détecte pour laisser de la place sous la barre de menu du bas au lieu de la masquer.

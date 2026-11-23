@@ -2,9 +2,13 @@
 // Pied de page en affiche : une frise de formes, puis trois colonnes (la marque, les matières, le site)
 // et la mention des droits sur une ligne à part.
 import Reseaux from './Reseaux.astro';
-import { MATIERES } from '../data/site';
+import { MATIERES, matiere as getMatiere, marque } from '../data/site';
 import { AFFICHES } from '../data/affiches';
-const yt = MATIERES[0].youtube;
+interface Props { matiere?: string }
+const { matiere = 'maths' } = Astro.props;
+// Les liens de réseaux suivent la matière de la page ; une matière sans chaîne renvoie à celle des maths.
+const m = getMatiere(matiere)?.youtube ? matiere : 'maths';
+const yt = getMatiere(m)?.youtube;
 const annee = new Date().getFullYear();
 ---
 <footer class="pied">
@@ -23,7 +27,7 @@ const annee = new Date().getFullYear();
     <div class="pied-marque">
       <a class="pied-logo" href="/" aria-label="Et Magique, accueil">Et Magique</a>
       <p>Les cours de la 6e à la terminale, enfin clairs. Gratuit, sans compte, sans publicité.</p>
-      <Reseaux libelles />
+      <Reseaux libelles matiere={m} />
     </div>
     <nav class="pied-col" aria-label="Matières">
       <h2>Matières</h2>
@@ -48,6 +52,6 @@ const annee = new Date().getFullYear();
     </nav>
   </div>
   <div class="wrap pied-droits">
-    <p>© {annee} Maths et Magique, <a href="/mentions-legales/#droits-dauteur">tous droits réservés</a>. Usage personnel uniquement : toute republication ou utilisation commerciale est interdite sans accord.</p>
+    <p>© {annee} {marque(getMatiere(matiere) ? matiere : 'maths')}, <a href="/mentions-legales/#droits-dauteur">tous droits réservés</a>. Usage personnel uniquement : toute republication ou utilisation commerciale est interdite sans accord.</p>
   </div>
 </footer>
