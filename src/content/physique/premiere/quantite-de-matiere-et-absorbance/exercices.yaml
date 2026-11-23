@@ -1,0 +1,79 @@
+exercices:
+  - titre: Combien de molécules dans un verre d'eau ?
+    difficulte: 1
+    type: application
+    enonce: |
+      Un verre contient 180 g d'eau. Calculer la quantité de matière d'eau puis le nombre de molécules. $M(\mathrm{H}) = 1{,}0$ et $M(\mathrm{O}) = 16{,}0\ \mathrm{g \cdot mol^{-1}}$.
+    indice: $M(\mathrm{H_2O})$, puis $n = m/M$ et $N = n\,N_A$.
+    etapes:
+      - type: calcul
+        titre: Masse molaire
+        texte: $M(\mathrm{H_2O}) = 2 \times 1{,}0 + 16{,}0 = 18{,}0\ \mathrm{g \cdot mol^{-1}}$.
+      - type: calcul
+        titre: Quantité de matière
+        texte: $n = 180 / 18{,}0 = 10{,}0$ mol.
+      - type: conc
+        titre: Nombre de molécules
+        texte: <mark>$N = 10{,}0 \times 6{,}02 \times 10^{23} = 6{,}02 \times 10^{24}$ molécules</mark>.
+
+  - titre: Préparer une solution
+    difficulte: 1
+    type: methode
+    enonce: |
+      On veut préparer 250 mL d'une solution de sulfate de cuivre à $c = 0{,}10\ \mathrm{mol \cdot L^{-1}}$ à partir du solide $\mathrm{CuSO_4}$, de masse molaire $159{,}6\ \mathrm{g \cdot mol^{-1}}$. Quelle masse peser ?
+    indice: $n = c\,V$, puis $m = n\,M$.
+    etapes:
+      - type: calcul
+        titre: Quantité de matière
+        texte: $n = 0{,}10 \times 0{,}250 = 2{,}5 \times 10^{-2}$ mol.
+      - type: conc
+        titre: Masse
+        texte: <mark>$m = 2{,}5 \times 10^{-2} \times 159{,}6 \approx 4{,}0$ g</mark>, à dissoudre dans une fiole jaugée de 250 mL.
+
+  - titre: Un liquide et un gaz
+    difficulte: 2
+    type: methode
+    enonce: |
+      1. Quelle quantité de matière d'éthanol ($M = 46{,}0\ \mathrm{g \cdot mol^{-1}}$, $\rho = 0{,}79\ \mathrm{g \cdot mL^{-1}}$) y a-t-il dans 10,0 mL ?
+      2. Quel volume occupe 0,50 mol de dioxyde de carbone à 20 °C et 1 bar ?
+    indice: Pour le liquide, passe par la masse. Pour le gaz, $V = n\,V_m$.
+    etapes:
+      - type: calcul
+        titre: L'éthanol
+        texte: $m = 0{,}79 \times 10{,}0 = 7{,}9$ g, donc $n = 7{,}9 / 46{,}0 \approx 0{,}17$ mol.
+      - type: conc
+        titre: Le gaz
+        texte: <mark>$V = 0{,}50 \times 24 = 12$ L</mark>.
+
+  - titre: La couleur d'une solution
+    difficulte: 2
+    type: piege
+    enonce: |
+      Le spectre d'absorption d'une solution de permanganate de potassium présente un maximum vers 530 nm (vert). Un élève en déduit que la solution est verte et règle le spectrophotomètre sur 700 nm. Corriger.
+    indice: On voit ce qui n'est pas absorbé.
+    etapes:
+      - type: piege
+        titre: La couleur
+        texte: La solution absorbe le vert, elle prend la couleur complémentaire, magenta (violet-rose).
+      - type: conc
+        titre: Le réglage
+        texte: <mark>On se place au maximum d'absorption, vers 530 nm</mark>, là où l'absorbance varie le plus avec la concentration.
+
+  - titre: Doser une boisson colorée
+    difficulte: 3
+    type: methode
+    enonce: |
+      On mesure l'absorbance de solutions étalons d'un colorant bleu à 630 nm.
+      <table><tr><td>c (µmol/L)</td><td>2,0</td><td>4,0</td><td>6,0</td><td>8,0</td></tr><tr><td>A</td><td>0,26</td><td>0,52</td><td>0,78</td><td>1,04</td></tr></table>
+      Une boisson a une absorbance de 0,65 à la même longueur d'onde. Déterminer la concentration du colorant, puis sa concentration en masse ($M = 793\ \mathrm{g \cdot mol^{-1}}$).
+    indice: Vérifie la proportionnalité, calcule $k$, puis $c = A/k$.
+    etapes:
+      - type: calcul
+        titre: Beer-Lambert
+        texte: $A/c$ vaut 0,13 pour chaque étalon, la loi de Beer-Lambert est vérifiée avec $k = 0{,}13\ \mathrm{L \cdot \mu mol^{-1}}$.
+      - type: calcul
+        titre: La concentration
+        texte: $c = 0{,}65 / 0{,}13 = 5{,}0\ \mu\mathrm{mol \cdot L^{-1}}$.
+      - type: conc
+        titre: En masse
+        texte: <mark>$c_m = 5{,}0 \times 10^{-6} \times 793 \approx 4{,}0 \times 10^{-3}\ \mathrm{g \cdot L^{-1}}$</mark>, soit 4,0 mg par litre.

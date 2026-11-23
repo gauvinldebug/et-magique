@@ -1,0 +1,48 @@
+questions:
+  - question: Un réducteur est une espèce qui…
+    choix: ['capte des électrons', 'cède des électrons', 'capte des protons', 'cède des protons']
+    bonne: 1
+    explication: C'est l'acheteur, il donne la monnaie.
+    revoir: cours
+
+  - question: Une oxydation est…
+    choix: ['un gain d''électrons', 'une perte d''électrons', 'un gain d''oxygène seulement', 'une perte de protons']
+    bonne: 1
+    explication: Le réducteur, en cédant ses électrons, s'oxyde.
+    revoir: cours
+
+  - question: Dans le couple $\mathrm{Fe^{3+}/Fe^{2+}}$, l'oxydant est…
+    choix: ['$\mathrm{Fe^{2+}}$', '$\mathrm{Fe^{3+}}$', '$\mathrm{Fe}$', 'il n''y en a pas']
+    bonne: 1
+    explication: L'oxydant s'écrit à gauche ; il capte un électron pour donner $\mathrm{Fe^{2+}}$.
+    revoir: cours
+
+  - question: Pour équilibrer l'oxygène dans une demi-équation en milieu acide, on ajoute…
+    choix: ['des $\mathrm{H^+}$', 'des molécules d''eau', 'des électrons', 'du dioxygène']
+    bonne: 1
+    explication: L'oxygène avec $\mathrm{H_2O}$, l'hydrogène avec $\mathrm{H^+}$, les charges avec $\mathrm{e^-}$.
+    revoir: cours
+
+  - question: Combien d'électrons dans la demi-équation $\mathrm{MnO_4^-} + 8\,\mathrm{H^+} + \dots \rightleftharpoons \mathrm{Mn^{2+}} + 4\,\mathrm{H_2O}$ ?
+    choix: ['2', '3', '5', '7']
+    bonne: 2
+    explication: Charges à gauche $+7$, à droite $+2$, il faut 5 électrons.
+    revoir: cours
+
+  - question: Dans l'équation d'une réaction d'oxydoréduction, les électrons…
+    choix: ['apparaissent à gauche', 'apparaissent à droite', 'n''apparaissent pas', 'apparaissent des deux côtés']
+    bonne: 2
+    explication: Autant d'électrons cédés que captés, ils se simplifient.
+    revoir: cours
+
+  - question: Les métaux sont en général…
+    choix: ['des oxydants', 'des réducteurs', 'des acides', 'des bases']
+    bonne: 1
+    explication: Ils cèdent facilement des électrons pour former des ions positifs.
+    revoir: cours
+
+  - question: Pour combiner $\mathrm{Al} \to \mathrm{Al^{3+}} + 3\,\mathrm{e^-}$ et $\mathrm{Cu^{2+}} + 2\,\mathrm{e^-} \to \mathrm{Cu}$, on multiplie…
+    choix: ['la première par 2 et la seconde par 3', 'la première par 3 et la seconde par 2', 'les deux par 5', 'rien']
+    bonne: 0
+    explication: 6 électrons de chaque côté. Bilan $2\,\mathrm{Al} + 3\,\mathrm{Cu^{2+}} \to 2\,\mathrm{Al^{3+}} + 3\,\mathrm{Cu}$.
+    revoir: exercices

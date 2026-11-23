@@ -1,0 +1,48 @@
+questions:
+  - question: Combien de liaisons covalentes forme en général un atome d'oxygène ?
+    choix: ['1', '2', '3', '4']
+    bonne: 1
+    explication: 6 électrons de valence, il lui en manque 2 pour l'octet.
+    revoir: cours
+
+  - question: Dans la molécule d'eau, l'oxygène porte…
+    choix: ['aucun doublet non liant', 'un doublet non liant', 'deux doublets non liants', 'trois doublets non liants']
+    bonne: 2
+    explication: 2 liaisons + 2 doublets non liants = 8 électrons.
+    revoir: cours
+
+  - question: La géométrie de la molécule de méthane $\mathrm{CH_4}$ est…
+    choix: ['plane', 'tétraédrique', 'linéaire', 'coudée']
+    bonne: 1
+    explication: Quatre doublets liants qui s'écartent au maximum.
+    revoir: cours
+
+  - question: La molécule $\mathrm{CO_2}$ est…
+    choix: ['coudée et polaire', 'linéaire et apolaire', 'linéaire et polaire', 'pyramidale']
+    bonne: 1
+    explication: Deux liaisons polarisées opposées qui se compensent.
+    revoir: cours
+
+  - question: L'électronégativité augmente dans le tableau périodique…
+    choix: ['de droite à gauche', 'de gauche à droite dans une ligne', 'de haut en bas', 'elle est la même partout']
+    bonne: 1
+    explication: Et de bas en haut dans une colonne. Le fluor est le plus électronégatif.
+    revoir: cours
+
+  - question: Dans une liaison O–H, la charge partielle $\delta^-$ est portée par…
+    choix: ['H', 'O', 'les deux', 'aucun']
+    bonne: 1
+    explication: L'oxygène, plus électronégatif, gagne le tir à la corde.
+    revoir: cours
+
+  - question: Une lacune électronique se représente par…
+    choix: ['un trait', 'un point', 'un rectangle vide', 'une flèche']
+    bonne: 2
+    explication: C'est une case vide, il manque un doublet à l'atome.
+    revoir: cours
+
+  - question: Une molécule est polaire si…
+    choix: ['elle contient de l''oxygène', 'les centres des charges partielles + et − ne coïncident pas', 'elle est linéaire', 'elle a des doubles liaisons']
+    bonne: 1
+    explication: C'est la définition ; il faut des liaisons polarisées et une géométrie non symétrique.
+    revoir: cours
