@@ -68,14 +68,29 @@ const temps = [
     const points = [...zone.querySelectorAll<HTMLElement>('.hs-points i')];
     const coche = zone.querySelector<SVGPathElement>('[data-f="coche"] path')!;
     const n = textes.length - 1;
-    let visible = false, attente = false, courant = -1;
-
-    const dessine = () => {
-      attente = false;
+    let visible = false, courant = -1;
+    // Lissage : la scène suit la position de la page avec un léger amorti. Une molette crantée
+    // avance par sauts ; l'amorti transforme chaque saut en mouvement continu. Le défilement
+    // de la page lui-même n'est jamais modifié.
+    let cible = 0, actuel = -1, boucle = 0, avant = 0;
+    const mesure = () => {
       const r = zone.getBoundingClientRect();
       const course = r.height - innerHeight;
-      const p = Math.min(1, Math.max(0, -r.top / (course || 1)));
-      const pos = p * n;
+      cible = Math.min(1, Math.max(0, -r.top / (course || 1))) * n;
+    };
+    const anime = (now: number) => {
+      const dt = Math.min(64, now - (avant || now)); avant = now;
+      mesure();
+      if (actuel < 0 || Math.abs(cible - actuel) > 1.5) actuel = cible;  // saut (lien, rechargement) : pas de rattrapage
+      else actuel += (cible - actuel) * (1 - Math.exp(-dt / 90));
+      if (Math.abs(cible - actuel) < .0005) actuel = cible;
+      dessine(actuel);
+      boucle = actuel !== cible ? requestAnimationFrame(anime) : 0;
+      if (!boucle) avant = 0;
+    };
+    const relance = () => { if (visible && !boucle) boucle = requestAnimationFrame(anime); };
+
+    const dessine = (pos: number) => {
       const i = Math.min(n - 1, Math.floor(pos));
       // On reste un moment sur chaque temps, puis on passe au suivant.
       const t = doux(Math.min(1, Math.max(0, (pos - i - .35) / .65)));
@@ -101,9 +116,9 @@ const temps = [
         points.forEach((el, k) => el.classList.toggle('hs-on', k <= actif));
       }
     };
-    new IntersectionObserver(([e]) => { visible = e.isIntersecting; if (visible) dessine(); }).observe(zone);
-    addEventListener('scroll', () => { if (visible && !attente) { attente = true; requestAnimationFrame(dessine); } }, { passive: true });
-    addEventListener('resize', () => visible && dessine());
-    dessine();
+    new IntersectionObserver(([e]) => { visible = e.isIntersecting; relance(); }).observe(zone);
+    addEventListener('scroll', relance, { passive: true });
+    addEventListener('resize', relance);
+    mesure(); actuel = cible; dessine(actuel);
   }
 </script>
