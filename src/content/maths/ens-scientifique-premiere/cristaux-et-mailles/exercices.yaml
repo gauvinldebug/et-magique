@@ -1,0 +1,70 @@
+# Exercices corrigés, du plus facile au type bac.
+# type d'étape : init (vert), her (orange), conc (bleu), calcul, methode, piege (rouge)
+exercices:
+  - titre: Compter les atomes
+    difficulte: 1
+    type: application
+    enonce: |
+      Une maille cubique centrée possède un atome à chaque sommet et un atome au centre du cube. Combien d'atomes contient-elle ?
+    indice: Un sommet compte pour $\frac{1}{8}$, le centre pour 1.
+    etapes:
+      - type: calcul
+        titre: Le décompte
+        texte: $8 \times \frac{1}{8} + 1 = 2$.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>La maille cubique centrée contient 2 atomes</mark>.
+
+  - titre: Le rayon d'un atome
+    difficulte: 2
+    type: methode
+    enonce: |
+      L'aluminium cristallise en cubique à faces centrées, avec $a = 405$ pm. Calculer le rayon $r$ d'un atome d'aluminium.
+    indice: Les atomes se touchent le long de la diagonale d'une face.
+    etapes:
+      - type: methode
+        titre: La relation
+        texte: La diagonale d'une face vaut $a\sqrt{2}$ et contient 4 rayons, donc $r = \frac{a\sqrt{2}}{4}$.
+      - type: calcul
+        titre: Le calcul
+        texte: $r = \frac{405 \times 1{,}414}{4} \approx 143$ pm.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>$r \approx 143$ pm</mark>.
+
+  - titre: La compacité de la cubique simple
+    difficulte: 2
+    type: piege
+    enonce: |
+      Montrer que la compacité d'une maille cubique simple vaut $\frac{\pi}{6}$, puis en donner une valeur approchée.
+    indice: Une seule sphère par maille, et $a = 2r$.
+    etapes:
+      - type: piege
+        titre: Le piège
+        texte: Il y a 8 atomes dessinés aux sommets, mais seulement $8 \times \frac{1}{8} = 1$ atome par maille.
+      - type: calcul
+        titre: Le calcul
+        texte: $\frac{\frac{4}{3}\pi r^3}{(2r)^3} = \frac{\frac{4}{3}\pi r^3}{8r^3} = \frac{\pi}{6}$.
+      - type: conc
+        titre: Conclusion
+        texte: >-
+          <mark>Compacité $\frac{\pi}{6} \approx 0{,}52$</mark> : près de la moitié de la maille est vide.
+
+  - titre: Masse volumique de l'aluminium
+    difficulte: 3
+    type: bac
+    enonce: |
+      L'aluminium cristallise en cubique à faces centrées d'arête $a = 405$ pm. Un atome d'aluminium a une masse de $4{,}48 \times 10^{-26}$ kg.
+      1. Calculer le volume de la maille en $\text{m}^3$.
+      2. En déduire la masse volumique de l'aluminium.
+    indice: 4 atomes par maille.
+    etapes:
+      - type: calcul
+        titre: Question 1
+        texte: $a^3 = (405 \times 10^{-12})^3 \approx 6{,}64 \times 10^{-29}\ \text{m}^3$.
+      - type: calcul
+        titre: Question 2
+        texte: $\rho = \frac{4 \times 4{,}48 \times 10^{-26}}{6{,}64 \times 10^{-29}} \approx 2\,700\ \text{kg/m}^3$.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>$\rho \approx 2\,700\ \text{kg/m}^3$</mark>, la valeur connue de l'aluminium.

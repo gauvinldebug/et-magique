@@ -1,0 +1,75 @@
+# Exercices corrigés, du plus facile au type bac.
+# type d'étape : init (vert), her (orange), conc (bleu), calcul, methode, piege (rouge)
+exercices:
+  - titre: Le nombre de niveaux
+    difficulte: 1
+    type: application
+    enonce: |
+      Combien de valeurs différentes peut-on coder avec 4 bits ? Avec 8 bits ? Avec 24 bits ?
+    indice: Avec $n$ bits, $2^n$ valeurs.
+    etapes:
+      - type: calcul
+        titre: Les calculs
+        texte: $2^4 = 16$, $2^8 = 256$, $2^{24} = 16\,777\,216$.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>16, 256 et plus de 16 millions de niveaux</mark>.
+
+  - titre: Le débit d'un CD
+    difficulte: 2
+    type: methode
+    enonce: |
+      Calculer le débit d'un CD audio (44,1 kHz, 16 bits, stéréo) en kbit/s, puis le comparer à un MP3 à 128 kbit/s.
+    indice: Débit $= f_e \times n \times \text{voies}$.
+    etapes:
+      - type: calcul
+        titre: Le débit
+        texte: $44\,100 \times 16 \times 2 = 1\,411\,200$ bit/s, soit environ $1\,411$ kbit/s.
+      - type: calcul
+        titre: La comparaison
+        texte: $\frac{1\,411}{128} \approx 11$.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>Le MP3 à 128 kbit/s est environ 11 fois plus léger</mark>.
+
+  - titre: Bits ou octets ?
+    difficulte: 2
+    type: piege
+    enonce: |
+      Un enregistrement mono de 10 s est échantillonné à 8 000 Hz sur 8 bits. Un élève annonce une taille de 640 000 octets. Corriger.
+    indice: Le calcul donne d'abord des bits.
+    etapes:
+      - type: calcul
+        titre: En bits
+        texte: $8\,000 \times 8 \times 1 \times 10 = 640\,000$ bits.
+      - type: piege
+        titre: L'erreur
+        texte: L'élève a oublié de diviser par 8 pour passer en octets.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>La taille est $80\,000$ octets, soit 80 ko</mark>.
+
+  - titre: La voix au téléphone
+    difficulte: 3
+    type: bac
+    enonce: |
+      Le téléphone fixe numérise la voix à $f_e = 8$ kHz sur 8 bits, en mono.
+      1. Quelle est la fréquence maximale correctement reproduite ?
+      2. Calculer la taille d'un appel de 5 minutes en Mo.
+      3. Pourquoi une musique transmise par téléphone paraît-elle étouffée ?
+    indice: Il faut $f_e > 2 f_\text{max}$.
+    etapes:
+      - type: calcul
+        titre: Question 1
+        texte: $f_\text{max} < \frac{8\,000}{2} = 4\,000$ Hz.
+      - type: calcul
+        titre: Question 2
+        texte: >-
+          $8\,000 \times 8 \times 1 \times 300 = 19\,200\,000$ bits, soit $2\,400\,000$ octets, c'est-à-dire $2{,}4$ Mo.
+      - type: methode
+        titre: Question 3
+        texte: Les aigus au-delà de 4 000 Hz (jusqu'à 20 000 Hz pour l'oreille) sont perdus.
+      - type: conc
+        titre: Conclusion
+        texte: >-
+          <mark>Fréquences reproduites jusqu'à 4 kHz, appel de 2,4 Mo</mark>, et une musique privée de ses aigus.

@@ -1,0 +1,30 @@
+questions:
+  - question: Un atome situé sur un sommet d'une maille cubique compte pour…
+    choix: ['$\frac{1}{8}$', '$\frac{1}{2}$', '$1$', '$\frac{1}{4}$']
+    bonne: 0
+    explication: Il est partagé entre 8 mailles.
+    revoir: cours
+
+  - question: Combien d'atomes contient une maille cubique à faces centrées ?
+    choix: ['4', '14', '8', '2']
+    bonne: 0
+    explication: $8 \times \frac{1}{8} + 6 \times \frac{1}{2} = 4$.
+    revoir: cours
+
+  - question: La diagonale d'une face d'un cube d'arête $a$ vaut…
+    choix: ['$a\sqrt{2}$', '$a\sqrt{3}$', '$2a$', '$\frac{a}{2}$']
+    bonne: 0
+    explication: Pythagore dans le carré, $a^2 + a^2 = 2a^2$.
+    revoir: cours
+
+  - question: La compacité d'un empilement est toujours…
+    choix: ['comprise entre 0 et 1', 'supérieure à 1', 'égale à 1', 'négative']
+    bonne: 0
+    explication: C'est une proportion du volume de la maille.
+    revoir: cours
+
+  - question: La masse volumique d'un cristal vaut…
+    choix: ['$\frac{N \times m_\text{atome}}{a^3}$', '$\frac{a^3}{N \times m_\text{atome}}$', '$N \times m_\text{atome} \times a^3$', '$\frac{m_\text{atome}}{a}$']
+    bonne: 0
+    explication: Masse contenue dans la maille divisée par son volume.
+    revoir: exercices

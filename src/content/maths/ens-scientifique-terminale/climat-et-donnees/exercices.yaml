@@ -1,0 +1,81 @@
+# Exercices corrigés, du plus facile au type bac.
+# type d'étape : init (vert), her (orange), conc (bleu), calcul, methode, piege (rouge)
+exercices:
+  - titre: Variation et taux
+    difficulte: 1
+    type: application
+    enonce: |
+      Le niveau moyen des océans a monté d'environ 20 cm entre 1900 et 2020. Calculer le rythme moyen de hausse en mm par an.
+    indice: 20 cm = 200 mm, sur 120 ans.
+    etapes:
+      - type: calcul
+        titre: Le calcul
+        texte: $\frac{200}{120} \approx 1{,}7$ mm par an.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>Environ 1,7 mm par an en moyenne</mark>.
+
+  - titre: Une moyenne glissante
+    difficulte: 2
+    type: methode
+    enonce: |
+      Voici des anomalies de température (en °C) pour cinq années consécutives.
+      <table><tr><td>Année</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td></tr><tr><td>Anomalie</td><td>0,9</td><td>1,2</td><td>1,0</td><td>1,1</td><td>1,3</td></tr></table>
+      Calculer la moyenne glissante sur 3 ans pour les années 2, 3 et 4.
+    indice: Année 2 = moyenne des années 1, 2 et 3.
+    etapes:
+      - type: calcul
+        titre: Année 2
+        texte: $\frac{0{,}9 + 1{,}2 + 1{,}0}{3} \approx 1{,}03$.
+      - type: calcul
+        titre: Année 3
+        texte: $\frac{1{,}2 + 1{,}0 + 1{,}1}{3} = 1{,}10$.
+      - type: calcul
+        titre: Année 4
+        texte: $\frac{1{,}0 + 1{,}1 + 1{,}3}{3} \approx 1{,}13$.
+      - type: conc
+        titre: Conclusion
+        texte: >-
+          <mark>1,03 ; 1,10 ; 1,13</mark> : la moyenne glissante monte régulièrement, alors que l'année 3 était plus froide que l'année 2.
+
+  - titre: Un degré, un pourcent ?
+    difficulte: 2
+    type: piege
+    enonce: |
+      La température moyenne d'une ville passe de 12 °C à 13 °C. Un article titre « hausse de 1 % ». Corriger.
+    indice: Calcule le taux d'évolution.
+    etapes:
+      - type: piege
+        titre: L'erreur
+        texte: L'article confond la variation absolue (+1 °C) et le taux d'évolution.
+      - type: calcul
+        titre: Le taux
+        texte: $\frac{13 - 12}{12} \approx 0{,}083$.
+      - type: conc
+        titre: Conclusion
+        texte: >-
+          Le calcul donnerait environ 8 %, pas 1 %. Mais un pourcentage sur des degrés Celsius a peu de sens, puisque 0 °C n'est pas une absence de chaleur : <mark>il faut écrire « hausse de 1 °C »</mark>.
+
+  - titre: Prolonger une tendance
+    difficulte: 3
+    type: bac
+    enonce: |
+      L'anomalie de température mondiale vaut $+1{,}2$ °C en 2020, et la tendance récente est de $+0{,}2$ °C par décennie.
+      1. Avec une tendance linéaire, quelle anomalie prévoir en 2050 ?
+      2. En quelle année l'anomalie atteindrait-elle $+2$ °C ?
+      3. Quelle est la limite de ce type de prévision ?
+    indice: Une décennie = 10 ans.
+    etapes:
+      - type: calcul
+        titre: Question 1
+        texte: De 2020 à 2050 il y a 3 décennies, donc $1{,}2 + 3 \times 0{,}2 = 1{,}8$ °C.
+      - type: calcul
+        titre: Question 2
+        texte: Il manque $0{,}8$ °C, soit $\frac{0{,}8}{0{,}2} = 4$ décennies, donc 2060.
+      - type: methode
+        titre: Question 3
+        texte: La tendance dépend des émissions futures. Les modèles climatiques utilisent plusieurs scénarios d'émissions au lieu d'un simple prolongement.
+      - type: conc
+        titre: Conclusion
+        texte: >-
+          <mark>Environ +1,8 °C en 2050 et +2 °C vers 2060</mark>, si la tendance se poursuivait sans changement.

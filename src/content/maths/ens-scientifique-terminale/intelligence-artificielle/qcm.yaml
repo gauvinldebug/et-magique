@@ -1,0 +1,30 @@
+questions:
+  - question: Un neurone artificiel calcule d'abord…
+    choix: ['une somme pondérée de ses entrées', 'la moyenne simple de ses entrées', 'le produit de ses entrées', 'le maximum de ses entrées']
+    bonne: 0
+    explication: Chaque entrée est multipliée par son poids, puis on additionne.
+    revoir: cours
+
+  - question: Avec $w_1 = 2$, $w_2 = -1$, seuil $1$, l'entrée $(1 ; 1)$ donne…
+    choix: ['1', '0', '2', '$-1$']
+    bonne: 0
+    explication: $s = 2 - 1 = 1 \geq 1$.
+    revoir: exercices
+
+  - question: Pour évaluer une IA, on mesure son taux d'erreur sur…
+    choix: ["des données de test jamais vues", "ses données d'entraînement", "un seul exemple", "aucune donnée"]
+    bonne: 0
+    explication: Sur ses propres exemples, elle paraîtrait meilleure qu'elle n'est.
+    revoir: cours
+
+  - question: La distance entre $A(1 ; 2)$ et $B(4 ; 6)$ vaut…
+    choix: ['5', '7', '25', '3']
+    bonne: 0
+    explication: $\sqrt{9 + 16} = 5$.
+    revoir: exercices
+
+  - question: Une IA entraînée sur des données déséquilibrées risque…
+    choix: ['de reproduire ces biais', "d'être plus juste", 'de ne plus rien calculer', "d'oublier ses poids"]
+    bonne: 0
+    explication: Elle apprend ce que contiennent ses données, biais compris.
+    revoir: cours

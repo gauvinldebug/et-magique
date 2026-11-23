@@ -83,6 +83,23 @@ export const PROGRAMME: Record<string, Record<string, ChapitreProgramme[]>> = {
       { slug: 'matrices', titre: 'Matrices' },
       { slug: 'graphes-et-chaines-de-markov', titre: 'Graphes et chaînes de Markov' },
     ],
+    // Enseignement scientifique (tronc commun, BO n° 25 du 22 juin 2023) : les parties mathématiques des thèmes.
+    'ens-scientifique-premiere': [
+      { slug: 'mesurer-la-terre', titre: 'Mesurer la Terre' },
+      { slug: 'le-soleil-et-l-energie-recue', titre: "Le Soleil et l'énergie reçue" },
+      { slug: 'cristaux-et-mailles', titre: 'Cristaux et mailles' },
+      { slug: 'radioactivite-et-datation', titre: 'Radioactivité et datation' },
+      { slug: 'gammes-et-frequences', titre: 'Gammes et fréquences' },
+      { slug: 'numeriser-un-son', titre: 'Numériser un son' },
+    ],
+    'ens-scientifique-terminale': [
+      { slug: 'climat-et-donnees', titre: 'Climat : variations et tendances' },
+      { slug: 'transport-de-l-electricite', titre: "Transport de l'électricité et graphes" },
+      { slug: 'modeles-demographiques', titre: 'Modèles démographiques' },
+      { slug: 'hardy-weinberg', titre: 'Le modèle de Hardy-Weinberg' },
+      { slug: 'estimer-une-population', titre: 'Estimer une population' },
+      { slug: 'intelligence-artificielle', titre: 'Intelligence artificielle' },
+    ],
     terminale: [
       { slug: 'suites-et-recurrence', titre: 'Suites et récurrence' },
       { slug: 'limites-de-suites', titre: 'Limites de suites' },

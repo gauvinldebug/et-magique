@@ -1,0 +1,30 @@
+questions:
+  - question: À l'équilibre de Hardy-Weinberg, la fréquence des hétérozygotes est…
+    choix: ['$2pq$', '$pq$', '$p^2$', '$p + q$']
+    bonne: 0
+    explication: Deux branches de l'arbre mènent à Aa.
+    revoir: cours
+
+  - question: Si $p = 0{,}8$, alors $q^2$ vaut…
+    choix: ['$0{,}04$', '$0{,}2$', '$0{,}64$', '$0{,}32$']
+    bonne: 0
+    explication: $q = 0{,}2$ et $0{,}2^2 = 0{,}04$.
+    revoir: exercices
+
+  - question: Dans le modèle, d'une génération à l'autre, les fréquences alléliques…
+    choix: ['restent constantes', 'doublent', 'tendent vers 0,5', 'diminuent']
+    bonne: 0
+    explication: $p' = p^2 + pq = p$.
+    revoir: cours
+
+  - question: Laquelle de ces conditions fait partie du modèle ?
+    choix: ['une population de très grande taille', 'une forte sélection naturelle', 'des migrations fréquentes', 'des mutations nombreuses']
+    bonne: 0
+    explication: Le modèle exclut sélection, migration et mutation.
+    revoir: cours
+
+  - question: Un écart important au modèle de Hardy-Weinberg indique…
+    choix: ["qu'une évolution est à l'œuvre", 'une erreur de calcul forcément', "qu'il n'y a qu'un allèle", 'que $p + q \neq 1$']
+    bonne: 0
+    explication: Sélection, dérive ou migration modifient les fréquences.
+    revoir: cours

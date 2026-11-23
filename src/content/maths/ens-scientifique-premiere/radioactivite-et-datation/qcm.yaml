@@ -1,0 +1,30 @@
+questions:
+  - question: La désintégration d'un noyau donné est…
+    choix: ['aléatoire', 'prévisible à la seconde près', 'déclenchée par la température', 'périodique']
+    bonne: 0
+    explication: Seul le comportement d'un grand nombre de noyaux est prévisible.
+    revoir: cours
+
+  - question: Après 3 demi-vies, la proportion de noyaux restants est…
+    choix: ['12,5 %', '25 %', '33 %', '0 %']
+    bonne: 0
+    explication: $\frac{1}{2^3} = \frac{1}{8} = 12{,}5\,\%$.
+    revoir: cours
+
+  - question: Le nombre de noyaux restants forme une suite…
+    choix: ['géométrique de raison $\frac{1}{2}$', 'arithmétique de raison $-\frac{1}{2}$', 'constante', 'géométrique de raison 2']
+    bonne: 0
+    explication: On multiplie par $\frac{1}{2}$ à chaque demi-vie.
+    revoir: cours
+
+  - question: Un échantillon contient 25 % de ses noyaux initiaux, demi-vie 10 ans. Son âge est…
+    choix: ['20 ans', '25 ans', '40 ans', '7,5 ans']
+    bonne: 0
+    explication: 25 % correspond à 2 demi-vies.
+    revoir: exercices
+
+  - question: Il reste 20 % des noyaux. Le nombre de demi-vies écoulées est…
+    choix: ['entre 2 et 3', 'entre 3 et 4', 'exactement 5', 'entre 1 et 2']
+    bonne: 0
+    explication: 25 % > 20 % > 12,5 %.
+    revoir: exercices

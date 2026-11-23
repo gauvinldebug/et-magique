@@ -1,0 +1,79 @@
+# Exercices corrigés, du plus facile au type bac.
+# type d'étape : init (vert), her (orange), conc (bleu), calcul, methode, piege (rouge)
+exercices:
+  - titre: Refaire le calcul d'Ératosthène
+    difficulte: 1
+    type: application
+    enonce: |
+      Deux villes sont sur le même méridien, distantes de 555 km. Le même jour à midi, l'angle des rayons du Soleil avec la verticale diffère de $5°$ entre les deux villes. Estimer la circonférence de la Terre.
+    indice: Combien de fois $5°$ dans $360°$ ?
+    etapes:
+      - type: methode
+        titre: La proportionnalité
+        texte: L'arc de 555 km correspond à un angle au centre de $5°$, et le tour complet à $360°$.
+      - type: calcul
+        titre: Le calcul
+        texte: $\frac{360}{5} = 72$, donc $C = 72 \times 555 = 39\,960$ km.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>La circonférence est d'environ 40 000 km</mark>.
+
+  - titre: Distance le long d'un méridien
+    difficulte: 2
+    type: methode
+    enonce: |
+      Barcelone (latitude $41{,}4°$ N) et Alger (latitude $36{,}8°$ N) sont à peu près sur le même méridien. Avec $R = 6\,371$ km, calculer la distance entre les deux villes le long du méridien.
+    indice: L'angle au centre est la différence des latitudes.
+    etapes:
+      - type: calcul
+        titre: L'angle au centre
+        texte: $\alpha = 41{,}4 - 36{,}8 = 4{,}6°$.
+      - type: calcul
+        titre: La longueur de l'arc
+        texte: $L = \frac{4{,}6}{360} \times 2\pi \times 6\,371 \approx 511$ km.
+      - type: conc
+        titre: Conclusion
+        texte: >-
+          <mark>Les deux villes sont distantes d'environ 511 km</mark> le long du méridien.
+
+  - titre: Le rayon d'un parallèle
+    difficulte: 2
+    type: application
+    enonce: |
+      Calculer le rayon puis la longueur du parallèle de latitude $60°$ N, avec $R = 6\,371$ km.
+    indice: $r = R\cos\lambda$.
+    etapes:
+      - type: calcul
+        titre: Le rayon
+        texte: $r = 6\,371 \times \cos 60° = 6\,371 \times 0{,}5 \approx 3\,186$ km.
+      - type: calcul
+        titre: La longueur
+        texte: $2\pi r \approx 2\pi \times 3\,186 \approx 20\,015$ km.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>Le parallèle $60°$ N mesure environ 20 000 km, la moitié de l'équateur</mark>.
+
+  - titre: Le parallèle est-il le plus court chemin ?
+    difficulte: 3
+    type: piege
+    enonce: |
+      Deux points A et B sont sur le parallèle $60°$ N, avec des longitudes $0°$ et $90°$ E. On donne $R = 6\,371$ km.
+      1. Calculer la distance de A à B en suivant le parallèle.
+      2. L'angle au centre de la Terre entre A et B vaut environ $41{,}4°$. Calculer la distance en suivant le grand cercle passant par A et B.
+      3. Conclure.
+    indice: Sur le parallèle, le rayon est $R\cos 60°$ et l'angle est l'écart de longitude.
+    etapes:
+      - type: calcul
+        titre: Question 1
+        texte: $L_1 = \frac{90}{360} \times 2\pi \times 6\,371 \times \cos 60° \approx 0{,}25 \times 20\,015 \approx 5\,004$ km.
+      - type: calcul
+        titre: Question 2
+        texte: $L_2 = \frac{41{,}4}{360} \times 2\pi \times 6\,371 \approx 4\,603$ km.
+      - type: piege
+        titre: Le piège
+        texte: >-
+          Le parallèle semble « tout droit » sur une carte, mais ce n'est pas un grand cercle : c'est un détour.
+      - type: conc
+        titre: Conclusion
+        texte: >-
+          <mark>Le grand cercle fait gagner environ 400 km</mark> : c'est pour cela que les avions survolent des régions proches du pôle.

@@ -1,0 +1,30 @@
+questions:
+  - question: La fréquence d'échantillonnage est…
+    choix: ['le nombre de mesures par seconde', 'le nombre de bits par mesure', 'la fréquence la plus aiguë du son', 'la durée du son']
+    bonne: 0
+    explication: On mesure le signal $f_e$ fois par seconde.
+    revoir: cours
+
+  - question: Avec 10 bits, on peut coder…
+    choix: ['1 024 valeurs', '100 valeurs', '20 valeurs', '10 valeurs']
+    bonne: 0
+    explication: $2^{10} = 1\,024$.
+    revoir: cours
+
+  - question: Un son contient des fréquences jusqu'à 15 kHz. Il faut échantillonner à plus de…
+    choix: ['30 kHz', '15 kHz', '7,5 kHz', '44,1 kHz']
+    bonne: 0
+    explication: $f_e > 2 f_\text{max}$.
+    revoir: cours
+
+  - question: Un octet vaut…
+    choix: ['8 bits', '2 bits', '16 bits', '1 000 bits']
+    bonne: 0
+    explication: On divise par 8 pour passer des bits aux octets.
+    revoir: exercices
+
+  - question: Un fichier passe de 50 Mo à 5 Mo. Le taux de compression est…
+    choix: ['10', '45', '0,1', '5']
+    bonne: 0
+    explication: $\frac{50}{5} = 10$.
+    revoir: cours
