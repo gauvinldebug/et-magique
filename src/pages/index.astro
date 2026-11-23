@@ -3,6 +3,7 @@
 // Charte « Sommaire » : un manuel suisse, noir, blanc et un rouge ; l'accueil est le sommaire du programme.
 import Base from '../layouts/Base.astro';
 import Reseaux from '../components/Reseaux.astro';
+import Histoire from '../components/Histoire.astro';
 import Pied from '../components/Pied.astro';
 import QRCode from 'qrcode';
 import { MATIERES } from '../data/site';
@@ -51,6 +52,7 @@ const AFFICHES: Record<string, { fond: string; txt: string; forme: string }> = {
       </div>
     </div>
   </header>
+  <Histoire />
   <div class="portail-p">
     <div class="wrap">
       <section class="bloc" aria-labelledby="t-matieres">
