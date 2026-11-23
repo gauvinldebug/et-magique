@@ -508,3 +508,7 @@ pre { margin: 0; padding: 12px 14px; background: var(--carte); border: 1px solid
 pre code { font: inherit; background: none; border: 0; padding: 0; }
 :not(pre) > code { font: .9em ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; background: var(--carte); border: 1px solid var(--trait); border-radius: 4px; padding: 0 5px; }
 .nextstep span a { color: var(--encre); font-weight: 600; text-decoration: underline; text-decoration-color: var(--surligneur); text-decoration-thickness: 3px; text-underline-offset: 2px; }
+/* Petits tableaux dans les énoncés d'exercices */
+.enonce table { border-collapse: collapse; margin: 8px 0; }
+.enonce td { border: 1px solid var(--trait); padding: 4px 12px; text-align: center; }
+.enonce td:first-child { text-align: left; font-weight: 600; }

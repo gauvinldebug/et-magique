@@ -1,0 +1,91 @@
+# Exercices corrigés, du plus facile au type contrôle.
+# type d'étape : init (vert), her (orange), conc (bleu), calcul, methode, piege (rouge)
+exercices:
+  - titre: Trouver le coefficient
+    difficulte: 1
+    type: application
+    enonce: |
+      Donner le coefficient multiplicateur associé à chaque évolution.
+      1. Hausse de 8 %.
+      2. Baisse de 12 %.
+      3. Un prix passe de 40 € à 46 €. Quel est le taux d'évolution ?
+    indice: $\corange{CM} = 1 + t$ avec $t$ négatif pour une baisse.
+    etapes:
+      - type: calcul
+        titre: Questions 1 et 2
+        texte: $\corange{CM} = 1{,}08$ et $\corange{CM} = 0{,}88$.
+      - type: calcul
+        titre: Question 3
+        texte: $\corange{CM} = \frac{46}{40} = 1{,}15$.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>$t = 1{,}15 - 1 = 0{,}15$, soit une hausse de 15 %</mark>.
+
+  - titre: Proportion de proportion
+    difficulte: 1
+    type: application
+    enonce: |
+      Dans un lycée, 55 % des élèves sont des filles. Parmi elles, 30 % font partie de l'association sportive.
+      Quelle proportion des élèves du lycée sont des filles inscrites à l'association ?
+    indice: On multiplie les deux proportions.
+    etapes:
+      - type: calcul
+        titre: Le calcul
+        texte: $0{,}55 \times 0{,}30 = 0{,}165$.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>16,5 % des élèves sont des filles inscrites à l'association</mark>.
+
+  - titre: Retrouver le prix de départ
+    difficulte: 2
+    type: methode
+    enonce: |
+      Après une hausse de 25 %, un abonnement coûte 30 €. Quel était son prix avant la hausse ?
+    indice: $\cbleu{V_A} = \corange{CM} \times \cvert{V_D}$, donc on divise.
+    etapes:
+      - type: piege
+        titre: Le piège
+        texte: >-
+          Retirer 25 % de 30 € donne 22,50 €. C'est faux : les 25 % portaient sur le prix de **départ**, pas sur 30 €.
+        note: le classique
+      - type: calcul
+        titre: Le calcul
+        texte: $\cvert{V_D} = \frac{30}{1{,}25} = 24$.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>L'abonnement coûtait 24 €</mark>. Vérification, $24 \times 1{,}25 = 30$.
+
+  - titre: Trois évolutions de suite
+    difficulte: 2
+    type: application
+    enonce: |
+      Une action en bourse gagne 10 % lundi, perd 5 % mardi, puis gagne 2 % mercredi.
+      Quel est le taux d'évolution global sur les trois jours ?
+    indice: Multiplie les trois coefficients.
+    etapes:
+      - type: calcul
+        titre: Le coefficient global
+        texte: $1{,}10 \times 0{,}95 \times 1{,}02 = 1{,}06590$.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>Hausse globale d'environ 6,59 %</mark>, et pas $10 - 5 + 2 = 7\,\%$.
+
+  - titre: Évolution réciproque
+    difficulte: 3
+    type: methode
+    enonce: |
+      Le nombre d'abonnés d'une chaîne a baissé de 20 % en un mois.
+      1. Quel taux de hausse faut-il le mois suivant pour retrouver le nombre initial ?
+      2. Si le mois suivant la hausse n'est que de 15 %, quelle est l'évolution globale sur deux mois ?
+    indice: La réciproque a pour coefficient $\frac{1}{\corange{CM}}$.
+    etapes:
+      - type: calcul
+        titre: Question 1
+        texte: $\frac{1}{0{,}8} = 1{,}25$. Il faut une hausse de 25 %.
+        note: plus que 20 %
+      - type: calcul
+        titre: Question 2
+        texte: $0{,}8 \times 1{,}15 = 0{,}92$.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>Sur deux mois, le nombre d'abonnés a baissé de 8 %</mark>.

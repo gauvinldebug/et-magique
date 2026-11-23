@@ -10,8 +10,7 @@ titre: Ensembles de nombres
 
 ## Les ensembles
 
-- $\cvert{\mathbb{N}}$ : $0, 1, 2\dots$ ; $\corange{\mathbb{Z}}$ : on ajoute les négatifs.
-- $\cbleu{\mathbb{D}}$ : $\frac{a}{10^n}$, écriture décimale finie.
+- $\cvert{\mathbb{N}}$ : $0, 1, 2\dots$ ; $\corange{\mathbb{Z}}$ : on ajoute les négatifs ; $\cbleu{\mathbb{D}}$ : écriture décimale finie.
 - $\mathbb{Q}$ : $\frac{a}{b}$, $b \ne 0$. $\frac{1}{3} \in \mathbb{Q}$ mais $\frac{1}{3} \notin \cbleu{\mathbb{D}}$.
 - $\crouge{\mathbb{R}}$ : toute la droite. $\sqrt{2}$, $\pi$ sont irrationnels.
 
@@ -29,11 +28,7 @@ titre: Ensembles de nombres
 </div>
 
 - $\cap$ : dans les deux ; $\cup$ : dans l'un ou l'autre.
-
-## Valeur absolue
-
-- $|x - a|$ = distance entre $x$ et $a$.
-- $|x - a| \le r \iff x \in [a - r\,;a + r]$.
+- Valeur absolue : $|x - a|$ = distance entre $x$ et $a$, donc $|x - a| \le r \iff x \in [a - r\,;a + r]$.
 
 ## Puissances et racines
 

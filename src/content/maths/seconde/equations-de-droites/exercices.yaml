@@ -1,0 +1,96 @@
+# Exercices corrigés, du plus facile au type contrôle.
+# type d'étape : init (vert), her (orange), conc (bleu), calcul, methode, piege (rouge)
+exercices:
+  - titre: Équation réduite par deux points
+    difficulte: 1
+    type: methode
+    enonce: |
+      Déterminer l'équation réduite de la droite $(AB)$ avec $A(1\,;5)$ et $B(3\,;9)$.
+    indice: Calcule d'abord la pente, puis utilise un des deux points.
+    etapes:
+      - type: calcul
+        titre: La pente
+        texte: $\corange{m} = \frac{9 - 5}{3 - 1} = 2$.
+      - type: calcul
+        titre: L'ordonnée à l'origine
+        texte: $A$ est sur la droite, donc $5 = 2 \times 1 + \cbleu{p}$, d'où $\cbleu{p} = 3$.
+      - type: conc
+        titre: Conclusion
+        texte: >-
+          <mark>$(AB) : y = 2x + 3$</mark>. Vérification avec $B$, $2 \times 3 + 3 = 9$.
+
+  - titre: Le cas vertical
+    difficulte: 1
+    type: piege
+    enonce: |
+      Déterminer une équation de la droite passant par $C(4\,;-1)$ et $D(4\,;7)$.
+    indice: Regarde les abscisses.
+    etapes:
+      - type: piege
+        titre: La pente impossible
+        texte: >-
+          $x_D - x_C = 0$ : on ne peut pas diviser par 0. La droite est verticale.
+        note: même abscisse
+      - type: conc
+        titre: Conclusion
+        texte: >-
+          <mark>$(CD) : x = 4$</mark>.
+
+  - titre: Équation cartésienne avec un vecteur
+    difficulte: 2
+    type: methode
+    enonce: |
+      Déterminer une équation cartésienne de la droite $d$ passant par $A(2\,;-1)$ et de vecteur directeur $\vec{u}\begin{pmatrix} 3 \\ 1 \end{pmatrix}$.
+    indice: $M(x\,;y) \in d \iff \det(\vec{AM}, \vec{u}) = 0$.
+    etapes:
+      - type: init
+        titre: Le vecteur AM
+        texte: $\vec{AM}\begin{pmatrix} x - 2 \\ y + 1 \end{pmatrix}$.
+      - type: calcul
+        titre: Le déterminant
+        texte: $(x - 2) \times 1 - 3 \times (y + 1) = 0 \iff x - 2 - 3y - 3 = 0$.
+      - type: conc
+        titre: Conclusion
+        texte: >-
+          <mark>$d : x - 3y - 5 = 0$</mark>. Vérification avec $A$, $2 + 3 - 5 = 0$.
+
+  - titre: Parallèle passant par un point
+    difficulte: 2
+    type: application
+    enonce: |
+      Déterminer l'équation réduite de la droite $d'$ parallèle à $d : y = -\frac{1}{2}x + 4$ et passant par $E(6\,;2)$.
+    indice: Même pente.
+    etapes:
+      - type: calcul
+        titre: La pente
+        texte: $d'$ est parallèle à $d$, donc $\corange{m} = -\frac{1}{2}$.
+      - type: calcul
+        titre: L'ordonnée à l'origine
+        texte: $2 = -\frac{1}{2} \times 6 + \cbleu{p}$, d'où $\cbleu{p} = 5$.
+      - type: conc
+        titre: Conclusion
+        texte: >-
+          <mark>$d' : y = -\frac{1}{2}x + 5$</mark>.
+        note: même pente, autre point
+
+  - titre: Le carrefour, par combinaison
+    difficulte: 3
+    type: application
+    enonce: |
+      Au cinéma, 3 places adulte et 2 places enfant coûtent 46 €. 2 places adulte et 5 places enfant coûtent 49 €.
+      Quel est le prix d'une place adulte et d'une place enfant ?
+    indice: Pose $x$ le prix adulte, $y$ le prix enfant, puis élimine $x$.
+    etapes:
+      - type: init
+        titre: Le système
+        texte: $\begin{cases} 3x + 2y = 46 \\ 2x + 5y = 49 \end{cases}$
+      - type: calcul
+        titre: Éliminer x
+        texte: >-
+          On multiplie la ligne 1 par 2 et la ligne 2 par 3 : $6x + 4y = 92$ et $6x + 15y = 147$. On soustrait : $11y = 55$, donc $y = 5$.
+      - type: calcul
+        titre: Retrouver x
+        texte: $3x + 10 = 46$, donc $x = 12$.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>Une place adulte coûte 12 €, une place enfant 5 €</mark>. Vérification, $24 + 25 = 49$.

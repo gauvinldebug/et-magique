@@ -1,0 +1,100 @@
+# Exercices corrigés, du plus facile au type contrôle.
+# type d'étape : init (vert), her (orange), conc (bleu), calcul, methode, piege (rouge)
+exercices:
+  - titre: Moyenne et médiane d'une petite série
+    difficulte: 1
+    type: application
+    enonce: |
+      Voici les notes de Léa en maths ce trimestre : 12, 8, 15, 11, 14, 9.
+      Calculer la moyenne et la médiane.
+    indice: Range d'abord les notes.
+    etapes:
+      - type: calcul
+        titre: La moyenne
+        texte: $\cbleu{\bar{x}} = \frac{12 + 8 + 15 + 11 + 14 + 9}{6} = \frac{69}{6} = 11{,}5$.
+      - type: calcul
+        titre: La série rangée
+        texte: 8, 9, 11, 12, 14, 15. Il y a 6 valeurs, les deux du milieu sont 11 et 12.
+        note: N pair
+      - type: conc
+        titre: La médiane
+        texte: <mark>$\corange{Me} = \frac{11 + 12}{2} = 11{,}5$</mark>.
+
+  - titre: Moyenne pondérée
+    difficulte: 1
+    type: methode
+    enonce: |
+      Au bac blanc, Tom a eu 14 en maths (coefficient 3), 10 en physique (coefficient 2) et 9 en anglais (coefficient 1). Calculer sa moyenne.
+    indice: On divise par la somme des coefficients.
+    etapes:
+      - type: calcul
+        titre: Le calcul
+        texte: $\cbleu{\bar{x}} = \frac{3 \times 14 + 2 \times 10 + 1 \times 9}{3 + 2 + 1} = \frac{71}{6}$.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>$\cbleu{\bar{x}} \approx 11{,}83$</mark>.
+
+  - titre: Quartiles d'un tableau
+    difficulte: 2
+    type: methode
+    enonce: |
+      On a relevé le nombre de frères et soeurs des 20 élèves d'une classe.
+
+      <table><tbody><tr><td>Nombre</td><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td></tr><tr><td>Effectif</td><td>3</td><td>7</td><td>6</td><td>3</td><td>1</td></tr></tbody></table>
+
+      Déterminer la médiane, $Q_1$, $Q_3$ et l'écart interquartile.
+    indice: Calcule les effectifs cumulés croissants.
+    etapes:
+      - type: calcul
+        titre: Les effectifs cumulés
+        texte: 3 ; 10 ; 16 ; 19 ; 20.
+      - type: calcul
+        titre: La médiane
+        texte: >-
+          $N = 20$, la médiane est la moyenne des 10ᵉ et 11ᵉ valeurs, qui valent 1 et 2. $\corange{Me} = 1{,}5$.
+      - type: calcul
+        titre: Les quartiles
+        texte: >-
+          $\frac{20}{4} = 5$ : la 5ᵉ valeur, $Q_1 = 1$. $\frac{3 \times 20}{4} = 15$ : la 15ᵉ valeur, $Q_3 = 2$.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>L'écart interquartile vaut $Q_3 - Q_1 = 1$</mark>.
+
+  - titre: Augmenter tout le monde
+    difficulte: 2
+    type: application
+    enonce: |
+      Dans une association, le salaire moyen des employés est de 1 900 € et l'écart-type de 120 €.
+      1. Tout le monde est augmenté de 50 €. Que deviennent la moyenne et l'écart-type ?
+      2. Tout le monde est augmenté de 3 %. Même question.
+    indice: Ajouter la même somme décale la série sans l'étaler.
+    etapes:
+      - type: calcul
+        titre: Question 1
+        texte: >-
+          Moyenne $1\,900 + 50 = 1\,950$ €. Les écarts à la moyenne ne changent pas : $\sigma = 120$ €.
+        note: la file avance d'un pas
+      - type: conc
+        titre: Question 2
+        texte: >-
+          Tout est multiplié par 1,03 : <mark>moyenne $1\,957$ €, écart-type $123{,}60$ €</mark>.
+
+  - titre: Comparer deux classes
+    difficulte: 3
+    type: piege
+    enonce: |
+      La classe A (24 élèves) a 11 de moyenne au contrôle, la classe B (16 élèves) a 14.
+      1. Un élève dit : « La moyenne des deux classes réunies est $\frac{11 + 14}{2} = 12{,}5$ ». A-t-il raison ?
+      2. Calculer la vraie moyenne des 40 élèves.
+    indice: Les deux classes n'ont pas le même effectif.
+    etapes:
+      - type: piege
+        titre: Question 1
+        texte: >-
+          Non. La classe A pèse plus lourd (24 élèves contre 16), il faut pondérer par les effectifs.
+      - type: calcul
+        titre: Question 2
+        texte: $\cbleu{\bar{x}} = \frac{24 \times 11 + 16 \times 14}{40} = \frac{264 + 224}{40} = \frac{488}{40}$.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>$\cbleu{\bar{x}} = 12{,}2$</mark>, et pas 12,5.

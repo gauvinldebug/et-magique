@@ -1,0 +1,36 @@
+questions:
+  - question: La fonction carré est croissante sur…
+    choix: ['$[0\,;+\infty[$', '$\mathbb{R}$', '$]-\infty\,;0]$', '$[-1\,;1]$']
+    bonne: 0
+    explication: Le bol descend jusqu'à 0, puis remonte.
+    revoir: cours
+
+  - question: La fonction $\cbleu{f}(\corange{x}) = -2\corange{x} + 5$ est…
+    choix: ['décroissante sur $\mathbb{R}$', 'croissante sur $\mathbb{R}$', 'constante', 'croissante puis décroissante']
+    bonne: 0
+    explication: Son coefficient directeur $m = -2$ est négatif.
+    revoir: cours
+
+  - question: Si $0 < a < b$, alors…
+    choix: ['$\frac{1}{a} > \frac{1}{b}$', '$\frac{1}{a} < \frac{1}{b}$', '$\frac{1}{a} = \frac{1}{b}$', 'on ne peut pas savoir']
+    bonne: 0
+    explication: L'inverse est décroissante sur $]0\,;+\infty[$, elle inverse l'ordre.
+    revoir: cours
+
+  - question: Pour $\corange{x} = 0{,}25$, le plus grand nombre parmi $\corange{x}^2$, $\corange{x}$ et $\sqrt{\corange{x}}$ est…
+    choix: ['$\sqrt{\corange{x}}$', '$\corange{x}$', '$\corange{x}^2$', 'ils sont égaux']
+    bonne: 0
+    explication: Sur $[0\,;1]$, $\corange{x}^2 \le \corange{x} \le \sqrt{\corange{x}}$. Ici $\sqrt{0{,}25} = 0{,}5$.
+    revoir: cours
+
+  - question: Si $-5 \le \corange{x} \le -1$, alors…
+    choix: ['$1 \le \corange{x}^2 \le 25$', '$25 \le \corange{x}^2 \le 1$', '$-25 \le \corange{x}^2 \le -1$', '$0 \le \corange{x}^2 \le 25$']
+    bonne: 0
+    explication: Sur les négatifs le carré est décroissant, il inverse l'ordre. 0 n'est pas dans l'intervalle.
+    revoir: exercices
+
+  - question: L'ensemble de définition de la fonction racine carrée est…
+    choix: ['$[0\,;+\infty[$', '$]0\,;+\infty[$', '$\mathbb{R}$', '$\mathbb{R}^*$']
+    bonne: 0
+    explication: On peut prendre la racine de 0, mais pas d'un nombre négatif.
+    revoir: cours
