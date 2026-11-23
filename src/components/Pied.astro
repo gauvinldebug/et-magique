@@ -1,20 +1,53 @@
 ---
-import Logo from './Logo.astro';
+// Pied de page en affiche : une frise de formes, puis trois colonnes (la marque, les matières, le site)
+// et la mention des droits sur une ligne à part.
 import Reseaux from './Reseaux.astro';
 import { MATIERES } from '../data/site';
+import { AFFICHES } from '../data/affiches';
 const yt = MATIERES[0].youtube;
+const annee = new Date().getFullYear();
 ---
 <footer class="pied">
-  <div class="wrap">
-    <Logo size="1rem" />
-    <span>Gratuit, sans compte, sans publicité. © Maths et Magique, <a href="/mentions-legales/#droits-dauteur">tous droits réservés</a>. Usage personnel uniquement : toute republication ou utilisation commerciale est interdite sans accord.</span>
-    <Reseaux libelles />
-    <div class="liens">
-      {yt && <a href={yt} target="_blank" rel="noopener">Chaîne YouTube ↗</a>}
-      <a href="/a-propos/">À propos</a>
-      <a href="/demandes/">Nous écrire</a>
-      <a href="/confidentialite/">Confidentialité</a>
-      <a href="/mentions-legales/">Mentions légales</a>
+  <svg class="pied-frise" viewBox="0 0 1200 80" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+    <circle cx="80" cy="80" r="64" fill="#F2E94E" />
+    <polygon points="210,80 260,8 310,80" fill="#FF7AA8" />
+    <rect x="360" y="24" width="56" height="56" fill="#2B2BD9" />
+    <path class="pied-arc" d="M470 80 Q 530 -10 590 80" fill="none" stroke-width="7" />
+    <circle cx="680" cy="80" r="40" fill="#FF8A3D" />
+    <rect x="770" y="40" width="40" height="40" fill="#127C59" />
+    <polygon points="860,80 900,22 940,80" fill="#F2E94E" />
+    <circle cx="1020" cy="80" r="52" fill="#7B3FB8" />
+    <rect x="1110" y="16" width="64" height="64" fill="#FF7AA8" />
+  </svg>
+  <div class="wrap pied-grille">
+    <div class="pied-marque">
+      <a class="pied-logo" href="/" aria-label="Et Magique, accueil">Et Magique</a>
+      <p>Les cours de la 6e à la terminale, enfin clairs. Gratuit, sans compte, sans publicité.</p>
+      <Reseaux libelles />
     </div>
+    <nav class="pied-col" aria-label="Matières">
+      <h2>Matières</h2>
+      <ul>
+        {MATIERES.map((m) => {
+          const a = AFFICHES[m.slug];
+          const mini = <span class="gbar-mini" style={`--fond:${a?.fond ?? 'var(--ink)'}`} aria-hidden="true"><Fragment set:html={a?.forme ?? ''} /></span>;
+          return <li>{m.active ? <a href={`/${m.slug}/`}>{mini}{m.nom}</a> : <span class="pied-bientot">{mini}{m.nom}<small>bientôt</small></span>}</li>;
+        })}
+      </ul>
+    </nav>
+    <nav class="pied-col" aria-label="Le site">
+      <h2>Le site</h2>
+      <ul>
+        {yt && <li><a href={yt} target="_blank" rel="noopener">La chaîne YouTube</a></li>}
+        <li><a href="/maths/planning-bac/">Planning du bac</a></li>
+        <li><a href="/a-propos/">À propos</a></li>
+        <li><a href="/demandes/">Nous écrire</a></li>
+        <li><a href="/confidentialite/">Confidentialité</a></li>
+        <li><a href="/mentions-legales/">Mentions légales</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="wrap pied-droits">
+    <p>© {annee} Maths et Magique, <a href="/mentions-legales/#droits-dauteur">tous droits réservés</a>. Usage personnel uniquement : toute republication ou utilisation commerciale est interdite sans accord.</p>
   </div>
 </footer>

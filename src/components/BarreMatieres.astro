@@ -1,21 +1,27 @@
 ---
-// Barre fine tout en haut des sites de matière : revenir à l'accueil Et Magique et changer de matière.
+// Barre du haut des sites de matière : revenir à l'accueil Et Magique, ou passer d'une matière à l'autre.
+// Chaque matière est une petite affiche (son aplat et sa forme), comme sur l'accueil.
 import { MATIERES } from '../data/site';
+import { AFFICHES } from '../data/affiches';
 interface Props { matiere?: string }
 const { matiere = 'maths' } = Astro.props;
 ---
 <div class="gbar">
   <div class="wrap">
     <a class="gbar-home" href="/" data-umami-event="retour-accueil">
-      <svg class="gbar-chev" viewBox="0 0 16 16" aria-hidden="true"><path d="M10 3 5 8l5 5"/></svg>
+      <span class="gbar-fleche" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M14 6 8 12l6 6" /></svg></span>
       <span class="gbar-long">Toutes les matières</span><span class="gbar-court">Matières</span>
     </a>
     <nav aria-label="Matières">
-      {MATIERES.map((m) => m.active ? (
-        <a href={`/${m.slug}/`} aria-current={m.slug === matiere ? 'page' : undefined} style={`--c:${m.couleur}`}>{m.nom}</a>
-      ) : (
-        <span title="Bientôt">{m.nom}</span>
-      ))}
+      {MATIERES.map((m) => {
+        const a = AFFICHES[m.slug];
+        const mini = <span class="gbar-mini" style={`--fond:${a?.fond ?? 'var(--ink)'}`} aria-hidden="true"><Fragment set:html={a?.forme ?? ''} /></span>;
+        return m.active ? (
+          <a href={`/${m.slug}/`} aria-current={m.slug === matiere ? 'page' : undefined}>{mini}<span>{m.nom}</span></a>
+        ) : (
+          <span class="gbar-bientot" title="Bientôt">{mini}<span>{m.nom}</span></span>
+        );
+      })}
     </nav>
   </div>
 </div>
