@@ -1,0 +1,30 @@
+questions:
+  - question: $\frac{1}{3} + \frac{1}{3}$ est égal à…
+    choix: ['$\frac{2}{3}$', '$\frac{2}{6}$', '$\frac{1}{6}$', '$\frac{1}{9}$']
+    bonne: 0
+    explication: Même dénominateur, on additionne les numérateurs et on garde le 3.
+    revoir: cours
+
+  - question: Quelle fraction est égale à $\frac{3}{4}$ ?
+    choix: ['$\frac{9}{12}$', '$\frac{6}{7}$', '$\frac{4}{3}$', '$\frac{3}{8}$']
+    bonne: 0
+    explication: On multiplie en haut et en bas par 3.
+    revoir: cours
+
+  - question: La plus grande fraction est…
+    choix: ['$\frac{5}{6}$', '$\frac{2}{3}$', '$\frac{1}{2}$', '$\frac{3}{4}$']
+    bonne: 0
+    explication: En douzièmes, $\frac{10}{12}$, $\frac{8}{12}$, $\frac{6}{12}$, $\frac{9}{12}$.
+    revoir: exercices
+
+  - question: $\frac{2}{5}$ de 35 est égal à…
+    choix: ['$14$', '$7$', '$70$', '$17{,}5$']
+    bonne: 0
+    explication: $35 \div 5 = 7$, puis $7 \times 2 = 14$.
+    revoir: cours
+
+  - question: $\frac{1}{2} - \frac{1}{6}$ est égal à…
+    choix: ['$\frac{1}{3}$', '$\frac{0}{4}$', '$\frac{1}{4}$', '$\frac{2}{3}$']
+    bonne: 0
+    explication: $\frac{3}{6} - \frac{1}{6} = \frac{2}{6} = \frac{1}{3}$.
+    revoir: exercices

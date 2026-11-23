@@ -1,0 +1,30 @@
+questions:
+  - question: Si $A'$ est le symétrique de $A$ par rapport à $O$, alors…
+    choix: ['$O$ est le milieu de $[AA'']$', '$A$ est le milieu de $[OA'']$', '$OA'' = 2 \times OA$', '$(AA'')$ est perpendiculaire à un axe']
+    bonne: 0
+    explication: C'est la définition de la symétrie centrale.
+    revoir: cours
+
+  - question: La symétrie centrale conserve…
+    choix: ['les longueurs et les angles', 'seulement les longueurs', 'seulement les angles', 'rien']
+    bonne: 0
+    explication: Un demi-tour ne déforme pas la figure.
+    revoir: cours
+
+  - question: Le symétrique de $M(4\,;-3)$ par rapport à l'origine est…
+    choix: ['$(-4\,;3)$', '$(4\,;3)$', '$(-4\,;-3)$', '$(3\,;-4)$']
+    bonne: 0
+    explication: Les deux coordonnées changent de signe.
+    revoir: exercices
+
+  - question: Les diagonales d'un parallélogramme…
+    choix: ['se coupent en leur milieu', 'sont toujours de même longueur', 'sont toujours perpendiculaires', 'ne se coupent pas']
+    bonne: 0
+    explication: Le point d'intersection est le centre de symétrie.
+    revoir: cours
+
+  - question: Laquelle de ces figures n'a pas de centre de symétrie ?
+    choix: ['un triangle équilatéral', 'un cercle', 'un rectangle', 'un parallélogramme']
+    bonne: 0
+    explication: Après un demi-tour, le triangle a la pointe en bas.
+    revoir: cours

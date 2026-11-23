@@ -1,0 +1,30 @@
+questions:
+  - question: $6 + 2 \times 5$ est égal à…
+    choix: ['$16$', '$40$', '$13$', '$30$']
+    bonne: 0
+    explication: La multiplication d'abord, $6 + 10 = 16$.
+    revoir: cours
+
+  - question: $(6 + 2) \times 5$ est égal à…
+    choix: ['$40$', '$16$', '$13$', '$30$']
+    bonne: 0
+    explication: Les parenthèses d'abord, $8 \times 5 = 40$.
+    revoir: cours
+
+  - question: $18 \div 3 \times 2$ est égal à…
+    choix: ['$12$', '$3$', '$9$', '$6$']
+    bonne: 0
+    explication: Même priorité, de gauche à droite, $6 \times 2 = 12$.
+    revoir: exercices
+
+  - question: $\dfrac{10 + 6}{4}$ est égal à…
+    choix: ['$4$', '$11{,}5$', '$2{,}5$', '$16$']
+    bonne: 0
+    explication: Le trait de fraction agit comme des parenthèses, $16 \div 4 = 4$.
+    revoir: cours
+
+  - question: $9 \times 11$ peut se calculer comme…
+    choix: ['$9 \times 10 + 9 \times 1$', '$9 \times 10 + 1$', '$9 + 10 \times 1$', '$9 \times 10 \times 1$']
+    bonne: 0
+    explication: Distributivité, $9 \times (10 + 1) = 90 + 9 = 99$.
+    revoir: cours

@@ -1,0 +1,71 @@
+# Exercices corrigés, du plus facile au type contrôle.
+# type d'étape : init (vert), her (orange), conc (bleu), calcul, methode, piege (rouge)
+exercices:
+  - titre: Simplifier
+    difficulte: 1
+    type: application
+    enonce: |
+      Simplifier le plus possible : $\frac{6}{9}$ ; $\frac{15}{25}$ ; $\frac{24}{36}$.
+    indice: Cherche un diviseur commun au numérateur et au dénominateur.
+    etapes:
+      - type: calcul
+        titre: Les deux premières
+        texte: $\frac{6}{9} = \frac{2}{3}$ (par 3). $\frac{15}{25} = \frac{3}{5}$ (par 5).
+      - type: conc
+        titre: La troisième
+        texte: <mark>$\frac{24}{36} = \frac{2}{3}$</mark> (par 12, ou par 2, puis 2, puis 3).
+
+  - titre: Comparer
+    difficulte: 1
+    type: methode
+    enonce: |
+      Comparer $\frac{3}{5}$ et $\frac{7}{10}$.
+    indice: $5 \times 2 = 10$.
+    etapes:
+      - type: calcul
+        titre: Même dénominateur
+        texte: $\frac{3}{5} = \frac{6}{10}$.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>$\frac{6}{10} < \frac{7}{10}$, donc $\frac{3}{5} < \frac{7}{10}$</mark>.
+
+  - titre: Additionner et soustraire
+    difficulte: 2
+    type: piege
+    enonce: |
+      Calculer et simplifier.
+      1. $\frac{2}{7} + \frac{3}{7}$
+      2. $\frac{1}{2} + \frac{1}{4}$
+      3. $\frac{11}{12} - \frac{2}{3}$
+    indice: Pour la 2, n'additionne pas les dénominateurs.
+    etapes:
+      - type: calcul
+        titre: Question 1
+        texte: $\frac{5}{7}$.
+      - type: piege
+        titre: Question 2
+        texte: >-
+          $\frac{1}{2} + \frac{1}{4} \ne \frac{2}{6}$. On écrit $\frac{2}{4} + \frac{1}{4} = \frac{3}{4}$.
+        note: parts de même taille
+      - type: conc
+        titre: Question 3
+        texte: <mark>$\frac{11}{12} - \frac{8}{12} = \frac{3}{12} = \frac{1}{4}$</mark>.
+
+  - titre: L'argent de poche
+    difficulte: 3
+    type: methode
+    enonce: |
+      Lou reçoit 60 € d'argent de poche. Elle dépense $\frac{1}{3}$ pour un livre et $\frac{1}{4}$ pour une place de cinéma.
+      1. Quelle fraction de son argent a-t-elle dépensée ?
+      2. Combien d'euros lui reste-t-il ?
+    indice: Le dénominateur commun de 3 et 4 est 12.
+    etapes:
+      - type: calcul
+        titre: Question 1
+        texte: $\frac{1}{3} + \frac{1}{4} = \frac{4}{12} + \frac{3}{12} = \frac{7}{12}$.
+      - type: calcul
+        titre: La fraction restante
+        texte: $1 - \frac{7}{12} = \frac{5}{12}$.
+      - type: conc
+        titre: Question 2
+        texte: <mark>$\frac{5}{12}$ de 60 € $= 60 \div 12 \times 5 = 25$ €</mark>.

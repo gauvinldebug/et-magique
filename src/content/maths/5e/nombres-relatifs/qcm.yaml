@@ -1,0 +1,30 @@
+questions:
+  - question: Quel est le plus petit nombre ?
+    choix: ['$-9$', '$-2$', '$0$', '$1$']
+    bonne: 0
+    explication: Chez les négatifs, le plus loin de zéro est le plus petit.
+    revoir: cours
+
+  - question: $(-7) + 3$ est égal à…
+    choix: ['$-4$', '$4$', '$-10$', '$10$']
+    bonne: 0
+    explication: Signes contraires, $7 - 3 = 4$, avec le signe de $-7$.
+    revoir: cours
+
+  - question: $2 - (-5)$ est égal à…
+    choix: ['$7$', '$-3$', '$3$', '$-7$']
+    bonne: 0
+    explication: Soustraire $-5$, c'est ajouter 5.
+    revoir: exercices
+
+  - question: L'opposé de $-12$ est…
+    choix: ['$12$', '$-12$', '$\frac{1}{12}$', '$0$']
+    bonne: 0
+    explication: Même distance à zéro, signe contraire.
+    revoir: cours
+
+  - question: Dans le point $B(-4\,;6)$, l'abscisse est…
+    choix: ['$-4$', '$6$', '$2$', '$-24$']
+    bonne: 0
+    explication: L'abscisse vient en premier, l'ordonnée en second.
+    revoir: cours

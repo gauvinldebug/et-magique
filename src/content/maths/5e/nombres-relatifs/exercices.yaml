@@ -1,0 +1,77 @@
+# Exercices corrigés, du plus facile au type contrôle.
+# type d'étape : init (vert), her (orange), conc (bleu), calcul, methode, piege (rouge)
+exercices:
+  - titre: Ranger des nombres
+    difficulte: 1
+    type: application
+    enonce: |
+      Ranger dans l'ordre croissant : $3$ ; $-5$ ; $0$ ; $-1{,}5$ ; $-12$ ; $7$.
+    indice: Les négatifs d'abord, le plus loin de zéro en premier.
+    etapes:
+      - type: calcul
+        titre: Les négatifs
+        texte: $-12 < -5 < -1{,}5$ (le plus profond sous-sol d'abord).
+      - type: conc
+        titre: Conclusion
+        texte: <mark>$-12 < -5 < -1{,}5 < 0 < 3 < 7$</mark>.
+
+  - titre: Additions
+    difficulte: 1
+    type: methode
+    enonce: |
+      Calculer.
+      1. $(-6) + (-8)$
+      2. $(-11) + 4$
+      3. $7 + (-3)$
+    indice: Regarde d'abord si les signes sont les mêmes.
+    etapes:
+      - type: calcul
+        titre: Question 1
+        texte: >-
+          Même signe : $-14$.
+      - type: calcul
+        titre: Question 2
+        texte: >-
+          Signes contraires, $11 - 4 = 7$, et $-11$ est plus loin de 0 : $-7$.
+      - type: conc
+        titre: Question 3
+        texte: <mark>$7 + (-3) = 4$</mark>.
+
+  - titre: Soustractions
+    difficulte: 2
+    type: piege
+    enonce: |
+      Calculer.
+      1. $4 - 9$
+      2. $(-2) - (-6)$
+      3. $(-5) - 3$
+    indice: Soustraire, c'est ajouter l'opposé.
+    etapes:
+      - type: calcul
+        titre: Question 1
+        texte: $4 + (-9) = -5$.
+      - type: piege
+        titre: Question 2
+        texte: >-
+          $(-2) - (-6) = (-2) + 6 = 4$. Enlever un négatif fait monter.
+        note: moins moins
+      - type: conc
+        titre: Question 3
+        texte: <mark>$(-5) + (-3) = -8$</mark>.
+
+  - titre: Le sous-marin
+    difficulte: 3
+    type: methode
+    enonce: |
+      Un sous-marin est à $-120$ m (sous la surface). Il remonte de 45 m, puis plonge de 80 m, puis remonte de 30 m.
+      1. À quelle profondeur se trouve-t-il ?
+      2. Un hélicoptère vole à 150 m au-dessus de la surface, à sa verticale. Quelle distance les sépare ?
+    indice: Monter, c'est ajouter ; plonger, c'est soustraire.
+    etapes:
+      - type: calcul
+        titre: Question 1
+        texte: $-120 + 45 - 80 + 30 = -125$. Il est à $-125$ m.
+      - type: conc
+        titre: Question 2
+        texte: >-
+          $150 - (-125) = 150 + 125 = 275$. <mark>275 m les séparent</mark>.

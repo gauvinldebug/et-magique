@@ -1,0 +1,64 @@
+# Exercices corrigés, du plus facile au type contrôle.
+# type d'étape : init (vert), her (orange), conc (bleu), calcul, methode, piege (rouge)
+exercices:
+  - titre: Le symétrique dans un repère
+    difficulte: 1
+    type: application
+    enonce: |
+      Dans un repère, $O$ est l'origine. Donner les coordonnées des symétriques par rapport à $O$ de $A(3\,;2)$, $B(-1\,;4)$ et $C(0\,;-5)$.
+    indice: Le demi-tour autour de l'origine change les signes des deux coordonnées.
+    etapes:
+      - type: calcul
+        titre: Les symétriques
+        texte: $A'(-3\,;-2)$, $B'(1\,;-4)$.
+      - type: conc
+        titre: Le dernier
+        texte: <mark>$C'(0\,;5)$</mark>.
+
+  - titre: Lettres et centres de symétrie
+    difficulte: 1
+    type: methode
+    enonce: |
+      Parmi les lettres H, N, A, Z, E et X, lesquelles ont un centre de symétrie ?
+    indice: Imagine la lettre après un demi-tour.
+    etapes:
+      - type: calcul
+        titre: Après un demi-tour
+        texte: H, N, Z et X restent identiques. A devient un A à l'envers, E un E retourné.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>H, N, Z et X ont un centre de symétrie</mark>.
+
+  - titre: Longueurs conservées
+    difficulte: 2
+    type: application
+    enonce: |
+      Le triangle $DEF$ a pour périmètre 15 cm et $\widehat{D} = 50°$. On construit son symétrique $D'E'F'$ par rapport à un point $O$.
+      Quel est le périmètre de $D'E'F'$ ? Combien mesure $\widehat{D'}$ ?
+    indice: La symétrie centrale conserve les longueurs et les angles.
+    etapes:
+      - type: conc
+        titre: Conclusion
+        texte: <mark>Périmètre 15 cm et $\widehat{D'} = 50°$</mark>. Un demi-tour ne déforme rien.
+
+  - titre: Prouver un parallélogramme
+    difficulte: 3
+    type: methode
+    enonce: |
+      $ABC$ est un triangle et $I$ le milieu de $[BC]$. On construit $D$, le symétrique de $A$ par rapport à $I$.
+      1. Que représente $I$ pour le segment $[AD]$ ?
+      2. Quelle est la nature du quadrilatère $ABDC$ ?
+      3. En déduire que $BD = AC$.
+    indice: Regarde les diagonales de $ABDC$.
+    etapes:
+      - type: calcul
+        titre: Question 1
+        texte: $D$ est le symétrique de $A$ par rapport à $I$, donc $I$ est le milieu de $[AD]$.
+      - type: calcul
+        titre: Question 2
+        texte: >-
+          Les diagonales $[AD]$ et $[BC]$ ont le même milieu $I$. Donc $ABDC$ est un parallélogramme.
+      - type: conc
+        titre: Question 3
+        texte: >-
+          <mark>Dans un parallélogramme, les côtés opposés ont la même longueur : $BD = AC$</mark>.
