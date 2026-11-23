@@ -6,8 +6,8 @@ const { niveau, niveauNom, type, titre, adresse, compact = false } = Astro.props
 // Trois compositions, choisies d'après l'adresse : deux chapitres voisins n'ont pas la même affiche.
 const n = [...adresse].reduce((s, c) => s + c.charCodeAt(0), 0) % 3;
 ---
-<header class:list={['affiche-impr', `niv-${niveau}`, { compact }]} aria-hidden="true">
-  <svg class="formes" viewBox="0 0 400 200" preserveAspectRatio="xMaxYMid slice">
+<header class:list={['affiche-impr', `niv-${niveau}`, { compact, long: titre.length > 30 }]} aria-hidden="true">
+  <svg class="formes" viewBox="40 20 360 160" preserveAspectRatio="xMaxYMid meet">
     {n === 0 && (<>
       <circle cx="330" cy="40" r="110" class="f1" />
       <polygon points="190,200 260,70 330,200" class="f2" />
