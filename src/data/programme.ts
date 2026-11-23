@@ -40,11 +40,14 @@ export const PROGRAMME: Record<string, Record<string, ChapitreProgramme[]>> = {
     ],
     seconde: [
       { slug: 'ensembles-de-nombres', titre: 'Ensembles de nombres' },
-      { slug: 'vecteurs', titre: 'Vecteurs' },
+      { slug: 'calcul-litteral', titre: 'Calcul littéral et équations' },
+      { slug: 'proportions-et-evolutions', titre: 'Proportions et évolutions' },
+      { slug: 'generalites-sur-les-fonctions', titre: 'Généralités sur les fonctions' },
       { slug: 'fonctions-de-reference', titre: 'Fonctions de référence' },
-      { slug: 'equations-de-droites', titre: 'Équations de droites' },
+      { slug: 'vecteurs', titre: 'Vecteurs' },
+      { slug: 'equations-de-droites', titre: 'Équations de droites et systèmes' },
       { slug: 'statistiques', titre: 'Statistiques' },
-      { slug: 'probabilites', titre: 'Probabilités' },
+      { slug: 'probabilites', titre: 'Probabilités et échantillonnage' },
     ],
     premiere: [
       { slug: 'second-degre', titre: 'Second degré' },
