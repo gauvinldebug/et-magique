@@ -1,0 +1,30 @@
+questions:
+  - question: La solution de $\corange{x} - 8 = 5$ est…
+    choix: ['$13$', '$-3$', '$3$', '$40$']
+    bonne: 0
+    explication: On ajoute 8 des deux côtés.
+    revoir: cours
+
+  - question: La solution de $5\corange{x} = 35$ est…
+    choix: ['$7$', '$30$', '$175$', '$40$']
+    bonne: 0
+    explication: On divise les deux côtés par 5.
+    revoir: cours
+
+  - question: Le nombre $-1$ est-il solution de $3\corange{x} + 4 = 1$ ?
+    choix: ['oui', 'non']
+    bonne: 0
+    explication: $3 \times (-1) + 4 = 1$. L'égalité est vraie.
+    revoir: exercices
+
+  - question: La solution de $2\corange{x} + 9 = 5\corange{x}$ est…
+    choix: ['$3$', '$-3$', '$\frac{9}{7}$', '$9$']
+    bonne: 0
+    explication: $9 = 3\corange{x}$, donc $\corange{x} = 3$.
+    revoir: cours
+
+  - question: « On prend le triple d'un nombre, puis on retire 4, et on obtient 11 » se traduit par…
+    choix: ['$3\corange{x} - 4 = 11$', '$3(\corange{x} - 4) = 11$', '$\corange{x}^3 - 4 = 11$', '$3 + \corange{x} - 4 = 11$']
+    bonne: 0
+    explication: Le triple de $\corange{x}$, c'est $3\corange{x}$, puis on retire 4.
+    revoir: cours

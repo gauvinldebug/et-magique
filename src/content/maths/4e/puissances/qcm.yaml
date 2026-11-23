@@ -1,0 +1,30 @@
+questions:
+  - question: $2^5$ est égal à…
+    choix: ['$32$', '$10$', '$25$', '$64$']
+    bonne: 0
+    explication: $2 \times 2 \times 2 \times 2 \times 2 = 32$.
+    revoir: cours
+
+  - question: $10^{-3}$ est égal à…
+    choix: ['$0{,}001$', '$-1\,000$', '$0{,}0001$', '$-0{,}001$']
+    bonne: 0
+    explication: $\frac{1}{1\,000} = 0{,}001$. Un exposant négatif ne donne pas un nombre négatif.
+    revoir: cours
+
+  - question: $10^4 \times 10^{-7}$ est égal à…
+    choix: ['$10^{-3}$', '$10^{-28}$', '$10^{11}$', '$10^{3}$']
+    bonne: 0
+    explication: On ajoute les exposants, $4 + (-7) = -3$.
+    revoir: cours
+
+  - question: La notation scientifique de $6\,400$ est…
+    choix: ['$6{,}4 \times 10^3$', '$64 \times 10^2$', '$0{,}64 \times 10^4$', '$6{,}4 \times 10^{-3}$']
+    bonne: 0
+    explication: Le nombre devant doit être entre 1 et 10.
+    revoir: exercices
+
+  - question: Un gigaoctet vaut…
+    choix: ['$10^9$ octets', '$10^6$ octets', '$10^3$ octets', '$10^{12}$ octets']
+    bonne: 0
+    explication: Giga signifie $10^9$, un milliard.
+    revoir: cours
