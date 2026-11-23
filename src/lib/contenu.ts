@@ -67,3 +67,16 @@ export async function dernierChapitre(matiere: string) {
     .filter((c) => c.matiere === matiere)
     .sort((a, b) => jour(b) - jour(a) || rangNiveau(b.niveau) - rangNiveau(a.niveau) || (b.data.ordre ?? 0) - (a.data.ordre ?? 0))[0];
 }
+
+/** La dernière vidéo longue mise en ligne sur la chaîne (les Shorts sont ignorés), avec son chapitre s'il est connu.
+ *  Lue dans le flux de la chaîne au moment de construire le site ; à défaut, la plus récente des vidéos rattachées à un chapitre.
+ *  La page la remet à jour au chargement via /api/video?derniere=1, sans attendre une reconstruction. */
+export async function derniereVideo(matiere: string) {
+  const { videosChaine } = await import('./youtube');
+  const chapitres = (await chapitresPublies()).filter((c) => c.matiere === matiere && c.data.video.youtube);
+  const t = (d?: string | Date) => (d ? new Date(d).getTime() : 0);
+  const v = [...(await videosChaine(matiere))].sort((a, b) => t(b.date) - t(a.date))[0];
+  if (v) return { id: v.id, titre: v.titre, date: v.date, chapitre: chapitres.find((c) => c.data.video.youtube === v.id) };
+  const c = chapitres.sort((a, b) => t(b.data.video.date ?? b.data.publie) - t(a.data.video.date ?? a.data.publie))[0];
+  return c ? { id: c.data.video.youtube as string, titre: c.data.titre as string, date: String(c.data.video.date ?? c.data.publie), chapitre: c } : undefined;
+}

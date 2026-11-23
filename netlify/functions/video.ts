@@ -1,4 +1,5 @@
 // GET /api/video?m=maths&n=terminale&c=limites-de-suites&t=Limites%20de%20suites
+// GET /api/video?m=maths&derniere=1 : la dernière vidéo longue de la chaîne (id, titre, date, niveau, chapitre).
 // Cherche dans le flux RSS de la chaîne la vidéo d'un chapitre (lien du chapitre dans la description, sinon titre).
 // Les Shorts sont ignorés : seule la vidéo longue est rattachée au chapitre.
 // Sert aux pages construites avant la sortie de la vidéo : la vignette apparaît dès que la vidéo est en ligne,
@@ -11,14 +12,16 @@ const decode = (s: string) => s.replace(/&amp;/g, '&').replace(/&lt;/g, '<').rep
 
 export default async (req: Request) => {
   const u = new URL(req.url);
-  const m = u.searchParams.get('m') ?? 'maths';
+  const m = (u.searchParams.get('m') ?? 'maths').replace(/[^a-z]/g, '');
   const n = (u.searchParams.get('n') ?? '').replace(/[^a-z0-9-]/g, '');
   const c = (u.searchParams.get('c') ?? '').replace(/[^a-z0-9-]/g, '');
   const t = norm(u.searchParams.get('t') ?? '');
   const chaine = process.env.YOUTUBE_CHANNEL_ID || CHAINES[m];
+  const derniere = u.searchParams.has('derniere');
   let id: string | undefined;
+  let info: Record<string, string> = {};
   let flux = '';
-  if (chaine && n && c) {
+  if (chaine && (derniere || (n && c))) {
     try {
       const r = await fetch(`https://www.youtube.com/feeds/videos.xml?channel_id=${chaine}`, { headers: { 'user-agent': 'Mozilla/5.0 (compatible; et-magique/1.0)', 'accept-language': 'fr' } });
       const xml = await r.text();
@@ -27,12 +30,23 @@ export default async (req: Request) => {
         id: e.match(/<yt:videoId>([^<]+)/)?.[1] ?? '',
         titre: decode(e.match(/<title>([^<]*)/)?.[1] ?? ''),
         description: decode(e.match(/<media:description>([\s\S]*?)<\/media:description>/)?.[1] ?? ''),
+        date: e.match(/<published>([^<]+)/)?.[1] ?? '',
       }));
+      if (derniere) {
+        // La dernière vidéo longue de la chaîne, avec le chapitre trouvé dans sa description (lien /r/<niveau>/<chapitre>).
+        const v = videos.filter((x) => x.id).sort((a, b) => Date.parse(b.date) - Date.parse(a.date))[0];
+        if (v) {
+          id = v.id;
+          const ch = v.description.match(new RegExp(`/(?:r|qr|${m})/([a-z0-9-]+)/([a-z0-9-]+)`));
+          info = { titre: v.titre, date: v.date, ...(ch ? { niveau: ch[1], chapitre: ch[2] } : {}) };
+        }
+      } else {
       const lien = new RegExp(`/(?:r|qr|${m})/${n}/${c}(?![\\w-])`);
       id = (videos.find((v) => lien.test(v.description)) ?? (t ? videos.find((v) => norm(v.titre).includes(t)) : undefined))?.id;
+      }
     } catch (e) { flux = `erreur ${(e as Error).message}`; }
   }
-  return new Response(JSON.stringify({ id: id ?? null, flux }), {
+  return new Response(JSON.stringify({ id: id ?? null, ...info, flux }), {
     headers: {
       'content-type': 'application/json; charset=utf-8',
       'cache-control': 'public, max-age=0, must-revalidate',

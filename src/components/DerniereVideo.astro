@@ -1,0 +1,56 @@
+---
+// La dernière vidéo mise en ligne sur la chaîne (remplace l'ancien encadré « Nouveau chapitre » / « Vidéo bientôt en ligne »).
+// Clic : la vidéo s'ouvre sur YouTube. Au chargement, la page demande à /api/video la dernière vidéo :
+// si une nouvelle est sortie depuis la construction du site, la carte se met à jour toute seule.
+import { NIVEAUX } from '../data/site';
+import { derniereVideo } from '../lib/contenu';
+interface Props { matiere: string; grand?: boolean }
+const { matiere, grand = false } = Astro.props;
+const v = await derniereVideo(matiere);
+const jour = (d?: string) => (d ? new Date(d).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'Europe/Paris' }) : '');
+const ch = v?.chapitre;
+const nv = ch && NIVEAUX.find((n) => n.slug === ch.niveau);
+const lien = ch ? `/${matiere}/${ch.niveau}/${ch.slug}/` : '';
+---
+{v && (
+  <article class:list={['dv', { 'dv-grand': grand }]} data-derniere={matiere} data-id={v.id}>
+    <a class="thumb" href={`https://www.youtube.com/watch?v=${v.id}`} target="_blank" rel="noopener" data-umami-event="derniere-video" data-dv-lien>
+      <img src={`https://i.ytimg.com/vi/${v.id}/maxresdefault.jpg`} alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" data-dv-img />
+      <span class="play"><i></i></span>
+    </a>
+    <div class="dv-txt">
+      <p class="dv-etiquette">Dernière vidéo{v.date && <> · <time datetime={v.date} data-dv-date>{jour(v.date)}</time></>}</p>
+      <h3 data-dv-titre>{v.titre}</h3>
+      <div class="dv-actions">
+        <a class="btn" href={`https://www.youtube.com/watch?v=${v.id}`} target="_blank" rel="noopener" data-dv-lien>Regarder sur YouTube</a>
+        <a class="btn ghost" href={lien || `/${matiere}/`} data-dv-chap hidden={!lien}>{nv ? `Cours et exercices (${nv.court})` : 'Cours et exercices'}</a>
+      </div>
+    </div>
+  </article>
+)}
+
+<script>
+  const NOMS: Record<string, string> = { '6e': '6e', '5e': '5e', '4e': '4e', '3e': '3e', seconde: '2de', premiere: '1re', terminale: 'Tle' };
+  document.querySelectorAll<HTMLElement>('[data-derniere]').forEach(async (el) => {
+    try {
+      const m = el.dataset.derniere!;
+      const r = await (await fetch(`/api/video?m=${m}&derniere=1`)).json();
+      if (!r.id || !/^[\w-]{11}$/.test(r.id) || r.id === el.dataset.id) return;
+      el.dataset.id = r.id;
+      const url = `https://www.youtube.com/watch?v=${r.id}`;
+      el.querySelectorAll<HTMLAnchorElement>('[data-dv-lien]').forEach((a) => (a.href = url));
+      const img = el.querySelector<HTMLImageElement>('[data-dv-img]');
+      if (img) img.src = `https://i.ytimg.com/vi/${r.id}/hqdefault.jpg`;
+      const t = el.querySelector('[data-dv-titre]');
+      if (t && r.titre) t.textContent = r.titre;
+      const d = el.querySelector<HTMLTimeElement>('[data-dv-date]');
+      if (d && r.date) { d.dateTime = r.date; d.textContent = new Date(r.date).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' }); }
+      const c = el.querySelector<HTMLAnchorElement>('[data-dv-chap]');
+      if (c) {
+        const ok = r.niveau && r.chapitre && /^[a-z0-9-]+$/.test(r.niveau + r.chapitre);
+        c.hidden = !ok;
+        if (ok) { c.href = `/${m}/${r.niveau}/${r.chapitre}/`; c.textContent = `Cours et exercices (${NOMS[r.niveau] ?? r.niveau})`; }
+      }
+    } catch { /* hors ligne : on garde la vidéo connue à la construction */ }
+  });
+</script>

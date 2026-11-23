@@ -6,6 +6,7 @@ import 'katex/dist/katex.min.css';
 import '../styles/global.css';
 import Entete from '../components/Entete.astro';
 import Pied from '../components/Pied.astro';
+import BarreMatieres from '../components/BarreMatieres.astro';
 import { MATIERES } from '../data/site';
 
 interface Props {
@@ -64,6 +65,7 @@ const pleinTitre = titre.includes('Magique') ? titre : `${titre} · Maths et Mag
   </head>
   <body>
     <a class="sr-only" href="#contenu">Aller au contenu</a>
+    {!sansEntete && <BarreMatieres matiere={matiere} />}
     {!sansEntete && <Entete matiere={matiere} niveau={niveau} actif={actif} />}
     <main id="contenu" data-pagefind-body={indexer ? '' : undefined}>
       <slot />

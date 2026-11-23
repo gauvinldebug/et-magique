@@ -73,6 +73,7 @@ const grouped = ['Collège', 'Lycée', 'Options', 'Ens. scientifique'].map((cycl
 </header>
 
 <div class="ph-menu" id="ph-menu" hidden data-ph-menu>
+  <a class="ph-retour" href="/"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M10 3 5 8l5 5"/></svg>Toutes les matières</a>
   <Recherche id="rq-menu" placeholder="Chercher un chapitre…" />
   <div>
     <div class="k" style="margin-bottom:8px">Ton niveau</div>
@@ -134,6 +135,9 @@ const grouped = ['Collège', 'Lycée', 'Options', 'Ens. scientifique'].map((cycl
   const burger = document.querySelector<HTMLButtonElement>('[data-burger]');
   const setPh = (open: boolean) => {
     if (!phMenu || !burger) return;
+    // Le menu commence juste sous l'en-tête (la barre des matières au-dessus défile avec la page).
+    const bas = document.querySelector('[data-entete]')?.getBoundingClientRect().bottom;
+    if (open && bas) phMenu.style.top = `${Math.max(0, Math.round(bas))}px`;
     phMenu.hidden = !open;
     burger.setAttribute('aria-expanded', String(open));
     burger.setAttribute('aria-label', open ? 'Fermer le menu' : 'Ouvrir le menu');

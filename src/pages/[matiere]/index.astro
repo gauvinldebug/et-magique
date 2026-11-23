@@ -1,20 +1,17 @@
 ---
 import Base from '../../layouts/Base.astro';
-import Video from '../../components/Video.astro';
+import DerniereVideo from '../../components/DerniereVideo.astro';
 import Recherche from '../../components/Recherche.astro';
 import Chaine from '../../components/Chaine.astro';
 import { NIVEAUX } from '../../data/site';
-import { dernierChapitre } from '../../lib/contenu';
 import { cheminsMatieres } from '../../lib/matieres-paths';
 export const getStaticPaths = cheminsMatieres;
 const { matiere } = Astro.props;
-const dernier = await dernierChapitre(matiere.slug);
-const nv = dernier && NIVEAUX.find((n) => n.slug === dernier.niveau);
 ---
 <Base titre="Maths et Magique : les maths de la 6e à la terminale, enfin claires" description="Maths et Magique : tout le programme de maths de la 6e à la terminale en vidéo, avec cours, exercices corrigés pas à pas, QCM, fiches et annales du bac. Gratuit, sans compte, sans publicité." matiere={matiere.slug} actif="accueil">
   <div class="page-feuille cahier">
     <div class="feuille">
-      <div class="s-hero">
+      <div class="s-hero m-hero">
         <div>
           <h1>Tout le programme de maths, expliqué en vidéo et <mark>corrigé pas à pas</mark>.</h1>
           <p class="lead">De la 6e à la terminale, options comprises. Gratuit, sans compte, sans publicité.</p>
@@ -23,13 +20,7 @@ const nv = dernier && NIVEAUX.find((n) => n.slug === dernier.niveau);
             {NIVEAUX.map((n) => <a href={`/${matiere.slug}/${n.slug}/`}>{n.court}</a>)}
           </div>
         </div>
-        {dernier && nv && (
-          <div style="display:grid;gap:10px">
-            <div class="k">Nouveau chapitre</div>
-            <Video youtube={dernier.data.video.youtube} titre={dernier.data.titre} matiere={matiere.slug} niveau={dernier.niveau} chapitre={dernier.slug} court={dernier.data.court} />
-            <a href={`/${matiere.slug}/${dernier.niveau}/${dernier.slug}/`} style="font-weight:600;font-size:.95rem">{nv.nom} · {dernier.data.court} : cours, exercices et QCM</a>
-          </div>
-        )}
+        <DerniereVideo matiere={matiere.slug} />
       </div>
       {matiere.youtube && <Chaine url={matiere.youtube} nom={`${matiere.nom} et Magique`} />}
       <div class="band">

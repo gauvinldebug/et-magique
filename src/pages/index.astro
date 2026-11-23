@@ -1,82 +1,114 @@
 ---
-// etmagique.fr : la porte d'entrée, une matière par chaîne YouTube.
+// etmagique.fr : la porte d'entrée. Une matière = une chaîne YouTube = un site.
+// Direction artistique 2026-11 : grandes respirations, une seule mise en scène (le surligneur qui passe
+// sur « enfin clairs »), la feuille à petits carreaux et la marge rouge gardées comme signature.
 import Base from '../layouts/Base.astro';
-import Video from '../components/Video.astro';
+import DerniereVideo from '../components/DerniereVideo.astro';
 import Reseaux from '../components/Reseaux.astro';
+import Pied from '../components/Pied.astro';
 import QRCode from 'qrcode';
 import { MATIERES, NIVEAUX } from '../data/site';
-import { dernierChapitre } from '../lib/contenu';
+import { chapitresPublies } from '../lib/contenu';
 
 const principale = MATIERES.find((m) => m.active)!;
-const dernier = await dernierChapitre(principale.slug);
-const nv = dernier && NIVEAUX.find((n) => n.slug === dernier.niveau);
+const autres = MATIERES.filter((m) => m !== principale);
+const nbChapitres = (await chapitresPublies()).filter((c) => c.matiere === principale.slug).length;
+const raccourcis = NIVEAUX.filter((n) => n.cycle === 'Collège' || n.cycle === 'Lycée');
 const abonnement = principale.youtube ? `${principale.youtube}?sub_confirmation=1` : '';
 const qr = abonnement ? await QRCode.toString(abonnement, { type: 'svg', margin: 1, errorCorrectionLevel: 'M', color: { dark: '#1B2433', light: '#FFFFFF' } }) : '';
-const contenu = [
-  ['Une vidéo', 'qui explique avec des images'],
-  ['Le cours', 'écrit, à lire ou imprimer'],
-  ['Des exercices', 'corrigés étape par étape'],
-  ['Un QCM', 'pour vérifier que c\'est compris'],
-  ['Une fiche', 'de révision d\'une page'],
+const chapitre = [
+  ['Vidéo', 'Une métaphore animée pour comprendre avant de calculer.'],
+  ['Cours', 'Écrit, à lire à l\'écran ou à imprimer.'],
+  ['Exercices', 'Corrigés étape par étape, à dévoiler quand tu veux.'],
+  ['QCM', 'Pour vérifier en deux minutes que c\'est acquis.'],
+  ['Fiche', 'L\'essentiel du chapitre sur une page.'],
 ];
 ---
-<Base titre="Maths et Magique · Et Magique : les cours de la 6e à la terminale, enfin clairs" description="Maths et Magique : vidéos, cours, exercices corrigés et QCM de maths gratuits, de la 6e à la terminale et pour le bac. Sans compte, sans publicité." sansEntete>
-  <div class="page-feuille cahier portail">
-    <div class="feuille">
-      <div class="portail-grille">
-        <div class="portail-gauche">
-          <span class="wordmark" style="font-size:2.4rem">Et Magique<svg class="spark" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1.5 C12.9 8 16 11.1 22.5 12 C16 12.9 12.9 16 12 22.5 C11.1 16 8 12.9 1.5 12 C8 11.1 11.1 8 12 1.5Z"/></svg></span>
-          <h1>Les cours de la 6e à la terminale, <mark>enfin clairs</mark>.</h1>
-          <p class="lead">Une chaîne YouTube et un site par matière. Gratuit, sans compte, sans publicité.</p>
-          <ul class="liste-ch">
-            {MATIERES.map((m) => (
-              <li>
-                {m.active ? (
-                  <a href={`/${m.slug}/`}><span class="n" style={`color:${m.couleur}`}>●</span><b style={`color:${m.couleur}`}>{m.nom} et Magique</b><span class="badge">En ligne</span></a>
-                ) : (
-                  <div class="later"><span class="n">○</span><span>{m.nom} et Magique</span><span class="badge gris">Bientôt</span></div>
-                )}
-              </li>
-            ))}
-          </ul>
-          <a class="btn" href={`/${principale.slug}/`}>Commencer avec {principale.nom} et Magique</a>
-          <div>
-            <div class="k" style="margin-bottom:10px">Pour chaque chapitre</div>
-            <ul class="portail-contenu">
-              {contenu.map(([t, s]) => <li><b>{t}</b><span>{s}</span></li>)}
-            </ul>
-          </div>
-        </div>
-
-        <aside class="portail-droite">
-          {dernier && nv && (
-            <div class="portail-carte">
-              <div class="k">Nouveau chapitre</div>
-              <Video youtube={dernier.data.video.youtube} titre={dernier.data.titre} matiere={principale.slug} niveau={dernier.niveau} chapitre={dernier.slug} court={dernier.data.court} />
-              <a href={`/${principale.slug}/${dernier.niveau}/${dernier.slug}/`} style="font-weight:600">{nv.nom} · {dernier.data.court} : cours, exercices et QCM</a>
-            </div>
-          )}
-          {principale.youtube && (
-            <div class="portail-carte portail-yt">
-              <div>
-                <div class="k">La chaîne YouTube</div>
-                <h2>{principale.nom} et Magique</h2>
-                <p>Abonne-toi pour être prévenu à chaque nouveau chapitre.</p>
-                <a class="btn rouge" href={abonnement} target="_blank" rel="noopener" data-umami-event="chaine-portail">
-                  <svg viewBox="0 0 28 20" aria-hidden="true"><rect width="28" height="20" rx="5" fill="#fff"/><path d="M11 5.5v9l8-4.5z" fill="#FF0033"/></svg>
-                  Voir la chaîne et s'abonner
-                </a>
-                <div class="portail-reseaux"><span>Suis-nous aussi</span><Reseaux matiere={principale.slug} libelles /></div>
-              </div>
-              <figure class="chaine-qr">
-                <Fragment set:html={qr} />
-                <figcaption>Scanne avec ton téléphone</figcaption>
-              </figure>
-            </div>
-          )}
-        </aside>
-      </div>
-      <p class="aide"><a href="/a-propos/">À propos</a> · <a href="/confidentialite/">Confidentialité</a> · <a href="/mentions-legales/">Mentions légales</a></p>
+<Base titre="Et Magique : les cours de la 6e à la terminale, enfin clairs" description="Maths et Magique : vidéos, cours, exercices corrigés et QCM de maths gratuits, de la 6e à la terminale et pour le bac. Sans compte, sans publicité." sansEntete>
+  <header class="p-nav">
+    <div class="wrap">
+      <a class="wordmark" href="/" aria-label="Et Magique, accueil">Et Magique<svg class="spark" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1.5 C12.9 8 16 11.1 22.5 12 C16 12.9 12.9 16 12 22.5 C11.1 16 8 12.9 1.5 12 C8 11.1 11.1 8 12 1.5Z"/></svg></a>
+      <nav aria-label="Sections">
+        <a href="#matieres">Matières</a>
+        <a href="#video">Dernière vidéo</a>
+        <a href="#chaine">La chaîne</a>
+      </nav>
+      <a class="btn petit" href={`/${principale.slug}/`}>Commencer</a>
     </div>
-  </div>
+  </header>
+
+  <section class="a-hero page-feuille cahier">
+    <div class="a-hero-in">
+      <h1>Les cours de la 6e à la terminale, <mark class="balaye">enfin clairs</mark>.</h1>
+      <p>Une chaîne YouTube et un site par matière. Gratuit, sans compte, sans publicité.</p>
+      <div class="a-cta">
+        <a class="btn grand" href={`/${principale.slug}/`}>Commencer avec les maths</a>
+        <a class="btn grand ghost" href="#video">Voir la dernière vidéo</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="a-sec" id="matieres" aria-labelledby="t-matieres">
+    <div class="wrap">
+      <h2 class="a-titre" id="t-matieres">Choisis ta matière.</h2>
+      <div class="tuiles">
+        <a class="tuile tuile-principale" href={`/${principale.slug}/`} style={`--c:${principale.couleur}`}>
+          <div class="tuile-txt">
+            <span class="wordmark tuile-nom"><span class="mat">{principale.nom}</span><span class="et">et</span><span>Magique</span></span>
+            <p>Tout le programme de la 6e à la terminale, options et enseignement scientifique compris.</p>
+            <p class="tuile-compte"><b>{nbChapitres}</b> chapitres en ligne</p>
+            <span class="btn">Entrer</span>
+          </div>
+          <ul class="tuile-niveaux" aria-label="Niveaux disponibles">
+            {raccourcis.map((n) => <li>{n.court}</li>)}
+          </ul>
+        </a>
+        {autres.map((m) => (
+          <div class="tuile tuile-bientot" style={`--c:${m.couleur}`}>
+            <span class="wordmark tuile-nom"><span class="mat">{m.nom}</span><span class="et">et</span><span>Magique</span></span>
+            <p>Bientôt</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="a-sec a-sec-alt" id="video" aria-labelledby="t-video">
+    <div class="wrap">
+      <h2 class="a-titre" id="t-video">Tout juste sorti.</h2>
+      <DerniereVideo matiere={principale.slug} grand />
+    </div>
+  </section>
+
+  <section class="a-sec" aria-labelledby="t-chapitre">
+    <div class="wrap">
+      <h2 class="a-titre" id="t-chapitre">Dans chaque chapitre.</h2>
+      <ul class="a-chapitre">
+        {chapitre.map(([t, s]) => <li><h3>{t}</h3><p>{s}</p></li>)}
+      </ul>
+    </div>
+  </section>
+
+  {principale.youtube && (
+    <section class="a-chaine" id="chaine" aria-labelledby="t-chaine">
+      <div class="wrap">
+        <div class="a-chaine-txt">
+          <h2 id="t-chaine">Ne rate aucun nouveau chapitre.</h2>
+          <p>Abonne-toi à {principale.nom} et Magique pour être prévenu dès qu'une vidéo sort.</p>
+          <div class="a-cta">
+            <a class="btn grand rouge" href={abonnement} target="_blank" rel="noopener" data-umami-event="chaine-portail">
+              <svg viewBox="0 0 28 20" aria-hidden="true"><rect width="28" height="20" rx="5" fill="#fff"/><path d="M11 5.5v9l8-4.5z" fill="#FF0033"/></svg>
+              S'abonner à la chaîne
+            </a>
+          </div>
+          <div class="portail-reseaux"><span>Aussi sur</span><Reseaux matiere={principale.slug} libelles /></div>
+        </div>
+        <figure class="chaine-qr">
+          <Fragment set:html={qr} />
+          <figcaption>Scanne avec ton téléphone</figcaption>
+        </figure>
+      </div>
+    </section>
+  )}
+  <Pied />
 </Base>
