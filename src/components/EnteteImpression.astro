@@ -1,0 +1,32 @@
+---
+// L'en-tête « affiche » des PDF et de l'impression : un aplat à la couleur du niveau, quelques formes,
+// le titre en grand. Invisible à l'écran (voir src/styles/impression.css).
+interface Props { niveau: string; niveauNom: string; type: string; titre: string; adresse: string; compact?: boolean }
+const { niveau, niveauNom, type, titre, adresse, compact = false } = Astro.props;
+// Trois compositions, choisies d'après l'adresse : deux chapitres voisins n'ont pas la même affiche.
+const n = [...adresse].reduce((s, c) => s + c.charCodeAt(0), 0) % 3;
+---
+<header class:list={['affiche-impr', `niv-${niveau}`, { compact }]} aria-hidden="true">
+  <svg class="formes" viewBox="0 0 400 200" preserveAspectRatio="xMaxYMid slice">
+    {n === 0 && (<>
+      <circle cx="330" cy="40" r="110" class="f1" />
+      <polygon points="190,200 260,70 330,200" class="f2" />
+      <rect x="340" y="140" width="40" height="40" class="f3" />
+    </>)}
+    {n === 1 && (<>
+      <rect x="250" y="-20" width="170" height="170" class="f1" />
+      <circle cx="250" cy="170" r="62" class="f2" />
+      <polygon points="355,200 400,120 400,200" class="f3" />
+    </>)}
+    {n === 2 && (<>
+      <path d="M180 200 Q290 -60 400 200 Z" class="f1" />
+      <circle cx="350" cy="44" r="30" class="f2" />
+      <rect x="205" y="22" width="34" height="34" class="f3" />
+    </>)}
+  </svg>
+  <div class="txt">
+    <p class="type"><span>{niveauNom}</span><span>{type}</span></p>
+    <h1>{titre}</h1>
+  </div>
+  <p class="marque"><b>Maths et Magique</b> · etmagique.fr</p>
+</header>
