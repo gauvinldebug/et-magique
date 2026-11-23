@@ -1,0 +1,124 @@
+---
+// L'histoire qui défile, sur l'accueil : la scène reste à l'écran pendant qu'on fait défiler,
+// et les formes de l'affiche construisent les quatre temps d'un chapitre (vidéo, cours, exercices, QCM).
+// Sans JavaScript, ou si l'appareil demande moins d'animations, les quatre temps s'affichent
+// simplement l'un sous l'autre, chacun avec son dessin final.
+const temps = [
+  { k: 'Un chapitre', t: 'Quatre temps pour comprendre un chapitre.', p: 'Fais défiler : on le construit ensemble.' },
+  { k: '1. La vidéo', t: 'Une image pour comprendre avant de calculer.', p: 'Chaque chapitre commence par une idée animée, sur YouTube.' },
+  { k: '2. Le cours', t: 'Le cours écrit, et sa fiche d\'une page.', p: 'À lire à l\'écran ou à imprimer, sans rien à installer.' },
+  { k: '3. Les exercices', t: 'Des corrigés étape par étape.', p: 'Tu dévoiles une étape quand tu bloques, pas avant.' },
+  { k: '4. Le QCM', t: 'Deux minutes pour vérifier que c\'est acquis.', p: 'Gratuit, sans compte, sans publicité.' },
+];
+---
+<section class="hs" aria-label="Comment est construit un chapitre" data-histoire>
+  <div class="hs-scene">
+    <svg class="hs-svg" viewBox="0 0 1000 1000" aria-hidden="true">
+      <g data-f="courbe"><path d="M-420 260 Q 0 -420 420 260" fill="none" stroke="#fff" stroke-width="12" /></g>
+      <g data-f="lignes">
+        <rect x="-200" y="-110" width="400" height="34" fill="#fff" />
+        <rect x="-200" y="-30" width="330" height="34" fill="#fff" />
+        <rect x="-200" y="50" width="380" height="34" fill="#fff" />
+        <rect x="-200" y="130" width="240" height="34" fill="#F2E94E" />
+      </g>
+      <g data-f="marches">
+        <rect x="-300" y="60" width="200" height="140" fill="#FF7AA8" />
+        <rect x="-100" y="-80" width="200" height="280" fill="#FF7AA8" />
+        <rect x="100" y="-220" width="200" height="420" fill="#FF7AA8" />
+      </g>
+      <g data-f="carre"><rect x="-80" y="-80" width="160" height="160" fill="#2B2BD9" /></g>
+      <g data-f="rond"><circle r="130" fill="#F2E94E" /></g>
+      <g data-f="tri"><polygon points="-55,-70 85,0 -55,70" fill="#FF7AA8" /></g>
+      <g data-f="coche"><path d="M-70 0 L-20 50 L75 -55" fill="none" stroke="#1A1A40" stroke-width="30" stroke-linecap="square" pathLength="1" /></g>
+    </svg>
+    <ol class="hs-textes">
+      {temps.map((s, i) => (
+        <li data-temps={i}>
+          <p class="hs-k">{s.k}</p>
+          <h2>{s.t}</h2>
+          <p>{s.p}</p>
+        </li>
+      ))}
+    </ol>
+    <div class="hs-points" aria-hidden="true">{temps.map(() => <i></i>)}</div>
+  </div>
+</section>
+
+<script>
+  // Chaque forme a une position par temps : [x, y, rotation, échelle, opacité] dans un carré de 1000.
+  type Etat = [number, number, number, number, number];
+  const ETATS: Record<string, Etat[]> = {
+    rond:    [[300, 330, 0, 1, 1],   [500, 500, 0, 1.7, 1], [250, 340, 0, .3, 1],  [200, 590, 0, .55, 1],  [500, 500, 0, 1.9, 1]],
+    tri:     [[690, 640, -30, 1, 1], [515, 500, 0, 1.25, 1], [250, 500, 0, .45, 1], [780, 220, -90, .6, 0], [800, 230, 30, .5, 0]],
+    carre:   [[720, 280, 20, 1, 1],  [850, 170, 45, .5, 0],  [250, 660, 0, .35, 1], [500, 900, 0, .3, 0],  [170, 830, 0, .3, 0]],
+    courbe:  [[500, 760, 0, 1, 1],   [500, 980, 0, 1.3, 0],  [500, 980, 0, 1, 0],   [500, 980, 0, 1, 0],   [500, 980, 0, 1, 0]],
+    lignes:  [[560, 500, 0, .8, 0],  [560, 500, 0, .8, 0],   [580, 500, 0, 1, 1],   [580, 420, 0, .9, 0],  [580, 420, 0, .9, 0]],
+    marches: [[520, 640, 0, .7, 0],  [520, 640, 0, .7, 0],   [520, 640, 0, .7, 0],  [520, 600, 0, 1, 1],   [520, 700, 0, .8, 0]],
+    coche:   [[500, 500, 0, 1.9, 0], [500, 500, 0, 1.9, 0],  [500, 500, 0, 1.9, 0], [500, 500, 0, 1.9, 0], [500, 500, 0, 1.9, 1]],
+  };
+  // Pendant les exercices, le disque monte les marches.
+  const MONTEE: [number, number][] = [[200, 590], [420, 450], [620, 310], [820, 170]];
+  const doux = (t: number) => t * t * (3 - 2 * t);
+
+  const zone = document.querySelector<HTMLElement>('[data-histoire]');
+  if (zone && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    zone.classList.add('hs-actif');
+    const formes = [...zone.querySelectorAll<SVGGElement>('[data-f]')];
+    const textes = [...zone.querySelectorAll<HTMLElement>('[data-temps]')];
+    const points = [...zone.querySelectorAll<HTMLElement>('.hs-points i')];
+    const coche = zone.querySelector<SVGPathElement>('[data-f="coche"] path')!;
+    const n = textes.length - 1;
+    let visible = false, courant = -1;
+    // Lissage : la scène suit la position de la page avec un léger amorti. Une molette crantée
+    // avance par sauts ; l'amorti transforme chaque saut en mouvement continu. Le défilement
+    // de la page lui-même n'est jamais modifié.
+    let cible = 0, actuel = -1, boucle = 0, avant = 0;
+    const mesure = () => {
+      const r = zone.getBoundingClientRect();
+      const course = r.height - innerHeight;
+      cible = Math.min(1, Math.max(0, -r.top / (course || 1))) * n;
+    };
+    const anime = (now: number) => {
+      const dt = Math.min(64, now - (avant || now)); avant = now;
+      mesure();
+      if (actuel < 0 || Math.abs(cible - actuel) > 1.5) actuel = cible;  // saut (lien, rechargement) : pas de rattrapage
+      else actuel += (cible - actuel) * (1 - Math.exp(-dt / 90));
+      if (Math.abs(cible - actuel) < .0005) actuel = cible;
+      dessine(actuel);
+      boucle = actuel !== cible ? requestAnimationFrame(anime) : 0;
+      if (!boucle) avant = 0;
+    };
+    const relance = () => { if (visible && !boucle) boucle = requestAnimationFrame(anime); };
+
+    const dessine = (pos: number) => {
+      const i = Math.min(n - 1, Math.floor(pos));
+      // On reste un moment sur chaque temps, puis on passe au suivant.
+      const t = doux(Math.min(1, Math.max(0, (pos - i - .35) / .65)));
+      formes.forEach((g) => {
+        const e = ETATS[g.dataset.f!];
+        const a = e[i], b = e[i + 1];
+        let [x, y, rot, s, o] = a.map((v, k) => v + (b[k] - v) * t) as Etat;
+        if (g.dataset.f === 'rond' && i === 3) {
+          const m = Math.min(1, (pos - 3) / .35) * (MONTEE.length - 1);
+          const j = Math.min(MONTEE.length - 2, Math.floor(m)), u = doux(m - j);
+          x = MONTEE[j][0] + (MONTEE[j + 1][0] - MONTEE[j][0]) * u;
+          y = MONTEE[j][1] + (MONTEE[j + 1][1] - MONTEE[j][1]) * u;
+          if (t > 0) { x = x + (500 - x) * t; y = y + (500 - y) * t; }
+        }
+        g.setAttribute('transform', `translate(${x.toFixed(1)} ${y.toFixed(1)}) rotate(${rot.toFixed(1)}) scale(${s.toFixed(3)})`);
+        g.style.opacity = o.toFixed(3);
+      });
+      coche.style.strokeDashoffset = String(1 - (i === n - 1 ? t : 0));
+      const actif = Math.round(pos);
+      if (actif !== courant) {
+        courant = actif;
+        textes.forEach((el, k) => el.classList.toggle('hs-on', k === actif));
+        points.forEach((el, k) => el.classList.toggle('hs-on', k <= actif));
+      }
+    };
+    new IntersectionObserver(([e]) => { visible = e.isIntersecting; relance(); }).observe(zone);
+    addEventListener('scroll', relance, { passive: true });
+    addEventListener('resize', relance);
+    mesure(); actuel = cible; dessine(actuel);
+  }
+</script>
