@@ -11,12 +11,12 @@ const { matiere } = Astro.props;
 <Base titre="Maths et Magique : les maths de la 6e à la terminale, enfin claires" description="Maths et Magique : tout le programme de maths de la 6e à la terminale en vidéo, avec cours, exercices corrigés pas à pas, QCM, fiches et annales du bac. Gratuit, sans compte, sans publicité." matiere={matiere.slug} actif="accueil">
   <div class="page-feuille cahier">
     <div class="feuille" style="gap:clamp(56px, 7vw, 96px)">
-      <div class="m-hero">
+      <div class="m-hero" data-scroll>
         <svg class="m-hero-formes" viewBox="0 0 700 520" preserveAspectRatio="xMaxYMax slice" aria-hidden="true">
-          <circle cx="520" cy="170" r="250" fill="#F2E94E" />
-          <polygon points="180,520 360,210 540,520" fill="#FF7AA8" />
-          <path d="M40 560 Q 380 -140 760 420" fill="none" stroke="#fff" stroke-width="9" />
-          <rect x="560" y="390" width="110" height="110" fill="#1A1A40" />
+          <circle class="f-rond" cx="520" cy="170" r="250" fill="#F2E94E" />
+          <polygon class="f-tri" points="180,520 360,210 540,520" fill="#FF7AA8" />
+          <path class="f-courbe" d="M40 560 Q 380 -140 760 420" fill="none" stroke="#fff" stroke-width="9" pathLength="1" />
+          <rect class="f-carre" x="560" y="390" width="110" height="110" fill="#1A1A40" />
         </svg>
         <h1>Tout le programme de maths, expliqué simplement.</h1>
         <div class="m-hero-txt">

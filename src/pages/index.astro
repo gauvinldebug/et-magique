@@ -2,8 +2,6 @@
 // etmagique.fr : la porte d'entrée. Une matière = une chaîne YouTube = un site.
 // Charte « Sommaire » : un manuel suisse, noir, blanc et un rouge ; l'accueil est le sommaire du programme.
 import Base from '../layouts/Base.astro';
-import DerniereVideo from '../components/DerniereVideo.astro';
-import Sommaire from '../components/Sommaire.astro';
 import Reseaux from '../components/Reseaux.astro';
 import Pied from '../components/Pied.astro';
 import QRCode from 'qrcode';
@@ -15,28 +13,27 @@ const publies = await chapitresPublies();
 const nb = (slug: string) => publies.filter((c) => c.matiere === slug).length;
 const abonnement = principale.youtube ? `${principale.youtube}?sub_confirmation=1` : '';
 const qr = abonnement ? await QRCode.toString(abonnement, { type: 'svg', margin: 1, errorCorrectionLevel: 'M', color: { dark: '#000000', light: '#FFFFFF' } }) : '';
-// Chaque matière a son affiche : un aplat et une forme.
+// Chaque matière a son affiche : un aplat, une forme qui dit la matière, le texte en dessous (jamais sur la forme).
 const AFFICHES: Record<string, { fond: string; txt: string; forme: string }> = {
-  maths: { fond: 'var(--bleu)', txt: '#fff', forme: '<svg aria-hidden="true" viewBox="0 0 600 600" style="right:-80px;top:-80px;width:min(560px,90%)"><circle cx="300" cy="300" r="240" fill="#F2E94E"/><path d="M60 520 Q 300 -120 540 520" fill="none" stroke="#1A1A40" stroke-width="16"/></svg>' },
-  physique: { fond: 'var(--orange)', txt: 'var(--ink)', forme: '<svg aria-hidden="true" viewBox="0 0 200 100" style="left:0;top:24px;width:100%"><path d="M0 50 Q 25 0 50 50 T 100 50 T 150 50 T 200 50" fill="none" stroke="#1A1A40" stroke-width="6"/></svg>' },
-  svt: { fond: 'var(--vert)', txt: '#fff', forme: '<svg aria-hidden="true" viewBox="0 0 200 200" style="right:-30px;top:-30px;width:170px"><path d="M100 10 C 180 60 180 140 100 190 C 20 140 20 60 100 10Z" fill="#F2E94E"/></svg>' },
-  histoire: { fond: 'var(--brique)', txt: '#fff', forme: '<svg aria-hidden="true" viewBox="0 0 200 200" style="right:20px;top:20px;width:110px"><rect x="20" y="20" width="36" height="160" fill="#fff"/><rect x="82" y="20" width="36" height="160" fill="#fff"/><rect x="144" y="20" width="36" height="160" fill="#fff"/></svg>' },
-  francais: { fond: 'var(--violet)', txt: '#fff', forme: '<svg aria-hidden="true" viewBox="0 0 200 200" style="right:16px;top:0;width:140px"><text x="0" y="190" font-family="Georgia,serif" font-size="260" fill="#FF7AA8">«</text></svg>' },
+  // une parabole devant un disque
+  maths: { fond: 'var(--bleu)', txt: '#fff', forme: '<svg viewBox="0 0 320 220" preserveAspectRatio="xMaxYMin meet"><circle class="f-a" cx="205" cy="105" r="100" fill="#F2E94E"/><path class="f-b" d="M70 230 Q 205 -100 340 230" fill="none" stroke="#1A1A40" stroke-width="12" pathLength="1"/></svg>' },
+  // une onde
+  physique: { fond: 'var(--orange)', txt: 'var(--ink)', forme: '<svg viewBox="0 0 240 120" preserveAspectRatio="xMidYMid meet"><path class="f-b" d="M0 60 Q 30 0 60 60 T 120 60 T 180 60 T 240 60" fill="none" stroke="#1A1A40" stroke-width="8" pathLength="1"/></svg>' },
+  // une feuille
+  svt: { fond: 'var(--vert)', txt: '#fff', forme: '<svg viewBox="0 0 200 200" preserveAspectRatio="xMaxYMin meet"><path class="f-a" d="M100 12 C 178 60 178 140 100 188 C 22 140 22 60 100 12Z" fill="#F2E94E"/><path d="M100 30 V 180" stroke="#127C59" stroke-width="6"/></svg>' },
+  // un sablier : le temps qui passe
+  histoire: { fond: 'var(--brique)', txt: '#fff', forme: '<svg viewBox="0 0 140 200" preserveAspectRatio="xMaxYMin meet"><rect x="10" y="8" width="120" height="14" fill="#fff"/><rect x="10" y="178" width="120" height="14" fill="#fff"/><polygon points="24,22 116,22 70,100" fill="#fff"/><polygon points="70,100 116,178 24,178" fill="#fff"/><polygon class="f-a" points="70,128 100,178 40,178" fill="#F2E94E"/></svg>' },
+  // des guillemets : la parole, le texte
+  francais: { fond: 'var(--violet)', txt: '#fff', forme: '<svg viewBox="0 0 200 160" preserveAspectRatio="xMaxYMin meet"><text class="f-a" x="0" y="150" font-family="Georgia,serif" font-size="220" fill="#FF7AA8">«</text></svg>' },
 };
-const chapitre = [
-  ['La vidéo', 'Une image animée pour comprendre avant de calculer.'],
-  ['Le cours', 'Écrit, à lire à l\'écran ou à imprimer, avec sa fiche d\'une page.'],
-  ['Les exercices', 'Corrigés étape par étape, à dévoiler quand tu veux.'],
-  ['Le QCM', 'Pour vérifier en deux minutes que c\'est acquis.'],
-];
 ---
 <Base titre="Et Magique : les cours de la 6e à la terminale, enfin clairs" description="Maths et Magique : vidéos, cours, exercices corrigés et QCM de maths gratuits, de la 6e à la terminale et pour le bac. Sans compte, sans publicité." sansEntete>
-  <header class="ah">
+  <header class="ah" data-scroll>
     <svg class="ah-formes" viewBox="0 0 800 760" preserveAspectRatio="xMaxYMax slice" aria-hidden="true">
-      <circle cx="540" cy="250" r="330" fill="#F2E94E" />
-      <polygon points="120,760 370,330 620,760" fill="#FF7AA8" />
-      <path d="M0 800 Q 360 -260 840 640" fill="none" stroke="#fff" stroke-width="10" />
-      <rect x="600" y="520" width="150" height="150" fill="#1A1A40" />
+      <circle class="f-rond" cx="540" cy="250" r="330" fill="#F2E94E" />
+      <polygon class="f-tri" points="120,760 370,330 620,760" fill="#FF7AA8" />
+      <path class="f-courbe" d="M0 800 Q 360 -260 840 640" fill="none" stroke="#fff" stroke-width="10" pathLength="1" />
+      <rect class="f-carre" x="600" y="520" width="150" height="150" fill="#1A1A40" />
     </svg>
     <div class="wrap">
       <div class="ah-tete">
@@ -57,53 +54,46 @@ const chapitre = [
   <div class="portail-p">
     <div class="wrap">
       <section class="bloc" aria-labelledby="t-matieres">
-        <h2 id="t-matieres">Une matière, une affiche.</h2>
+        <h2 id="t-matieres" data-rv>Choisis ta matière.</h2>
         <ul class="bloc-c p-affiches">
           {MATIERES.map((m, i) => {
             const a = AFFICHES[m.slug] ?? { fond: 'var(--ink)', txt: '#fff', forme: '' };
-            const style = `--fond:${a.fond};--txt:${a.txt}`;
+            const style = `--fond:${a.fond};--txt:${a.txt};--i:${i}`;
+            const contenu = (
+              <>
+                <span class="poster-forme" aria-hidden="true"><Fragment set:html={a.forme} /></span>
+                <span class="poster-txt"><b>{m.nom}</b><span>{m.active ? `${nb(m.slug)} chapitres en ligne, de la 6e à la terminale.` : 'Bientôt'}</span></span>
+              </>
+            );
             return (
-              <li>
+              <li data-rv style={`--i:${i}`}>
                 {m.active
-                  ? <a class:list={['poster', { grand: i === 0 }]} href={`/${m.slug}/`} style={style}><Fragment set:html={a.forme} /><b>{m.nom}</b><span>{nb(m.slug)} chapitres en ligne, de la 6e à la terminale.</span></a>
-                  : <div class="poster" style={style}><Fragment set:html={a.forme} /><b>{m.nom}</b><span>Bientôt</span></div>}
+                  ? <a class:list={['poster', { grand: i === 0 }]} href={`/${m.slug}/`} style={style}>{contenu}</a>
+                  : <div class="poster" style={style}>{contenu}</div>}
               </li>
             );
           })}
         </ul>
       </section>
 
-      <Sommaire matiere={principale.slug} titre="Le sommaire des maths" />
-
-      <section class="bloc" aria-labelledby="t-video">
-        <h2 id="t-video">Dernière vidéo</h2>
-        <div class="bloc-c"><DerniereVideo matiere={principale.slug} /></div>
-      </section>
-
-      <section class="bloc" aria-labelledby="t-chapitre">
-        <h2 id="t-chapitre">Dans chaque chapitre</h2>
-        <ul class="bloc-c p-chapitre">
-          {chapitre.map(([t, s]) => <li><h3>{t}</h3><p>{s}</p></li>)}
-        </ul>
-      </section>
-
       {principale.youtube && (
-        <section class="bloc" id="chaine" aria-labelledby="t-chaine">
-          <h2 id="t-chaine">La chaîne</h2>
-          <div class="bloc-c p-chaine">
-            <div>
-              <h3>Ne rate aucun nouveau chapitre.</h3>
-              <p>Abonne-toi à {principale.nom} et Magique sur YouTube pour être prévenu dès qu'une vidéo sort.</p>
-              <div class="a-cta">
-                <a class="btn" href={abonnement} target="_blank" rel="noopener" data-umami-event="chaine-portail">S'abonner sur YouTube</a>
-              </div>
-              <div class="portail-reseaux"><span>Aussi sur</span><Reseaux matiere={principale.slug} libelles /></div>
+        <section class="p-chaine" id="chaine" aria-labelledby="t-chaine" data-rv data-scroll>
+          <svg class="p-chaine-formes" viewBox="0 0 400 300" preserveAspectRatio="xMaxYMax slice" aria-hidden="true">
+            <circle class="f-rond" cx="330" cy="250" r="120" fill="#FF7AA8" />
+            <rect class="f-carre" x="200" y="200" width="80" height="80" fill="#2B2BD9" />
+          </svg>
+          <div class="p-chaine-txt">
+            <h2 id="t-chaine">Ne rate aucun nouveau chapitre.</h2>
+            <p>Abonne-toi à {principale.nom} et Magique sur YouTube pour être prévenu dès qu'une vidéo sort.</p>
+            <div class="a-cta">
+              <a class="btn" href={abonnement} target="_blank" rel="noopener" data-umami-event="chaine-portail">S'abonner sur YouTube</a>
             </div>
-            <figure class="chaine-qr">
-              <Fragment set:html={qr} />
-              <figcaption>Scanne avec ton téléphone</figcaption>
-            </figure>
+            <div class="portail-reseaux"><span>Aussi sur</span><Reseaux matiere={principale.slug} libelles /></div>
           </div>
+          <figure class="chaine-qr">
+            <Fragment set:html={qr} />
+            <figcaption>Scanne avec ton téléphone</figcaption>
+          </figure>
         </section>
       )}
     </div>

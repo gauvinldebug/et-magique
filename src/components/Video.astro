@@ -15,9 +15,11 @@ const { youtube, titre, matiere, niveau, chapitre, court } = Astro.props;
 ) : (
   <div class="thumb" role="img" aria-label="Vidéo bientôt en ligne" data-video-attente={niveau && chapitre ? `m=${matiere ?? 'maths'}&n=${niveau}&c=${chapitre}&t=${encodeURIComponent(court ?? titre)}` : undefined} data-titre={titre}>
     <svg viewBox="0 0 1600 900" aria-hidden="true">
-      <rect width="1600" height="900" style="fill:var(--carte)"/>
-      <foreignObject x="110" y="120" width="1380" height="420"><div style="font-family:var(--f-titre);font-weight:800;font-size:96px;line-height:1.1;color:var(--encre)">{titre}</div></foreignObject>
-      <path transform="translate(1250 560) scale(9)" d="M12 1.5 C12.9 8 16 11.1 22.5 12 C16 12.9 12.9 16 12 22.5 C11.1 16 8 12.9 1.5 12 C8 11.1 11.1 8 12 1.5Z" style="fill:var(--surligneur);stroke:var(--encre);stroke-width:.6"/>
+      <rect width="1600" height="900" fill="#2B2BD9"/>
+      <circle cx="1330" cy="250" r="300" fill="#F2E94E"/>
+      <polygon points="980,900 1200,520 1420,900" fill="#FF7AA8"/>
+      <rect x="1380" y="640" width="150" height="150" fill="#1A1A40"/>
+      <foreignObject x="100" y="110" width="900" height="560"><div style="font-family:var(--f-titre);font-weight:800;font-stretch:75%;letter-spacing:-.03em;font-size:104px;line-height:.95;color:#fff">{titre}</div></foreignObject>
     </svg>
     <span class="bientot">Vidéo bientôt en ligne</span>
   </div>

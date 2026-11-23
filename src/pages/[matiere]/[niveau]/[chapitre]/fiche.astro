@@ -2,6 +2,7 @@
 // La fiche de révision, mise en page pour tenir sur une feuille A4.
 import { render } from 'astro:content';
 import Base from '../../../../layouts/Base.astro';
+import EnteteImpression from '../../../../components/EnteteImpression.astro';
 import { cheminsChapitres } from '../../../../lib/routes';
 import { existe } from '../../../../lib/fichiers';
 export async function getStaticPaths() {
@@ -14,8 +15,9 @@ const base = `/${p.matiere.slug}/${p.niveau.slug}/${p.chapitre.slug}`;
 <Base titre={`Fiche : ${p.chapitre.data.court} · ${p.niveau.nom}`} description={`Fiche de révision à imprimer : ${p.chapitre.data.titre}.`} matiere={p.matiere.slug} niveau={p.niveau.slug}>
   <div class="page-feuille cahier fiche-a4">
     <div class="feuille" style="gap:20px">
+      <EnteteImpression compact niveau={p.niveau.slug} niveauNom={p.niveau.nom} type="Fiche de révision" titre={p.fiche!.data.titre} adresse={`etmagique.fr${base}/`} />
       <div class="crumb no-print"><a href={`/${p.matiere.slug}/${p.niveau.slug}/`}>{p.niveau.nom}</a> › <a href={`${base}/`}>{p.chapitre.data.court}</a> › <b>Fiche</b></div>
-      <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+      <div class="no-print" style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
         <div><span class="k">Fiche de révision · {p.niveau.nom}</span><h1>{p.fiche!.data.titre}</h1></div>
         <div class="no-print" style="display:flex;gap:10px">
           {existe(p.chapitre.data.pdf.fiche) && <a class="btn ghost" href={p.chapitre.data.pdf.fiche} download>PDF</a>}
@@ -23,7 +25,7 @@ const base = `/${p.matiere.slug}/${p.niveau.slug}/${p.chapitre.slug}`;
         </div>
       </div>
       <article class="prose" style="max-width:none"><Content /></article>
-      <p class="aide">etmagique.fr{base}/ · vidéo, exercices corrigés et QCM gratuits</p>
+      <p class="aide renvoi">etmagique.fr{base}/ · vidéo, exercices corrigés et QCM gratuits</p>
     </div>
   </div>
 </Base>
