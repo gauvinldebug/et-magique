@@ -1,8 +1,54 @@
-// Outils partagés par les fonctions Netlify (API du site).
+// Outils partagés par les fonctions de l'API du site.
+// Elles tournent sur Netlify (Netlify Blobs) et sur Cloudflare Pages (Cloudflare KV, voir functions/_outils.ts).
 import { getStore } from '@netlify/blobs';
 import { createHmac, createHash, timingSafeEqual } from 'node:crypto';
 
-export const store = (nom: 'demandes' | 'inscriptions' | 'limites') => getStore({ name: nom, consistency: 'strong' });
+export type NomStore = 'demandes' | 'inscriptions' | 'limites';
+
+/** Le minimum de Netlify Blobs utilisé par l'API, que l'adaptateur KV de Cloudflare imite. */
+export interface Magasin {
+  get(cle: string): Promise<string | null>;
+  get(cle: string, o: { type: 'text' }): Promise<string | null>;
+  get(cle: string, o: { type: 'json' }): Promise<any>;
+  set(cle: string, valeur: string): Promise<unknown>;
+  setJSON(cle: string, valeur: unknown): Promise<unknown>;
+  delete(cle: string): Promise<unknown>;
+  list(o?: { prefix?: string }): Promise<{ blobs: { key: string }[] }>;
+}
+
+/** Espace KV de Cloudflare (renseigné à chaque requête par functions/_outils.ts). Absent sur Netlify. */
+export interface EspaceKV {
+  get(cle: string, type?: 'text' | 'json'): Promise<any>;
+  put(cle: string, valeur: string): Promise<void>;
+  delete(cle: string): Promise<void>;
+  list(o: { prefix?: string; cursor?: string }): Promise<{ keys: { name: string }[]; list_complete: boolean; cursor?: string }>;
+}
+let kv: EspaceKV | null = null;
+export const utiliserKV = (espace: EspaceKV) => { kv = espace; };
+
+/** Un seul espace KV pour tout : les clés sont préfixées par le nom du magasin (« inscriptions:abc… »). */
+function magasinKV(espace: EspaceKV, nom: NomStore): Magasin {
+  const p = `${nom}:`;
+  return {
+    get: (cle: string, o?: { type: 'text' | 'json' }) => espace.get(p + cle, o?.type === 'json' ? 'json' : 'text'),
+    set: (cle, valeur) => espace.put(p + cle, valeur),
+    setJSON: (cle, valeur) => espace.put(p + cle, JSON.stringify(valeur)),
+    delete: (cle) => espace.delete(p + cle),
+    async list(o) {
+      const blobs: { key: string }[] = [];
+      let cursor: string | undefined;
+      do {
+        const r = await espace.list({ prefix: p + (o?.prefix ?? ''), cursor });
+        r.keys.forEach((k) => blobs.push({ key: k.name.slice(p.length) }));
+        cursor = r.list_complete ? undefined : r.cursor;
+      } while (cursor);
+      return { blobs };
+    },
+  } as Magasin;
+}
+
+export const store = (nom: NomStore): Magasin =>
+  kv ? magasinKV(kv, nom) : (getStore({ name: nom, consistency: 'strong' }) as unknown as Magasin);
 
 export const json = (data: unknown, status = 200) =>
   new Response(JSON.stringify(data), {
@@ -16,7 +62,7 @@ const secret = () => process.env.ADMIN_SECRET || process.env.ADMIN_PASSWORD || '
 
 /** Empreinte anonyme d'un visiteur (IP + secret, hachée) : on ne stocke jamais l'IP. */
 export function empreinte(req: Request, ctx?: { ip?: string }) {
-  const ip = ctx?.ip || req.headers.get('x-nf-client-connection-ip') || req.headers.get('x-forwarded-for') || 'inconnu';
+  const ip = ctx?.ip || req.headers.get('x-nf-client-connection-ip') || req.headers.get('cf-connecting-ip') || req.headers.get('x-forwarded-for') || 'inconnu';
   return createHash('sha256').update(`${ip}|${secret()}`).digest('hex').slice(0, 24);
 }
 

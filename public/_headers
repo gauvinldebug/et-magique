@@ -1,0 +1,9 @@
+# En-têtes de sécurité, lus par Cloudflare Pages et par Netlify.
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), interest-cohort=()
+
+/admin/*
+  X-Robots-Tag: noindex
+  X-Frame-Options: DENY

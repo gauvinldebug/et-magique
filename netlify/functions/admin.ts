@@ -6,9 +6,11 @@
 //   GET   /api/admin/inscriptions        (résumé)   ?format=csv (export)
 //   GET   /api/admin/emails              liste des e-mails prêts (annonces, plannings) et combien sont partis
 //   POST  /api/admin/emails  { id, test } test = envoi à BREVO_EXPEDITEUR seulement ; sinon envoi aux inscrits
+//   GET   /api/admin/transfert           toutes les données (demandes, inscrits, envois) pour changer d'hébergeur
+//   POST  /api/admin/transfert { source } recopie ici les données de l'ancien site (même ADMIN_SECRET des deux côtés)
 import type { Config, Context } from '@netlify/functions';
 import {
-  store, json, erreur, empreinte, limiter, nettoyer, estAdmin, creerJeton, motDePasseOk,
+  store, json, erreur, type NomStore, empreinte, limiter, nettoyer, estAdmin, creerJeton, motDePasseOk,
   toutesLesDemandes, cleDemande, reconstruireTableau, type Demande, type Statut,
 } from '../lib/outils';
 import { envoyer, lienDesinscription, emailConfirmation } from '../lib/emails';
@@ -116,6 +118,38 @@ export default async (req: Request, ctx: Context) => {
     }
   }
 
+  // Changement d'hébergeur (Netlify -> Cloudflare) : on recopie les données une fois.
+  if (route === 'transfert') {
+    const NOMS: NomStore[] = ['demandes', 'inscriptions', 'limites'];
+    const ephemere = /^(login|dem|ins|vote)\//; // compteurs anti-spam : inutile de les recopier
+    if (req.method === 'GET') {
+      const donnees: Record<string, Record<string, string>> = {};
+      for (const nom of NOMS) {
+        const s = store(nom);
+        const { blobs } = await s.list();
+        const cles = blobs.map((b) => b.key).filter((k) => nom !== 'limites' || !ephemere.test(k));
+        donnees[nom] = Object.fromEntries(await Promise.all(cles.map(async (k) => [k, (await s.get(k)) ?? ''])));
+      }
+      return json({ ok: true, donnees });
+    }
+    if (req.method === 'POST') {
+      let source = '';
+      try { source = String((await req.json()).source ?? ''); } catch { /* vide */ }
+      if (!/^https:\/\/[\w.-]+$/.test(source) || source === url.origin) return erreur('Adresse source invalide.');
+      const r = await fetch(`${source}/api/admin/transfert`, { headers: { authorization: req.headers.get('authorization') ?? '' } });
+      const j = (await r.json().catch(() => null)) as { ok?: boolean; erreur?: string; donnees?: Record<string, Record<string, string>> } | null;
+      if (!j?.ok || !j.donnees) return erreur(`L'ancien site a refusé : ${j?.erreur ?? r.status}. Vérifie que ADMIN_SECRET est identique des deux côtés.`, 502);
+      const compte: Record<string, number> = {};
+      for (const nom of NOMS) {
+        const s = store(nom);
+        const entrees = Object.entries(j.donnees[nom] ?? {});
+        for (const [k, v] of entrees) await s.set(k, v);
+        compte[nom] = entrees.length;
+      }
+      return json({ ok: true, compte });
+    }
+  }
+
   return erreur('Route inconnue', 404);
 };
 
@@ -135,4 +169,4 @@ const TESTS: { id: string; nom: string; niveau: string; age: string; rendu: (o: 
   { id: 'test-bienvenue-parent', nom: 'Automatique : bienvenue (parent, moins de 15 ans)', niveau: '3e', age: 'moins15', rendu: bienvenue },
 ];
 
-export const config: Config = { path: ['/api/admin/connexion', '/api/admin/demandes', '/api/admin/inscriptions', '/api/admin/emails'] };
+export const config: Config = { path: ['/api/admin/connexion', '/api/admin/demandes', '/api/admin/inscriptions', '/api/admin/emails', '/api/admin/transfert'] };
