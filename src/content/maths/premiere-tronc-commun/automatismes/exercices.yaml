@@ -1,0 +1,66 @@
+# Exercices corrigés, du plus facile au type bac.
+# type d'étape : init (vert), her (orange), conc (bleu), calcul, methode, piege (rouge)
+exercices:
+  - titre: Fractions sans calculatrice
+    difficulte: 1
+    type: application
+    enonce: |
+      Calculer $A = \frac{2}{3} + \frac{1}{4}$ et $B = \frac{3}{5} \div \frac{9}{10}$.
+    indice: Pour $B$, multiplie par l'inverse.
+    etapes:
+      - type: calcul
+        titre: A
+        texte: $A = \frac{8}{12} + \frac{3}{12} = \frac{11}{12}$.
+      - type: calcul
+        titre: B
+        texte: $B = \frac{3}{5} \times \frac{10}{9} = \frac{30}{45}$.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>$A = \frac{11}{12}$ et $B = \frac{2}{3}$</mark>.
+
+  - titre: Notation scientifique
+    difficulte: 1
+    type: application
+    enonce: |
+      Écrire $0{,}000\,45$ en notation scientifique, puis calculer $(3 \times 10^5) \times (2 \times 10^{-2})$.
+    indice: Le premier nombre doit être entre 1 et 10.
+    etapes:
+      - type: calcul
+        titre: Le premier
+        texte: $0{,}000\,45 = 4{,}5 \times 10^{-4}$.
+      - type: conc
+        titre: Le produit
+        texte: >-
+          $3 \times 2 = 6$ et $10^{5 - 2} = 10^3$ : <mark>$6 \times 10^3$</mark>.
+
+  - titre: Part ou résultat ?
+    difficulte: 2
+    type: piege
+    enonce: |
+      Un forfait coûte 240 €. Calculer 15 % de ce prix, puis le prix après une hausse de 15 %.
+    indice: Ce ne sont pas les mêmes coefficients.
+    etapes:
+      - type: calcul
+        titre: La part
+        texte: $240 \times 0{,}15 = 36$ €.
+      - type: piege
+        titre: Le prix augmenté
+        texte: $240 \times 1{,}15 = 276$ €, soit $240 + 36$.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>15 % du prix valent 36 € ; le prix augmenté vaut 276 €</mark>.
+
+  - titre: Une équation dans un contexte
+    difficulte: 2
+    type: methode
+    enonce: |
+      Une salle de sport facture 7 € l'inscription puis 3 € par séance. Avec 52 €, combien de séances peut-on payer ?
+    indice: Écris $3x + 7 = 52$.
+    etapes:
+      - type: calcul
+        titre: L'équation
+        texte: $3x + 7 = 52$, donc $3x = 45$.
+      - type: conc
+        titre: Conclusion
+        texte: >-
+          <mark>$x = 15$ séances</mark>. Vérification : $45 + 7 = 52$.

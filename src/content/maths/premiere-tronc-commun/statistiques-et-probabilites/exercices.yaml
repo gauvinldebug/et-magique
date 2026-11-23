@@ -1,0 +1,74 @@
+# Exercices corrigés, du plus facile au type bac.
+# type d'étape : init (vert), her (orange), conc (bleu), calcul, methode, piege (rouge)
+exercices:
+  - titre: Lire un tableau croisé
+    difficulte: 1
+    type: application
+    enonce: |
+      On reprend le tableau du cours.
+      <table><tbody><tr><td></td><td>Instrument</td><td>Pas d'instrument</td><td>Total</td></tr><tr><td>Sport</td><td>30</td><td>90</td><td>120</td></tr><tr><td>Pas de sport</td><td>50</td><td>30</td><td>80</td></tr><tr><td>Total</td><td>80</td><td>120</td><td>200</td></tr></tbody></table>
+      Quelle est la fréquence des élèves qui font du sport ?
+    indice: Total de la ligne Sport sur l'effectif total.
+    etapes:
+      - type: calcul
+        titre: Le calcul
+        texte: $\frac{120}{200} = 0{,}6$.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>60 % des élèves font du sport</mark>.
+
+  - titre: Parmi qui ?
+    difficulte: 2
+    type: piege
+    enonce: |
+      Avec le même tableau, calculer la fréquence des sportifs parmi les élèves qui jouent d'un instrument, puis celle des musiciens parmi les sportifs.
+    indice: On ne divise pas par le même effectif.
+    etapes:
+      - type: calcul
+        titre: Parmi les musiciens
+        texte: $\frac{30}{80} = 37{,}5\,\%$.
+      - type: piege
+        titre: Parmi les sportifs
+        texte: >-
+          $\frac{30}{120} = 25\,\%$ : ce n'est pas le même nombre.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>37,5 % des musiciens sont sportifs, 25 % des sportifs sont musiciens</mark>.
+
+  - titre: Un arbre pondéré
+    difficulte: 2
+    type: methode
+    enonce: |
+      30 % des clients d'un magasin ont une carte de fidélité. Parmi eux, 60 % achètent en promotion ; parmi les autres, 20 %. On choisit un client au hasard. Quelle est la probabilité qu'il achète en promotion ?
+    indice: Deux chemins mènent à « promotion ».
+    etapes:
+      - type: calcul
+        titre: Les deux chemins
+        texte: $0{,}3 \times 0{,}6 = 0{,}18$ et $0{,}7 \times 0{,}2 = 0{,}14$.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>$P(\text{promotion}) = 0{,}18 + 0{,}14 = 0{,}32$</mark>.
+
+  - titre: Un test de dépistage
+    difficulte: 3
+    type: bac
+    enonce: |
+      Une maladie touche 2 % d'une population. Un test est positif pour 95 % des malades et pour 3 % des personnes non malades.
+      1. Construire l'arbre pondéré.
+      2. Calculer la probabilité qu'un test soit positif.
+      3. Une personne a un test positif. Quelle est la probabilité qu'elle soit malade ?
+    indice: Pour la question 3, $P_T(M) = \frac{P(M \cap T)}{P(T)}$.
+    etapes:
+      - type: calcul
+        titre: Question 1
+        texte: >-
+          Première branche : $M$ (0,02) ou $\bar{M}$ (0,98). Puis $T$ avec 0,95 sachant $M$, et 0,03 sachant $\bar{M}$.
+      - type: calcul
+        titre: Question 2
+        texte: $P(T) = 0{,}02 \times 0{,}95 + 0{,}98 \times 0{,}03 = 0{,}019 + 0{,}0294 = 0{,}0484$.
+      - type: calcul
+        titre: Question 3
+        texte: $P_T(M) = \frac{0{,}019}{0{,}0484} \approx 0{,}39$.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>Seulement 39 % environ des tests positifs correspondent à un malade</mark>, car la maladie est rare.

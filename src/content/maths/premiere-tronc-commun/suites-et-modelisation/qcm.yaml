@@ -1,0 +1,30 @@
+questions:
+  - question: Si $u_0 = 2$ et $u_{n+1} = 3u_n$, alors $u_2 = \ldots$
+    choix: ['$18$', '$8$', '$6$', '$12$']
+    bonne: 0
+    explication: $u_1 = 6$, puis $u_2 = 18$.
+    revoir: cours
+
+  - question: Des points alignés sur un graphique correspondent à une croissance…
+    choix: ['linéaire', 'exponentielle', 'nulle', 'aléatoire']
+    bonne: 0
+    explication: Une suite arithmétique donne des points alignés.
+    revoir: cours
+
+  - question: Une hausse de 3 % par an correspond à une suite géométrique de raison…
+    choix: ['$1{,}03$', '$0{,}03$', '$3$', '$1{,}3$']
+    bonne: 0
+    explication: $q = 1 + \frac{3}{100}$.
+    revoir: cours
+
+  - question: La suite 10 ; 7 ; 4 ; 1 est…
+    choix: ['arithmétique de raison $-3$', 'géométrique de raison $0{,}7$', 'arithmétique de raison 3', 'ni l''une ni l''autre']
+    bonne: 0
+    explication: On enlève 3 à chaque fois.
+    revoir: exercices
+
+  - question: Au tableur, $u_0$ est en A2. Pour une suite géométrique de raison 1,1, on écrit en A3…
+    choix: ['`=A2*1,1`', '`=A2+1,1`', '`=A3*1,1`', '`=1,1^A2`']
+    bonne: 0
+    explication: Chaque terme est le précédent multiplié par la raison.
+    revoir: cours

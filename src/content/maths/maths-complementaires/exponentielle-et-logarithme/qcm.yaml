@@ -1,0 +1,30 @@
+questions:
+  - question: $e^2 \times e^5 = \ldots$
+    choix: ['$e^7$', '$e^{10}$', '$2e^7$', '$e^{2/5}$']
+    bonne: 0
+    explication: $e^{a}e^{b} = e^{a + b}$.
+    revoir: cours
+
+  - question: $\ln(25) = \ldots$
+    choix: ['$2\ln 5$', '$5\ln 2$', '$\ln 5 + 2$', '$\ln 20 + \ln 5$']
+    bonne: 0
+    explication: $25 = 5^2$ et $\ln(a^n) = n\ln a$.
+    revoir: cours
+
+  - question: La solution de $e^x = 3$ est…
+    choix: ['$\ln 3$', '$e^3$', '$\frac{3}{e}$', '$3e$']
+    bonne: 0
+    explication: $e^x = y \iff x = \ln y$.
+    revoir: exercices
+
+  - question: $\ln(-4)$…
+    choix: ['n''existe pas', 'vaut $-\ln 4$', 'vaut $0$', 'vaut $4$']
+    bonne: 0
+    explication: Le logarithme n'est défini que pour $x > 0$.
+    revoir: cours
+
+  - question: $f(t) = 50e^{-0{,}3t}$ modélise…
+    choix: ['une décroissance exponentielle', 'une croissance exponentielle', 'une évolution linéaire', 'une fonction constante']
+    bonne: 0
+    explication: Le coefficient $-0{,}3$ est négatif.
+    revoir: cours

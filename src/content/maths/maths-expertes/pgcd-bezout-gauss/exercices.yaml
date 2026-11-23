@@ -1,0 +1,80 @@
+# Exercices corrigés, du plus facile au type bac.
+# type d'étape : init (vert), her (orange), conc (bleu), calcul, methode, piege (rouge)
+exercices:
+  - titre: Algorithme d'Euclide
+    difficulte: 1
+    type: application
+    enonce: |
+      Calculer $\text{PGCD}(1078\,;322)$ avec l'algorithme d'Euclide.
+    indice: Divise le plus grand par le plus petit, puis recommence avec le reste.
+    etapes:
+      - type: calcul
+        titre: Les divisions
+        texte: >-
+          $1078 = 322 \times 3 + 112$, $322 = 112 \times 2 + 98$, $112 = 98 \times 1 + 14$, $98 = 14 \times 7 + 0$.
+      - type: conc
+        titre: Conclusion
+        texte: >-
+          Le dernier reste non nul est 14 : <mark>$\text{PGCD}(1078\,;322) = 14$</mark>.
+
+  - titre: Trouver des coefficients de Bézout
+    difficulte: 2
+    type: methode
+    enonce: |
+      Montrer que 17 et 5 sont premiers entre eux, puis trouver $u$ et $v$ entiers tels que $17u + 5v = 1$.
+    indice: Écris l'algorithme d'Euclide, puis remonte-le.
+    etapes:
+      - type: calcul
+        titre: Euclide
+        texte: $17 = 5 \times 3 + 2$, $5 = 2 \times 2 + 1$. Le PGCD vaut 1.
+      - type: calcul
+        titre: On remonte
+        texte: >-
+          $1 = 5 - 2 \times 2 = 5 - 2(17 - 5 \times 3) = 7 \times 5 - 2 \times 17$.
+      - type: conc
+        titre: Conclusion
+        texte: >-
+          <mark>$u = -2$, $v = 7$</mark>. Vérification : $-34 + 35 = 1$.
+
+  - titre: Reste avec Fermat
+    difficulte: 2
+    type: application
+    enonce: |
+      Déterminer le reste de la division de $3^{100}$ par 7.
+    indice: 7 est premier et ne divise pas 3.
+    etapes:
+      - type: calcul
+        titre: Fermat
+        texte: 7 est premier, donc $3^6 \equiv 1\ [7]$.
+      - type: calcul
+        titre: L'exposant
+        texte: >-
+          $100 = 6 \times 16 + 4$, donc $3^{100} \equiv 3^4 = 81 \equiv 4\ [7]$.
+        note: 81 = 7 × 11 + 4
+      - type: conc
+        titre: Conclusion
+        texte: <mark>Le reste est 4</mark>.
+
+  - titre: Une équation diophantienne
+    difficulte: 3
+    type: bac
+    enonce: |
+      On considère l'équation (E) : $7x - 5y = 3$, où $x$ et $y$ sont des entiers relatifs.
+      1. Vérifier que $(4\,;5)$ est solution de (E).
+      2. Résoudre (E).
+    indice: Soustrais l'égalité vérifiée par $(4\,;5)$ et utilise Gauss.
+    etapes:
+      - type: calcul
+        titre: Question 1
+        texte: $7 \times 4 - 5 \times 5 = 28 - 25 = 3$.
+      - type: calcul
+        titre: Soustraction
+        texte: >-
+          Si $7x - 5y = 3$, alors $7(x - 4) = 5(y - 5)$.
+      - type: methode
+        titre: Gauss
+        texte: >-
+          5 divise $7(x - 4)$ et 5 est premier avec 7, donc 5 divise $x - 4$ : $x = 4 + 5k$. En remplaçant, $7 \times 5k = 5(y - 5)$, soit $y = 5 + 7k$.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>Les solutions sont $(4 + 5k\,;5 + 7k)$, $k \in \mathbb{Z}$</mark>.

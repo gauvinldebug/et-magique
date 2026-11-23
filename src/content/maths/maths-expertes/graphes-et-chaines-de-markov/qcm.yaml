@@ -1,0 +1,30 @@
+questions:
+  - question: Un graphe où 4 sommets sont tous reliés deux à deux a…
+    choix: ['$6$ arêtes', '$4$ arêtes', '$8$ arêtes', '$12$ arêtes']
+    bonne: 0
+    explication: Chaque sommet est de degré 3, donc $4 \times 3 = 12 = 2 \times 6$.
+    revoir: cours
+
+  - question: La somme des degrés d'un graphe est égale…
+    choix: ['au double du nombre d''arêtes', 'au nombre d''arêtes', 'au nombre de sommets', 'à l''ordre au carré']
+    bonne: 0
+    explication: Chaque arête compte pour ses deux extrémités.
+    revoir: cours
+
+  - question: Dans une matrice de transition, chaque…
+    choix: ['ligne a pour somme 1', 'colonne a pour somme 1', 'coefficient vaut au moins 0,5', 'diagonale a pour somme 1']
+    bonne: 0
+    explication: La ligne $i$ donne toutes les destinations possibles depuis l'état $i$.
+    revoir: cours
+
+  - question: Le coefficient $(i\,;j)$ de $A^3$, avec $A$ la matrice d'adjacence, donne…
+    choix: ['le nombre de chaînes de longueur 3 de $i$ à $j$', 'la distance de $i$ à $j$', 'le degré de $i$', 'trois fois le nombre d''arêtes']
+    bonne: 0
+    explication: C'est la propriété des puissances de la matrice d'adjacence.
+    revoir: cours
+
+  - question: Un état stable $\pi$ vérifie…
+    choix: ['$\pi = \pi P$', '$\pi = P$', '$\pi P = 0$', '$\pi = P^2$']
+    bonne: 0
+    explication: Une fois atteint, l'état ne bouge plus d'une étape à l'autre.
+    revoir: exercices

@@ -1,0 +1,31 @@
+questions:
+  - question: La dérivée de $e^{3x}$ est…
+    choix: ['$3e^{3x}$', '$e^{3x}$', '$3xe^{3x}$', '$e^{3}$']
+    bonne: 0
+    explication: $(e^{ax+b})' = ae^{ax+b}$.
+    revoir: cours
+
+  - question: Si $f'' > 0$ sur un intervalle, alors $f$ y est…
+    choix: ['convexe', 'concave', 'croissante', 'positive']
+    bonne: 0
+    explication: Le signe de $f''$ donne la convexité.
+    revoir: cours
+
+  - question: Une fonction croissante et concave…
+    choix: ['monte de moins en moins vite', 'descend', 'monte de plus en plus vite', 'est constante']
+    bonne: 0
+    explication: >-
+      Pied levé : on avance encore, mais la vitesse diminue.
+    revoir: cours
+
+  - question: La tangente en $a$ a pour équation…
+    choix: ['$y = f''(a)(x - a) + f(a)$', '$y = f(a)(x - a) + f''(a)$', '$y = f''(a)x + f(a)$', '$y = f''(x)(x - a)$']
+    bonne: 0
+    explication: Pente $f'(a)$, passant par le point $(a\,;f(a))$.
+    revoir: exercices
+
+  - question: Un point d'inflexion correspond à…
+    choix: ['$f''''$ qui change de signe', '$f''$ qui change de signe', '$f$ qui s''annule', 'un maximum']
+    bonne: 0
+    explication: La courbe passe de convexe à concave, ou l'inverse.
+    revoir: cours

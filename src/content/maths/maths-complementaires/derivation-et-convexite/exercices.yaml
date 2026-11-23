@@ -1,0 +1,73 @@
+# Exercices corrigés, du plus facile au type bac.
+# type d'étape : init (vert), her (orange), conc (bleu), calcul, methode, piege (rouge)
+exercices:
+  - titre: Dériver
+    difficulte: 1
+    type: application
+    enonce: |
+      Dériver $f(x) = 3x^2 - 5x + 1$, $g(x) = (2x + 1)e^x$ et $h(x) = e^{-0{,}5x}$.
+    indice: Pour $g$, c'est un produit.
+    etapes:
+      - type: calcul
+        titre: f et h
+        texte: $f'(x) = 6x - 5$ et $h'(x) = -0{,}5e^{-0{,}5x}$.
+      - type: calcul
+        titre: g
+        texte: >-
+          $u = 2x + 1$, $v = e^x$ : $g'(x) = 2e^x + (2x + 1)e^x$.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>$g'(x) = (2x + 3)e^x$</mark>, en factorisant par $e^x$.
+
+  - titre: Équation de tangente
+    difficulte: 1
+    type: methode
+    enonce: |
+      Déterminer la tangente à la courbe de $f(x) = x^2 - 4x + 1$ au point d'abscisse 3.
+    indice: Il faut $f(3)$ et $f'(3)$.
+    etapes:
+      - type: calcul
+        titre: Les deux nombres
+        texte: $f(3) = 9 - 12 + 1 = -2$ et $f'(x) = 2x - 4$, donc $f'(3) = 2$.
+      - type: conc
+        titre: Conclusion
+        texte: $y = 2(x - 3) - 2$, soit <mark>$y = 2x - 8$</mark>.
+
+  - titre: Un tableau de variations
+    difficulte: 2
+    type: application
+    enonce: |
+      Étudier les variations de $f(x) = x^3 - 3x$ sur $[-2\,;2]$ et donner ses extremums.
+    indice: Factorise $f'(x)$.
+    etapes:
+      - type: calcul
+        titre: La dérivée
+        texte: $f'(x) = 3x^2 - 3 = 3(x - 1)(x + 1)$, positive à l'extérieur de $[-1\,;1]$.
+      - type: calcul
+        titre: Les variations
+        texte: >-
+          $f$ croît sur $[-2\,;-1]$, décroît sur $[-1\,;1]$, croît sur $[1\,;2]$. $f(-1) = 2$ et $f(1) = -2$.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>Maximum local 2 en $x = -1$, minimum local $-2$ en $x = 1$</mark>.
+
+  - titre: Une vidéo virale
+    difficulte: 3
+    type: bac
+    enonce: |
+      $N(t) = -t^3 + 9t^2 + 2$ (en milliers de vues), $t \in [0\,;6]$ en jours.
+      1. Montrer que $N$ est croissante sur $[0\,;6]$.
+      2. Étudier la convexité de $N$ et donner le point d'inflexion.
+      3. Interpréter.
+    indice: $N'(t) = 3t(6 - t)$.
+    etapes:
+      - type: calcul
+        titre: Question 1
+        texte: $N'(t) = -3t^2 + 18t = 3t(6 - t) \ge 0$ sur $[0\,;6]$.
+      - type: calcul
+        titre: Question 2
+        texte: >-
+          $N''(t) = -6t + 18$ : positive sur $[0\,;3]$ (convexe), négative sur $[3\,;6]$ (concave). Point d'inflexion $(3\,;56)$.
+      - type: conc
+        titre: Question 3
+        texte: <mark>La propagation est la plus rapide au bout de 3 jours</mark>, puis elle ralentit.

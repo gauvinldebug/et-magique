@@ -1,0 +1,30 @@
+questions:
+  - question: Une baisse de 15 % par an correspond à une suite géométrique de raison…
+    choix: ['$0{,}85$', '$0{,}15$', '$1{,}15$', '$-15$']
+    bonne: 0
+    explication: $1 - \frac{15}{100} = 0{,}85$.
+    revoir: cours
+
+  - question: Si $u_0 = 4$ et $u_{n+1} = u_n + 3$, alors $u_{10} = \ldots$
+    choix: ['$34$', '$30$', '$37$', '$4 \times 3^{10}$']
+    bonne: 0
+    explication: $u_{10} = 4 + 10 \times 3 = 34$.
+    revoir: cours
+
+  - question: Si $u_0 = 5$ et $u_{n+1} = 2u_n$, alors $u_n = \ldots$
+    choix: ['$5 \times 2^n$', '$5 + 2n$', '$2 \times 5^n$', '$10n$']
+    bonne: 0
+    explication: Suite géométrique de premier terme 5 et de raison 2.
+    revoir: cours
+
+  - question: La limite de $0{,}7^n$ quand $n \to +\infty$ est…
+    choix: ['$0$', '$0{,}7$', '$+\infty$', '$1$']
+    bonne: 0
+    explication: $0 < 0{,}7 < 1$.
+    revoir: cours
+
+  - question: Pour résoudre $0{,}9^n < 0{,}5$, on obtient…
+    choix: ['$n > \frac{\ln 0{,}5}{\ln 0{,}9}$', '$n < \frac{\ln 0{,}5}{\ln 0{,}9}$', '$n > \frac{0{,}5}{0{,}9}$', '$n > \ln 0{,}5 - \ln 0{,}9$']
+    bonne: 0
+    explication: On divise par $\ln 0{,}9 < 0$, donc le sens change.
+    revoir: exercices

@@ -1,0 +1,85 @@
+# Exercices corrigés, du plus facile au type bac.
+# type d'étape : init (vert), her (orange), conc (bleu), calcul, methode, piege (rouge)
+exercices:
+  - titre: Des degrés impossibles
+    difficulte: 1
+    type: piege
+    enonce: |
+      Peut-on tracer un graphe à 5 sommets de degrés 3, 3, 3, 2 et 2 ? Et de degrés 3, 3, 2, 2, 2 ? Combien d'arêtes a-t-il alors ?
+    indice: La somme des degrés vaut deux fois le nombre d'arêtes.
+    etapes:
+      - type: piege
+        titre: Premier cas
+        texte: >-
+          $3 + 3 + 3 + 2 + 2 = 13$ est impair : c'est impossible.
+      - type: calcul
+        titre: Second cas
+        texte: $3 + 3 + 2 + 2 + 2 = 12$, pair.
+      - type: conc
+        titre: Conclusion
+        texte: Seul le second graphe peut exister, et il a <mark>6 arêtes</mark>.
+
+  - titre: Compter des chaînes
+    difficulte: 2
+    type: methode
+    enonce: |
+      Le graphe a pour sommets A, B, C, D et pour arêtes A–B, A–C, B–C et C–D.
+      1. Écrire sa matrice d'adjacence $M$ (ordre A, B, C, D).
+      2. Combien y a-t-il de chaînes de longueur 2 de A vers D ? De A vers A ?
+    indice: Le coefficient de $M^2$ s'obtient en multipliant la ligne de A par la colonne voulue.
+    etapes:
+      - type: calcul
+        titre: La matrice
+        texte: >-
+          $M = \begin{pmatrix} 0 & 1 & 1 & 0 \\ 1 & 0 & 1 & 0 \\ 1 & 1 & 0 & 1 \\ 0 & 0 & 1 & 0 \end{pmatrix}$.
+      - type: calcul
+        titre: De A vers D
+        texte: >-
+          Ligne A fois colonne D : $0 \times 0 + 1 \times 0 + 1 \times 1 + 0 \times 0 = 1$. C'est la chaîne A–C–D.
+      - type: conc
+        titre: De A vers A
+        texte: >-
+          $0 + 1 + 1 + 0 = 2$ : A–B–A et A–C–A. <mark>1 chaîne vers D, 2 vers A</mark>.
+
+  - titre: Suivre un état probabiliste
+    difficulte: 2
+    type: application
+    enonce: |
+      Avec $P = \begin{pmatrix} 0{,}8 & 0{,}2 \\ 0{,}4 & 0{,}6 \end{pmatrix}$ (états V puis B), Lina prend le vélo le jour 0. Calculer $\pi_1$ et $\pi_2$.
+    indice: $\pi_0 = (1\ \ 0)$ et $\pi_{n+1} = \pi_n P$.
+    etapes:
+      - type: calcul
+        titre: Jour 1
+        texte: $\pi_1 = (1\ \ 0)P = (0{,}8\ \ 0{,}2)$.
+      - type: calcul
+        titre: Jour 2
+        texte: >-
+          $\pi_2 = (0{,}8 \times 0{,}8 + 0{,}2 \times 0{,}4\ \ \ 0{,}8 \times 0{,}2 + 0{,}2 \times 0{,}6) = (0{,}72\ \ 0{,}28)$.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>Le jour 2, elle prend le vélo avec une probabilité de 0,72</mark>.
+
+  - titre: Fidélité des abonnés
+    difficulte: 3
+    type: bac
+    enonce: |
+      Chaque mois, un abonné d'une plateforme le reste avec une probabilité de 0,9. Un non-abonné s'abonne avec une probabilité de 0,3.
+      1. Donner la matrice de transition $P$ (états abonné puis non abonné).
+      2. Déterminer l'état stable et l'interpréter.
+    indice: Cherche $\pi = (x\ \ 1 - x)$ avec $\pi = \pi P$.
+    etapes:
+      - type: calcul
+        titre: Question 1
+        texte: >-
+          $P = \begin{pmatrix} 0{,}9 & 0{,}1 \\ 0{,}3 & 0{,}7 \end{pmatrix}$, chaque ligne fait bien 1.
+      - type: calcul
+        titre: L'équation
+        texte: >-
+          $x = 0{,}9x + 0{,}3(1 - x)$, soit $0{,}4x = 0{,}3$ et $x = 0{,}75$.
+      - type: calcul
+        titre: Vérification
+        texte: $0{,}75 \times 0{,}9 + 0{,}25 \times 0{,}3 = 0{,}675 + 0{,}075 = 0{,}75$.
+      - type: conc
+        titre: Conclusion
+        texte: >-
+          <mark>L'état stable est $(0{,}75\ \ 0{,}25)$</mark> : à long terme, 75 % des personnes sont abonnées.

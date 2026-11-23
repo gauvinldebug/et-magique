@@ -1,0 +1,72 @@
+# Exercices corrigés, du plus facile au type bac.
+# type d'étape : init (vert), her (orange), conc (bleu), calcul, methode, piege (rouge)
+exercices:
+  - titre: Un jeu est-il favorable ?
+    difficulte: 1
+    type: application
+    enonce: |
+      À un jeu, on perd 2 € avec une probabilité de 0,5, on gagne 1 € avec une probabilité de 0,3 et 10 € avec une probabilité de 0,2. Calculer l'espérance du gain.
+    indice: Multiplie chaque gain par sa probabilité, puis additionne.
+    etapes:
+      - type: calcul
+        titre: Le calcul
+        texte: $E(X) = 0{,}5 \times (-2) + 0{,}3 \times 1 + 0{,}2 \times 10 = -1 + 0{,}3 + 2$.
+      - type: conc
+        titre: Conclusion
+        texte: >-
+          <mark>$E(X) = 1{,}3$ €</mark> : en moyenne, le jeu est favorable au joueur.
+
+  - titre: Deux six sur quatre lancers
+    difficulte: 2
+    type: methode
+    enonce: |
+      On lance 4 fois un dé équilibré. Quelle est la probabilité d'obtenir exactement deux 6 ?
+    indice: Justifie d'abord que c'est une loi binomiale.
+    etapes:
+      - type: methode
+        titre: La loi
+        texte: >-
+          4 lancers identiques et indépendants, succès « faire 6 » de probabilité $\frac{1}{6}$ : $X \sim \mathcal{B}\left(4\,;\frac{1}{6}\right)$.
+      - type: calcul
+        titre: Le calcul
+        texte: >-
+          $P(X = 2) = \binom{4}{2}\left(\frac{1}{6}\right)^2\left(\frac{5}{6}\right)^2 = 6 \times \frac{25}{1296}$.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>$P(X = 2) = \frac{150}{1296} \approx 0{,}116$</mark>.
+
+  - titre: Attendre le premier succès
+    difficulte: 2
+    type: application
+    enonce: |
+      Un joueur de fléchettes touche le centre avec une probabilité de 0,2 à chaque lancer, indépendamment. Quelle est la probabilité qu'il le touche pour la première fois au 3e lancer ? Combien de lancers faut-il en moyenne ?
+    indice: Loi géométrique de paramètre 0,2.
+    etapes:
+      - type: calcul
+        titre: Le 3e lancer
+        texte: >-
+          Deux échecs puis un succès : $0{,}8^2 \times 0{,}2 = 0{,}128$.
+      - type: conc
+        titre: La moyenne
+        texte: <mark>$P(X = 3) = 0{,}128$ et $E(X) = \frac{1}{0{,}2} = 5$ lancers</mark>.
+
+  - titre: Une série de tirs au but
+    difficulte: 3
+    type: bac
+    enonce: |
+      Une joueuse réussit 80 % de ses tirs au but. Elle en tire 5, de façon indépendante. $X$ est le nombre de buts.
+      1. Donner la loi de $X$ et son espérance.
+      2. Calculer $P(X = 5)$ et $P(X \ge 4)$.
+      3. Calculer la probabilité qu'elle marque au moins un but.
+    indice: Pour la question 3, passe par l'événement contraire.
+    etapes:
+      - type: calcul
+        titre: Question 1
+        texte: $X \sim \mathcal{B}(5\,;0{,}8)$ et $E(X) = 4$.
+      - type: calcul
+        titre: Question 2
+        texte: >-
+          $P(X = 5) = 0{,}8^5 = 0{,}32768$ et $P(X = 4) = 5 \times 0{,}8^4 \times 0{,}2 = 0{,}4096$, donc $P(X \ge 4) \approx 0{,}737$.
+      - type: conc
+        titre: Question 3
+        texte: <mark>$P(X \ge 1) = 1 - 0{,}2^5 = 0{,}99968$</mark>.

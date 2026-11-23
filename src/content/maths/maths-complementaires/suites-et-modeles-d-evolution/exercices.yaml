@@ -1,0 +1,83 @@
+# Exercices corrigés, du plus facile au type bac.
+# type d'étape : init (vert), her (orange), conc (bleu), calcul, methode, piege (rouge)
+exercices:
+  - titre: Reconnaître la suite
+    difficulte: 1
+    type: piege
+    enonce: |
+      Un abonnement coûte 120 € la première année. Dans le cas A, il augmente de 6 € par an. Dans le cas B, il augmente de 5 % par an. Donner le prix de la 3e année ($u_2$) dans chaque cas.
+    indice: Ajouter ou multiplier ?
+    etapes:
+      - type: calcul
+        titre: Cas A
+        texte: >-
+          Arithmétique de raison 6 : $u_2 = 120 + 2 \times 6 = 132$ €.
+      - type: piege
+        titre: Cas B
+        texte: >-
+          Géométrique de raison $1{,}05$ (pas $0{,}05$) : $u_2 = 120 \times 1{,}05^2 = 132{,}30$ €.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>132 € dans le cas A, 132,30 € dans le cas B</mark>. Les deux modèles s'écartent ensuite de plus en plus.
+
+  - titre: Une somme de termes
+    difficulte: 2
+    type: application
+    enonce: |
+      Léo épargne 50 € le premier mois, puis 10 € de plus chaque mois. Combien a-t-il épargné au total en 12 mois ?
+    indice: Le 12e mois correspond à $u_{11}$.
+    etapes:
+      - type: calcul
+        titre: Le dernier terme
+        texte: $u_{11} = 50 + 11 \times 10 = 160$.
+      - type: calcul
+        titre: La somme
+        texte: $12 \times \dfrac{50 + 160}{2} = 12 \times 105 = 1260$.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>Léo a épargné 1 260 €</mark>.
+
+  - titre: Un médicament qui s'élimine
+    difficulte: 2
+    type: methode
+    enonce: |
+      On injecte 80 mg d'un médicament. Chaque heure, l'organisme en élimine 20 %. Au bout de combien d'heures reste-t-il moins de 10 mg ?
+    indice: Une baisse de 20 % correspond à $q = 0{,}8$.
+    etapes:
+      - type: calcul
+        titre: Le modèle
+        texte: $u_n = 80 \times 0{,}8^n$. On cherche $0{,}8^n < 0{,}125$.
+      - type: piege
+        titre: Le logarithme
+        texte: >-
+          $n \ln 0{,}8 < \ln 0{,}125$. Comme $\ln 0{,}8 < 0$, on change le sens : $n > \frac{\ln 0{,}125}{\ln 0{,}8} \approx 9{,}3$.
+        note: on divise par un négatif
+      - type: conc
+        titre: Conclusion
+        texte: >-
+          $0{,}8^9 \approx 0{,}134$ et $0{,}8^{10} \approx 0{,}107$. <mark>Il faut 10 heures</mark>.
+
+  - titre: Un lac qu'on repeuple
+    difficulte: 3
+    type: bac
+    enonce: |
+      Un lac contient 2 000 poissons. Chaque année, 10 % des poissons disparaissent et on en réintroduit 300. On note $u_n$ le nombre de poissons après $n$ années.
+      1. Justifier que $u_{n+1} = 0{,}9u_n + 300$.
+      2. On pose $v_n = u_n - 3000$. Montrer que $(v_n)$ est géométrique.
+      3. En déduire $u_n$ et sa limite.
+    indice: Calcule $v_{n+1}$ en remplaçant $u_{n+1}$.
+    etapes:
+      - type: calcul
+        titre: Question 1
+        texte: Il reste 90 % des poissons, soit $0{,}9u_n$, puis on ajoute 300.
+      - type: calcul
+        titre: Question 2
+        texte: >-
+          $v_{n+1} = 0{,}9u_n + 300 - 3000 = 0{,}9(u_n - 3000) = 0{,}9v_n$, avec $v_0 = -1000$.
+      - type: calcul
+        titre: Question 3
+        texte: >-
+          $v_n = -1000 \times 0{,}9^n$, donc $u_n = 3000 - 1000 \times 0{,}9^n$. Comme $0{,}9^n \to 0$ :
+      - type: conc
+        titre: Conclusion
+        texte: <mark>$u_n$ tend vers 3 000 poissons</mark>.

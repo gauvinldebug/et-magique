@@ -1,0 +1,30 @@
+questions:
+  - question: $i^2$ est égal à…
+    choix: ['$-1$', '$1$', '$i$', '$-i$']
+    bonne: 0
+    explication: Deux quarts de tour font un demi-tour.
+    revoir: cours
+
+  - question: La partie imaginaire de $4 - 7i$ est…
+    choix: ['$-7$', '$-7i$', '$7$', '$4$']
+    bonne: 0
+    explication: La partie imaginaire est un réel, le coefficient de $i$.
+    revoir: cours
+
+  - question: Le conjugué de $-2 + 5i$ est…
+    choix: ['$-2 - 5i$', '$2 - 5i$', '$2 + 5i$', '$5 - 2i$']
+    bonne: 0
+    explication: On change seulement le signe de la partie imaginaire.
+    revoir: cours
+
+  - question: $(1 + i)(1 - i)$ est égal à…
+    choix: ['$2$', '$0$', '$1$', '$2i$']
+    bonne: 0
+    explication: $z\bar{z} = 1^2 + 1^2 = 2$.
+    revoir: exercices
+
+  - question: Les solutions de $z^2 + 9 = 0$ sont…
+    choix: ['$3i$ et $-3i$', '$3$ et $-3$', 'il n''y en a pas', '$9i$ et $-9i$']
+    bonne: 0
+    explication: $z^2 = -9 = (3i)^2$.
+    revoir: cours

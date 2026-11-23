@@ -1,0 +1,76 @@
+# Exercices corrigés, du plus facile au type bac.
+# type d'étape : init (vert), her (orange), conc (bleu), calcul, methode, piege (rouge)
+exercices:
+  - titre: Simplifier
+    difficulte: 1
+    type: application
+    enonce: |
+      Simplifier $A = e^3 \times e^{-1}$, $B = \ln 8 - \ln 2$ et $C = \ln(e^5)$.
+    indice: Utilise les règles de calcul, sans calculatrice.
+    etapes:
+      - type: calcul
+        titre: A et C
+        texte: $A = e^{3 - 1} = e^2$ et $C = 5\ln e = 5$.
+      - type: conc
+        titre: B
+        texte: <mark>$B = \ln\frac{8}{2} = \ln 4 = 2\ln 2$</mark>.
+
+  - titre: Deux équations
+    difficulte: 2
+    type: methode
+    enonce: |
+      Résoudre $e^{2x - 1} = 7$, puis $\ln x = 2$.
+    indice: $e^X = 7 \iff X = \ln 7$.
+    etapes:
+      - type: calcul
+        titre: La première
+        texte: >-
+          $2x - 1 = \ln 7$, donc $x = \frac{1 + \ln 7}{2} \approx 1{,}47$.
+      - type: calcul
+        titre: La seconde
+        texte: $x > 0$ et $x = e^2 \approx 7{,}39$.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>$x = \frac{1 + \ln 7}{2}$, puis $x = e^2$</mark>.
+
+  - titre: Combien de doublements
+    difficulte: 2
+    type: application
+    enonce: |
+      Une population de bactéries double toutes les heures. À partir de combien d'heures a-t-elle été multipliée par plus de 1 000 ?
+    indice: On cherche $2^n > 1000$.
+    etapes:
+      - type: calcul
+        titre: Le logarithme
+        texte: $n > \frac{\ln 1000}{\ln 2} \approx 9{,}97$.
+      - type: conc
+        titre: Conclusion
+        texte: >-
+          <mark>Au bout de 10 heures</mark> : $2^{10} = 1024$.
+
+  - titre: Un café qui refroidit
+    difficulte: 3
+    type: bac
+    enonce: |
+      La température d'un café, en °C, est $f(t) = 20 + 70e^{-0{,}1t}$, où $t \ge 0$ est en minutes.
+      1. Calculer $f(0)$ et étudier les variations de $f$.
+      2. Déterminer la limite de $f$ en $+\infty$ et l'interpréter.
+      3. Au bout de combien de temps le café passe-t-il sous 40 °C ?
+    indice: Isole $e^{-0{,}1t}$ avant d'appliquer $\ln$.
+    etapes:
+      - type: calcul
+        titre: Question 1
+        texte: >-
+          $f(0) = 90$. $f'(t) = -7e^{-0{,}1t} < 0$ : $f$ est décroissante.
+      - type: calcul
+        titre: Question 2
+        texte: >-
+          $e^{-0{,}1t} \to 0$, donc $f(t) \to 20$ : le café tend vers la température de la pièce.
+      - type: piege
+        titre: Question 3
+        texte: >-
+          $70e^{-0{,}1t} < 20 \iff e^{-0{,}1t} < \frac{2}{7} \iff -0{,}1t < \ln\frac{2}{7} \iff t > 10\ln 3{,}5 \approx 12{,}5$.
+        note: on divise par -0,1
+      - type: conc
+        titre: Conclusion
+        texte: <mark>Le café passe sous 40 °C au bout d'environ 12,5 minutes</mark>.

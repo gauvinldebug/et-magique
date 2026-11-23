@@ -1,0 +1,31 @@
+questions:
+  - question: $\text{PGCD}(36\,;48) = \ldots$
+    choix: ['$12$', '$6$', '$4$', '$144$']
+    bonne: 0
+    explication: $48 = 36 + 12$ et $36 = 12 \times 3$.
+    revoir: cours
+
+  - question: 15 et 28 sont-ils premiers entre eux ?
+    choix: ['Oui', 'Non, ils sont divisibles par 3', 'Non, ils sont pairs', 'Non, car 28 n''est pas premier']
+    bonne: 0
+    explication: $15 = 3 \times 5$ et $28 = 2^2 \times 7$ n'ont aucun facteur commun.
+    revoir: cours
+
+  - question: Si $a \mid bc$, que faut-il en plus pour conclure $a \mid c$ ?
+    choix: ['$a$ et $b$ premiers entre eux', '$a$ premier', '$b$ et $c$ premiers entre eux', 'Rien de plus']
+    bonne: 0
+    explication: C'est le théorème de Gauss.
+    revoir: cours
+
+  - question: $2^{10} \equiv \ldots\ [11]$
+    choix: ['$1$', '$2$', '$10$', '$0$']
+    bonne: 0
+    explication: >-
+      11 est premier et ne divise pas 2 : petit théorème de Fermat.
+    revoir: cours
+
+  - question: Si $3u + 7v = 1$ pour des entiers $u$, $v$, alors…
+    choix: ['$3$ et $7$ sont premiers entre eux', '$u = 7$', '$\text{PGCD}(3\,;7) = 3$', '$u$ et $v$ sont positifs']
+    bonne: 0
+    explication: C'est le sens réciproque du théorème de Bézout.
+    revoir: exercices
