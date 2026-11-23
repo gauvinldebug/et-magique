@@ -1,5 +1,6 @@
 ---
 import Base from './Base.astro';
+import EnteteImpression from '../components/EnteteImpression.astro';
 import type { ChapitreProps } from '../lib/routes';
 
 type Onglet = 'video' | 'cours' | 'exercices' | 'qcm';
@@ -28,7 +29,8 @@ const titre = titrePage ?? (onglet === 'video' ? chapitre.data.titre : `${chapit
 <Base titre={`${titre} · ${niveau.nom}`} description={chapitre.data.description} matiere={matiere.slug} niveau={niveau.slug}>
   <div class="page-feuille cahier">
     <div class="feuille">
-      <div>
+      <EnteteImpression niveau={niveau.slug} niveauNom={niveau.nom} type={{ video: 'Cours', cours: 'Cours', exercices: 'Exercices corrigés', qcm: 'QCM' }[onglet]} titre={chapitre.data.titre} adresse={`etmagique.fr${base}/`} />
+      <div class="no-print">
         <div class="crumb"><a href={`/${matiere.slug}/${niveau.slug}/`}>{niveau.nom}</a> › <b>{chapitre.data.court}</b></div>
         <h1 data-pagefind-meta="title">{chapitre.data.titre}</h1>
       </div>

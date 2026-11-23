@@ -24,7 +24,10 @@ for (const m of await readdir(content)) for (const n of await readdir(join(conte
 const exe = process.env.CHROMIUM_PATH || (existsSync('/opt/pw-browsers/chromium') ? '/opt/pw-browsers/chromium' : undefined);
 const browser = await chromium.launch(exe ? { executablePath: exe } : {});
 const page = await browser.newPage();
+// FILTRE=terminale/limites-de-suites ne régénère que les chapitres dont le chemin contient ce texte.
+const filtre = process.env.FILTRE;
 for (const [m, n, c] of chapitres) {
+  if (filtre && !`${m}/${n}/${c}`.includes(filtre)) continue;
   await mkdir(join('public/pdf', m, n), { recursive: true });
   for (const [quoi, chemin] of [['cours', 'cours/'], ['fiche', 'fiche/'], ['exercices', 'exercices/']]) {
     const url = `http://localhost:4399/${m}/${n}/${c}/${chemin}`;
@@ -32,15 +35,21 @@ for (const [m, n, c] of chapitres) {
     if (!r || r.status() !== 200) continue;
     await page.emulateMedia({ media: 'print' });
     const out = join('public/pdf', m, n, `${c}-${quoi}.pdf`);
-    await page.pdf({
+    const options = {
       path: out, format: 'A4', printBackground: true,
-      margin: { top: '12mm', bottom: '14mm', left: '10mm', right: '10mm' },
+      margin: { top: '10mm', bottom: '13mm', left: '12mm', right: '12mm' },
       displayHeaderFooter: true,
-      headerTemplate: '<div style="width:100%;font:7.5px sans-serif;color:#8A93A3;padding:0 10mm;text-align:right">etmagique.fr · © Maths et Magique</div>',
-      footerTemplate: `<div style="width:100%;font:7.5px sans-serif;color:#8A93A3;padding:0 10mm;display:flex;justify-content:space-between">
+      headerTemplate: '<span></span>',
+      footerTemplate: `<div style="width:100%;font:7px sans-serif;color:#8A8AA3;padding:0 12mm;display:flex;justify-content:space-between;gap:8mm">
         <span>© Maths et Magique · etmagique.fr/${m}/${n}/${c}/ · Tous droits réservés : usage personnel uniquement, republication et usage commercial interdits</span>
-        <span><span class="pageNumber"></span>/<span class="totalPages"></span></span></div>`,
-    });
+        <span style="font-weight:700;color:#1A1A40"><span class="pageNumber"></span>/<span class="totalPages"></span></span></div>`,
+    };
+    // La fiche doit tenir sur une page : si elle déborde, on réduit un peu l'échelle.
+    for (const scale of quoi === 'fiche' ? [1, 0.94, 0.88, 0.82, 0.76] : [1]) {
+      const pdf = await page.pdf({ ...options, scale });
+      const pages = (pdf.toString('latin1').match(/\/Type\s*\/Page[^s]/g) || []).length;
+      if (pages <= 1 || scale === 0.76) { if (scale !== 1 || pages > 1) console.log(`  fiche à l'échelle ${scale}, ${pages} page(s)`); break; }
+    }
     console.log('✓', out);
   }
 }

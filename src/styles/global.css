@@ -380,36 +380,15 @@ mark, .hl { background: linear-gradient(transparent 52%, var(--surligneur) 52%, 
   .s-nav { position: static; }
 }
 
-/* ---------- Impression (cours, fiche, exercices en PDF) ---------- */
-@media print {
-  @page { size: A4; margin: 14mm 12mm; }
-  :root { --mg: 40px; }
-  body { background: #fff; padding: 0; }
-  .s-nav, .tabbar, .ph-menu, .pied, .ch-tabs, .nextstep, .no-print, .reveal-bar { display: none !important; }
-  .stp[hidden] { display: grid !important; }
-  .exo { break-inside: avoid; }
-  .cahier { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-}
+/* L'impression (cours, fiche, exercices en PDF) est dans impression.css. */
 .burger.x span { background: transparent; box-shadow: none; position: relative; }
 .burger.x span::before, .burger.x span::after { content: ""; position: absolute; left: 0; top: 0; width: 16px; height: 2px; background: var(--encre); transform: rotate(45deg); }
 .burger.x span::after { transform: rotate(-45deg); }
 @view-transition { navigation: auto; }
 @media (prefers-reduced-motion: reduce) { @view-transition { navigation: none; } }
 .js .stp.cache { display: none; }
-@media print { .js .stp.cache { display: grid; } }
 .exo-top h2 { line-height: 20px; top: 0; padding: 10px 0; }
 @media (max-width: 760px) { .ch-tabs a { padding: 0 10px; } .ch-tabs { gap: 0; } }
-@media print {
-  .feuille { padding: 16px 12px 16px calc(var(--mg) + 16px); gap: 20px; }
-  .exos { gap: 20px; }
-  .exo { break-inside: auto; }
-  .stp { break-inside: avoid; }
-}
-@media print {
-  .fiche-a4 .prose { gap: 12px; }
-  .fiche-a4 .prose th, .fiche-a4 .prose td { padding: 5px 10px; }
-  .fiche-a4 .encadre { gap: 12px; padding: 12px 16px; }
-}
 .thumb .bientot.yt { background: #FF0033; color: #fff; }
 a.thumb:hover .play i { transform: scale(1.06); }
 .play i { transition: transform .15s; }
