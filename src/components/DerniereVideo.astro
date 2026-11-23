@@ -19,11 +19,11 @@ const lien = ch ? `/${matiere}/${ch.niveau}/${ch.slug}/` : '';
       <span class="play"><i></i></span>
     </a>
     <div class="dv-txt">
-      <p class="dv-etiquette">Dernière vidéo{v.date && <> · <time datetime={v.date} data-dv-date>{jour(v.date)}</time></>}</p>
+      {v.date && <p class="dv-etiquette"><time datetime={v.date} data-dv-date>{jour(v.date)}</time></p>}
       <h3 data-dv-titre>{v.titre}</h3>
       <div class="dv-actions">
-        <a class="btn" href={`https://www.youtube.com/watch?v=${v.id}`} target="_blank" rel="noopener" data-dv-lien>Regarder sur YouTube</a>
-        <a class="btn ghost" href={lien || `/${matiere}/`} data-dv-chap hidden={!lien}>{nv ? `Cours et exercices (${nv.court})` : 'Cours et exercices'}</a>
+        <a class="btn noir" href={`https://www.youtube.com/watch?v=${v.id}`} target="_blank" rel="noopener" data-dv-lien>Regarder sur YouTube</a>
+        <a href={lien || `/${matiere}/`} data-dv-chap hidden={!lien} style="font-weight:700">{nv ? `Cours et exercices (${nv.court})` : 'Cours et exercices'}</a>
       </div>
     </div>
   </article>

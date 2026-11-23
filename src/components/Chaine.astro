@@ -5,16 +5,14 @@ import Reseaux from './Reseaux.astro';
 interface Props { url: string; nom?: string }
 const { url, nom = 'Maths et Magique' } = Astro.props;
 const abonnement = `${url}${url.includes('?') ? '&' : '?'}sub_confirmation=1`;
-const qr = await QRCode.toString(abonnement, { type: 'svg', margin: 1, errorCorrectionLevel: 'M', color: { dark: '#1B2433', light: '#FFFFFF' } });
+const qr = await QRCode.toString(abonnement, { type: 'svg', margin: 1, errorCorrectionLevel: 'M', color: { dark: '#000000', light: '#FFFFFF' } });
 ---
 <section class="chaine" aria-labelledby="chaine-titre">
   <div class="chaine-txt">
     <div class="k">La chaîne YouTube</div>
     <h2 id="chaine-titre">Les vidéos {nom}, chapitre par chapitre</h2>
     <p>Abonne-toi pour être prévenu à chaque nouveau chapitre.</p>
-    <a class="btn rouge" href={abonnement} target="_blank" rel="noopener" data-umami-event="chaine-accueil">
-      <svg viewBox="0 0 28 20" aria-hidden="true"><rect width="28" height="20" rx="5" fill="#fff"/><path d="M11 5.5v9l8-4.5z" fill="#FF0033"/></svg>
-      Voir la chaîne et s'abonner
+    <a class="btn" href={abonnement} target="_blank" rel="noopener" data-umami-event="chaine-accueil">S'abonner sur YouTube
     </a>
     <div class="portail-reseaux"><span>Suis-nous aussi</span><Reseaux libelles /></div>
   </div>
