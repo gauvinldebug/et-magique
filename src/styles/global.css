@@ -15,7 +15,7 @@
   --encre-2: #55557A;
   --nuit: #1A1A40;
   /* Les aplats de l'affiche : identiques en mode sombre */
-  --bleu: #2B2BD9; --jaune: #F2E94E; --rose: #FF7AA8; --orange: #FF8A3D; --vert: #1FA37A; --brique: #B8442A; --violet: #7B3FB8; --ink: #1A1A40;
+  --bleu: #2B2BD9; --jaune: #F2E94E; --rose: #FF7AA8; --orange: #FF8A3D; --vert: #127C59; --brique: #B8442A; --violet: #7B3FB8; --ink: #1A1A40;
   --terme: #1F6FD1;   /* bleu   : la suite, l'objet */
   --indice: #D9822B;  /* orange : l'indice, l'hérédité */
   --ok: #1E9E68;      /* vert   : initialisation, validé */
@@ -520,7 +520,7 @@ a:hover { color: var(--accent); }
 .k { letter-spacing: 0; text-transform: none; font-size: .9rem; font-weight: 700; color: var(--encre); }
 .eyebrow { letter-spacing: 0; text-transform: none; color: var(--accent); }
 mark, .hl { background: none; color: inherit; padding: 0 .05em; box-shadow: inset 0 -.42em 0 var(--surligneur); }
-.badge { text-transform: none; letter-spacing: 0; background: var(--accent); color: #fff; font-size: .72rem; border-radius: 999px; }
+.badge { text-transform: none; letter-spacing: 0; background: var(--bleu); color: #fff; font-size: .72rem; border-radius: 999px; }
 .badge.gris { background: var(--gris); color: var(--encre); }
 
 /* Mise en page : une page blanche, sans feuille */
@@ -533,7 +533,7 @@ mark, .hl { background: none; color: inherit; padding: 0 .05em; box-shadow: inse
 .cahier .note { top: 0; font-style: italic; font-size: 1rem; }
 
 /* Boutons : pilules pleines */
-.btn { border-radius: 999px; background: var(--accent); color: #fff; font-weight: 700; font-size: .98rem; padding: 14px 24px; transition: background-color .15s var(--ease), color .15s var(--ease); }
+.btn { border-radius: 999px; background: var(--bleu); color: #fff; font-weight: 700; font-size: .98rem; padding: 14px 24px; transition: background-color .15s var(--ease), color .15s var(--ease); }
 .btn:hover { filter: none; background: var(--ink); color: #fff; }
 .btn.grand { font-size: 1.08rem; padding: 16px 28px; }
 .btn.ghost { background: transparent; color: var(--encre); box-shadow: inset 0 0 0 2px var(--encre); }
@@ -541,7 +541,7 @@ mark, .hl { background: none; color: inherit; padding: 0 .05em; box-shadow: inse
 .btn.jaune { background: var(--jaune); color: var(--ink); }
 .btn.jaune:hover { background: #fff; color: var(--ink); }
 .btn.noir { background: var(--encre); color: var(--feuille); }
-.btn.noir:hover { background: var(--accent); color: #fff; }
+.btn.noir:hover { background: var(--bleu); color: #fff; }
 
 /* Logo : un mot, gras et condensé */
 .wordmark { gap: .22em; font-weight: 800; font-stretch: 75%; letter-spacing: -.03em; }
@@ -582,7 +582,7 @@ mark, .hl { background: none; color: inherit; padding: 0 .05em; box-shadow: inse
 .tabbar { border-top: 2px solid var(--encre); }
 .tabbar [aria-current="page"] { color: var(--accent); }
 .lvl-grid a { font-weight: 800; font-stretch: 75%; font-size: 1.35rem; border-color: var(--encre); border-radius: 4px; }
-.lvl-grid a[aria-current="true"] { background: var(--accent); border-color: var(--accent); color: #fff; }
+.lvl-grid a[aria-current="true"] { background: var(--bleu); border-color: var(--bleu); color: #fff; }
 .pied { border-top: 0; background: var(--nuit); color: #fff; }
 .pied a, .pied p, .pied span, .pied small { color: #fff; }
 .pied a:hover { color: var(--jaune); }
@@ -592,7 +592,7 @@ mark, .hl { background: none; color: inherit; padding: 0 .05em; box-shadow: inse
 .play { place-items: center; }
 .play i { width: 72px; height: 72px; border-radius: 50%; background: var(--jaune); opacity: 1; display: grid; place-items: center; }
 .play i::after { border-left: 20px solid var(--ink); border-top: 12px solid transparent; border-bottom: 12px solid transparent; margin-left: 6px; display: block; }
-.thumb .bientot { left: 14px; bottom: 14px; padding: 6px 14px; font-size: .88rem; background: var(--accent); color: #fff; border-radius: 999px; }
+.thumb .bientot { left: 14px; bottom: 14px; padding: 6px 14px; font-size: .88rem; background: var(--bleu); color: #fff; border-radius: 999px; }
 .thumb .bientot.yt { background: var(--ink); color: #fff; }
 .thumb:has(.bientot.yt) .play { display: none; }
 .tag { text-transform: none; letter-spacing: 0; font-size: .78rem; border-radius: 999px; }
@@ -605,7 +605,7 @@ mark, .hl { background: none; color: inherit; padding: 0 .05em; box-shadow: inse
 .ch-tabs a:hover { color: var(--accent); }
 .toc a:hover { background: var(--gris); }
 .toc b { color: var(--accent); }
-.dl .ic, .dl.fiche .ic, .dl.exo .ic { background: var(--accent); color: #fff; }
+.dl .ic, .dl.fiche .ic, .dl.exo .ic { background: var(--bleu); color: #fff; }
 .dl.fiche .ic { background: var(--jaune); color: var(--ink); }
 .dl.exo .ic { background: var(--rose); color: var(--ink); }
 .liste-ch li, .mega-list li { border: 0; border-bottom: 1px solid var(--trait); }
@@ -622,7 +622,7 @@ mark, .hl { background: none; color: inherit; padding: 0 .05em; box-shadow: inse
 .levels a:hover { background: var(--jaune); color: var(--ink); border-color: var(--jaune); }
 .s-search { border-width: 2px; border-radius: 999px; background: #fff; height: 48px; padding-left: 20px; }
 .s-search input { color: var(--ink); }
-.s-search button { background: var(--accent); color: #fff; border-radius: 999px; line-height: 34px; padding: 0 16px; }
+.s-search button { background: var(--bleu); color: #fff; border-radius: 999px; line-height: 34px; padding: 0 16px; }
 .band { background: var(--rose); color: var(--ink); border-radius: 4px; padding: 32px 36px; position: relative; overflow: hidden; }
 .band h2 { color: var(--ink); font-size: clamp(1.6rem, 3vw, 2.4rem); font-weight: 800; font-stretch: 75%; letter-spacing: -.03em; line-height: 1; }
 .band p { opacity: 1; font-size: 1rem; margin-top: 8px; }
@@ -770,3 +770,78 @@ a.poster:hover { color: var(--txt); transform: translate(-4px, -4px); box-shadow
 .p-chaine .btn, .chaine .btn { background: var(--bleu); color: #fff; }
 .p-chaine .btn:hover, .chaine .btn:hover { background: var(--ink); color: #fff; }
 .p-chaine .reseaux a, .chaine .reseaux a { background: #fff; color: var(--ink); border-color: var(--ink); }
+
+/* ==========================================================================
+   Affiche, version 2 (23/11 soir) : formes et texte séparés, accueil sobre,
+   animations au défilement.
+   ========================================================================== */
+/* Les affiches des matières : la forme en haut, le texte en bas, jamais l'un sur l'autre */
+.p-affiches { grid-template-columns: 2fr 1fr 1fr; grid-template-rows: repeat(2, minmax(260px, auto)); gap: 14px; }
+.p-affiches > li { display: flex; min-width: 0; }
+.poster { width: 100%; display: grid; grid-template-rows: minmax(0, 1fr) auto; gap: 16px; padding: 22px; justify-content: stretch; }
+.poster-forme { position: relative; min-height: 96px; display: block; }
+.poster-forme svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+.poster-txt { display: grid; gap: 6px; }
+.poster.grand .poster-forme { min-height: 220px; }
+@media (max-width: 1000px) {
+  .p-affiches { grid-template-columns: 1fr 1fr; grid-template-rows: none; grid-auto-rows: auto; }
+  .p-affiches > li:first-child { grid-column: 1 / -1; grid-row: auto; }
+  .poster { min-height: 220px; }
+  .poster.grand { min-height: 340px; }
+  .poster.grand .poster-forme { min-height: 160px; }
+}
+@media (max-width: 480px) {
+  .poster { min-height: 190px; padding: 16px; }
+  .poster b { font-size: 2.2rem; }
+  .poster span { font-size: .9rem; }
+  .poster.grand b { font-size: 4rem; }
+  .poster-forme { min-height: 72px; }
+}
+
+/* La chaîne sur l'accueil : une affiche jaune à part entière */
+.p-chaine { isolation: isolate; }
+.p-chaine-formes { position: absolute; right: 0; bottom: 0; width: min(46%, 420px); height: 100%; z-index: -1; pointer-events: none; }
+.p-chaine h2 { font-size: clamp(2.4rem, 5.6vw, 5rem); font-weight: 800; font-stretch: 75%; letter-spacing: -.04em; line-height: .88; color: var(--ink); max-width: 14ch; }
+.p-chaine-txt { position: relative; }
+.p-chaine-txt p { max-width: 40ch; }
+@media (max-width: 760px) { .p-chaine-formes { width: 70%; height: 140px; opacity: 1; } .p-chaine { padding-bottom: 150px; } }
+
+/* Le sommaire : la forme reste petite pour ne jamais passer sous le chiffre */
+.som-grille a::before { width: 52%; }
+@media (max-width: 760px) { .som-grille a { min-height: 150px; } .som-grille a::before { width: 42%; } }
+
+/* Les formes de l'en-tête bougent avec le défilement (--p va de 0 à 1 quand la zone passe) */
+[data-scroll] svg * { transform-box: fill-box; transform-origin: center; }
+.anim [data-scroll] .f-rond { transform: translateY(calc(var(--p, 0) * -18%)) scale(calc(1 + var(--p, 0) * .12)); }
+.anim [data-scroll] .f-tri { transform: translateY(calc(var(--p, 0) * 10%)) rotate(calc(var(--p, 0) * 24deg)); }
+.anim [data-scroll] .f-carre { transform: rotate(calc(var(--p, 0) * 90deg)); }
+.anim [data-scroll] .f-courbe { stroke-dasharray: 1; stroke-dashoffset: calc(var(--p, 0) * -.35); }
+
+/* À l'arrivée sur la page : les formes de l'en-tête se posent l'une après l'autre */
+@keyframes pose { from { opacity: 0; scale: .4; } to { opacity: 1; scale: 1; } }
+@keyframes trace { from { stroke-dashoffset: 1; } }
+.anim .ah-formes > *, .anim .m-hero-formes > * { animation: pose .8s cubic-bezier(.2, .9, .3, 1.2) both; }
+.anim .ah-formes .f-tri, .anim .m-hero-formes .f-tri { animation-delay: .12s; }
+.anim .ah-formes .f-carre, .anim .m-hero-formes .f-carre { animation-delay: .24s; }
+.anim .ah-formes .f-courbe, .anim .m-hero-formes .f-courbe { animation: trace 1.2s .2s ease-out both; stroke-dasharray: 1; }
+
+/* Apparition au défilement : les blocs montent, les affiches arrivent l'une après l'autre */
+.anim .rv { opacity: 0; transform: translateY(36px); transition: opacity .6s var(--ease), transform .7s cubic-bezier(.2, .8, .2, 1); transition-delay: calc(var(--i, 0) * 70ms); }
+.anim .rv.vu { opacity: 1; transform: none; }
+.anim .rv .poster-forme svg > * { transition: transform .8s cubic-bezier(.2, .9, .3, 1.25) calc(var(--i, 0) * 70ms + .15s); transform: scale(.3) rotate(-20deg); transform-box: fill-box; transform-origin: center; }
+.anim .rv.vu .poster-forme svg > * { transform: none; }
+@media (prefers-reduced-motion: reduce) { .anim .rv { opacity: 1; transform: none; } }
+@media (min-width: 761px) { .ah-corps { max-width: min(53%, 820px); } .ah h1 { font-size: clamp(3.4rem, 7.2vw, 7.4rem); } }
+
+/* Pages intérieures : trois formes de l'affiche en haut à droite, sur grand écran */
+@media (min-width: 900px) {
+  .page-feuille > .feuille { position: relative; }
+  .page-feuille > .feuille:not(:has(.m-hero))::before {
+    content: ""; position: absolute; top: 44px; right: calc(var(--decal, 0px) + clamp(16px, 4vw, 56px)); width: 168px; height: 56px; pointer-events: none;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 168 56'%3E%3Ccircle cx='28' cy='28' r='28' fill='%23F2E94E'/%3E%3Cpolygon points='84,0 112,56 56,56' fill='%23FF7AA8'/%3E%3Crect x='120' y='8' width='44' height='44' fill='%232B2BD9'/%3E%3C/svg%3E") no-repeat center / contain;
+  }
+  .page-feuille > .feuille:not(:has(.m-hero)) > :first-child { padding-right: 200px; }
+}
+.anim .page-feuille > .feuille::before { animation: pose .7s cubic-bezier(.2, .9, .3, 1.2) both; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .som-grille li:nth-child(7) a { box-shadow: inset 0 0 0 2px #34345C; } }
+:root[data-theme="dark"] .som-grille li:nth-child(7) a { box-shadow: inset 0 0 0 2px #34345C; }

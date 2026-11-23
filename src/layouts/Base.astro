@@ -81,5 +81,41 @@ const pleinTitre = titre.includes('Magique') ? titre : `${titre} · Maths et Mag
         setTimeout(function () { o.disconnect(); }, 10000);
       })();
     </script>
+    <script>
+      // Défilement : les blocs apparaissent quand on arrive dessus, les formes des affiches bougent avec la page.
+      // Rien ne bouge si l'appareil demande moins d'animations. Seules les zones visibles sont recalculées.
+      if (!matchMedia('(prefers-reduced-motion: reduce)').matches && 'IntersectionObserver' in window) {
+        const root = document.documentElement;
+        root.classList.add('anim');
+        const cibles = '.bloc > h2, .som-tete, .som-grille > li, .p-affiches > li, .p-chaine, .dv, .band, .chaine, .lvl-grid, .liste-ch > li, .exo, .encadre, .nextstep';
+        const vu = new IntersectionObserver((es) => es.forEach((e) => {
+          if (e.isIntersecting) { e.target.classList.add('vu'); vu.unobserve(e.target); }
+        }), { rootMargin: '0px 0px -8% 0px' });
+        document.querySelectorAll<HTMLElement>(cibles).forEach((el) => {
+          const freres = el.parentElement ? [...el.parentElement.children].filter((c) => c.matches(cibles)) : [];
+          if (freres.length > 1) el.style.setProperty('--i', String(Math.min(freres.indexOf(el), 8)));
+          el.classList.add('rv');
+          vu.observe(el);
+        });
+        const zones = new Set<HTMLElement>();
+        const suit = new IntersectionObserver((es) => es.forEach((e) => {
+          e.isIntersecting ? zones.add(e.target as HTMLElement) : zones.delete(e.target as HTMLElement);
+        }));
+        document.querySelectorAll<HTMLElement>('[data-scroll]').forEach((z) => suit.observe(z));
+        let attente = false;
+        const maj = () => {
+          attente = false;
+          const h = innerHeight;
+          zones.forEach((z) => {
+            const r = z.getBoundingClientRect();
+            const p = Math.min(1, Math.max(0, (h - r.top) / (h + r.height)));
+            const p0 = r.top <= 0 ? -r.top / (r.height || 1) : 0;
+            z.style.setProperty('--p', (z.matches('.ah, .m-hero') ? Math.min(1, p0) : p).toFixed(3));
+          });
+        };
+        addEventListener('scroll', () => { if (!attente) { attente = true; requestAnimationFrame(maj); } }, { passive: true });
+        maj();
+      }
+    </script>
   </body>
 </html>
