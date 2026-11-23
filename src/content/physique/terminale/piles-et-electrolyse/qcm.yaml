@@ -1,0 +1,48 @@
+questions:
+  - question: Dans une pile, l'anode est le siège…
+    choix: ['d''une réduction', 'd''une oxydation', 'd''une électrolyse', 'd''aucune réaction']
+    bonne: 1
+    explication: Anode = oxydation, dans une pile comme dans un électrolyseur.
+    revoir: cours
+
+  - question: Dans une pile, la borne négative est…
+    choix: ['la cathode', 'l''anode', 'le pont salin', 'la solution']
+    bonne: 1
+    explication: L'anode libère des électrons dans le circuit, elle est la borne −.
+    revoir: cours
+
+  - question: Dans le pont salin, le courant est transporté par…
+    choix: ['des électrons', 'des ions', 'des protons seuls', 'rien du tout']
+    bonne: 1
+    explication: Les électrons ne circulent que dans les fils et les électrodes.
+    revoir: cours
+
+  - question: Une pile est usée quand…
+    choix: ['$Q_r = K$', '$Q_r = 0$', 'la tension vaut 1,5 V', 'le pont salin est plein']
+    bonne: 0
+    explication: Le système a atteint l'équilibre, il n'évolue plus, aucun courant ne circule.
+    revoir: cours
+
+  - question: La charge d'une mole d'électrons vaut environ…
+    choix: ['$1{,}6 \times 10^{-19}\ \mathrm{C}$', '$9{,}65 \times 10^{4}\ \mathrm{C}$', '$6{,}02 \times 10^{23}\ \mathrm{C}$', '$3\,600\ \mathrm{C}$']
+    bonne: 1
+    explication: C'est le faraday, $\mathcal{F} = N_A \times e$.
+    revoir: cours
+
+  - question: Une électrolyse est une transformation…
+    choix: ['spontanée', 'forcée par un générateur', 'qui produit de l''électricité', 'nucléaire']
+    bonne: 1
+    explication: Le générateur impose le sens inverse du sens spontané.
+    revoir: cours
+
+  - question: Dans un électrolyseur, l'anode est reliée…
+    choix: ['à la borne − du générateur', 'à la borne + du générateur', 'à la terre', 'au pont salin']
+    bonne: 1
+    explication: L'anode est le lieu de l'oxydation, le générateur y arrache des électrons par sa borne +.
+    revoir: cours
+
+  - question: Recharger un accumulateur, c'est…
+    choix: ['le faire fonctionner en pile', 'le faire fonctionner en électrolyseur', 'changer son électrolyte', 'le chauffer']
+    bonne: 1
+    explication: On force la transformation inverse de celle de la décharge.
+    revoir: cours
