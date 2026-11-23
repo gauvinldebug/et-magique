@@ -1,0 +1,77 @@
+# Exercices corrigés, du plus facile au type bac.
+# type d'étape : init (vert), her (orange), conc (bleu), calcul, methode, piege (rouge)
+exercices:
+  - titre: L'iode 131
+    difficulte: 1
+    type: application
+    enonce: |
+      L'iode 131, utilisé en médecine, a une demi-vie de 8 jours. Un patient reçoit une dose contenant $N_0 = 8 \times 10^{15}$ noyaux. Combien en reste-t-il au bout de 24 jours ?
+    indice: Combien de demi-vies dans 24 jours ?
+    etapes:
+      - type: calcul
+        titre: Le nombre de demi-vies
+        texte: $24 \div 8 = 3$ demi-vies.
+      - type: calcul
+        titre: Le calcul
+        texte: $N = \frac{8 \times 10^{15}}{2^3} = 10^{15}$.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>Il reste $10^{15}$ noyaux, soit 12,5 % de la dose</mark>.
+
+  - titre: Une proportion restante
+    difficulte: 2
+    type: methode
+    enonce: |
+      Un échantillon de césium 137 (demi-vie 30 ans) ne contient plus que 6,25 % de ses noyaux initiaux. Depuis combien de temps se désintègre-t-il ?
+    indice: Écris 6,25 % sous la forme $\frac{1}{2^n}$.
+    etapes:
+      - type: calcul
+        titre: Le nombre de demi-vies
+        texte: $0{,}0625 = \frac{1}{16} = \frac{1}{2^4}$, donc $n = 4$.
+      - type: calcul
+        titre: La durée
+        texte: $4 \times 30 = 120$ ans.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>L'échantillon se désintègre depuis 120 ans</mark>.
+
+  - titre: Deux demi-vies, plus rien ?
+    difficulte: 2
+    type: piege
+    enonce: |
+      Un élève affirme : « Après une demi-vie il reste la moitié, donc après deux demi-vies il ne reste plus rien. » A-t-il raison ?
+    indice: Pense au sac de pièces.
+    etapes:
+      - type: piege
+        titre: L'erreur
+        texte: Il raisonne comme si on retirait toujours la même quantité, alors qu'on retire la moitié de ce qui reste.
+      - type: calcul
+        titre: Le calcul
+        texte: $N_0 \to \frac{N_0}{2} \to \frac{N_0}{4}$.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>Après deux demi-vies, il reste un quart des noyaux</mark>.
+
+  - titre: Dater un os par encadrement
+    difficulte: 3
+    type: bac
+    enonce: |
+      Un os ne contient plus que 10 % de son carbone 14 initial ($t_{1/2} = 5\,730$ ans).
+      1. Encadrer le nombre $n$ de demi-vies écoulées par deux entiers consécutifs.
+      2. En déduire un encadrement de l'âge de l'os.
+      3. À la calculatrice, on trouve $\frac{1}{2^{3{,}32}} \approx 0{,}10$. Donner une estimation de l'âge.
+    indice: Compare 10 % avec 12,5 % et 6,25 %.
+    etapes:
+      - type: calcul
+        titre: Question 1
+        texte: $\frac{1}{2^4} = 6{,}25\,\% < 10\,\% < 12{,}5\,\% = \frac{1}{2^3}$, donc $3 < n < 4$.
+      - type: calcul
+        titre: Question 2
+        texte: $3 \times 5\,730 = 17\,190$ et $4 \times 5\,730 = 22\,920$.
+      - type: calcul
+        titre: Question 3
+        texte: $3{,}32 \times 5\,730 \approx 19\,000$ ans.
+      - type: conc
+        titre: Conclusion
+        texte: >-
+          <mark>L'os a entre 17 190 et 22 920 ans, environ 19 000 ans</mark>.

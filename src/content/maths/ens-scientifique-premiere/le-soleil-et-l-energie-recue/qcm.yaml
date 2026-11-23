@@ -1,0 +1,30 @@
+questions:
+  - question: Si la distance au Soleil est multipliée par 3, la puissance reçue par m² est…
+    choix: ['divisée par 9', 'divisée par 3', 'multipliée par 9', 'inchangée']
+    bonne: 0
+    explication: Elle varie comme $\frac{1}{d^2}$, et $3^2 = 9$.
+    revoir: cours
+
+  - question: L'aire d'une sphère de rayon $R$ vaut…
+    choix: ['$4\pi R^2$', '$\pi R^2$', '$2\pi R$', '$\frac{4}{3}\pi R^3$']
+    bonne: 0
+    explication: $\pi R^2$ est l'aire du disque, $\frac{4}{3}\pi R^3$ le volume de la boule.
+    revoir: cours
+
+  - question: La puissance moyenne reçue par la Terre vaut environ…
+    choix: ['$340\ \text{W/m}^2$', '$1\,360\ \text{W/m}^2$', '$680\ \text{W/m}^2$', '$5\,440\ \text{W/m}^2$']
+    bonne: 0
+    explication: $1\,360 \div 4 = 340$.
+    revoir: exercices
+
+  - question: Avec un albédo de $0{,}3$, la part absorbée est…
+    choix: ['70 %', '30 %', '3 %', '100 %']
+    bonne: 0
+    explication: $1 - 0{,}3 = 0{,}7$.
+    revoir: cours
+
+  - question: Une étoile deux fois plus chaude que le Soleil a un $\lambda_\text{max}$…
+    choix: ['deux fois plus petit', 'deux fois plus grand', 'quatre fois plus petit', 'identique']
+    bonne: 0
+    explication: $\lambda_\text{max} \times T$ est constant.
+    revoir: cours

@@ -1,0 +1,30 @@
+questions:
+  - question: Sur un cercle, la longueur d'un arc est…
+    choix: ["proportionnelle à l'angle au centre", "proportionnelle au carré de l'angle", "indépendante du rayon", "toujours égale au rayon"]
+    bonne: 0
+    explication: $L = \frac{\alpha}{360} \times 2\pi R$.
+    revoir: cours
+
+  - question: Un angle au centre de $7{,}2°$ représente quelle fraction du tour ?
+    choix: ['$\frac{1}{50}$', '$\frac{1}{36}$', '$\frac{1}{72}$', '$\frac{1}{7{,}2}$']
+    bonne: 0
+    explication: $\frac{7{,}2}{360} = 0{,}02 = \frac{1}{50}$.
+    revoir: cours
+
+  - question: Le rayon du parallèle de latitude $\lambda$ vaut…
+    choix: ['$R\cos\lambda$', '$R\sin\lambda$', '$R$', '$\frac{R}{\lambda}$']
+    bonne: 0
+    explication: Plus on monte vers le pôle, plus le parallèle est petit.
+    revoir: cours
+
+  - question: Le plus court chemin entre deux points de la sphère suit…
+    choix: ['un arc de grand cercle', 'toujours un parallèle', 'toujours un méridien', "une droite sur la carte"]
+    bonne: 0
+    explication: Un méridien est un grand cercle, un parallèle (hors équateur) n'en est pas un.
+    revoir: exercices
+
+  - question: Deux villes sur un même méridien ont des latitudes $50°$ N et $40°$ N. L'angle au centre entre elles vaut…
+    choix: ['$10°$', '$90°$', '$45°$', '$40°$']
+    bonne: 0
+    explication: On fait la différence des latitudes.
+    revoir: exercices

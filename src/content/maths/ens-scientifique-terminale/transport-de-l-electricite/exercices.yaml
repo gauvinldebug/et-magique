@@ -1,0 +1,75 @@
+# Exercices corrigés, du plus facile au type bac.
+# type d'étape : init (vert), her (orange), conc (bleu), calcul, methode, piege (rouge)
+exercices:
+  - titre: Calculer des pertes
+    difficulte: 1
+    type: application
+    enonce: |
+      Une ligne de résistance $5\ \Omega$ est parcourue par un courant de 200 A. Calculer la puissance perdue par effet Joule.
+    indice: $P_J = RI^2$.
+    etapes:
+      - type: calcul
+        titre: Le calcul
+        texte: $P_J = 5 \times 200^2 = 5 \times 40\,000 = 200\,000$ W.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>200 kW sont perdus en chaleur</mark>.
+
+  - titre: L'intérêt de la haute tension
+    difficulte: 2
+    type: methode
+    enonce: |
+      On transporte une puissance $P = 10$ MW dans une ligne de résistance $10\ \Omega$. Comparer les pertes si la tension vaut $20\,000$ V puis $400\,000$ V.
+    indice: Calcule d'abord $I = \frac{P}{U}$.
+    etapes:
+      - type: calcul
+        titre: À 20 000 V
+        texte: $I = \frac{10^7}{2 \times 10^4} = 500$ A et $P_J = 10 \times 500^2 = 2{,}5 \times 10^6$ W.
+      - type: calcul
+        titre: À 400 000 V
+        texte: $I = \frac{10^7}{4 \times 10^5} = 25$ A et $P_J = 10 \times 25^2 = 6\,250$ W.
+      - type: conc
+        titre: Conclusion
+        texte: >-
+          <mark>La tension est multipliée par 20, les pertes sont divisées par $20^2 = 400$</mark> : de 25 % de la puissance à moins de 0,1 %.
+
+  - titre: Deux fois plus de courant
+    difficulte: 2
+    type: piege
+    enonce: |
+      Un élève dit : « Si l'intensité double, les pertes doublent. » Vérifier avec $R = 4\ \Omega$, $I = 10$ A puis $I = 20$ A.
+    indice: L'intensité est au carré.
+    etapes:
+      - type: calcul
+        titre: Les calculs
+        texte: $4 \times 10^2 = 400$ W puis $4 \times 20^2 = 1\,600$ W.
+      - type: piege
+        titre: L'erreur
+        texte: Les pertes dépendent de $I^2$, pas de $I$.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>Les pertes sont multipliées par 4</mark>.
+
+  - titre: Un réseau à deux villes
+    difficulte: 3
+    type: bac
+    enonce: |
+      Une centrale C alimente un nœud N par une ligne unique. Depuis N, une ligne de résistance $1\ \Omega$ va vers la ville A, qui demande 30 A, et une ligne de résistance $2\ \Omega$ va vers la ville B. La centrale ne peut fournir que 80 A au total.
+      1. Représenter la situation par un graphe orienté et écrire la loi des nœuds en N.
+      2. Quelle intensité maximale la ville B peut-elle recevoir ?
+      3. Calculer les pertes sur les deux lignes issues de N dans ce cas.
+    indice: Tout ce qui entre en N ressort vers A et B.
+    etapes:
+      - type: methode
+        titre: Question 1
+        texte: >-
+          Sommets C, N, A, B ; arcs $C \to N$, $N \to A$ (poids $1\ \Omega$), $N \to B$ (poids $2\ \Omega$). Loi des nœuds : $I_{CN} = I_{NA} + I_{NB}$.
+      - type: calcul
+        titre: Question 2
+        texte: $I_{NB} = 80 - 30 = 50$ A au maximum.
+      - type: calcul
+        titre: Question 3
+        texte: $1 \times 30^2 + 2 \times 50^2 = 900 + 5\,000 = 5\,900$ W.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>B reçoit au plus 50 A, avec 5 900 W de pertes sur les deux lignes</mark>.

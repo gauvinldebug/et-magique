@@ -1,0 +1,79 @@
+# Exercices corrigés, du plus facile au type bac.
+# type d'étape : init (vert), her (orange), conc (bleu), calcul, methode, piege (rouge)
+exercices:
+  - titre: Des octaves
+    difficulte: 1
+    type: application
+    enonce: |
+      Le la du diapason vibre à 440 Hz. Donner les fréquences du la une octave plus haut, puis deux octaves plus bas.
+    indice: Une octave multiplie ou divise par 2.
+    etapes:
+      - type: calcul
+        titre: Une octave plus haut
+        texte: $440 \times 2 = 880$ Hz.
+      - type: calcul
+        titre: Deux octaves plus bas
+        texte: $440 \div 2^2 = 110$ Hz.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>880 Hz et 110 Hz</mark>.
+
+  - titre: Construire avec des quintes
+    difficulte: 2
+    type: methode
+    enonce: |
+      On part d'un do à 264 Hz. On monte d'une quinte pour obtenir le sol, puis encore d'une quinte et on redescend d'une octave pour obtenir le ré. Calculer les fréquences du sol et du ré, puis le rapport ré / do.
+    indice: Une quinte multiplie par $\frac{3}{2}$.
+    etapes:
+      - type: calcul
+        titre: Le sol
+        texte: $264 \times \frac{3}{2} = 396$ Hz.
+      - type: calcul
+        titre: Le ré
+        texte: $396 \times \frac{3}{2} = 594$ Hz, puis $594 \div 2 = 297$ Hz.
+      - type: calcul
+        titre: Le rapport
+        texte: $\frac{297}{264} = \frac{9}{8} = 1{,}125$.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>Sol 396 Hz, ré 297 Hz</mark> ; le ton pythagoricien vaut $\frac{9}{8}$.
+
+  - titre: Additionner des hertz ?
+    difficulte: 2
+    type: piege
+    enonce: |
+      Entre le la 220 Hz et le la 440 Hz, l'écart est de 220 Hz. Un élève en déduit que le la suivant est à $440 + 220 = 660$ Hz. Corriger.
+    indice: Une octave, c'est un rapport.
+    etapes:
+      - type: piege
+        titre: L'erreur
+        texte: L'élève ajoute des hertz, alors qu'une octave multiplie la fréquence par 2.
+      - type: calcul
+        titre: Le calcul
+        texte: $440 \times 2 = 880$ Hz. Le son à 660 Hz est en fait le mi, une quinte au-dessus de 440 Hz ($440 \times \frac{3}{2}$).
+      - type: conc
+        titre: Conclusion
+        texte: <mark>Le la suivant vibre à 880 Hz</mark>.
+
+  - titre: Tempérée contre Pythagore
+    difficulte: 3
+    type: bac
+    enonce: |
+      1. Calculer $2^{7/12}$ et le comparer à la quinte pure $\frac{3}{2}$.
+      2. Calculer la fréquence du mi situé 7 demi-tons au-dessus du la 440 Hz dans la gamme tempérée, puis la quinte pure au-dessus de 440 Hz.
+      3. Calculer l'écart relatif entre les deux.
+    indice: Écart relatif $= \frac{\text{pure} - \text{tempérée}}{\text{pure}}$.
+    etapes:
+      - type: calcul
+        titre: Question 1
+        texte: $2^{7/12} \approx 1{,}4983$, légèrement inférieur à $1{,}5$.
+      - type: calcul
+        titre: Question 2
+        texte: Tempérée $440 \times 1{,}4983 \approx 659{,}3$ Hz. Pure $440 \times 1{,}5 = 660$ Hz.
+      - type: calcul
+        titre: Question 3
+        texte: $\frac{660 - 659{,}3}{660} \approx 0{,}001$.
+      - type: conc
+        titre: Conclusion
+        texte: >-
+          <mark>La quinte tempérée est trop basse d'environ 0,1 %</mark> : presque inaudible, et en échange toutes les tonalités sont jouables.

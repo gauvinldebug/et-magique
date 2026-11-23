@@ -1,0 +1,30 @@
+questions:
+  - question: Une grandeur passe de 200 à 250. Son taux d'évolution est…
+    choix: ['$+25\,\%$', '$+50\,\%$', '$+20\,\%$', '$+5\,\%$']
+    bonne: 0
+    explication: $\frac{250 - 200}{200} = 0{,}25$.
+    revoir: cours
+
+  - question: Une anomalie de température de $+1$ °C signifie…
+    choix: ["1 °C de plus que la moyenne de référence", "une hausse de 1 %", "1 °C de plus que l'année précédente", "une température de 1 °C"]
+    bonne: 0
+    explication: L'anomalie est un écart à une période de référence.
+    revoir: cours
+
+  - question: Une moyenne glissante sert à…
+    choix: ['lisser les variations pour voir la tendance', 'trouver la valeur maximale', 'supprimer les données fausses', 'calculer un pourcentage']
+    bonne: 0
+    explication: Elle atténue les « vagues » d'une année sur l'autre.
+    revoir: cours
+
+  - question: Une année plus froide que la précédente prouve-t-elle que le réchauffement s'arrête ?
+    choix: ['Non, il faut regarder la tendance de long terme', 'Oui, toujours', 'Oui, si la baisse dépasse 0,1 °C', 'On ne peut rien dire du climat']
+    bonne: 0
+    explication: Une vague ne dit rien de la marée.
+    revoir: exercices
+
+  - question: Une hausse de 30 ppm en 15 ans correspond à un rythme moyen de…
+    choix: ['2 ppm par an', '0,5 ppm par an', '45 ppm par an', '15 ppm par an']
+    bonne: 0
+    explication: $\frac{30}{15} = 2$.
+    revoir: cours

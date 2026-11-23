@@ -1,0 +1,80 @@
+# Exercices corrigés, du plus facile au type bac.
+# type d'étape : init (vert), her (orange), conc (bleu), calcul, methode, piege (rouge)
+exercices:
+  - titre: Une estimation par capture-recapture
+    difficulte: 1
+    type: application
+    enonce: |
+      On marque 60 papillons. Plus tard, on en capture 90, dont 15 marqués. Estimer le nombre de papillons de la population.
+    indice: $N \approx \frac{M \times n}{m}$.
+    etapes:
+      - type: calcul
+        titre: Le calcul
+        texte: $N \approx \frac{60 \times 90}{15} = 360$.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>Environ 360 papillons</mark>.
+
+  - titre: Un intervalle de confiance
+    difficulte: 2
+    type: methode
+    enonce: |
+      Sur 625 oiseaux observés, 175 sont des moineaux. Donner un intervalle de confiance au niveau 95 % de la proportion de moineaux dans la population.
+    indice: $\sqrt{625} = 25$.
+    etapes:
+      - type: calcul
+        titre: La fréquence
+        texte: $f = \frac{175}{625} = 0{,}28$.
+      - type: calcul
+        titre: La marge
+        texte: $\frac{1}{\sqrt{625}} = \frac{1}{25} = 0{,}04$.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>$[0{,}24 \,;\, 0{,}32]$ au niveau de confiance 95 %</mark>.
+
+  - titre: Deux fois plus précis
+    difficulte: 2
+    type: piege
+    enonce: |
+      Avec un échantillon de 100 individus, la marge d'erreur est de $0{,}1$. Un élève pense qu'avec 200 individus, elle sera de $0{,}05$. A-t-il raison ? Quelle taille faut-il ?
+    indice: La marge est $\frac{1}{\sqrt{n}}$.
+    etapes:
+      - type: calcul
+        titre: Avec 200
+        texte: $\frac{1}{\sqrt{200}} \approx 0{,}071$, pas $0{,}05$.
+      - type: piege
+        titre: L'erreur
+        texte: La marge dépend de $\sqrt{n}$, pas de $n$.
+      - type: calcul
+        titre: La bonne taille
+        texte: $\frac{1}{\sqrt{n}} = 0{,}05 \iff \sqrt{n} = 20 \iff n = 400$.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>Il faut 400 individus, quatre fois plus</mark>.
+
+  - titre: Les grenouilles de la mare
+    difficulte: 3
+    type: bac
+    enonce: |
+      On marque 150 grenouilles. Lors d'une recapture de 900 grenouilles, 225 sont marquées.
+      1. Donner une estimation ponctuelle de la population.
+      2. Donner un intervalle de confiance au niveau 95 % de la proportion de grenouilles marquées.
+      3. En déduire un encadrement de la population.
+      4. Quelle hypothèse la méthode suppose-t-elle ?
+    indice: $\sqrt{900} = 30$.
+    etapes:
+      - type: calcul
+        titre: Question 1
+        texte: $N \approx \frac{150 \times 900}{225} = 600$.
+      - type: calcul
+        titre: Question 2
+        texte: $f = 0{,}25$ et $\frac{1}{30} \approx 0{,}033$, d'où environ $[0{,}217 \,;\, 0{,}283]$.
+      - type: calcul
+        titre: Question 3
+        texte: $\frac{150}{0{,}283} \approx 530$ et $\frac{150}{0{,}217} \approx 691$.
+      - type: methode
+        titre: Question 4
+        texte: Les grenouilles marquées se sont mélangées aux autres, la population n'a pas changé entre les deux captures, et les marques ne se perdent pas.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>Environ 600 grenouilles, entre 530 et 691 au niveau de confiance 95 %</mark>.

@@ -33,7 +33,7 @@ export type Niveau = {
   court: string; // « Tle »
   nom: string; // « Terminale »
   sousTitre?: string;
-  cycle: 'Collège' | 'Lycée' | 'Options';
+  cycle: 'Collège' | 'Lycée' | 'Options' | 'Ens. scientifique';
   examen?: 'bac' | 'brevet';
 };
 
@@ -48,6 +48,8 @@ export const NIVEAUX: Niveau[] = [
   { slug: 'premiere-tronc-commun', court: '1re TC', nom: 'Maths de 1re (tronc commun)', sousTitre: 'sans la spécialité', cycle: 'Options' },
   { slug: 'maths-complementaires', court: 'Compl.', nom: 'Maths complémentaires', sousTitre: 'option de terminale', cycle: 'Options' },
   { slug: 'maths-expertes', court: 'Expertes', nom: 'Maths expertes', sousTitre: 'option de terminale', cycle: 'Options' },
+  { slug: 'ens-scientifique-premiere', court: 'ES 1re', nom: 'Enseignement scientifique 1re', sousTitre: 'partie maths', cycle: 'Ens. scientifique' },
+  { slug: 'ens-scientifique-terminale', court: 'ES Tle', nom: 'Enseignement scientifique Tle', sousTitre: 'partie maths', cycle: 'Ens. scientifique' },
 ];
 
 export const niveau = (slug: string) => NIVEAUX.find((n) => n.slug === slug);

@@ -1,0 +1,75 @@
+# Exercices corrigés, du plus facile au type bac.
+# type d'étape : init (vert), her (orange), conc (bleu), calcul, methode, piege (rouge)
+exercices:
+  - titre: Calculer la constante solaire
+    difficulte: 1
+    type: application
+    enonce: |
+      Le Soleil émet $P = 3{,}8 \times 10^{26}$ W. La distance Terre-Soleil vaut $d = 1{,}5 \times 10^{11}$ m. Calculer la puissance reçue par mètre carré au sommet de l'atmosphère.
+    indice: Divise par l'aire de la sphère de rayon $d$.
+    etapes:
+      - type: calcul
+        titre: L'aire de la sphère
+        texte: $4\pi d^2 = 4\pi \times (1{,}5 \times 10^{11})^2 \approx 2{,}83 \times 10^{23}\ \text{m}^2$.
+      - type: calcul
+        titre: La division
+        texte: $\mathcal{P} = \frac{3{,}8 \times 10^{26}}{2{,}83 \times 10^{23}} \approx 1\,340\ \text{W/m}^2$.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>Environ $1\,340\ \text{W/m}^2$</mark>, proche de la valeur mesurée $1\,360\ \text{W/m}^2$.
+
+  - titre: Vénus, plus proche du Soleil
+    difficulte: 2
+    type: methode
+    enonce: |
+      Vénus est à $0{,}72$ fois la distance Terre-Soleil. La Terre reçoit $1\,360\ \text{W/m}^2$. Combien reçoit Vénus ?
+    indice: La puissance surfacique varie comme $\frac{1}{d^2}$.
+    etapes:
+      - type: methode
+        titre: Le facteur
+        texte: La distance est multipliée par $0{,}72$, donc la puissance est divisée par $0{,}72^2 \approx 0{,}518$.
+      - type: calcul
+        titre: Le calcul
+        texte: $\frac{1\,360}{0{,}518} \approx 2\,625\ \text{W/m}^2$.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>Vénus reçoit environ $2\,600\ \text{W/m}^2$, presque deux fois plus que la Terre</mark>.
+
+  - titre: Pourquoi diviser par 4
+    difficulte: 2
+    type: piege
+    enonce: |
+      Un élève affirme : « La Terre reçoit $1\,360\ \text{W/m}^2$, donc en moyenne chaque mètre carré du globe reçoit $1\,360$ W. » Corriger son raisonnement.
+    indice: Compare l'aire du disque éclairé et l'aire de la sphère.
+    etapes:
+      - type: piege
+        titre: L'erreur
+        texte: Seule la face éclairée reçoit l'énergie, et souvent en biais. La Terre intercepte la lumière sur un disque d'aire $\pi R^2$.
+      - type: calcul
+        titre: La moyenne
+        texte: $\frac{1\,360 \times \pi R^2}{4\pi R^2} = 340\ \text{W/m}^2$.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>En moyenne, $340\ \text{W/m}^2$</mark>, quatre fois moins.
+
+  - titre: Bilan avec l'albédo
+    difficulte: 3
+    type: bac
+    enonce: |
+      La Terre reçoit en moyenne $340\ \text{W/m}^2$. Son albédo vaut $0{,}30$.
+      1. Calculer la puissance surfacique réfléchie et la puissance absorbée.
+      2. Si l'albédo baissait à $0{,}28$ (fonte des glaces), de combien de pourcents augmenterait la puissance absorbée ?
+    indice: Absorbée = $(1 - \text{albédo}) \times 340$.
+    etapes:
+      - type: calcul
+        titre: Question 1
+        texte: >-
+          Réfléchie : $0{,}30 \times 340 = 102\ \text{W/m}^2$. Absorbée : $0{,}70 \times 340 = 238\ \text{W/m}^2$.
+      - type: calcul
+        titre: Question 2
+        texte: >-
+          Nouvelle absorbée : $0{,}72 \times 340 = 244{,}8\ \text{W/m}^2$. Taux d'évolution : $\frac{244{,}8 - 238}{238} \approx 0{,}029$.
+      - type: conc
+        titre: Conclusion
+        texte: >-
+          <mark>La puissance absorbée augmenterait d'environ 2,9 %</mark> : une petite baisse d'albédo réchauffe sensiblement.

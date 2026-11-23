@@ -1,0 +1,30 @@
+questions:
+  - question: Monter d'une octave revient à…
+    choix: ['multiplier la fréquence par 2', 'ajouter 440 Hz', 'multiplier par $\frac{3}{2}$', 'ajouter 12 Hz']
+    bonne: 0
+    explication: L'octave correspond au rapport 2.
+    revoir: cours
+
+  - question: Une quinte correspond au rapport…
+    choix: ['$\frac{3}{2}$', '$2$', '$\frac{4}{3}$', '$2^{1/12}$']
+    bonne: 0
+    explication: C'est le rapport de la quinte pure.
+    revoir: cours
+
+  - question: Dans la gamme tempérée, un demi-ton correspond au rapport…
+    choix: ['$2^{1/12}$', '$\frac{2}{12}$', '$\frac{1}{12}$', '$12^{1/2}$']
+    bonne: 0
+    explication: 12 demi-tons égaux font une octave, $q^{12} = 2$.
+    revoir: cours
+
+  - question: Une note 12 demi-tons au-dessus de 300 Hz vibre à…
+    choix: ['600 Hz', '312 Hz', '3 600 Hz', '450 Hz']
+    bonne: 0
+    explication: 12 demi-tons font une octave.
+    revoir: exercices
+
+  - question: Le comma pythagoricien vient du fait que…
+    choix: ['12 quintes ne font pas exactement 7 octaves', 'la quinte vaut 2', 'les fréquences sont négatives', "l'octave vaut $\\frac{3}{2}$"]
+    bonne: 0
+    explication: $\left(\frac{3}{2}\right)^{12} \approx 129{,}7$ alors que $2^7 = 128$.
+    revoir: cours

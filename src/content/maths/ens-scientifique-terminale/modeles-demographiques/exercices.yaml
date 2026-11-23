@@ -1,0 +1,74 @@
+# Exercices corrigés, du plus facile au type bac.
+# type d'étape : init (vert), her (orange), conc (bleu), calcul, methode, piege (rouge)
+exercices:
+  - titre: Reconnaître le modèle
+    difficulte: 1
+    type: application
+    enonce: |
+      Une population (en milliers) vaut 50, puis 55, puis 60,5, puis 66,55 sur quatre années consécutives. Linéaire ou exponentielle ?
+    indice: Calcule les différences, puis les quotients.
+    etapes:
+      - type: calcul
+        titre: Les différences
+        texte: 5, puis 5,5, puis 6,05 ne sont pas constantes.
+      - type: calcul
+        titre: Les quotients
+        texte: $\frac{55}{50} = \frac{60{,}5}{55} = \frac{66{,}55}{60{,}5} = 1{,}1$.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>Croissance exponentielle de 10 % par an (suite géométrique de raison 1,1)</mark>.
+
+  - titre: Un temps de doublement
+    difficulte: 2
+    type: methode
+    enonce: |
+      Une population de bactéries augmente de 20 % par heure. Au bout de combien d'heures a-t-elle doublé ?
+    indice: Cherche le plus petit $n$ tel que $1{,}2^n \geq 2$.
+    etapes:
+      - type: calcul
+        titre: Les essais
+        texte: $1{,}2^3 \approx 1{,}73$ et $1{,}2^4 \approx 2{,}07$.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>Elle a doublé au bout de 4 heures</mark>.
+
+  - titre: 2 % par an pendant 20 ans
+    difficulte: 2
+    type: piege
+    enonce: |
+      Une ville de 50 000 habitants croît de 2 % par an. Un élève prévoit $+40\,\%$ en 20 ans, soit 70 000 habitants. Corriger.
+    indice: On multiplie par 1,02 chaque année.
+    etapes:
+      - type: piege
+        titre: L'erreur
+        texte: Les pourcentages ne s'additionnent pas, ils se composent.
+      - type: calcul
+        titre: Le calcul
+        texte: $50\,000 \times 1{,}02^{20} \approx 50\,000 \times 1{,}486 \approx 74\,300$.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>Environ 74 300 habitants, soit une hausse d'environ 49 %</mark>.
+
+  - titre: La catastrophe malthusienne
+    difficulte: 3
+    type: bac
+    enonce: |
+      Une population vaut $u_0 = 100$ (en milliers) et augmente de 4 % par an. Les ressources permettent de nourrir $v_0 = 150$ milliers de personnes, et ce nombre augmente de 6 milliers par an.
+      1. Exprimer $u_n$ et $v_n$ en fonction de $n$.
+      2. À l'aide du tableur, on obtient $u_{30} \approx 324{,}3$ et $u_{31} \approx 337{,}3$. Calculer $v_{30}$ et $v_{31}$.
+      3. Conclure dans le cadre du modèle, puis critiquer ce modèle.
+    indice: Population géométrique, ressources arithmétiques.
+    etapes:
+      - type: calcul
+        titre: Question 1
+        texte: $u_n = 100 \times 1{,}04^n$ et $v_n = 150 + 6n$.
+      - type: calcul
+        titre: Question 2
+        texte: $v_{30} = 330$ et $v_{31} = 336$.
+      - type: methode
+        titre: Question 3
+        texte: >-
+          $u_{30} < v_{30}$ mais $u_{31} > v_{31}$ : à partir de la 31e année, la population dépasse les ressources. En réalité, la natalité baisse et les techniques agricoles progressent : le modèle est trop simple à long terme.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>Selon le modèle, les ressources deviennent insuffisantes au bout de 31 ans</mark>.

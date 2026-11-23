@@ -16,7 +16,7 @@ const liens = [
   { href: `${base}/planning-bac/`, titre: 'Planning bac', sous: 'un e‑mail par semaine', id: 'planning' },
   { href: '/demandes/', titre: 'Demandes', sous: 'chapitre, erreur, question', id: 'demandes' },
 ];
-const grouped = ['Collège', 'Lycée', 'Options'].map((cycle) => ({ cycle, niveaux: NIVEAUX.filter((n) => n.cycle === cycle) }));
+const grouped = ['Collège', 'Lycée', 'Options', 'Ens. scientifique'].map((cycle) => ({ cycle, niveaux: NIVEAUX.filter((n) => n.cycle === cycle) }));
 ---
 <header class="s-nav" data-entete>
   <div class="wrap">

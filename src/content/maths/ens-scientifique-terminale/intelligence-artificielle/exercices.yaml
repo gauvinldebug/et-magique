@@ -1,0 +1,79 @@
+# Exercices corrigés, du plus facile au type bac.
+# type d'étape : init (vert), her (orange), conc (bleu), calcul, methode, piege (rouge)
+exercices:
+  - titre: Calculer la sortie d'un neurone
+    difficulte: 1
+    type: application
+    enonce: |
+      Un neurone a les poids $w_1 = 0{,}4$, $w_2 = 0{,}6$ et le seuil $5$. Que renvoie-t-il pour $x_1 = 4$ et $x_2 = 6$ ? Pour $x_1 = 8$ et $x_2 = 2$ ?
+    indice: Calcule $s = 0{,}4x_1 + 0{,}6x_2$.
+    etapes:
+      - type: calcul
+        titre: Premier cas
+        texte: $s = 1{,}6 + 3{,}6 = 5{,}2 \geq 5$, sortie $1$.
+      - type: calcul
+        titre: Second cas
+        texte: $s = 3{,}2 + 1{,}2 = 4{,}4 < 5$, sortie $0$.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>Sorties 1 puis 0</mark>.
+
+  - titre: Les plus proches voisins
+    difficulte: 2
+    type: methode
+    enonce: |
+      Des fruits sont décrits par (masse en centaines de grammes ; diamètre en cm). Données d'entraînement : A (1 ; 7) pomme, B (1,5 ; 8) pomme, C (3 ; 10) melon, D (1,2 ; 6) pomme, E (3,5 ; 12) melon. Classer le fruit X (2 ; 8) avec $k = 3$ voisins.
+    indice: Calcule la distance de X à chaque point.
+    etapes:
+      - type: calcul
+        titre: Les distances
+        texte: >-
+          $XA = \sqrt{1 + 1} \approx 1{,}41$ ; $XB = \sqrt{0{,}25 + 0} = 0{,}5$ ; $XC = \sqrt{1 + 4} \approx 2{,}24$ ; $XD = \sqrt{0{,}64 + 4} \approx 2{,}15$ ; $XE = \sqrt{2{,}25 + 16} \approx 4{,}27$.
+      - type: methode
+        titre: Les 3 plus proches
+        texte: B (pomme), A (pomme), D (pomme).
+      - type: conc
+        titre: Conclusion
+        texte: <mark>X est classé pomme</mark>.
+
+  - titre: 95 % de réussite
+    difficulte: 2
+    type: piege
+    enonce: |
+      Sur 1 000 courriels de test, 50 sont des spams. Un programme répond toujours « pas spam ». Calculer son taux de réussite, puis dire s'il est utile.
+    indice: Compte ses erreurs.
+    etapes:
+      - type: calcul
+        titre: Le taux
+        texte: Il se trompe sur les 50 spams, donc réussit $\frac{950}{1\,000} = 95\,\%$.
+      - type: piege
+        titre: Le piège
+        texte: Il ne détecte aucun spam. Le taux global cache cet échec, car les classes sont déséquilibrées.
+      - type: conc
+        titre: Conclusion
+        texte: >-
+          <mark>95 % de réussite, mais 0 % des spams détectés : le programme est inutile</mark>.
+
+  - titre: Un neurone qui fait ET et OU
+    difficulte: 3
+    type: bac
+    enonce: |
+      Un neurone a deux entrées $x_1, x_2$ valant 0 ou 1, les poids $w_1 = w_2 = 1$ et un seuil $S$.
+      1. Calculer $s$ pour les quatre couples d'entrées.
+      2. Choisir $S$ pour que la sortie vaille 1 seulement si $x_1 = x_2 = 1$ (fonction ET).
+      3. Choisir $S$ pour que la sortie vaille 1 dès qu'une entrée vaut 1 (fonction OU).
+    indice: Les sommes possibles sont 0, 1 et 2.
+    etapes:
+      - type: calcul
+        titre: Question 1
+        texte: $(0,0) \to 0$ ; $(0,1) \to 1$ ; $(1,0) \to 1$ ; $(1,1) \to 2$.
+      - type: calcul
+        titre: Question 2
+        texte: Il faut $2 \geq S$ et $1 < S$, par exemple $S = 1{,}5$.
+      - type: calcul
+        titre: Question 3
+        texte: Il faut $1 \geq S$ et $0 < S$, par exemple $S = 0{,}5$.
+      - type: conc
+        titre: Conclusion
+        texte: >-
+          <mark>Seuil 1,5 pour ET, seuil 0,5 pour OU</mark> : en changeant seulement le seuil, le même neurone change de comportement.

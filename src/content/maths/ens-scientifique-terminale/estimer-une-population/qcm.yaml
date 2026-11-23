@@ -1,0 +1,30 @@
+questions:
+  - question: Dans la capture-recapture, la population est estimée par…
+    choix: ['$\frac{M \times n}{m}$', '$\frac{m}{M \times n}$', '$M + n - m$', '$M \times m$']
+    bonne: 0
+    explication: On égalise les proportions de marqués $\frac{m}{n} \approx \frac{M}{N}$.
+    revoir: cours
+
+  - question: Avec $n = 400$, la demi-largeur de l'intervalle de confiance vaut…
+    choix: ['$0{,}05$', '$0{,}0025$', '$0{,}02$', '$0{,}5$']
+    bonne: 0
+    explication: $\frac{1}{\sqrt{400}} = \frac{1}{20}$.
+    revoir: cours
+
+  - question: Pour rendre l'estimation deux fois plus précise, il faut un échantillon…
+    choix: ['quatre fois plus grand', 'deux fois plus grand', 'deux fois plus petit', 'de même taille']
+    bonne: 0
+    explication: La marge est $\frac{1}{\sqrt{n}}$.
+    revoir: exercices
+
+  - question: Un intervalle de confiance au niveau 95 %…
+    choix: ['contient la vraie proportion dans environ 95 % des échantillons', 'contient toujours la vraie proportion', 'contient 95 % de la population', 'est faux dans 95 % des cas']
+    bonne: 0
+    explication: Dans environ 5 % des cas, il ne la contient pas.
+    revoir: cours
+
+  - question: Sur 100 individus, on en observe 40 d'un certain type. L'intervalle de confiance à 95 % est…
+    choix: ['$[0{,}3 \,;\, 0{,}5]$', '$[0{,}35 \,;\, 0{,}45]$', '$[0{,}39 \,;\, 0{,}41]$', '$[0 \,;\, 0{,}4]$']
+    bonne: 0
+    explication: $0{,}4 \pm \frac{1}{10}$.
+    revoir: exercices
