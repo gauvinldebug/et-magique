@@ -1,0 +1,100 @@
+# Exercices corrigés, du plus facile au type bac.
+exercices:
+  - titre: Classer des acides
+    difficulte: 1
+    type: application
+    enonce: |
+      Classer du plus fort au plus faible les acides suivants : acide méthanoïque ($\mathrm{p}K_A = 3{,}8$), ion ammonium ($\mathrm{p}K_A = 9{,}2$), acide éthanoïque ($\mathrm{p}K_A = 4{,}8$).
+    indice: Plus le pKa est petit, plus l'acide lâche facilement son proton.
+    etapes:
+      - type: methode
+        titre: La règle
+        texte: Un acide est d'autant plus fort que son $K_A$ est grand, donc que son $\mathrm{p}K_A$ est petit.
+      - type: conc
+        titre: Le classement
+        texte: <mark>acide méthanoïque > acide éthanoïque > ion ammonium</mark>.
+
+  - titre: pH d'une base forte
+    difficulte: 1
+    type: methode
+    enonce: |
+      Calculer le pH, à 25 °C, d'une solution d'hydroxyde de sodium de concentration $c = 5{,}0 \times 10^{-3}\ \mathrm{mol \cdot L^{-1}}$.
+    indice: Base forte, donc $[\mathrm{HO^-}] = c$. Puis le produit ionique de l'eau.
+    etapes:
+      - type: calcul
+        titre: Les ions hydroxyde
+        texte: La soude est une base forte, $[\mathrm{HO^-}] = 5{,}0 \times 10^{-3}\ \mathrm{mol \cdot L^{-1}}$.
+      - type: calcul
+        titre: Les ions oxonium
+        texte: |
+          $$[\mathrm{H_3O^+}] = \frac{K_e \, c^{\circ 2}}{[\mathrm{HO^-}]} = \frac{1{,}0 \times 10^{-14}}{5{,}0 \times 10^{-3}} = 2{,}0 \times 10^{-12}\ \mathrm{mol \cdot L^{-1}}$$
+      - type: conc
+        titre: Le pH
+        texte: <mark>$\mathrm{pH} = -\log(2{,}0 \times 10^{-12}) \approx 11{,}7$</mark>. On retrouve $14 + \log(5{,}0 \times 10^{-3}) \approx 11{,}7$.
+
+  - titre: Lire un diagramme de prédominance
+    difficulte: 2
+    type: application
+    enonce: |
+      L'ammoniac $\mathrm{NH_3}$ appartient au couple $\mathrm{NH_4^+/NH_3}$ de $\mathrm{p}K_A = 9{,}2$.
+      1. Tracer le diagramme de prédominance du couple.
+      2. Quelle espèce prédomine dans une solution de pH 7 ? de pH 11 ?
+      3. À pH 10,2, calculer le rapport $[\mathrm{NH_3}]/[\mathrm{NH_4^+}]$.
+    indice: Le pKa est la ligne de mi-terrain. Puis $\mathrm{pH} = \mathrm{p}K_A + \log([\text{base}]/[\text{acide}])$.
+    etapes:
+      - type: methode
+        titre: Le diagramme
+        texte: Sur un axe de pH, $\mathrm{NH_4^+}$ prédomine pour $\mathrm{pH} < 9{,}2$ et $\mathrm{NH_3}$ pour $\mathrm{pH} > 9{,}2$.
+      - type: calcul
+        titre: pH 7 et pH 11
+        texte: À pH 7, $7 < 9{,}2$ donc $\mathrm{NH_4^+}$ prédomine. À pH 11, $11 > 9{,}2$ donc $\mathrm{NH_3}$ prédomine.
+      - type: calcul
+        titre: Le rapport
+        texte: $\log([\mathrm{NH_3}]/[\mathrm{NH_4^+}]) = \mathrm{pH} - \mathrm{p}K_A = 1$, donc le rapport vaut $10^1$.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>À pH 10,2, il y a 10 fois plus d'ammoniac que d'ions ammonium</mark>.
+
+  - titre: Acide faible et taux d'avancement
+    difficulte: 2
+    type: piege
+    enonce: |
+      Une solution d'acide méthanoïque de concentration $c = 1{,}0 \times 10^{-2}\ \mathrm{mol \cdot L^{-1}}$ a un pH mesuré de 2,9.
+      Un élève affirme que son pH devrait valoir 2. Expliquer son erreur, puis calculer le taux d'avancement final.
+    indice: La formule $-\log(c)$ suppose que tout l'acide a réagi.
+    etapes:
+      - type: piege
+        titre: L'erreur
+        texte: $\mathrm{pH} = -\log(c/c^\circ)$ ne vaut que pour un acide fort. L'acide méthanoïque est faible, sa réaction avec l'eau n'est pas totale.
+      - type: calcul
+        titre: La concentration en ions oxonium
+        texte: $[\mathrm{H_3O^+}]_f = 10^{-2{,}9} \approx 1{,}3 \times 10^{-3}\ \mathrm{mol \cdot L^{-1}}$.
+      - type: calcul
+        titre: Le taux d'avancement
+        texte: $\tau = [\mathrm{H_3O^+}]_f / c = 1{,}3 \times 10^{-3} / 1{,}0 \times 10^{-2} \approx 0{,}13$.
+      - type: conc
+        titre: Conclusion
+        texte: >-
+          <mark>Seulement 13 % des molécules d'acide ont cédé leur proton</mark> : la transformation est non totale.
+
+  - titre: Calculer un pKa à partir d'un pH
+    difficulte: 3
+    type: bac
+    enonce: |
+      Reprendre la solution d'acide méthanoïque de l'exercice précédent ($c = 1{,}0 \times 10^{-2}\ \mathrm{mol \cdot L^{-1}}$, pH 2,9).
+      1. Exprimer les concentrations à l'équilibre de $\mathrm{HCOO^-}$ et de $\mathrm{HCOOH}$.
+      2. En déduire $K_A$ et le $\mathrm{p}K_A$ du couple. Comparer à la valeur tabulée 3,8.
+    indice: Chaque molécule d'acide qui réagit donne un $\mathrm{HCOO^-}$ et un $\mathrm{H_3O^+}$ (on néglige l'autoprotolyse de l'eau).
+    etapes:
+      - type: calcul
+        titre: Les concentrations
+        texte: |
+          $[\mathrm{HCOO^-}] = [\mathrm{H_3O^+}] = 1{,}3 \times 10^{-3}\ \mathrm{mol \cdot L^{-1}}$ et $[\mathrm{HCOOH}] = c - [\mathrm{H_3O^+}] \approx 8{,}7 \times 10^{-3}\ \mathrm{mol \cdot L^{-1}}$.
+      - type: calcul
+        titre: La constante
+        texte: |
+          $$K_A = \frac{(1{,}3 \times 10^{-3})^2}{8{,}7 \times 10^{-3}} \approx 1{,}9 \times 10^{-4}$$
+      - type: conc
+        titre: Le pKa
+        texte: <mark>$\mathrm{p}K_A = -\log(1{,}9 \times 10^{-4}) \approx 3{,}7$</mark>, cohérent avec la valeur tabulée 3,8 compte tenu de la précision du pH-mètre.
+        note: un dixième de pH change beaucoup le résultat

@@ -1,0 +1,56 @@
+questions:
+  - question: Un acide faible est un acide…
+    choix: ['peu concentré', 'dont la réaction avec l''eau est non totale', 'de pH supérieur à 7', 'qui ne réagit pas avec l''eau']
+    bonne: 1
+    explication: Faible ne veut pas dire dilué. Un acide faible ne cède qu'une partie de ses protons à l'eau, la réaction s'arrête à un équilibre.
+    revoir: cours
+
+  - question: Le couple A a un pKa de 3, le couple B un pKa de 7. Quel acide est le plus fort ?
+    choix: ['celui de A', 'celui de B', 'ils sont aussi forts', 'on ne peut pas savoir']
+    bonne: 0
+    explication: Plus le pKa est petit, plus le $K_A$ est grand, plus l'acide est fort.
+    revoir: cours
+
+  - question: À 25 °C, une solution a $[\mathrm{HO^-}] = 1{,}0 \times 10^{-3}\ \mathrm{mol \cdot L^{-1}}$. Son pH vaut…
+    choix: ['3', '7', '11', '14']
+    bonne: 2
+    explication: $[\mathrm{H_3O^+}] = 10^{-14}/10^{-3} = 10^{-11}\ \mathrm{mol \cdot L^{-1}}$, donc pH = 11.
+    revoir: cours
+
+  - question: Pour un couple de pKa 4,8, à pH 3, l'espèce qui prédomine est…
+    choix: ['l''acide', 'la base', 'aucune des deux', 'les deux à égalité']
+    bonne: 0
+    explication: Le pH est inférieur au pKa, on est du côté acide de la ligne de mi-terrain.
+    revoir: cours
+
+  - question: Sur un diagramme de distribution, on lit le pKa…
+    choix:
+      - là où la courbe de l'acide vaut 100 %
+      - au point de croisement des deux courbes, à 50 %
+      - là où la courbe de la base s'annule
+      - à pH 7
+    bonne: 1
+    explication: Quand $[\mathrm{AH}] = [\mathrm{A^-}]$, le log vaut 0 et pH = pKa.
+    revoir: cours
+
+  - question: Que vaut $\mathrm{pH} - \mathrm{p}K_A$ si $[\mathrm{A^-}] = 100 \times [\mathrm{AH}]$ ?
+    choix: ['$-2$', '$0{,}01$', '$2$', '$100$']
+    bonne: 2
+    explication: $\log(100) = 2$, donc le pH dépasse le pKa de 2.
+    revoir: exercices
+
+  - question: Une solution tampon…
+    choix:
+      - a toujours un pH de 7
+      - a un pH qui varie peu par ajout modéré d'acide, de base ou d'eau
+      - ne contient que de l'eau pure
+      - contient un acide fort et une base forte
+    bonne: 1
+    explication: C'est un mélange d'un acide faible et de sa base conjuguée, de pH proche du pKa, qui encaisse les petits ajouts.
+    revoir: cours
+
+  - question: Pour un acide faible de concentration $c$, le taux d'avancement final vaut…
+    choix: ['$1$', '$[\mathrm{H_3O^+}]_f / c$', '$c / [\mathrm{H_3O^+}]_f$', '$\mathrm{pH}/c$']
+    bonne: 1
+    explication: $\tau = x_f / x_{\max}$, et en solution $x_f/V = [\mathrm{H_3O^+}]_f$ tandis que $x_{\max}/V = c$.
+    revoir: cours
