@@ -9,7 +9,7 @@ const { matiere } = Astro.props;
   <div class="page-feuille cahier">
     <div class="feuille">
       <h1>Rechercher</h1>
-      <div style="max-width:640px"><Recherche id="rq-page" autofocus /></div>
+      <div style="max-width:640px"><Recherche id="rq-page" autofocus matiere={matiere.slug} /></div>
       <h2 data-plein-titre hidden>Dans les cours et les exercices</h2>
       <ul class="liste-ch" data-results style="max-width:720px"></ul>
       <p class="aide" data-info></p>

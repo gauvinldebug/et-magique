@@ -1,16 +1,16 @@
 ---
 import Base from '../../../layouts/Base.astro';
 import Bandeau from '../../../components/Bandeau.astro';
-import { NIVEAUX, MATIERES } from '../../../data/site';
+import { MATIERES, niveauxDe, nomDans } from '../../../data/site';
 import { programmeNiveau } from '../../../lib/contenu';
 export async function getStaticPaths() {
-  return MATIERES.filter((m) => m.active).flatMap((m) => NIVEAUX.map((n) => ({ params: { matiere: m.slug, niveau: n.slug }, props: { matiere: m, niveau: n } })));
+  return MATIERES.filter((m) => m.active).flatMap((m) => niveauxDe(m.slug).map((n) => ({ params: { matiere: m.slug, niveau: n.slug }, props: { matiere: m, niveau: n } })));
 }
 const { matiere, niveau } = Astro.props;
 const liste = await programmeNiveau(matiere.slug, niveau.slug);
 const nbDispo = liste.filter((c) => c.dispo).length;
 ---
-<Base titre={`${matiere.nom} en ${niveau.nom} : tous les chapitres`} description={`Les chapitres de maths de ${niveau.nom} : vidéos, cours, exercices corrigés et QCM gratuits.`} matiere={matiere.slug} niveau={niveau.slug}>
+<Base titre={`${matiere.nom} en ${niveau.nom} : tous les chapitres`} description={`Les chapitres de ${nomDans(matiere.slug)} de ${niveau.nom}${niveau.sousTitre ? ` (${niveau.sousTitre})` : ''} : vidéos, cours, exercices corrigés et QCM gratuits.`} matiere={matiere.slug} niveau={niveau.slug}>
   <div class="page-feuille cahier">
     <div class="feuille">
       <Bandeau niveau={niveau.slug}>

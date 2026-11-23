@@ -1,7 +1,7 @@
 ---
 import Base from '../../../layouts/Base.astro';
-import { cheminsMatieres } from '../../../lib/matieres-paths';
-export const getStaticPaths = cheminsMatieres;
+import { cheminsMatieresBac } from '../../../lib/matieres-paths';
+export const getStaticPaths = cheminsMatieresBac;
 const { matiere } = Astro.props;
 ---
 <Base titre="Planning de révision du bac par e-mail" description="Chaque semaine jusqu'au bac, un e-mail avec les chapitres à revoir et les exercices à faire. Gratuit." matiere={matiere.slug} actif="planning">

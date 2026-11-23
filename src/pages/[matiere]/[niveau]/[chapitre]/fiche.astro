@@ -15,7 +15,7 @@ const base = `/${p.matiere.slug}/${p.niveau.slug}/${p.chapitre.slug}`;
 <Base titre={`Fiche : ${p.chapitre.data.court} · ${p.niveau.nom}`} description={`Fiche de révision à imprimer : ${p.chapitre.data.titre}.`} matiere={p.matiere.slug} niveau={p.niveau.slug}>
   <div class="page-feuille cahier fiche-a4">
     <div class="feuille" style="gap:20px">
-      <EnteteImpression compact niveau={p.niveau.slug} niveauNom={p.niveau.nom} type="Fiche de révision" titre={p.fiche!.data.titre} adresse={`etmagique.fr${base}/`} />
+      <EnteteImpression compact niveau={p.niveau.slug} niveauNom={p.matiere.slug === 'maths' ? p.niveau.nom : `${p.matiere.nom} · ${p.niveau.nom}`} matiere={p.matiere.slug} type="Fiche de révision" titre={p.fiche!.data.titre} adresse={`etmagique.fr${base}/`} />
       <div class="crumb no-print"><a href={`/${p.matiere.slug}/${p.niveau.slug}/`}>{p.niveau.nom}</a> › <a href={`${base}/`}>{p.chapitre.data.court}</a> › <b>Fiche</b></div>
       <div class="no-print" style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
         <div><span class="k">Fiche de révision · {p.niveau.nom}</span><h1>{p.fiche!.data.titre}</h1></div>

@@ -1,0 +1,102 @@
+# Exercices corrigés, du plus facile au type bac.
+# type d'étape : init (vert), her (orange), conc (bleu), calcul, methode, piege (rouge)
+exercices:
+  - titre: Trouver la base conjuguée
+    difficulte: 1
+    type: application
+    enonce: |
+      Donner la base conjuguée de chaque acide, puis écrire le couple : l'acide méthanoïque $\mathrm{HCOOH}$, l'ion ammonium $\mathrm{NH_4^+}$, l'ion hydrogénocarbonate $\mathrm{HCO_3^-}$.
+    indice: Le joueur lâche son ballon. On enlève un H et une charge +.
+    etapes:
+      - type: methode
+        titre: La règle
+        texte: La base conjuguée s'obtient en retirant un ion $\mathrm{H^+}$ à l'acide, donc un atome H et une charge positive.
+      - type: calcul
+        titre: On applique
+        texte: |
+          $\mathrm{HCOOH} \to \mathrm{HCOO^-}$ (ion méthanoate), $\mathrm{NH_4^+} \to \mathrm{NH_3}$ (ammoniac), $\mathrm{HCO_3^-} \to \mathrm{CO_3^{2-}}$ (ion carbonate).
+      - type: conc
+        titre: Les couples
+        texte: <mark>$\mathrm{HCOOH/HCOO^-}$, $\mathrm{NH_4^+/NH_3}$, $\mathrm{HCO_3^-/CO_3^{2-}}$</mark>, l'acide toujours à gauche.
+
+  - titre: Écrire une équation acide-base
+    difficulte: 1
+    type: methode
+    enonce: |
+      On verse une solution d'ammoniac $\mathrm{NH_3}$ dans de l'acide chlorhydrique, qui contient des ions $\mathrm{H_3O^+}$.
+      Écrire l'équation de la réaction à partir des demi-équations des couples $\mathrm{H_3O^+/H_2O}$ et $\mathrm{NH_4^+/NH_3}$.
+    indice: Qui lance le ballon ? Qui l'attrape ?
+    etapes:
+      - type: methode
+        titre: Les rôles
+        texte: L'ion oxonium $\mathrm{H_3O^+}$ est l'acide (il cède), l'ammoniac $\mathrm{NH_3}$ est la base (il capte).
+      - type: calcul
+        titre: Les deux demi-équations
+        texte: |
+          $$\mathrm{H_3O^+} \rightleftharpoons \mathrm{H_2O} + \mathrm{H^+} \qquad \mathrm{NH_3} + \mathrm{H^+} \rightleftharpoons \mathrm{NH_4^+}$$
+      - type: conc
+        titre: On additionne
+        texte: Les $\mathrm{H^+}$ s'éliminent. <mark>$\mathrm{H_3O^+} + \mathrm{NH_3} \longrightarrow \mathrm{H_2O} + \mathrm{NH_4^+}$</mark>.
+        note: le ballon est passé
+
+  - titre: Du pH à la concentration, et retour
+    difficulte: 1
+    type: application
+    enonce: |
+      1. Un jus d'orange a un pH de 3,5. Calculer $[\mathrm{H_3O^+}]$.
+      2. Une eau de pluie contient $[\mathrm{H_3O^+}] = 2{,}5 \times 10^{-6}\ \mathrm{mol \cdot L^{-1}}$. Calculer son pH. Est-elle acide ?
+    indice: $[\mathrm{H_3O^+}] = c^\circ \times 10^{-\mathrm{pH}}$ et $\mathrm{pH} = -\log([\mathrm{H_3O^+}]/c^\circ)$.
+    etapes:
+      - type: calcul
+        titre: Question 1
+        texte: $[\mathrm{H_3O^+}] = 1 \times 10^{-3{,}5} \approx 3{,}2 \times 10^{-4}\ \mathrm{mol \cdot L^{-1}}$.
+      - type: calcul
+        titre: Question 2
+        texte: $\mathrm{pH} = -\log(2{,}5 \times 10^{-6}) \approx 5{,}6$.
+      - type: conc
+        titre: Conclusion
+        texte: Le pH est inférieur à 7, <mark>l'eau de pluie est légèrement acide</mark> (le dioxyde de carbone de l'air s'y dissout).
+
+  - titre: Diluer un acide fort
+    difficulte: 2
+    type: piege
+    enonce: |
+      Une solution d'acide chlorhydrique a une concentration $c = 1{,}0 \times 10^{-2}\ \mathrm{mol \cdot L^{-1}}$.
+      1. Calculer son pH.
+      2. On la dilue 100 fois. Un élève annonce que le pH est maintenant 200. Corriger.
+    indice: L'acide chlorhydrique est un acide fort. Une unité de pH correspond à un facteur 10.
+    etapes:
+      - type: calcul
+        titre: Le pH de départ
+        texte: Acide fort, donc $[\mathrm{H_3O^+}] = c$ et $\mathrm{pH} = -\log(1{,}0 \times 10^{-2}) = 2{,}0$.
+      - type: piege
+        titre: L'erreur
+        texte: Le pH n'est pas proportionnel à la concentration. Multiplier par 100 le pH n'a aucun sens, et un pH de 200 n'existe pas en solution aqueuse.
+      - type: calcul
+        titre: Le bon calcul
+        texte: Après dilution, $c' = c/100 = 1{,}0 \times 10^{-4}\ \mathrm{mol \cdot L^{-1}}$, donc $\mathrm{pH}' = 4{,}0$.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>Diluer 100 fois un acide fort augmente son pH de 2</mark>.
+
+  - titre: Un acide aminé, la glycine
+    difficulte: 3
+    type: bac
+    enonce: |
+      La glycine a pour formule $\mathrm{H_2N{-}CH_2{-}COOH}$.
+      1. Repérer le groupe acide et le groupe basique.
+      2. Écrire la forme amphion de la glycine.
+      3. Expliquer pourquoi l'amphion est une espèce amphotère.
+    indice: Le groupe acide cède son proton, le groupe basique le capte. Sur une même molécule.
+    etapes:
+      - type: methode
+        titre: Les deux groupes
+        texte: Le groupe carboxyle $\mathrm{{-}COOH}$ est acide, le groupe amine $\mathrm{{-}NH_2}$ est basique.
+      - type: calcul
+        titre: L'amphion
+        texte: Le proton passe du groupe acide au groupe basique de la même molécule. <mark>$\mathrm{H_3N^+{-}CH_2{-}COO^-}$</mark>.
+        note: la passe se fait à soi-même
+      - type: conc
+        titre: Amphotère
+        texte: |
+          L'amphion peut céder le $\mathrm{H^+}$ de $\mathrm{{-}NH_3^+}$ (il est alors acide) ou capter un $\mathrm{H^+}$ sur $\mathrm{{-}COO^-}$ (il est alors base). Il appartient à deux couples : il est amphotère.

@@ -30,7 +30,7 @@ const titre = titrePage ?? (onglet === 'video' ? chapitre.data.titre : `${chapit
 <Base titre={`${titre} · ${niveau.nom}`} description={chapitre.data.description} matiere={matiere.slug} niveau={niveau.slug}>
   <div class="page-feuille cahier">
     <div class="feuille">
-      <EnteteImpression niveau={niveau.slug} niveauNom={niveau.nom} type={{ video: 'Cours', cours: 'Cours', exercices: 'Exercices corrigés', qcm: 'QCM' }[onglet]} titre={chapitre.data.titre} adresse={`etmagique.fr${base}/`} />
+      <EnteteImpression niveau={niveau.slug} niveauNom={matiere.slug === 'maths' ? niveau.nom : `${matiere.nom} · ${niveau.nom}`} matiere={matiere.slug} type={{ video: 'Cours', cours: 'Cours', exercices: 'Exercices corrigés', qcm: 'QCM' }[onglet]} titre={chapitre.data.titre} adresse={`etmagique.fr${base}/`} />
       <Bandeau niveau={niveau.slug} petit>
         <div class="crumb"><a href={`/${matiere.slug}/${niveau.slug}/`}>{niveau.nom}</a> › <b>{chapitre.data.court}</b></div>
         <h1 data-pagefind-meta="title">{chapitre.data.titre}</h1>

@@ -1,9 +1,9 @@
 ---
 import { getCollection } from 'astro:content';
 import Base from '../../../layouts/Base.astro';
-import { cheminsMatieres } from '../../../lib/matieres-paths';
+import { cheminsMatieresBac } from '../../../lib/matieres-paths';
 import { sujetsBac, chapitresAnnales, THEMES, SOURCE_ANNALES } from '../../../lib/annales';
-export const getStaticPaths = cheminsMatieres;
+export const getStaticPaths = cheminsMatieresBac;
 const { matiere } = Astro.props;
 const corrigesMaison = (await getCollection('annales')).filter((a) => a.data.matiere === matiere.slug).sort((a, b) => b.data.annee - a.data.annee);
 const annees = [...new Set(sujetsBac.map((s) => s.annee))];

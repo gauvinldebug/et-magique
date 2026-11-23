@@ -1,7 +1,7 @@
 // Accès au contenu : quels chapitres existent, dans quel ordre, avec quels compléments.
 import { getCollection, getEntry } from 'astro:content';
 import { PROGRAMME } from '../data/programme';
-import { NIVEAUX } from '../data/site';
+import { NIVEAUX, niveauxDe } from '../data/site';
 import { videoDuChapitre } from './youtube';
 
 export const cleChapitre = (matiere: string, niveau: string, chapitre: string) => `${matiere}/${niveau}/${chapitre}`;
@@ -41,7 +41,7 @@ export async function programmeNiveau(matiere: string, niveau: string) {
 /** Tout le menu (pour le méga-menu et le menu téléphone). */
 export async function menuMatiere(matiere: string) {
   const out: Record<string, Awaited<ReturnType<typeof programmeNiveau>>> = {};
-  for (const n of NIVEAUX) out[n.slug] = await programmeNiveau(matiere, n.slug);
+  for (const n of niveauxDe(matiere)) out[n.slug] = await programmeNiveau(matiere, n.slug);
   return out;
 }
 

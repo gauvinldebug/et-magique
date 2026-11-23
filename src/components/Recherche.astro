@@ -1,11 +1,12 @@
 ---
 // Barre de recherche rapide : suggestions pendant la frappe, recherches récentes avant de taper,
 // Entrée = va directement au premier chapitre trouvé.
-interface Props { placeholder?: string; id: string; autofocus?: boolean; compact?: boolean }
-const { placeholder = 'Cherche un chapitre : récurrence, fractions…', id, autofocus = false, compact = false } = Astro.props;
+interface Props { placeholder?: string; id: string; autofocus?: boolean; compact?: boolean; matiere?: string }
+const { id, autofocus = false, compact = false, matiere = 'maths' } = Astro.props;
+const placeholder = Astro.props.placeholder ?? (matiere === 'physique' ? 'Cherche un chapitre : ondes, pH, forces…' : 'Cherche un chapitre : récurrence, fractions…');
 ---
 <div class:list={['rq', { compact }]} data-rq>
-  <form class="s-search" role="search" action="/maths/recherche/" method="get" style="margin:0">
+  <form class="s-search" role="search" action={`/${matiere}/recherche/`} method="get" style="margin:0">
     <input
       type="search" name="q" id={id} placeholder={placeholder} autocomplete="off" spellcheck="false"
       role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls={`${id}-liste`} aria-label="Chercher un chapitre"
