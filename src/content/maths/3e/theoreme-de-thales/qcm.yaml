@@ -1,0 +1,30 @@
+questions:
+  - question: Pour appliquer le théorème de Thalès, il faut…
+    choix: ['deux droites parallèles', 'un angle droit', 'un triangle isocèle', 'deux angles égaux']
+    bonne: 0
+    explication: Thalès repose sur des droites parallèles. L'angle droit, c'est Pythagore.
+    revoir: cours
+
+  - question: Avec $(MN) \parallel (BC)$, $AM = 2$, $AB = 5$ et $BC = 8$, on a $MN = $…
+    choix: ['$3{,}2$', '$20$', '$5$', '$6{,}4$']
+    bonne: 0
+    explication: $\frac{2}{5} = \frac{MN}{8}$, donc $MN = \frac{16}{5} = 3{,}2$.
+    revoir: exercices
+
+  - question: Une figure est agrandie avec un rapport 3. Son aire est multipliée par…
+    choix: ['$9$', '$3$', '$6$', '$27$']
+    bonne: 0
+    explication: Les aires sont multipliées par $k^2 = 9$.
+    revoir: cours
+
+  - question: Pour prouver que deux droites sont parallèles avec Thalès, on utilise…
+    choix: ['la réciproque', 'le théorème', 'la contraposée', 'Pythagore']
+    bonne: 0
+    explication: La réciproque conclut au parallélisme à partir de rapports égaux.
+    revoir: cours
+
+  - question: Un cube de volume 10 cm³ est réduit de moitié ($k = 0{,}5$). Son nouveau volume est…
+    choix: ['$1{,}25$ cm³', '$5$ cm³', '$2{,}5$ cm³', '$0{,}5$ cm³']
+    bonne: 0
+    explication: Les volumes sont multipliés par $k^3 = 0{,}125$.
+    revoir: cours

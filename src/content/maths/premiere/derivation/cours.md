@@ -104,7 +104,7 @@ Soit $\cbleu{f}$ dérivable sur un intervalle $I$.
 
 ## La méthode complète
 
-Pour $\cbleu{f}(\corange{x}) = \corange{x}^3 - 3\corange{x}$ :
+Pour $\cbleu{f}(\corange{x}) = \corange{x}^3 - 3\corange{x}$ (le signe de $\cbleu{f}'$ se lit avec le [second degré](/maths/premiere/second-degre/cours/)) :
 
 $$
 \begin{aligned}

@@ -28,7 +28,7 @@ suivant: limites-de-fonctions
 
 ## Le problème
 
-Dans le chapitre précédent, on a étudié la suite définie par $\uz = 2$ et $\unn = \frac{1}{3}\,\un + 2$. On a démontré qu'elle est croissante et majorée par 3.
+Dans le [chapitre précédent](/maths/terminale/suites-et-recurrence/cours/), on a étudié la suite définie par $\uz = 2$ et $\unn = \frac{1}{3}\,\un + 2$. On a démontré qu'elle est croissante et majorée par 3.
 
 Ses termes valent $2$ ; $2{,}67$ ; $2{,}89$ ; $2{,}96$ ; $2{,}99$… Elle a l'air de « se coller » à 3. Mais <mark>« se coller » n'est pas une définition</mark>. Et toutes les suites ne font pas ça : $\corange{n}^2$ grimpe sans s'arrêter, $(-1)^{\corange{n}}$ saute de $-1$ à $1$ sans se décider.
 

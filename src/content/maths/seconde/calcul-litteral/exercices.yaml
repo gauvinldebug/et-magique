@@ -1,0 +1,103 @@
+# Exercices corrigés, du plus facile au type contrôle.
+# type d'étape : init (vert), her (orange), conc (bleu), calcul, methode, piege (rouge)
+exercices:
+  - titre: Déballer avec les identités
+    difficulte: 1
+    type: application
+    enonce: |
+      Développer et réduire.
+      1. $A = (\corange{x} + 5)^2$
+      2. $B = (3\corange{x} - 2)^2$
+      3. $C = (4 - \corange{x})(4 + \corange{x})$
+    indice: Repère quelle identité remarquable utiliser.
+    etapes:
+      - type: calcul
+        titre: Question 1
+        texte: $A = \corange{x}^2 + 2 \times \corange{x} \times 5 + 25 = \corange{x}^2 + 10\corange{x} + 25$.
+      - type: calcul
+        titre: Question 2
+        texte: $B = 9\corange{x}^2 - 2 \times 3\corange{x} \times 2 + 4 = 9\corange{x}^2 - 12\corange{x} + 4$.
+        note: le double produit
+      - type: conc
+        titre: Question 3
+        texte: <mark>$C = 16 - \corange{x}^2$</mark>.
+
+  - titre: Emballer
+    difficulte: 1
+    type: application
+    enonce: |
+      Factoriser.
+      1. $D = 6\corange{x}^2 + 9\corange{x}$
+      2. $E = 25\corange{x}^2 - 4$
+      3. $F = \corange{x}^2 - 6\corange{x} + 9$
+    indice: Facteur commun pour D, identités pour E et F.
+    etapes:
+      - type: calcul
+        titre: Question 1
+        texte: Le facteur commun est $3\corange{x}$. $D = 3\corange{x}(2\corange{x} + 3)$.
+      - type: calcul
+        titre: Question 2
+        texte: $E = (5\corange{x})^2 - 2^2 = (5\corange{x} - 2)(5\corange{x} + 2)$.
+      - type: conc
+        titre: Question 3
+        texte: <mark>$F = (\corange{x} - 3)^2$</mark>.
+
+  - titre: Équation produit nul
+    difficulte: 2
+    type: methode
+    enonce: |
+      Résoudre dans $\mathbb{R}$.
+      1. $(3\corange{x} + 6)(\corange{x} - 4) = 0$
+      2. $\corange{x}^2 = 5\corange{x}$
+    indice: Pour la 2, ne divise pas par $\corange{x}$ !
+    etapes:
+      - type: calcul
+        titre: Question 1
+        texte: $3\corange{x} + 6 = 0$ ou $\corange{x} - 4 = 0$, donc $S = \{-2\,;4\}$.
+      - type: piege
+        titre: Question 2, le piège
+        texte: >-
+          Diviser par $\corange{x}$ donnerait seulement $\corange{x} = 5$ et ferait perdre la solution $\corange{x} = 0$.
+        note: on perd une solution
+      - type: conc
+        titre: Question 2, la bonne méthode
+        texte: >-
+          $\corange{x}^2 - 5\corange{x} = 0 \iff \corange{x}(\corange{x} - 5) = 0$. <mark>$S = \{0\,;5\}$</mark>.
+
+  - titre: Une inéquation produit
+    difficulte: 2
+    type: methode
+    enonce: |
+      Résoudre $(2\corange{x} - 6)(1 - \corange{x}) \ge 0$ à l'aide d'un tableau de signes.
+    indice: $1 - \corange{x}$ est positif quand $\corange{x} < 1$.
+    etapes:
+      - type: calcul
+        titre: Les signes de chaque facteur
+        texte: >-
+          $2\corange{x} - 6 \ge 0 \iff \corange{x} \ge 3$. $1 - \corange{x} \ge 0 \iff \corange{x} \le 1$.
+      - type: calcul
+        titre: Le tableau
+        texte: >-
+          Avant 1 : $(-) \times (+) = -$. Entre 1 et 3 : $(-) \times (-) = +$. Après 3 : $(+) \times (-) = -$.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>$S = [1\,;3]$</mark>.
+
+  - titre: Une équation quotient
+    difficulte: 3
+    type: piege
+    enonce: |
+      Résoudre $\dfrac{\corange{x}^2 - 9}{\corange{x} + 3} = 0$.
+    indice: Commence par la valeur interdite.
+    etapes:
+      - type: init
+        titre: La valeur interdite
+        texte: Le dénominateur ne doit pas être nul, donc $\corange{x} \ne -3$.
+      - type: calcul
+        titre: Le numérateur
+        texte: $\corange{x}^2 - 9 = (\corange{x} - 3)(\corange{x} + 3) = 0$ donne $\corange{x} = 3$ ou $\corange{x} = -3$.
+      - type: conc
+        titre: Conclusion
+        texte: >-
+          $-3$ est interdit. <mark>$S = \{3\}$</mark>.
+        note: on élimine la valeur interdite

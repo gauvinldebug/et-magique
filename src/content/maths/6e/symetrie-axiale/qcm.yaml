@@ -1,0 +1,30 @@
+questions:
+  - question: Un carré a combien d'axes de symétrie ?
+    choix: ['$4$', '$2$', '$1$', '$0$']
+    bonne: 0
+    explication: Ses deux médianes et ses deux diagonales.
+    revoir: cours
+
+  - question: Si $A'$ est le symétrique de $A$ par rapport à $(d)$, alors $(d)$ est…
+    choix: ['la médiatrice de $[AA'']$', 'parallèle à $[AA'']$', 'égale à $[AA'']$', 'passe par $A$']
+    bonne: 0
+    explication: L'axe est perpendiculaire à $[AA']$ en son milieu.
+    revoir: cours
+
+  - question: La symétrie axiale conserve…
+    choix: ['les longueurs et les angles', 'seulement les longueurs', 'seulement l''orientation', 'rien']
+    bonne: 0
+    explication: Elle retourne la figure, mais ne la déforme pas.
+    revoir: cours
+
+  - question: Un point situé sur l'axe a pour symétrique…
+    choix: ['lui-même', 'aucun point', 'un point de l''autre côté', 'le milieu de l''axe']
+    bonne: 0
+    explication: Il est à distance 0 de l'axe.
+    revoir: exercices
+
+  - question: Laquelle de ces figures n'a pas d'axe de symétrie ?
+    choix: ['un parallélogramme quelconque', 'un rectangle', 'un losange', 'un cercle']
+    bonne: 0
+    explication: Plié en deux, un parallélogramme quelconque ne se superpose jamais.
+    revoir: cours

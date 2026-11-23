@@ -1,0 +1,30 @@
+questions:
+  - question: Le périmètre d'un rectangle de 5 m sur 3 m est…
+    choix: ['$16$ m', '$15$ m', '$8$ m', '$15$ m²']
+    bonne: 0
+    explication: $2 \times (5 + 3) = 16$ m.
+    revoir: cours
+
+  - question: L'aire d'un rectangle de 5 m sur 3 m est…
+    choix: ['$15$ m²', '$16$ m²', '$8$ m²', '$15$ m']
+    bonne: 0
+    explication: $5 \times 3 = 15$ m², avec une unité d'aire.
+    revoir: cours
+
+  - question: $1\text{ m}^2$ est égal à…
+    choix: ['$100\text{ dm}^2$', '$10\text{ dm}^2$', '$1\,000\text{ dm}^2$', '$1\text{ dm}^2$']
+    bonne: 0
+    explication: On décale de deux rangs pour les aires.
+    revoir: exercices
+
+  - question: L'aire d'un triangle de base 8 et de hauteur 5 est…
+    choix: ['$20$', '$40$', '$13$', '$26$']
+    bonne: 0
+    explication: $\frac{8 \times 5}{2} = 20$.
+    revoir: cours
+
+  - question: Le périmètre d'un cercle de rayon 2 cm est environ…
+    choix: ['$12{,}6$ cm', '$6{,}3$ cm', '$12{,}6$ cm²', '$4$ cm']
+    bonne: 0
+    explication: $2 \times \pi \times 2 \approx 12{,}57$ cm.
+    revoir: cours

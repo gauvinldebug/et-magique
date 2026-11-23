@@ -16,7 +16,7 @@ suivant: continuite
 
 ## Le problème
 
-Avec les suites, une seule question : que se passe-t-il quand $\corange{n}$ devient très grand ? Avec une fonction, on peut se poser la question **à plusieurs endroits** : quand $\corange{x}$ tend vers $+\infty$, vers $-\infty$, mais aussi quand $\corange{x}$ s'approche d'une valeur interdite.
+Avec les [suites](/maths/terminale/limites-de-suites/cours/), une seule question : que se passe-t-il quand $\corange{n}$ devient très grand ? Avec une fonction, on peut se poser la question **à plusieurs endroits** : quand $\corange{x}$ tend vers $+\infty$, vers $-\infty$, mais aussi quand $\corange{x}$ s'approche d'une valeur interdite.
 
 Prends $\cbleu{f}(\corange{x}) = \dfrac{1}{\corange{x} - 2}$. En $\corange{x} = 2$, on ne peut pas calculer. Mais que fait la courbe **près** de 2 ? Et très loin à droite ?
 

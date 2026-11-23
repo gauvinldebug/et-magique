@@ -1,0 +1,76 @@
+# Exercices corrigés, du plus facile au type contrôle.
+# type d'étape : init (vert), her (orange), conc (bleu), calcul, methode, piege (rouge)
+exercices:
+  - titre: Ranger le panier
+    difficulte: 1
+    type: application
+    enonce: |
+      Réduire.
+      1. $A = 4\corange{x} + 7 - \corange{x} - 2$
+      2. $B = 3\corange{x}^2 + 5\corange{x} - \corange{x}^2 + \corange{x}$
+      3. $C = 2\corange{x} \times 5\corange{x}$
+    indice: Regroupe les termes de même nature.
+    etapes:
+      - type: calcul
+        titre: Question 1
+        texte: $A = 3\corange{x} + 5$.
+      - type: calcul
+        titre: Question 2
+        texte: $B = 2\corange{x}^2 + 6\corange{x}$.
+        note: on ne mélange pas
+      - type: conc
+        titre: Question 3
+        texte: <mark>$C = 10\corange{x}^2$</mark>.
+
+  - titre: Substituer
+    difficulte: 1
+    type: application
+    enonce: |
+      Calculer $E = 3\corange{x}^2 - 2\corange{x} + 1$ pour $\corange{x} = 2$, puis pour $\corange{x} = -1$.
+    indice: Mets des parenthèses autour de $-1$.
+    etapes:
+      - type: calcul
+        titre: Pour x = 2
+        texte: $E = 3 \times 4 - 4 + 1 = 9$.
+      - type: conc
+        titre: Pour x = -1
+        texte: <mark>$E = 3 \times (-1)^2 - 2 \times (-1) + 1 = 3 + 2 + 1 = 6$</mark>.
+
+  - titre: Développer et réduire
+    difficulte: 2
+    type: methode
+    enonce: |
+      Développer et réduire.
+      1. $F = 3(2\corange{x} - 5) - 4(\corange{x} - 1)$
+      2. $G = (2\corange{x} + 3)(\corange{x} - 4)$
+    indice: Attention au $-4$ devant la deuxième parenthèse de F.
+    etapes:
+      - type: piege
+        titre: Question 1
+        texte: >-
+          $F = 6\corange{x} - 15 - 4\corange{x} + 4 = 2\corange{x} - 11$. Le $-4$ multiplie aussi le $-1$ : $-4 \times (-1) = +4$.
+        note: moins par moins
+      - type: conc
+        titre: Question 2
+        texte: >-
+          $G = 2\corange{x}^2 - 8\corange{x} + 3\corange{x} - 12$, <mark>$G = 2\corange{x}^2 - 5\corange{x} - 12$</mark>.
+
+  - titre: Le tour de magie
+    difficulte: 3
+    type: methode
+    enonce: |
+      Un magicien dit : « Choisis un nombre. Ajoute 5. Multiplie par 2. Retire 10. Divise par 2. Je devine ton résultat ! »
+      1. Tester avec 7.
+      2. Prouver le tour pour n'importe quel nombre.
+    indice: Appelle $\corange{n}$ le nombre de départ.
+    etapes:
+      - type: calcul
+        titre: Question 1
+        texte: $7 + 5 = 12$, $24$, $14$, $7$. On retrouve 7.
+      - type: calcul
+        titre: Question 2
+        texte: >-
+          $\corange{n} + 5$, puis $2(\corange{n} + 5) = 2\corange{n} + 10$, puis $2\corange{n}$, puis $\corange{n}$.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>On retombe toujours sur le nombre de départ</mark>, le magicien n'a rien à deviner.

@@ -1,0 +1,30 @@
+questions:
+  - question: Le module de $3 - 4i$ est…
+    choix: ['$5$', '$7$', '$-1$', '$25$']
+    bonne: 0
+    explication: $\sqrt{9 + 16} = 5$.
+    revoir: cours
+
+  - question: Un argument de $-2i$ est…
+    choix: ['$-\frac{\pi}{2}$', '$\frac{\pi}{2}$', '$\pi$', '$0$']
+    bonne: 0
+    explication: Le point est sur l'axe imaginaire, vers le bas.
+    revoir: cours
+
+  - question: $e^{i\pi}$ est égal à…
+    choix: ['$-1$', '$1$', '$i$', '$0$']
+    bonne: 0
+    explication: Un demi-tour à partir de 1.
+    revoir: cours
+
+  - question: Si $|z| = 2$ et $\arg z = \frac{\pi}{6}$, alors $z^3$ a pour module et argument…
+    choix: ['$8$ et $\frac{\pi}{2}$', '$6$ et $\frac{\pi}{2}$', '$8$ et $\frac{\pi}{6}$', '$2$ et $\frac{\pi}{2}$']
+    bonne: 0
+    explication: Module puissance 3, argument multiplié par 3.
+    revoir: exercices
+
+  - question: Les racines quatrièmes de l'unité sont…
+    choix: ['$1$, $i$, $-1$, $-i$', '$1$ et $-1$', '$1$, $2$, $3$, $4$', '$i$ et $-i$']
+    bonne: 0
+    explication: Quatre quarts de tour, les sommets d'un carré.
+    revoir: cours

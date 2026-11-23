@@ -18,7 +18,7 @@ suivant: fonctions-trigonometriques
 
 Un capital placé à 5 % par an est multiplié par $1{,}05$ chaque année. Au bout de combien d'années aura-t-il doublé ? Il faut résoudre $1{,}05^{\corange{n}} = 2$. L'inconnue est **dans l'exposant** : aucune opération connue ne permet de l'en faire descendre.
 
-Même problème avec $\mathrm{e}^{\corange{x}} = 5$. On sait que la solution existe (l'exponentielle est continue, strictement croissante, et prend toutes les valeurs positives), mais comment l'écrire ?
+Même problème avec $\mathrm{e}^{\corange{x}} = 5$ (revois la [fonction exponentielle](/maths/premiere/fonction-exponentielle/cours/) si besoin). On sait que la solution existe (l'exponentielle est continue, strictement croissante, et prend toutes les valeurs positives), mais comment l'écrire ?
 
 ## L'idée : le chemin retour
 

@@ -16,7 +16,7 @@ suivant: logarithme-neperien
 
 ## Le problème
 
-En première, tu as appris à dériver pour trouver les variations d'une fonction : $\cbleu{f}' > 0$, ça monte ; $\cbleu{f}' < 0$, ça descend. Mais deux courbes peuvent monter toutes les deux, l'une de plus en plus vite, l'autre de plus en plus lentement. Comment les distinguer ? Et comment dériver $\mathrm{e}^{3\corange{x}^2 + 1}$ ou $\sqrt{1 + \corange{x}^2}$ ?
+En première, tu as [appris à dériver](/maths/premiere/derivation/cours/) pour trouver les variations d'une fonction : $\cbleu{f}' > 0$, ça monte ; $\cbleu{f}' < 0$, ça descend. Mais deux courbes peuvent monter toutes les deux, l'une de plus en plus vite, l'autre de plus en plus lentement. Comment les distinguer ? Et comment dériver $\mathrm{e}^{3\corange{x}^2 + 1}$ ou $\sqrt{1 + \corange{x}^2}$ ?
 
 ## L'idée : la voiture sur la route de montagne
 

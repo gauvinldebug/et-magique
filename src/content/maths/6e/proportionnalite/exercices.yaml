@@ -1,0 +1,75 @@
+# Exercices corrigés, du plus facile au type contrôle.
+# type d'étape : init (vert), her (orange), conc (bleu), calcul, methode, piege (rouge)
+exercices:
+  - titre: Proportionnel ou pas ?
+    difficulte: 1
+    type: piege
+    enonce: |
+      Dire si chaque situation est une situation de proportionnalité.
+      1. Le prix de l'essence et le nombre de litres achetés.
+      2. La taille d'un enfant et son âge.
+      3. Le périmètre d'un carré et la longueur de son côté.
+    indice: Si une grandeur double, l'autre double-t-elle ?
+    etapes:
+      - type: calcul
+        titre: Question 1
+        texte: Oui, le prix au litre est le coefficient.
+      - type: piege
+        titre: Question 2
+        texte: >-
+          Non. On ne grandit pas toujours au même rythme, et on arrête de grandir.
+        note: piège classique
+      - type: conc
+        titre: Question 3
+        texte: <mark>Oui, le périmètre vaut toujours 4 fois le côté</mark>.
+
+  - titre: Compléter un tableau
+    difficulte: 1
+    type: application
+    enonce: |
+      Un robinet débite 12 litres en 2 minutes. Compléter : combien de litres en 1 min, 5 min et 10 min ?
+    indice: Passe d'abord par 1 minute.
+    etapes:
+      - type: calcul
+        titre: Passage à l'unité
+        texte: En 1 min, $12 \div 2 = 6$ litres.
+      - type: conc
+        titre: Les autres
+        texte: <mark>5 min, 30 litres ; 10 min, 60 litres</mark>.
+
+  - titre: Pourcentages
+    difficulte: 2
+    type: methode
+    enonce: |
+      Un jean coûte 45 €. Il est soldé à $-20\,\%$.
+      1. Calculer le montant de la réduction.
+      2. Calculer le nouveau prix.
+    indice: 20 % de 45, c'est $45 \times \frac{20}{100}$.
+    etapes:
+      - type: calcul
+        titre: Question 1
+        texte: $45 \times \frac{20}{100} = 9$ €.
+      - type: conc
+        titre: Question 2
+        texte: <mark>$45 - 9 = 36$ €</mark>.
+
+  - titre: La carte au trésor
+    difficulte: 3
+    type: methode
+    enonce: |
+      Sur une carte à l'échelle $\frac{1}{25\,000}$, deux villages sont à 8 cm l'un de l'autre.
+      1. Quelle est la distance réelle, en km ?
+      2. Un sentier réel de 3 km mesure combien sur la carte ?
+    indice: 1 cm sur la carte représente 25 000 cm en vrai.
+    etapes:
+      - type: calcul
+        titre: Question 1
+        texte: >-
+          $8 \times 25\,000 = 200\,000$ cm, soit 2 000 m, soit 2 km.
+      - type: calcul
+        titre: Question 2, conversion
+        texte: 3 km $= 300\,000$ cm.
+        note: même unité
+      - type: conc
+        titre: Question 2
+        texte: <mark>$300\,000 \div 25\,000 = 12$ cm sur la carte</mark>.

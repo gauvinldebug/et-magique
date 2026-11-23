@@ -1,0 +1,31 @@
+questions:
+  - question: Si $\cbleu{f}(5) = 12$, alors…
+    choix: ['12 est l''image de 5', '5 est l''image de 12', '12 est un antécédent de 5', '$\cbleu{f}(12) = 5$']
+    bonne: 0
+    explication: >-
+      On part de 5, on obtient 12 : c'est son image.
+    revoir: cours
+
+  - question: Avec $\cbleu{f}(\corange{x}) = 3\corange{x} - 1$, $\cbleu{f}(4)$ vaut…
+    choix: ['$11$', '$12$', '$7$', '$13$']
+    bonne: 0
+    explication: $3 \times 4 - 1 = 11$.
+    revoir: cours
+
+  - question: Pour lire l'image d'un nombre sur un graphique, on part…
+    choix: ['de l''axe horizontal', 'de l''axe vertical', 'de l''origine', 'du point le plus haut']
+    bonne: 0
+    explication: L'image se lit sur l'axe vertical, en partant de l'axe horizontal.
+    revoir: cours
+
+  - question: Un nombre peut avoir…
+    choix: ['plusieurs antécédents', 'plusieurs images', 'aucune image', 'deux images exactement']
+    bonne: 0
+    explication: L'image est unique, mais une valeur peut être atteinte plusieurs fois.
+    revoir: exercices
+
+  - question: Avec $\cbleu{f}(\corange{x}) = \corange{x}^2$, l'image de $-3$ est…
+    choix: ['$9$', '$-9$', '$-6$', '$6$']
+    bonne: 0
+    explication: $(-3)^2 = 9$.
+    revoir: exercices

@@ -28,7 +28,7 @@ En bas, la bille tombe dans une case numérotée par **le nombre de fois où ell
 
 - Chaque clou est une **épreuve de Bernoulli** : deux issues, succès (droite) ou échec (gauche).
 - La descente complète est un **schéma de Bernoulli** : $n$ épreuves identiques et indépendantes.
-- Pour arriver dans la case $k$, la bille doit faire $k$ rebonds à droite parmi $n$ : il y a <mark>$\binom{n}{k}$ chemins</mark> qui y mènent.
+- Pour arriver dans la case $k$, la bille doit faire $k$ rebonds à droite parmi $n$ : il y a <mark>$\binom{n}{k}$ chemins</mark> qui y mènent (voir le chapitre [Dénombrement](/maths/terminale/denombrement/cours/)).
 
 ## Épreuve et schéma de Bernoulli
 

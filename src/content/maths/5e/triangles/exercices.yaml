@@ -1,0 +1,73 @@
+# Exercices corrigés, du plus facile au type contrôle.
+# type d'étape : init (vert), her (orange), conc (bleu), calcul, methode, piege (rouge)
+exercices:
+  - titre: Triangle ou pas ?
+    difficulte: 1
+    type: application
+    enonce: |
+      Peut-on construire un triangle avec ces longueurs ?
+      1. 5 cm, 6 cm, 9 cm
+      2. 2 cm, 3 cm, 6 cm
+      3. 4 cm, 7 cm, 11 cm
+    indice: Compare le plus grand côté à la somme des deux autres.
+    etapes:
+      - type: calcul
+        titre: Question 1
+        texte: $5 + 6 = 11 > 9$. Oui.
+      - type: calcul
+        titre: Question 2
+        texte: $2 + 3 = 5 < 6$. Non, les baguettes ne se rejoignent pas.
+      - type: conc
+        titre: Question 3
+        texte: >-
+          $4 + 7 = 11$. <mark>Le triangle est aplati : les trois points sont alignés</mark>.
+        note: cas limite
+
+  - titre: Le troisième angle
+    difficulte: 1
+    type: application
+    enonce: |
+      1. Dans un triangle $ABC$, $\widehat{A} = 48°$ et $\widehat{B} = 71°$. Calculer $\widehat{C}$.
+      2. Dans un triangle $DEF$ rectangle en $D$, $\widehat{E} = 34°$. Calculer $\widehat{F}$.
+    indice: La somme fait toujours 180°.
+    etapes:
+      - type: calcul
+        titre: Question 1
+        texte: $\widehat{C} = 180° - 48° - 71° = 61°$.
+      - type: conc
+        titre: Question 2
+        texte: <mark>$\widehat{F} = 90° - 34° = 56°$</mark>.
+
+  - titre: Le triangle isocèle
+    difficulte: 2
+    type: methode
+    enonce: |
+      $RST$ est isocèle en $R$ et $\widehat{R} = 40°$. Calculer $\widehat{S}$ et $\widehat{T}$.
+    indice: Les deux angles à la base sont égaux.
+    etapes:
+      - type: calcul
+        titre: Les deux angles de la base
+        texte: $\widehat{S} + \widehat{T} = 180° - 40° = 140°$.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>$\widehat{S} = \widehat{T} = 70°$</mark>.
+
+  - titre: Le point à égale distance
+    difficulte: 3
+    type: methode
+    enonce: |
+      Trois maisons $A$, $B$ et $C$ ne sont pas alignées. On veut installer un lampadaire à **égale distance** des trois maisons.
+      1. Sur quelle droite doit-il être pour être à égale distance de $A$ et $B$ ?
+      2. Comment trouver l'emplacement exact ?
+    indice: Pense à la médiatrice.
+    etapes:
+      - type: calcul
+        titre: Question 1
+        texte: Sur la médiatrice de $[AB]$.
+      - type: calcul
+        titre: Question 2
+        texte: >-
+          Il doit aussi être sur la médiatrice de $[BC]$. On trace les deux médiatrices, elles se coupent en un point.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>C'est le centre du cercle qui passe par les trois maisons</mark>.

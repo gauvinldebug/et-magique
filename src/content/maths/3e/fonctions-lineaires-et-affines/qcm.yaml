@@ -1,0 +1,30 @@
+questions:
+  - question: Laquelle de ces fonctions est linéaire ?
+    choix: ['$\corange{x} \longmapsto -4\corange{x}$', '$\corange{x} \longmapsto 4\corange{x} + 1$', '$\corange{x} \longmapsto \corange{x}^2$', '$\corange{x} \longmapsto 4$']
+    bonne: 0
+    explication: Une fonction linéaire s'écrit $a\corange{x}$, sans partie fixe.
+    revoir: cours
+
+  - question: La droite représentant $\cbleu{f}(\corange{x}) = 2\corange{x} - 5$ coupe l'axe des ordonnées en…
+    choix: ['$(0\,;-5)$', '$(0\,;2)$', '$(-5\,;0)$', '$(2{,}5\,;0)$']
+    bonne: 0
+    explication: L'ordonnée à l'origine est $b = -5$.
+    revoir: cours
+
+  - question: Si $\cbleu{f}(\corange{x}) = 3\corange{x} + 2$, l'antécédent de 14 est…
+    choix: ['$4$', '$44$', '$\frac{16}{3}$', '$12$']
+    bonne: 0
+    explication: $3\corange{x} + 2 = 14 \iff \corange{x} = 4$.
+    revoir: exercices
+
+  - question: Une fonction affine telle que $\cbleu{f}(0) = 1$ et $\cbleu{f}(2) = 7$ a pour coefficient directeur…
+    choix: ['$3$', '$6$', '$7$', '$4$']
+    bonne: 0
+    explication: $\frac{7 - 1}{2 - 0} = 3$.
+    revoir: cours
+
+  - question: La droite d'une fonction affine avec $a = -1$…
+    choix: ['descend', 'monte', 'est horizontale', 'passe forcément par l''origine']
+    bonne: 0
+    explication: Quand $\corange{x}$ augmente de 1, l'image diminue de 1.
+    revoir: cours

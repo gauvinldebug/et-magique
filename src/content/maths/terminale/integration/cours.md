@@ -24,7 +24,7 @@ Ces deux questions ont la même réponse : une <span class="o">intégrale</span>
 
 ## L'idée : le compteur kilométrique
 
-Dans le chapitre précédent, on regardait le **compteur de vitesse**. Regarde maintenant l'autre cadran : le **compteur kilométrique**. Il additionne, instant après instant, tous les petits bouts de chemin parcourus.
+Dans le [chapitre précédent](/maths/terminale/primitives-et-equations-differentielles/cours/), on regardait le **compteur de vitesse**. Regarde maintenant l'autre cadran : le **compteur kilométrique**. Il additionne, instant après instant, tous les petits bouts de chemin parcourus.
 
 Sur le graphique de la vitesse, chaque petit bout de chemin, c'est un rectangle très fin de hauteur $v(t)$ et de largeur minuscule. Les additionner, c'est remplir <mark>l'aire sous la courbe</mark>.
 

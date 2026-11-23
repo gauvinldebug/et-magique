@@ -1,0 +1,84 @@
+# Exercices corrigés, du plus facile au type bac.
+# type d'étape : init (vert), her (orange), conc (bleu), calcul, methode, piege (rouge)
+exercices:
+  - titre: Proportion de proportion
+    difficulte: 1
+    type: application
+    enonce: |
+      Dans un lycée, 60 % des élèves sont des filles, et 30 % des filles font du théâtre. Quelle proportion des élèves du lycée sont des filles qui font du théâtre ?
+    indice: On multiplie les deux proportions.
+    etapes:
+      - type: calcul
+        titre: Le calcul
+        texte: $0{,}6 \times 0{,}3 = 0{,}18$.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>18 % des élèves</mark>.
+
+  - titre: Un taux d'évolution
+    difficulte: 1
+    type: methode
+    enonce: |
+      Le prix d'un abonnement passe de 80 € à 92 €. Calculer le taux d'évolution.
+    indice: On divise par la valeur de départ.
+    etapes:
+      - type: calcul
+        titre: Le calcul
+        texte: $t = \frac{92 - 80}{80} = \frac{12}{80} = 0{,}15$.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>Le prix a augmenté de 15 %</mark>.
+
+  - titre: Deux hausses de 10 %
+    difficulte: 2
+    type: piege
+    enonce: |
+      Un loyer augmente de 10 % deux années de suite. Quel est le taux d'évolution global ?
+    indice: Ce n'est pas 20 %.
+    etapes:
+      - type: calcul
+        titre: Le coefficient global
+        texte: $1{,}1 \times 1{,}1 = 1{,}21$.
+      - type: piege
+        titre: Le taux
+        texte: $t = 1{,}21 - 1 = 0{,}21$, et pas $0{,}2$.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>Le loyer a augmenté de 21 %</mark>.
+
+  - titre: Revenir au prix de départ
+    difficulte: 2
+    type: application
+    enonce: |
+      Un article est soldé à $-20\,\%$. Quelle hausse faut-il appliquer après les soldes pour revenir au prix initial ?
+    indice: Le coefficient réciproque est $\frac{1}{0{,}8}$.
+    etapes:
+      - type: calcul
+        titre: Le coefficient réciproque
+        texte: $\frac{1}{0{,}8} = 1{,}25$.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>Il faut une hausse de 25 %</mark>.
+
+  - titre: Des indices base 100
+    difficulte: 3
+    type: bac
+    enonce: |
+      Le prix moyen d'un panier de courses était de 250 € en 2020 et de 290 € en 2025.
+      1. Calculer l'indice du prix en 2025, base 100 en 2020.
+      2. En 2026, l'indice vaut 121,8. Calculer le prix du panier en 2026.
+      3. Calculer le taux d'évolution entre 2025 et 2026.
+    indice: $I = 100 \times \frac{V}{V_0}$.
+    etapes:
+      - type: calcul
+        titre: Question 1
+        texte: $I = 100 \times \frac{290}{250} = 116$.
+      - type: calcul
+        titre: Question 2
+        texte: $V = 250 \times \frac{121{,}8}{100} = 304{,}50$ €.
+      - type: calcul
+        titre: Question 3
+        texte: $t = \frac{304{,}5 - 290}{290} = \frac{14{,}5}{290} = 0{,}05$.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>Le prix a augmenté de 5 % entre 2025 et 2026</mark>.

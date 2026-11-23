@@ -1,0 +1,74 @@
+# Exercices corrigés, du plus facile au type contrôle.
+# type d'étape : init (vert), her (orange), conc (bleu), calcul, methode, piege (rouge)
+exercices:
+  - titre: Est-ce une solution ?
+    difficulte: 1
+    type: application
+    enonce: |
+      Le nombre 4 est-il solution de $2\corange{x} + 3 = 5\corange{x} - 9$ ? Et le nombre 2 ?
+    indice: Calcule chaque membre séparément.
+    etapes:
+      - type: calcul
+        titre: Avec 4
+        texte: À gauche $8 + 3 = 11$, à droite $20 - 9 = 11$. 4 est solution.
+      - type: conc
+        titre: Avec 2
+        texte: >-
+          <mark>À gauche 7, à droite 1 : 2 n'est pas solution</mark>.
+
+  - titre: Résoudre pas à pas
+    difficulte: 1
+    type: methode
+    enonce: |
+      Résoudre.
+      1. $\corange{x} + 7 = 3$
+      2. $4\corange{x} = -10$
+      3. $6\corange{x} - 5 = 2\corange{x} + 7$
+    indice: Un seul mouvement de balance pour les deux premières.
+    etapes:
+      - type: calcul
+        titre: Questions 1 et 2
+        texte: $\corange{x} = 3 - 7 = -4$. $\corange{x} = \frac{-10}{4} = -2{,}5$.
+      - type: calcul
+        titre: Question 3
+        texte: $4\corange{x} - 5 = 7$, puis $4\corange{x} = 12$.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>$\corange{x} = 3$</mark>. Vérification, $18 - 5 = 13$ et $6 + 7 = 13$.
+
+  - titre: Avec des parenthèses
+    difficulte: 2
+    type: piege
+    enonce: |
+      Résoudre $3(\corange{x} - 2) = 5 - (\corange{x} + 3)$.
+    indice: Développe d'abord chaque membre.
+    etapes:
+      - type: piege
+        titre: Développer
+        texte: >-
+          À gauche $3\corange{x} - 6$. À droite $5 - \corange{x} - 3 = 2 - \corange{x}$. Le moins change les deux signes.
+        note: attention au moins
+      - type: calcul
+        titre: Résoudre
+        texte: $3\corange{x} - 6 = 2 - \corange{x} \iff 4\corange{x} = 8$.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>$\corange{x} = 2$</mark>.
+
+  - titre: Les âges
+    difficulte: 3
+    type: methode
+    enonce: |
+      Emma a 12 ans et sa mère 40 ans. Dans combien d'années la mère aura-t-elle le double de l'âge d'Emma ?
+    indice: Note $\corange{x}$ le nombre d'années, et écris les deux âges futurs.
+    etapes:
+      - type: init
+        titre: L'inconnue
+        texte: Dans $\corange{x}$ années, Emma aura $12 + \corange{x}$ ans et sa mère $40 + \corange{x}$ ans.
+      - type: calcul
+        titre: L'équation
+        texte: >-
+          $40 + \corange{x} = 2(12 + \corange{x}) \iff 40 + \corange{x} = 24 + 2\corange{x} \iff \corange{x} = 16$.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>Dans 16 ans</mark>. Emma aura 28 ans, sa mère 56 ans, le double.

@@ -1,0 +1,65 @@
+# Exercices corrigés, du plus facile au type contrôle.
+# type d'étape : init (vert), her (orange), conc (bleu), calcul, methode, piege (rouge)
+exercices:
+  - titre: Moyenne d'une liste
+    difficulte: 1
+    type: application
+    enonce: |
+      Voici les points marqués par une joueuse lors de 5 matchs : 12, 8, 15, 10, 20. Calculer sa moyenne de points par match.
+    indice: Additionne, puis divise par le nombre de matchs.
+    etapes:
+      - type: calcul
+        titre: La somme
+        texte: $12 + 8 + 15 + 10 + 20 = 65$.
+      - type: conc
+        titre: La moyenne
+        texte: <mark>$65 \div 5 = 13$ points par match</mark>.
+
+  - titre: Fréquences
+    difficulte: 1
+    type: methode
+    enonce: |
+      Dans un collège de 400 élèves, 140 viennent à pied, 180 en bus et 80 à vélo. Calculer la fréquence de chaque moyen de transport, en pourcentage.
+    indice: Effectif divisé par 400.
+    etapes:
+      - type: calcul
+        titre: Les calculs
+        texte: $\frac{140}{400} = 0{,}35$ ; $\frac{180}{400} = 0{,}45$ ; $\frac{80}{400} = 0{,}2$.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>35 % à pied, 45 % en bus, 20 % à vélo</mark>. Total, 100 %.
+
+  - titre: Diagramme circulaire
+    difficulte: 2
+    type: application
+    enonce: |
+      Avec les données de l'exercice précédent, calculer l'angle de chaque secteur d'un diagramme circulaire.
+    indice: Angle = fréquence × 360°.
+    etapes:
+      - type: calcul
+        titre: Les angles
+        texte: $0{,}35 \times 360 = 126°$ ; $0{,}45 \times 360 = 162°$ ; $0{,}2 \times 360 = 72°$.
+      - type: conc
+        titre: Vérification
+        texte: <mark>$126 + 162 + 72 = 360°$</mark>, le disque est complet.
+
+  - titre: Moyenne d'un tableau
+    difficulte: 3
+    type: piege
+    enonce: |
+      Voici les notes d'un contrôle.
+      <table><tbody><tr><td>Note</td><td>8</td><td>10</td><td>12</td><td>15</td></tr><tr><td>Effectif</td><td>3</td><td>5</td><td>8</td><td>4</td></tr></tbody></table>
+      Calculer la moyenne de la classe.
+    indice: Il y a 20 élèves, pas 4.
+    etapes:
+      - type: piege
+        titre: Le piège
+        texte: >-
+          Faire $\frac{8 + 10 + 12 + 15}{4}$ oublie que chaque note est obtenue par plusieurs élèves.
+        note: chaque note compte plusieurs fois
+      - type: calcul
+        titre: Le bon calcul
+        texte: $\frac{8 \times 3 + 10 \times 5 + 12 \times 8 + 15 \times 4}{20} = \frac{24 + 50 + 96 + 60}{20} = \frac{230}{20}$.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>La moyenne est 11,5</mark>.

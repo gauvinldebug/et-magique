@@ -1,0 +1,70 @@
+# Exercices corrigés, du plus facile au type contrôle.
+# type d'étape : init (vert), her (orange), conc (bleu), calcul, methode, piege (rouge)
+exercices:
+  - titre: Rectangle et carré
+    difficulte: 1
+    type: application
+    enonce: |
+      1. Calculer le périmètre et l'aire d'un rectangle de 9 cm sur 4 cm.
+      2. Calculer le périmètre et l'aire d'un carré de 6 cm de côté.
+    indice: Périmètre en cm, aire en cm².
+    etapes:
+      - type: calcul
+        titre: Question 1
+        texte: $\mathcal{P} = 2 \times (9 + 4) = 26$ cm et $\mathcal{A} = 9 \times 4 = 36$ cm².
+      - type: conc
+        titre: Question 2
+        texte: <mark>$\mathcal{P} = 24$ cm et $\mathcal{A} = 36$ cm²</mark>. Même aire, périmètres différents.
+
+  - titre: Aire d'un triangle
+    difficulte: 1
+    type: methode
+    enonce: |
+      Un triangle a une base de 10 cm et une hauteur relative à cette base de 7 cm. Calculer son aire.
+    indice: C'est la moitié d'un rectangle de 10 cm sur 7 cm.
+    etapes:
+      - type: conc
+        titre: Le calcul
+        texte: <mark>$\mathcal{A} = \frac{10 \times 7}{2} = 35$ cm²</mark>.
+
+  - titre: Cercle et disque
+    difficulte: 2
+    type: application
+    enonce: |
+      Une table ronde a un diamètre de 1 m.
+      1. Calculer la longueur de son contour, arrondie au cm.
+      2. Calculer l'aire de son plateau, arrondie au dm².
+    indice: Le rayon est la moitié du diamètre.
+    etapes:
+      - type: calcul
+        titre: Question 1
+        texte: $\mathcal{P} = \pi \times 1 \approx 3{,}14$ m.
+      - type: calcul
+        titre: Le rayon
+        texte: $r = 0{,}5$ m $= 5$ dm.
+        note: rayon, pas diamètre
+      - type: conc
+        titre: Question 2
+        texte: <mark>$\mathcal{A} = \pi \times 5 \times 5 \approx 78{,}54$, soit environ 79 dm²</mark>.
+
+  - titre: Conversions d'aires
+    difficulte: 3
+    type: piege
+    enonce: |
+      Convertir.
+      1. $3\text{ m}^2$ en $\text{dm}^2$
+      2. $45\,000\text{ cm}^2$ en $\text{m}^2$
+      3. Un champ de $2{,}5$ ha, en $\text{m}^2$
+    indice: Deux chiffres par colonne.
+    etapes:
+      - type: piege
+        titre: Question 1
+        texte: >-
+          $3\text{ m}^2 = 300\text{ dm}^2$ (et pas 30).
+        note: deux rangs
+      - type: calcul
+        titre: Question 2
+        texte: $45\,000\text{ cm}^2 = 4{,}5\text{ m}^2$ (on recule de 4 rangs).
+      - type: conc
+        titre: Question 3
+        texte: <mark>$2{,}5\text{ ha} = 25\,000\text{ m}^2$</mark>.

@@ -1,0 +1,30 @@
+questions:
+  - question: 4 croissants coûtent 5 €. 8 croissants coûtent…
+    choix: ['$10$ €', '$9$ €', '$20$ €', '$13$ €']
+    bonne: 0
+    explication: 2 fois plus de croissants, 2 fois plus cher.
+    revoir: cours
+
+  - question: Ce tableau est-il proportionnel ? 2 → 6 ; 5 → 15 ; 7 → 22
+    choix: ['non', 'oui']
+    bonne: 0
+    explication: $2 \times 3 = 6$ et $5 \times 3 = 15$, mais $7 \times 3 = 21$, pas 22.
+    revoir: exercices
+
+  - question: 25 % de 80 est égal à…
+    choix: ['$20$', '$25$', '$40$', '$32$']
+    bonne: 0
+    explication: 25 %, c'est un quart, $80 \div 4 = 20$.
+    revoir: cours
+
+  - question: 5 stylos coûtent 4 €. Le prix d'un stylo est…
+    choix: ['$0{,}80$ €', '$1{,}25$ €', '$20$ €', '$0{,}50$ €']
+    bonne: 0
+    explication: Passage à l'unité, $4 \div 5 = 0{,}8$.
+    revoir: cours
+
+  - question: Sur un plan à l'échelle $\frac{1}{100}$, 3 cm représentent…
+    choix: ['$3$ m', '$30$ cm', '$300$ m', '$3$ km']
+    bonne: 0
+    explication: $3 \times 100 = 300$ cm, soit 3 m.
+    revoir: cours

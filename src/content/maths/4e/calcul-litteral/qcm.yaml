@@ -1,0 +1,30 @@
+questions:
+  - question: La forme réduite de $6\corange{x} - 2 + \corange{x} + 5$ est…
+    choix: ['$7\corange{x} + 3$', '$10\corange{x}$', '$5\corange{x} + 3$', '$7\corange{x} - 7$']
+    bonne: 0
+    explication: $6\corange{x} + \corange{x} = 7\corange{x}$ et $-2 + 5 = 3$.
+    revoir: cours
+
+  - question: $4\corange{x} + 3\corange{x}^2$ se réduit en…
+    choix: ['on ne peut pas réduire', '$7\corange{x}^2$', '$7\corange{x}^3$', '$12\corange{x}^3$']
+    bonne: 0
+    explication: Des $\corange{x}$ et des $\corange{x}^2$, c'est des pommes et des poires.
+    revoir: cours
+
+  - question: $5(\corange{x} - 3)$ est égal à…
+    choix: ['$5\corange{x} - 15$', '$5\corange{x} - 3$', '$5\corange{x} + 15$', '$\corange{x} - 15$']
+    bonne: 0
+    explication: Le 5 multiplie chaque terme de la parenthèse.
+    revoir: cours
+
+  - question: Pour $\corange{x} = -3$, $\corange{x}^2$ vaut…
+    choix: ['$9$', '$-9$', '$-6$', '$6$']
+    bonne: 0
+    explication: $(-3)^2 = (-3) \times (-3) = 9$.
+    revoir: exercices
+
+  - question: $(\corange{x} + 2)(\corange{x} + 3)$ est égal à…
+    choix: ['$\corange{x}^2 + 5\corange{x} + 6$', '$\corange{x}^2 + 6$', '$2\corange{x} + 5$', '$\corange{x}^2 + 6\corange{x} + 5$']
+    bonne: 0
+    explication: $\corange{x}^2 + 3\corange{x} + 2\corange{x} + 6$.
+    revoir: cours

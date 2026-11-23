@@ -1,0 +1,30 @@
+questions:
+  - question: La probabilité d'un événement certain est…
+    choix: ['$1$', '$0$', '$100$', '$0{,}5$']
+    bonne: 0
+    explication: Un événement certain se réalise toujours, sa probabilité vaut 1.
+    revoir: cours
+
+  - question: Un sac contient 3 billes rouges et 7 bleues. $P(\text{rouge}) = $…
+    choix: ['$0{,}3$', '$\frac{3}{7}$', '$0{,}7$', '$3$']
+    bonne: 0
+    explication: 3 rouges sur 10 billes au total.
+    revoir: cours
+
+  - question: Si $P(A) = \frac{2}{5}$, alors $P(\text{non } A) = $…
+    choix: ['$\frac{3}{5}$', '$\frac{2}{5}$', '$\frac{5}{2}$', '$1$']
+    bonne: 0
+    explication: $1 - \frac{2}{5} = \frac{3}{5}$.
+    revoir: cours
+
+  - question: Laquelle de ces valeurs ne peut pas être une probabilité ?
+    choix: ['$1{,}2$', '$0$', '$\frac{1}{3}$', '$85\,\%$']
+    bonne: 0
+    explication: Une probabilité est toujours comprise entre 0 et 1.
+    revoir: cours
+
+  - question: Après 4 « face » de suite, la probabilité d'obtenir pile au lancer suivant est…
+    choix: ['$\frac{1}{2}$', 'plus grande que $\frac{1}{2}$', 'plus petite que $\frac{1}{2}$', '$1$']
+    bonne: 0
+    explication: Le hasard n'a pas de mémoire.
+    revoir: exercices

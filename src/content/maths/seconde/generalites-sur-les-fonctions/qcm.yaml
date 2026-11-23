@@ -1,0 +1,38 @@
+questions:
+  - question: Si $\cbleu{f}(3) = 7$, alors…
+    choix: ['$7$ est l''image de $3$', '$3$ est l''image de $7$', '$7$ est un antécédent de $3$', '$\cbleu{f}(7) = 3$']
+    bonne: 0
+    explication: >-
+      On met 3 dans la machine, il sort 7 : 7 est l'image, 3 un antécédent.
+    revoir: cours
+
+  - question: Combien d'images un nombre peut-il avoir par une fonction ?
+    choix: ['une seule', 'deux', 'autant qu''on veut', 'aucune']
+    bonne: 0
+    explication: La machine donne toujours une seule sortie pour une entrée.
+    revoir: cours
+
+  - question: L'ensemble de définition de $\cbleu{f}(\corange{x}) = \dfrac{1}{\corange{x} + 5}$ est…
+    choix: ['$\mathbb{R} \setminus \{-5\}$', '$\mathbb{R} \setminus \{5\}$', '$]-5\,;+\infty[$', '$\mathbb{R}$']
+    bonne: 0
+    explication: Le dénominateur s'annule pour $\corange{x} = -5$, interdit.
+    revoir: exercices
+
+  - question: Si $\cbleu{f}$ est décroissante sur $[0\,;10]$, alors…
+    choix: ['$\cbleu{f}(2) \ge \cbleu{f}(8)$', '$\cbleu{f}(2) \le \cbleu{f}(8)$', '$\cbleu{f}(2) = \cbleu{f}(8)$', 'on ne peut rien dire']
+    bonne: 0
+    explication: >-
+      Une fonction décroissante inverse l'ordre : on descend.
+    revoir: cours
+
+  - question: Le point $A(1\,;4)$ est sur la courbe de $\cbleu{f}(\corange{x}) = 3\corange{x} + 1$ ?
+    choix: ['oui', 'non']
+    bonne: 0
+    explication: $\cbleu{f}(1) = 4$, c'est l'ordonnée de $A$.
+    revoir: exercices
+
+  - question: Pour résoudre graphiquement $\cbleu{f}(\corange{x}) = 2$, on lit…
+    choix: ['les abscisses des points d''ordonnée 2', 'l''ordonnée du point d''abscisse 2', 'le point $(2\,;2)$', 'le maximum de $\cbleu{f}$']
+    bonne: 0
+    explication: On trace $y = 2$ et on lit les abscisses des points d'intersection.
+    revoir: cours

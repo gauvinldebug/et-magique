@@ -1,0 +1,69 @@
+# Exercices corrigés, du plus facile au type bac.
+# type d'étape : init (vert), her (orange), conc (bleu), calcul, methode, piege (rouge)
+exercices:
+  - titre: Trouver des primitives
+    difficulte: 1
+    type: application
+    enonce: |
+      Donner une primitive de $f(x) = 4x^3 - 2x + 5$, de $g(x) = e^{2x}$ et de $h(x) = \frac{3}{x}$ sur $]0\,;+\infty[$.
+    indice: Vérifie chaque réponse en la dérivant.
+    etapes:
+      - type: calcul
+        titre: f
+        texte: $F(x) = x^4 - x^2 + 5x$.
+      - type: piege
+        titre: g
+        texte: $G(x) = \frac{1}{2}e^{2x}$, car la dérivée de $e^{2x}$ est $2e^{2x}$.
+      - type: conc
+        titre: h
+        texte: <mark>$H(x) = 3\ln x$</mark>.
+
+  - titre: Une aire sous une parabole
+    difficulte: 1
+    type: methode
+    enonce: |
+      Calculer l'aire sous la courbe de $f(x) = x^2$ entre $x = 0$ et $x = 3$.
+    indice: $f \ge 0$, donc l'aire est une intégrale.
+    etapes:
+      - type: calcul
+        titre: La primitive
+        texte: $F(x) = \frac{x^3}{3}$.
+      - type: conc
+        titre: Le calcul
+        texte: >-
+          $F(3) - F(0) = 9 - 0$ : <mark>l'aire vaut 9 unités d'aire</mark>.
+
+  - titre: Une valeur moyenne
+    difficulte: 2
+    type: application
+    enonce: |
+      La puissance consommée par une machine est $P(t) = 3t^2$ (en kW) pour $t \in [0\,;2]$ heures. Calculer sa puissance moyenne.
+    indice: $\mu = \frac{1}{b - a}\int_a^b P$.
+    etapes:
+      - type: calcul
+        titre: L'intégrale
+        texte: $\int_0^2 3t^2\,\mathrm{d}t = \left[t^3\right]_0^2 = 8$.
+      - type: conc
+        titre: La moyenne
+        texte: <mark>$\mu = \frac{8}{2} = 4$ kW</mark>.
+
+  - titre: L'aire d'un logo
+    difficulte: 3
+    type: bac
+    enonce: |
+      Un logo est la surface comprise entre les courbes de $f(x) = x$ et $g(x) = x^2$ sur $[0\,;1]$.
+      1. Montrer que $f(x) \ge g(x)$ sur $[0\,;1]$.
+      2. Calculer l'aire du logo en unités d'aire.
+      3. Une unité vaut 36 cm². Donner l'aire en cm².
+    indice: $x - x^2 = x(1 - x)$.
+    etapes:
+      - type: calcul
+        titre: Question 1
+        texte: $f(x) - g(x) = x(1 - x) \ge 0$ car $x \ge 0$ et $1 - x \ge 0$.
+      - type: calcul
+        titre: Question 2
+        texte: >-
+          $\int_0^1 (x - x^2)\,\mathrm{d}x = \left[\frac{x^2}{2} - \frac{x^3}{3}\right]_0^1 = \frac{1}{2} - \frac{1}{3} = \frac{1}{6}$.
+      - type: conc
+        titre: Question 3
+        texte: <mark>L'aire vaut $\frac{36}{6} = 6$ cm²</mark>.

@@ -1,0 +1,30 @@
+questions:
+  - question: Un angle de 120° est…
+    choix: ['obtus', 'aigu', 'droit', 'plat']
+    bonne: 0
+    explication: Il est entre 90° et 180°.
+    revoir: cours
+
+  - question: Dans $\widehat{ABC}$, le sommet est…
+    choix: ['$B$', '$A$', '$C$', 'on ne sait pas']
+    bonne: 0
+    explication: Le sommet est toujours la lettre du milieu.
+    revoir: cours
+
+  - question: Un angle plat mesure…
+    choix: ['$180°$', '$90°$', '$360°$', '$0°$']
+    bonne: 0
+    explication: Ses deux côtés forment une droite.
+    revoir: cours
+
+  - question: La bissectrice d'un angle de 90° forme deux angles de…
+    choix: ['$45°$', '$90°$', '$30°$', '$180°$']
+    bonne: 0
+    explication: Elle partage l'angle en deux angles égaux.
+    revoir: exercices
+
+  - question: Si on allonge les côtés d'un angle, sa mesure…
+    choix: ['ne change pas', 'augmente', 'diminue', 'double']
+    bonne: 0
+    explication: Seule l'ouverture compte, comme pour les aiguilles d'une horloge.
+    revoir: cours

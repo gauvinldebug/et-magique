@@ -1,0 +1,78 @@
+# Exercices corrigés, du plus facile au type brevet.
+# type d'étape : init (vert), her (orange), conc (bleu), calcul, methode, piege (rouge)
+exercices:
+  - titre: Calculer une longueur
+    difficulte: 1
+    type: application
+    enonce: |
+      Dans le triangle $ABC$, $M \in [AB]$ et $N \in [AC]$ avec $(MN) \parallel (BC)$. On donne $AM = 3$ cm, $AB = 7{,}5$ cm et $BC = 10$ cm. Calculer $MN$.
+    indice: Écris les trois rapports et garde ceux qui sont utiles.
+    etapes:
+      - type: init
+        titre: Les rapports
+        texte: Les droites sont parallèles, d'après Thalès, $\frac{AM}{AB} = \frac{AN}{AC} = \frac{MN}{BC}$.
+      - type: calcul
+        titre: Le produit en croix
+        texte: $\frac{3}{7{,}5} = \frac{MN}{10}$, donc $MN = \frac{3 \times 10}{7{,}5}$.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>$MN = 4$ cm</mark>.
+
+  - titre: Le papillon
+    difficulte: 2
+    type: methode
+    enonce: |
+      Les droites $(DE)$ et $(GF)$ se coupent en $O$, avec $(DG) \parallel (EF)$. On donne $OD = 4$, $OE = 6$, $OG = 5$ et $DG = 3$ (en cm). Calculer $OF$ et $EF$.
+    indice: Le petit triangle est $ODG$, le grand $OEF$.
+    etapes:
+      - type: init
+        titre: Les rapports
+        texte: D'après Thalès, $\frac{OD}{OE} = \frac{OG}{OF} = \frac{DG}{EF}$, soit $\frac{4}{6} = \frac{5}{OF} = \frac{3}{EF}$.
+      - type: calcul
+        titre: OF
+        texte: $OF = \frac{6 \times 5}{4} = 7{,}5$ cm.
+      - type: conc
+        titre: EF
+        texte: <mark>$EF = \frac{6 \times 3}{4} = 4{,}5$ cm</mark>.
+
+  - titre: Parallèles ou pas ?
+    difficulte: 2
+    type: piege
+    enonce: |
+      $R$, $S$, $T$ sont alignés dans cet ordre, ainsi que $R$, $U$, $V$. On donne $RS = 2{,}4$, $RT = 6$, $RU = 3$ et $RV = 7{,}2$ (en cm). Les droites $(SU)$ et $(TV)$ sont-elles parallèles ?
+    indice: Calcule chaque rapport séparément.
+    etapes:
+      - type: calcul
+        titre: Les deux rapports
+        texte: $\frac{RS}{RT} = \frac{2{,}4}{6} = 0{,}4$ et $\frac{RU}{RV} = \frac{3}{7{,}2} \approx 0{,}417$.
+      - type: piege
+        titre: Pas de produit en croix
+        texte: >-
+          On ne cherche pas une longueur, on compare : on calcule les deux rapports séparément.
+        note: comparer, pas calculer
+      - type: conc
+        titre: Conclusion
+        texte: <mark>Les rapports sont différents, donc $(SU)$ et $(TV)$ ne sont pas parallèles</mark>.
+
+  - titre: La maquette du stade
+    difficulte: 3
+    type: brevet
+    enonce: |
+      Un architecte fait la maquette d'un stade à l'échelle $\frac{1}{500}$. Sur la maquette, le terrain est un rectangle de 21 cm sur 13,6 cm.
+      1. Quelles sont les dimensions réelles du terrain, en mètres ?
+      2. L'aire réelle du terrain est 7 140 m². Calculer l'aire de la maquette, en cm².
+    indice: Pour les aires, le rapport est mis au carré.
+    etapes:
+      - type: calcul
+        titre: Question 1
+        texte: >-
+          $21 \times 500 = 10\,500$ cm $= 105$ m et $13{,}6 \times 500 = 6\,800$ cm $= 68$ m.
+      - type: calcul
+        titre: Question 2, le rapport des aires
+        texte: >-
+          Réduction de rapport $k = \frac{1}{500}$, donc les aires sont multipliées par $k^2 = \frac{1}{250\,000}$.
+        note: k au carré
+      - type: conc
+        titre: Conclusion
+        texte: >-
+          $7\,140$ m² $= 71\,400\,000$ cm², divisé par $250\,000$ : <mark>285,6 cm²</mark>. Vérification, $21 \times 13{,}6 = 285{,}6$.

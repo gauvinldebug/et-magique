@@ -1,0 +1,99 @@
+# Exercices corrigés, du plus facile au type contrôle.
+# type d'étape : init (vert), her (orange), conc (bleu), calcul, methode, piege (rouge)
+exercices:
+  - titre: Le sac de billes
+    difficulte: 1
+    type: application
+    enonce: |
+      Un sac contient 5 billes rouges, 3 bleues et 2 vertes. On tire une bille au hasard.
+      1. Quelle est la probabilité de tirer une bille bleue ?
+      2. Quelle est la probabilité de ne pas tirer une bille rouge ?
+    indice: Il y a 10 billes au total.
+    etapes:
+      - type: calcul
+        titre: Question 1
+        texte: $P(B) = \frac{3}{10} = 0{,}3$.
+      - type: conc
+        titre: Question 2
+        texte: >-
+          $P(\bar{R}) = 1 - \frac{5}{10} = 0{,}5$. <mark>Une chance sur deux</mark>.
+
+  - titre: Compléter une loi de probabilité
+    difficulte: 1
+    type: methode
+    enonce: |
+      Un dé truqué à 6 faces suit la loi suivante.
+
+      <table><tbody><tr><td>Face</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td></tr><tr><td>Probabilité</td><td>0,1</td><td>0,1</td><td>0,15</td><td>0,15</td><td>0,2</td><td>$x$</td></tr></tbody></table>
+
+      1. Calculer $x$.
+      2. Quelle est la probabilité d'obtenir un nombre pair ?
+    indice: La somme des probabilités vaut 1.
+    etapes:
+      - type: calcul
+        titre: Question 1
+        texte: $0{,}1 + 0{,}1 + 0{,}15 + 0{,}15 + 0{,}2 + x = 1$, donc $x = 0{,}3$.
+      - type: conc
+        titre: Question 2
+        texte: <mark>$P(\text{pair}) = 0{,}1 + 0{,}15 + 0{,}3 = 0{,}55$</mark>.
+
+  - titre: Tableau à double entrée
+    difficulte: 2
+    type: methode
+    enonce: |
+      Dans un lycée de 500 élèves, 280 sont des filles. 150 élèves font de l'espagnol, dont 100 filles. On choisit un élève au hasard. $F$ : « c'est une fille », $E$ : « il fait de l'espagnol ».
+      1. Calculer $P(F \cap E)$.
+      2. Calculer $P(F \cup E)$.
+    indice: Utilise la formule du « ou ».
+    etapes:
+      - type: calcul
+        titre: Question 1
+        texte: $P(F \cap E) = \frac{100}{500} = 0{,}2$.
+      - type: calcul
+        titre: Question 2
+        texte: $P(F \cup E) = \frac{280}{500} + \frac{150}{500} - \frac{100}{500} = \frac{330}{500}$.
+        note: on retire les filles hispanistes une fois
+      - type: conc
+        titre: Conclusion
+        texte: <mark>$P(F \cup E) = 0{,}66$</mark>.
+
+  - titre: Deux lancers de pièce
+    difficulte: 2
+    type: application
+    enonce: |
+      On lance deux fois une pièce équilibrée.
+      1. À l'aide d'un arbre, donner l'univers.
+      2. Calculer la probabilité d'obtenir au moins une fois pile.
+    indice: Passe par le contraire, « aucun pile ».
+    etapes:
+      - type: calcul
+        titre: Question 1
+        texte: $\Omega = \{PP, PF, FP, FF\}$, quatre issues équiprobables.
+      - type: calcul
+        titre: Question 2
+        texte: Le contraire de « au moins un pile » est « face, face », de probabilité $\frac{1}{4}$.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>$P = 1 - \frac{1}{4} = \frac{3}{4}$</mark>.
+
+  - titre: Un échantillon suspect ?
+    difficulte: 3
+    type: methode
+    enonce: |
+      Une usine affirme que 4 % de ses ampoules sont défectueuses. Un contrôleur teste un échantillon de 625 ampoules et en trouve 55 défectueuses.
+      1. Calculer la fréquence observée.
+      2. Calculer l'intervalle de fluctuation au seuil de 95 %.
+      3. L'affirmation de l'usine est-elle crédible ?
+    indice: $\frac{1}{\sqrt{625}} = \frac{1}{25}$.
+    etapes:
+      - type: calcul
+        titre: Question 1
+        texte: $f = \frac{55}{625} = 0{,}088$.
+      - type: calcul
+        titre: Question 2
+        texte: $\left[0{,}04 - 0{,}04\,;0{,}04 + 0{,}04\right] = [0\,;0{,}08]$.
+      - type: conc
+        titre: Question 3
+        texte: >-
+          $f = 0{,}088$ est en dehors de l'intervalle. Un tel écart arrive dans moins de 5 % des échantillons. <mark>On peut douter de l'affirmation de l'usine</mark>, avec un risque d'erreur inférieur à 5 %.
+        note: la soupe n'a pas le goût annoncé

@@ -1,0 +1,71 @@
+# Exercices corrigés, du plus facile au type contrôle.
+# type d'étape : init (vert), her (orange), conc (bleu), calcul, methode, piege (rouge)
+exercices:
+  - titre: Calculer l'hypoténuse
+    difficulte: 1
+    type: application
+    enonce: |
+      $ABC$ est rectangle en $B$, avec $AB = 5$ cm et $BC = 12$ cm. Calculer $AC$.
+    indice: L'hypoténuse est en face de l'angle droit, c'est $[AC]$.
+    etapes:
+      - type: init
+        titre: Le théorème
+        texte: $ABC$ est rectangle en $B$, d'après Pythagore, $AC^2 = AB^2 + BC^2$.
+      - type: calcul
+        titre: Le calcul
+        texte: $AC^2 = 25 + 144 = 169$.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>$AC = \sqrt{169} = 13$ cm</mark>.
+
+  - titre: Calculer un autre côté
+    difficulte: 1
+    type: methode
+    enonce: |
+      $DEF$ est rectangle en $E$, avec $DF = 7{,}5$ cm et $DE = 4{,}5$ cm. Calculer $EF$.
+    indice: Cette fois on connaît l'hypoténuse, on soustrait.
+    etapes:
+      - type: calcul
+        titre: Le théorème
+        texte: $DF^2 = DE^2 + EF^2$, donc $EF^2 = DF^2 - DE^2 = 56{,}25 - 20{,}25 = 36$.
+        note: on soustrait
+      - type: conc
+        titre: Conclusion
+        texte: <mark>$EF = \sqrt{36} = 6$ cm</mark>.
+
+  - titre: Rectangle ou pas ?
+    difficulte: 2
+    type: methode
+    enonce: |
+      1. Le triangle $RST$ avec $RS = 1{,}6$, $ST = 3$ et $RT = 3{,}4$ est-il rectangle ?
+      2. Le triangle $UVW$ avec $UV = 4$, $VW = 6$ et $UW = 7$ est-il rectangle ?
+    indice: Le plus grand côté est le candidat hypoténuse.
+    etapes:
+      - type: calcul
+        titre: Question 1
+        texte: >-
+          $RT^2 = 11{,}56$ et $RS^2 + ST^2 = 2{,}56 + 9 = 11{,}56$. Égalité : d'après la réciproque, $RST$ est rectangle en $S$.
+      - type: conc
+        titre: Question 2
+        texte: >-
+          $UW^2 = 49$ et $UV^2 + VW^2 = 16 + 36 = 52$. <mark>$49 \ne 52$, $UVW$ n'est pas rectangle</mark>.
+
+  - titre: La diagonale de l'écran
+    difficulte: 3
+    type: piege
+    enonce: |
+      Un écran rectangulaire mesure 80 cm de large et 45 cm de haut. Un vendeur affirme que sa diagonale mesure plus d'un mètre.
+      A-t-il raison ? Donner la diagonale arrondie au cm.
+    indice: La diagonale coupe l'écran en deux triangles rectangles.
+    etapes:
+      - type: calcul
+        titre: Le calcul
+        texte: $d^2 = 80^2 + 45^2 = 6\,400 + 2\,025 = 8\,425$.
+      - type: piege
+        titre: Pas d'addition des longueurs
+        texte: >-
+          $80 + 45 = 125$ cm ne veut rien dire : il faut la racine de la somme des carrés.
+        note: le faux raccourci
+      - type: conc
+        titre: Conclusion
+        texte: <mark>$d = \sqrt{8\,425} \approx 92$ cm. Le vendeur a tort</mark>.

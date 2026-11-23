@@ -1,0 +1,30 @@
+questions:
+  - question: La droite des moindres carrés passe toujours par…
+    choix: ['le point moyen', 'l''origine', 'le premier point', 'le point le plus haut']
+    bonne: 0
+    explication: Comme $b = \bar{y} - a\bar{x}$, le point $G(\bar{x}\,;\bar{y})$ est sur la droite.
+    revoir: cours
+
+  - question: Un coefficient de corrélation $r = -0{,}98$ indique…
+    choix: ['un très bon ajustement affine décroissant', 'aucun lien', 'un ajustement croissant', 'une erreur de calcul']
+    bonne: 0
+    explication: $|r|$ est proche de 1 et $r < 0$.
+    revoir: cours
+
+  - question: Estimer une valeur hors des données observées, c'est…
+    choix: ['extrapoler', 'interpoler', 'ajuster', 'corréler']
+    bonne: 0
+    explication: L'extrapolation demande de la prudence.
+    revoir: exercices
+
+  - question: Si $z = \ln y$ et $z = 0{,}5x + 1$, alors $y = \ldots$
+    choix: ['$e \times e^{0{,}5x}$', '$0{,}5x + e$', '$\ln(0{,}5x + 1)$', '$e^{0{,}5} + x$']
+    bonne: 0
+    explication: $y = e^{0{,}5x + 1} = e^1 \times e^{0{,}5x}$.
+    revoir: cours
+
+  - question: Deux variables très corrélées…
+    choix: ['ne sont pas forcément liées par une cause', 'ont toujours une cause commune', 'sont égales', 'ont la même moyenne']
+    bonne: 0
+    explication: Corrélation n'est pas causalité.
+    revoir: cours

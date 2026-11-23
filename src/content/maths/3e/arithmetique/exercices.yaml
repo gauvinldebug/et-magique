@@ -1,0 +1,83 @@
+# Exercices corrigés, du plus facile au type brevet.
+# type d'étape : init (vert), her (orange), conc (bleu), calcul, methode, piege (rouge)
+exercices:
+  - titre: Divisible ou pas ?
+    difficulte: 1
+    type: application
+    enonce: |
+      Sans poser la division, dire si 4 815 est divisible par 2, par 3, par 5 et par 9.
+    indice: Calcule la somme des chiffres.
+    etapes:
+      - type: calcul
+        titre: Par 2 et par 5
+        texte: >-
+          Il se termine par 5 : pas divisible par 2, divisible par 5.
+      - type: calcul
+        titre: Par 3 et par 9
+        texte: $4 + 8 + 1 + 5 = 18$, divisible par 3 et par 9.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>4 815 est divisible par 3, 5 et 9, pas par 2</mark>.
+
+  - titre: Premier ou pas ?
+    difficulte: 1
+    type: piege
+    enonce: |
+      Parmi les nombres 1, 2, 27, 29, 51 et 91, lesquels sont premiers ?
+    indice: Teste les petits diviseurs 2, 3, 5, 7.
+    etapes:
+      - type: piege
+        titre: Les deux faux amis
+        texte: >-
+          1 n'a qu'un diviseur, il n'est pas premier. 2 est premier.
+        note: le piège du chapitre
+      - type: calcul
+        titre: Les autres
+        texte: >-
+          $27 = 3 \times 9$, $51 = 3 \times 17$, $91 = 7 \times 13$ : pas premiers. 29 n'est divisible ni par 2, ni 3, ni 5.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>Les nombres premiers de la liste sont 2 et 29</mark>.
+
+  - titre: Décomposer et simplifier
+    difficulte: 2
+    type: methode
+    enonce: |
+      1. Décomposer 126 et 180 en produits de facteurs premiers.
+      2. Rendre irréductible la fraction $\dfrac{126}{180}$.
+    indice: Divise par 2, puis par 3, puis par 5, puis par 7.
+    etapes:
+      - type: calcul
+        titre: Question 1
+        texte: $126 = 2 \times 3^2 \times 7$ et $180 = 2^2 \times 3^2 \times 5$.
+      - type: calcul
+        titre: Les briques communes
+        texte: $2 \times 3^2 = 18$.
+      - type: conc
+        titre: Question 2
+        texte: <mark>$\dfrac{126}{180} = \dfrac{7}{2 \times 5} = \dfrac{7}{10}$</mark>.
+
+  - titre: Les boîtes de chocolats
+    difficulte: 3
+    type: brevet
+    enonce: |
+      Un chocolatier a fabriqué 315 chocolats noirs et 210 chocolats au lait. Il veut les répartir dans des boîtes **identiques**, en utilisant tous les chocolats.
+      1. Peut-il faire 15 boîtes ? Justifier.
+      2. Quel est le nombre maximal de boîtes ? Quelle sera la composition de chacune ?
+    indice: Décompose 315 et 210.
+    etapes:
+      - type: calcul
+        titre: Question 1
+        texte: >-
+          $315 \div 15 = 21$ et $210 \div 15 = 14$. Oui, 15 boîtes de 21 noirs et 14 au lait.
+      - type: calcul
+        titre: Les décompositions
+        texte: $315 = 3^2 \times 5 \times 7$ et $210 = 2 \times 3 \times 5 \times 7$.
+      - type: calcul
+        titre: Les briques communes
+        texte: $3 \times 5 \times 7 = 105$.
+      - type: conc
+        titre: Question 2
+        texte: >-
+          <mark>105 boîtes, avec chacune 3 chocolats noirs et 2 au lait</mark>.
+        note: 315 / 105 = 3 et 210 / 105 = 2

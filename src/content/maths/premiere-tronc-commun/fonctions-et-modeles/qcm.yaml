@@ -1,0 +1,30 @@
+questions:
+  - question: Pour $f(x) = -2x + 5$, le coefficient directeur est…
+    choix: ['$-2$', '$5$', '$2$', '$-5$']
+    bonne: 0
+    explication: C'est le nombre devant $x$.
+    revoir: cours
+
+  - question: La courbe de la fonction carré est…
+    choix: ['une parabole', 'une droite', 'une hyperbole', 'un cercle']
+    bonne: 0
+    explication: $y = x^2$ donne une parabole.
+    revoir: cours
+
+  - question: Quelle situation est proportionnelle ?
+    choix: ['$f(x) = 3x$', '$f(x) = 3x + 1$', '$f(x) = x^2$', '$f(x) = \frac{1}{x}$']
+    bonne: 0
+    explication: Seule $f(x) = ax$ traduit la proportionnalité.
+    revoir: exercices
+
+  - question: Une droite passe par $(0\,;3)$ et $(2\,;7)$. Son coefficient directeur est…
+    choix: ['$2$', '$4$', '$3$', '$\frac{1}{2}$']
+    bonne: 0
+    explication: $\frac{7 - 3}{2 - 0} = 2$.
+    revoir: cours
+
+  - question: Si $f(x) = x^2$, les antécédents de 9 sont…
+    choix: ['$-3$ et $3$', '$3$ seulement', '$81$', '$4{,}5$']
+    bonne: 0
+    explication: $3^2 = (-3)^2 = 9$.
+    revoir: cours

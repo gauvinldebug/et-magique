@@ -1,0 +1,67 @@
+# Exercices corrigés, du plus facile au type brevet.
+# type d'étape : init (vert), her (orange), conc (bleu), calcul, methode, piege (rouge)
+exercices:
+  - titre: Écrire les rapports
+    difficulte: 1
+    type: application
+    enonce: |
+      $ABC$ est rectangle en $B$, avec $AB = 8$, $BC = 6$ et $AC = 10$. Écrire $\cos \widehat{A}$, $\sin \widehat{A}$ et $\tan \widehat{A}$ sous forme de fractions simplifiées.
+    indice: L'hypoténuse est $[AC]$, en face de l'angle droit.
+    etapes:
+      - type: init
+        titre: Les côtés pour l'angle A
+        texte: Hypoténuse $AC = 10$, adjacent $AB = 8$, opposé $BC = 6$.
+      - type: conc
+        titre: Les rapports
+        texte: <mark>$\cos \widehat{A} = \frac{8}{10} = \frac{4}{5}$, $\sin \widehat{A} = \frac{6}{10} = \frac{3}{5}$, $\tan \widehat{A} = \frac{6}{8} = \frac{3}{4}$</mark>.
+
+  - titre: Calculer une longueur
+    difficulte: 1
+    type: methode
+    enonce: |
+      $DEF$ est rectangle en $E$, avec $DF = 6$ cm et $\widehat{D} = 35°$. Calculer $DE$ et $EF$, arrondis au dixième.
+    indice: $DE$ est adjacent à $\widehat{D}$, $EF$ est opposé.
+    etapes:
+      - type: calcul
+        titre: DE avec le cosinus
+        texte: $\cos 35° = \frac{DE}{6}$, donc $DE = 6 \cos 35° \approx 4{,}9$ cm.
+      - type: conc
+        titre: EF avec le sinus
+        texte: <mark>$EF = 6 \sin 35° \approx 3{,}4$ cm</mark>.
+
+  - titre: Trouver un angle
+    difficulte: 2
+    type: methode
+    enonce: |
+      Une échelle de 4 m est posée contre un mur, son pied est à 1 m du mur. Quel angle fait-elle avec le sol ? Arrondir au degré.
+    indice: Le pied de l'échelle est le côté adjacent à l'angle avec le sol.
+    etapes:
+      - type: calcul
+        titre: Le cosinus
+        texte: $\cos \widehat{A} = \frac{1}{4} = 0{,}25$.
+      - type: conc
+        titre: La touche inverse
+        texte: <mark>$\widehat{A} = \cos^{-1}(0{,}25) \approx 76°$</mark>.
+        note: en degrés
+
+  - titre: La hauteur d'un immeuble
+    difficulte: 3
+    type: brevet
+    enonce: |
+      Léo se place à 50 m du pied d'un immeuble. Il vise le haut de l'immeuble avec un angle de 32° par rapport à l'horizontale. Ses yeux sont à 1,60 m du sol.
+      1. Calculer la hauteur de l'immeuble au-dessus des yeux de Léo, arrondie au dixième.
+      2. En déduire la hauteur de l'immeuble.
+    indice: >-
+      On connaît l'adjacent (50 m), on cherche l'opposé : c'est la tangente.
+    etapes:
+      - type: calcul
+        titre: Question 1
+        texte: $\tan 32° = \frac{h}{50}$, donc $h = 50 \tan 32° \approx 31{,}2$ m.
+      - type: piege
+        titre: Ne pas oublier
+        texte: >-
+          Le triangle commence à hauteur des yeux, pas au sol. Il faut ajouter 1,60 m.
+        note: le piège du brevet
+      - type: conc
+        titre: Question 2
+        texte: <mark>L'immeuble mesure environ $31{,}2 + 1{,}6 = 32{,}8$ m</mark>.

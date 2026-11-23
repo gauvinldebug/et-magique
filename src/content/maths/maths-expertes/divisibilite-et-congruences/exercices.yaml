@@ -1,0 +1,77 @@
+# Exercices corrigés, du plus facile au type bac.
+# type d'étape : init (vert), her (orange), conc (bleu), calcul, methode, piege (rouge)
+exercices:
+  - titre: Division euclidienne
+    difficulte: 1
+    type: piege
+    enonce: |
+      Effectuer la division euclidienne de 158 par 9, puis de $-23$ par 6.
+    indice: Le reste doit être positif et plus petit que le diviseur.
+    etapes:
+      - type: calcul
+        titre: 158 par 9
+        texte: $158 = 9 \times 17 + 5$, quotient 17, reste 5.
+      - type: piege
+        titre: -23 par 6
+        texte: >-
+          $-23 = 6 \times (-3) - 5$ ne convient pas (reste négatif). On écrit $-23 = 6 \times (-4) + 1$.
+        note: reste positif
+      - type: conc
+        titre: Conclusion
+        texte: <mark>Quotient $-4$, reste 1</mark>.
+
+  - titre: Un diviseur commun
+    difficulte: 2
+    type: methode
+    enonce: |
+      Déterminer les entiers naturels $n$ tels que $n + 2$ divise $3n + 13$.
+    indice: $n + 2$ divise aussi $3(n + 2)$, donc une combinaison.
+    etapes:
+      - type: calcul
+        titre: La combinaison
+        texte: >-
+          $n + 2$ divise $3n + 13$ et $3n + 6$, donc il divise leur différence, 7.
+      - type: calcul
+        titre: Les diviseurs de 7
+        texte: $n + 2 \ge 2$, donc $n + 2 = 7$, soit $n = 5$.
+      - type: conc
+        titre: Vérification
+        texte: >-
+          <mark>$n = 5$</mark> : $3 \times 5 + 13 = 28 = 4 \times 7$.
+
+  - titre: Reste d'une grande puissance
+    difficulte: 2
+    type: application
+    enonce: |
+      Déterminer le reste de la division de $2^{100}$ par 7.
+    indice: Cherche la première puissance de 2 congrue à 1 modulo 7.
+    etapes:
+      - type: calcul
+        titre: Le cycle
+        texte: $2^1 \equiv 2$, $2^2 \equiv 4$, $2^3 = 8 \equiv 1\ [7]$.
+      - type: calcul
+        titre: L'exposant
+        texte: $100 = 3 \times 33 + 1$, donc $2^{100} = (2^3)^{33} \times 2 \equiv 2\ [7]$.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>Le reste est 2</mark>.
+
+  - titre: Un carré modulo 5
+    difficulte: 3
+    type: bac
+    enonce: |
+      1. Dresser le tableau des restes de $x^2$ modulo 5.
+      2. En déduire que l'équation $x^2 = 5y + 3$ n'a pas de solution en nombres entiers.
+    indice: Teste les cinq restes possibles de $x$.
+    etapes:
+      - type: calcul
+        titre: Question 1
+        texte: >-
+          Pour $x \equiv 0, 1, 2, 3, 4$, on a $x^2 \equiv 0, 1, 4, 4, 1\ [5]$.
+      - type: calcul
+        titre: Question 2
+        texte: >-
+          Une solution donnerait $x^2 \equiv 3\ [5]$. Or 3 n'apparaît pas dans le tableau.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>Aucun entier $x$ ne convient, l'équation n'a pas de solution</mark>.

@@ -1,0 +1,30 @@
+questions:
+  - question: La moyenne de 4, 7 et 10 est…
+    choix: ['$7$', '$21$', '$10$', '$6$']
+    bonne: 0
+    explication: $\frac{4 + 7 + 10}{3} = \frac{21}{3} = 7$.
+    revoir: cours
+
+  - question: Sur 50 élèves, 15 font du foot. La fréquence est…
+    choix: ['$30\,\%$', '$15\,\%$', '$35\,\%$', '$50\,\%$']
+    bonne: 0
+    explication: $\frac{15}{50} = 0{,}3$.
+    revoir: cours
+
+  - question: Dans un diagramme circulaire, une fréquence de 25 % correspond à un angle de…
+    choix: ['$90°$', '$25°$', '$45°$', '$180°$']
+    bonne: 0
+    explication: $0{,}25 \times 360 = 90°$.
+    revoir: exercices
+
+  - question: La somme de toutes les fréquences d'une série vaut…
+    choix: ['$1$', '$100$', 'l''effectif total', '$0$']
+    bonne: 0
+    explication: Soit 100 %.
+    revoir: cours
+
+  - question: Deux élèves ont 10, trois élèves ont 15. La moyenne est…
+    choix: ['$13$', '$12{,}5$', '$25$', '$12$']
+    bonne: 0
+    explication: $\frac{2 \times 10 + 3 \times 15}{5} = \frac{65}{5} = 13$.
+    revoir: exercices

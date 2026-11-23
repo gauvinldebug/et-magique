@@ -1,0 +1,72 @@
+# Exercices corrigés, du plus facile au type bac.
+# type d'étape : init (vert), her (orange), conc (bleu), calcul, methode, piege (rouge)
+exercices:
+  - titre: Module et argument
+    difficulte: 1
+    type: application
+    enonce: |
+      Donner le module et un argument de $z_1 = 3i$, $z_2 = -5$ et $z_3 = 1 - i$.
+    indice: Place chaque point dans le plan.
+    etapes:
+      - type: calcul
+        titre: Les deux premiers
+        texte: >-
+          $|z_1| = 3$, $\arg z_1 = \frac{\pi}{2}$. $|z_2| = 5$, $\arg z_2 = \pi$.
+      - type: conc
+        titre: Le troisième
+        texte: >-
+          $|z_3| = \sqrt{2}$ et le point est en bas à droite : <mark>$\arg z_3 = -\frac{\pi}{4}$</mark>.
+
+  - titre: Forme exponentielle
+    difficulte: 2
+    type: methode
+    enonce: |
+      Écrire $z = -\sqrt{3} + i$ sous forme exponentielle.
+    indice: Calcule le module, puis $\cos\theta$ et $\sin\theta$.
+    etapes:
+      - type: calcul
+        titre: Le module
+        texte: $|z| = \sqrt{3 + 1} = 2$.
+      - type: calcul
+        titre: L'argument
+        texte: >-
+          $\cos\theta = -\frac{\sqrt{3}}{2}$ et $\sin\theta = \frac{1}{2}$, donc $\theta = \frac{5\pi}{6}$.
+        note: en haut à gauche
+      - type: conc
+        titre: Conclusion
+        texte: <mark>$z = 2e^{i5\pi/6}$</mark>.
+
+  - titre: Une puissance de tête
+    difficulte: 2
+    type: application
+    enonce: |
+      Calculer $(1 + i\sqrt{3})^6$.
+    indice: $1 + i\sqrt{3} = 2e^{i\pi/3}$.
+    etapes:
+      - type: calcul
+        titre: Moivre
+        texte: $(2e^{i\pi/3})^6 = 2^6 e^{i2\pi} = 64 \times 1$.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>$(1 + i\sqrt{3})^6 = 64$</mark>, un nombre réel.
+
+  - titre: Un triangle rectangle isocèle
+    difficulte: 3
+    type: bac
+    enonce: |
+      Soit $A$, $B$, $C$ d'affixes $z_A = 1 + i$, $z_B = 4 + 2i$ et $z_C = 4i$.
+      1. Calculer $\dfrac{z_C - z_A}{z_B - z_A}$.
+      2. En déduire la nature du triangle $ABC$.
+    indice: Multiplie par le conjugué du dénominateur.
+    etapes:
+      - type: calcul
+        titre: Question 1
+        texte: >-
+          $\frac{-1 + 3i}{3 + i} = \frac{(-1 + 3i)(3 - i)}{10} = \frac{-3 + i + 9i + 3}{10} = i$.
+      - type: calcul
+        titre: Le module et l'argument
+        texte: >-
+          $|i| = 1$ donc $AC = AB$. $\arg i = \frac{\pi}{2}$ donc $(\overrightarrow{AB}, \overrightarrow{AC}) = \frac{\pi}{2}$.
+      - type: conc
+        titre: Question 2
+        texte: <mark>$ABC$ est rectangle isocèle en $A$</mark>. $C$ s'obtient en faisant tourner $B$ d'un quart de tour autour de $A$.

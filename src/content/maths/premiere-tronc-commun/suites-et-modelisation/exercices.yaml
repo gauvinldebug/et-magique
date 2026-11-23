@@ -1,0 +1,73 @@
+# Exercices corrigés, du plus facile au type bac.
+# type d'étape : init (vert), her (orange), conc (bleu), calcul, methode, piege (rouge)
+exercices:
+  - titre: Calculer les premiers termes
+    difficulte: 1
+    type: application
+    enonce: |
+      Soit $u_0 = 5$ et $u_{n+1} = u_n + 4$. Calculer $u_1$, $u_2$, $u_3$, puis $u_{20}$.
+    indice: C'est une suite arithmétique de raison 4.
+    etapes:
+      - type: calcul
+        titre: Les premiers termes
+        texte: $u_1 = 9$, $u_2 = 13$, $u_3 = 17$.
+      - type: conc
+        titre: Le 20e rang
+        texte: <mark>$u_{20} = 5 + 20 \times 4 = 85$</mark>.
+
+  - titre: Reconnaître la suite
+    difficulte: 2
+    type: methode
+    enonce: |
+      Une suite commence par 3 ; 6 ; 12 ; 24. Est-elle arithmétique ou géométrique ? Donner le terme suivant.
+    indice: Regarde les différences, puis les quotients.
+    etapes:
+      - type: calcul
+        titre: Les différences
+        texte: >-
+          3, 6, 12 ne sont pas constantes : pas arithmétique.
+      - type: calcul
+        titre: Les quotients
+        texte: >-
+          $\frac{6}{3} = \frac{12}{6} = \frac{24}{12} = 2$ : géométrique de raison 2.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>Le terme suivant est 48</mark>.
+
+  - titre: Une ville qui grandit
+    difficulte: 2
+    type: application
+    enonce: |
+      Une ville compte 12 000 habitants en 2025 ($u_0$) et sa population augmente de 5 % par an. Exprimer $u_n$, puis estimer la population en 2030.
+    indice: $q = 1{,}05$.
+    etapes:
+      - type: calcul
+        titre: La formule
+        texte: $u_n = 12\,000 \times 1{,}05^n$.
+      - type: piege
+        titre: Le bon rang
+        texte: 2030, c'est 5 ans après 2025, donc $n = 5$.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>$u_5 = 12\,000 \times 1{,}05^5 \approx 15\,315$ habitants</mark>.
+
+  - titre: Deux options de salaire
+    difficulte: 3
+    type: bac
+    enonce: |
+      Un salaire de départ de 1 800 € augmente soit de 50 € par an (option A, $a_n$), soit de 2 % par an (option B, $b_n$).
+      1. Exprimer $a_n$ et $b_n$ en fonction de $n$.
+      2. Comparer les deux options au bout de 10 ans.
+      3. Quelle formule écrire au tableur en B3 pour l'option B, si $b_0$ est en B2 ?
+    indice: A est arithmétique, B est géométrique.
+    etapes:
+      - type: calcul
+        titre: Question 1
+        texte: $a_n = 1800 + 50n$ et $b_n = 1800 \times 1{,}02^n$.
+      - type: calcul
+        titre: Question 2
+        texte: >-
+          $a_{10} = 2300$ € et $b_{10} \approx 2194$ € : A est meilleure à 10 ans.
+      - type: conc
+        titre: Question 3
+        texte: <mark>`=B2*1,02`</mark>, recopiée vers le bas. On voit alors que B dépasse A au rang 33.

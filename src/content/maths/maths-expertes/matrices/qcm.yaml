@@ -1,0 +1,31 @@
+questions:
+  - question: Une matrice à 2 lignes et 3 colonnes est de taille…
+    choix: ['$2 \times 3$', '$3 \times 2$', '$6$', '$5$']
+    bonne: 0
+    explication: On donne d'abord le nombre de lignes, puis celui des colonnes.
+    revoir: cours
+
+  - question: $\begin{pmatrix} 1 & 2 \end{pmatrix}\begin{pmatrix} 3 \\ 4 \end{pmatrix} = \ldots$
+    choix: ['$11$', '$\begin{pmatrix} 3 & 8 \end{pmatrix}$', '$10$', '$\begin{pmatrix} 4 \\ 6 \end{pmatrix}$']
+    bonne: 0
+    explication: $1 \times 3 + 2 \times 4 = 11$, comme un ticket de caisse.
+    revoir: cours
+
+  - question: Le déterminant de $\begin{pmatrix} 3 & 2 \\ 6 & 4 \end{pmatrix}$ vaut…
+    choix: ['$0$', '$24$', '$-24$', '$12$']
+    bonne: 0
+    explication: >-
+      $3 \times 4 - 2 \times 6 = 0$ : la matrice n'est pas inversible.
+    revoir: cours
+
+  - question: Si $A$ est inversible, la solution de $AX = B$ est…
+    choix: ['$X = A^{-1}B$', '$X = BA^{-1}$', '$X = \frac{B}{A}$', '$X = AB$']
+    bonne: 0
+    explication: On multiplie à gauche par $A^{-1}$.
+    revoir: exercices
+
+  - question: Si $U_{n+1} = AU_n$ pour tout $n$, alors $U_n = \ldots$
+    choix: ['$A^nU_0$', '$nAU_0$', '$U_0A^n$', '$A^{n+1}U_0$']
+    bonne: 0
+    explication: On applique $n$ fois la matrice $A$ à $U_0$.
+    revoir: cours

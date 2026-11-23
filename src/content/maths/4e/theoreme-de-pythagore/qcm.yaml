@@ -1,0 +1,30 @@
+questions:
+  - question: Dans un triangle rectangle, l'hypoténuse est…
+    choix: ['le côté opposé à l''angle droit', 'le plus petit côté', 'un des côtés de l''angle droit', 'la hauteur']
+    bonne: 0
+    explication: C'est le côté en face de l'angle droit, le plus long.
+    revoir: cours
+
+  - question: $ABC$ est rectangle en $C$. Alors…
+    choix: ['$AB^2 = AC^2 + BC^2$', '$AC^2 = AB^2 + BC^2$', '$BC^2 = AB^2 + AC^2$', '$AB = AC + BC$']
+    bonne: 0
+    explication: L'hypoténuse est en face de $C$, c'est $[AB]$.
+    revoir: cours
+
+  - question: Les côtés de l'angle droit mesurent 6 et 8. L'hypoténuse mesure…
+    choix: ['$10$', '$14$', '$100$', '$48$']
+    bonne: 0
+    explication: $\sqrt{36 + 64} = \sqrt{100} = 10$.
+    revoir: exercices
+
+  - question: Un triangle de côtés 5, 12 et 13 est…
+    choix: ['rectangle', 'non rectangle', 'équilatéral', 'isocèle']
+    bonne: 0
+    explication: $13^2 = 169$ et $5^2 + 12^2 = 25 + 144 = 169$.
+    revoir: cours
+
+  - question: Pour prouver qu'un triangle n'est pas rectangle, on utilise…
+    choix: ['la contraposée', 'le théorème', 'Thalès', 'un rapporteur']
+    bonne: 0
+    explication: Si l'égalité est fausse, le triangle n'est pas rectangle.
+    revoir: cours

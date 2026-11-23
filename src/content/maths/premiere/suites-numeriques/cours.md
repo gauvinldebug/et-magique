@@ -84,7 +84,7 @@ Quand $\corange{n}$ devient très grand :
 - avec $q > 1$, la photocopieuse grossit l'image sans limite : $q^{\corange{n}} \to +\infty$ ;
 - avec $0 < q < 1$, elle la rétrécit jusqu'à presque rien : $q^{\corange{n}} \to 0$.
 
-Les limites seront étudiées en détail en Terminale.
+Les limites seront étudiées en détail en Terminale, dans le chapitre [Limites de suites](/maths/terminale/limites-de-suites/cours/).
 
 ## Retour au problème
 

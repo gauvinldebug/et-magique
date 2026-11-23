@@ -1,0 +1,106 @@
+# Exercices corrigés, du plus facile au type contrôle.
+# type d'étape : init (vert), her (orange), conc (bleu), calcul, methode, piege (rouge)
+exercices:
+  - titre: Ranger dans les poupées
+    difficulte: 1
+    type: application
+    enonce: |
+      Pour chaque nombre, donner le plus petit ensemble ($\mathbb{N}$, $\mathbb{Z}$, $\mathbb{D}$, $\mathbb{Q}$ ou $\mathbb{R}$) qui le contient.
+      $7$ ; $-4$ ; $\frac{3}{4}$ ; $\frac{2}{3}$ ; $\sqrt{16}$ ; $\sqrt{5}$ ; $\frac{-12}{3}$.
+    indice: Simplifie d'abord chaque nombre.
+    etapes:
+      - type: calcul
+        titre: Les entiers
+        texte: >-
+          $7 \in \mathbb{N}$. $-4 \in \mathbb{Z}$. $\sqrt{16} = 4 \in \mathbb{N}$. $\frac{-12}{3} = -4 \in \mathbb{Z}$.
+        note: simplifier d'abord
+      - type: calcul
+        titre: Les fractions
+        texte: >-
+          $\frac{3}{4} = 0{,}75 \in \mathbb{D}$. $\frac{2}{3} = 0{,}666\dots$ ne s'arrête pas, donc $\frac{2}{3} \in \mathbb{Q}$.
+      - type: conc
+        titre: La racine
+        texte: <mark>$\sqrt{5}$ est irrationnel, son plus petit ensemble est $\mathbb{R}$</mark>.
+
+  - titre: Intervalles et inégalités
+    difficulte: 1
+    type: application
+    enonce: |
+      1. Écrire sous forme d'intervalle : $-1 \le x < 4$ ; $x > 2$ ; $x \le 0$.
+      2. Déterminer $[-3\,;2] \cap [0\,;6]$ et $[-3\,;2] \cup [0\,;6]$.
+    indice: Dessine les deux intervalles sur une même droite graduée.
+    etapes:
+      - type: calcul
+        titre: Question 1
+        texte: >-
+          $[-1\,;4[$ ; $]2\,;+\infty[$ ; $]-\infty\,;0]$.
+        note: ouvert côté infini
+      - type: calcul
+        titre: Question 2, l'intersection
+        texte: Les nombres communs vont de 0 à 2, donc $[-3\,;2] \cap [0\,;6] = [0\,;2]$.
+      - type: conc
+        titre: Question 2, la réunion
+        texte: <mark>$[-3\,;2] \cup [0\,;6] = [-3\,;6]$</mark>.
+
+  - titre: Valeur absolue et distance
+    difficulte: 2
+    type: methode
+    enonce: |
+      Résoudre, en interprétant la valeur absolue comme une distance.
+      1. $|x - 5| = 3$
+      2. $|x + 1| \le 4$
+    indice: $|x + 1| = |x - (-1)|$, la distance entre $x$ et $-1$.
+    etapes:
+      - type: calcul
+        titre: Question 1
+        texte: Les nombres à distance 3 de 5 sont $5 - 3 = 2$ et $5 + 3 = 8$. $S = \{2\,;8\}$.
+      - type: piege
+        titre: Le signe plus
+        texte: >-
+          $|x + 1|$ est la distance entre $x$ et $\mathbf{-1}$, pas entre $x$ et 1.
+      - type: conc
+        titre: Question 2
+        texte: <mark>$x$ est à moins de 4 de $-1$, donc $S = [-5\,;3]$</mark>.
+
+  - titre: Simplifier puissances et racines
+    difficulte: 2
+    type: application
+    enonce: |
+      1. Écrire sous la forme $a^n$ : $A = \dfrac{2^5 \times 2^{-3}}{2^4}$.
+      2. Écrire sous la forme $a\sqrt{b}$ avec $b$ le plus petit possible : $B = \sqrt{72}$ et $C = \sqrt{12} + \sqrt{27}$.
+    indice: Cherche un carré parfait caché dans chaque racine.
+    etapes:
+      - type: calcul
+        titre: Question 1
+        texte: $A = \dfrac{2^{5 - 3}}{2^4} = 2^{2 - 4} = 2^{-2}$.
+      - type: calcul
+        titre: Question 2, B
+        texte: $\sqrt{72} = \sqrt{36 \times 2} = 6\sqrt{2}$.
+      - type: conc
+        titre: Question 2, C
+        texte: <mark>$\sqrt{12} + \sqrt{27} = 2\sqrt{3} + 3\sqrt{3} = 5\sqrt{3}$</mark>.
+        note: on additionne comme des x
+
+  - titre: Racine de 2 est irrationnel
+    difficulte: 3
+    type: methode
+    enonce: |
+      On suppose que $\sqrt{2} = \frac{p}{q}$ avec $p$ et $q$ entiers naturels non nuls, et la fraction **irréductible**.
+      1. Montrer que $p^2 = 2q^2$, puis que $p$ est pair.
+      2. On écrit $p = 2k$. Montrer que $q$ est pair aussi.
+      3. Conclure.
+    indice: Le carré d'un nombre impair est impair.
+    etapes:
+      - type: init
+        titre: Question 1
+        texte: >-
+          En élevant au carré : $2 = \frac{p^2}{q^2}$, donc $p^2 = 2q^2$. $p^2$ est pair. Si $p$ était impair, $p^2$ serait impair : donc $p$ est pair.
+      - type: her
+        titre: Question 2
+        texte: >-
+          $(2k)^2 = 2q^2$, donc $4k^2 = 2q^2$, donc $q^2 = 2k^2$. Comme avant, $q$ est pair.
+      - type: conc
+        titre: Question 3
+        texte: >-
+          $p$ et $q$ sont tous les deux pairs, donc la fraction se simplifie par 2 : elle n'était pas irréductible. C'est une contradiction. <mark>$\sqrt{2}$ n'est pas rationnel</mark>.
+        note: raisonnement par l'absurde

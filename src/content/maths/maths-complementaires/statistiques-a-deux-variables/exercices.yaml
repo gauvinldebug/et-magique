@@ -1,0 +1,77 @@
+# Exercices corrigés, du plus facile au type bac.
+# type d'étape : init (vert), her (orange), conc (bleu), calcul, methode, piege (rouge)
+exercices:
+  - titre: Le point moyen
+    difficulte: 1
+    type: application
+    enonce: |
+      Calculer les coordonnées du point moyen de la série suivante.
+      <table><tbody><tr><td>$x_i$</td><td>2</td><td>4</td><td>6</td><td>8</td></tr><tr><td>$y_i$</td><td>5</td><td>9</td><td>12</td><td>18</td></tr></tbody></table>
+    indice: Moyenne des $x_i$, puis moyenne des $y_i$.
+    etapes:
+      - type: calcul
+        titre: Les moyennes
+        texte: $\bar{x} = \frac{20}{4} = 5$ et $\bar{y} = \frac{44}{4} = 11$.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>$G(5\,;11)$</mark>.
+
+  - titre: Interpoler ou extrapoler
+    difficulte: 1
+    type: piege
+    enonce: |
+      Des données de taille (en cm) en fonction de l'âge (de 2 à 10 ans) sont ajustées par $y = 6x + 80$. Estimer la taille à 6 ans, puis à 40 ans. Commenter.
+    indice: L'âge 40 est-il dans les données ?
+    etapes:
+      - type: calcul
+        titre: À 6 ans
+        texte: >-
+          $6 \times 6 + 80 = 116$ cm : c'est une interpolation, fiable.
+      - type: piege
+        titre: À 40 ans
+        texte: $6 \times 40 + 80 = 320$ cm, absurde.
+      - type: conc
+        titre: Conclusion
+        texte: >-
+          <mark>L'extrapolation loin des données n'a pas de sens ici</mark> : la croissance s'arrête.
+
+  - titre: Calculer la droite des moindres carrés
+    difficulte: 2
+    type: methode
+    enonce: |
+      Déterminer la droite des moindres carrés de la série suivante.
+      <table><tbody><tr><td>$x_i$</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td></tr><tr><td>$y_i$</td><td>12</td><td>15</td><td>17</td><td>20</td><td>21</td></tr></tbody></table>
+    indice: Commence par $\bar{x}$ et $\bar{y}$, puis les écarts.
+    etapes:
+      - type: calcul
+        titre: Les moyennes
+        texte: $\bar{x} = 3$ et $\bar{y} = 17$.
+      - type: calcul
+        titre: Les écarts
+        texte: >-
+          $\sum(x_i - \bar{x})(y_i - \bar{y}) = 10 + 2 + 0 + 3 + 8 = 23$ et $\sum(x_i - \bar{x})^2 = 4 + 1 + 0 + 1 + 4 = 10$.
+      - type: conc
+        titre: Conclusion
+        texte: >-
+          $a = 2{,}3$ et $b = 17 - 6{,}9 = 10{,}1$ : <mark>$y = 2{,}3x + 10{,}1$</mark>.
+
+  - titre: Un ajustement exponentiel
+    difficulte: 3
+    type: bac
+    enonce: |
+      Le nombre $y$ d'utilisateurs d'une application (en milliers) semble croître de façon exponentielle avec le mois $x$. On pose $z = \ln y$ et la calculatrice donne l'ajustement $z = 0{,}1x + 2$.
+      1. Exprimer $y$ en fonction de $x$.
+      2. Estimer le nombre d'utilisateurs au mois 10.
+    indice: $y = e^z$.
+    etapes:
+      - type: calcul
+        titre: Question 1
+        texte: >-
+          $y = e^{0{,}1x + 2} = e^2 \times e^{0{,}1x} \approx 7{,}39\,e^{0{,}1x}$.
+      - type: calcul
+        titre: Question 2
+        texte: >-
+          Pour $x = 10$ : $y = e^{1 + 2} = e^3 \approx 20{,}1$.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>Environ 20 100 utilisateurs au mois 10</mark>.

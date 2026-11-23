@@ -1,0 +1,30 @@
+questions:
+  - question: Sur 50 élèves, 20 sont demi-pensionnaires. La fréquence des demi-pensionnaires est…
+    choix: ['$40\,\%$', '$20\,\%$', '$2{,}5\,\%$', '$60\,\%$']
+    bonne: 0
+    explication: $\frac{20}{50} = 0{,}4$.
+    revoir: cours
+
+  - question: Une fréquence conditionnelle « parmi les filles » se calcule en divisant par…
+    choix: ['l''effectif des filles', 'l''effectif total', 'l''effectif des garçons', '100']
+    bonne: 0
+    explication: On se restreint au groupe dont on parle.
+    revoir: cours
+
+  - question: Si $P(A) = 0{,}35$, alors $P(\bar{A}) = \ldots$
+    choix: ['$0{,}65$', '$0{,}35$', '$1{,}35$', '$-0{,}35$']
+    bonne: 0
+    explication: $1 - 0{,}35$.
+    revoir: cours
+
+  - question: Dans un arbre, $P(A) = 0{,}5$ et $P_A(B) = 0{,}4$. Alors $P(A \cap B) = \ldots$
+    choix: ['$0{,}2$', '$0{,}9$', '$0{,}1$', '$0{,}8$']
+    bonne: 0
+    explication: On multiplie le long du chemin.
+    revoir: exercices
+
+  - question: $P_A(B) = \ldots$
+    choix: ['$\frac{P(A \cap B)}{P(A)}$', '$\frac{P(A \cap B)}{P(B)}$', '$P(A) \times P(B)$', '$P(A) + P(B)$']
+    bonne: 0
+    explication: On divise par la probabilité de la condition.
+    revoir: cours

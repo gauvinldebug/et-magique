@@ -1,0 +1,77 @@
+# Exercices corrigés, du plus facile au type brevet.
+# type d'étape : init (vert), her (orange), conc (bleu), calcul, methode, piege (rouge)
+exercices:
+  - titre: Images et antécédents
+    difficulte: 1
+    type: application
+    enonce: |
+      Soit $\cbleu{f}(\corange{x}) = -2\corange{x} + 7$.
+      1. Calculer l'image de 3 et l'image de $-1$.
+      2. Calculer l'antécédent de 1.
+    indice: Pour l'antécédent, résous $-2\corange{x} + 7 = 1$.
+    etapes:
+      - type: calcul
+        titre: Question 1
+        texte: $\cbleu{f}(3) = -6 + 7 = 1$ et $\cbleu{f}(-1) = 2 + 7 = 9$.
+      - type: conc
+        titre: Question 2
+        texte: >-
+          $-2\corange{x} + 7 = 1 \iff -2\corange{x} = -6 \iff \corange{x} = 3$. <mark>L'antécédent de 1 est 3</mark>.
+
+  - titre: Trouver une fonction linéaire
+    difficulte: 1
+    type: methode
+    enonce: |
+      Une fonction linéaire $\cbleu{f}$ vérifie $\cbleu{f}(5) = 12$. Déterminer $\cbleu{f}(\corange{x})$, puis calculer $\cbleu{f}(20)$.
+    indice: $\cbleu{f}(\corange{x}) = a\corange{x}$, et $5a = 12$.
+    etapes:
+      - type: calcul
+        titre: Le coefficient
+        texte: $5a = 12$, donc $a = 2{,}4$ et $\cbleu{f}(\corange{x}) = 2{,}4\corange{x}$.
+      - type: conc
+        titre: L'image de 20
+        texte: <mark>$\cbleu{f}(20) = 48$</mark>. Logique, 20 c'est 4 fois 5, donc 4 fois 12.
+        note: proportionnalité
+
+  - titre: Fonction affine par deux images
+    difficulte: 2
+    type: methode
+    enonce: |
+      Une fonction affine $g$ vérifie $g(2) = 5$ et $g(6) = 17$. Déterminer $g(\corange{x})$.
+    indice: Calcule d'abord $a$ avec la formule.
+    etapes:
+      - type: calcul
+        titre: Le coefficient directeur
+        texte: $a = \frac{17 - 5}{6 - 2} = \frac{12}{4} = 3$.
+      - type: calcul
+        titre: L'ordonnée à l'origine
+        texte: $g(2) = 3 \times 2 + b = 5$, donc $b = -1$.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>$g(\corange{x}) = 3\corange{x} - 1$</mark>. Vérification, $g(6) = 18 - 1 = 17$.
+
+  - titre: Location de vélos
+    difficulte: 3
+    type: brevet
+    enonce: |
+      Pour louer un vélo, deux formules :
+      - formule 1 : 2,50 € de l'heure ;
+      - formule 2 : 6 € de frais fixes, puis 1,30 € de l'heure.
+      1. Exprimer le prix $p_1(\corange{x})$ et $p_2(\corange{x})$ en fonction du nombre d'heures $\corange{x}$.
+      2. Laquelle de ces fonctions est linéaire ?
+      3. À partir de combien d'heures la formule 2 est-elle plus avantageuse ?
+    indice: Résous $p_2(\corange{x}) < p_1(\corange{x})$.
+    etapes:
+      - type: calcul
+        titre: Question 1
+        texte: $p_1(\corange{x}) = 2{,}5\corange{x}$ et $p_2(\corange{x}) = 1{,}3\corange{x} + 6$.
+      - type: calcul
+        titre: Question 2
+        texte: $p_1$ est linéaire (pas de partie fixe, proportionnalité).
+      - type: calcul
+        titre: Question 3
+        texte: >-
+          $1{,}3\corange{x} + 6 < 2{,}5\corange{x} \iff 6 < 1{,}2\corange{x} \iff \corange{x} > 5$.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>Au-delà de 5 heures, la formule 2 est plus avantageuse</mark>. Pour 5 heures, les deux coûtent 12,50 €.

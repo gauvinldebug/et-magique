@@ -1,0 +1,100 @@
+# Exercices corrigés, du plus facile au type contrôle.
+# type d'étape : init (vert), her (orange), conc (bleu), calcul, methode, piege (rouge)
+exercices:
+  - titre: Images et antécédents par le calcul
+    difficulte: 1
+    type: application
+    enonce: |
+      Soit $\cbleu{f}(\corange{x}) = \corange{x}^2 - 3$ définie sur $\mathbb{R}$.
+      1. Calculer l'image de $-2$ et de $\sqrt{5}$.
+      2. Déterminer les antécédents de 6, puis de $-5$.
+    indice: Pour un antécédent, résous $\cbleu{f}(\corange{x}) = k$.
+    etapes:
+      - type: calcul
+        titre: Question 1
+        texte: $\cbleu{f}(-2) = 4 - 3 = 1$ et $\cbleu{f}(\sqrt{5}) = 5 - 3 = 2$.
+      - type: calcul
+        titre: Question 2, antécédents de 6
+        texte: $\corange{x}^2 - 3 = 6 \iff \corange{x}^2 = 9 \iff \corange{x} = 3$ ou $\corange{x} = -3$.
+        note: deux antécédents
+      - type: conc
+        titre: Question 2, antécédents de -5
+        texte: >-
+          $\corange{x}^2 = -2$ est impossible. <mark>$-5$ n'a aucun antécédent</mark>.
+
+  - titre: Un point est-il sur la courbe ?
+    difficulte: 1
+    type: methode
+    enonce: |
+      Soit $\cbleu{f}(\corange{x}) = 2\corange{x}^2 - \corange{x} + 1$. Les points $A(2\,;7)$ et $B(-1\,;2)$ sont-ils sur $\mathcal{C}_f$ ?
+    indice: Calcule $\cbleu{f}$ de l'abscisse et compare à l'ordonnée.
+    etapes:
+      - type: calcul
+        titre: Le point A
+        texte: $\cbleu{f}(2) = 8 - 2 + 1 = 7$. C'est l'ordonnée de $A$, donc $A \in \mathcal{C}_f$.
+      - type: conc
+        titre: Le point B
+        texte: >-
+          $\cbleu{f}(-1) = 2 + 1 + 1 = 4 \ne 2$. <mark>$B$ n'est pas sur la courbe</mark>.
+
+  - titre: Ensemble de définition
+    difficulte: 2
+    type: application
+    enonce: |
+      Déterminer l'ensemble de définition de chaque fonction.
+      1. $g(\corange{x}) = \dfrac{3}{2\corange{x} + 8}$
+      2. $h(\corange{x}) = \sqrt{6 - 2\corange{x}}$
+    indice: On ne divise pas par 0, et on ne prend pas la racine d'un nombre négatif.
+    etapes:
+      - type: calcul
+        titre: Question 1
+        texte: $2\corange{x} + 8 = 0 \iff \corange{x} = -4$. Donc $D_g = \mathbb{R} \setminus \{-4\}$.
+      - type: conc
+        titre: Question 2
+        texte: >-
+          Il faut $6 - 2\corange{x} \ge 0 \iff \corange{x} \le 3$. <mark>$D_h = \,]-\infty\,;3]$</mark>.
+        note: 3 est autorisé, racine de 0
+
+  - titre: Lire un tableau de variations
+    difficulte: 2
+    type: methode
+    enonce: |
+      Une fonction $\cbleu{f}$ définie sur $[-4\,;5]$ est croissante sur $[-4\,;1]$ et décroissante sur $[1\,;5]$, avec $\cbleu{f}(-4) = -2$, $\cbleu{f}(1) = 6$ et $\cbleu{f}(5) = 0$.
+      1. Quel est le maximum de $\cbleu{f}$ ? Où est-il atteint ?
+      2. Comparer $\cbleu{f}(2)$ et $\cbleu{f}(4)$.
+      3. Combien de solutions a l'équation $\cbleu{f}(\corange{x}) = 3$ ?
+    indice: Dessine la randonnée, montée puis descente.
+    etapes:
+      - type: calcul
+        titre: Question 1
+        texte: Le sommet du profil, c'est 6, atteint en $\corange{x} = 1$.
+      - type: calcul
+        titre: Question 2
+        texte: >-
+          $2 < 4$ dans $[1\,;5]$ où $\cbleu{f}$ est décroissante : l'ordre s'inverse, $\cbleu{f}(2) > \cbleu{f}(4)$.
+      - type: conc
+        titre: Question 3
+        texte: >-
+          3 est atteint une fois à la montée (de $-2$ à 6) et une fois à la descente (de 6 à 0). <mark>Deux solutions</mark>.
+
+  - titre: Signe et inéquation
+    difficulte: 3
+    type: application
+    enonce: |
+      Soit $\cbleu{f}(\corange{x}) = (\corange{x} - 1)(\corange{x} + 2)$ et $g(\corange{x}) = \corange{x} + 2$, définies sur $\mathbb{R}$.
+      1. Dresser le tableau de signes de $\cbleu{f}$.
+      2. Résoudre $\cbleu{f}(\corange{x}) = g(\corange{x})$.
+    indice: Pour la 2, passe tout à gauche et factorise par $(\corange{x} + 2)$.
+    etapes:
+      - type: calcul
+        titre: Question 1
+        texte: >-
+          $\cbleu{f}$ s'annule en $-2$ et 1. Positive sur $]-\infty\,;-2[$ et $]1\,;+\infty[$, négative sur $]-2\,;1[$.
+      - type: calcul
+        titre: Question 2
+        texte: >-
+          $(\corange{x} - 1)(\corange{x} + 2) - (\corange{x} + 2) = 0 \iff (\corange{x} + 2)(\corange{x} - 2) = 0$.
+        note: facteur commun
+      - type: conc
+        titre: Conclusion
+        texte: <mark>Les courbes se coupent en $\corange{x} = -2$ et $\corange{x} = 2$</mark>.

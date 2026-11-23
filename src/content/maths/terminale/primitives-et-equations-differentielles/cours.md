@@ -16,7 +16,7 @@ suivant: integration
 
 ## Le problème
 
-Jusqu'ici, on partait d'une fonction et on calculait sa dérivée. Maintenant, on fait **le chemin inverse** : on connaît la dérivée, et on cherche la fonction.
+Jusqu'ici, on partait d'une fonction et on calculait [sa dérivée](/maths/terminale/derivation-et-convexite/cours/). Maintenant, on fait **le chemin inverse** : on connaît la dérivée, et on cherche la fonction.
 
 Par exemple, la vitesse d'une voiture est $v(t) = 2t$ (en m/s). Quelle distance a-t-elle parcourue au temps $t$ ? Ou encore : une population de bactéries grandit à une vitesse proportionnelle à sa taille. Comment évolue-t-elle ?
 

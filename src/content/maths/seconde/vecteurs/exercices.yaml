@@ -1,0 +1,101 @@
+# Exercices corrigés, du plus facile au type contrôle.
+# type d'étape : init (vert), her (orange), conc (bleu), calcul, methode, piege (rouge)
+exercices:
+  - titre: Simplifier avec Chasles
+    difficulte: 1
+    type: application
+    enonce: |
+      Simplifier.
+      1. $\vec{u} = \vec{AB} + \vec{BC} + \vec{CD}$
+      2. $\vec{v} = \vec{MA} - \vec{MB}$
+    indice: $-\vec{MB} = \vec{BM}$.
+    etapes:
+      - type: calcul
+        titre: Question 1
+        texte: Les lettres du milieu disparaissent deux fois. $\vec{u} = \vec{AD}$.
+      - type: conc
+        titre: Question 2
+        texte: >-
+          $\vec{v} = \vec{MA} + \vec{BM} = \vec{BM} + \vec{MA}$, <mark>donc $\vec{v} = \vec{BA}$</mark>.
+        note: on remet dans le bon ordre
+
+  - titre: Coordonnées, milieu et distance
+    difficulte: 1
+    type: application
+    enonce: |
+      Dans un repère orthonormé, $A(-2\,;1)$ et $B(4\,;9)$.
+      1. Calculer les coordonnées de $\vec{AB}$.
+      2. Calculer les coordonnées du milieu $I$ de $[AB]$.
+      3. Calculer la longueur $AB$.
+    indice: Arrivée moins départ.
+    etapes:
+      - type: calcul
+        titre: Question 1
+        texte: $\vec{AB}\begin{pmatrix} 4 - (-2) \\ 9 - 1 \end{pmatrix} = \begin{pmatrix} 6 \\ 8 \end{pmatrix}$.
+      - type: calcul
+        titre: Question 2
+        texte: $I\left(\frac{-2 + 4}{2}\,;\frac{1 + 9}{2}\right) = (1\,;5)$.
+      - type: conc
+        titre: Question 3
+        texte: <mark>$AB = \sqrt{36 + 64} = \sqrt{100} = 10$</mark>.
+
+  - titre: Trouver le quatrième sommet
+    difficulte: 2
+    type: methode
+    enonce: |
+      $A(1\,;-1)$, $B(5\,;1)$ et $C(4\,;5)$. Déterminer les coordonnées du point $D$ tel que $ABCD$ soit un parallélogramme.
+    indice: $ABCD$ parallélogramme $\iff \vec{AB} = \vec{DC}$.
+    etapes:
+      - type: init
+        titre: La bonne égalité
+        texte: >-
+          On pose $D(x\,;y)$. $\vec{AB}\begin{pmatrix} 4 \\ 2 \end{pmatrix}$ et $\vec{DC}\begin{pmatrix} 4 - x \\ 5 - y \end{pmatrix}$.
+        note: D avant C
+      - type: calcul
+        titre: Coordonnée par coordonnée
+        texte: $4 - x = 4$ et $5 - y = 2$, donc $x = 0$ et $y = 3$.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>$D(0\,;3)$</mark>.
+
+  - titre: Alignés ou pas ?
+    difficulte: 2
+    type: application
+    enonce: |
+      $A(2\,;3)$, $B(5\,;9)$ et $C(-1\,;-3)$, $D(0\,;2)$.
+      1. Les points $A$, $B$, $C$ sont-ils alignés ?
+      2. Les points $A$, $B$, $D$ sont-ils alignés ?
+    indice: Calcule le déterminant de $\vec{AB}$ et $\vec{AC}$.
+    etapes:
+      - type: calcul
+        titre: Question 1
+        texte: >-
+          $\vec{AB}\begin{pmatrix} 3 \\ 6 \end{pmatrix}$, $\vec{AC}\begin{pmatrix} -3 \\ -6 \end{pmatrix}$. $\det = 3 \times (-6) - (-3) \times 6 = -18 + 18 = 0$. Alignés.
+      - type: conc
+        titre: Question 2
+        texte: >-
+          $\vec{AD}\begin{pmatrix} -2 \\ -1 \end{pmatrix}$. $\det(\vec{AB}, \vec{AD}) = 3 \times (-1) - (-2) \times 6 = 9 \ne 0$. <mark>$A$, $B$, $D$ ne sont pas alignés</mark>.
+
+  - titre: Un point défini par une égalité
+    difficulte: 3
+    type: methode
+    enonce: |
+      $A(0\,;0)$, $B(6\,;0)$ et $C(2\,;4)$. On définit $M$ par $\vec{AM} = \frac{1}{2}\vec{AB} + \vec{AC}$, et $N$ le milieu de $[BC]$.
+      1. Calculer les coordonnées de $M$ et de $N$.
+      2. Les droites $(AN)$ et $(CM)$ sont-elles parallèles ?
+    indice: Comme $A$ est l'origine, les coordonnées de $M$ sont celles de $\vec{AM}$.
+    etapes:
+      - type: calcul
+        titre: Question 1, M
+        texte: >-
+          $\frac{1}{2}\vec{AB}\begin{pmatrix} 3 \\ 0 \end{pmatrix}$ et $\vec{AC}\begin{pmatrix} 2 \\ 4 \end{pmatrix}$, donc $\vec{AM}\begin{pmatrix} 5 \\ 4 \end{pmatrix}$ et $M(5\,;4)$.
+      - type: calcul
+        titre: Question 1, N
+        texte: $N\left(\frac{6 + 2}{2}\,;\frac{0 + 4}{2}\right) = (4\,;2)$.
+      - type: calcul
+        titre: Question 2
+        texte: >-
+          $\vec{AN}\begin{pmatrix} 4 \\ 2 \end{pmatrix}$ et $\vec{CM}\begin{pmatrix} 3 \\ 0 \end{pmatrix}$. $\det = 4 \times 0 - 3 \times 2 = -6 \ne 0$.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>Les droites $(AN)$ et $(CM)$ ne sont pas parallèles</mark>.

@@ -1,0 +1,36 @@
+questions:
+  - question: La médiane de la série 3, 9, 4, 7, 5 est…
+    choix: ['$5$', '$4$', '$5{,}6$', '$7$']
+    bonne: 0
+    explication: Rangée, la série est 3, 4, 5, 7, 9. La valeur du milieu est 5.
+    revoir: cours
+
+  - question: Quel indicateur est le moins sensible à une valeur extrême ?
+    choix: ['la médiane', 'la moyenne', 'l''étendue', 'l''écart-type']
+    bonne: 0
+    explication: L'élève du milieu de la file ne bouge pas si le dernier est géant.
+    revoir: cours
+
+  - question: La moyenne de 10 (coefficient 1) et 16 (coefficient 2) est…
+    choix: ['$14$', '$13$', '$12$', '$15$']
+    bonne: 0
+    explication: $\frac{10 + 2 \times 16}{3} = \frac{42}{3} = 14$.
+    revoir: exercices
+
+  - question: Si on ajoute 2 points à toutes les notes, l'écart-type…
+    choix: ['ne change pas', 'augmente de 2', 'est multiplié par 2', 'diminue de 2']
+    bonne: 0
+    explication: La série est décalée, pas étalée. Les écarts à la moyenne sont les mêmes.
+    revoir: cours
+
+  - question: Pour une série de 30 valeurs rangées, $Q_1$ est la valeur de rang…
+    choix: ['$8$', '$7$', '$7{,}5$', '$15$']
+    bonne: 0
+    explication: $\frac{30}{4} = 7{,}5$, arrondi à l'entier supérieur, 8.
+    revoir: cours
+
+  - question: L'écart interquartile est égal à…
+    choix: ['$Q_3 - Q_1$', '$Q_3 + Q_1$', 'max $-$ min', '$\frac{Q_1 + Q_3}{2}$']
+    bonne: 0
+    explication: C'est la largeur de la moitié centrale de la série.
+    revoir: cours

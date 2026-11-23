@@ -1,0 +1,72 @@
+# Exercices corrigés, du plus facile au type bac.
+# type d'étape : init (vert), her (orange), conc (bleu), calcul, methode, piege (rouge)
+exercices:
+  - titre: Image et antécédent
+    difficulte: 1
+    type: application
+    enonce: |
+      Soit $f(x) = 3x - 2$. Calculer l'image de 4, puis l'antécédent de 7.
+    indice: Pour l'antécédent, résous $3x - 2 = 7$.
+    etapes:
+      - type: calcul
+        titre: Image
+        texte: $f(4) = 12 - 2 = 10$.
+      - type: conc
+        titre: Antécédent
+        texte: >-
+          $3x - 2 = 7 \iff x = 3$ : <mark>l'image de 4 est 10, l'antécédent de 7 est 3</mark>.
+
+  - titre: Retrouver une fonction affine
+    difficulte: 2
+    type: methode
+    enonce: |
+      Une fonction affine $f$ vérifie $f(2) = 5$ et $f(6) = 13$. Déterminer son expression.
+    indice: Commence par le coefficient directeur.
+    etapes:
+      - type: calcul
+        titre: Le coefficient directeur
+        texte: $a = \frac{13 - 5}{6 - 2} = \frac{8}{4} = 2$.
+      - type: calcul
+        titre: L'ordonnée à l'origine
+        texte: $f(2) = 2 \times 2 + b = 5$, donc $b = 1$.
+      - type: conc
+        titre: Conclusion
+        texte: >-
+          <mark>$f(x) = 2x + 1$</mark>. Vérification : $f(6) = 13$.
+
+  - titre: Proportionnel ou pas ?
+    difficulte: 2
+    type: piege
+    enonce: |
+      Une course de taxi de 10 km coûte 19 €. Une course de 20 km coûte-t-elle 38 € avec le tarif $A(x) = 1{,}5x + 4$ ?
+    indice: Calcule $A(20)$.
+    etapes:
+      - type: calcul
+        titre: Le calcul
+        texte: $A(10) = 19$ et $A(20) = 30 + 4 = 34$.
+      - type: piege
+        titre: Pourquoi pas 38 €
+        texte: >-
+          La prise en charge de 4 € n'est payée qu'une fois : le prix n'est pas proportionnel à la distance.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>La course de 20 km coûte 34 €, pas 38 €</mark>.
+
+  - titre: Choisir un forfait téléphonique
+    difficulte: 3
+    type: bac
+    enonce: |
+      Le forfait 1 coûte 10 € par mois plus 0,05 € par minute d'appel. Le forfait 2 coûte 25 € par mois, appels illimités. On note $x$ le nombre de minutes d'appel par mois.
+      1. Exprimer le prix $P_1(x)$ du forfait 1.
+      2. À partir de combien de minutes le forfait 2 est-il plus avantageux ?
+    indice: Résous $P_1(x) > 25$.
+    etapes:
+      - type: calcul
+        titre: Question 1
+        texte: $P_1(x) = 0{,}05x + 10$.
+      - type: calcul
+        titre: Question 2
+        texte: $0{,}05x + 10 > 25 \iff 0{,}05x > 15 \iff x > 300$.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>Au-delà de 300 minutes par mois, le forfait 2 est plus avantageux</mark>.

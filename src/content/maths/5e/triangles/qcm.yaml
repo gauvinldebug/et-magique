@@ -1,0 +1,30 @@
+questions:
+  - question: Avec 3 cm, 4 cm et 9 cm, on peut construire un triangle ?
+    choix: ['non', 'oui', 'seulement s''il est rectangle', 'seulement s''il est aplati']
+    bonne: 0
+    explication: $3 + 4 = 7 < 9$, les deux petites baguettes ne se rejoignent pas.
+    revoir: cours
+
+  - question: La somme des angles d'un triangle vaut…
+    choix: ['$180°$', '$360°$', '$90°$', 'ça dépend du triangle']
+    bonne: 0
+    explication: C'est vrai pour tous les triangles.
+    revoir: cours
+
+  - question: Dans un triangle équilatéral, chaque angle mesure…
+    choix: ['$60°$', '$90°$', '$45°$', '$180°$']
+    bonne: 0
+    explication: Trois angles égaux, $180° \div 3 = 60°$.
+    revoir: cours
+
+  - question: Un triangle a deux angles de 50° et 60°. Le troisième mesure…
+    choix: ['$70°$', '$110°$', '$80°$', '$90°$']
+    bonne: 0
+    explication: $180 - 50 - 60 = 70$.
+    revoir: exercices
+
+  - question: Tout point de la médiatrice de $[AB]$ est…
+    choix: ['à égale distance de $A$ et de $B$', 'le milieu de $[AB]$', 'sur le segment $[AB]$', 'plus près de $A$']
+    bonne: 0
+    explication: C'est la propriété de la médiatrice.
+    revoir: cours

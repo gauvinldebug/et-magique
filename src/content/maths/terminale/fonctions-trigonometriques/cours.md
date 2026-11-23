@@ -16,7 +16,7 @@ suivant: primitives-et-equations-differentielles
 
 ## Le problème
 
-Les marées, le courant électrique, le son d'une note de musique, la position d'une nacelle de grande roue : tous ces phénomènes **se répètent**. Pour les décrire, il faut des fonctions qui reviennent régulièrement aux mêmes valeurs. Ce sont les fonctions $\cos$ et $\sin$.
+Ce chapitre prolonge la [trigonométrie de Première](/maths/premiere/trigonometrie/cours/). Les marées, le courant électrique, le son d'une note de musique, la position d'une nacelle de grande roue : tous ces phénomènes **se répètent**. Pour les décrire, il faut des fonctions qui reviennent régulièrement aux mêmes valeurs. Ce sont les fonctions $\cos$ et $\sin$.
 
 ## L'idée : la grande roue
 

@@ -1,0 +1,75 @@
+# Exercices corrigés, du plus facile au type contrôle.
+# type d'étape : init (vert), her (orange), conc (bleu), calcul, methode, piege (rouge)
+exercices:
+  - titre: Qui passe en premier ?
+    difficulte: 1
+    type: application
+    enonce: |
+      Calculer en détaillant.
+      1. $A = 5 + 4 \times 3$
+      2. $B = (5 + 4) \times 3$
+      3. $C = 30 - 12 \div 4$
+    indice: La multiplication et la division passent avant.
+    etapes:
+      - type: calcul
+        titre: Question 1
+        texte: $A = 5 + 12 = 17$.
+      - type: calcul
+        titre: Question 2
+        texte: $B = 9 \times 3 = 27$.
+      - type: conc
+        titre: Question 3
+        texte: <mark>$C = 30 - 3 = 27$</mark>.
+
+  - titre: De gauche à droite
+    difficulte: 2
+    type: piege
+    enonce: |
+      Calculer.
+      1. $D = 24 \div 4 \times 2$
+      2. $E = 15 - 6 + 2$
+    indice: Même niveau de priorité, on avance de gauche à droite.
+    etapes:
+      - type: piege
+        titre: Question 1
+        texte: >-
+          $24 \div 4 = 6$, puis $6 \times 2 = 12$. Commencer par $4 \times 2$ donnerait 3, c'est faux.
+        note: gauche à droite
+      - type: conc
+        titre: Question 2
+        texte: <mark>$E = 9 + 2 = 11$</mark>, et pas $15 - 8 = 7$.
+
+  - titre: Parenthèses et fractions
+    difficulte: 2
+    type: methode
+    enonce: |
+      Calculer.
+      1. $F = 3 \times [10 - (2 + 5)]$
+      2. $G = \dfrac{7 \times 4 - 3}{2 + 3}$
+    indice: Les parenthèses les plus intérieures d'abord.
+    etapes:
+      - type: calcul
+        titre: Question 1
+        texte: $F = 3 \times [10 - 7] = 3 \times 3 = 9$.
+      - type: conc
+        titre: Question 2
+        texte: <mark>$G = \frac{28 - 3}{5} = \frac{25}{5} = 5$</mark>.
+
+  - titre: Traduire en un seul calcul
+    difficulte: 3
+    type: methode
+    enonce: |
+      Léna achète 4 cahiers à 2,50 € et un stylo à 3 €. Elle paie avec un billet de 20 €.
+      1. Écrire en **une seule expression** le calcul de la monnaie rendue.
+      2. Calculer cette monnaie.
+    indice: Il faut des parenthèses autour de la dépense.
+    etapes:
+      - type: init
+        titre: Question 1
+        texte: $20 - (4 \times 2{,}5 + 3)$.
+      - type: calcul
+        titre: Le calcul
+        texte: $20 - (10 + 3) = 20 - 13$.
+      - type: conc
+        titre: Question 2
+        texte: <mark>On lui rend 7 €</mark>.

@@ -1,0 +1,93 @@
+# Exercices corrigés, du plus facile au type bac.
+# type d'étape : init (vert), her (orange), conc (bleu), calcul, methode, piege (rouge)
+exercices:
+  - titre: Le produit n'est pas commutatif
+    difficulte: 1
+    type: piege
+    enonce: |
+      Soit $A = \begin{pmatrix} 1 & 2 \\ 3 & 4 \end{pmatrix}$ et $B = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}$. Calculer $AB$ et $BA$.
+    indice: Ligne de la première fois colonne de la seconde.
+    etapes:
+      - type: calcul
+        titre: AB
+        texte: >-
+          $AB = \begin{pmatrix} 2 & 1 \\ 4 & 3 \end{pmatrix}$ : les colonnes de $A$ sont échangées.
+      - type: calcul
+        titre: BA
+        texte: >-
+          $BA = \begin{pmatrix} 3 & 4 \\ 1 & 2 \end{pmatrix}$ : ce sont les lignes qui sont échangées.
+      - type: piege
+        titre: Conclusion
+        texte: >-
+          <mark>$AB \ne BA$</mark> : l'ordre du produit compte.
+
+  - titre: Résoudre un système avec l'inverse
+    difficulte: 2
+    type: methode
+    enonce: |
+      Résoudre $\begin{cases} 2x + y = 4 \\ 5x + 3y = 11 \end{cases}$ à l'aide d'une matrice inverse.
+    indice: Écris $AX = B$, puis calcule $\det A$.
+    etapes:
+      - type: calcul
+        titre: L'écriture matricielle
+        texte: >-
+          $A = \begin{pmatrix} 2 & 1 \\ 5 & 3 \end{pmatrix}$, $B = \begin{pmatrix} 4 \\ 11 \end{pmatrix}$, $\det A = 6 - 5 = 1$.
+      - type: calcul
+        titre: L'inverse
+        texte: >-
+          $A^{-1} = \begin{pmatrix} 3 & -1 \\ -5 & 2 \end{pmatrix}$.
+      - type: calcul
+        titre: La solution
+        texte: >-
+          $X = A^{-1}B = \begin{pmatrix} 12 - 11 \\ -20 + 22 \end{pmatrix} = \begin{pmatrix} 1 \\ 2 \end{pmatrix}$.
+      - type: conc
+        titre: Conclusion
+        texte: >-
+          <mark>$x = 1$ et $y = 2$</mark>. Vérification : $2 + 2 = 4$ et $5 + 6 = 11$.
+
+  - titre: Puissance d'une matrice
+    difficulte: 2
+    type: application
+    enonce: |
+      Soit $A = \begin{pmatrix} 1 & 1 \\ 0 & 1 \end{pmatrix}$. Conjecturer $A^n$, puis le démontrer par récurrence.
+    indice: Calcule $A^2$ et $A^3$.
+    etapes:
+      - type: calcul
+        titre: Conjecture
+        texte: >-
+          $A^2 = \begin{pmatrix} 1 & 2 \\ 0 & 1 \end{pmatrix}$, $A^3 = \begin{pmatrix} 1 & 3 \\ 0 & 1 \end{pmatrix}$. On conjecture $A^n = \begin{pmatrix} 1 & n \\ 0 & 1 \end{pmatrix}$.
+      - type: init
+        titre: Initialisation
+        texte: Pour $n = 1$, c'est la matrice $A$.
+      - type: her
+        titre: Hérédité
+        texte: >-
+          $A^{n+1} = A^n A = \begin{pmatrix} 1 & n \\ 0 & 1 \end{pmatrix}\begin{pmatrix} 1 & 1 \\ 0 & 1 \end{pmatrix} = \begin{pmatrix} 1 & n + 1 \\ 0 & 1 \end{pmatrix}$.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>Pour tout $n \ge 1$, $A^n = \begin{pmatrix} 1 & n \\ 0 & 1 \end{pmatrix}$</mark>.
+
+  - titre: Deux villes qui échangent leurs habitants
+    difficulte: 3
+    type: bac
+    enonce: |
+      Chaque année, 10 % des habitants de A partent en B et 20 % de ceux de B partent en A. On note $U_n = \begin{pmatrix} a_n \\ b_n \end{pmatrix}$ les populations (en milliers) l'année $n$, avec $a_0 = 500$ et $b_0 = 400$.
+      1. Donner la matrice $M$ telle que $U_{n+1} = MU_n$ et calculer $U_1$.
+      2. Déterminer l'état stable $\begin{pmatrix} a \\ b \end{pmatrix}$ avec $a + b = 900$.
+    indice: Ceux qui restent en A, plus ceux qui arrivent de B.
+    etapes:
+      - type: calcul
+        titre: La matrice
+        texte: >-
+          $a_{n+1} = 0{,}9a_n + 0{,}2b_n$ et $b_{n+1} = 0{,}1a_n + 0{,}8b_n$, donc $M = \begin{pmatrix} 0{,}9 & 0{,}2 \\ 0{,}1 & 0{,}8 \end{pmatrix}$.
+      - type: calcul
+        titre: U1
+        texte: >-
+          $a_1 = 450 + 80 = 530$ et $b_1 = 50 + 320 = 370$. Le total reste 900.
+      - type: calcul
+        titre: L'état stable
+        texte: >-
+          $a = 0{,}9a + 0{,}2b$ donne $0{,}1a = 0{,}2b$, soit $a = 2b$. Avec $a + b = 900$ : $b = 300$.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>L'état stable est 600 milliers en A et 300 milliers en B</mark>.

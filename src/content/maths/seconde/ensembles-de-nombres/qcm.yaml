@@ -1,0 +1,36 @@
+questions:
+  - question: Le nombre $\frac{1}{3}$ appartient à…
+    choix: ['$\mathbb{Q}$ mais pas $\mathbb{D}$', '$\mathbb{D}$', '$\mathbb{Z}$', 'aucun ensemble']
+    bonne: 0
+    explication: $\frac{1}{3} = 0{,}333\dots$ ne s'arrête jamais, ce n'est pas un décimal. Mais c'est un quotient d'entiers.
+    revoir: cours
+
+  - question: L'inégalité $-2 < x \le 3$ s'écrit…
+    choix: ['$]-2\,;3]$', '$[-2\,;3[$', '$[-2\,;3]$', '$]-2\,;3[$']
+    bonne: 0
+    explication: $-2$ est exclu (crochet tourné vers l'extérieur), 3 est inclus.
+    revoir: cours
+
+  - question: $[1\,;6] \cap [4\,;9]$ est égal à…
+    choix: ['$[4\,;6]$', '$[1\,;9]$', '$[1\,;4]$', '$\varnothing$']
+    bonne: 0
+    explication: L'intersection garde les nombres communs aux deux intervalles, de 4 à 6.
+    revoir: exercices
+
+  - question: Les solutions de $|x - 2| < 1$ forment…
+    choix: ['$]1\,;3[$', '$[1\,;3]$', '$]-1\,;1[$', '$]2\,;3[$']
+    bonne: 0
+    explication: $x$ est à moins de 1 de 2, donc strictement entre 1 et 3.
+    revoir: cours
+
+  - question: $\sqrt{48}$ est égal à…
+    choix: ['$4\sqrt{3}$', '$3\sqrt{4}$', '$16\sqrt{3}$', '$6\sqrt{8}$']
+    bonne: 0
+    explication: $48 = 16 \times 3$, donc $\sqrt{48} = \sqrt{16}\sqrt{3} = 4\sqrt{3}$.
+    revoir: exercices
+
+  - question: $\dfrac{10^3 \times 10^{-5}}{10^2}$ est égal à…
+    choix: ['$10^{-4}$', '$10^{0}$', '$10^{-6}$', '$10^{4}$']
+    bonne: 0
+    explication: $10^{3 - 5 - 2} = 10^{-4}$.
+    revoir: cours

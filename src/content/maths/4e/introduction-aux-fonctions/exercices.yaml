@@ -1,0 +1,76 @@
+# Exercices corrigés, du plus facile au type contrôle.
+# type d'étape : init (vert), her (orange), conc (bleu), calcul, methode, piege (rouge)
+exercices:
+  - titre: Lire un tableau
+    difficulte: 1
+    type: application
+    enonce: |
+      Le tableau donne la hauteur (en cm) d'une plante selon le nombre de semaines.
+      <table><tbody><tr><td>Semaines</td><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td></tr><tr><td>Hauteur (cm)</td><td>2</td><td>5</td><td>9</td><td>14</td><td>18</td></tr></tbody></table>
+      1. Quelle est l'image de 3 ?
+      2. Quel est l'antécédent de 9 ?
+    indice: L'image est en bas, l'antécédent en haut.
+    etapes:
+      - type: calcul
+        titre: Question 1
+        texte: Sous le 3, on lit 14. L'image de 3 est 14.
+      - type: conc
+        titre: Question 2
+        texte: >-
+          <mark>Au-dessus du 9, on lit 2 : l'antécédent de 9 est 2</mark>.
+
+  - titre: Avec une formule
+    difficulte: 1
+    type: application
+    enonce: |
+      Un taxi facture $\cbleu{f}(\corange{x}) = 1{,}8\corange{x} + 4$ euros pour $\corange{x}$ km.
+      1. Calculer $\cbleu{f}(10)$.
+      2. Combien de kilomètres peut-on faire pour 22 € ?
+    indice: Pour la 2, résous $1{,}8\corange{x} + 4 = 22$.
+    etapes:
+      - type: calcul
+        titre: Question 1
+        texte: $\cbleu{f}(10) = 18 + 4 = 22$ €.
+      - type: conc
+        titre: Question 2
+        texte: >-
+          <mark>C'est la question 1 à l'envers : 10 km</mark>.
+        note: 22 a pour antécédent 10
+
+  - titre: Compléter un tableau
+    difficulte: 2
+    type: methode
+    enonce: |
+      On considère $\cbleu{f}(\corange{x}) = \corange{x}^2 - 3$. Compléter le tableau de valeurs pour $\corange{x} = -2$, $-1$, $0$, $1$, $2$.
+    indice: Attention, $(-2)^2 = 4$.
+    etapes:
+      - type: calcul
+        titre: Les calculs
+        texte: >-
+          $\cbleu{f}(-2) = 4 - 3 = 1$ ; $\cbleu{f}(-1) = -2$ ; $\cbleu{f}(0) = -3$ ; $\cbleu{f}(1) = -2$ ; $\cbleu{f}(2) = 1$.
+      - type: conc
+        titre: Remarque
+        texte: <mark>$-2$ a deux antécédents, $-1$ et 1</mark>. Un antécédent n'est pas unique.
+
+  - titre: Lire une courbe de température
+    difficulte: 3
+    type: piege
+    enonce: |
+      La courbe de température d'une journée passe par les points (0 h ; 5 °C), (6 h ; 3 °C), (12 h ; 14 °C), (16 h ; 16 °C) et (24 h ; 6 °C), reliés par des segments.
+      1. Quelle était la température à 6 h ?
+      2. À quels moments a-t-il fait 5 °C ?
+      3. Quelle a été la température maximale, et à quelle heure ?
+    indice: Pour la 2, regarde la montée et la descente.
+    etapes:
+      - type: calcul
+        titre: Question 1
+        texte: >-
+          L'image de 6 est 3 : il faisait 3 °C.
+      - type: piege
+        titre: Question 2
+        texte: >-
+          5 °C est atteint à 0 h, puis une fois dans la montée entre 6 h et 12 h. Dans la descente, de 16 °C à 6 °C, on ne descend pas jusqu'à 5. Il ne faut pas oublier 0 h.
+        note: plusieurs antécédents
+      - type: conc
+        titre: Question 3
+        texte: <mark>Le maximum est 16 °C, atteint à 16 h</mark>.

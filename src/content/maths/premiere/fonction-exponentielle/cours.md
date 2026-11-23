@@ -82,7 +82,7 @@ $$
 
 ## Lien avec les suites géométriques
 
-Pour tout entier $\corange{n}$, $\mathrm{e}^{\corange{n}a} = (\mathrm{e}^{a})^{\corange{n}}$. La suite $u_{\corange{n}} = \mathrm{e}^{\corange{n}a}$ est donc **géométrique** de raison $\mathrm{e}^{a}$ : l'exponentielle est la version « continue » de la photocopieuse des suites géométriques.
+Pour tout entier $\corange{n}$, $\mathrm{e}^{\corange{n}a} = (\mathrm{e}^{a})^{\corange{n}}$. La suite $u_{\corange{n}} = \mathrm{e}^{\corange{n}a}$ est donc **géométrique** de raison $\mathrm{e}^{a}$ : l'exponentielle est la version « continue » de la photocopieuse des [suites géométriques](/maths/premiere/suites-numeriques/cours/).
 
 ## Résoudre
 

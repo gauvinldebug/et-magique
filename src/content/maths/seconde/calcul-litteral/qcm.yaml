@@ -1,0 +1,36 @@
+questions:
+  - question: $(\corange{x} - 4)^2$ est égal à…
+    choix: ['$\corange{x}^2 - 8\corange{x} + 16$', '$\corange{x}^2 - 16$', '$\corange{x}^2 + 16$', '$\corange{x}^2 - 4\corange{x} + 16$']
+    bonne: 0
+    explication: $(a - b)^2 = a^2 - 2ab + b^2$, avec un double produit $2 \times \corange{x} \times 4 = 8\corange{x}$.
+    revoir: cours
+
+  - question: Une forme factorisée de $\corange{x}^2 - 36$ est…
+    choix: ['$(\corange{x} - 6)(\corange{x} + 6)$', '$(\corange{x} - 6)^2$', '$\corange{x}(\corange{x} - 36)$', '$(\corange{x} - 18)(\corange{x} + 18)$']
+    bonne: 0
+    explication: C'est $a^2 - b^2 = (a - b)(a + b)$ avec $a = \corange{x}$ et $b = 6$.
+    revoir: cours
+
+  - question: Les solutions de $(\corange{x} + 2)(5 - \corange{x}) = 0$ sont…
+    choix: ['$-2$ et $5$', '$2$ et $-5$', '$2$ et $5$', 'seulement $5$']
+    bonne: 0
+    explication: $\corange{x} + 2 = 0$ donne $-2$ et $5 - \corange{x} = 0$ donne $5$.
+    revoir: exercices
+
+  - question: L'inéquation $-3\corange{x} > 12$ a pour solutions…
+    choix: ['$\corange{x} < -4$', '$\corange{x} > -4$', '$\corange{x} > 4$', '$\corange{x} < 4$']
+    bonne: 0
+    explication: On divise par $-3$, un nombre négatif, donc le sens change.
+    revoir: cours
+
+  - question: L'équation $\corange{x}^2 = -4$ a…
+    choix: ['aucune solution', 'deux solutions, $2$ et $-2$', 'une solution, $-2$', 'une solution, $2$']
+    bonne: 0
+    explication: Un carré est toujours positif ou nul, il ne peut pas valoir $-4$.
+    revoir: cours
+
+  - question: $\corange{x}^2 = 3\corange{x}$ a pour ensemble de solutions…
+    choix: ['$\{0\,;3\}$', '$\{3\}$', '$\{0\}$', '$\{-3\,;3\}$']
+    bonne: 0
+    explication: $\corange{x}(\corange{x} - 3) = 0$. Diviser par $\corange{x}$ ferait perdre la solution 0.
+    revoir: exercices

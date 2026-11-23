@@ -1,0 +1,31 @@
+questions:
+  - question: Une primitive de $f(x) = 2x$ est…
+    choix: ['$x^2$', '$2$', '$2x^2$', '$\frac{x^2}{2}$']
+    bonne: 0
+    explication: La dérivée de $x^2$ est $2x$.
+    revoir: cours
+
+  - question: $\int_1^3 2\,\mathrm{d}x = \ldots$
+    choix: ['$4$', '$6$', '$2$', '$8$']
+    bonne: 0
+    explication: C'est l'aire d'un rectangle de largeur 2 et de hauteur 2.
+    revoir: cours
+
+  - question: Une primitive de $e^{3x}$ est…
+    choix: ['$\frac{1}{3}e^{3x}$', '$3e^{3x}$', '$e^{3x}$', '$\frac{e^{3x+1}}{3x + 1}$']
+    bonne: 0
+    explication: >-
+      On vérifie en dérivant : $\left(\frac{1}{3}e^{3x}\right)' = e^{3x}$.
+    revoir: exercices
+
+  - question: La valeur moyenne de $f$ sur $[a\,;b]$ est…
+    choix: ['$\frac{1}{b - a}\int_a^b f$', '$\int_a^b f$', '$\frac{f(a) + f(b)}{2}$', '$(b - a)\int_a^b f$']
+    bonne: 0
+    explication: On divise l'intégrale par la longueur de l'intervalle.
+    revoir: cours
+
+  - question: Si $f$ est négative sur $[a\,;b]$, alors $\int_a^b f$ est…
+    choix: ['négative', 'positive', 'nulle', 'égale à l''aire']
+    bonne: 0
+    explication: L'intégrale compte en négatif la partie sous l'axe.
+    revoir: cours
