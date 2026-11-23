@@ -32,26 +32,5 @@
   status = 301
   force = true
 
-# Liens courts pour les descriptions YouTube et les QR codes (avec étiquette de provenance)
-[[redirects]]
-  from = "/r/:niveau/:chapitre"
-  to = "/maths/:niveau/:chapitre/?utm_source=youtube&utm_medium=description"
-  status = 302
-
-[[redirects]]
-  from = "/qr/:niveau/:chapitre"
-  to = "/maths/:niveau/:chapitre/?utm_source=youtube&utm_medium=qr"
-  status = 302
-
-[[headers]]
-  for = "/*"
-  [headers.values]
-    X-Content-Type-Options = "nosniff"
-    Referrer-Policy = "strict-origin-when-cross-origin"
-    Permissions-Policy = "camera=(), microphone=(), geolocation=(), interest-cohort=()"
-
-[[headers]]
-  for = "/admin/*"
-  [headers.values]
-    X-Robots-Tag = "noindex"
-    X-Frame-Options = "DENY"
+# Liens courts /r/ et /qr/ et en-têtes de sécurité : voir public/_redirects et public/_headers
+# (mêmes fichiers pour Netlify et Cloudflare Pages).

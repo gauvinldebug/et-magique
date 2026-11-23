@@ -32,7 +32,18 @@ npm run build      # site dans dist/ + index de recherche
 npm run pdf        # régénère les PDF (cours, fiche, exercices) depuis dist/, puis relancer npm run build
 ```
 
-## Mise en ligne sur Netlify
+## Mise en ligne sur Cloudflare Pages (hébergeur principal)
+
+1. dash.cloudflare.com → *Workers & Pages* → *Create* → *Pages* → *Connect to Git* → `et-magique`. Preset Astro, build `npm run build`, dossier `dist`, variable `NODE_VERSION=22`.
+2. *Settings → Runtime → Compatibility flags* : `nodejs_compat` (production et preview).
+3. *Storage & Databases → KV* : créer un espace (par ex. `et-magique-donnees`), puis *Settings → Bindings → KV namespace* : nom de variable `DONNEES`.
+4. *Settings → Variables and Secrets* : les variables de `.env.example` (clés en « Secret »), dont `SITE_URL=https://etmagique.fr`.
+5. *Custom domains* : `etmagique.fr` et `www.etmagique.fr` (redirection www → racine : *Rules → Redirect Rules*, modèle « WWW to root »).
+6. Données de l'ancien site : se connecter à `/admin` sur la nouvelle adresse, onglet Inscrits, bouton « Récupérer les données de l'ancien site » (même `ADMIN_SECRET` des deux côtés).
+
+Les fonctions de l'API restent écrites dans `netlify/functions/` ; `functions/api/` (Cloudflare) les appelle via `cloudflare/adaptateur.ts`, et Cloudflare KV remplace Netlify Blobs. Les liens courts `/r/` et `/qr/` et les en-têtes sont dans `public/_redirects` et `public/_headers`. Chaque fusion dans `main` est mise en ligne (500 constructions gratuites par mois).
+
+## Ancien hébergement : Netlify (secours pendant la transition)
 
 1. Créer un compte sur netlify.com (gratuit), « Add new project » → « Import from GitHub » → choisir `et-magique`. Netlify lit `netlify.toml`, rien à régler.
 2. Dans *Project configuration → Environment variables*, ajouter `ADMIN_PASSWORD` et `ADMIN_SECRET` (voir `.env.example`).

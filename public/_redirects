@@ -1,0 +1,4 @@
+# Liens courts pour les descriptions YouTube et les QR codes (avec étiquette de provenance).
+# Lu par Cloudflare Pages et par Netlify.
+/r/:niveau/:chapitre  /maths/:niveau/:chapitre/?utm_source=youtube&utm_medium=description  302
+/qr/:niveau/:chapitre  /maths/:niveau/:chapitre/?utm_source=youtube&utm_medium=qr  302
