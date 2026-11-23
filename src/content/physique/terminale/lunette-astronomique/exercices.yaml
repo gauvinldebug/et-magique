@@ -1,0 +1,88 @@
+exercices:
+  - titre: Calculer un grossissement
+    difficulte: 1
+    type: application
+    enonce: |
+      Une lunette a un objectif de focale $f'_1 = 700$ mm. On dispose d'oculaires de 25 mm et de 10 mm. Calculer les deux grossissements et la longueur de la lunette dans chaque cas.
+    indice: $G = f'_1 / f'_2$, longueur $\approx f'_1 + f'_2$.
+    etapes:
+      - type: calcul
+        titre: Oculaire de 25 mm
+        texte: $G = 700/25 = 28$, longueur $\approx 725$ mm.
+      - type: conc
+        titre: Oculaire de 10 mm
+        texte: <mark>$G = 700/10 = 70$, longueur $\approx 710$ mm</mark>.
+
+  - titre: L'objectif ou l'oculaire ?
+    difficulte: 1
+    type: piege
+    enonce: |
+      Un élève dispose d'une lentille L1 de focale 20 cm et d'une lentille L2 de focale 4 cm. Il place L2 vers le ciel et L1 contre son œil. Que se passe-t-il ?
+    indice: Calcule $G$ avec cette disposition.
+    etapes:
+      - type: piege
+        titre: Le montage inversé
+        texte: >-
+          Avec L2 en objectif, $G = 4/20 = 0{,}2$ : l'image est vue sous un angle 5 fois plus petit qu'à l'œil nu.
+      - type: conc
+        titre: Le bon montage
+        texte: >-
+          <mark>L'objectif doit être la lentille de plus grande focale</mark> : L1 vers le ciel, L2 contre l'œil, $G = 5$.
+
+  - titre: La taille de l'image intermédiaire
+    difficulte: 2
+    type: methode
+    enonce: |
+      La Lune est vue à l'œil nu sous un angle $\theta = 9{,}0 \times 10^{-3}$ rad. Une lunette a un objectif de 1,0 m de focale et un oculaire de 20 mm.
+      1. Calculer le diamètre de l'image intermédiaire de la Lune.
+      2. Sous quel angle la voit-on dans la lunette ?
+    indice: L'image intermédiaire est dans le plan focal de l'objectif, $A_1B_1 = f'_1\,\theta$.
+    etapes:
+      - type: calcul
+        titre: Image intermédiaire
+        texte: $A_1B_1 = f'_1 \times \theta = 1{,}0 \times 9{,}0 \times 10^{-3} = 9{,}0 \times 10^{-3}$ m, soit 9 mm.
+      - type: calcul
+        titre: Le grossissement
+        texte: $G = 1000 / 20 = 50$.
+      - type: conc
+        titre: L'angle
+        texte: <mark>$\theta' = G\,\theta = 0{,}45$ rad, environ 26°</mark>. La Lune occupe une grande partie du champ.
+
+  - titre: Démontrer la formule du grossissement
+    difficulte: 2
+    type: methode
+    enonce: |
+      En utilisant le schéma d'une lunette afocale et l'approximation des petits angles, établir $G = \dfrac{f'_1}{f'_2}$.
+    indice: Exprime $\theta$ et $\theta'$ en fonction de $A_1B_1$.
+    etapes:
+      - type: calcul
+        titre: Côté objectif
+        texte: Le rayon issu de B passant par $O_1$ n'est pas dévié et arrive en $B_1$. Dans le triangle $O_1 F'_1 B_1$, $\tan\theta = \dfrac{A_1B_1}{f'_1} \approx \theta$.
+      - type: calcul
+        titre: Côté oculaire
+        texte: Le rayon issu de $B_1$ passant par $O_2$ ressort sous l'angle $\theta'$. Dans le triangle $O_2 F_2 B_1$, $\tan\theta' = \dfrac{A_1B_1}{f'_2} \approx \theta'$.
+      - type: conc
+        titre: Le rapport
+        texte: <mark>$G = \dfrac{\theta'}{\theta} = \dfrac{A_1B_1 / f'_2}{A_1B_1 / f'_1} = \dfrac{f'_1}{f'_2}$</mark>.
+
+  - titre: Choisir un oculaire
+    difficulte: 3
+    type: bac
+    enonce: |
+      Un astronome amateur veut observer Jupiter, vue à l'œil nu sous un angle de $2{,}2 \times 10^{-4}$ rad. L'œil distingue deux points séparés d'au moins $3{,}0 \times 10^{-4}$ rad. Sa lunette a un objectif de 900 mm.
+      1. Voit-il Jupiter comme un disque à l'œil nu ?
+      2. Quel oculaire choisir pour que Jupiter apparaisse sous un angle d'au moins $1{,}0 \times 10^{-2}$ rad ?
+    indice: Compare les angles au pouvoir séparateur, puis calcule le $G$ minimal.
+    etapes:
+      - type: calcul
+        titre: À l'œil nu
+        texte: $2{,}2 \times 10^{-4} < 3{,}0 \times 10^{-4}$, Jupiter apparaît comme un point.
+      - type: calcul
+        titre: Le grossissement minimal
+        texte: $G \ge \dfrac{1{,}0 \times 10^{-2}}{2{,}2 \times 10^{-4}} \approx 45$.
+      - type: calcul
+        titre: La focale de l'oculaire
+        texte: $f'_2 = \dfrac{f'_1}{G} \le \dfrac{900}{45} = 20$ mm.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>Un oculaire de 20 mm ou moins convient</mark>, par exemple un 10 mm ($G = 90$).

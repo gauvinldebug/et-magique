@@ -1,0 +1,48 @@
+questions:
+  - question: Si l'intensité sonore est multipliée par 100, le niveau sonore…
+    choix: ['est multiplié par 100', 'augmente de 20 dB', 'augmente de 100 dB', 'augmente de 2 dB']
+    bonne: 1
+    explication: $10\log(100) = 20$.
+    revoir: cours
+
+  - question: Doubler la distance à une source ponctuelle divise l'intensité sonore par…
+    choix: ['2', '4', '8', 'elle ne change pas']
+    bonne: 1
+    explication: $I = P/(4\pi r^2)$, en $1/r^2$.
+    revoir: cours
+
+  - question: La diffraction est importante quand la taille de l'ouverture est…
+    choix: ['très grande devant $\lambda$', 'du même ordre de grandeur que $\lambda$ ou plus petite', 'nulle', 'sans importance']
+    bonne: 1
+    explication: Comme l'entrée étroite du port.
+    revoir: cours
+
+  - question: Si on rétrécit une fente, la tache centrale de diffraction…
+    choix: ['rétrécit', 's''élargit', 'disparaît', 'ne change pas']
+    bonne: 1
+    explication: $\theta = \lambda/a$ augmente quand $a$ diminue.
+    revoir: cours
+
+  - question: Deux ondes cohérentes interfèrent de façon constructive si la différence de marche vaut…
+    choix: ['$k\lambda$', '$(k+\frac{1}{2})\lambda$', '$\lambda/4$', '$0{,}3\lambda$']
+    bonne: 0
+    explication: Crête sur crête, un nombre entier de longueurs d'onde.
+    revoir: cours
+
+  - question: Dans l'expérience des fentes d'Young, si on éloigne l'écran, l'interfrange…
+    choix: ['diminue', 'augmente', 'reste identique', 's''annule']
+    bonne: 1
+    explication: $i = \lambda D / b$ est proportionnel à $D$.
+    revoir: cours
+
+  - question: Une source sonore s'approche d'un observateur immobile. Il perçoit…
+    choix: ['un son plus grave', 'un son plus aigu', 'le même son', 'aucun son']
+    bonne: 1
+    explication: Les ondes sont tassées, la fréquence reçue est plus grande.
+    revoir: cours
+
+  - question: Le décalage Doppler, pour $v \ll c$, vaut environ…
+    choix: ['$f_E \frac{c}{v}$', '$f_E \frac{v}{c}$', '$\frac{v}{f_E}$', '$v \times c$']
+    bonne: 1
+    explication: Il est proportionnel à la vitesse de la source, d'où les radars.
+    revoir: cours

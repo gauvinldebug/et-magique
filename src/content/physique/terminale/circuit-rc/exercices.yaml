@@ -1,0 +1,80 @@
+exercices:
+  - titre: Charge et capacité
+    difficulte: 1
+    type: application
+    enonce: |
+      Un condensateur de capacité $C = 470\ \mu\mathrm{F}$ est chargé sous une tension de 12 V. Calculer la charge portée par l'armature positive.
+    indice: $q = C\,u_C$, avec $C$ en farads.
+    etapes:
+      - type: conc
+        titre: Le calcul
+        texte: <mark>$q = 470 \times 10^{-6} \times 12 \approx 5{,}6 \times 10^{-3}$ C</mark>.
+
+  - titre: Constante de temps
+    difficulte: 1
+    type: methode
+    enonce: |
+      Un circuit comporte $R = 10\ \mathrm{k\Omega}$ et $C = 100\ \mu\mathrm{F}$. Calculer $\tau$ et la durée au bout de laquelle le condensateur peut être considéré comme chargé.
+    indice: $\tau = RC$, puis $5\tau$.
+    etapes:
+      - type: calcul
+        titre: La constante de temps
+        texte: $\tau = 10 \times 10^3 \times 100 \times 10^{-6} = 1{,}0$ s.
+      - type: conc
+        titre: Chargé
+        texte: <mark>Au bout de $5\tau = 5{,}0$ s</mark>.
+
+  - titre: Le condensateur chargé au bout de tau ?
+    difficulte: 2
+    type: piege
+    enonce: |
+      Avec le circuit précédent alimenté sous $E = 6{,}0$ V, un élève affirme qu'au bout de 1,0 s le condensateur est complètement chargé, puisque $\tau = 1{,}0$ s. Calculer $u_C$ à cette date.
+    indice: $u_C = E(1 - \mathrm{e}^{-t/\tau})$.
+    etapes:
+      - type: piege
+        titre: L'erreur
+        texte: $\tau$ n'est pas la durée de la charge, c'est une échelle de temps. Le réservoir continue de se remplir après.
+      - type: conc
+        titre: Le calcul
+        texte: <mark>$u_C(\tau) = 6{,}0 \times (1 - \mathrm{e}^{-1}) \approx 3{,}8$ V</mark>, soit 63 % de $E$.
+
+  - titre: Établir l'équation différentielle
+    difficulte: 2
+    type: methode
+    enonce: |
+      Établir l'équation différentielle vérifiée par $u_C$ lors de la charge d'un condensateur $C$ à travers une résistance $R$ par un générateur de tension $E$. Vérifier que $u_C = E(1 - \mathrm{e}^{-t/RC})$ en est solution.
+    indice: Loi des mailles, loi d'Ohm, $i = C\,\mathrm{d}u_C/\mathrm{d}t$.
+    etapes:
+      - type: calcul
+        titre: Loi des mailles
+        texte: $E = u_R + u_C = R\,i + u_C = RC\,\dfrac{\mathrm{d}u_C}{\mathrm{d}t} + u_C$.
+      - type: calcul
+        titre: La dérivée de la solution
+        texte: $\dfrac{\mathrm{d}u_C}{\mathrm{d}t} = \dfrac{E}{RC}\,\mathrm{e}^{-t/RC}$.
+      - type: conc
+        titre: Vérification
+        texte: <mark>$RC \times \dfrac{E}{RC}\mathrm{e}^{-t/RC} + E - E\,\mathrm{e}^{-t/RC} = E$</mark>. Et $u_C(0) = 0$, la condition initiale est respectée.
+
+  - titre: Un capteur tactile
+    difficulte: 3
+    type: bac
+    enonce: |
+      Une touche tactile se comporte comme un condensateur de capacité $C_0 = 10$ pF, chargé à travers $R = 1{,}0\ \mathrm{M\Omega}$. Quand un doigt s'approche, la capacité passe à $C_1 = 25$ pF.
+      Le circuit détecte la date $t_1$ où $u_C$ atteint la moitié de $E$.
+      1. Exprimer $t_1$ en fonction de $\tau$.
+      2. Calculer $t_1$ sans doigt et avec doigt. Comment le circuit détecte-t-il le doigt ?
+    indice: $1 - \mathrm{e}^{-t_1/\tau} = \frac{1}{2}$.
+    etapes:
+      - type: calcul
+        titre: L'expression
+        texte: $\mathrm{e}^{-t_1/\tau} = \frac{1}{2} \iff t_1 = \tau \ln 2$.
+      - type: calcul
+        titre: Sans doigt
+        texte: $\tau_0 = 1{,}0 \times 10^6 \times 10 \times 10^{-12} = 1{,}0 \times 10^{-5}$ s, donc $t_1 \approx 6{,}9\ \mu\mathrm{s}$.
+      - type: calcul
+        titre: Avec doigt
+        texte: $\tau_1 = 2{,}5 \times 10^{-5}$ s, donc $t_1 \approx 17\ \mu\mathrm{s}$.
+      - type: conc
+        titre: La détection
+        texte: >-
+          <mark>Le doigt augmente la capacité, la charge est plus lente</mark> : le circuit compare la durée mesurée à la durée de référence.

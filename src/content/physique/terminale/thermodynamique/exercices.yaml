@@ -86,4 +86,4 @@ exercices:
         texte: $60\,\mathrm{e}^{-t/15} = 20 \iff \mathrm{e}^{-t/15} = \frac{1}{3} \iff t = 15\ln 3$.
       - type: conc
         titre: Résultat
-        texte: <mark>$t \approx 16$ min</mark>.
+        texte: <mark>$t \approx 16{,}5$ min</mark>.
