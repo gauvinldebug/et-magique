@@ -1,0 +1,74 @@
+# Exercices corrigés, du plus facile au type contrôle.
+# type d'étape : init (vert), her (orange), conc (bleu), calcul, methode, piege (rouge)
+exercices:
+  - titre: La valeur des chiffres
+    difficulte: 1
+    type: application
+    enonce: |
+      Dans le nombre $8\,406{,}725$ :
+      1. Quel est le chiffre des centièmes ?
+      2. Quel est le chiffre des centaines ?
+      3. Quel est le nombre de dizaines ?
+    indice: Le nombre de dizaines compte tout ce qui est à gauche du rang des dizaines, ce rang compris.
+    etapes:
+      - type: calcul
+        titre: Questions 1 et 2
+        texte: Chiffre des centièmes 2. Chiffre des centaines 4.
+      - type: conc
+        titre: Question 3
+        texte: <mark>Il y a 840 dizaines</mark>.
+        note: chiffre ou nombre
+
+  - titre: Écritures d'un décimal
+    difficulte: 1
+    type: methode
+    enonce: |
+      1. Écrire $\frac{253}{100}$ sous forme décimale.
+      2. Écrire $6{,}08$ sous la forme d'une fraction décimale.
+      3. Décomposer $12{,}45$ avec des fractions décimales.
+    indice: Diviser par 100, c'est décaler de deux rangs.
+    etapes:
+      - type: calcul
+        titre: Question 1
+        texte: $\frac{253}{100} = 2{,}53$.
+      - type: calcul
+        titre: Question 2
+        texte: $6{,}08 = \frac{608}{100}$.
+      - type: conc
+        titre: Question 3
+        texte: <mark>$12{,}45 = 12 + \frac{4}{10} + \frac{5}{100}$</mark>.
+
+  - titre: Ranger
+    difficulte: 2
+    type: piege
+    enonce: |
+      Ranger dans l'ordre croissant : $3{,}4$ ; $3{,}12$ ; $3{,}409$ ; $3{,}04$ ; $3{,}2$.
+    indice: Écris-les tous avec trois chiffres après la virgule.
+    etapes:
+      - type: calcul
+        titre: Avec trois décimales
+        texte: $3{,}400$ ; $3{,}120$ ; $3{,}409$ ; $3{,}040$ ; $3{,}200$.
+      - type: piege
+        titre: Comparer
+        texte: >-
+          On compare les dixièmes d'abord, pas la longueur : 0, 1, 2, 4 et 4. Puis, entre $3{,}400$ et $3{,}409$, les millièmes.
+        note: tiroir par tiroir
+      - type: conc
+        titre: Conclusion
+        texte: <mark>$3{,}04 < 3{,}12 < 3{,}2 < 3{,}4 < 3{,}409$</mark>.
+
+  - titre: Encadrer et arrondir
+    difficulte: 2
+    type: application
+    enonce: |
+      On considère $\pi \approx 3{,}14159$.
+      1. Encadrer $\pi$ au centième près.
+      2. Donner l'arrondi de $\pi$ au dixième, puis au millième.
+    indice: Regarde le chiffre juste après le rang demandé.
+    etapes:
+      - type: calcul
+        titre: Question 1
+        texte: $3{,}14 < \pi < 3{,}15$.
+      - type: conc
+        titre: Question 2
+        texte: <mark>Au dixième, $3{,}1$ (le 4 ne fait pas monter). Au millième, $3{,}142$ (le 5 fait monter)</mark>.

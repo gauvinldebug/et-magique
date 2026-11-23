@@ -1,0 +1,63 @@
+# Exercices corrigés, du plus facile au type contrôle.
+# type d'étape : init (vert), her (orange), conc (bleu), calcul, methode, piege (rouge)
+exercices:
+  - titre: Aigu, droit, obtus ou plat ?
+    difficulte: 1
+    type: application
+    enonce: |
+      Donner la nature de chaque angle : 35° ; 90° ; 145° ; 180° ; 89°.
+    indice: Compare chaque mesure à 90° et à 180°.
+    etapes:
+      - type: calcul
+        titre: Les angles
+        texte: 35° aigu ; 90° droit ; 145° obtus ; 180° plat.
+      - type: conc
+        titre: Le dernier
+        texte: <mark>89° est aigu</mark>, de justesse.
+
+  - titre: Nommer un angle
+    difficulte: 1
+    type: methode
+    enonce: |
+      Dans le triangle $RST$, comment nomme-t-on l'angle de sommet $S$ ?
+    indice: La lettre du sommet est au milieu.
+    etapes:
+      - type: conc
+        titre: Le nom
+        texte: <mark>$\widehat{RST}$ (ou $\widehat{TSR}$)</mark>.
+        note: S au milieu
+
+  - titre: Les aiguilles
+    difficulte: 2
+    type: application
+    enonce: |
+      Quel angle forment les aiguilles d'une horloge à 1 heure ? À 4 heures ? À 9 heures (le plus petit des deux angles) ?
+    indice: Une heure d'écart fait 30°.
+    etapes:
+      - type: calcul
+        titre: 1 h et 4 h
+        texte: $1 \times 30° = 30°$ et $4 \times 30° = 120°$.
+      - type: conc
+        titre: 9 h
+        texte: >-
+          De 9 à 12, il y a 3 heures d'écart : <mark>$3 \times 30° = 90°$, un angle droit</mark>.
+
+  - titre: Bissectrice et angles
+    difficulte: 3
+    type: piege
+    enonce: |
+      $\widehat{xOy}$ est un angle plat. La demi-droite $[Oz)$ est telle que $\widehat{xOz} = 64°$. On trace la bissectrice $[Ot)$ de $\widehat{zOy}$.
+      Calculer $\widehat{zOy}$, puis $\widehat{zOt}$.
+    indice: Un angle plat mesure 180°.
+    etapes:
+      - type: calcul
+        titre: L'angle zOy
+        texte: $\widehat{zOy} = 180° - 64° = 116°$.
+      - type: piege
+        titre: La bissectrice
+        texte: >-
+          La bissectrice coupe $\widehat{zOy}$ en deux, pas l'angle plat.
+        note: le bon angle
+      - type: conc
+        titre: Conclusion
+        texte: <mark>$\widehat{zOt} = 116° \div 2 = 58°$</mark>.

@@ -1,0 +1,64 @@
+# Exercices corrigés, du plus facile au type contrôle.
+# type d'étape : init (vert), her (orange), conc (bleu), calcul, methode, piege (rouge)
+exercices:
+  - titre: Compter les axes
+    difficulte: 1
+    type: application
+    enonce: |
+      Combien d'axes de symétrie ont ces lettres majuscules : A, B, H, O, Z ?
+    indice: Imagine qu'on plie la lettre.
+    etapes:
+      - type: calcul
+        titre: A, B et H
+        texte: A a 1 axe (vertical). B a 1 axe (horizontal). H a 2 axes.
+      - type: conc
+        titre: O et Z
+        texte: <mark>O (dessiné comme un ovale) a 2 axes. Z n'en a aucun</mark>.
+        note: Z a un centre de symétrie, pas d'axe
+
+  - titre: Sur un quadrillage
+    difficulte: 1
+    type: methode
+    enonce: |
+      Sur un quadrillage, l'axe $(d)$ est une droite verticale. Le point $A$ est 3 carreaux à gauche de $(d)$ et le point $B$ est sur $(d)$.
+      Où sont leurs symétriques ?
+    indice: Même nombre de carreaux de l'autre côté.
+    etapes:
+      - type: calcul
+        titre: Le point A
+        texte: $A'$ est 3 carreaux à droite de $(d)$, à la même hauteur.
+      - type: conc
+        titre: Le point B
+        texte: <mark>$B$ est sur l'axe, il est son propre symétrique</mark>.
+
+  - titre: Ce qui est conservé
+    difficulte: 2
+    type: application
+    enonce: |
+      Le triangle $ABC$ a pour côtés $AB = 5$ cm, $BC = 4$ cm, $AC = 6$ cm, et $\widehat{ABC} = 83°$. On construit son symétrique $A'B'C'$ par rapport à une droite.
+      Donner le périmètre de $A'B'C'$ et la mesure de $\widehat{A'B'C'}$.
+    indice: La symétrie conserve les longueurs et les angles.
+    etapes:
+      - type: calcul
+        titre: Le périmètre
+        texte: $5 + 4 + 6 = 15$ cm, le même que $ABC$.
+      - type: conc
+        titre: L'angle
+        texte: <mark>$\widehat{A'B'C'} = 83°$</mark>.
+
+  - titre: L'axe en biais
+    difficulte: 3
+    type: piege
+    enonce: |
+      Sur un quadrillage, l'axe $(d)$ est la diagonale qui monte d'un carreau vers la droite pour un carreau vers le haut. Le point $M$ est 2 carreaux à droite d'un point $P$ de l'axe, à la même hauteur.
+      Où se trouve le symétrique $M'$ de $M$ ?
+    indice: Avec un axe à 45°, la symétrie échange « à droite » et « en haut ».
+    etapes:
+      - type: piege
+        titre: Le piège
+        texte: >-
+          $M'$ n'est pas 2 carreaux à gauche de $P$ : il faut aller perpendiculairement à l'axe, pas horizontalement.
+        note: équerre
+      - type: conc
+        titre: Conclusion
+        texte: <mark>$M'$ est 2 carreaux au-dessus de $P$</mark>. Le segment $[MM']$ coupe bien l'axe à angle droit, en son milieu.

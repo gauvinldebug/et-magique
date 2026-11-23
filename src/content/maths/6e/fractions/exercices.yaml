@@ -1,0 +1,72 @@
+# Exercices corrigés, du plus facile au type contrôle.
+# type d'étape : init (vert), her (orange), conc (bleu), calcul, methode, piege (rouge)
+exercices:
+  - titre: Lire une fraction
+    difficulte: 1
+    type: application
+    enonce: |
+      Une pizza est coupée en 6 parts égales. Paul en mange 2, Léa en mange 3.
+      1. Quelle fraction de la pizza Paul a-t-il mangée ?
+      2. Quelle fraction reste-t-il ?
+    indice: Le dénominateur est le nombre de parts en tout.
+    etapes:
+      - type: calcul
+        titre: Question 1
+        texte: Paul a mangé $\frac{2}{6}$ de la pizza (c'est aussi $\frac{1}{3}$).
+      - type: conc
+        titre: Question 2
+        texte: <mark>Il reste 1 part, soit $\frac{1}{6}$ de la pizza</mark>.
+
+  - titre: Fraction d'une quantité
+    difficulte: 1
+    type: methode
+    enonce: |
+      Calculer.
+      1. $\frac{2}{3}$ de 18 €
+      2. $\frac{3}{4}$ de 100 m
+      3. $\frac{5}{6}$ de 30 élèves
+    indice: On divise par le dénominateur, puis on multiplie par le numérateur.
+    etapes:
+      - type: calcul
+        titre: Questions 1 et 2
+        texte: $18 \div 3 \times 2 = 12$ €. $100 \div 4 \times 3 = 75$ m.
+      - type: conc
+        titre: Question 3
+        texte: <mark>$30 \div 6 \times 5 = 25$ élèves</mark>.
+
+  - titre: Plus petit ou plus grand que 1 ?
+    difficulte: 2
+    type: application
+    enonce: |
+      Classer ces fractions en trois groupes (inférieures à 1, égales à 1, supérieures à 1) : $\frac{3}{5}$ ; $\frac{7}{7}$ ; $\frac{9}{4}$ ; $\frac{11}{12}$ ; $\frac{8}{3}$.
+    indice: Compare le numérateur et le dénominateur.
+    etapes:
+      - type: calcul
+        titre: Inférieures à 1
+        texte: $\frac{3}{5}$ et $\frac{11}{12}$.
+      - type: conc
+        titre: Les autres
+        texte: >-
+          <mark>$\frac{7}{7} = 1$ ; supérieures à 1 : $\frac{9}{4}$ et $\frac{8}{3}$</mark>.
+
+  - titre: Le quotient manquant
+    difficulte: 3
+    type: piege
+    enonce: |
+      Trouver le nombre manquant.
+      1. $5 \times \ldots = 3$
+      2. $\ldots \times 7 = 2$
+      3. Le nombre $\frac{1}{3}$ peut-il s'écrire exactement sous forme décimale ?
+    indice: $\corange{b} \times \frac{\cbleu{a}}{\corange{b}} = \cbleu{a}$.
+    etapes:
+      - type: calcul
+        titre: Questions 1 et 2
+        texte: $5 \times \frac{3}{5} = 3$ et $\frac{2}{7} \times 7 = 2$.
+      - type: piege
+        titre: Question 3
+        texte: >-
+          $1 \div 3 = 0{,}333\dots$ : les 3 ne s'arrêtent jamais.
+        note: on garde la fraction
+      - type: conc
+        titre: Conclusion
+        texte: <mark>Non, $\frac{1}{3}$ n'a pas d'écriture décimale exacte</mark>.

@@ -1,0 +1,30 @@
+questions:
+  - question: Dans $5\,031{,}67$, le chiffre des dixièmes est…
+    choix: ['$6$', '$7$', '$3$', '$1$']
+    bonne: 0
+    explication: Le premier chiffre après la virgule est celui des dixièmes.
+    revoir: cours
+
+  - question: Le plus grand nombre est…
+    choix: ['$4{,}5$', '$4{,}45$', '$4{,}449$', '$4{,}05$']
+    bonne: 0
+    explication: En dixièmes, 5 est plus grand que 4 et que 0.
+    revoir: cours
+
+  - question: $\frac{7}{100}$ s'écrit…
+    choix: ['$0{,}07$', '$0{,}7$', '$7{,}100$', '$700$']
+    bonne: 0
+    explication: Sept centièmes, le 7 est dans le tiroir des centièmes.
+    revoir: cours
+
+  - question: L'arrondi à l'unité de $12{,}5$ est…
+    choix: ['$13$', '$12$', '$12{,}5$', '$10$']
+    bonne: 0
+    explication: Le chiffre des dixièmes est 5, on monte.
+    revoir: exercices
+
+  - question: $8{,}30$ est égal à…
+    choix: ['$8{,}3$', '$8{,}03$', '$83$', '$8{,}300\,1$']
+    bonne: 0
+    explication: Un zéro à la fin de la partie décimale ne change rien.
+    revoir: cours

@@ -1,0 +1,30 @@
+questions:
+  - question: Dans $\frac{5}{8}$, le dénominateur est…
+    choix: ['$8$', '$5$', '$13$', '$3$']
+    bonne: 0
+    explication: Le dénominateur est en bas, il dit en combien de parts on coupe.
+    revoir: cours
+
+  - question: La plus grande fraction est…
+    choix: ['$\frac{1}{2}$', '$\frac{1}{3}$', '$\frac{1}{5}$', '$\frac{1}{10}$']
+    bonne: 0
+    explication: Moins on coupe de parts, plus elles sont grosses.
+    revoir: cours
+
+  - question: $\frac{3}{4}$ de 20 est égal à…
+    choix: ['$15$', '$5$', '$12$', '$60$']
+    bonne: 0
+    explication: $20 \div 4 = 5$, puis $5 \times 3 = 15$.
+    revoir: exercices
+
+  - question: $\frac{9}{2}$ est égal à…
+    choix: ['$4{,}5$', '$9{,}2$', '$2{,}9$', '$18$']
+    bonne: 0
+    explication: $9 \div 2 = 4{,}5$.
+    revoir: cours
+
+  - question: Une fraction égale à $\frac{2}{5}$ est…
+    choix: ['$\frac{6}{15}$', '$\frac{4}{7}$', '$\frac{5}{2}$', '$\frac{2}{10}$']
+    bonne: 0
+    explication: On multiplie en haut et en bas par 3.
+    revoir: cours
