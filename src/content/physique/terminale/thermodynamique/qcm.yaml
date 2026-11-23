@@ -1,0 +1,48 @@
+questions:
+  - question: Dans l'équation $PV = nRT$, la température s'exprime en…
+    choix: ['degrés Celsius', 'kelvins', 'joules', 'pascals']
+    bonne: 1
+    explication: $T(\mathrm{K}) = \theta(^\circ\mathrm{C}) + 273{,}15$.
+    revoir: cours
+
+  - question: Le premier principe s'écrit…
+    choix: ['$\Delta U = W - Q$', '$\Delta U = W + Q$', '$U = W \times Q$', '$\Delta U = 0$ toujours']
+    bonne: 1
+    explication: $W$ et $Q$ comptés positivement quand le système les reçoit.
+    revoir: cours
+
+  - question: Un système cède 200 J de chaleur et reçoit 50 J de travail. Sa variation d'énergie interne vaut…
+    choix: ['$+250$ J', '$-150$ J', '$+150$ J', '$-250$ J']
+    bonne: 1
+    explication: $\Delta U = 50 + (-200) = -150$ J.
+    revoir: exercices
+
+  - question: La chaleur de la plaque de cuisson se transmet au manche de la casserole surtout par…
+    choix: ['rayonnement', 'convection', 'conduction', 'travail']
+    bonne: 2
+    explication: De proche en proche dans le métal, sans déplacement de matière.
+    revoir: cours
+
+  - question: Le Soleil chauffe la Terre à travers le vide par…
+    choix: ['conduction', 'convection', 'rayonnement', 'pression']
+    bonne: 2
+    explication: Seul le rayonnement se propage sans support matériel.
+    revoir: cours
+
+  - question: Une paroi isole mieux si sa résistance thermique est…
+    choix: ['faible', 'grande', 'nulle', 'négative']
+    bonne: 1
+    explication: Pour un même écart de température, le flux $\Phi = \Delta T / R_{th}$ est plus faible.
+    revoir: cours
+
+  - question: Pour élever de 10 °C la température de 2,0 kg d'eau, il faut environ…
+    choix: ['$84$ J', '$8{,}4 \times 10^4$ J', '$4{,}2 \times 10^3$ J', '$20$ J']
+    bonne: 1
+    explication: $Q = 2{,}0 \times 4{,}18 \times 10^3 \times 10$.
+    revoir: cours
+
+  - question: Selon la loi de Newton, un objet chaud dans une pièce…
+    choix: ['refroidit à vitesse constante', 'refroidit de plus en plus vite', 'refroidit de plus en plus lentement vers la température de la pièce', 'ne refroidit pas']
+    bonne: 2
+    explication: Décroissance exponentielle de l'écart $T - T_{\text{ext}}$.
+    revoir: cours

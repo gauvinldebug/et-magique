@@ -1,0 +1,90 @@
+exercices:
+  - titre: Un glaçon qui flotte
+    difficulte: 1
+    type: application
+    enonce: |
+      Un glaçon de volume $V = 20\ \mathrm{cm^3}$ flotte dans l'eau. $\rho_{\text{glace}} = 920\ \mathrm{kg \cdot m^{-3}}$, $\rho_{\text{eau}} = 1\,000\ \mathrm{kg \cdot m^{-3}}$.
+      Quelle fraction de son volume est immergée ?
+    indice: À l'équilibre, poids = poussée d'Archimède.
+    etapes:
+      - type: calcul
+        titre: L'équilibre
+        texte: $\rho_{\text{glace}}\,V\,g = \rho_{\text{eau}}\,V_{\text{imm}}\,g$.
+      - type: conc
+        titre: La fraction
+        texte: <mark>$\dfrac{V_{\text{imm}}}{V} = \dfrac{920}{1\,000} = 0{,}92$</mark>. 92 % du glaçon est sous l'eau, d'où l'expression « la partie émergée de l'iceberg ».
+
+  - titre: Le pouce sur le tuyau
+    difficulte: 1
+    type: methode
+    enonce: |
+      Un tuyau de diamètre 2,0 cm débite $0{,}30\ \mathrm{L \cdot s^{-1}}$.
+      1. Calculer la vitesse de l'eau dans le tuyau.
+      2. Avec le pouce, on réduit la section de sortie à $0{,}50\ \mathrm{cm^2}$. Calculer la nouvelle vitesse de sortie.
+    indice: $D_V = S\,v$, avec tout en unités SI.
+    etapes:
+      - type: calcul
+        titre: Section du tuyau
+        texte: $S = \pi \times (1{,}0 \times 10^{-2})^2 \approx 3{,}1 \times 10^{-4}\ \mathrm{m^2}$, et $D_V = 3{,}0 \times 10^{-4}\ \mathrm{m^3 \cdot s^{-1}}$.
+      - type: calcul
+        titre: Vitesse dans le tuyau
+        texte: $v = D_V / S \approx 0{,}96\ \mathrm{m \cdot s^{-1}}$.
+      - type: conc
+        titre: Avec le pouce
+        texte: <mark>$v' = \dfrac{3{,}0 \times 10^{-4}}{0{,}50 \times 10^{-4}} = 6{,}0\ \mathrm{m \cdot s^{-1}}$</mark>, plus de 6 fois plus vite.
+
+  - titre: La pression dans un étranglement
+    difficulte: 2
+    type: piege
+    enonce: |
+      De l'eau circule dans une canalisation horizontale. Dans la partie large, $v_A = 2{,}0\ \mathrm{m \cdot s^{-1}}$ et $P_A = 1{,}50 \times 10^5$ Pa. Dans l'étranglement, $v_B = 6{,}0\ \mathrm{m \cdot s^{-1}}$.
+      Un élève prévoit une pression plus forte en B, « parce que l'eau y est plus serrée ». Calculer $P_B$.
+    indice: Bernoulli à altitude constante.
+    etapes:
+      - type: piege
+        titre: L'intuition trompeuse
+        texte: Bernoulli dit l'inverse. Le budget $P + \frac{1}{2}\rho v^2$ est fixe, si la vitesse augmente, la pression baisse.
+      - type: calcul
+        titre: Le calcul
+        texte: $P_B = P_A + \frac{1}{2}\rho(v_A^2 - v_B^2) = 1{,}50 \times 10^5 + 500 \times (4{,}0 - 36)$.
+      - type: conc
+        titre: Résultat
+        texte: <mark>$P_B = 1{,}50 \times 10^5 - 1{,}6 \times 10^4 \approx 1{,}34 \times 10^5$ Pa</mark>, plus faible qu'en A.
+
+  - titre: Vider un réservoir
+    difficulte: 2
+    type: methode
+    enonce: |
+      Un grand réservoir ouvert est rempli d'eau sur une hauteur $h = 1{,}8$ m au-dessus d'un petit robinet ouvert. Établir la vitesse de sortie de l'eau.
+    indice: Bernoulli entre la surface libre (vitesse quasi nulle, pression atmosphérique) et la sortie (pression atmosphérique).
+    etapes:
+      - type: methode
+        titre: Les deux points
+        texte: Surface A, $P_A = P_{\text{atm}}$, $v_A \approx 0$ (grand réservoir), $z_A = h$. Sortie B, $P_B = P_{\text{atm}}$, $z_B = 0$.
+      - type: calcul
+        titre: Bernoulli
+        texte: $P_{\text{atm}} + \rho g h = P_{\text{atm}} + \frac{1}{2}\rho v_B^2$, donc $v_B = \sqrt{2 g h}$.
+      - type: conc
+        titre: Résultat
+        texte: <mark>$v_B = \sqrt{2 \times 9{,}8 \times 1{,}8} \approx 5{,}9\ \mathrm{m \cdot s^{-1}}$</mark> (formule de Torricelli).
+
+  - titre: Un débitmètre de Venturi
+    difficulte: 3
+    type: bac
+    enonce: |
+      Dans une conduite horizontale, de l'eau passe d'une section $S_A = 20\ \mathrm{cm^2}$ à une section $S_B = 5{,}0\ \mathrm{cm^2}$. On mesure $P_A - P_B = 3{,}0 \times 10^4$ Pa.
+      Déterminer les vitesses $v_A$ et $v_B$, puis le débit volumique. $\rho = 1\,000\ \mathrm{kg \cdot m^{-3}}$.
+    indice: Conservation du débit donne $v_B = 4\,v_A$. Puis Bernoulli.
+    etapes:
+      - type: calcul
+        titre: Conservation du débit
+        texte: $S_A v_A = S_B v_B$, donc $v_B = \frac{20}{5{,}0} v_A = 4\,v_A$.
+      - type: calcul
+        titre: Bernoulli
+        texte: $P_A - P_B = \frac{1}{2}\rho(v_B^2 - v_A^2) = \frac{1}{2}\rho \times 15\,v_A^2$.
+      - type: calcul
+        titre: Les vitesses
+        texte: $v_A^2 = \dfrac{2 \times 3{,}0 \times 10^4}{1\,000 \times 15} = 4{,}0$, donc $v_A = 2{,}0\ \mathrm{m \cdot s^{-1}}$ et $v_B = 8{,}0\ \mathrm{m \cdot s^{-1}}$.
+      - type: conc
+        titre: Le débit
+        texte: <mark>$D_V = S_A v_A = 20 \times 10^{-4} \times 2{,}0 = 4{,}0 \times 10^{-3}\ \mathrm{m^3 \cdot s^{-1}}$</mark>, soit 4,0 L par seconde.

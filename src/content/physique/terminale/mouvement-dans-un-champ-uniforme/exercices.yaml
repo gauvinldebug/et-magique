@@ -1,0 +1,94 @@
+exercices:
+  - titre: Chute libre sans vitesse initiale
+    difficulte: 1
+    type: application
+    enonce: |
+      On lâche une bille depuis une hauteur de 20 m, sans vitesse initiale. On néglige l'action de l'air. $g = 9{,}8\ \mathrm{m \cdot s^{-2}}$.
+      Calculer la durée de la chute et la vitesse à l'arrivée au sol.
+    indice: Axe vertical vers le bas, $y = \frac{1}{2} g t^2$.
+    etapes:
+      - type: calcul
+        titre: La durée
+        texte: $20 = \frac{1}{2} \times 9{,}8 \times t^2$, donc $t = \sqrt{40/9{,}8} \approx 2{,}0$ s.
+      - type: conc
+        titre: La vitesse
+        texte: <mark>$v = g\,t \approx 9{,}8 \times 2{,}0 \approx 20\ \mathrm{m \cdot s^{-1}}$</mark>, soit environ $72\ \mathrm{km \cdot h^{-1}}$.
+
+  - titre: Établir les équations horaires
+    difficulte: 2
+    type: methode
+    enonce: |
+      Un ballon est lancé depuis l'origine avec une vitesse $v_0 = 10\ \mathrm{m \cdot s^{-1}}$ faisant un angle $\alpha = 45°$ avec l'horizontale. Axe $Oy$ vers le haut, $g = 9{,}8\ \mathrm{m \cdot s^{-2}}$, frottements négligés.
+      Établir $x(t)$ et $y(t)$, puis la hauteur maximale.
+    indice: Les deux ombres. Le sommet correspond à $v_y = 0$.
+    etapes:
+      - type: calcul
+        titre: Accélération et vitesse
+        texte: $a_x = 0$, $a_y = -g$. Avec $\vec{v}(0) = \vec{v}_0$, $v_x = v_0\cos\alpha \approx 7{,}1\ \mathrm{m \cdot s^{-1}}$ et $v_y = -9{,}8\,t + 7{,}1$.
+      - type: calcul
+        titre: Position
+        texte: Avec $x(0) = y(0) = 0$, $x = 7{,}1\,t$ et $y = -4{,}9\,t^2 + 7{,}1\,t$.
+      - type: calcul
+        titre: Le sommet
+        texte: $v_y = 0$ pour $t_S = 7{,}1 / 9{,}8 \approx 0{,}72$ s.
+      - type: conc
+        titre: Hauteur maximale
+        texte: <mark>$y_S = -4{,}9 \times 0{,}72^2 + 7{,}1 \times 0{,}72 \approx 2{,}6$ m</mark>.
+
+  - titre: La vitesse au sommet
+    difficulte: 2
+    type: piege
+    enonce: |
+      Reprendre le lancer précédent. Un élève affirme qu'au sommet de la trajectoire, le ballon est immobile. Que vaut réellement sa vitesse au sommet ?
+    indice: Regarde l'ombre sur le sol.
+    etapes:
+      - type: piege
+        titre: L'erreur
+        texte: Au sommet, seule l'ombre sur le mur s'arrête ($v_y = 0$). L'ombre sur le sol continue d'avancer.
+      - type: conc
+        titre: La vraie valeur
+        texte: <mark>$v_S = v_x = v_0\cos\alpha \approx 7{,}1\ \mathrm{m \cdot s^{-1}}$</mark>.
+
+  - titre: Un électron accéléré
+    difficulte: 2
+    type: application
+    enonce: |
+      Un électron (charge $-e$, $e = 1{,}6 \times 10^{-19}$ C, masse $m = 9{,}1 \times 10^{-31}$ kg) part du repos et est accéléré par une tension $U = 2{,}0 \times 10^3$ V.
+      1. Comparer son poids à la force électrique si le champ vaut $E = 4{,}0 \times 10^4\ \mathrm{V \cdot m^{-1}}$.
+      2. Calculer sa vitesse finale.
+    indice: Théorème de l'énergie cinétique, $\frac{1}{2}mv^2 = eU$.
+    etapes:
+      - type: calcul
+        titre: Poids ou force électrique ?
+        texte: $P = m g \approx 8{,}9 \times 10^{-30}$ N et $F = e E = 6{,}4 \times 10^{-15}$ N. Le rapport est de l'ordre de $10^{15}$, le poids est négligeable.
+      - type: calcul
+        titre: Énergie
+        texte: $\frac{1}{2} m v^2 = e\,U$, donc $v = \sqrt{\dfrac{2eU}{m}} = \sqrt{\dfrac{2 \times 1{,}6 \times 10^{-19} \times 2{,}0 \times 10^3}{9{,}1 \times 10^{-31}}}$.
+      - type: conc
+        titre: Résultat
+        texte: <mark>$v \approx 2{,}7 \times 10^7\ \mathrm{m \cdot s^{-1}}$</mark>, environ 9 % de la vitesse de la lumière.
+
+  - titre: Le tir au panier
+    difficulte: 3
+    type: bac
+    enonce: |
+      Un joueur tire depuis le point $(0 ; 2{,}0\ \mathrm{m})$ avec un angle $\alpha = 50°$. Le panier est en $(6{,}0\ \mathrm{m} ; 3{,}05\ \mathrm{m})$. $g = 9{,}8\ \mathrm{m \cdot s^{-2}}$, frottements négligés.
+      1. Établir l'équation de la trajectoire.
+      2. Déterminer la vitesse $v_0$ nécessaire pour que le ballon passe par le centre du panier.
+    indice: $y = -\dfrac{g}{2 v_0^2\cos^2\alpha}x^2 + \tan\alpha \cdot x + 2{,}0$, puis on impose le point du panier.
+    etapes:
+      - type: calcul
+        titre: La trajectoire
+        texte: |
+          Comme dans le cours, avec $y(0) = 2{,}0$ :
+          $$y = -\frac{g}{2 v_0^2 \cos^2\alpha}\,x^2 + \tan\alpha \cdot x + 2{,}0$$
+      - type: calcul
+        titre: On impose le panier
+        texte: |
+          $3{,}05 = -\dfrac{9{,}8 \times 36}{2 v_0^2 \cos^2 50°} + 6{,}0 \tan 50° + 2{,}0$. Or $6{,}0\tan 50° \approx 7{,}15$, donc $\dfrac{352,8}{2 v_0^2 \times 0{,}413} \approx 6{,}10$.
+      - type: calcul
+        titre: On isole v0
+        texte: $v_0^2 \approx \dfrac{352{,}8}{2 \times 0{,}413 \times 6{,}10} \approx 70$, donc $v_0 \approx 8{,}4\ \mathrm{m \cdot s^{-1}}$.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>Il faut lancer à environ $8{,}4\ \mathrm{m \cdot s^{-1}}$</mark>, un peu plus de $30\ \mathrm{km \cdot h^{-1}}$.

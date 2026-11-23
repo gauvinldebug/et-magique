@@ -1,0 +1,95 @@
+exercices:
+  - titre: Dériver une position
+    difficulte: 1
+    type: methode
+    enonce: |
+      Un point se déplace sur un axe selon $x(t) = 2{,}0\,t^2 - 3{,}0\,t + 1{,}0$ (en mètres, $t$ en secondes).
+      Déterminer $v_x(t)$ et $a_x(t)$. Quelle est la nature du mouvement ?
+    indice: On dérive deux fois.
+    etapes:
+      - type: calcul
+        titre: La vitesse
+        texte: $v_x(t) = \dfrac{\mathrm{d}x}{\mathrm{d}t} = 4{,}0\,t - 3{,}0$ (en $\mathrm{m \cdot s^{-1}}$).
+      - type: calcul
+        titre: L'accélération
+        texte: $a_x(t) = \dfrac{\mathrm{d}v_x}{\mathrm{d}t} = 4{,}0\ \mathrm{m \cdot s^{-2}}$, constante.
+      - type: conc
+        titre: Nature
+        texte: <mark>Mouvement rectiligne uniformément varié</mark>, d'abord ralenti ($v_x < 0$ et $a_x > 0$) jusqu'à $t = 0{,}75$ s, puis accéléré.
+
+  - titre: Retrouver une position par primitives
+    difficulte: 2
+    type: methode
+    enonce: |
+      Une voiture démarre à $t = 0$ depuis l'origine, sans vitesse initiale, avec une accélération constante $a = 2{,}5\ \mathrm{m \cdot s^{-2}}$ sur une route droite.
+      Établir $v(t)$ et $x(t)$. Quelle distance a-t-elle parcourue quand elle atteint $90\ \mathrm{km \cdot h^{-1}}$ ?
+    indice: Primitives, puis conditions initiales $v(0) = 0$ et $x(0) = 0$.
+    etapes:
+      - type: calcul
+        titre: Les primitives
+        texte: $v(t) = a\,t + C_1$ avec $v(0) = 0$, donc $v(t) = 2{,}5\,t$. Puis $x(t) = 1{,}25\,t^2 + C_2$ avec $x(0) = 0$, donc $x(t) = 1{,}25\,t^2$.
+      - type: calcul
+        titre: La date
+        texte: $90\ \mathrm{km \cdot h^{-1}} = 25\ \mathrm{m \cdot s^{-1}}$, atteint pour $t = 25 / 2{,}5 = 10$ s.
+      - type: conc
+        titre: La distance
+        texte: <mark>$x(10) = 1{,}25 \times 100 = 125$ m</mark>.
+
+  - titre: Le virage à vitesse constante
+    difficulte: 2
+    type: piege
+    enonce: |
+      Une voiture prend un virage circulaire de rayon $R = 50$ m à la vitesse constante de $54\ \mathrm{km \cdot h^{-1}}$. Un élève affirme que son accélération est nulle puisque le compteur ne bouge pas.
+      Corriger et calculer l'accélération.
+    indice: Le vecteur vitesse change de direction.
+    etapes:
+      - type: piege
+        titre: L'erreur
+        texte: La valeur de la vitesse est constante, mais pas le vecteur vitesse, qui tourne avec la voiture. Le passager se sent poussé sur le côté.
+      - type: calcul
+        titre: Le calcul
+        texte: $v = 54 / 3{,}6 = 15\ \mathrm{m \cdot s^{-1}}$, et dans le repère de Frenet $a = \dfrac{v^2}{R} = \dfrac{15^2}{50} = 4{,}5\ \mathrm{m \cdot s^{-2}}$.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>L'accélération vaut $4{,}5\ \mathrm{m \cdot s^{-2}}$, dirigée vers le centre du virage</mark>.
+
+  - titre: Appliquer la deuxième loi
+    difficulte: 2
+    type: application
+    enonce: |
+      Un skieur de masse $m = 80$ kg descend une piste rectiligne inclinée de $\alpha = 20°$ par rapport à l'horizontale. On néglige tous les frottements. $g = 9{,}8\ \mathrm{m \cdot s^{-2}}$.
+      Déterminer son accélération.
+    indice: Deux forces, le poids et la réaction normale de la piste. Projette sur l'axe de la piste.
+    etapes:
+      - type: methode
+        titre: Bilan
+        texte: Système skieur, référentiel terrestre supposé galiléen. Forces le poids $\vec{P}$ et la réaction normale $\vec{R}_N$, perpendiculaire à la piste.
+      - type: calcul
+        titre: Projection
+        texte: Sur l'axe de la piste orienté vers le bas, $\vec{R}_N$ ne compte pas, la projection du poids vaut $m g \sin\alpha$. Donc $m\,a = m g \sin\alpha$.
+      - type: conc
+        titre: Résultat
+        texte: <mark>$a = g \sin\alpha = 9{,}8 \times \sin 20° \approx 3{,}4\ \mathrm{m \cdot s^{-2}}$</mark>, indépendante de la masse.
+
+  - titre: Un ascenseur
+    difficulte: 3
+    type: bac
+    enonce: |
+      Un ascenseur de masse totale $m = 600$ kg démarre vers le haut avec une accélération constante $a = 1{,}5\ \mathrm{m \cdot s^{-2}}$ pendant 2,0 s, puis monte à vitesse constante. $g = 9{,}8\ \mathrm{m \cdot s^{-2}}$.
+      1. Calculer la tension $T$ du câble pendant le démarrage, puis pendant la montée à vitesse constante.
+      2. Quelle distance l'ascenseur parcourt-il pendant le démarrage ?
+    indice: Axe vertical vers le haut. Forces le poids et la tension du câble.
+    etapes:
+      - type: methode
+        titre: Deuxième loi
+        texte: Sur un axe vertical orienté vers le haut, $T - m g = m\,a$, donc $T = m(g + a)$.
+      - type: calcul
+        titre: Démarrage
+        texte: $T = 600 \times (9{,}8 + 1{,}5) \approx 6{,}8 \times 10^3$ N.
+      - type: calcul
+        titre: Vitesse constante
+        texte: $a = 0$ (principe d'inertie), donc $T = m g \approx 5{,}9 \times 10^3$ N.
+        note: le câble tire plus fort au démarrage
+      - type: conc
+        titre: Distance
+        texte: <mark>$d = \frac{1}{2} a t^2 = 0{,}5 \times 1{,}5 \times 2{,}0^2 = 3{,}0$ m</mark>.

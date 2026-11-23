@@ -1,0 +1,87 @@
+exercices:
+  - titre: Reconnaître les familles
+    difficulte: 1
+    type: application
+    enonce: |
+      Nommer la famille de chaque molécule : $\mathrm{CH_3{-}CH_2{-}CHO}$ ; $\mathrm{CH_3{-}CO{-}CH_3}$ ; $\mathrm{CH_3{-}COO{-}CH_2{-}CH_3}$ ; $\mathrm{CH_3{-}CH_2{-}NH_2}$ ; $\mathrm{CH_3{-}CONH_2}$.
+    indice: Repère le groupe caractéristique et sa position.
+    etapes:
+      - type: calcul
+        titre: Les familles
+        texte: Aldéhyde (propanal) ; cétone (propanone) ; ester (éthanoate d'éthyle) ; amine (éthanamine) ; amide (éthanamide).
+      - type: conc
+        titre: À retenir
+        texte: <mark>$\mathrm{C{=}O}$ en bout de chaîne = aldéhyde, dans la chaîne = cétone</mark>.
+
+  - titre: Catégorie de réaction
+    difficulte: 1
+    type: methode
+    enonce: |
+      Donner la catégorie de chaque réaction.
+      1. $\mathrm{CH_3{-}CH_2{-}OH} \longrightarrow \mathrm{CH_2{=}CH_2} + \mathrm{H_2O}$
+      2. $\mathrm{CH_2{=}CH_2} + \mathrm{HBr} \longrightarrow \mathrm{CH_3{-}CH_2Br}$
+      3. $\mathrm{CH_3{-}CH_2{-}Br} + \mathrm{HO^-} \longrightarrow \mathrm{CH_3{-}CH_2{-}OH} + \mathrm{Br^-}$
+    indice: Une double liaison apparaît, disparaît, ou rien ne change de ce côté-là ?
+    etapes:
+      - type: calcul
+        titre: Réaction 1
+        texte: Une double liaison apparaît et une molécule d'eau part, c'est une élimination.
+      - type: calcul
+        titre: Réaction 2
+        texte: La double liaison disparaît, deux molécules s'assemblent, c'est une addition.
+      - type: conc
+        titre: Réaction 3
+        texte: <mark>Br est remplacé par OH, c'est une substitution</mark>.
+
+  - titre: Plus vite ou plus de produit ?
+    difficulte: 2
+    type: piege
+    enonce: |
+      Pour une estérification, un élève propose d'ajouter davantage d'acide sulfurique pour obtenir plus d'ester. Un autre propose d'utiliser l'alcool en large excès. Lequel a raison, et pourquoi ?
+    indice: Distingue la vitesse et l'état final.
+    etapes:
+      - type: piege
+        titre: L'acide sulfurique
+        texte: C'est un catalyseur. Il accélère la réaction mais ne modifie pas l'état d'équilibre, donc pas le rendement.
+      - type: methode
+        titre: L'alcool en excès
+        texte: Un réactif en excès maintient $Q_r$ en dessous de $K$ plus longtemps, l'équilibre est atteint pour un avancement plus grand.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>C'est le deuxième élève qui augmente le rendement</mark> ; le premier gagne seulement du temps.
+
+  - titre: Un polymère
+    difficulte: 2
+    type: application
+    enonce: |
+      Le polychlorure de vinyle (PVC) a pour motif $\mathrm{{-}CH_2{-}CHCl{-}}$.
+      Donner la formule du monomère et le type de polymérisation.
+    indice: Le motif provient d'un monomère qui possède une double liaison.
+    etapes:
+      - type: calcul
+        titre: Le monomère
+        texte: On rétablit la double liaison $\mathrm{C{=}C}$ entre les deux carbones du motif, $\mathrm{CH_2{=}CHCl}$ (chlorure de vinyle).
+      - type: conc
+        titre: Le type
+        texte: <mark>C'est une polyaddition</mark>, aucune petite molécule n'est libérée.
+
+  - titre: Une synthèse en trois étapes
+    difficulte: 3
+    type: bac
+    enonce: |
+      On veut transformer le groupe ester d'une molécule qui contient aussi un groupe cétone, sans toucher à la cétone. Le réactif utilisé attaquerait les deux groupes.
+      1. Proposer une stratégie.
+      2. Les rendements des trois étapes sont 90 %, 75 % et 85 %. Calculer le rendement global.
+      3. Partant de 0,20 mol de réactif, quelle quantité de produit final obtient-on ?
+    indice: Le ruban de masquage, puis on multiplie les rendements.
+    etapes:
+      - type: methode
+        titre: La stratégie
+        texte: Protéger la cétone (on la transforme en un groupe qui ne réagit pas avec le réactif), réaliser la transformation de l'ester, puis déprotéger pour retrouver la cétone.
+        note: le ruban de masquage
+      - type: calcul
+        titre: Le rendement global
+        texte: $\eta = 0{,}90 \times 0{,}75 \times 0{,}85 \approx 0{,}57$, soit 57 %.
+      - type: conc
+        titre: La quantité obtenue
+        texte: <mark>$n = 0{,}57 \times 0{,}20 \approx 0{,}11$ mol</mark>, en supposant une mole de produit par mole de réactif à chaque étape.

@@ -1,0 +1,48 @@
+questions:
+  - question: Le vecteur vitesse est…
+    choix: ['la dérivée du vecteur accélération', 'la dérivée du vecteur position', 'toujours vertical', 'la primitive de la position']
+    bonne: 1
+    explication: $\vec{v} = \frac{\mathrm{d}\overrightarrow{OM}}{\mathrm{d}t}$, il est tangent à la trajectoire.
+    revoir: cours
+
+  - question: Si $x(t) = 3t + 2$, le mouvement est…
+    choix: ['uniformément accéléré', 'rectiligne uniforme', 'circulaire', 'au repos']
+    bonne: 1
+    explication: $v_x = 3$ constante, $a_x = 0$.
+    revoir: cours
+
+  - question: Dans un mouvement circulaire uniforme, l'accélération…
+    choix: ['est nulle', 'est tangente à la trajectoire', 'est dirigée vers le centre et vaut $v^2/R$', 'vaut $v/R$']
+    bonne: 2
+    explication: Le vecteur vitesse tourne, l'accélération est centripète.
+    revoir: cours
+
+  - question: La deuxième loi de Newton s'écrit…
+    choix: ['$\sum \vec{F} = m\,\vec{v}$', '$\sum \vec{F} = m\,\vec{a}$', '$\sum \vec{F} = \vec{0}$ toujours', '$\vec{a} = m \sum \vec{F}$']
+    bonne: 1
+    explication: Valable pour le centre de masse, dans un référentiel galiléen, à masse constante.
+    revoir: cours
+
+  - question: Un objet avance en ligne droite à vitesse constante. La somme des forces qui s'exercent sur lui…
+    choix: ['est dirigée vers l''avant', 'est nulle', 'est égale à son poids', 'augmente']
+    bonne: 1
+    explication: Principe d'inertie. Pas besoin de force pour entretenir un mouvement rectiligne uniforme.
+    revoir: cours
+
+  - question: Dans le repère de Frenet, la composante tangentielle de l'accélération vaut…
+    choix: ['$\frac{v^2}{R}$', '$\frac{\mathrm{d}v}{\mathrm{d}t}$', '$v\,R$', '$0$ toujours']
+    bonne: 1
+    explication: Elle traduit la variation de la valeur de la vitesse.
+    revoir: cours
+
+  - question: Une voiture passe de 0 à $20\ \mathrm{m \cdot s^{-1}}$ en 8,0 s, en ligne droite, avec une accélération constante. Celle-ci vaut…
+    choix: ['$160\ \mathrm{m \cdot s^{-2}}$', '$2{,}5\ \mathrm{m \cdot s^{-2}}$', '$0{,}4\ \mathrm{m \cdot s^{-2}}$', '$28\ \mathrm{m \cdot s^{-2}}$']
+    bonne: 1
+    explication: $a = \Delta v / \Delta t = 20 / 8{,}0$.
+    revoir: exercices
+
+  - question: La Terre attire la Lune ; la Lune attire la Terre avec une force…
+    choix: ['plus faible', 'de même valeur et de sens opposé', 'nulle', 'plus forte']
+    bonne: 1
+    explication: Troisième loi de Newton. Les deux forces s'exercent sur des systèmes différents.
+    revoir: cours

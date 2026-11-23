@@ -1,0 +1,90 @@
+exercices:
+  - titre: La force de gravitation
+    difficulte: 1
+    type: application
+    enonce: |
+      Calculer la force exercée par la Terre sur la Station spatiale internationale ($m = 4{,}2 \times 10^5$ kg) à 400 km d'altitude.
+      Données : $M_T = 5{,}97 \times 10^{24}$ kg, $R_T = 6\,370$ km, $G = 6{,}67 \times 10^{-11}\ \mathrm{N \cdot m^2 \cdot kg^{-2}}$.
+    indice: $r = R_T + h$, en mètres.
+    etapes:
+      - type: piege
+        titre: La distance
+        texte: $r = 6\,370 + 400 = 6\,770$ km $= 6{,}77 \times 10^6$ m, et non 400 km.
+      - type: conc
+        titre: Le calcul
+        texte: <mark>$F = \dfrac{6{,}67 \times 10^{-11} \times 4{,}2 \times 10^5 \times 5{,}97 \times 10^{24}}{(6{,}77 \times 10^6)^2} \approx 3{,}6 \times 10^6$ N</mark>.
+
+  - titre: Vitesse et période de la station
+    difficulte: 2
+    type: methode
+    enonce: |
+      Avec les données de l'exercice précédent, établir l'expression de la vitesse de la station puis calculer sa vitesse et sa période.
+    indice: Repère de Frenet, $\frac{v^2}{r} = \frac{GM}{r^2}$.
+    etapes:
+      - type: methode
+        titre: La deuxième loi
+        texte: Référentiel géocentrique supposé galiléen, seule force l'attraction terrestre. Selon $\vec{u}_N$, $m\frac{v^2}{r} = \frac{GmM_T}{r^2}$, donc $v = \sqrt{\dfrac{GM_T}{r}}$.
+      - type: calcul
+        titre: La vitesse
+        texte: $v = \sqrt{\dfrac{6{,}67 \times 10^{-11} \times 5{,}97 \times 10^{24}}{6{,}77 \times 10^6}} \approx 7{,}67 \times 10^3\ \mathrm{m \cdot s^{-1}}$.
+      - type: conc
+        titre: La période
+        texte: <mark>$T = \dfrac{2\pi r}{v} = \dfrac{2\pi \times 6{,}77 \times 10^6}{7{,}67 \times 10^3} \approx 5{,}5 \times 10^3$ s, environ 92 min</mark>.
+
+  - titre: Peser Jupiter
+    difficulte: 2
+    type: methode
+    enonce: |
+      Io, une lune de Jupiter, a une orbite quasi circulaire de rayon $r = 4{,}22 \times 10^8$ m et une période $T = 1{,}77$ jour.
+      En déduire la masse de Jupiter.
+    indice: $\frac{T^2}{r^3} = \frac{4\pi^2}{GM}$, avec $T$ en secondes.
+    etapes:
+      - type: calcul
+        titre: La période en secondes
+        texte: $T = 1{,}77 \times 86\,400 \approx 1{,}53 \times 10^5$ s.
+      - type: calcul
+        titre: On isole M
+        texte: $M = \dfrac{4\pi^2 r^3}{G T^2} = \dfrac{4\pi^2 \times (4{,}22 \times 10^8)^3}{6{,}67 \times 10^{-11} \times (1{,}53 \times 10^5)^2}$.
+      - type: conc
+        titre: Résultat
+        texte: <mark>$M \approx 1{,}9 \times 10^{27}$ kg</mark>, environ 300 fois la masse de la Terre.
+
+  - titre: Le géostationnaire
+    difficulte: 2
+    type: piege
+    enonce: |
+      Calculer l'altitude d'un satellite géostationnaire. Un élève prend $T = 24$ h. Quelle valeur faut-il prendre, et pourquoi ?
+      Données : $M_T = 5{,}97 \times 10^{24}$ kg, $R_T = 6\,370$ km.
+    indice: Il doit suivre la rotation de la Terre par rapport aux étoiles.
+    etapes:
+      - type: piege
+        titre: La période
+        texte: 24 h est la durée du jour solaire. La rotation de la Terre sur elle-même, dans le référentiel géocentrique, dure un jour sidéral, $T = 86\,164$ s.
+      - type: calcul
+        titre: Le rayon
+        texte: $r = \left(\dfrac{G M_T T^2}{4\pi^2}\right)^{1/3} = \left(\dfrac{6{,}67 \times 10^{-11} \times 5{,}97 \times 10^{24} \times 86\,164^2}{4\pi^2}\right)^{1/3} \approx 4{,}22 \times 10^7$ m.
+      - type: conc
+        titre: L'altitude
+        texte: <mark>$h = r - R_T \approx 42\,200 - 6\,370 \approx 35\,800$ km</mark>. Avec 24 h, on trouverait une orbite plus haute d'environ 80 km, et le satellite dériverait lentement vers l'ouest.
+
+  - titre: Deux satellites
+    difficulte: 3
+    type: bac
+    enonce: |
+      Deux satellites A et B tournent autour de la Terre sur des orbites circulaires. A a une masse 10 fois plus grande que B, et un rayon d'orbite 4 fois plus grand.
+      1. Comparer leurs vitesses.
+      2. Comparer leurs périodes.
+    indice: La masse du satellite n'intervient pas. Utilise $v \propto r^{-1/2}$ et $T \propto r^{3/2}$.
+    etapes:
+      - type: piege
+        titre: La masse
+        texte: Les formules ne contiennent que la masse de la Terre, la masse de chaque satellite ne joue aucun rôle.
+      - type: calcul
+        titre: Les vitesses
+        texte: $\dfrac{v_A}{v_B} = \sqrt{\dfrac{r_B}{r_A}} = \sqrt{\dfrac{1}{4}} = \dfrac{1}{2}$.
+      - type: calcul
+        titre: Les périodes
+        texte: $\dfrac{T_A}{T_B} = \left(\dfrac{r_A}{r_B}\right)^{3/2} = 4^{3/2} = 8$.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>A va deux fois moins vite et met 8 fois plus de temps à faire un tour</mark>.

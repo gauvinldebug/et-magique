@@ -1,0 +1,48 @@
+questions:
+  - question: La poussée d'Archimède est égale…
+    choix: ['au poids de l''objet', 'au poids du fluide déplacé', 'à la masse de l''objet', 'à la pression du fluide']
+    bonne: 1
+    explication: $\Pi = \rho_{\text{fluide}} V_{\text{immergé}}\,g$.
+    revoir: cours
+
+  - question: Un objet flotte dans l'eau si…
+    choix: ['il est lourd', 'sa masse volumique moyenne est inférieure à celle de l''eau', 'il est en métal', 'il est petit']
+    bonne: 1
+    explication: La poussée peut alors équilibrer le poids avant immersion complète.
+    revoir: cours
+
+  - question: Le débit volumique s'exprime par…
+    choix: ['$D_V = S / v$', '$D_V = S \times v$', '$D_V = v / S$', '$D_V = \rho\,v$']
+    bonne: 1
+    explication: En $\mathrm{m^3 \cdot s^{-1}}$ avec $S$ en $\mathrm{m^2}$ et $v$ en $\mathrm{m \cdot s^{-1}}$.
+    revoir: cours
+
+  - question: Si la section d'une conduite est divisée par 3, la vitesse du liquide…
+    choix: ['est divisée par 3', 'est multipliée par 3', 'est multipliée par 9', 'ne change pas']
+    bonne: 1
+    explication: Conservation du débit, $S\,v$ constant.
+    revoir: cours
+
+  - question: Dans un écoulement horizontal, là où la vitesse augmente, la pression…
+    choix: ['augmente', 'diminue', 'reste la même', 's''annule']
+    bonne: 1
+    explication: $P + \frac{1}{2}\rho v^2$ est constant.
+    revoir: cours
+
+  - question: La relation de Bernoulli s'applique à un fluide…
+    choix: ['visqueux et compressible', 'parfait, incompressible, en écoulement permanent', 'au repos uniquement', 'quelconque']
+    bonne: 1
+    explication: Ce sont les conditions de validité à citer.
+    revoir: cours
+
+  - question: La vitesse de sortie de l'eau par un trou situé 5,0 m sous la surface d'un grand réservoir vaut environ…
+    choix: ['$5\ \mathrm{m \cdot s^{-1}}$', '$10\ \mathrm{m \cdot s^{-1}}$', '$49\ \mathrm{m \cdot s^{-1}}$', '$98\ \mathrm{m \cdot s^{-1}}$']
+    bonne: 1
+    explication: $v = \sqrt{2gh} = \sqrt{98} \approx 9{,}9\ \mathrm{m \cdot s^{-1}}$.
+    revoir: exercices
+
+  - question: Au repos, la relation de Bernoulli se réduit à…
+    choix: ['$P$ = constante', '$P + \rho g z$ = constante', '$\frac{1}{2}\rho v^2$ = constante', '$P = \rho g$']
+    bonne: 1
+    explication: C'est la loi fondamentale de la statique des fluides.
+    revoir: cours
