@@ -1,0 +1,30 @@
+questions:
+  - question: L'ion sodium s'écrit…
+    choix: ['$\mathrm{Na^-}$', '$\mathrm{Na^+}$', '$\mathrm{Na^{2+}}$', '$\mathrm{Na}$']
+    bonne: 1
+    explication: Il perd son unique électron de valence.
+    revoir: cours
+
+  - question: Un atome d'oxygène forme en général…
+    choix: ['1 liaison', '2 liaisons', '3 liaisons', '4 liaisons']
+    bonne: 1
+    explication: 6 électrons de valence, il en manque 2.
+    revoir: cours
+
+  - question: Une liaison covalente, c'est…
+    choix: ['un électron échangé', "un doublet d'électrons partagé", "deux ions qui s'attirent", 'un proton partagé']
+    bonne: 1
+    explication: Chaque atome apporte un électron.
+    revoir: cours
+
+  - question: Une mole contient…
+    choix: ['12 entités', '$6{,}02 \times 10^{23}$ entités', '1 gramme de matière', '$1{,}67 \times 10^{-27}$ entités']
+    bonne: 1
+    explication: C'est la constante d'Avogadro.
+    revoir: cours
+
+  - question: Un échantillon contient $1{,}2 \times 10^{24}$ atomes. Sa quantité de matière vaut environ…
+    choix: ['0,5 mol', '2,0 mol', '20 mol', '1,2 mol']
+    bonne: 1
+    explication: $1{,}2 \times 10^{24} / 6{,}02 \times 10^{23}$.
+    revoir: exercices

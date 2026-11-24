@@ -1,0 +1,30 @@
+questions:
+  - question: Le noyau d'un atome contient…
+    choix: ['des protons et des électrons', 'des protons et des neutrons', 'seulement des neutrons', 'des électrons et des neutrons']
+    bonne: 1
+    explication: Les nucléons. Les électrons sont autour.
+    revoir: cours
+
+  - question: Combien de neutrons dans $^{35}_{17}\mathrm{Cl}$ ?
+    choix: ['17', '18', '35', '52']
+    bonne: 1
+    explication: $35 - 17$.
+    revoir: exercices
+
+  - question: Un atome est environ combien de fois plus grand que son noyau ?
+    choix: ['10', '1000', '100 000', '10 milliards']
+    bonne: 2
+    explication: $10^{-10}/10^{-15} = 10^{5}$.
+    revoir: cours
+
+  - question: La configuration électronique du magnésium ($Z = 12$) est…
+    choix: ['$1s^2\,2s^2\,2p^8$', '$1s^2\,2s^2\,2p^6\,3s^2$', '$1s^2\,2s^2\,2p^6\,3p^2$', '$1s^2\,2s^8\,3s^2$']
+    bonne: 1
+    explication: Une sous-couche p contient au plus 6 électrons.
+    revoir: cours
+
+  - question: Les éléments d'une même colonne du tableau ont…
+    choix: ['le même nombre de neutrons', "le même nombre d'électrons de valence", 'la même masse', 'le même nombre de couches']
+    bonne: 1
+    explication: D'où des propriétés chimiques voisines.
+    revoir: cours

@@ -1,0 +1,30 @@
+questions:
+  - question: Le passage de l'état gazeux à l'état liquide s'appelle…
+    choix: ['vaporisation', 'liquéfaction', 'fusion', 'sublimation']
+    bonne: 1
+    explication: Gaz vers liquide.
+    revoir: cours
+
+  - question: La fusion de la glace est…
+    choix: ['exothermique', 'endothermique', 'une transformation chimique', 'nucléaire']
+    bonne: 1
+    explication: Il faut fournir de l'énergie pour faire fondre.
+    revoir: cours
+
+  - question: Une transformation chimique conserve…
+    choix: ['les molécules', 'les éléments chimiques', 'les noyaux et les molécules', 'rien']
+    bonne: 1
+    explication: Les atomes se réarrangent, ils ne changent pas.
+    revoir: cours
+
+  - question: Dans une réaction nucléaire, on conserve…
+    choix: ['les éléments', 'le nombre de nucléons et la charge', 'la masse des molécules', 'le nombre de neutrons']
+    bonne: 1
+    explication: $A$ et $Z$ se conservent.
+    revoir: cours
+
+  - question: La réaction qui fait briller le Soleil est…
+    choix: ['une combustion', 'une fission', 'une fusion', 'une dissolution']
+    bonne: 2
+    explication: Des noyaux d'hydrogène fusionnent en hélium.
+    revoir: cours

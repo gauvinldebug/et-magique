@@ -1,0 +1,74 @@
+exercices:
+  - titre: Le sérum physiologique
+    difficulte: 1
+    type: application
+    enonce: |
+      Le sérum physiologique contient du chlorure de sodium à la concentration en masse $C_m = 9{,}0\ \mathrm{g \cdot L^{-1}}$.
+      Quelle masse de sel faut-il dissoudre pour préparer 250 mL de sérum ?
+    indice: $m = C_m \times V$, avec $V$ en litres.
+    etapes:
+      - type: calcul
+        titre: Le calcul
+        texte: $m = 9{,}0 \times 0{,}250$.
+      - type: conc
+        titre: Résultat
+        texte: <mark>$m = 2{,}25\ \mathrm{g}$</mark>, à peser puis à dissoudre dans une fiole jaugée de 250 mL.
+
+  - titre: Diluer un sirop
+    difficulte: 2
+    type: methode
+    enonce: |
+      On dispose d'une solution mère de concentration $C_{m,0} = 50\ \mathrm{g \cdot L^{-1}}$. On veut préparer 100 mL de solution fille à $C_{m,1} = 5{,}0\ \mathrm{g \cdot L^{-1}}$.
+      1. Calculer le facteur de dilution.
+      2. Quel volume de solution mère prélever ? Avec quelle verrerie ?
+    indice: $F = C_{m,0}/C_{m,1}$, puis $V_0 = V_1/F$.
+    etapes:
+      - type: calcul
+        titre: Le facteur
+        texte: $F = 50/5{,}0 = 10$.
+      - type: calcul
+        titre: Le volume à prélever
+        texte: $V_0 = V_1/F = 100/10 = 10\ \mathrm{mL}$.
+      - type: conc
+        titre: La verrerie
+        texte: <mark>Pipette jaugée de 10 mL et fiole jaugée de 100 mL</mark>. On complète avec de l'eau jusqu'au trait de jauge, puis on agite.
+
+  - titre: Le volume de la solution
+    difficulte: 2
+    type: piege
+    enonce: |
+      Un élève dissout 20 g de sucre dans 200 mL d'eau et annonce $C_m = 20/0{,}200 = 100\ \mathrm{g \cdot L^{-1}}$. Pourquoi son résultat est-il approximatif ? Comment faire pour connaître exactement la concentration ?
+    indice: Que vaut le volume final ?
+    etapes:
+      - type: piege
+        titre: L'erreur
+        texte: La formule utilise le volume de la solution, pas celui de l'eau. En dissolvant 20 g de sucre, le volume final dépasse un peu 200 mL.
+      - type: conc
+        titre: La bonne méthode
+        texte: <mark>Dissoudre le sucre dans une fiole jaugée de 200 mL et compléter jusqu'au trait</mark>. Le volume de solution est alors exactement 200 mL, et $C_m = 100\ \mathrm{g \cdot L^{-1}}$.
+
+  - titre: Doser par étalonnage
+    difficulte: 3
+    type: bac
+    enonce: >-
+      On mesure la masse volumique de solutions de sucre de concentrations connues :
+      <table><tr><th>$C_m$ (g/L)</th><th>0</th><th>50</th><th>100</th><th>150</th><th>200</th></tr>
+      <tr><td>$\rho$ (g/mL)</td><td>1,000</td><td>1,019</td><td>1,038</td><td>1,057</td><td>1,076</td></tr></table>
+      Un soda a une masse volumique de 1,040 g/mL (on suppose que seul le sucre la modifie).
+      1. Que remarque-t-on sur l'évolution de $\rho$ ?
+      2. Estimer la concentration en sucre du soda.
+      3. Combien de morceaux de sucre de 6 g contient une canette de 33 cL ?
+    indice: Chaque tranche de 50 g/L ajoute 0,019 g/mL.
+    etapes:
+      - type: methode
+        titre: La courbe
+        texte: $\rho$ augmente de 0,019 g/mL tous les 50 g/L. La courbe d'étalonnage est une droite.
+      - type: calcul
+        titre: La concentration
+        texte: $1{,}040 - 1{,}000 = 0{,}040$, soit $C_m \approx 0{,}040/0{,}019 \times 50 \approx 105\ \mathrm{g \cdot L^{-1}}$.
+      - type: calcul
+        titre: La canette
+        texte: $m = 105 \times 0{,}33 \approx 35\ \mathrm{g}$, soit $35/6 \approx 6$ morceaux.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>Environ 105 g/L, soit près de 6 morceaux de sucre par canette</mark>.

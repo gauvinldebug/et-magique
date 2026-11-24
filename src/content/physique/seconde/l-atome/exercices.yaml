@@ -1,0 +1,63 @@
+exercices:
+  - titre: Lire une notation
+    difficulte: 1
+    type: application
+    enonce: |
+      Donner la composition de l'atome de fer $^{56}_{26}\mathrm{Fe}$.
+    indice: Protons, neutrons, électrons.
+    etapes:
+      - type: calcul
+        titre: Le noyau
+        texte: $Z = 26$ protons, $N = 56 - 26 = 30$ neutrons.
+      - type: conc
+        titre: Les électrons
+        texte: <mark>26 protons, 30 neutrons, 26 électrons</mark>, l'atome étant neutre.
+
+  - titre: La masse d'un atome
+    difficulte: 2
+    type: application
+    enonce: |
+      Calculer la masse d'un atome d'aluminium $^{27}_{13}\mathrm{Al}$, puis le nombre d'atomes dans une canette de 15 g d'aluminium.
+    indice: On néglige la masse des électrons.
+    etapes:
+      - type: calcul
+        titre: Un atome
+        texte: $m \approx 27 \times 1{,}67 \times 10^{-27} \approx 4{,}5 \times 10^{-26}\ \mathrm{kg}$.
+      - type: calcul
+        titre: La canette
+        texte: $N = 15 \times 10^{-3} / 4{,}5 \times 10^{-26}$.
+      - type: conc
+        titre: Résultat
+        texte: <mark>Environ $3{,}3 \times 10^{23}$ atomes</mark>, un nombre gigantesque.
+
+  - titre: Configuration et place dans le tableau
+    difficulte: 2
+    type: methode
+    enonce: |
+      Écrire la configuration électronique du soufre ($Z = 16$). En déduire sa ligne, le nombre de ses électrons de valence, et un autre élément qui a des propriétés chimiques semblables.
+    indice: Remplir 1s, 2s, 2p, 3s, 3p dans l'ordre.
+    etapes:
+      - type: calcul
+        titre: La configuration
+        texte: $1s^2\,2s^2\,2p^6\,3s^2\,3p^4$, soit $2+2+6+2+4 = 16$ électrons.
+      - type: calcul
+        titre: Ligne et valence
+        texte: Dernière couche 3, donc ligne 3. Électrons de valence $2 + 4 = 6$.
+      - type: conc
+        titre: La famille
+        texte: >-
+          <mark>L'oxygène</mark> ($1s^2\,2s^2\,2p^4$) a aussi 6 électrons de valence : même colonne, propriétés semblables.
+
+  - titre: Isotopes ou pas ?
+    difficulte: 2
+    type: piege
+    enonce: |
+      Un élève affirme que $^{14}_{6}\mathrm{C}$ et $^{14}_{7}\mathrm{N}$ sont isotopes, « puisqu'ils ont le même nombre 14 ». Corriger.
+    indice: Qu'est-ce qui définit un élément ?
+    etapes:
+      - type: piege
+        titre: L'erreur
+        texte: Des isotopes ont le même numéro atomique $Z$. Ici, $Z = 6$ pour l'un, $Z = 7$ pour l'autre.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>Ce sont deux éléments différents, carbone et azote</mark>, qui ont seulement le même nombre de nucléons.

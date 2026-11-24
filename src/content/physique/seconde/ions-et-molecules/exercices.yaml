@@ -1,0 +1,68 @@
+exercices:
+  - titre: Prévoir la charge d'un ion
+    difficulte: 1
+    type: application
+    enonce: |
+      Prévoir l'ion formé par le lithium ($Z = 3$), le fluor ($Z = 9$) et le calcium ($Z = 20$, 2 électrons de valence).
+    indice: Le gaz noble le plus proche.
+    etapes:
+      - type: calcul
+        titre: Lithium et fluor
+        texte: Li $1s^2\,2s^1$ perd 1 électron → $\mathrm{Li^+}$ (comme l'hélium). F $1s^2\,2s^2\,2p^5$ gagne 1 électron → $\mathrm{F^-}$ (comme le néon).
+      - type: conc
+        titre: Calcium
+        texte: <mark>Il perd ses 2 électrons de valence → $\mathrm{Ca^{2+}}$</mark>, comme l'argon.
+
+  - titre: Combien de liaisons ?
+    difficulte: 2
+    type: methode
+    enonce: |
+      Représenter le schéma de Lewis de l'ammoniac $\mathrm{NH_3}$ et indiquer le nombre de doublets non liants de l'azote.
+    indice: N a 5 électrons de valence, il lui en manque 3.
+    etapes:
+      - type: methode
+        titre: Les liaisons
+        texte: >-
+          Il manque 3 électrons à l'azote pour l'octet : il forme 3 liaisons, une avec chaque H. Chaque H, avec 1 liaison, a son duet.
+      - type: calcul
+        titre: Le compte
+        texte: Autour de N, 3 liaisons font 6 électrons. Il reste $5 - 3 = 2$ électrons, soit 1 doublet non liant.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>3 doublets liants N-H et 1 doublet non liant sur l'azote</mark>, soit 8 électrons autour de N.
+
+  - titre: Les molécules d'un morceau de sucre
+    difficulte: 3
+    type: bac
+    enonce: |
+      Un morceau de sucre de 6,0 g est constitué de saccharose $\mathrm{C_{12}H_{22}O_{11}}$. On donne les nombres de nucléons : C 12, H 1, O 16, et $m_{\text{nucléon}} = 1{,}67 \times 10^{-27}\ \mathrm{kg}$.
+      1. Calculer la masse d'une molécule de saccharose.
+      2. En déduire le nombre de molécules dans le morceau, puis la quantité de matière.
+    indice: Compter tous les nucléons de la molécule.
+    etapes:
+      - type: calcul
+        titre: Les nucléons
+        texte: $12 \times 12 + 22 \times 1 + 11 \times 16 = 144 + 22 + 176 = 342$.
+      - type: calcul
+        titre: Une molécule
+        texte: $m = 342 \times 1{,}67 \times 10^{-27} \approx 5{,}71 \times 10^{-25}\ \mathrm{kg}$.
+      - type: calcul
+        titre: Le nombre de molécules
+        texte: $N = 6{,}0 \times 10^{-3} / 5{,}71 \times 10^{-25} \approx 1{,}05 \times 10^{22}$.
+      - type: conc
+        titre: La quantité de matière
+        texte: <mark>$n = 1{,}05 \times 10^{22} / 6{,}02 \times 10^{23} \approx 1{,}7 \times 10^{-2}\ \mathrm{mol}$</mark>.
+
+  - titre: Le signe de la charge
+    difficulte: 1
+    type: piege
+    enonce: |
+      Un élève écrit que l'atome de soufre, qui gagne deux électrons, devient l'ion $\mathrm{S^{2+}}$. Corriger.
+    indice: Quelle est la charge d'un électron ?
+    etapes:
+      - type: piege
+        titre: L'erreur
+        texte: Les électrons sont négatifs. En gagner deux ajoute deux charges négatives.
+      - type: conc
+        titre: Le bon ion
+        texte: <mark>$\mathrm{S^{2-}}$</mark>, l'ion sulfure.
