@@ -69,6 +69,8 @@ $$
 
 Sur l'arbre : on additionne les probabilités de **tous les chemins** qui mènent à $B$. Plus généralement, la formule marche avec toute **partition** de l'univers $A_1, \dots, A_n$.
 
+<div class="labo" data-labo="arbre"></div>
+
 ## Retour au problème
 
 On note $M$ « être malade » et $T$ « le test est positif ». $P(M) = 0{,}01$, $P_M(T) = 0{,}99$, $P_{\bar{M}}(T) = 0{,}02$.

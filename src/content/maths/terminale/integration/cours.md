@@ -50,6 +50,8 @@ Et l'aire sous $\corange{x}^2$ : $\int_0^1 \corange{x}^2\,\mathrm{d}\corange{x} 
 
 Le lien avec les primitives est même plus fort : si $\cbleu{f}$ est continue, la fonction $\corange{x} \mapsto \int_a^{\corange{x}} \cbleu{f}(t)\,\mathrm{d}t$ est **la** primitive de $\cbleu{f}$ qui s'annule en $a$. C'est le compteur kilométrique remis à zéro au départ.
 
+<div class="labo" data-labo="rectangles"></div>
+
 ## Les propriétés
 
 <div class="encadre">

@@ -56,6 +56,8 @@ Pour tout réel $\corange{x}$ : $-1 \le \cos \corange{x} \le 1$, $-1 \le \sin \c
 
 La dernière égalité, c'est Pythagore dans le cercle de rayon 1.
 
+<div class="labo" data-labo="cercle"></div>
+
 ## Les valeurs remarquables
 
 | $\corange{x}$ | $0$ | $\frac{\pi}{6}$ | $\frac{\pi}{4}$ | $\frac{\pi}{3}$ | $\frac{\pi}{2}$ | $\pi$ |

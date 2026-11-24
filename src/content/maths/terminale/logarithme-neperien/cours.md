@@ -44,6 +44,8 @@ Valeurs à connaître : $\ln 1 = 0$ (car $\mathrm{e}^0 = 1$) et $\ln \mathrm{e} 
 
 Le logarithme d'un nombre négatif ou nul **n'existe pas** : l'exponentielle n'arrive jamais là.
 
+<div class="labo" data-labo="ln"></div>
+
 ## Les propriétés algébriques
 
 <div class="encadre">

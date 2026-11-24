@@ -53,6 +53,8 @@ $$
 
 C'est une **parabole**. Le sommet (la flèche) est atteint quand $v_y = 0$ ; le point de chute, quand $y$ redevient égal à sa valeur de départ.
 
+<div class="labo" data-labo="projectile"></div>
+
 ## Une particule chargée dans un champ électrique uniforme
 
 Entre deux plaques parallèles distantes de $d$ et soumises à une tension $U$, règne un **champ électrique uniforme**, perpendiculaire aux plaques, dirigé de la plaque + vers la plaque −, de valeur

@@ -80,6 +80,8 @@ Une **équation différentielle** est une équation dont l'inconnue est une **fo
 
 La fonction constante $-\frac{b}{a}$ est la **solution d'équilibre** : si on part de là, on n'en bouge plus, car sa dérivée est nulle et $a \times \left(-\frac{b}{a}\right) + b = 0$.
 
+<div class="labo" data-labo="eq-diff"></div>
+
 ## Retour au problème
 
 Une population de bactéries $N(t)$ (en milliers) vérifie $N' = 0{,}3\,N$ et $N(0) = 2$.

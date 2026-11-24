@@ -4,20 +4,66 @@ import Chapitre from '../../../../layouts/Chapitre.astro';
 import { cheminsChapitres } from '../../../../lib/routes';
 import { existe } from '../../../../lib/fichiers';
 import { md } from '../../../../lib/markdown';
+import '../../../../styles/labos.css';
 export const getStaticPaths = cheminsChapitres;
 const p = Astro.props;
-const { Content } = await render(p.chapitre);
+const { Content, headings } = await render(p.chapitre);
+// Le sommaire du cours : les grandes parties, avec un repère sur celles qui contiennent une figure à manipuler.
+const corps = p.chapitre.body ?? '';
+const h2 = headings.filter((h) => h.depth === 2);
+const parties = h2.map((h) => ({ slug: h.slug, texte: h.text.replace(/\s+/g, ' ').trim() }));
+const avecFigure = new Set<string>();
+{
+  // repère les parties qui contiennent un encadré interactif
+  const blocs = corps.split(/\n(?=## )/);
+  const decal = blocs[0].trimStart().startsWith('## ') ? 0 : 1;
+  blocs.forEach((b, i) => { if (b.includes('data-labo') && h2[i - decal]) avecFigure.add(h2[i - decal].slug); });
+}
 const { pdf, piege } = p.chapitre.data;
 ---
 <Chapitre {...p} onglet="cours">
+  <div class="barre-lecture no-print" aria-hidden="true" data-barre></div>
   <div class="ch-grid">
     <article class="prose"><Content /></article>
     <aside class="side" style="position:sticky;top:80px">
       {existe(pdf.cours) && <a class="dl" href={pdf.cours} download data-umami-event="cours-pdf"><span class="ic">PDF</span><div><b>Le cours en PDF</b><small>à imprimer ou garder</small></div></a>}
       {existe(pdf.fiche) && <a class="dl fiche" href={pdf.fiche} download data-umami-event="fiche-telechargee"><span class="ic">FICHE</span><div><b>Fiche de révision</b><small>1 page</small></div></a>}
+      {parties.length > 2 && (
+        <nav class="som-cours no-print" aria-label="Sommaire du cours" data-som>
+          <div class="k">Dans ce cours</div>
+          <ol>
+            {parties.map((h) => (
+              <li><a href={`#${h.slug}`}>{h.texte}{avecFigure.has(h.slug) && <span class="som-fig" title="Contient une figure à manipuler">à manipuler</span>}</a></li>
+            ))}
+          </ol>
+        </nav>
+      )}
       {piege && (
         <div class="piege"><span class="k">Le piège du chapitre</span><div set:html={md(piege)} /></div>
       )}
     </aside>
   </div>
 </Chapitre>
+<script>
+  import '../../../../scripts/labos/index';
+  // Barre de lecture en haut de l'écran et partie en cours surlignée dans le sommaire.
+  const article = document.querySelector<HTMLElement>('.prose');
+  const barre = document.querySelector<HTMLElement>('[data-barre]');
+  const liens = [...document.querySelectorAll<HTMLAnchorElement>('[data-som] a')];
+  const titres = liens.map((a) => document.getElementById(decodeURIComponent(a.hash.slice(1)))).filter(Boolean) as HTMLElement[];
+  if (article && barre) {
+    let prevu = 0;
+    const maj = () => {
+      prevu = 0;
+      const r = article.getBoundingClientRect();
+      const p = Math.min(1, Math.max(0, -r.top / Math.max(1, r.height - innerHeight * .6)));
+      barre.style.transform = `scaleX(${p.toFixed(4)})`;
+      let actif = -1;
+      titres.forEach((t, i) => { if (t.getBoundingClientRect().top < innerHeight * .35) actif = i; });
+      liens.forEach((a, i) => { a.classList.toggle('ici', i === actif); a.classList.toggle('lu', i < actif); });
+    };
+    addEventListener('scroll', () => { if (!prevu) prevu = requestAnimationFrame(maj); }, { passive: true });
+    addEventListener('resize', maj);
+    maj();
+  }
+</script>

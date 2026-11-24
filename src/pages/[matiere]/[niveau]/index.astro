@@ -18,9 +18,15 @@ const nbDispo = liste.filter((c) => c.dispo).length;
         <h1>{niveau.nom}{niveau.sousTitre ? <span class="sous"> · {niveau.sousTitre}</span> : null}</h1>
         <p>{nbDispo === 0 ? 'Les chapitres arrivent bientôt. Dis-nous lequel tu veux en premier.' : nbDispo === liste.length ? `Les ${nbDispo} chapitres du programme, tous en ligne.` : `${nbDispo} chapitre${nbDispo > 1 ? 's' : ''} en ligne, les autres arrivent.`}</p>
       </Bandeau>
+      {nbDispo > 1 && (
+        <div class="parcours" hidden data-parcours={`${matiere.slug}/${niveau.slug}`}>
+          <div class="parcours-cases">{liste.filter((c) => c.dispo).map((c, i) => <i data-c={c.slug} style={`--i:${i}`} title={c.titre}></i>)}</div>
+          <p data-parcours-texte></p>
+        </div>
+      )}
       <ul class="liste-ch">
         {liste.map((c, i) => (
-          <li>
+          <li data-c={c.dispo ? c.slug : undefined}>
             {c.dispo ? (
               <a href={`/${matiere.slug}/${niveau.slug}/${c.slug}/`}><span class="n">{i + 1}</span><b>{c.titre}</b>{c.nouveau ? <span class="badge">Nouveau</span> : c.video ? <span class="badge gris">Vidéo</span> : <span></span>}</a>
             ) : (
@@ -33,3 +39,29 @@ const nbDispo = liste.filter((c) => c.dispo).length;
     </div>
   </div>
 </Base>
+<script>
+  const bloc = document.querySelector<HTMLElement>('[data-parcours]');
+  if (bloc) {
+    let vus: string[] = [];
+    try { vus = JSON.parse(localStorage.getItem('vus:' + bloc.dataset.parcours) || '[]'); } catch { /* rien */ }
+    const cases = [...bloc.querySelectorAll<HTMLElement>('[data-c]')];
+    const faits = cases.filter((c) => vus.includes(c.dataset.c!));
+    if (faits.length) {
+      faits.forEach((c) => c.classList.add('ok'));
+      document.querySelectorAll<HTMLElement>('.liste-ch li[data-c]').forEach((li) => { if (vus.includes(li.dataset.c!)) li.classList.add('deja'); });
+      const suivant = cases.find((c) => !vus.includes(c.dataset.c!));
+      const t = bloc.querySelector<HTMLElement>('[data-parcours-texte]')!;
+      const n = faits.length, total = cases.length;
+      t.innerHTML = n === total
+        ? `<b>Tu as ouvert les ${total} chapitres.</b> Il ne reste plus qu'à tout réviser avec les QCM.`
+        : `<b>${n} chapitre${n > 1 ? 's' : ''} sur ${total}</b> déjà ouvert${n > 1 ? 's' : ''} sur cet appareil.`;
+      if (suivant && n < total) {
+        const a = document.createElement('a');
+        a.href = `${location.pathname.replace(/\/?$/, '/')}${suivant.dataset.c}/`;
+        a.textContent = `Le suivant : ${suivant.title} →`;
+        t.append(' ', a);
+      }
+      bloc.hidden = false;
+    }
+  }
+</script>

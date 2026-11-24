@@ -46,6 +46,8 @@ Le produit scalaire $\vec{u} \cdot \vec{v}$, c'est la longueur de $\vec{u}$ mult
 
 Le choix de la formule dépend des données : une figure avec des angles, la formule du cosinus ; un repère, les coordonnées ; un projeté visible, la projection.
 
+<div class="labo" data-labo="produit-scalaire"></div>
+
 ## Propriétés
 
 <div class="encadre">

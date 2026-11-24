@@ -60,6 +60,8 @@ $$
 P(X = 7) = \binom{10}{7} \times 0{,}7^7 \times 0{,}3^3 = 120 \times 0{,}7^7 \times 0{,}3^3 \approx \cvert{0{,}267}
 $$
 
+<div class="labo" data-labo="binomiale"></div>
+
 ## Espérance, variance, écart type
 
 <div class="encadre">

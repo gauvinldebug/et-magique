@@ -51,7 +51,19 @@ const titre = titrePage ?? (onglet === 'video' ? chapitre.data.titre : `${chapit
           <a class="btn ghost" href={`/${matiere.slug}/${niveau.slug}/`}>Tous les chapitres de {niveau.nom}</a>
         )}
       </div>
+      <span hidden data-vu={`${matiere.slug}/${niveau.slug}`} data-ch={chapitre.slug}></span>
       <p class="aide no-print">Une erreur dans cette page ? <a href={`/demandes/?type=erreur&niveau=${niveau.slug}&page=${encodeURIComponent(Astro.url.pathname)}`}>Signale-la</a>, je corrige vite.</p>
     </div>
   </div>
 </Base>
+<script>
+  // Garde en mémoire, sur cet appareil seulement, les chapitres déjà ouverts : la liste des chapitres les coche.
+  const m = document.querySelector<HTMLElement>('[data-vu]');
+  if (m) {
+    try {
+      const cle = 'vus:' + m.dataset.vu;
+      const vus: string[] = JSON.parse(localStorage.getItem(cle) || '[]');
+      if (!vus.includes(m.dataset.ch!)) { vus.push(m.dataset.ch!); localStorage.setItem(cle, JSON.stringify(vus)); }
+    } catch { /* navigation privée : tant pis */ }
+  }
+</script>

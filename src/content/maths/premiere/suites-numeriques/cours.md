@@ -66,6 +66,8 @@ Pour prouver qu'une suite à termes non nuls est géométrique, on calcule $\dfr
 
 Une **évolution de $t\,\%$** correspond à une multiplication par $1 + \frac{t}{100}$ : une hausse de 4 %, c'est $\times 1{,}04$ ; une baisse de 20 %, c'est $\times 0{,}8$.
 
+<div class="labo" data-labo="suite"></div>
+
 ## Sens de variation d'une suite
 
 <div class="encadre">

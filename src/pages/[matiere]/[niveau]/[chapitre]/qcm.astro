@@ -47,6 +47,22 @@ const lettres = 'ABCDE';
 
 <script>
   const track = (e: string, d?: object) => (window as any).umami?.track(e, d);
+  // Bonne réponse : une poignée de formes de l'affiche jaillit du bouton.
+  const eclat = (el: HTMLElement, n = 9) => {
+    if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const r = el.getBoundingClientRect();
+    const x = r.left + Math.min(r.width - 20, 60), y = r.top + r.height / 2;
+    for (let i = 0; i < n; i++) {
+      const s = document.createElement('span');
+      s.className = 'eclat ' + 'ctk'[i % 3];
+      const a = (i / n) * Math.PI * 2 + Math.random() * .5, d = 50 + Math.random() * 50;
+      s.style.setProperty('--x0', `${x}px`); s.style.setProperty('--y0', `${y}px`);
+      s.style.setProperty('--x1', `${x + Math.cos(a) * d}px`); s.style.setProperty('--y1', `${y + Math.sin(a) * d - 20}px`);
+      s.style.setProperty('--r', `${(Math.random() - .5) * 360}deg`);
+      document.body.append(s);
+      s.addEventListener('animationend', () => s.remove());
+    }
+  };
   const root = document.querySelector<HTMLElement>('[data-qcm]');
   if (root) {
     const total = Number(root.dataset.total);
@@ -76,7 +92,7 @@ const lettres = 'ABCDE';
           if (ok) score++;
           btns.forEach((x) => { x.disabled = true; });
           btns[bonne].classList.add('good');
-          if (!ok) b.classList.add('bad');
+          if (!ok) b.classList.add('bad'); else eclat(b);
           const fb = q.querySelector<HTMLElement>('[data-fb]')!;
           fb.hidden = false;
           fb.classList.add(ok ? 'ok' : 'ko');
@@ -90,7 +106,11 @@ const lettres = 'ABCDE';
       q.querySelector('[data-suivante]')!.addEventListener('click', () => {
         cur = i + 1;
         if (cur >= total) {
-          root.querySelector<HTMLElement>('[data-score]')!.textContent = String(score);
+          // le score défile de 0 à sa valeur
+          const sc = root.querySelector<HTMLElement>('[data-score]')!;
+          let k = 0; sc.textContent = '0';
+          const monte = () => { if (k < score) { sc.textContent = String(++k); setTimeout(monte, 90); } else if (score / total >= .7) eclat(sc, 14); };
+          setTimeout(monte, 350);
           const r = score / total;
           root.querySelector<HTMLElement>('[data-message]')!.textContent =
             r === 1 ? 'Parfait. Tu maîtrises ce chapitre.' : r >= 0.7 ? 'Très bien. Revois les questions ratées et tu seras prêt.' : r >= 0.4 ? "C'est un début. Relis le cours, puis refais les exercices." : 'Pas de panique : revois la vidéo et le cours, puis réessaie.';

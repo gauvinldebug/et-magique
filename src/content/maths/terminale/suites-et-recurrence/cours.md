@@ -45,6 +45,8 @@ Imagine une rangée infinie de dominos. Pour être sûr qu'ils tombent tous, il 
 
 Alors le premier fait tomber le deuxième, qui fait tomber le troisième, et ainsi de suite : tous tombent.
 
+<div class="labo" data-labo="dominos"></div>
+
 ## La méthode en 3 étapes
 
 <div class="encadre">

@@ -73,6 +73,8 @@ Lire le résultat :
 - $\gamma < 0$ : image **renversée** ; $\gamma > 0$ : image **droite** ;
 - $|\gamma| > 1$ : image agrandie ; $|\gamma| < 1$ : image réduite.
 
+<div class="labo" data-labo="lentille"></div>
+
 ## Trois situations à connaître
 
 | Position de l'objet | Image | Exemple |

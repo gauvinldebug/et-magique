@@ -73,6 +73,8 @@ La demi-vie, c'est la minute du lancer de pièces. Elle va de la fraction de sec
 
 <mark>Au bout de $n$ demi-vies, il reste $N_0 / 2^n$ noyaux</mark>.
 
+<div class="labo" data-labo="radioactivite"></div>
+
 ## L'activité
 
 On ne compte pas les noyaux, on compte les désintégrations : c'est ce que mesure un compteur Geiger.

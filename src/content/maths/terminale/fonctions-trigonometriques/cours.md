@@ -29,6 +29,8 @@ Un tour complet, c'est $2\pi$ : après un tour, tu reviens exactement au même e
 
 Et comme tu es sur un cercle de rayon 1, <mark>$\cos^2 \corange{x} + \sin^2 \corange{x} = 1$</mark> (Pythagore), et les deux valeurs restent toujours entre $-1$ et $1$.
 
+<div class="labo" data-labo="cercle-courbe"></div>
+
 ## Les valeurs à connaître
 
 | $\corange{x}$ | $0$ | $\frac{\pi}{6}$ | $\frac{\pi}{4}$ | $\frac{\pi}{3}$ | $\frac{\pi}{2}$ | $\pi$ |

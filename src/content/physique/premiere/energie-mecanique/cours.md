@@ -96,6 +96,8 @@ $$
 
 Exemple : une balle lâchée sans vitesse d'une hauteur $h$, sans frottement. En haut, $E_m = mgh$. En bas, $E_m = \frac{1}{2}mv^2$. Donc $v = \sqrt{2gh}$, indépendante de la masse. De 20 m, $v = \sqrt{2 \times 9{,}8 \times 20} \approx 20\ \mathrm{m \cdot s^{-1}}$, soit environ $72\ \mathrm{km \cdot h^{-1}}$.
 
+<div class="labo" data-labo="energie"></div>
+
 ## Les pièges
 
 - La vitesse est **au carré** dans $E_c$ et doit être en $\mathrm{m \cdot s^{-1}}$.
