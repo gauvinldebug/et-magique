@@ -1,0 +1,30 @@
+questions:
+  - question: L'eau salée est un mélange…
+    choix: ['hétérogène', 'homogène', 'impossible', 'solide']
+    bonne: 1
+    explication: On ne voit pas le sel dissous.
+    revoir: cours
+
+  - question: Dans l'eau sucrée, l'eau est…
+    choix: ['le soluté', 'le solvant', 'le filtre', 'un mélange']
+    bonne: 1
+    explication: C'est elle qui dissout le sucre.
+    revoir: cours
+
+  - question: Pour séparer l'eau et le sable, on peut…
+    choix: ['filtrer', 'dissoudre', 'remuer', 'congeler']
+    bonne: 0
+    explication: Le filtre retient le sable.
+    revoir: cours
+
+  - question: Pour récupérer le sel d'une eau salée, on…
+    choix: ['filtre', "fait évaporer l'eau", 'décante', 'ajoute du sel']
+    bonne: 1
+    explication: Le sel dissous traverse le filtre.
+    revoir: cours
+
+  - question: On dissout 10 g de sucre dans 200 g d'eau. La masse de l'eau sucrée est…
+    choix: ['200 g', '210 g', '190 g', '10 g']
+    bonne: 1
+    explication: La masse se conserve.
+    revoir: exercices

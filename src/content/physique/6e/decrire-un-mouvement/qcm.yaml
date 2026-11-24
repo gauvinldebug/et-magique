@@ -1,0 +1,30 @@
+questions:
+  - question: La trajectoire d'une bille qui roule tout droit est…
+    choix: ['rectiligne', 'circulaire', 'curviligne', 'immobile']
+    bonne: 0
+    explication: Une ligne droite.
+    revoir: cours
+
+  - question: Sur une chronophotographie, des points de plus en plus serrés montrent que l'objet…
+    choix: ['accélère', 'ralentit', 'va à vitesse constante', 'tourne']
+    bonne: 1
+    explication: Il parcourt de moins en moins de distance.
+    revoir: cours
+
+  - question: Une voiture fait 150 km en 2 h. Sa vitesse moyenne est…
+    choix: ['300 km/h', '75 km/h', '152 km/h', '50 km/h']
+    bonne: 1
+    explication: $150 \div 2$.
+    revoir: exercices
+
+  - question: Pour décrire un mouvement, il faut préciser…
+    choix: ["la couleur de l'objet", "l'observateur", "la météo", "le poids"]
+    bonne: 1
+    explication: Le mouvement dépend de qui regarde.
+    revoir: cours
+
+  - question: La vitesse d'un marcheur est d'environ…
+    choix: ['0,5 km/h', '5 km/h', '50 km/h', '500 km/h']
+    bonne: 1
+    explication: Un ordre de grandeur à retenir.
+    revoir: cours

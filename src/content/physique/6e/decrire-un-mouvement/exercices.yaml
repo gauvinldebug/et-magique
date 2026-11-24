@@ -1,0 +1,42 @@
+exercices:
+  - titre: Nommer une trajectoire
+    difficulte: 1
+    type: application
+    enonce: |
+      Donner la trajectoire : un ascenseur qui monte, l'extrémité des pales d'une éolienne, un ballon de basket lancé vers le panier.
+    indice: Droite, cercle ou autre courbe ?
+    etapes:
+      - type: calcul
+        titre: Les deux premiers
+        texte: L'ascenseur, rectiligne. Les pales, circulaire.
+      - type: conc
+        titre: Le ballon
+        texte: <mark>Curviligne</mark>, une courbe qui monte puis redescend.
+
+  - titre: Calculer une vitesse
+    difficulte: 2
+    type: methode
+    enonce: |
+      Un cycliste parcourt 60 km en 3 heures. Quelle est sa vitesse moyenne ?
+    indice: $v = d/t$.
+    etapes:
+      - type: calcul
+        titre: Le calcul
+        texte: $v = 60 \div 3$.
+      - type: conc
+        titre: Résultat
+        texte: <mark>20 km/h</mark>.
+
+  - titre: Qui bouge ?
+    difficulte: 1
+    type: piege
+    enonce: |
+      Dans un manège, Lina est assise sur un cheval de bois. Elle dit à sa mère, qui la regarde depuis le bord : « je ne bouge pas ». Sa mère dit : « tu tournes ». Qui a raison ?
+    indice: Pour quel observateur ?
+    etapes:
+      - type: piege
+        titre: Le piège
+        texte: Lina et sa mère ne regardent pas depuis le même endroit.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>Les deux ont raison</mark>. Lina est immobile par rapport au manège, et elle tourne par rapport à sa mère.

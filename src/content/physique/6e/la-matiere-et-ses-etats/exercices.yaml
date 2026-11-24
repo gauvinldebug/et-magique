@@ -1,0 +1,42 @@
+exercices:
+  - titre: Solide, liquide ou gaz ?
+    difficulte: 1
+    type: application
+    enonce: |
+      Donner l'état de chaque matière à la température de la classe : du jus d'orange, un crayon, l'air du ballon, du sel en poudre, du miel.
+    indice: Le sel en poudre coule, mais chaque grain garde sa forme.
+    etapes:
+      - type: calcul
+        titre: Solides et liquides
+        texte: Le crayon et le sel en poudre sont solides. Le jus d'orange et le miel sont liquides.
+      - type: conc
+        titre: Gaz
+        texte: <mark>L'air du ballon est un gaz</mark>.
+
+  - titre: Le ballon sur la balance
+    difficulte: 2
+    type: methode
+    enonce: |
+      Un ballon dégonflé pèse 450 g. On le gonfle avec 2 L d'air. Que va indiquer la balance ? (1 L d'air pèse environ 1,2 g)
+    indice: L'air a une masse.
+    etapes:
+      - type: calcul
+        titre: La masse de l'air
+        texte: $2 \times 1{,}2 = 2{,}4$ g d'air.
+      - type: conc
+        titre: Résultat
+        texte: <mark>Environ 452,4 g</mark>. La différence est petite, mais elle existe.
+
+  - titre: Le nuage de la casserole
+    difficulte: 2
+    type: piege
+    enonce: |
+      Un élève dit : « au-dessus de la casserole, je vois la vapeur d'eau ». Est-ce vrai ?
+    indice: La vapeur d'eau se voit-elle ?
+    etapes:
+      - type: piege
+        titre: L'erreur
+        texte: La vapeur d'eau est un gaz invisible.
+      - type: conc
+        titre: Ce qu'on voit
+        texte: <mark>Ce sont de minuscules gouttes d'eau liquide</mark>, formées quand la vapeur rencontre l'air plus froid.

@@ -1,0 +1,43 @@
+exercices:
+  - titre: On voit ou on ne voit pas ?
+    difficulte: 1
+    type: application
+    enonce: |
+      Classer en mélanges homogènes ou hétérogènes : l'eau et le sable, l'eau sucrée, la vinaigrette, le sirop de menthe dilué.
+    indice: Voit-on plusieurs constituants ?
+    etapes:
+      - type: calcul
+        titre: Hétérogènes
+        texte: L'eau et le sable, la vinaigrette.
+      - type: conc
+        titre: Homogènes
+        texte: <mark>L'eau sucrée, le sirop dilué</mark>.
+
+  - titre: Récupérer le sel
+    difficulte: 2
+    type: methode
+    enonce: |
+      On a de l'eau de mer avec du sable. Comment récupérer le sel ?
+    indice: D'abord ce qu'on voit, ensuite ce qui est dissous.
+    etapes:
+      - type: calcul
+        titre: Enlever le sable
+        texte: Laisser décanter, puis filtrer. On obtient une eau salée limpide.
+      - type: conc
+        titre: Récupérer le sel
+        texte: >-
+          <mark>Faire évaporer l'eau : le sel reste au fond</mark>.
+
+  - titre: Le sucre qui fond
+    difficulte: 1
+    type: piege
+    enonce: |
+      Léo dit : « le sucre fond dans mon chocolat chaud ». Corriger sa phrase.
+    indice: Le sucre devient-il liquide tout seul ?
+    etapes:
+      - type: piege
+        titre: L'erreur
+        texte: Fondre, c'est passer de l'état solide à l'état liquide. Le sucre ne devient pas du sucre liquide.
+      - type: conc
+        titre: La bonne phrase
+        texte: <mark>« Le sucre se dissout dans mon chocolat chaud »</mark>.
