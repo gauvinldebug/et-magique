@@ -1,5 +1,6 @@
 ---
 import Base from '../../../layouts/Base.astro';
+import Bandeau from '../../../components/Bandeau.astro';
 import { niveauxDe } from '../../../data/site';
 import { chapitresPublies, complements } from '../../../lib/contenu';
 import { cheminsMatieres } from '../../../lib/matieres-paths';
@@ -13,10 +14,10 @@ const parNiveau = niveauxDe(matiere.slug).map((n) => ({ n, items: avecFiche.filt
 <Base titre="Fiches de révision" description="Une fiche d'une page par chapitre, à imprimer : la méthode, les questions types et les pièges." matiere={matiere.slug} actif="fiches">
   <div class="page-feuille cahier">
     <div class="feuille">
-      <div>
+      <Bandeau teinte="jaune">
         <h1>Fiches de révision</h1>
-        <p style="color:var(--encre-2)">Une page par chapitre : la méthode, les questions types, les pièges. À imprimer et à relire la veille du contrôle.</p>
-      </div>
+        <p>Une page par chapitre : la méthode, les questions types, les pièges. À imprimer et à relire la veille du contrôle.</p>
+      </Bandeau>
       {parNiveau.map((g) => (
         <div style="display:grid;gap:20px">
           <h2>{g.n.nom}</h2>

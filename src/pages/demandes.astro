@@ -1,14 +1,15 @@
 ---
 import Base from '../layouts/Base.astro';
+import Bandeau from '../components/Bandeau.astro';
 import { NIVEAUX } from '../data/site';
 ---
 <Base titre="Demandes : un chapitre, une erreur, une question" description="Demande un chapitre, signale une erreur ou pose une question. Sans compte." actif="demandes">
   <div class="page-feuille cahier">
     <div class="feuille">
-      <div>
-        <h1>Le cahier de <mark>demandes</mark></h1>
-        <p style="color:var(--encre-2)">Un chapitre qui te manque, une erreur repérée, une question sur le site : écris-le ici. Sans compte.</p>
-      </div>
+      <Bandeau teinte="orange">
+        <h1>Le cahier de demandes</h1>
+        <p>Un chapitre qui te manque, une erreur repérée, une question sur le site : écris-le ici. Sans compte.</p>
+      </Bandeau>
       <div class="deux-col">
         <form class="form" data-demande novalidate>
           <h2>Faire une demande</h2>
