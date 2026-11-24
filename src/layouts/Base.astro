@@ -18,7 +18,7 @@ interface Props {
   sansEntete?: boolean;
 }
 const { titre, description = 'Les maths de la 6e à la terminale, enfin claires. Vidéos, cours, exercices corrigés pas à pas et QCM. Gratuit, sans compte.', matiere = 'maths', niveau, actif, indexer = true, sansEntete = false } = Astro.props;
-const site = Astro.site ?? new URL('https://et-magique.netlify.app');
+const site = Astro.site ?? new URL('https://et-magique.etmagique.workers.dev');
 const canonical = new URL(Astro.url.pathname, site);
 const ogImage = new URL('/og.png', site);
 const verifGoogle = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;

@@ -7,7 +7,7 @@ import { katexOptions } from './src/lib/katex-options.mjs';
 
 // Adresse publique du site (canonique, sitemap) : variable SITE_URL (à mettre dans Cloudflare,
 // https://etmagique.fr une fois le domaine branché), sinon celle fournie par Netlify (URL).
-const SITE_URL = process.env.SITE_URL || process.env.URL || 'https://et-magique.netlify.app';
+const SITE_URL = process.env.SITE_URL || process.env.URL || 'https://et-magique.etmagique.workers.dev';
 const NON_INDEXEES = ['/admin', '/recherche', '/merci', '/404', '/r/', '/qr/'];
 
 export default defineConfig({
