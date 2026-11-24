@@ -877,7 +877,7 @@ a.poster:hover { color: var(--txt); transform: translate(-4px, -4px); box-shadow
 @media (max-width: 760px) {
   .gbar > .wrap { gap: 10px; height: 50px; }
   .gbar-home { padding-right: 12px; }
-  .gbar nav { gap: 2px; }
+  .gbar nav { gap: 2px; -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 24px), transparent); mask-image: linear-gradient(to right, #000 calc(100% - 24px), transparent); padding-right: 20px; }
   .gbar nav a, .gbar nav > span { padding-right: 5px; }
   .gbar nav a > span:last-child, .gbar nav > span > span:last-child { display: none; }
   .gbar nav a[aria-current="page"] > span:last-child { display: inline; }
