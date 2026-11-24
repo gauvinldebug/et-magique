@@ -1,0 +1,30 @@
+questions:
+  - question: Dans un fil métallique, les porteurs de charge sont…
+    choix: ['des protons', 'des électrons', 'des ions', 'des neutrons']
+    bonne: 1
+    explication: Des électrons libres, qui circulent en sens inverse du courant conventionnel.
+    revoir: cours
+
+  - question: Quand une pile débite un courant plus intense, la tension à ses bornes…
+    choix: ['augmente', 'diminue', 'reste égale à E', 'devient nulle']
+    bonne: 1
+    explication: $U = E - rI$.
+    revoir: cours
+
+  - question: Un appareil de 500 W fonctionne 2 heures. Il consomme…
+    choix: ['250 Wh', '1,0 kWh', '1000 J', '0,5 kWh']
+    bonne: 1
+    explication: $500 \times 2 = 1000\ \mathrm{Wh}$.
+    revoir: exercices
+
+  - question: La puissance dissipée par effet Joule dans une résistance $R$ vaut…
+    choix: ['$RI$', '$RI^2$', '$R/I$', '$U/I$']
+    bonne: 1
+    explication: $P = UI = RI \times I$.
+    revoir: cours
+
+  - question: Un moteur reçoit 100 W et fournit 80 W de puissance mécanique. Son rendement est…
+    choix: ['0,20', '0,80', '1,25', '80 W']
+    bonne: 1
+    explication: $80/100$.
+    revoir: exercices

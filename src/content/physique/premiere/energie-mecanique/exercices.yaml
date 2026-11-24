@@ -1,0 +1,75 @@
+exercices:
+  - titre: Comparer deux énergies cinétiques
+    difficulte: 1
+    type: application
+    enonce: |
+      Calculer l'énergie cinétique d'une voiture de 1000 kg à $50\ \mathrm{km \cdot h^{-1}}$, puis à $100\ \mathrm{km \cdot h^{-1}}$. Comparer.
+    indice: Convertir en m/s en divisant par 3,6.
+    etapes:
+      - type: calcul
+        titre: À 50 km/h
+        texte: $v = 13{,}9\ \mathrm{m \cdot s^{-1}}$, $E_c = 0{,}5 \times 1000 \times 13{,}9^2 \approx 9{,}6 \times 10^{4}\ \mathrm{J}$.
+      - type: calcul
+        titre: À 100 km/h
+        texte: $v = 27{,}8\ \mathrm{m \cdot s^{-1}}$, $E_c = 0{,}5 \times 1000 \times 27{,}8^2 \approx 3{,}9 \times 10^{5}\ \mathrm{J}$.
+      - type: conc
+        titre: Comparaison
+        texte: <mark>Vitesse doublée, énergie cinétique multipliée par 4</mark>.
+
+  - titre: Freiner sur 40 mètres
+    difficulte: 2
+    type: methode
+    enonce: |
+      Une voiture de 1000 kg roulant à $20\ \mathrm{m \cdot s^{-1}}$ freine en ligne droite sur route horizontale et s'arrête en 40 m.
+      Calculer la valeur de la force de freinage, supposée constante.
+    indice: Théorème de l'énergie cinétique. Le poids et la réaction ne travaillent pas.
+    etapes:
+      - type: methode
+        titre: Les forces
+        texte: Poids et réaction de la route sont perpendiculaires au déplacement, leur travail est nul. Seule la force de freinage travaille.
+      - type: calcul
+        titre: Le théorème
+        texte: $0 - \frac{1}{2} \times 1000 \times 20^2 = -f \times 40$, soit $-2{,}0 \times 10^{5} = -40\,f$.
+      - type: conc
+        titre: Résultat
+        texte: <mark>$f = 5{,}0 \times 10^{3}\ \mathrm{N}$</mark>.
+
+  - titre: Le skieur et les frottements
+    difficulte: 3
+    type: bac
+    enonce: |
+      Un skieur de masse $m = 70\ \mathrm{kg}$ part sans vitesse et descend une piste de dénivelé $h = 50\ \mathrm{m}$. En bas, il va à $20\ \mathrm{m \cdot s^{-1}}$. On prend $g = 9{,}8\ \mathrm{N \cdot kg^{-1}}$ et l'origine des altitudes en bas de la piste.
+      1. Calculer son énergie mécanique en haut et en bas.
+      2. L'énergie mécanique est-elle conservée ? Interpréter.
+      3. Quelle vitesse aurait-il atteinte sans frottement ?
+    indice: En haut, $E_c = 0$. En bas, $E_{pp} = 0$.
+    etapes:
+      - type: calcul
+        titre: En haut
+        texte: $E_m = mgh = 70 \times 9{,}8 \times 50 = 3{,}43 \times 10^{4}\ \mathrm{J}$.
+      - type: calcul
+        titre: En bas
+        texte: $E_m = \frac{1}{2} \times 70 \times 20^2 = 1{,}40 \times 10^{4}\ \mathrm{J}$.
+      - type: her
+        titre: Ce qui manque
+        texte: Il manque environ $2{,}0 \times 10^{4}\ \mathrm{J}$. Les frottements de la neige et de l'air ont converti cette énergie en énergie thermique.
+      - type: conc
+        titre: Sans frottement
+        texte: $v = \sqrt{2gh} = \sqrt{2 \times 9{,}8 \times 50}$, <mark>soit environ $31\ \mathrm{m \cdot s^{-1}}$</mark>, plus de 110 km/h.
+
+  - titre: Le chemin ne compte pas
+    difficulte: 2
+    type: piege
+    enonce: |
+      Deux toboggans partent de la même plateforme, à 4,0 m de haut, et arrivent au même niveau. L'un est droit, l'autre fait des virages et mesure trois fois plus long. Un élève affirme que l'enfant arrivera plus vite en bas du long toboggan, « parce qu'il a eu plus de temps pour accélérer ». On néglige les frottements. Corriger.
+    indice: De quoi dépend le travail du poids ?
+    etapes:
+      - type: piege
+        titre: L'erreur
+        texte: La longueur du trajet n'intervient pas. Le travail du poids ne dépend que de la différence d'altitude.
+      - type: calcul
+        titre: Le calcul
+        texte: Dans les deux cas, $v = \sqrt{2gh} = \sqrt{2 \times 9{,}8 \times 4{,}0} \approx 8{,}9\ \mathrm{m \cdot s^{-1}}$.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>Même vitesse à l'arrivée</mark>. En réalité, le long toboggan frotte plus longtemps et l'enfant arrive un peu moins vite.

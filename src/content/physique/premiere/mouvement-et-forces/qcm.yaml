@@ -1,0 +1,30 @@
+questions:
+  - question: Un objet se déplace en ligne droite à vitesse constante. La somme des forces est…
+    choix: ['dans le sens du mouvement', 'nulle', 'opposée au mouvement', 'verticale']
+    bonne: 1
+    explication: $\Delta \vec{v} = \vec{0}$, donc les forces se compensent.
+    revoir: cours
+
+  - question: Le vecteur $\Delta \vec{v}$ a toujours le même sens que…
+    choix: ['la vitesse', 'la somme des forces', 'le déplacement', 'le poids']
+    bonne: 1
+    explication: $\sum \vec{F} \approx m\,\Delta \vec{v}/\Delta t$.
+    revoir: cours
+
+  - question: Une même force agit sur deux chariots, l'un deux fois plus lourd. Pendant la même durée, sa variation de vitesse est…
+    choix: ['deux fois plus grande', 'deux fois plus petite', 'la même', 'quatre fois plus petite']
+    bonne: 1
+    explication: $\Delta v = F\,\Delta t / m$.
+    revoir: cours
+
+  - question: Dans un mouvement circulaire uniforme, $\Delta \vec{v}$ est dirigé…
+    choix: ['vers le centre', "vers l'extérieur", 'selon la vitesse', 'il est nul']
+    bonne: 0
+    explication: La vitesse tourne vers l'intérieur du virage.
+    revoir: cours
+
+  - question: En chute libre, la vitesse d'une balle augmente chaque seconde de…
+    choix: ['$9{,}8\ \mathrm{m \cdot s^{-1}}$', '$1\ \mathrm{m \cdot s^{-1}}$', 'une valeur qui dépend de sa masse', '$98\ \mathrm{m \cdot s^{-1}}$']
+    bonne: 0
+    explication: $\Delta v/\Delta t = g$, la même pour toutes les masses.
+    revoir: exercices
