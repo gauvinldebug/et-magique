@@ -16,7 +16,7 @@ const nbDispo = liste.filter((c) => c.dispo).length;
       <Bandeau niveau={niveau.slug}>
         <div class="crumb"><a href={`/${matiere.slug}/`}>Accueil</a> › <b>{niveau.nom}</b></div>
         <h1>{niveau.nom}{niveau.sousTitre ? <span class="sous"> · {niveau.sousTitre}</span> : null}</h1>
-        <p>{nbDispo === 0 ? 'Les chapitres arrivent bientôt. Dis-nous lequel tu veux en premier.' : `${nbDispo} chapitre${nbDispo > 1 ? 's' : ''} en ligne, les autres arrivent.`}</p>
+        <p>{nbDispo === 0 ? 'Les chapitres arrivent bientôt. Dis-nous lequel tu veux en premier.' : nbDispo === liste.length ? `Les ${nbDispo} chapitres du programme, tous en ligne.` : `${nbDispo} chapitre${nbDispo > 1 ? 's' : ''} en ligne, les autres arrivent.`}</p>
       </Bandeau>
       <ul class="liste-ch">
         {liste.map((c, i) => (
