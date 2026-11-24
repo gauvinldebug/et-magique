@@ -1,0 +1,30 @@
+questions:
+  - question: Pour qu'un courant circule, le circuit doit être…
+    choix: ['ouvert', 'fermé', 'en plastique', 'mouillé']
+    bonne: 1
+    explication: Une boucle sans interruption.
+    revoir: cours
+
+  - question: Lequel de ces matériaux est un isolant ?
+    choix: ['le cuivre', 'le plastique', 'le fer', 'le graphite']
+    bonne: 1
+    explication: Il entoure les fils électriques.
+    revoir: cours
+
+  - question: Dans un circuit en série, si une lampe grille…
+    choix: ['les autres restent allumées', "tout s'éteint", 'les autres brillent plus', 'rien ne change']
+    bonne: 1
+    explication: La boucle unique est ouverte.
+    revoir: cours
+
+  - question: À l'extérieur du générateur, le courant va…
+    choix: ['de la borne − vers la borne +', 'de la borne + vers la borne −', 'dans les deux sens', 'nulle part']
+    bonne: 1
+    explication: C'est le sens conventionnel.
+    revoir: cours
+
+  - question: Un dipôle en court-circuit…
+    choix: ['fonctionne mieux', 'ne fonctionne plus', 'reçoit plus de courant', 'devient isolant']
+    bonne: 1
+    explication: Le courant passe par le fil qui le contourne.
+    revoir: cours

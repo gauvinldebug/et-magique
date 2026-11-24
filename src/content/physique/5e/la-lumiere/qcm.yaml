@@ -1,0 +1,30 @@
+questions:
+  - question: Lequel est une source primaire de lumière ?
+    choix: ['la Lune', 'un miroir', 'une bougie allumée', 'une feuille blanche']
+    bonne: 2
+    explication: Elle produit sa propre lumière.
+    revoir: cours
+
+  - question: Dans l'air, la lumière se propage…
+    choix: ['en ligne droite', 'en courbe', 'en contournant les obstacles', 'à la vitesse du son']
+    bonne: 0
+    explication: Propagation rectiligne.
+    revoir: cours
+
+  - question: L'ombre portée est…
+    choix: ["la partie non éclairée de l'objet", "la zone sombre derrière l'objet", "la lumière renvoyée", "la source"]
+    bonne: 1
+    explication: L'ombre propre est sur l'objet.
+    revoir: cours
+
+  - question: Lors d'une éclipse de Lune…
+    choix: ['la Lune est entre le Soleil et la Terre', 'la Terre est entre le Soleil et la Lune', 'le Soleil est entre la Terre et la Lune', "la Lune s'éteint"]
+    bonne: 1
+    explication: La Lune entre dans l'ombre de la Terre.
+    revoir: cours
+
+  - question: La lumière va à environ…
+    choix: ['340 m/s', '300 000 km/s', '300 km/h', '1000 km/s']
+    bonne: 1
+    explication: C'est la plus grande vitesse possible.
+    revoir: cours

@@ -1,0 +1,62 @@
+exercices:
+  - titre: Nommer les changements d'état
+    difficulte: 1
+    type: application
+    enonce: |
+      Nommer le changement d'état dans chaque cas : un glaçon dans un verre, la buée sur un miroir, une flaque qui sèche, l'eau mise au congélateur.
+    indice: Quel est l'état de départ et l'état d'arrivée ?
+    etapes:
+      - type: calcul
+        titre: Les deux premiers
+        texte: Glaçon → fusion. Buée → liquéfaction (la vapeur de l'air devient liquide sur le miroir froid).
+      - type: conc
+        titre: Les deux derniers
+        texte: <mark>Flaque → vaporisation (évaporation). Congélateur → solidification</mark>.
+
+  - titre: Lire une courbe de chauffage
+    difficulte: 2
+    type: methode
+    enonce: |
+      On chauffe un glaçon à −10 °C. La température monte jusqu'à 0 °C, reste à 0 °C pendant 4 minutes, puis remonte.
+      1. Que se passe-t-il pendant les 4 minutes ?
+      2. Quel est l'état de l'eau juste avant et juste après le palier ?
+    indice: Un palier, c'est un changement d'état.
+    etapes:
+      - type: calcul
+        titre: Le palier
+        texte: Pendant le palier, la glace fond. La température reste à 0 °C tant qu'il reste de la glace.
+      - type: conc
+        titre: Les états
+        texte: <mark>Avant le palier, solide ; après, liquide</mark>. Pendant, les deux états coexistent.
+
+  - titre: La bouteille au congélateur
+    difficulte: 2
+    type: piege
+    enonce: |
+      On met 1,0 L d'eau (1,0 kg) au congélateur dans une bouteille fermée et pleine. Un élève dit : « la bouteille éclate parce que la glace est plus lourde ». Corriger.
+    indice: Qu'est-ce qui change, la masse ou le volume ?
+    etapes:
+      - type: piege
+        titre: L'erreur
+        texte: La masse se conserve. La glace pèse toujours 1,0 kg.
+      - type: conc
+        titre: La vraie raison
+        texte: <mark>La glace prend plus de place que l'eau liquide, environ 1,1 L</mark>. La bouteille pleine n'a pas assez de volume, elle éclate.
+
+  - titre: Le nuage de la bouilloire
+    difficulte: 3
+    type: brevet
+    enonce: |
+      Quand l'eau bout dans une bouilloire, on voit un petit nuage blanc à quelques centimètres du bec, mais rien juste à la sortie du bec.
+      Expliquer ces deux observations.
+    indice: La vapeur est invisible.
+    etapes:
+      - type: calcul
+        titre: Juste au bec
+        texte: À la sortie, il y a de la vapeur d'eau, un gaz invisible. On ne voit rien.
+      - type: calcul
+        titre: Un peu plus loin
+        texte: La vapeur rencontre l'air plus froid et se liquéfie en minuscules gouttelettes.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>Le nuage blanc est de l'eau liquide, pas de la vapeur</mark>.

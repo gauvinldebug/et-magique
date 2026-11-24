@@ -1,0 +1,30 @@
+questions:
+  - question: L'eau sucrée est…
+    choix: ['un corps pur', 'un mélange homogène', 'un mélange hétérogène', 'un solide']
+    bonne: 1
+    explication: On ne distingue pas le sucre dissous.
+    revoir: cours
+
+  - question: Pour séparer le sable de l'eau, on utilise…
+    choix: ['la filtration', 'la dissolution', 'la fusion', 'le mélange']
+    bonne: 0
+    explication: Le papier filtre retient le sable.
+    revoir: cours
+
+  - question: Dans l'eau sucrée, le sucre est…
+    choix: ['le solvant', 'le soluté', 'le filtrat', 'un corps pur']
+    bonne: 1
+    explication: C'est lui qui se dissout.
+    revoir: cours
+
+  - question: Une solution est saturée quand…
+    choix: ['elle est très froide', 'le soluté ne se dissout plus', "elle est limpide", "elle n'a pas de solvant"]
+    bonne: 1
+    explication: Il reste du solide au fond.
+    revoir: cours
+
+  - question: L'eau et l'huile sont…
+    choix: ['miscibles', 'non miscibles', 'un corps pur', 'une solution']
+    bonne: 1
+    explication: Elles forment deux couches.
+    revoir: cours

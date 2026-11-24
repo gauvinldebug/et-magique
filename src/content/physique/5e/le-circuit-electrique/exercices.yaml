@@ -1,0 +1,64 @@
+exercices:
+  - titre: Conducteur ou isolant ?
+    difficulte: 1
+    type: application
+    enonce: |
+      Classer : une règle en plastique, une clé en fer, une mine de crayon, un verre, une pièce de monnaie, une gomme.
+    indice: Les métaux et le graphite conduisent.
+    etapes:
+      - type: calcul
+        titre: Conducteurs
+        texte: La clé en fer, la mine de crayon (graphite), la pièce de monnaie (métal).
+      - type: conc
+        titre: Isolants
+        texte: <mark>La règle en plastique, le verre, la gomme</mark>.
+
+  - titre: La lampe qui ne s'allume pas
+    difficulte: 2
+    type: methode
+    enonce: |
+      Un élève réalise un circuit avec une pile, un interrupteur fermé et une lampe, mais la lampe ne s'allume pas. Proposer trois causes possibles.
+    indice: Qu'est-ce qui peut ouvrir la boucle ?
+    etapes:
+      - type: calcul
+        titre: Des causes
+        texte: Un fil mal branché ou cassé, une lampe grillée ou mal vissée, une pile usée.
+      - type: conc
+        titre: La méthode
+        texte: <mark>Tester chaque élément un par un</mark>, en le remplaçant par un élément qui fonctionne.
+
+  - titre: Le fil de trop
+    difficulte: 2
+    type: piege
+    enonce: |
+      Dans un circuit en série avec deux lampes, on relie les deux bornes de la première lampe par un fil. Un élève pense que les deux lampes vont s'éteindre « car le circuit est coupé ». Que se passe-t-il vraiment ?
+    indice: Le courant prend le chemin le plus facile.
+    etapes:
+      - type: piege
+        titre: L'erreur
+        texte: Le circuit n'est pas coupé. Le fil offre un chemin plus facile au courant, qui contourne la première lampe.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>La première lampe est en court-circuit et s'éteint, la seconde brille plus fort</mark>.
+
+  - titre: Les lampes de la maison
+    difficulte: 3
+    type: brevet
+    enonce: |
+      Dans une maison, quand une ampoule du salon grille, celles de la cuisine restent allumées.
+      1. Les lampes sont-elles montées en série ou en dérivation ?
+      2. Pourquoi ce montage est-il plus pratique ?
+      3. Pourquoi ne faut-il jamais changer une ampoule le courant branché ?
+    indice: En série, une lampe grillée éteint tout.
+    etapes:
+      - type: calcul
+        titre: Le montage
+        texte: >-
+          Les autres lampes continuent de fonctionner : elles sont en dérivation.
+      - type: calcul
+        titre: L'intérêt
+        texte: Chaque appareil fonctionne indépendamment, on peut en allumer un seul ou en changer un sans éteindre les autres.
+      - type: conc
+        titre: La sécurité
+        texte: >-
+          <mark>Le secteur (230 V) est dangereux</mark> : le corps humain conduit le courant, on risque l'électrocution.

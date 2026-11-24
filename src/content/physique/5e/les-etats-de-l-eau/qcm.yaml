@@ -1,0 +1,30 @@
+questions:
+  - question: Le passage de l'état solide à l'état liquide s'appelle…
+    choix: ['la solidification', 'la fusion', 'la vaporisation', 'la liquéfaction']
+    bonne: 1
+    explication: La glace fond.
+    revoir: cours
+
+  - question: Pendant l'ébullition de l'eau pure, la température…
+    choix: ['augmente', 'reste à 100 °C', 'diminue', 'reste à 0 °C']
+    bonne: 1
+    explication: C'est un palier.
+    revoir: cours
+
+  - question: La vapeur d'eau est…
+    choix: ['blanche', 'invisible', 'bleue', 'grise']
+    bonne: 1
+    explication: Le nuage blanc, ce sont des gouttelettes liquides.
+    revoir: cours
+
+  - question: 200 g de glace fondent. On obtient…
+    choix: ["moins de 200 g d'eau", "200 g d'eau", "plus de 200 g d'eau", "200 mL de vapeur"]
+    bonne: 1
+    explication: La masse se conserve.
+    revoir: exercices
+
+  - question: Un liquide a…
+    choix: ['une forme propre', 'un volume propre mais pas de forme propre', 'ni forme ni volume propres', 'une forme et un volume propres']
+    bonne: 1
+    explication: Il prend la forme du récipient.
+    revoir: cours

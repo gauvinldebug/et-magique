@@ -1,0 +1,63 @@
+exercices:
+  - titre: La vitesse d'un sprinteur
+    difficulte: 1
+    type: application
+    enonce: |
+      Un sprinteur court 100 m en 10 s. Calculer sa vitesse moyenne en m/s, puis en km/h.
+    indice: $v = d/t$, puis multiplier par 3,6.
+    etapes:
+      - type: calcul
+        titre: En m/s
+        texte: $v = 100/10 = 10\ \mathrm{m/s}$.
+      - type: conc
+        titre: En km/h
+        texte: <mark>$v = 10 \times 3{,}6 = 36\ \mathrm{km/h}$</mark>.
+
+  - titre: Le trajet en voiture
+    difficulte: 2
+    type: methode
+    enonce: |
+      Une famille parcourt 180 km en 2 h 30 min. Calculer la vitesse moyenne.
+    indice: 30 min = 0,5 h.
+    etapes:
+      - type: calcul
+        titre: La durée
+        texte: $t = 2 + 0{,}5 = 2{,}5\ \mathrm{h}$.
+      - type: conc
+        titre: La vitesse
+        texte: <mark>$v = 180/2{,}5 = 72\ \mathrm{km/h}$</mark>.
+
+  - titre: Immobile ou pas ?
+    difficulte: 1
+    type: piege
+    enonce: |
+      Assis dans un bus qui roule, Tom dit : « je ne bouge pas ». Sa sœur, sur le trottoir, dit : « Tom bouge ». Qui a raison ?
+    indice: Par rapport à quoi ?
+    etapes:
+      - type: piege
+        titre: Le piège
+        texte: >-
+          Les deux phrases sont incomplètes : elles ne précisent pas le point de vue.
+      - type: conc
+        titre: Conclusion
+        texte: >-
+          <mark>Les deux ont raison</mark> : Tom est immobile par rapport au bus, et en mouvement par rapport au trottoir.
+
+  - titre: Combien de temps pour aller au collège ?
+    difficulte: 3
+    type: brevet
+    enonce: |
+      Inès habite à 2,4 km du collège. Elle hésite entre marcher (5 km/h) et prendre le vélo (15 km/h). Les cours commencent à 8 h 00.
+      1. Calculer la durée du trajet dans chaque cas, en minutes.
+      2. À quelle heure doit-elle partir au plus tard à pied ? À vélo ?
+    indice: $t = d/v$, en heures, puis × 60.
+    etapes:
+      - type: calcul
+        titre: À pied
+        texte: $t = 2{,}4/5 = 0{,}48\ \mathrm{h}$, soit $0{,}48 \times 60 \approx 29\ \mathrm{min}$.
+      - type: calcul
+        titre: À vélo
+        texte: $t = 2{,}4/15 = 0{,}16\ \mathrm{h}$, soit $0{,}16 \times 60 \approx 10\ \mathrm{min}$.
+      - type: conc
+        titre: L'heure de départ
+        texte: <mark>À pied, au plus tard vers 7 h 31 ; à vélo, vers 7 h 50</mark>.

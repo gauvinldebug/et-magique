@@ -1,0 +1,30 @@
+questions:
+  - question: La trajectoire d'une nacelle de grande roue est…
+    choix: ['rectiligne', 'circulaire', 'curviligne quelconque', 'immobile']
+    bonne: 1
+    explication: Elle décrit un cercle.
+    revoir: cours
+
+  - question: Sur une chronophotographie, des écarts qui augmentent indiquent un mouvement…
+    choix: ['uniforme', 'accéléré', 'ralenti', 'circulaire']
+    bonne: 1
+    explication: L'objet parcourt de plus en plus de distance pendant la même durée.
+    revoir: cours
+
+  - question: Un cycliste parcourt 30 km en 2 h. Sa vitesse moyenne est…
+    choix: ['60 km/h', '15 km/h', '32 km/h', '0,07 km/h']
+    bonne: 1
+    explication: $30/2$.
+    revoir: exercices
+
+  - question: 18 km/h correspondent à…
+    choix: ['5 m/s', '64,8 m/s', '18 000 m/s', '1,8 m/s']
+    bonne: 0
+    explication: $18/3{,}6 = 5$.
+    revoir: cours
+
+  - question: 1 h 15 min correspond à…
+    choix: ['1,15 h', '1,25 h', '1,5 h', '115 min']
+    bonne: 1
+    explication: 15 min = un quart d'heure = 0,25 h.
+    revoir: cours

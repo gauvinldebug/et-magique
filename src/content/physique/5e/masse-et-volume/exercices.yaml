@@ -1,0 +1,65 @@
+exercices:
+  - titre: Convertir des volumes
+    difficulte: 1
+    type: application
+    enonce: |
+      Convertir : 2,5 L en mL ; 350 mL en L ; 40 cm³ en mL.
+    indice: 1 L = 1000 mL et 1 mL = 1 cm³.
+    etapes:
+      - type: calcul
+        titre: Les deux premiers
+        texte: $2{,}5\ \mathrm{L} = 2500\ \mathrm{mL}$. $350\ \mathrm{mL} = 0{,}350\ \mathrm{L}$.
+      - type: conc
+        titre: Le dernier
+        texte: <mark>$40\ \mathrm{cm^3} = 40\ \mathrm{mL}$</mark>.
+
+  - titre: Le volume d'un caillou
+    difficulte: 2
+    type: methode
+    enonce: |
+      Une éprouvette contient 60 mL d'eau. On y plonge un caillou : le niveau monte à 85 mL. Le caillou pèse 65 g.
+      1. Calculer le volume du caillou.
+      2. Calculer sa masse volumique.
+    indice: Le volume est la différence.
+    etapes:
+      - type: calcul
+        titre: Le volume
+        texte: $V = 85 - 60 = 25\ \mathrm{mL} = 25\ \mathrm{cm^3}$.
+      - type: conc
+        titre: La masse volumique
+        texte: >-
+          <mark>$\rho = 65/25 = 2{,}6\ \mathrm{g/cm^3}$</mark>, plus que l'eau : le caillou coule.
+
+  - titre: Plumes ou plomb
+    difficulte: 1
+    type: piege
+    enonce: |
+      Un élève affirme qu'un kilogramme de plomb est plus lourd qu'un kilogramme de plumes. Corriger.
+    indice: Que veut dire « un kilogramme » ?
+    etapes:
+      - type: piege
+        titre: L'erreur
+        texte: Les deux ont la même masse, 1 kg. Ce qui change, c'est le volume.
+      - type: conc
+        titre: Conclusion
+        texte: >-
+          <mark>Même masse, mais le plomb occupe un volume beaucoup plus petit</mark> : sa masse volumique est bien plus grande.
+
+  - titre: Va-t-il flotter ?
+    difficulte: 3
+    type: brevet
+    enonce: |
+      Un cube de bois a une masse de 450 g et un volume de 500 cm³. Un cube de même taille, en aluminium, a une masse de 1350 g.
+      1. Calculer la masse volumique de chaque cube.
+      2. Lequel flotte sur l'eau ? Justifier.
+    indice: Comparer à 1 g/cm³.
+    etapes:
+      - type: calcul
+        titre: Le bois
+        texte: $\rho = 450/500 = 0{,}90\ \mathrm{g/cm^3}$.
+      - type: calcul
+        titre: L'aluminium
+        texte: $\rho = 1350/500 = 2{,}7\ \mathrm{g/cm^3}$.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>Le bois flotte (0,90 < 1), l'aluminium coule (2,7 > 1)</mark>.
