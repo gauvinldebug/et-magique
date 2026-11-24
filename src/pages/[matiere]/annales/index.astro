@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import Base from '../../../layouts/Base.astro';
+import Bandeau from '../../../components/Bandeau.astro';
 import { cheminsMatieresBac } from '../../../lib/matieres-paths';
 import { sujetsBac, chapitresAnnales, THEMES, SOURCE_ANNALES } from '../../../lib/annales';
 export const getStaticPaths = cheminsMatieresBac;
@@ -12,10 +13,10 @@ const chapitres = chapitresAnnales();
 <Base titre="Annales du bac de maths : sujets et corrigés" description="Tous les sujets du bac de spécialité maths depuis 2021, avec corrigés, classés par année et par chapitre." matiere={matiere.slug} actif="annales">
   <div class="page-feuille cahier">
     <div class="feuille">
-      <div>
+      <Bandeau teinte="violet">
         <h1>Annales du bac</h1>
-        <p style="color:var(--encre-2)">Tous les sujets de spécialité maths depuis 2021, avec leur corrigé. Choisis un chapitre pour ne voir que les sujets qui en parlent.</p>
-      </div>
+        <p>Tous les sujets de spécialité maths depuis 2021, avec leur corrigé. Choisis un chapitre pour ne voir que les sujets qui en parlent.</p>
+      </Bandeau>
 
       <div class="filtres" role="group" aria-label="Filtrer par chapitre" data-filtres>
         <button type="button" aria-pressed="true" data-ch="">Tous</button>
@@ -62,8 +63,7 @@ const chapitres = chapitresAnnales();
 
 <style>
   .filtres { display: flex; flex-wrap: wrap; gap: 8px; }
-  .filtres button { min-height: 32px; padding: 0 12px; border-radius: 999px; border: 1px solid var(--trait); background: var(--carte); font-size: .86rem; font-weight: 600; cursor: pointer; }
-  .filtres button[aria-pressed="true"] { background: var(--terme); border-color: var(--terme); color: #fff; }
+  .filtres button { font-size: .86rem; cursor: pointer; }
   .annee { display: grid; gap: 20px; }
   .sujets { list-style: none; margin: 0; padding: 0; display: grid; }
   .sujets li { display: flex; flex-wrap: wrap; gap: 10px 16px; align-items: center; justify-content: space-between; padding: 10px 0 9px; border-bottom: 1px dashed var(--trait); }

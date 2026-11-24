@@ -17,7 +17,7 @@ export const AFFICHES: Record<string, { fond: string; txt: string; forme: string
 // Une couleur d'affiche par niveau (la même que sur les tuiles du sommaire), avec les quatre formes
 // du bandeau choisies pour bien se détacher du fond : disque, triangle, carré, courbe.
 type Teinte = { fond: string; txt: string; f1: string; f2: string; f3: string; f4: string };
-const T = {
+export const TEINTES = {
   bleu:   { fond: '#2B2BD9', txt: '#fff',    f1: '#F2E94E', f2: '#FF7AA8', f3: '#1A1A40', f4: '#fff' },
   jaune:  { fond: '#F2E94E', txt: '#1A1A40', f1: '#2B2BD9', f2: '#FF7AA8', f3: '#1A1A40', f4: '#1A1A40' },
   rose:   { fond: '#FF7AA8', txt: '#1A1A40', f1: '#2B2BD9', f2: '#F2E94E', f3: '#1A1A40', f4: '#fff' },
@@ -27,6 +27,7 @@ const T = {
   encre:  { fond: '#1A1A40', txt: '#fff',    f1: '#F2E94E', f2: '#FF7AA8', f3: '#2B2BD9', f4: '#fff' },
   brique: { fond: '#B8442A', txt: '#fff',    f1: '#F2E94E', f2: '#FF7AA8', f3: '#1A1A40', f4: '#fff' },
 } satisfies Record<string, Teinte>;
+const T = TEINTES;
 const PAR_NIVEAU: Record<string, Teinte> = {
   '6e': T.bleu, '5e': T.jaune, '4e': T.rose, '3e': T.orange, seconde: T.vert, premiere: T.violet, terminale: T.encre,
 };

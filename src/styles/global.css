@@ -324,7 +324,7 @@ mark, .hl { background: linear-gradient(transparent 52%, var(--surligneur) 52%, 
 .typechips { display: flex; flex-wrap: wrap; gap: 8px; }
 .typechips label { height: 32px; padding: 0 12px; border-radius: 0; border: 1px solid var(--trait); background: var(--carte); font-size: .86rem; font-weight: 600; cursor: pointer; display: inline-flex; align-items: center; }
 .typechips input { position: absolute; opacity: 0; pointer-events: none; }
-.typechips input:checked + span { color: #fff; }
+.typechips input:checked + span { color: inherit; }
 .typechips label:has(input:checked) { background: var(--terme); border-color: var(--terme); color: #fff; }
 .typechips label:has(input:focus-visible) { outline: 3px solid var(--terme); outline-offset: 2px; }
 .check { display: grid !important; grid-template-columns: 20px 1fr; gap: 10px; align-items: start; font-weight: 400 !important; }
@@ -938,3 +938,11 @@ a.poster:hover { color: var(--txt); transform: translate(-4px, -4px); box-shadow
   .bandeau.petit .bandeau-formes { height: 110px; }
 }
 @media print { .bandeau { display: none !important; } }
+
+/* Choix et filtres en pastilles d'affiche (demandes, planning, annales) */
+.typechips label, .filtres button { height: 36px; min-height: 36px; padding: 0 16px; border-radius: 999px; border: 2px solid var(--encre); background: transparent; color: var(--encre); font-weight: 700; transition: background-color .15s var(--ease); }
+.typechips label:hover, .filtres button:hover { background: var(--gris); }
+.typechips label:has(input:checked), .filtres button[aria-pressed="true"] { background: var(--ink); border-color: var(--ink); color: #fff; }
+.typechips label:has(input:focus-visible) { outline: 3px solid var(--bleu); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .typechips label:has(input:checked), :root:not([data-theme="light"]) .filtres button[aria-pressed="true"] { background: var(--jaune); border-color: var(--jaune); color: var(--ink); } }
+:root[data-theme="dark"] .typechips label:has(input:checked), :root[data-theme="dark"] .filtres button[aria-pressed="true"] { background: var(--jaune); border-color: var(--jaune); color: var(--ink); }

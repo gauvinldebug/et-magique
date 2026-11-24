@@ -1,10 +1,10 @@
 ---
 import Base from '../layouts/Base.astro';
+import Bandeau from '../components/Bandeau.astro';
 ---
 <Base titre="Page introuvable" indexer={false}>
   <div class="page-feuille cahier"><div class="feuille">
-    <h1>Cette page s'est <mark>effacée</mark>.</h1>
-    <p>Le lien est peut-être ancien, ou le chapitre n'existe pas encore.</p>
+    <Bandeau teinte="rose"><h1>Cette page s'est effacée.</h1><p>Le lien est peut-être ancien, ou le chapitre n'existe pas encore.</p></Bandeau>
     <div style="display:flex;gap:10px;flex-wrap:wrap"><a class="btn" href="/maths/">Retour à l'accueil</a><a class="btn ghost" href="/demandes/">Demander ce chapitre</a></div>
   </div></div>
 </Base>

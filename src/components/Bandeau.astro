@@ -1,11 +1,13 @@
 ---
 // Bandeau en affiche en tête des pages niveau et chapitre : l'aplat a la couleur du niveau
 // (la même que sa tuile dans le sommaire) et quatre formes qui bougent un peu au défilement.
-import { teinteNiveau, styleTeinte } from '../data/affiches';
-interface Props { niveau: string; petit?: boolean }
-const { niveau, petit = false } = Astro.props;
+// Les autres pages (à propos, demandes, annales…) choisissent leur teinte.
+import { teinteNiveau, styleTeinte, TEINTES } from '../data/affiches';
+interface Props { niveau?: string; teinte?: keyof typeof TEINTES; petit?: boolean }
+const { niveau = '', teinte, petit = false } = Astro.props;
+const couleurs = teinte ? TEINTES[teinte] : teinteNiveau(niveau);
 ---
-<header class:list={['bandeau', 'no-print', { petit }]} style={styleTeinte(teinteNiveau(niveau))} data-scroll>
+<header class:list={['bandeau', 'no-print', { petit }]} style={styleTeinte(couleurs)} data-scroll>
   <svg class="bandeau-formes" viewBox="0 0 600 400" preserveAspectRatio="xMaxYMid slice" aria-hidden="true">
     <circle class="f-rond" cx="430" cy="150" r="150" style="fill:var(--f1)" />
     <polygon class="f-tri" points="250,400 360,210 470,400" style="fill:var(--f2)" />
