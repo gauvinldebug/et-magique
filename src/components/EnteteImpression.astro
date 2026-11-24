@@ -1,8 +1,9 @@
 ---
 // L'en-tête « affiche » des PDF et de l'impression : un aplat à la couleur du niveau, quelques formes,
 // le titre en grand. Invisible à l'écran (voir src/styles/impression.css).
-interface Props { niveau: string; niveauNom: string; type: string; titre: string; adresse: string; compact?: boolean }
-const { niveau, niveauNom, type, titre, adresse, compact = false } = Astro.props;
+import { marque } from '../data/site';
+interface Props { niveau: string; niveauNom: string; type: string; titre: string; adresse: string; compact?: boolean; matiere?: string }
+const { niveau, niveauNom, type, titre, adresse, compact = false, matiere = 'maths' } = Astro.props;
 // Trois compositions, choisies d'après l'adresse : deux chapitres voisins n'ont pas la même affiche.
 const n = [...adresse].reduce((s, c) => s + c.charCodeAt(0), 0) % 3;
 ---
@@ -28,5 +29,5 @@ const n = [...adresse].reduce((s, c) => s + c.charCodeAt(0), 0) % 3;
     <p class="type"><span>{niveauNom}</span><span>{type}</span></p>
     <h1>{titre}</h1>
   </div>
-  <p class="marque"><b>Maths et Magique</b> · etmagique.fr</p>
+  <p class="marque"><b>{marque(matiere)}</b> · etmagique.fr</p>
 </header>

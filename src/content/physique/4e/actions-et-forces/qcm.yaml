@@ -1,0 +1,30 @@
+questions:
+  - question: L'action d'un aimant sur un clou est…
+    choix: ['une action de contact', 'une action à distance', 'impossible', 'une action de la Terre']
+    bonne: 1
+    explication: Il l'attire sans le toucher.
+    revoir: cours
+
+  - question: La valeur d'une force se mesure en…
+    choix: ['kilogrammes', 'newtons', 'mètres', 'joules']
+    bonne: 1
+    explication: Avec un dynamomètre.
+    revoir: cours
+
+  - question: Le point d'application du poids est…
+    choix: ["le point de contact avec le sol", "le centre de l'objet", "le haut de l'objet", "la Terre"]
+    bonne: 1
+    explication: C'est une action à distance.
+    revoir: cours
+
+  - question: Avec l'échelle 1 cm pour 10 N, une force de 25 N mesure…
+    choix: ['25 cm', '2,5 cm', '0,4 cm', '10 cm']
+    bonne: 1
+    explication: $25/10$.
+    revoir: exercices
+
+  - question: Dans un diagramme objet-interaction, une action à distance se dessine avec…
+    choix: ['un trait plein', 'des pointillés', 'une flèche rouge', 'rien']
+    bonne: 1
+    explication: Trait plein pour le contact.
+    revoir: cours

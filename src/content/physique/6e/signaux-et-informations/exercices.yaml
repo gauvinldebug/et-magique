@@ -1,0 +1,42 @@
+exercices:
+  - titre: Retrouver les éléments
+    difficulte: 1
+    type: application
+    enonce: |
+      Le sifflet de l'arbitre retentit et les joueurs s'arrêtent. Nommer l'émetteur, le signal, le récepteur et l'information.
+    indice: Qui produit le signal, qui le reçoit ?
+    etapes:
+      - type: calcul
+        titre: Émetteur et signal
+        texte: L'émetteur est le sifflet. Le signal est sonore.
+      - type: conc
+        titre: Récepteur et information
+        texte: <mark>Les récepteurs sont les oreilles des joueurs, l'information est « arrêtez de jouer »</mark>.
+
+  - titre: L'orage
+    difficulte: 2
+    type: methode
+    enonce: |
+      Tu vois un éclair, puis tu entends le tonnerre 6 secondes plus tard. À quelle distance est l'orage environ ?
+    indice: Environ 3 secondes pour 1 km.
+    etapes:
+      - type: calcul
+        titre: Le calcul
+        texte: $6 \div 3 = 2$.
+      - type: conc
+        titre: Résultat
+        texte: <mark>Environ 2 km</mark>. On voit l'éclair presque tout de suite, car la lumière va bien plus vite que le son.
+
+  - titre: Le signal sans code
+    difficulte: 2
+    type: piege
+    enonce: |
+      Un enfant qui ne connaît pas le morse entend « bip bip bip, biiip biiip biiip, bip bip bip ». Reçoit-il l'information ?
+    indice: Que faut-il pour comprendre un signal ?
+    etapes:
+      - type: piege
+        titre: Le piège
+        texte: Il reçoit bien le signal sonore, avec ses oreilles.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>Mais il ne comprend pas l'information, SOS</mark>, car il ne connaît pas le code morse.

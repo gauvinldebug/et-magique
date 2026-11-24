@@ -1,0 +1,30 @@
+questions:
+  - question: Une pression de 2,0 bar correspond à…
+    choix: ['$2{,}0 \times 10^{3}\ \mathrm{Pa}$', '$2{,}0 \times 10^{5}\ \mathrm{Pa}$', '$2{,}0\ \mathrm{Pa}$', '$2{,}0 \times 10^{2}\ \mathrm{Pa}$']
+    bonne: 1
+    explication: $1\ \mathrm{bar} = 10^{5}\ \mathrm{Pa}$.
+    revoir: cours
+
+  - question: À température constante, on divise par 4 le volume d'un gaz. Sa pression est…
+    choix: ['divisée par 4', 'multipliée par 4', 'inchangée', 'multipliée par 16']
+    bonne: 1
+    explication: Loi de Mariotte, $PV$ constant.
+    revoir: cours
+
+  - question: Sous l'eau, la pression augmente d'environ 1 bar tous les…
+    choix: ['1 m', '10 m', '100 m', '0,1 m']
+    bonne: 1
+    explication: $\rho g h = 10^{3} \times 9{,}8 \times 10 \approx 10^{5}\ \mathrm{Pa}$.
+    revoir: cours
+
+  - question: À l'échelle microscopique, la pression d'un gaz est due…
+    choix: ['au poids des molécules', 'aux chocs des molécules sur les parois', "à la couleur du gaz", 'aux liaisons entre molécules']
+    bonne: 1
+    explication: Effet moyen des chocs.
+    revoir: cours
+
+  - question: Deux points à la même profondeur dans une piscine ont…
+    choix: ['des pressions différentes', 'la même pression', 'une pression nulle', 'une pression qui dépend de la forme du bassin']
+    bonne: 1
+    explication: La pression ne dépend que de la profondeur.
+    revoir: exercices

@@ -1,0 +1,79 @@
+exercices:
+  - titre: Calculer un niveau sonore
+    difficulte: 1
+    type: application
+    enonce: |
+      Une rue animée produit une intensité sonore $I = 1{,}0 \times 10^{-5}\ \mathrm{W \cdot m^{-2}}$. Calculer le niveau d'intensité sonore.
+    indice: $L = 10\log(I/I_0)$.
+    etapes:
+      - type: conc
+        titre: Le calcul
+        texte: <mark>$L = 10\log\left(\dfrac{10^{-5}}{10^{-12}}\right) = 10 \times 7 = 70$ dB</mark>.
+
+  - titre: Deux machines
+    difficulte: 2
+    type: piege
+    enonce: |
+      Une machine produit 80 dB à 1 m. On en allume une seconde, identique, au même endroit. Un élève annonce 160 dB. Corriger.
+    indice: On additionne les intensités, pas les niveaux.
+    etapes:
+      - type: piege
+        titre: L'erreur
+        texte: L'échelle des décibels est logarithmique, les niveaux ne s'additionnent pas.
+      - type: calcul
+        titre: Les intensités
+        texte: $I_1 = I_0 \times 10^{8} = 1{,}0 \times 10^{-4}\ \mathrm{W \cdot m^{-2}}$, et $I_{\text{tot}} = 2 I_1$.
+      - type: conc
+        titre: Le niveau total
+        texte: <mark>$L = 10\log(2 \times 10^{8}) = 80 + 10\log 2 \approx 83$ dB</mark>.
+
+  - titre: Diffraction par une fente
+    difficulte: 2
+    type: methode
+    enonce: |
+      Un laser de longueur d'onde $\lambda = 650$ nm éclaire une fente de largeur $a = 0{,}10$ mm. L'écran est à $D = 2{,}0$ m.
+      Calculer l'écart angulaire et la largeur de la tache centrale.
+    indice: $\theta = \lambda/a$ en radians, puis $\ell = 2D\theta$.
+    etapes:
+      - type: calcul
+        titre: L'écart angulaire
+        texte: $\theta = \dfrac{650 \times 10^{-9}}{0{,}10 \times 10^{-3}} = 6{,}5 \times 10^{-3}$ rad.
+      - type: conc
+        titre: La tache centrale
+        texte: <mark>$\ell = 2 \times 2{,}0 \times 6{,}5 \times 10^{-3} = 2{,}6 \times 10^{-2}$ m, soit 2,6 cm</mark>.
+
+  - titre: Fentes d'Young
+    difficulte: 2
+    type: application
+    enonce: |
+      Deux fentes séparées de $b = 0{,}50$ mm sont éclairées par un laser. Sur un écran à $D = 1{,}5$ m, on mesure 10 interfranges sur 1,9 cm. Calculer $\lambda$.
+    indice: Mesurer plusieurs interfranges améliore la précision. $i = \lambda D / b$.
+    etapes:
+      - type: calcul
+        titre: L'interfrange
+        texte: $i = 1{,}9 / 10 = 0{,}19$ cm $= 1{,}9 \times 10^{-3}$ m.
+      - type: conc
+        titre: La longueur d'onde
+        texte: <mark>$\lambda = \dfrac{i\,b}{D} = \dfrac{1{,}9 \times 10^{-3} \times 0{,}50 \times 10^{-3}}{1{,}5} \approx 6{,}3 \times 10^{-7}$ m, soit 633 nm</mark> (laser hélium-néon).
+
+  - titre: La sirène et le radar
+    difficulte: 3
+    type: bac
+    enonce: |
+      Une ambulance émet un son de fréquence $f_E = 680$ Hz. Elle roule en ligne droite à $v = 72\ \mathrm{km \cdot h^{-1}}$. Célérité du son $c = 340\ \mathrm{m \cdot s^{-1}}$.
+      1. Calculer la fréquence perçue par un piéton quand elle s'approche, puis quand elle s'éloigne.
+      2. Le piéton mesure en réalité 720 Hz à l'approche. Quelle est la vitesse réelle de l'ambulance ?
+    indice: $v = 20\ \mathrm{m \cdot s^{-1}}$. Pour la question 2, isole $v$ dans $f_R = f_E / (1 - v/c)$.
+    etapes:
+      - type: calcul
+        titre: À l'approche
+        texte: $f_R = \dfrac{680}{1 - 20/340} = \dfrac{680}{0{,}941} \approx 723$ Hz, plus aigu.
+      - type: calcul
+        titre: À l'éloignement
+        texte: $f_R = \dfrac{680}{1 + 20/340} = \dfrac{680}{1{,}059} \approx 642$ Hz, plus grave.
+      - type: calcul
+        titre: La vitesse réelle
+        texte: $1 - \dfrac{v}{c} = \dfrac{f_E}{f_R}$, donc $v = c\left(1 - \dfrac{f_E}{f_R}\right) = 340 \times \left(1 - \dfrac{680}{720}\right)$.
+      - type: conc
+        titre: Résultat
+        texte: <mark>$v \approx 19\ \mathrm{m \cdot s^{-1}}$, soit environ $68\ \mathrm{km \cdot h^{-1}}$</mark>.

@@ -1,0 +1,30 @@
+questions:
+  - question: Un liquide…
+    choix: ['a sa propre forme', 'prend la forme du récipient', "occupe tout l'espace", 'ne coule pas']
+    bonne: 1
+    explication: Sa surface est plane et horizontale.
+    revoir: cours
+
+  - question: L'air…
+    choix: ["n'a pas de masse", 'a une masse', "n'est pas de la matière", 'est un liquide']
+    bonne: 1
+    explication: Un litre d'air pèse environ 1,2 g.
+    revoir: cours
+
+  - question: L'eau bout à…
+    choix: ['0 °C', '50 °C', '100 °C', '1000 °C']
+    bonne: 2
+    explication: C'est l'ébullition.
+    revoir: cours
+
+  - question: Quand la glace fond, on parle de…
+    choix: ['solidification', 'fusion', 'vaporisation', 'dissolution']
+    bonne: 1
+    explication: Solide vers liquide.
+    revoir: cours
+
+  - question: 50 g de glace fondent. On obtient…
+    choix: ["moins de 50 g d'eau", "50 g d'eau", "plus de 50 g d'eau", "rien"]
+    bonne: 1
+    explication: La masse se conserve.
+    revoir: exercices

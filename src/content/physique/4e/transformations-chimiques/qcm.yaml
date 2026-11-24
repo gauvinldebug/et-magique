@@ -1,0 +1,30 @@
+questions:
+  - question: Au cours d'une transformation chimique, les réactifs…
+    choix: ['apparaissent', 'disparaissent, au moins en partie', 'restent inchangés', "changent seulement d'état"]
+    bonne: 1
+    explication: Ils sont consommés, des produits apparaissent.
+    revoir: cours
+
+  - question: Le dioxyde de carbone se reconnaît car il…
+    choix: ['rallume une allumette', "trouble l'eau de chaux", 'fait une détonation', 'bleuit le sulfate de cuivre']
+    bonne: 1
+    explication: Test de l'eau de chaux.
+    revoir: cours
+
+  - question: Pour ajuster une équation, on modifie…
+    choix: ['les indices des formules', 'les nombres devant les formules', 'les symboles', 'la flèche']
+    bonne: 1
+    explication: Changer un indice changerait la molécule.
+    revoir: cours
+
+  - question: 3 g de carbone réagissent avec 8 g de dioxygène. La masse de dioxyde de carbone formé est…
+    choix: ['5 g', '11 g', '24 g', '8 g']
+    bonne: 1
+    explication: Conservation de la masse, $3 + 8$.
+    revoir: exercices
+
+  - question: La fusion de la glace est…
+    choix: ['une transformation chimique', 'une transformation physique', 'une combustion', 'une réaction avec le dioxygène']
+    bonne: 1
+    explication: Les molécules d'eau restent les mêmes.
+    revoir: cours

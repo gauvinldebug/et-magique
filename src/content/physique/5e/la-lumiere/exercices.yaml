@@ -1,0 +1,63 @@
+exercices:
+  - titre: Pourquoi voit-on la Lune ?
+    difficulte: 1
+    type: application
+    enonce: |
+      Expliquer comment la lumière arrive jusqu'à ton œil quand tu regardes la Lune.
+    indice: La Lune produit-elle de la lumière ?
+    etapes:
+      - type: methode
+        titre: Le trajet
+        texte: Le Soleil éclaire la Lune. La Lune diffuse une partie de cette lumière dans toutes les directions.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>Une partie de la lumière diffusée par la Lune entre dans ton œil</mark>.
+
+  - titre: La taille d'une ombre
+    difficulte: 2
+    type: methode
+    enonce: |
+      Une lampe éclaire une balle placée devant un mur. On rapproche la balle de la lampe. L'ombre portée sur le mur devient-elle plus grande ou plus petite ? Justifier avec des rayons.
+    indice: Tracer les rayons qui frôlent la balle.
+    etapes:
+      - type: methode
+        titre: Les rayons
+        texte: Les rayons qui partent de la lampe et frôlent les bords de la balle délimitent l'ombre.
+      - type: conc
+        titre: Conclusion
+        texte: >-
+          <mark>Plus la balle est proche de la lampe, plus les rayons s'écartent : l'ombre est plus grande</mark>.
+
+  - titre: Les phases de la Lune
+    difficulte: 2
+    type: piege
+    enonce: |
+      Un élève explique : « la Lune est en croissant parce que l'ombre de la Terre la cache en partie ». Corriger.
+    indice: Quand l'ombre de la Terre tombe-t-elle sur la Lune ?
+    etapes:
+      - type: piege
+        titre: L'erreur
+        texte: L'ombre de la Terre ne tombe sur la Lune que pendant une éclipse de Lune, quelques fois par an.
+      - type: conc
+        titre: La vraie raison
+        texte: <mark>Le Soleil éclaire toujours une moitié de la Lune</mark>. Selon sa position autour de la Terre, nous voyons une part plus ou moins grande de cette moitié éclairée.
+
+  - titre: L'éclipse de Soleil
+    difficulte: 3
+    type: brevet
+    enonce: |
+      Lors d'une éclipse de Soleil, le ciel s'assombrit en plein jour dans une petite région de la Terre.
+      1. Dans quel ordre sont alignés le Soleil, la Terre et la Lune ?
+      2. Pourquoi l'éclipse n'est-elle visible que dans une petite région ?
+      3. Quelle précaution faut-il prendre pour l'observer ?
+    indice: Quel astre fait de l'ombre à quel autre ?
+    etapes:
+      - type: calcul
+        titre: L'alignement
+        texte: Soleil, Lune, Terre. La Lune est entre les deux.
+      - type: calcul
+        titre: La petite région
+        texte: La Lune est bien plus petite que la Terre. Son ombre portée ne couvre qu'une petite zone de la surface terrestre.
+      - type: conc
+        titre: La précaution
+        texte: <mark>Ne jamais regarder le Soleil à l'œil nu, utiliser des lunettes spéciales d'éclipse</mark>.

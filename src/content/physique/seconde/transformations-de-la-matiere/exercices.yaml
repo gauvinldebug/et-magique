@@ -1,0 +1,71 @@
+exercices:
+  - titre: Faire fondre des glaçons
+    difficulte: 1
+    type: application
+    enonce: |
+      Quelle énergie faut-il fournir pour faire fondre 200 g de glace à 0 °C ? ($L_f = 3{,}34 \times 10^{5}\ \mathrm{J \cdot kg^{-1}}$)
+    indice: Masse en kilogrammes.
+    etapes:
+      - type: calcul
+        titre: Le calcul
+        texte: $Q = 0{,}200 \times 3{,}34 \times 10^{5}$.
+      - type: conc
+        titre: Résultat
+        texte: <mark>$Q \approx 6{,}7 \times 10^{4}\ \mathrm{J}$</mark>, prélevés à la boisson, qui refroidit.
+
+  - titre: Ajuster une équation
+    difficulte: 1
+    type: methode
+    enonce: |
+      Ajuster l'équation : $\dots\,\mathrm{Al} + \dots\,\mathrm{O_2} \longrightarrow \dots\,\mathrm{Al_2O_3}$.
+    indice: >-
+      Commencer par l'oxygène : 2 à gauche, 3 à droite.
+    etapes:
+      - type: calcul
+        titre: L'oxygène
+        texte: >-
+          Le plus petit multiple commun de 2 et 3 est 6 : $3\,\mathrm{O_2}$ et $2\,\mathrm{Al_2O_3}$.
+      - type: calcul
+        titre: L'aluminium
+        texte: À droite, $2 \times 2 = 4$ atomes Al, donc $4\,\mathrm{Al}$.
+      - type: conc
+        titre: Équation
+        texte: <mark>$4\,\mathrm{Al} + 3\,\mathrm{O_2} \longrightarrow 2\,\mathrm{Al_2O_3}$</mark>.
+
+  - titre: Qui est limitant ?
+    difficulte: 2
+    type: piege
+    enonce: |
+      On fait réagir 3,0 mol de dihydrogène avec 1,0 mol de dioxygène : $2\,\mathrm{H_2} + \mathrm{O_2} \longrightarrow 2\,\mathrm{H_2O}$. Un élève affirme que le dioxygène est limitant « parce qu'il y en a moins ». Son raisonnement est-il juste ?
+    indice: Comparer $n/a$.
+    etapes:
+      - type: piege
+        titre: Le raisonnement
+        texte: Comparer les quantités seules ne suffit pas, il faut tenir compte des coefficients. Ici, la conclusion est juste par chance.
+      - type: calcul
+        titre: Le bon test
+        texte: $n(\mathrm{H_2})/2 = 1{,}5$ et $n(\mathrm{O_2})/1 = 1{,}0$. Le plus petit est celui du dioxygène.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>Le dioxygène est limitant</mark> ; il consomme 2,0 mol de dihydrogène, il en reste 1,0 mol en excès. Avec 1,5 mol de $\mathrm{H_2}$ et 1,0 mol de $\mathrm{O_2}$, c'est au contraire $\mathrm{H_2}$ qui serait limitant, alors qu'il y en aurait plus.
+
+  - titre: Compléter une équation nucléaire
+    difficulte: 3
+    type: bac
+    enonce: |
+      1. Le carbone 14 se désintègre en azote 14 : $^{14}_{6}\mathrm{C} \longrightarrow {}^{14}_{7}\mathrm{N} + {}^{A}_{Z}\mathrm{X}$. Identifier X.
+      2. Une fission de l'uranium 235 s'écrit $^{235}_{92}\mathrm{U} + {}^{1}_{0}\mathrm{n} \longrightarrow {}^{94}_{38}\mathrm{Sr} + {}^{140}_{Z}\mathrm{Xe} + x\,{}^{1}_{0}\mathrm{n}$. Trouver $Z$ et $x$.
+    indice: Conserver le haut et le bas séparément.
+    etapes:
+      - type: calcul
+        titre: Le carbone 14
+        texte: $14 = 14 + A$ donc $A = 0$. $6 = 7 + Z$ donc $Z = -1$. X est un électron $^{0}_{-1}\mathrm{e}$.
+      - type: calcul
+        titre: La charge du xénon
+        texte: $92 + 0 = 38 + Z$ donc $Z = 54$.
+      - type: calcul
+        titre: Les neutrons
+        texte: $235 + 1 = 94 + 140 + x$ donc $x = 2$.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>X est un électron, $Z = 54$, et la fission libère 2 neutrons</mark>, qui peuvent provoquer d'autres fissions.

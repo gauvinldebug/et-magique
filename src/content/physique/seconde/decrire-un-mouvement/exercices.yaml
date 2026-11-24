@@ -1,0 +1,71 @@
+exercices:
+  - titre: Qui bouge ?
+    difficulte: 1
+    type: methode
+    enonce: |
+      Dans un bus qui roule, Inès est assise. Son frère marche dans l'allée vers l'arrière du bus, à la même vitesse que le bus avance.
+      Décrire le mouvement du frère dans le référentiel du bus, puis dans celui de la route.
+    indice: Les vitesses s'opposent.
+    etapes:
+      - type: calcul
+        titre: Référentiel du bus
+        texte: Le frère se déplace vers l'arrière, en ligne droite, à vitesse constante. Mouvement rectiligne uniforme.
+      - type: conc
+        titre: Référentiel de la route
+        texte: Il avance vers l'avant avec le bus, et recule autant en marchant. <mark>Pour quelqu'un sur le trottoir, il est immobile</mark>.
+
+  - titre: Calculer une vitesse sur une chronophotographie
+    difficulte: 2
+    type: application
+    enonce: |
+      Une balle roule sur une table. Sur la chronophotographie, l'intervalle entre deux images est $\Delta t = 0{,}10\ \mathrm{s}$. Les distances réelles entre positions successives sont 8,0 cm, 6,0 cm, 4,0 cm, 2,0 cm, les points étant alignés.
+      1. Nommer le mouvement.
+      2. Calculer la vitesse au premier point, en m/s et en km/h.
+    indice: Comment évoluent les écarts ?
+    etapes:
+      - type: methode
+        titre: Le mouvement
+        texte: Points alignés, de plus en plus serrés. Mouvement rectiligne ralenti.
+      - type: calcul
+        titre: La vitesse
+        texte: $v_0 = 0{,}080/0{,}10 = 0{,}80\ \mathrm{m \cdot s^{-1}}$.
+      - type: conc
+        titre: En km/h
+        texte: <mark>$v_0 = 0{,}80 \times 3{,}6 \approx 2{,}9\ \mathrm{km \cdot h^{-1}}$</mark>.
+
+  - titre: La valve du vélo
+    difficulte: 2
+    type: piege
+    enonce: |
+      Un élève affirme : « la trajectoire de la valve d'une roue de vélo est un cercle ». Est-ce toujours vrai ?
+    indice: Quel est le référentiel ?
+    etapes:
+      - type: piege
+        titre: L'oubli
+        texte: L'élève n'a pas précisé le référentiel. La trajectoire dépend du point de vue.
+      - type: calcul
+        titre: Deux référentiels
+        texte: Dans le référentiel du cadre du vélo, la valve tourne autour de l'axe, c'est un cercle. Dans le référentiel de la route, la roue avance en tournant.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>Pour la route, la valve décrit une suite d'arceaux</mark>, une courbe appelée cycloïde.
+
+  - titre: Le satellite géostationnaire
+    difficulte: 3
+    type: bac
+    enonce: |
+      Un satellite géostationnaire reste toujours au-dessus du même point de l'équateur. Il est à environ $42\,000\ \mathrm{km}$ du centre de la Terre.
+      1. Décrire son mouvement dans le référentiel terrestre.
+      2. Décrire son mouvement dans le référentiel géocentrique et calculer sa vitesse (il fait un tour en 24 h).
+    indice: >-
+      Périmètre d'un cercle : $2\pi R$.
+    etapes:
+      - type: calcul
+        titre: Référentiel terrestre
+        texte: Il reste au-dessus du même point du sol, il est immobile.
+      - type: calcul
+        titre: Référentiel géocentrique
+        texte: Il décrit un cercle autour du centre de la Terre, à vitesse constante. Mouvement circulaire uniforme. $v = 2\pi \times 4{,}2 \times 10^{7} / (24 \times 3600)$.
+      - type: conc
+        titre: Résultat
+        texte: <mark>$v \approx 3{,}1 \times 10^{3}\ \mathrm{m \cdot s^{-1}}$, environ 11 000 km/h</mark>, alors qu'il paraît immobile vu du sol.

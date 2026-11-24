@@ -1,0 +1,30 @@
+questions:
+  - question: Une onde mécanique transporte…
+    choix: ['de la matière', "de l'énergie sans matière", "de la matière et de l'énergie", 'rien']
+    bonne: 1
+    explication: Comme la ola, personne ne change de siège.
+    revoir: cours
+
+  - question: Le son peut-il se propager dans le vide ?
+    choix: ["oui, plus vite que dans l'air", 'oui, à la même vitesse', 'non, il faut un milieu matériel', 'seulement les sons aigus']
+    bonne: 2
+    explication: C'est une onde mécanique.
+    revoir: cours
+
+  - question: Une onde de fréquence 500 Hz se propage à $340\ \mathrm{m \cdot s^{-1}}$. Sa longueur d'onde est…
+    choix: ['0,68 m', '1,5 m', '170 km', '0,0015 m']
+    bonne: 0
+    explication: $\lambda = v/f = 340/500$.
+    revoir: exercices
+
+  - question: Sur un graphe donnant l'aspect d'une corde à un instant donné, on lit…
+    choix: ['la période', "la longueur d'onde", 'la fréquence', 'le retard']
+    bonne: 1
+    explication: L'abscisse est une position.
+    revoir: cours
+
+  - question: Une vague à la surface de l'eau est une onde…
+    choix: ['longitudinale', 'transversale', 'électromagnétique', 'immobile']
+    bonne: 1
+    explication: L'eau monte et descend, la vague avance horizontalement.
+    revoir: cours

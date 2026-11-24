@@ -1,0 +1,70 @@
+exercices:
+  - titre: Calculer une tension
+    difficulte: 1
+    type: application
+    enonce: |
+      Une résistance de 220 Ω est traversée par un courant de 0,050 A. Calculer la tension à ses bornes.
+    indice: $U = R \times I$.
+    etapes:
+      - type: calcul
+        titre: Le calcul
+        texte: $U = 220 \times 0{,}050$.
+      - type: conc
+        titre: Résultat
+        texte: <mark>$U = 11\ \mathrm{V}$</mark>.
+
+  - titre: Retrouver une résistance
+    difficulte: 2
+    type: brevet
+    enonce: >-
+      On a mesuré pour un dipôle :
+      <table><tr><th>U (V)</th><th>0</th><th>2,0</th><th>4,0</th><th>6,0</th></tr>
+      <tr><td>I (mA)</td><td>0</td><td>20</td><td>40</td><td>60</td></tr></table>
+      1. Ce dipôle est-il un conducteur ohmique ? Justifier.
+      2. Calculer sa résistance.
+    indice: Calculer U/I avec I en ampères.
+    etapes:
+      - type: calcul
+        titre: Proportionnalité
+        texte: $2{,}0/0{,}020 = 100$ ; $4{,}0/0{,}040 = 100$ ; $6{,}0/0{,}060 = 100$. Le rapport est constant, et pour $I = 0$, $U = 0$.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>C'est un conducteur ohmique de résistance $R = 100\ \Omega$</mark>.
+
+  - titre: Les milliampères
+    difficulte: 1
+    type: piege
+    enonce: |
+      Une résistance de 1,0 kΩ est traversée par 5,0 mA. Un élève écrit $U = 1{,}0 \times 5{,}0 = 5{,}0\ \mathrm{V}$. Son résultat est-il juste ?
+    indice: Convertir les deux grandeurs.
+    etapes:
+      - type: methode
+        titre: Les conversions
+        texte: $R = 1{,}0\ \mathrm{k\Omega} = 1000\ \Omega$ et $I = 5{,}0\ \mathrm{mA} = 0{,}0050\ \mathrm{A}$.
+      - type: calcul
+        titre: Le calcul
+        texte: $U = 1000 \times 0{,}0050 = 5{,}0\ \mathrm{V}$.
+      - type: conc
+        titre: Conclusion
+        texte: >-
+          <mark>Le résultat est juste, mais par chance</mark> : les deux préfixes kilo et milli se compensent. Il vaut mieux toujours convertir.
+
+  - titre: Protéger une LED
+    difficulte: 3
+    type: brevet
+    enonce: |
+      Une LED fonctionne correctement avec une intensité de 20 mA. On l'alimente avec une pile de 9,0 V. La tension aux bornes de la LED est alors 2,0 V. On place une résistance en série.
+      1. Quelle doit être la tension aux bornes de la résistance ?
+      2. Calculer la valeur de la résistance à choisir.
+    indice: >-
+      Circuit en série : les tensions s'additionnent, l'intensité est la même.
+    etapes:
+      - type: calcul
+        titre: La tension de la résistance
+        texte: $U_R = 9{,}0 - 2{,}0 = 7{,}0\ \mathrm{V}$.
+      - type: calcul
+        titre: L'intensité
+        texte: En série, la résistance est traversée par la même intensité que la LED, 0,020 A.
+      - type: conc
+        titre: La résistance
+        texte: <mark>$R = U_R/I = 7{,}0/0{,}020 = 350\ \Omega$</mark>. On choisit la valeur du commerce la plus proche au-dessus, par exemple 390 Ω.

@@ -1,0 +1,68 @@
+exercices:
+  - titre: Contact ou à distance ?
+    difficulte: 1
+    type: application
+    enonce: |
+      Classer les actions : un pied qui frappe un ballon, un aimant qui attire un clou, la Terre qui attire la Lune, une corde qui tire un traîneau, le vent qui pousse une voile.
+    indice: Y a-t-il un contact ?
+    etapes:
+      - type: calcul
+        titre: De contact
+        texte: Le pied sur le ballon, la corde sur le traîneau, le vent (l'air) sur la voile.
+      - type: conc
+        titre: À distance
+        texte: <mark>L'aimant sur le clou, la Terre sur la Lune</mark>.
+
+  - titre: La lampe suspendue
+    difficulte: 2
+    type: brevet
+    enonce: |
+      Une lampe est suspendue au plafond par un fil. Elle est immobile.
+      1. Dessiner le diagramme objet-interaction de la lampe.
+      2. Donner les caractéristiques des deux forces, sachant que la lampe a un poids de 6,0 N.
+    indice: >-
+      La lampe est immobile : les forces se compensent.
+    etapes:
+      - type: methode
+        titre: Le diagramme
+        texte: Lampe au centre. Reliée au fil par un trait plein (contact), à la Terre par des pointillés (à distance).
+      - type: calcul
+        titre: Le poids
+        texte: Appliqué au centre de la lampe, vertical, vers le bas, 6,0 N.
+      - type: conc
+        titre: La force du fil
+        texte: <mark>Appliquée au point d'attache, verticale, vers le haut, 6,0 N</mark>, car elle compense le poids.
+
+  - titre: La flèche à l'échelle
+    difficulte: 2
+    type: piege
+    enonce: |
+      On veut représenter une force de 15 N avec l'échelle 1 cm pour 5 N. Un élève trace une flèche de 15 cm. Corriger.
+    indice: Combien de fois 5 N dans 15 N ?
+    etapes:
+      - type: piege
+        titre: L'erreur
+        texte: L'élève a oublié l'échelle. 1 cm représente 5 N, pas 1 N.
+      - type: conc
+        titre: La bonne longueur
+        texte: <mark>$15/5 = 3$, la flèche mesure 3 cm</mark>.
+
+  - titre: Le livre et la table
+    difficulte: 3
+    type: brevet
+    enonce: |
+      Un livre de masse 0,80 kg est posé sur une table ($g = 10\ \mathrm{N/kg}$).
+      1. Calculer son poids.
+      2. Quelle autre force s'exerce sur lui ? Donner ses caractéristiques.
+      3. Représenter les deux forces avec l'échelle 1 cm pour 2 N. Quelle longueur pour chaque flèche ?
+    indice: $P = m \times g$, et le livre est immobile.
+    etapes:
+      - type: calcul
+        titre: Le poids
+        texte: $P = 0{,}80 \times 10 = 8{,}0\ \mathrm{N}$, vertical, vers le bas, appliqué au centre du livre.
+      - type: calcul
+        titre: L'action de la table
+        texte: Appliquée à la surface de contact, verticale, vers le haut, de valeur 8,0 N, puisqu'elle compense le poids.
+      - type: conc
+        titre: Les flèches
+        texte: <mark>$8{,}0/2 = 4$ cm pour chacune</mark>, l'une vers le bas depuis le centre, l'autre vers le haut depuis la surface de contact.

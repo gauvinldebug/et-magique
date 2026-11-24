@@ -1,0 +1,52 @@
+questions:
+  - question: Un catalyseur…
+    choix: ['modifie l''état final', 'est consommé par la réaction', 'accélère la réaction sans être consommé', 'figure dans l''équation de réaction']
+    bonne: 2
+    explication: C'est la porte de plus dans le stade. Elle accélère la sortie et reste là à la fin.
+    revoir: cours
+
+  - question: Quand la température augmente, en général, la durée d'une transformation…
+    choix: ['augmente', 'diminue', 'ne change pas', 'devient infinie']
+    bonne: 1
+    explication: Les chocs entre entités sont plus fréquents et plus efficaces, la réaction va plus vite.
+    revoir: cours
+
+  - question: La vitesse volumique de disparition d'un réactif R s'écrit…
+    choix: ['$\frac{\mathrm{d}[\mathrm{R}]}{\mathrm{d}t}$', '$-\frac{\mathrm{d}[\mathrm{R}]}{\mathrm{d}t}$', '$[\mathrm{R}] \times t$', '$\frac{[\mathrm{R}]}{t}$']
+    bonne: 1
+    explication: $[\mathrm{R}]$ diminue, sa dérivée est négative ; le signe moins rend la vitesse positive.
+    revoir: cours
+
+  - question: Le temps de demi-réaction est…
+    choix:
+      - la moitié de la durée totale de la réaction
+      - la durée pour que l'avancement atteigne la moitié de sa valeur finale
+      - la durée pour que tout le réactif disparaisse
+      - toujours égal à 1 min
+    bonne: 1
+    explication: C'est une définition à connaître mot pour mot.
+    revoir: cours
+
+  - question: Pour une loi de vitesse d'ordre 1, $t_{1/2}$ vaut…
+    choix: ['$k \ln 2$', '$\frac{\ln 2}{k}$', '$\frac{k}{2}$', '$\frac{1}{k}$']
+    bonne: 1
+    explication: $\mathrm{e}^{-k t_{1/2}} = \frac{1}{2}$ donne $t_{1/2} = \frac{\ln 2}{k}$.
+    revoir: cours
+
+  - question: Pour vérifier qu'une réaction est d'ordre 1, on trace…
+    choix: ['$[\mathrm{R}]$ en fonction de $t$', '$\ln[\mathrm{R}]$ en fonction de $t$ et on obtient une droite', '$\frac{1}{[\mathrm{R}]}$ en fonction de $\ln t$', '$t$ en fonction de $k$']
+    bonne: 1
+    explication: $\ln[\mathrm{R}] = \ln[\mathrm{R}]_0 - kt$ est une fonction affine du temps.
+    revoir: cours
+
+  - question: Un intermédiaire réactionnel…
+    choix: ['apparaît dans l''équation bilan', 'est formé puis consommé au cours du mécanisme', 'est un catalyseur', 'est un produit final']
+    bonne: 1
+    explication: Il n'existe que pendant la réaction et disparaît du bilan.
+    revoir: cours
+
+  - question: Une flèche courbe dans un mécanisme part…
+    choix: ['d''un site accepteur', 'd''un doublet d''électrons', 'd''un atome d''hydrogène', 'du catalyseur']
+    bonne: 1
+    explication: Elle part d'un doublet (non liant ou de liaison) d'un site donneur vers un site accepteur.
+    revoir: cours

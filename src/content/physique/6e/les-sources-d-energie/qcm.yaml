@@ -1,0 +1,30 @@
+questions:
+  - question: Laquelle est une source d'énergie renouvelable ?
+    choix: ['le pétrole', 'le vent', 'le charbon', 'le gaz naturel']
+    bonne: 1
+    explication: Le vent se reconstitue sans cesse.
+    revoir: cours
+
+  - question: Un panneau solaire convertit l'énergie lumineuse en énergie…
+    choix: ['chimique', 'électrique', 'de mouvement', 'nucléaire']
+    bonne: 1
+    explication: Il produit de l'électricité.
+    revoir: cours
+
+  - question: Brûler du pétrole rejette…
+    choix: ['du dioxygène', 'du dioxyde de carbone', "de l'eau pure seulement", 'rien']
+    bonne: 1
+    explication: Un gaz à effet de serre.
+    revoir: cours
+
+  - question: Une éolienne convertit l'énergie…
+    choix: ['lumineuse en électrique', 'de mouvement du vent en électrique', 'chimique en lumineuse', 'électrique en mouvement']
+    bonne: 1
+    explication: Le vent fait tourner les pales.
+    revoir: cours
+
+  - question: Lors d'une conversion d'énergie, une partie est souvent perdue sous forme…
+    choix: ['de lumière', 'de chaleur', "d'électricité", 'de son uniquement']
+    bonne: 1
+    explication: Les appareils chauffent.
+    revoir: cours

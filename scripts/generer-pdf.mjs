@@ -41,7 +41,7 @@ for (const [m, n, c] of chapitres) {
       displayHeaderFooter: true,
       headerTemplate: '<span></span>',
       footerTemplate: `<div style="width:100%;font:7px sans-serif;color:#8A8AA3;padding:0 12mm;display:flex;justify-content:space-between;gap:8mm">
-        <span>© Maths et Magique · etmagique.fr/${m}/${n}/${c}/ · Tous droits réservés : usage personnel uniquement, republication et usage commercial interdits</span>
+        <span>© ${{ maths: 'Maths', physique: 'Physique-chimie', svt: 'SVT', histoire: 'Histoire', francais: 'Français' }[m] ?? 'Maths'} et Magique · etmagique.fr/${m}/${n}/${c}/ · Tous droits réservés : usage personnel uniquement, republication et usage commercial interdits</span>
         <span style="font-weight:700;color:#1A1A40"><span class="pageNumber"></span>/<span class="totalPages"></span></span></div>`,
     };
     // La fiche doit tenir sur une page : si elle déborde, on réduit un peu l'échelle.

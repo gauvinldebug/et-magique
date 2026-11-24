@@ -1,0 +1,83 @@
+exercices:
+  - titre: Le schéma de Lewis de l'ammoniac
+    difficulte: 1
+    type: application
+    enonce: |
+      Établir le schéma de Lewis de l'ammoniac $\mathrm{NH_3}$ et en déduire sa géométrie.
+    indice: N a 5 électrons de valence, il fait 3 liaisons.
+    etapes:
+      - type: calcul
+        titre: Les liaisons
+        texte: L'azote forme trois liaisons simples avec les trois hydrogènes (3 mains).
+      - type: calcul
+        titre: Le doublet restant
+        texte: Il lui reste $5 - 3 = 2$ électrons, soit un doublet non liant. Il est bien entouré de 8 électrons.
+      - type: conc
+        titre: La géométrie
+        texte: <mark>Trois liaisons et un doublet non liant, la molécule est pyramidale</mark>.
+
+  - titre: Lewis de molécules organiques
+    difficulte: 2
+    type: methode
+    enonce: |
+      Établir les schémas de Lewis du méthanol $\mathrm{CH_3OH}$ et du méthanal $\mathrm{H_2CO}$.
+    indice: C fait 4 liaisons, O en fait 2.
+    etapes:
+      - type: calcul
+        titre: Le méthanol
+        texte: Le carbone est lié à trois H et à O par des liaisons simples, O est lié à un H et porte 2 doublets non liants.
+      - type: calcul
+        titre: Le méthanal
+        texte: Le carbone est lié à deux H par des liaisons simples et à O par une double liaison. O porte 2 doublets non liants.
+      - type: conc
+        titre: Vérification
+        texte: <mark>Chaque C a 4 liaisons, chaque O a 2 liaisons et 2 doublets, chaque H a 1 liaison</mark>.
+
+  - titre: Polaire ou pas ?
+    difficulte: 2
+    type: piege
+    enonce: |
+      Le tétrachlorométhane $\mathrm{CCl_4}$ est tétraédrique. $\chi(\mathrm{Cl}) = 3{,}2$, $\chi(\mathrm{C}) = 2{,}6$. Un élève affirme que la molécule est polaire parce que ses liaisons sont polarisées. Discuter.
+    indice: Regarde où sont les centres des charges partielles.
+    etapes:
+      - type: calcul
+        titre: Les liaisons
+        texte: L'écart d'électronégativité est de 0,6, chaque liaison C–Cl est polarisée, $\delta^-$ sur Cl, $\delta^+$ sur C.
+      - type: piege
+        titre: La géométrie
+        texte: Dans un tétraèdre régulier, les quatre chlores tirent dans des directions symétriques. Le centre des $\delta^-$ est au centre du tétraèdre, comme le carbone.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>La molécule est apolaire, malgré ses liaisons polarisées</mark>.
+
+  - titre: L'eau, molécule polaire
+    difficulte: 1
+    type: methode
+    enonce: |
+      Justifier que la molécule d'eau est polaire. $\chi(\mathrm{O}) = 3{,}4$, $\chi(\mathrm{H}) = 2{,}2$.
+    indice: Liaisons polarisées, puis géométrie.
+    etapes:
+      - type: calcul
+        titre: Les liaisons
+        texte: Écart de 1,2, les liaisons O–H sont polarisées, $\delta^-$ sur O et $\delta^+$ sur chaque H.
+      - type: conc
+        titre: La géométrie
+        texte: >-
+          <mark>La molécule est coudée, le centre des $\delta^+$ (entre les deux H) n'est pas sur O</mark> : elle est polaire.
+
+  - titre: Un ion, l'ion oxonium
+    difficulte: 3
+    type: methode
+    enonce: |
+      Établir le schéma de Lewis de l'ion oxonium $\mathrm{H_3O^+}$ et prévoir sa géométrie.
+    indice: L'oxygène a perdu un électron par rapport à l'atome neutre ? Compte les électrons de valence de l'ion.
+    etapes:
+      - type: calcul
+        titre: Électrons de valence
+        texte: $6 + 3 \times 1 - 1 = 8$ électrons, soit 4 doublets.
+      - type: calcul
+        titre: Le schéma
+        texte: Trois doublets liants O–H et un doublet non liant sur O. L'oxygène fait 3 liaisons au lieu de 2, il porte la charge +.
+      - type: conc
+        titre: La géométrie
+        texte: <mark>Comme l'ammoniac, trois liaisons et un doublet non liant, l'ion est pyramidal</mark>.

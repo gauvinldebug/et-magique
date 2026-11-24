@@ -1,0 +1,52 @@
+questions:
+  - question: D'après la première loi de Kepler, l'orbite d'une planète est…
+    choix: ['un cercle centré sur le Soleil', 'une ellipse dont le Soleil est un foyer', 'une parabole', 'une droite']
+    bonne: 1
+    explication: Une ellipse, souvent très proche d'un cercle pour les planètes du Système solaire.
+    revoir: cours
+
+  - question: D'après la deuxième loi de Kepler, une planète va plus vite…
+    choix: ['loin du Soleil', 'près du Soleil', 'toujours à la même vitesse', 'quand elle est plus lourde']
+    bonne: 1
+    explication: Pour balayer la même aire en un temps donné, près du Soleil, elle doit parcourir un arc plus long.
+    revoir: cours
+
+  - question: La vitesse d'un satellite en orbite circulaire de rayon $r$ vaut…
+    choix: ['$\sqrt{\frac{GM}{r}}$', '$\frac{GM}{r^2}$', '$\sqrt{G M r}$', '$\frac{2\pi}{r}$']
+    bonne: 0
+    explication: On l'obtient avec $\frac{v^2}{r} = \frac{GM}{r^2}$ dans le repère de Frenet.
+    revoir: cours
+
+  - question: Le mouvement circulaire d'un satellite est uniforme parce que…
+    choix:
+      - la force de gravitation est nulle
+      - la force est perpendiculaire à la vitesse, la composante tangentielle de l'accélération est nulle
+      - le satellite a un moteur
+      - la Terre tourne
+    bonne: 1
+    explication: La force est centripète, donc $\frac{\mathrm{d}v}{\mathrm{d}t} = 0$.
+    revoir: cours
+
+  - question: Si on double la masse d'un satellite sur la même orbite, sa période…
+    choix: ['double', 'est divisée par 2', 'ne change pas', 'est multipliée par 4']
+    bonne: 2
+    explication: La masse du satellite n'apparaît pas dans $T = 2\pi\sqrt{r^3/(GM)}$.
+    revoir: cours
+
+  - question: La troisième loi de Kepler s'écrit pour un satellite…
+    choix: ['$T^2 / r^3 = \frac{4\pi^2}{GM}$', '$T / r = $ constante', '$T^3 / r^2 = $ constante', '$T \times r = $ constante']
+    bonne: 0
+    explication: La constante ne dépend que de la masse $M$ de l'astre central.
+    revoir: cours
+
+  - question: Un satellite géostationnaire…
+    choix: ['peut survoler les pôles', 'tourne dans le plan de l''équateur avec la période de rotation de la Terre', 'est immobile dans l''espace', 'est à 400 km d''altitude']
+    bonne: 1
+    explication: Il paraît immobile seulement pour un observateur terrestre.
+    revoir: cours
+
+  - question: Pourquoi les astronautes semblent-ils en apesanteur dans la station ?
+    choix: ['il n''y a pas de gravité à 400 km', 'eux et la station sont en chute libre ensemble', 'la station est trop loin de la Terre', 'ils sont attachés']
+    bonne: 1
+    explication: À 400 km, l'attraction terrestre vaut encore près de 90 % de sa valeur au sol.
+    revoir: cours

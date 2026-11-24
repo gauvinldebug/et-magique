@@ -1,0 +1,52 @@
+questions:
+  - question: La loi de Beer-Lambert relie…
+    choix: ['la conductivité et la concentration', 'l''absorbance et la concentration', 'le pH et la concentration', 'la masse et le volume']
+    bonne: 1
+    explication: $A = k\,c$ pour une espèce colorée en solution diluée.
+    revoir: cours
+
+  - question: La réaction support d'un titrage doit être…
+    choix: ['lente et totale', 'rapide, totale et unique', 'non totale', 'rapide et réversible']
+    bonne: 1
+    explication: Sinon, la quantité de titrant versée à l'équivalence ne reflète pas la quantité d'espèce titrée.
+    revoir: cours
+
+  - question: À l'équivalence d'un titrage…
+    choix:
+      - le pH vaut toujours 7
+      - les réactifs ont été introduits dans les proportions stœchiométriques
+      - le volume versé est égal au volume titré
+      - la conductivité est nulle
+    bonne: 1
+    explication: Tous les invités sont assis et il n'y a pas de chaise en trop. Le pH n'est 7 que dans un cas particulier.
+    revoir: cours
+
+  - question: Pour $2\,\mathrm{A} + \mathrm{B} \longrightarrow \dots$ (A titré, B titrant), la relation à l'équivalence est…
+    choix: ['$n_A = n_B$', '$n_A = 2\,n_{B,E}$', '$2\,n_A = n_{B,E}$', '$n_A = n_{B,E}/2$']
+    bonne: 1
+    explication: $\frac{n_A}{2} = \frac{n_{B,E}}{1}$, donc $n_A = 2\,n_{B,E}$.
+    revoir: exercices
+
+  - question: Sur une courbe $\mathrm{pH} = f(V)$, on repère l'équivalence…
+    choix: ['au début de la courbe', 'au saut de pH, par la méthode des tangentes', 'là où le pH vaut 14', 'à la demi-équivalence']
+    bonne: 1
+    explication: Méthode des tangentes parallèles, ou maximum de la dérivée $\mathrm{d\,pH}/\mathrm{d}V$.
+    revoir: cours
+
+  - question: En titrage conductimétrique, l'équivalence se lit…
+    choix: ['au point où la conductivité est maximale', 'à la rupture de pente', 'quand la conductivité s''annule', 'quand la couleur change']
+    bonne: 1
+    explication: La courbe est formée de deux segments dont l'intersection donne $V_E$.
+    revoir: cours
+
+  - question: Une conductivité molaire ionique s'exprime en…
+    choix: ['$\mathrm{S \cdot m^{-1}}$', '$\mathrm{S \cdot m^2 \cdot mol^{-1}}$', '$\mathrm{mol \cdot L^{-1}}$', '$\mathrm{S}$']
+    bonne: 1
+    explication: Avec $[X]$ en $\mathrm{mol \cdot m^{-3}}$ et $\sigma$ en $\mathrm{S \cdot m^{-1}}$, il faut $\lambda$ en $\mathrm{S \cdot m^2 \cdot mol^{-1}}$.
+    revoir: cours
+
+  - question: Titrage d'un acide faible par la soude. À la demi-équivalence…
+    choix: ['$\mathrm{pH} = 7$', '$\mathrm{pH} = \mathrm{p}K_A$', '$\mathrm{pH} = \mathrm{p}K_e$', 'le pH est maximal']
+    bonne: 1
+    explication: La moitié de l'acide a été transformée en base, $[\mathrm{AH}] = [\mathrm{A^-}]$, donc $\mathrm{pH} = \mathrm{p}K_A$.
+    revoir: cours

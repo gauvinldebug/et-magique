@@ -1,0 +1,85 @@
+exercices:
+  - titre: Énergie d'un photon
+    difficulte: 1
+    type: application
+    enonce: |
+      Calculer, en joules puis en électronvolts, l'énergie d'un photon de lumière verte ($\lambda = 530$ nm). $h = 6{,}63 \times 10^{-34}$ J·s, $c = 3{,}00 \times 10^8\ \mathrm{m \cdot s^{-1}}$.
+    indice: $E = hc/\lambda$ avec $\lambda$ en mètres.
+    etapes:
+      - type: calcul
+        titre: En joules
+        texte: $E = \dfrac{6{,}63 \times 10^{-34} \times 3{,}00 \times 10^8}{530 \times 10^{-9}} \approx 3{,}75 \times 10^{-19}$ J.
+      - type: conc
+        titre: En électronvolts
+        texte: <mark>$E = \dfrac{3{,}75 \times 10^{-19}}{1{,}60 \times 10^{-19}} \approx 2{,}35$ eV</mark>.
+
+  - titre: Le seuil du zinc
+    difficulte: 1
+    type: methode
+    enonce: |
+      Le travail d'extraction du zinc vaut $W = 4{,}3$ eV. Calculer la longueur d'onde seuil. Une lampe visible peut-elle extraire des électrons du zinc ?
+    indice: $\lambda_s = hc / W$, avec $W$ en joules.
+    etapes:
+      - type: calcul
+        titre: W en joules
+        texte: $W = 4{,}3 \times 1{,}60 \times 10^{-19} \approx 6{,}9 \times 10^{-19}$ J.
+      - type: calcul
+        titre: La longueur d'onde seuil
+        texte: $\lambda_s = \dfrac{6{,}63 \times 10^{-34} \times 3{,}00 \times 10^8}{6{,}9 \times 10^{-19}} \approx 2{,}9 \times 10^{-7}$ m, soit 290 nm.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>Il faut $\lambda < 290$ nm, de l'ultraviolet</mark>. La lumière visible (400 à 800 nm) ne suffit pas.
+
+  - titre: Un projecteur rouge très puissant
+    difficulte: 2
+    type: piege
+    enonce: |
+      Un élève propose, pour extraire des électrons du zinc, d'utiliser un projecteur rouge ($\lambda = 650$ nm) mille fois plus puissant qu'une lampe UV. Que se passe-t-il ?
+    indice: Le distributeur à pièce unique.
+    etapes:
+      - type: calcul
+        titre: L'énergie d'un photon rouge
+        texte: $E = hc/\lambda \approx 3{,}1 \times 10^{-19}$ J $\approx 1{,}9$ eV, inférieure à $W = 4{,}3$ eV.
+      - type: piege
+        titre: L'erreur
+        texte: Plus de puissance, c'est plus de photons, mais chacun reste à 1,9 eV. Un électron n'absorbe qu'un photon, les énergies ne s'additionnent pas.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>Aucun électron n'est extrait</mark>, quelle que soit la puissance.
+
+  - titre: Énergie cinétique des électrons
+    difficulte: 2
+    type: methode
+    enonce: |
+      Du césium ($W = 2{,}1$ eV) est éclairé par un rayonnement de longueur d'onde 400 nm. Calculer l'énergie cinétique maximale des électrons extraits, puis leur vitesse maximale. $m_e = 9{,}11 \times 10^{-31}$ kg.
+    indice: $E_{c,\max} = h\nu - W$, puis $\frac{1}{2}mv^2$.
+    etapes:
+      - type: calcul
+        titre: Le photon
+        texte: $E = \dfrac{hc}{\lambda} \approx 4{,}97 \times 10^{-19}$ J $\approx 3{,}1$ eV.
+      - type: calcul
+        titre: La monnaie rendue
+        texte: $E_{c,\max} = 3{,}1 - 2{,}1 = 1{,}0$ eV $= 1{,}6 \times 10^{-19}$ J.
+      - type: conc
+        titre: La vitesse
+        texte: <mark>$v = \sqrt{\dfrac{2 E_c}{m_e}} = \sqrt{\dfrac{2 \times 1{,}6 \times 10^{-19}}{9{,}11 \times 10^{-31}}} \approx 5{,}9 \times 10^5\ \mathrm{m \cdot s^{-1}}$</mark>.
+
+  - titre: Le rendement d'un panneau solaire
+    difficulte: 3
+    type: bac
+    enonce: |
+      Un panneau photovoltaïque de surface $S = 1{,}6\ \mathrm{m^2}$ reçoit un éclairement de $1\,000\ \mathrm{W \cdot m^{-2}}$. À son point de puissance maximale, il délivre $U = 32$ V et $I = 9{,}5$ A.
+      1. Calculer la puissance lumineuse reçue et la puissance électrique fournie.
+      2. En déduire le rendement.
+      3. Que devient l'énergie non convertie ?
+    indice: $P_{\text{lum}} = E \times S$, $P_{\text{élec}} = U \times I$.
+    etapes:
+      - type: calcul
+        titre: Les puissances
+        texte: $P_{\text{lum}} = 1\,000 \times 1{,}6 = 1\,600$ W et $P_{\text{élec}} = 32 \times 9{,}5 = 304$ W.
+      - type: calcul
+        titre: Le rendement
+        texte: $\eta = 304 / 1\,600 \approx 0{,}19$, soit 19 %.
+      - type: conc
+        titre: L'énergie perdue
+        texte: <mark>Environ 81 % de la puissance reçue est surtout transférée sous forme thermique</mark> (le panneau chauffe) ou réfléchie. Les photons trop peu énergétiques ne sont pas convertis, l'excès d'énergie des autres non plus.

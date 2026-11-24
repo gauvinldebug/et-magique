@@ -1,0 +1,48 @@
+questions:
+  - question: L'avancement d'une réaction s'exprime en…
+    choix: ['grammes', 'moles', 'litres', 'sans unité']
+    bonne: 1
+    explication: Il compte le nombre de « recettes » réalisées, en mol.
+    revoir: cours
+
+  - question: Pour $\mathrm{A} + 2\,\mathrm{B} \to \mathrm{C}$, avec 1,0 mol de A et 1,0 mol de B, le réactif limitant est…
+    choix: ['A', 'B', 'aucun', 'les deux']
+    bonne: 1
+    explication: $1{,}0/1 = 1{,}0$ pour A et $1{,}0/2 = 0{,}5$ pour B.
+    revoir: cours
+
+  - question: Un mélange est stœchiométrique si…
+    choix: ['$n_A = n_B$', '$\frac{n_A}{a} = \frac{n_B}{b}$', 'il y a un réactif en excès', 'la réaction est lente']
+    bonne: 1
+    explication: Tous les réactifs s'épuisent en même temps.
+    revoir: cours
+
+  - question: Dans la ligne « en cours » du tableau, la quantité d'un produit de coefficient 3 vaut…
+    choix: ['$3x$', '$x/3$', '$n - 3x$', '$3$']
+    bonne: 0
+    explication: Chaque recette forme 3 entités de ce produit.
+    revoir: cours
+
+  - question: À l'équivalence d'un titrage…
+    choix: ['le titrant est en excès', 'les réactifs ont été introduits dans les proportions stœchiométriques', 'le volume versé égale le volume titré', 'la solution est neutre']
+    bonne: 1
+    explication: C'est la définition. Le réactif limitant change à ce moment-là.
+    revoir: cours
+
+  - question: Dans le titrage par le permanganate, l'équivalence est repérée…
+    choix: ['par la décoloration', 'par la persistance de la teinte violette', 'par un dégagement gazeux', 'par un précipité']
+    bonne: 1
+    explication: Tant qu'il reste de l'espèce titrée, le permanganate est consommé et se décolore.
+    revoir: cours
+
+  - question: On titre 20 mL de A par B ($\mathrm{A} + \mathrm{B} \to \dots$), $c_B = 0{,}10\ \mathrm{mol \cdot L^{-1}}$, $V_E = 10$ mL. Alors $c_A$ vaut…
+    choix: ['$0{,}20\ \mathrm{mol \cdot L^{-1}}$', '$0{,}050\ \mathrm{mol \cdot L^{-1}}$', '$0{,}10\ \mathrm{mol \cdot L^{-1}}$', '$2{,}0\ \mathrm{mol \cdot L^{-1}}$']
+    bonne: 1
+    explication: $c_A = c_B V_E / V_A = 0{,}10 \times 10 / 20$.
+    revoir: exercices
+
+  - question: La réaction support d'un titrage doit être…
+    choix: ['lente', 'totale, rapide et unique', 'réversible', 'colorée']
+    bonne: 1
+    explication: Sinon on ne peut pas relier le volume versé à la quantité titrée.
+    revoir: cours

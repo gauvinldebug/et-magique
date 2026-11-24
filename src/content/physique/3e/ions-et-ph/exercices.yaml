@@ -1,0 +1,67 @@
+exercices:
+  - titre: Lire une formule d'ion
+    difficulte: 1
+    type: application
+    enonce: |
+      L'atome d'aluminium a 13 protons et 13 électrons. Il devient l'ion $\mathrm{Al^{3+}}$.
+      1. A-t-il gagné ou perdu des électrons ? Combien ?
+      2. Combien de protons et d'électrons a l'ion ?
+    indice: La charge + vient des électrons perdus.
+    etapes:
+      - type: methode
+        titre: Gagné ou perdu
+        texte: >-
+          Charge 3+ : il a perdu 3 électrons.
+      - type: conc
+        titre: La composition
+        texte: <mark>13 protons et 10 électrons</mark>. Le noyau n'a pas changé.
+
+  - titre: Identifier un ion
+    difficulte: 1
+    type: brevet
+    enonce: |
+      On verse quelques gouttes de soude dans une solution inconnue. Un précipité vert apparaît. Dans un autre tube de la même solution, le nitrate d'argent donne un précipité blanc qui noircit à la lumière.
+      Quels ions contient la solution ?
+    indice: Utiliser le tableau des tests.
+    etapes:
+      - type: calcul
+        titre: Premier test
+        texte: Précipité vert avec la soude → ions fer II $\mathrm{Fe^{2+}}$.
+      - type: calcul
+        titre: Second test
+        texte: Précipité blanc qui noircit avec le nitrate d'argent → ions chlorure $\mathrm{Cl^-}$.
+      - type: conc
+        titre: Conclusion
+        texte: >-
+          <mark>La solution contient des ions $\mathrm{Fe^{2+}}$ et $\mathrm{Cl^-}$</mark> : c'est du chlorure de fer II.
+
+  - titre: Diluer du vinaigre
+    difficulte: 2
+    type: piege
+    enonce: |
+      Un vinaigre a un pH de 3. On le dilue beaucoup avec de l'eau. Un élève prévoit un pH de 9. Est-ce possible ?
+    indice: De quel côté se trouve 7 ?
+    etapes:
+      - type: piege
+        titre: L'erreur
+        texte: En ajoutant de l'eau, on disperse les ions $\mathrm{H^+}$, mais on n'ajoute pas d'ions $\mathrm{HO^-}$. La solution ne peut pas devenir basique.
+      - type: conc
+        titre: Conclusion
+        texte: >-
+          <mark>Le pH monte vers 7 sans le dépasser</mark> : il reste inférieur à 7, la solution reste acide.
+
+  - titre: Classer des produits ménagers
+    difficulte: 2
+    type: brevet
+    enonce: |
+      On mesure le pH de quatre produits : détartrant (pH 2), liquide vaisselle (pH 7), lessive (pH 11), soda (pH 3).
+      1. Classer les produits du plus acide au plus basique.
+      2. Quels produits faut-il manipuler avec des gants ? Pourquoi ?
+    indice: Plus le pH est petit, plus c'est acide.
+    etapes:
+      - type: calcul
+        titre: Le classement
+        texte: Détartrant (2), soda (3), liquide vaisselle (7), lessive (11).
+      - type: conc
+        titre: La sécurité
+        texte: <mark>Le détartrant et la lessive</mark>, très acide et très basique, sont corrosifs pour la peau. Le soda est acide, mais beaucoup moins agressif.

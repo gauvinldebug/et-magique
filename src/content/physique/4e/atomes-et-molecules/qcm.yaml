@@ -1,0 +1,30 @@
+questions:
+  - question: La molécule d'eau a pour formule…
+    choix: ['$\mathrm{HO_2}$', '$\mathrm{H_2O}$', '$\mathrm{H_2O_2}$', '$\mathrm{OH}$']
+    bonne: 1
+    explication: 2 atomes d'hydrogène, 1 atome d'oxygène.
+    revoir: cours
+
+  - question: Combien d'atomes contient une molécule de méthane $\mathrm{CH_4}$ ?
+    choix: ['4', '5', '1', '8']
+    bonne: 1
+    explication: 1 C + 4 H.
+    revoir: exercices
+
+  - question: Le dioxygène $\mathrm{O_2}$ est…
+    choix: ['un corps pur simple', 'un corps pur composé', 'un mélange', 'un atome']
+    bonne: 0
+    explication: Un seul type d'atome.
+    revoir: cours
+
+  - question: Dans un solide, les particules sont…
+    choix: ['éloignées et en désordre', 'serrées et en désordre', 'serrées et rangées', 'immobiles et éloignées']
+    bonne: 2
+    explication: Elles vibrent sur place.
+    revoir: cours
+
+  - question: Quand l'eau bout, les molécules d'eau…
+    choix: ['se cassent en H et O', 'restent des molécules $\mathrm{H_2O}$', 'deviennent du dioxygène', 'disparaissent']
+    bonne: 1
+    explication: Un changement d'état ne change pas les molécules.
+    revoir: cours

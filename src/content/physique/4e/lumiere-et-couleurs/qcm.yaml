@@ -1,0 +1,30 @@
+questions:
+  - question: La Lune est…
+    choix: ['une source primaire de lumière', 'un objet diffusant', 'une étoile', 'invisible']
+    bonne: 1
+    explication: Elle renvoie la lumière du Soleil.
+    revoir: cours
+
+  - question: Dans l'air, la lumière se propage…
+    choix: ['en ligne droite', 'en zigzag', 'en cercle', 'au hasard']
+    bonne: 0
+    explication: Milieu transparent et homogène.
+    revoir: cours
+
+  - question: Un prisme éclairé en lumière blanche donne…
+    choix: ['de la lumière blanche', 'un spectre de couleurs', 'du noir', 'une seule couleur']
+    bonne: 1
+    explication: La lumière blanche est un mélange de couleurs.
+    revoir: cours
+
+  - question: Un filtre bleu éclairé en lumière blanche transmet…
+    choix: ['toutes les couleurs', 'le bleu', 'le rouge', 'rien']
+    bonne: 1
+    explication: Il absorbe les autres couleurs.
+    revoir: cours
+
+  - question: Une feuille blanche éclairée en lumière rouge paraît…
+    choix: ['blanche', 'rouge', 'noire', 'verte']
+    bonne: 1
+    explication: Elle diffuse toute la lumière reçue.
+    revoir: exercices

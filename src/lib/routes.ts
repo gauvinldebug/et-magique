@@ -1,6 +1,6 @@
 // getStaticPaths partagé par les 5 pages d'un chapitre.
 import { chapitresPublies, complements } from './contenu';
-import { niveau as getNiveau, matiere as getMatiere } from '../data/site';
+import { niveauDe, matiere as getMatiere } from '../data/site';
 import { PROGRAMME } from '../data/programme';
 
 export async function cheminsChapitres() {
@@ -16,7 +16,7 @@ export async function cheminsChapitres() {
         params: { matiere: c.matiere, niveau: c.niveau, chapitre: c.slug },
         props: {
           chapitre: c,
-          niveau: getNiveau(c.niveau)!,
+          niveau: niveauDe(c.matiere, c.niveau)!,
           matiere: getMatiere(c.matiere)!,
           ...plus,
           suivant: suivant ? { ...suivant, publie: suivantPublie } : undefined,

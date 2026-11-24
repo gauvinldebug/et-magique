@@ -1,11 +1,13 @@
 ---
 // Le sommaire d'une matière : les niveaux en chiffres géants, avec le nombre de chapitres en ligne.
-import { NIVEAUX } from '../data/site';
+import { niveauxDe } from '../data/site';
+const NIVEAUX_M = (m: string) => niveauxDe(m);
 import { chapitresPublies } from '../lib/contenu';
 interface Props { matiere: string; titre?: string }
 const { matiere, titre = 'Sommaire' } = Astro.props;
 const publies = (await chapitresPublies()).filter((c) => c.matiere === matiere);
 const nb = (n: string) => publies.filter((c) => c.niveau === n).length;
+const NIVEAUX = NIVEAUX_M(matiere);
 const principaux = NIVEAUX.filter((n) => n.cycle === 'Collège' || n.cycle === 'Lycée');
 const autres = NIVEAUX.filter((n) => !principaux.includes(n) && nb(n.slug) > 0);
 const total = publies.length;
@@ -16,7 +18,7 @@ const legende = (n: (typeof NIVEAUX)[number]) => {
 };
 ---
 <section class="som" aria-labelledby={`som-${matiere}`}>
-  <div class="som-tete"><h2 id={`som-${matiere}`}>{titre}</h2><span>{total} chapitres en ligne</span></div>
+  <div class="som-tete"><h2 id={`som-${matiere}`}>{titre}</h2><span>{total} chapitre{total > 1 ? "s" : ""} en ligne</span></div>
   <ul class="som-grille">
     {principaux.map((n) => (
       <li><a href={`/${matiere}/${n.slug}/`} class:list={{ examen: n.examen === 'bac' }} aria-label={`${n.nom} : ${legende(n)}`}><b>{n.court}</b><span>{legende(n)}</span></a></li>

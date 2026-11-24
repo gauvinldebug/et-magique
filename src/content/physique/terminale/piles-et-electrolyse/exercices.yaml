@@ -1,0 +1,94 @@
+exercices:
+  - titre: Polarité d'une pile
+    difficulte: 1
+    type: application
+    enonce: |
+      Une pile est formée d'une lame d'argent dans une solution de nitrate d'argent ($\mathrm{Ag^+}$) et d'une lame de cuivre dans une solution de sulfate de cuivre ($\mathrm{Cu^{2+}}$). On observe un dépôt d'argent sur la lame d'argent.
+      Écrire les demi-équations, identifier l'anode et la cathode et donner la polarité de la pile.
+    indice: Un dépôt d'argent signifie que les ions $\mathrm{Ag^+}$ sont réduits.
+    etapes:
+      - type: calcul
+        titre: Côté argent
+        texte: $\mathrm{Ag^+} + \mathrm{e^-} \longrightarrow \mathrm{Ag(s)}$, une réduction. La lame d'argent est la cathode.
+      - type: calcul
+        titre: Côté cuivre
+        texte: $\mathrm{Cu(s)} \longrightarrow \mathrm{Cu^{2+}} + 2\,\mathrm{e^-}$, une oxydation. La lame de cuivre est l'anode.
+      - type: conc
+        titre: Polarité
+        texte: <mark>Borne + = argent (cathode), borne − = cuivre (anode)</mark>. Bilan $2\,\mathrm{Ag^+} + \mathrm{Cu} \longrightarrow 2\,\mathrm{Ag} + \mathrm{Cu^{2+}}$.
+
+  - titre: Charge débitée
+    difficulte: 1
+    type: methode
+    enonce: |
+      Une pile débite un courant constant de 50 mA pendant 2,0 h. Calculer la charge débitée puis la quantité d'électrons échangés. $\mathcal{F} = 9{,}65 \times 10^4\ \mathrm{C \cdot mol^{-1}}$.
+    indice: Convertis tout en unités SI.
+    etapes:
+      - type: calcul
+        titre: La charge
+        texte: $Q = I\,\Delta t = 0{,}050 \times 2{,}0 \times 3600 = 360\ \mathrm{C}$.
+      - type: conc
+        titre: Les électrons
+        texte: <mark>$n(\mathrm{e^-}) = \dfrac{Q}{\mathcal{F}} = \dfrac{360}{9{,}65 \times 10^4} \approx 3{,}7 \times 10^{-3}\ \mathrm{mol}$</mark>.
+
+  - titre: Capacité d'une pile Daniell
+    difficulte: 2
+    type: methode
+    enonce: |
+      Dans une pile Daniell, la demi-pile au cuivre contient 50 mL de solution de $\mathrm{Cu^{2+}}$ à $0{,}20\ \mathrm{mol \cdot L^{-1}}$. La lame de zinc est en large excès.
+      Calculer la capacité de la pile en coulombs puis en mA·h.
+    indice: Le réactif limitant est $\mathrm{Cu^{2+}}$, et chaque ion capte 2 électrons.
+    etapes:
+      - type: calcul
+        titre: Le réactif limitant
+        texte: $n(\mathrm{Cu^{2+}}) = 0{,}20 \times 0{,}050 = 1{,}0 \times 10^{-2}\ \mathrm{mol}$.
+      - type: calcul
+        titre: Les électrons
+        texte: $\mathrm{Cu^{2+}} + 2\,\mathrm{e^-} \longrightarrow \mathrm{Cu}$, donc $n(\mathrm{e^-}) = 2 \times 1{,}0 \times 10^{-2} = 2{,}0 \times 10^{-2}\ \mathrm{mol}$.
+      - type: calcul
+        titre: La capacité
+        texte: $Q = n(\mathrm{e^-})\,\mathcal{F} = 2{,}0 \times 10^{-2} \times 9{,}65 \times 10^4 \approx 1{,}9 \times 10^3\ \mathrm{C}$.
+      - type: conc
+        titre: En mA·h
+        texte: <mark>$Q = 1930 / 3600 \approx 0{,}54\ \mathrm{A \cdot h} = 540\ \mathrm{mA \cdot h}$</mark>.
+
+  - titre: Anode et borne
+    difficulte: 2
+    type: piege
+    enonce: |
+      Lors de l'électrolyse d'une solution de chlorure de cuivre, du cuivre se dépose sur une électrode et du dichlore se dégage sur l'autre. Un élève relie l'électrode où se forme le dichlore à la borne − du générateur « parce que l'anode est toujours le pôle moins ». Corriger.
+    indice: Qui est oxydé, qui est réduit ? Puis, dans un électrolyseur, à quelle borne est reliée l'anode ?
+    etapes:
+      - type: calcul
+        titre: Les demi-équations
+        texte: $2\,\mathrm{Cl^-} \longrightarrow \mathrm{Cl_2} + 2\,\mathrm{e^-}$ (oxydation, anode) ; $\mathrm{Cu^{2+}} + 2\,\mathrm{e^-} \longrightarrow \mathrm{Cu}$ (réduction, cathode).
+      - type: piege
+        titre: L'erreur
+        texte: L'anode est la borne − dans une pile. Dans un électrolyseur, le générateur arrache des électrons à l'anode, elle est reliée à sa borne +.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>Le dichlore se forme à l'anode, reliée à la borne + du générateur</mark> ; le cuivre se dépose sur la cathode, reliée à la borne −.
+
+  - titre: Produire du dihydrogène
+    difficulte: 3
+    type: bac
+    enonce: |
+      Un électrolyseur produit du dihydrogène à la cathode selon $2\,\mathrm{H^+} + 2\,\mathrm{e^-} \longrightarrow \mathrm{H_2}$. Il fonctionne sous une intensité constante $I = 200\ \mathrm{A}$ pendant 8,0 h.
+      1. La transformation est-elle spontanée ? Justifier.
+      2. Calculer la quantité de dihydrogène produite.
+      3. En déduire sa masse, puis le volume de gaz dans les conditions où le volume molaire vaut $24\ \mathrm{L \cdot mol^{-1}}$. $M(\mathrm{H}) = 1{,}0\ \mathrm{g \cdot mol^{-1}}$.
+    indice: $n(\mathrm{H_2}) = n(\mathrm{e^-})/2$.
+    etapes:
+      - type: methode
+        titre: Spontanée ?
+        texte: Non. Elle est imposée par un générateur, c'est une transformation forcée (le remonte-pente).
+      - type: calcul
+        titre: Les électrons
+        texte: $Q = 200 \times 8{,}0 \times 3600 = 5{,}76 \times 10^6\ \mathrm{C}$, donc $n(\mathrm{e^-}) = 5{,}76 \times 10^6 / 9{,}65 \times 10^4 \approx 59{,}7\ \mathrm{mol}$.
+      - type: calcul
+        titre: Le dihydrogène
+        texte: $n(\mathrm{H_2}) = n(\mathrm{e^-}) / 2 \approx 29{,}8\ \mathrm{mol}$.
+        note: 2 électrons par molécule de H₂
+      - type: conc
+        titre: Masse et volume
+        texte: <mark>$m = 29{,}8 \times 2{,}0 \approx 60\ \mathrm{g}$ et $V = 29{,}8 \times 24 \approx 7{,}2 \times 10^2\ \mathrm{L}$</mark>.

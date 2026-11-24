@@ -1,6 +1,6 @@
 ---
 import Base from '../../../layouts/Base.astro';
-import { NIVEAUX } from '../../../data/site';
+import { niveauxDe } from '../../../data/site';
 import { chapitresPublies, complements } from '../../../lib/contenu';
 import { cheminsMatieres } from '../../../lib/matieres-paths';
 import { existe } from '../../../lib/fichiers';
@@ -8,7 +8,7 @@ export const getStaticPaths = cheminsMatieres;
 const { matiere } = Astro.props;
 const chapitres = (await chapitresPublies()).filter((c) => c.matiere === matiere.slug);
 const avecFiche = (await Promise.all(chapitres.map(async (c) => ({ c, f: (await complements(c.id)).fiche })))).filter((x) => x.f);
-const parNiveau = NIVEAUX.map((n) => ({ n, items: avecFiche.filter((x) => x.c.niveau === n.slug) })).filter((g) => g.items.length);
+const parNiveau = niveauxDe(matiere.slug).map((n) => ({ n, items: avecFiche.filter((x) => x.c.niveau === n.slug) })).filter((g) => g.items.length);
 ---
 <Base titre="Fiches de révision" description="Une fiche d'une page par chapitre, à imprimer : la méthode, les questions types et les pièges." matiere={matiere.slug} actif="fiches">
   <div class="page-feuille cahier">

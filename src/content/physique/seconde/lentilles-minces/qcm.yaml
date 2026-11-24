@@ -1,0 +1,30 @@
+questions:
+  - question: Une lentille convergente est…
+    choix: ['plus mince au centre', 'plus épaisse au centre', 'plate', 'opaque']
+    bonne: 1
+    explication: Elle est bombée.
+    revoir: cours
+
+  - question: Un rayon arrivant parallèle à l'axe optique ressort…
+    choix: ['sans être dévié', 'en passant par F', "en passant par F'", "parallèle à l'axe"]
+    bonne: 2
+    explication: C'est la définition du foyer image.
+    revoir: cours
+
+  - question: Un rayon passant par le centre optique…
+    choix: ["n'est pas dévié", "passe par F'", 'est réfléchi', 'ressort parallèle']
+    bonne: 0
+    explication: Au centre, la lentille se comporte comme une lame à faces parallèles très mince.
+    revoir: cours
+
+  - question: Une image réelle donnée par une lentille convergente est…
+    choix: ['droite', 'renversée', 'toujours plus grande', 'invisible sur un écran']
+    bonne: 1
+    explication: Les rayons se croisent sur l'axe.
+    revoir: cours
+
+  - question: Dans le modèle de l'œil, la rétine correspond…
+    choix: ['à la lentille', "à l'écran", 'au diaphragme', 'au foyer objet']
+    bonne: 1
+    explication: C'est là que se forme l'image.
+    revoir: exercices

@@ -1,0 +1,30 @@
+questions:
+  - question: Si la vitesse d'un objet triple, son énergie cinétique est…
+    choix: ['multipliée par 3', 'multipliée par 6', 'multipliée par 9', 'inchangée']
+    bonne: 2
+    explication: $v^2$ est multiplié par 9.
+    revoir: cours
+
+  - question: Le travail d'une force perpendiculaire au déplacement est…
+    choix: ['positif', 'négatif', 'nul', 'maximal']
+    bonne: 2
+    explication: $\cos 90° = 0$.
+    revoir: cours
+
+  - question: Une balle de 0,50 kg descend de 2,0 m. Le travail de son poids vaut environ…
+    choix: ['+9,8 J', '−9,8 J', '+1,0 J', '+20 J']
+    bonne: 0
+    explication: $W = mg(z_A - z_B) = 0{,}50 \times 9{,}8 \times 2{,}0$, positif car la balle descend.
+    revoir: exercices
+
+  - question: En présence de frottements, l'énergie mécanique…
+    choix: ['augmente', 'reste constante', 'diminue', 'devient nulle']
+    bonne: 2
+    explication: Elle est dissipée en énergie thermique.
+    revoir: cours
+
+  - question: Sans frottement, la vitesse d'un objet lâché d'une hauteur h dépend…
+    choix: ['de sa masse', 'de h seulement (et de g)', 'de sa forme', 'du chemin suivi']
+    bonne: 1
+    explication: $v = \sqrt{2gh}$.
+    revoir: cours

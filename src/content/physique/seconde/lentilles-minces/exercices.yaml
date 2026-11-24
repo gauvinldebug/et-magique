@@ -1,0 +1,65 @@
+exercices:
+  - titre: Trouver la distance focale
+    difficulte: 1
+    type: application
+    enonce: |
+      Avec une loupe tenue au soleil, la tache lumineuse la plus petite se forme à 8,0 cm de la loupe. Quelle est la distance focale de la loupe ?
+    indice: Les rayons du Soleil arrivent parallèles.
+    etapes:
+      - type: methode
+        titre: Le raisonnement
+        texte: Des rayons parallèles à l'axe convergent au foyer image F'.
+      - type: conc
+        titre: Résultat
+        texte: <mark>$f' = OF' = 8{,}0\ \mathrm{cm} = 0{,}080\ \mathrm{m}$</mark>.
+
+  - titre: Un objet à deux fois la focale
+    difficulte: 2
+    type: methode
+    enonce: |
+      Un objet AB de 3,0 cm est placé à 20 cm avant une lentille de distance focale 10 cm. On construit l'image et on trouve A'B' à 20 cm après la lentille.
+      1. Expliquer avec les rayons pourquoi l'image est renversée.
+      2. L'image mesure 3,0 cm. Calculer le grandissement.
+    indice: Le rayon par O traverse l'axe.
+    etapes:
+      - type: methode
+        titre: Renversée
+        texte: Le rayon issu de B qui passe par O n'est pas dévié. B est au-dessus de l'axe avant la lentille, le rayon descend, traverse l'axe en O et se retrouve en dessous après la lentille. B' est donc sous l'axe.
+      - type: conc
+        titre: Grandissement
+        texte: Image de même taille, renversée, <mark>$\gamma = -3{,}0/3{,}0 = -1$</mark>.
+
+  - titre: L'image qui ne se projette pas
+    difficulte: 2
+    type: piege
+    enonce: |
+      On place une bougie à 5 cm d'une lentille de focale 10 cm, et on cherche son image sur un écran, de l'autre côté. Un élève déplace l'écran partout sans rien trouver et pense que la lentille est cassée. Expliquer.
+    indice: Où est l'objet par rapport à F ?
+    etapes:
+      - type: piege
+        titre: L'erreur
+        texte: L'objet est entre F et la lentille. Les rayons qui sortent de la lentille s'écartent, ils ne se croisent jamais après elle.
+      - type: conc
+        titre: Conclusion
+        texte: >-
+          <mark>Il n'y a pas d'image réelle à projeter</mark>. En regardant à travers la lentille, on voit la bougie agrandie et droite : la lentille fonctionne comme une loupe.
+
+  - titre: Le modèle de l'œil
+    difficulte: 3
+    type: bac
+    enonce: |
+      On modélise un œil par une lentille convergente et un écran placé 17 mm derrière.
+      1. Associer chaque élément du modèle à une partie de l'œil.
+      2. Pour un objet très éloigné, les rayons arrivent parallèles. Où doit se trouver le foyer image pour que l'image soit nette ? En déduire la distance focale.
+      3. Pour un objet proche, l'image nette se forme plus loin que le foyer. Comment l'œil s'y prend-il, sachant que la rétine ne bouge pas ?
+    indice: La distance lentille-écran est fixe.
+    etapes:
+      - type: calcul
+        titre: Le modèle
+        texte: Lentille → cristallin. Écran → rétine. Diaphragme → iris.
+      - type: calcul
+        titre: Objet lointain
+        texte: Les rayons parallèles convergent en F'. Il faut F' sur la rétine, donc $f' = 17\ \mathrm{mm}$.
+      - type: conc
+        titre: Objet proche
+        texte: <mark>Le cristallin se bombe, sa distance focale diminue</mark>, et l'image revient sur la rétine. C'est l'accommodation.

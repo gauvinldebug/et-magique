@@ -1,0 +1,30 @@
+questions:
+  - question: Un rayon passant par le centre optique d'une lentille mince…
+    choix: ['ressort par le foyer image', "n'est pas dévié", "ressort parallèle à l'axe", 'est réfléchi']
+    bonne: 1
+    explication: C'est la propriété du centre optique.
+    revoir: cours
+
+  - question: Un objet réel placé avant la lentille a…
+    choix: ['$\overline{OA} > 0$', '$\overline{OA} < 0$', '$\overline{OA} = f$', '$\overline{OA} = 0$']
+    bonne: 1
+    explication: L'axe est orienté dans le sens de la lumière.
+    revoir: cours
+
+  - question: Un grandissement $\gamma = -3$ signifie une image…
+    choix: ['droite et 3 fois plus grande', 'renversée et 3 fois plus grande', 'renversée et 3 fois plus petite', 'virtuelle']
+    bonne: 1
+    explication: Signe négatif, renversée ; valeur absolue 3, agrandie.
+    revoir: cours
+
+  - question: Pour une loupe, l'objet est placé…
+    choix: ['très loin', 'entre F et la lentille', 'à 2f', 'après la lentille']
+    bonne: 1
+    explication: L'image est alors virtuelle, droite et agrandie.
+    revoir: cours
+
+  - question: Quand l'œil regarde un objet proche, la distance focale du cristallin…
+    choix: ['augmente', 'diminue', 'ne change pas', 'devient négative']
+    bonne: 1
+    explication: Le cristallin se bombe, c'est l'accommodation.
+    revoir: exercices

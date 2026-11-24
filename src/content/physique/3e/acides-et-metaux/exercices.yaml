@@ -1,0 +1,68 @@
+exercices:
+  - titre: Interpréter les observations
+    difficulte: 1
+    type: brevet
+    enonce: |
+      On met de la poudre de zinc dans de l'acide chlorhydrique. Des bulles apparaissent, et l'allumette approchée produit une petite détonation.
+      1. Quel gaz s'est formé ?
+      2. S'agit-il d'une transformation chimique ? Justifier.
+    indice: Un produit nouveau est apparu.
+    etapes:
+      - type: calcul
+        titre: Le gaz
+        texte: La détonation à la flamme est le test du dihydrogène.
+      - type: conc
+        titre: La transformation
+        texte: <mark>Oui</mark>, une espèce chimique nouvelle, le dihydrogène, est apparue et le zinc est consommé.
+
+  - titre: Vérifier une équation
+    difficulte: 2
+    type: methode
+    enonce: |
+      L'équation de la réaction du zinc avec l'acide s'écrit $\mathrm{Zn} + 2\,\mathrm{H^+} \longrightarrow \mathrm{Zn^{2+}} + \mathrm{H_2}$.
+      Vérifier qu'elle est ajustée.
+    indice: Compter atomes et charges.
+    etapes:
+      - type: calcul
+        titre: Les atomes
+        texte: Zinc 1 à gauche, 1 à droite. Hydrogène 2 à gauche, 2 à droite.
+      - type: calcul
+        titre: Les charges
+        texte: À gauche, $2 \times (+1) = +2$. À droite, $+2$.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>L'équation est ajustée</mark>, atomes et charges sont conservés.
+
+  - titre: Le pH pendant la réaction
+    difficulte: 2
+    type: piege
+    enonce: |
+      Au début, l'acide chlorhydrique a un pH de 1. On ajoute du fer en excès. Un élève pense que le pH va diminuer « car la réaction rend la solution plus acide ». Corriger.
+    indice: Les ions $\mathrm{H^+}$ sont-ils produits ou consommés ?
+    etapes:
+      - type: piege
+        titre: L'erreur
+        texte: >-
+          D'après l'équation, les ions $\mathrm{H^+}$ sont des réactifs : ils sont consommés.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>Il y a de moins en moins d'ions $\mathrm{H^+}$, le pH augmente</mark>.
+
+  - titre: La casserole en cuivre
+    difficulte: 3
+    type: brevet
+    enonce: |
+      Un élève veut détartrer une bouilloire. Il hésite entre une bouilloire en aluminium et une en cuivre, et utilise un détartrant à base d'acide chlorhydrique.
+      1. Avec laquelle risque-t-il d'abîmer le métal ? Justifier.
+      2. Quelles précautions doit-il prendre ?
+    indice: Quels métaux l'acide chlorhydrique attaque-t-il ?
+    etapes:
+      - type: calcul
+        titre: Le métal attaqué
+        texte: L'acide chlorhydrique réagit avec l'aluminium, pas avec le cuivre.
+      - type: calcul
+        titre: Le risque
+        texte: Dans la bouilloire en aluminium, le métal serait rongé et du dihydrogène se formerait.
+      - type: conc
+        titre: Précautions
+        texte: <mark>Gants et lunettes, pièce aérée, pas de flamme</mark>, et un rinçage soigné avant de faire chauffer de l'eau.

@@ -1,0 +1,43 @@
+exercices:
+  - titre: Renouvelable ou non ?
+    difficulte: 1
+    type: application
+    enonce: |
+      Classer : le vent, le charbon, le Soleil, le gaz naturel, l'eau d'un barrage, le pétrole.
+    indice: Se reconstitue-t-elle rapidement ?
+    etapes:
+      - type: calcul
+        titre: Renouvelables
+        texte: Le vent, le Soleil, l'eau du barrage.
+      - type: conc
+        titre: Non renouvelables
+        texte: <mark>Le charbon, le gaz naturel, le pétrole</mark>, formés en des millions d'années.
+
+  - titre: La chaîne d'énergie d'une lampe solaire
+    difficulte: 2
+    type: methode
+    enonce: |
+      Une lampe de jardin se recharge le jour grâce à un petit panneau solaire et une batterie, et s'allume la nuit. Décrire la chaîne d'énergie.
+    indice: Suivre l'énergie depuis le Soleil.
+    etapes:
+      - type: calcul
+        titre: Le jour
+        texte: Le Soleil envoie de l'énergie lumineuse. Le panneau la convertit en énergie électrique, stockée dans la batterie sous forme chimique.
+      - type: conc
+        titre: La nuit
+        texte: <mark>La batterie redonne de l'énergie électrique, que la lampe convertit en énergie lumineuse</mark>.
+
+  - titre: L'électricité, une source ?
+    difficulte: 1
+    type: piege
+    enonce: |
+      Un élève classe l'électricité parmi les sources d'énergie renouvelables. Corriger.
+    indice: D'où vient l'électricité ?
+    etapes:
+      - type: piege
+        titre: L'erreur
+        texte: L'électricité est produite par une centrale, une éolienne, un panneau solaire. C'est une forme d'énergie.
+      - type: conc
+        titre: Conclusion
+        texte: >-
+          <mark>L'électricité est renouvelable ou non selon la source qui l'a produite</mark> : vent et Soleil d'un côté, gaz et charbon de l'autre.

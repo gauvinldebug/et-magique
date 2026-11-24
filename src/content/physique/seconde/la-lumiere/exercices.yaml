@@ -1,0 +1,68 @@
+exercices:
+  - titre: Huit minutes depuis le Soleil
+    difficulte: 1
+    type: application
+    enonce: |
+      Le Soleil est à $1{,}5 \times 10^{11}\ \mathrm{m}$ de la Terre. Combien de temps met sa lumière pour nous parvenir ?
+    indice: $\Delta t = d/c$.
+    etapes:
+      - type: calcul
+        titre: Le calcul
+        texte: $\Delta t = 1{,}5 \times 10^{11} / 3{,}00 \times 10^{8} = 500\ \mathrm{s}$.
+      - type: conc
+        titre: Résultat
+        texte: <mark>Environ 8 minutes et 20 secondes</mark>. On voit le Soleil tel qu'il était il y a 8 minutes.
+
+  - titre: Un rayon qui entre dans l'eau
+    difficulte: 2
+    type: methode
+    enonce: |
+      Un rayon lumineux passe de l'air ($n_1 = 1{,}00$) à l'eau ($n_2 = 1{,}33$) avec un angle d'incidence de 45°.
+      1. Calculer l'angle de réfraction.
+      2. Calculer la vitesse de la lumière dans l'eau.
+    indice: Isoler $\sin i_2$, puis utiliser $\arcsin$.
+    etapes:
+      - type: calcul
+        titre: Le sinus
+        texte: $\sin i_2 = \dfrac{n_1 \sin i_1}{n_2} = \dfrac{1{,}00 \times \sin 45°}{1{,}33} \approx 0{,}532$.
+      - type: calcul
+        titre: L'angle
+        texte: $i_2 = \arcsin(0{,}532) \approx 32°$. Le rayon se rapproche de la normale.
+      - type: conc
+        titre: La vitesse
+        texte: <mark>$v = c/n = 3{,}00 \times 10^{8}/1{,}33 \approx 2{,}26 \times 10^{8}\ \mathrm{m \cdot s^{-1}}$</mark>.
+
+  - titre: L'angle mal mesuré
+    difficulte: 2
+    type: piege
+    enonce: |
+      Un rayon arrive sur une vitre en faisant un angle de 30° avec la surface du verre. Un élève écrit $i_1 = 30°$. Corriger.
+    indice: Par rapport à quoi mesure-t-on les angles ?
+    etapes:
+      - type: piege
+        titre: L'erreur
+        texte: L'angle d'incidence se mesure par rapport à la normale, perpendiculaire à la surface, et non par rapport à la surface.
+      - type: conc
+        titre: Le bon angle
+        texte: <mark>$i_1 = 90° - 30° = 60°$</mark>.
+
+  - titre: Identifier un gaz
+    difficulte: 3
+    type: bac
+    enonce: |
+      Le spectre d'émission d'une lampe inconnue présente des raies à 405, 436, 546 et 579 nm. Spectres de référence : sodium (589 nm, 589,6 nm) ; mercure (405, 436, 546, 577, 579 nm) ; hydrogène (434, 486, 656 nm).
+      1. Quel type de spectre est-ce ? Quelle sorte de source l'émet ?
+      2. Quel gaz contient la lampe ?
+      3. Les raies sont-elles toutes dans le visible ?
+    indice: Chaque raie de la lampe doit se retrouver dans la référence.
+    etapes:
+      - type: methode
+        titre: Le type
+        texte: >-
+          Quelques raies fines : spectre de raies d'émission, émis par un gaz excité.
+      - type: calcul
+        titre: Comparaison
+        texte: 405, 436, 546 et 579 nm figurent toutes dans le spectre du mercure. Aucune ne correspond au sodium, et l'hydrogène n'a ni 405 ni 546.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>La lampe contient du mercure</mark>. Toutes les raies sont entre 400 et 800 nm, donc visibles ; la raie à 405 nm est un violet très proche de l'ultraviolet.

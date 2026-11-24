@@ -1,0 +1,49 @@
+questions:
+  - question: Dans une désintégration $\alpha$, le noyau émet…
+    choix: ['un électron', 'un positon', 'un noyau d''hélium 4', 'un photon']
+    bonne: 2
+    explication: La particule $\alpha$ est un noyau $^{4}_{2}\mathrm{He}$. Le noyau fils perd 4 nucléons et 2 protons.
+    revoir: cours
+
+  - question: Au cours d'une désintégration $\beta^-$, le nombre de charge $Z$…
+    choix: ['diminue de 1', 'augmente de 1', 'ne change pas', 'diminue de 2']
+    bonne: 1
+    explication: Un électron $^{\ 0}_{-1}\mathrm{e}$ est émis, donc $Z_{\text{fils}} = Z + 1$ pour conserver la charge.
+    revoir: cours
+
+  - question: La désintégration d'un noyau donné…
+    choix: ['se produit au bout d''une demi-vie exactement', 'est aléatoire', 'dépend de la température', 'se produit quand on le mesure']
+    bonne: 1
+    explication: >-
+      Comme une pièce lancée : impossible de prédire quel noyau se désintègre, seule la population suit une loi.
+    revoir: cours
+
+  - question: Il reste 1/8 des noyaux initiaux au bout de…
+    choix: ['8 demi-vies', '3 demi-vies', '4 demi-vies', '1/8 de demi-vie']
+    bonne: 1
+    explication: $\frac{1}{2^3} = \frac{1}{8}$.
+    revoir: exercices
+
+  - question: La relation entre demi-vie et constante radioactive est…
+    choix: ['$t_{1/2} = \lambda \ln 2$', '$t_{1/2} = \frac{\ln 2}{\lambda}$', '$t_{1/2} = \frac{1}{2\lambda}$', '$t_{1/2} = \mathrm{e}^{-\lambda}$']
+    bonne: 1
+    explication: $\mathrm{e}^{-\lambda t_{1/2}} = \frac{1}{2}$ donne $\lambda t_{1/2} = \ln 2$.
+    revoir: cours
+
+  - question: Une activité de 500 Bq signifie…
+    choix: ['500 noyaux dans l''échantillon', '500 désintégrations par seconde', '500 désintégrations par heure', 'une demi-vie de 500 s']
+    bonne: 1
+    explication: 1 Bq = 1 désintégration par seconde.
+    revoir: cours
+
+  - question: L'activité d'un échantillon est proportionnelle…
+    choix: ['au nombre de noyaux radioactifs présents', 'à la demi-vie', 'à la masse de l''écran', 'au temps écoulé']
+    bonne: 0
+    explication: $A = \lambda N$.
+    revoir: cours
+
+  - question: Contre le rayonnement $\gamma$, la protection la plus efficace est…
+    choix: ['une feuille de papier', 'une feuille d''aluminium', 'un écran épais de plomb ou de béton', 'des gants']
+    bonne: 2
+    explication: Le rayonnement $\gamma$ est très pénétrant. Le papier suffit seulement pour les particules $\alpha$.
+    revoir: cours

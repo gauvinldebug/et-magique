@@ -1,0 +1,71 @@
+exercices:
+  - titre: La force sur un hublot
+    difficulte: 1
+    type: application
+    enonce: |
+      Le hublot d'un sous-marin est un disque de rayon $r = 10\ \mathrm{cm}$. L'eau exerce sur lui une pression $P = 2{,}0 \times 10^{6}\ \mathrm{Pa}$.
+      Calculer la force pressante.
+    indice: Surface d'un disque, en mètres carrés.
+    etapes:
+      - type: calcul
+        titre: La surface
+        texte: $S = \pi r^2 = \pi \times 0{,}10^2 \approx 3{,}1 \times 10^{-2}\ \mathrm{m^2}$.
+      - type: conc
+        titre: La force
+        texte: <mark>$F = P \times S \approx 2{,}0 \times 10^{6} \times 3{,}1 \times 10^{-2} \approx 6{,}3 \times 10^{4}\ \mathrm{N}$</mark>, le poids d'une masse de plus de 6 tonnes.
+
+  - titre: Le ballon du plongeur
+    difficulte: 2
+    type: application
+    enonce: |
+      À la surface, où $P_1 = 1{,}0 \times 10^{5}\ \mathrm{Pa}$, un ballon souple contient $V_1 = 6{,}0\ \mathrm{L}$ d'air. Le plongeur l'emmène à 20 m de profondeur. La température ne change pas.
+      1. Calculer la pression à 20 m ($\rho = 1{,}0 \times 10^{3}\ \mathrm{kg \cdot m^{-3}}$, $g = 9{,}8\ \mathrm{N \cdot kg^{-1}}$).
+      2. En déduire le volume du ballon.
+    indice: D'abord la loi de la statique, puis Mariotte.
+    etapes:
+      - type: calcul
+        titre: La pression à 20 m
+        texte: $P_2 = P_1 + \rho g h = 1{,}0 \times 10^{5} + 1{,}0 \times 10^{3} \times 9{,}8 \times 20 \approx 3{,}0 \times 10^{5}\ \mathrm{Pa}$.
+      - type: calcul
+        titre: Mariotte
+        texte: $V_2 = P_1 V_1 / P_2 = 1{,}0 \times 10^{5} \times 6{,}0 / 3{,}0 \times 10^{5}$.
+      - type: conc
+        titre: Résultat
+        texte: <mark>$V_2 \approx 2{,}0\ \mathrm{L}$</mark>. La pression a triplé, le volume est divisé par 3.
+        note: c'est pour cela qu'un plongeur ne doit jamais bloquer sa respiration en remontant
+
+  - titre: La forme du récipient
+    difficulte: 2
+    type: piege
+    enonce: |
+      Deux récipients sont remplis d'eau sur 50 cm de hauteur. L'un est une bassine large de 60 cm, l'autre un tube de 2 cm de diamètre. Un élève affirme que la pression au fond est plus grande dans la bassine, « parce qu'il y a plus d'eau ». Corriger.
+    indice: Qu'est-ce qui apparaît dans la loi fondamentale ?
+    etapes:
+      - type: piege
+        titre: L'erreur
+        texte: La quantité d'eau ne compte pas. La loi $P_B - P_A = \rho g (z_A - z_B)$ ne fait intervenir que la différence d'altitude.
+      - type: calcul
+        titre: Le calcul
+        texte: Dans les deux cas, $P_{\text{fond}} - P_{\text{atm}} = 1{,}0 \times 10^{3} \times 9{,}8 \times 0{,}50 \approx 4{,}9 \times 10^{3}\ \mathrm{Pa}$.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>La pression au fond est la même</mark>. La force sur le fond, elle, est plus grande dans la bassine, car sa surface est plus grande.
+
+  - titre: Mesurer une profondeur
+    difficulte: 3
+    type: bac
+    enonce: |
+      Un capteur de pression descendu dans un lac indique $P = 1{,}75 \times 10^{5}\ \mathrm{Pa}$. À la surface, il indiquait $1{,}01 \times 10^{5}\ \mathrm{Pa}$.
+      1. À quelle profondeur se trouve-t-il ? ($\rho = 1{,}00 \times 10^{3}\ \mathrm{kg \cdot m^{-3}}$, $g = 9{,}81\ \mathrm{N \cdot kg^{-1}}$)
+      2. Expliquer à l'échelle microscopique pourquoi l'air d'une bouteille fermée, descendue à cette profondeur, n'a pas changé de pression si elle est rigide.
+    indice: $\Delta P = \rho g h$.
+    etapes:
+      - type: calcul
+        titre: L'écart de pression
+        texte: $\Delta P = 1{,}75 \times 10^{5} - 1{,}01 \times 10^{5} = 0{,}74 \times 10^{5}\ \mathrm{Pa}$.
+      - type: calcul
+        titre: La profondeur
+        texte: $h = \Delta P / (\rho g) = 7{,}4 \times 10^{4} / (1{,}00 \times 10^{3} \times 9{,}81) \approx 7{,}5\ \mathrm{m}$.
+      - type: conc
+        titre: La bouteille rigide
+        texte: Le volume ne change pas, le nombre de molécules non plus, et la température est supposée constante. <mark>Les chocs sur les parois intérieures sont les mêmes, la pression de l'air intérieur ne change pas</mark>. Seule la paroi subit l'écart.

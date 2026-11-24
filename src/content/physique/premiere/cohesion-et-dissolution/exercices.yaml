@@ -1,0 +1,81 @@
+exercices:
+  - titre: Écrire une équation de dissolution
+    difficulte: 1
+    type: application
+    enonce: |
+      On dissout $n = 0{,}020\ \mathrm{mol}$ de sulfate de sodium $\mathrm{Na_2SO_4(s)}$ dans de l'eau pour obtenir $V = 200\ \mathrm{mL}$ de solution.
+      1. Écrire l'équation de dissolution.
+      2. Calculer la concentration en soluté apporté, puis celles des ions.
+    indice: Le solide est neutre. Deux $\mathrm{Na^+}$ pour un $\mathrm{SO_4^{2-}}$.
+    etapes:
+      - type: calcul
+        titre: L'équation
+        texte: |
+          $$\mathrm{Na_2SO_4(s)} \longrightarrow 2\,\mathrm{Na^+(aq)} + \mathrm{SO_4^{2-}(aq)}$$
+      - type: calcul
+        titre: Le soluté apporté
+        texte: $c = n/V = 0{,}020 / 0{,}200 = 0{,}10\ \mathrm{mol \cdot L^{-1}}$.
+      - type: conc
+        titre: Les ions
+        texte: <mark>$[\mathrm{Na^+}] = 2c = 0{,}20\ \mathrm{mol \cdot L^{-1}}$ et $[\mathrm{SO_4^{2-}}] = c = 0{,}10\ \mathrm{mol \cdot L^{-1}}$</mark>.
+
+  - titre: Pourquoi l'eau bout si tard
+    difficulte: 2
+    type: methode
+    enonce: |
+      L'eau $\mathrm{H_2O}$ bout à 100 °C, le sulfure d'hydrogène $\mathrm{H_2S}$, de même forme coudée, bout à −60 °C. Le soufre est moins électronégatif que l'oxygène.
+      Expliquer la différence.
+    indice: Quelle interaction existe entre molécules d'eau et pas entre molécules de $\mathrm{H_2S}$ ?
+    etapes:
+      - type: methode
+        titre: Ce que casse l'ébullition
+        texte: L'ébullition sépare les molécules les unes des autres. Elle casse les interactions entre molécules, pas les liaisons O-H ou S-H.
+      - type: her
+        titre: La différence
+        texte: Entre molécules d'eau, un H lié à O s'attache au doublet non liant d'un O voisin. Ce sont des liaisons hydrogène. Le soufre n'est pas assez électronégatif pour en former.
+      - type: conc
+        titre: Conclusion
+        texte: Il faut beaucoup plus d'énergie pour séparer les molécules d'eau, <mark>donc l'eau bout à une température bien plus haute</mark>.
+
+  - titre: Choisir un solvant d'extraction
+    difficulte: 2
+    type: methode
+    enonce: >-
+      On veut extraire le diiode $\mathrm{I_2}$ d'une solution aqueuse. Données :
+      <table><tr><th>Solvant</th><th>Miscible à l'eau</th><th>Solubilité de I2</th><th>Danger</th></tr>
+      <tr><td>éthanol</td><td>oui</td><td>grande</td><td>inflammable</td></tr>
+      <tr><td>cyclohexane</td><td>non</td><td>grande</td><td>inflammable, nocif</td></tr>
+      <tr><td>eau</td><td>-</td><td>faible</td><td>aucun</td></tr></table>
+      Quel solvant choisir ? Dans quelle phase est le diiode après décantation, sachant que le cyclohexane est moins dense que l'eau ?
+    indice: Il faut deux phases séparées.
+    etapes:
+      - type: piege
+        titre: L'éthanol est éliminé
+        texte: L'éthanol dissout bien le diiode, mais il est miscible à l'eau. On n'obtiendrait qu'une seule phase, impossible à séparer.
+      - type: calcul
+        titre: Le bon choix
+        texte: Le cyclohexane n'est pas miscible à l'eau et dissout bien le diiode, molécule apolaire comme lui.
+      - type: conc
+        titre: Après décantation
+        texte: <mark>Le diiode est dans la phase supérieure, le cyclohexane</mark>, moins dense que l'eau.
+        note: le semblable dissout le semblable
+
+  - titre: Comment lave un savon
+    difficulte: 3
+    type: bac
+    enonce: |
+      Le savon de Marseille contient des ions oléate $\mathrm{C_{17}H_{33}COO^-}$.
+      1. Repérer la partie hydrophile et la partie hydrophobe.
+      2. Comment qualifie-t-on une telle espèce ?
+      3. Expliquer en quelques lignes comment une tache d'huile est retirée d'un tissu.
+    indice: Une tête et une queue, chacune dans son camp.
+    etapes:
+      - type: methode
+        titre: Les deux parties
+        texte: La tête carboxylate $\mathrm{{-}COO^-}$, chargée, est hydrophile. La longue chaîne carbonée $\mathrm{C_{17}H_{33}{-}}$ est apolaire, donc hydrophobe et lipophile.
+      - type: calcul
+        titre: Le nom
+        texte: Une espèce qui a une partie hydrophile et une partie hydrophobe est dite amphiphile.
+      - type: conc
+        titre: Le lavage
+        texte: Les chaînes carbonées pénètrent dans l'huile, les têtes restent dans l'eau. La goutte d'huile se retrouve enfermée dans une micelle, entourée de têtes chargées, <mark>et la micelle part avec l'eau de rinçage</mark>.

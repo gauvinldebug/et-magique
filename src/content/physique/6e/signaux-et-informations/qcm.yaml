@@ -1,0 +1,30 @@
+questions:
+  - question: Dans un feu tricolore, le feu est…
+    choix: ['le récepteur', "l'émetteur", 'le code', "l'information"]
+    bonne: 1
+    explication: Il produit le signal lumineux.
+    revoir: cours
+
+  - question: Un téléphone portable communique grâce à des signaux…
+    choix: ['sonores', 'radio', 'odorants', 'de fumée']
+    bonne: 1
+    explication: Des ondes invisibles captées par son antenne.
+    revoir: cours
+
+  - question: Le son voyage dans l'air à environ…
+    choix: ['340 m par seconde', '300 000 km par seconde', '1 m par seconde', '3 km par heure']
+    bonne: 0
+    explication: Bien moins vite que la lumière.
+    revoir: cours
+
+  - question: En code binaire, l'information est écrite avec…
+    choix: ['des lettres', 'des 0 et des 1', 'des couleurs', 'des notes de musique']
+    bonne: 1
+    explication: Deux états seulement.
+    revoir: cours
+
+  - question: Pendant un orage, on voit l'éclair avant d'entendre le tonnerre car…
+    choix: ["l'éclair se produit avant", 'la lumière va plus vite que le son', 'le son se perd', 'nos yeux sont plus rapides']
+    bonne: 1
+    explication: 300 000 km/s contre 340 m/s.
+    revoir: cours

@@ -1,0 +1,30 @@
+questions:
+  - question: La cohésion d'un cristal de chlorure de sodium est assurée par…
+    choix: ['des liaisons hydrogène', "l'interaction électrostatique entre ions", 'des interactions de Van der Waals seules', 'des liaisons covalentes']
+    bonne: 1
+    explication: Cations $\mathrm{Na^+}$ et anions $\mathrm{Cl^-}$ s'attirent.
+    revoir: cours
+
+  - question: Quand la glace fond, on casse…
+    choix: ['les liaisons O-H des molécules', 'des liaisons hydrogène entre molécules', 'des ions', 'rien du tout']
+    bonne: 1
+    explication: On sépare les molécules, on ne les détruit pas.
+    revoir: cours
+
+  - question: Une liaison hydrogène peut se former avec un H lié à…
+    choix: ['un carbone', 'un oxygène', 'un hydrogène', 'un sodium']
+    bonne: 1
+    explication: Il faut un H lié à O, N ou F.
+    revoir: cours
+
+  - question: L'équation de dissolution de $\mathrm{MgCl_2}$ est…
+    choix: ['$\mathrm{MgCl_2} \to \mathrm{Mg^{2+}} + \mathrm{Cl^-}$', '$\mathrm{MgCl_2} \to \mathrm{Mg^{2+}} + 2\,\mathrm{Cl^-}$', '$\mathrm{MgCl_2} + \mathrm{H_2O} \to \mathrm{Mg^{2+}} + 2\,\mathrm{Cl^-}$', '$\mathrm{MgCl_2} \to \mathrm{Mg^+} + \mathrm{Cl_2^-}$']
+    bonne: 1
+    explication: Conservation de la charge, et pas d'eau dans l'équation.
+    revoir: exercices
+
+  - question: Pour une extraction, le solvant doit être…
+    choix: ["miscible à l'eau", "non miscible à l'eau, l'espèce y étant très soluble", "plus dense que l'eau obligatoirement", "de l'eau"]
+    bonne: 1
+    explication: Il faut deux phases séparables.
+    revoir: cours

@@ -1,0 +1,77 @@
+exercices:
+  - titre: Équilibrer la combustion du propane
+    difficulte: 1
+    type: application
+    enonce: |
+      Écrire l'équation de la combustion complète du propane $\mathrm{C_3H_8}$.
+    indice: C, puis H, puis O.
+    etapes:
+      - type: calcul
+        titre: Carbone et hydrogène
+        texte: 3 C donnent $3\,\mathrm{CO_2}$. 8 H donnent $4\,\mathrm{H_2O}$.
+      - type: calcul
+        titre: Oxygène
+        texte: À droite, $3 \times 2 + 4 = 10$ atomes O, donc $5\,\mathrm{O_2}$.
+      - type: conc
+        titre: Équation
+        texte: <mark>$\mathrm{C_3H_8} + 5\,\mathrm{O_2} \longrightarrow 3\,\mathrm{CO_2} + 4\,\mathrm{H_2O}$</mark>.
+
+  - titre: Faire bouillir de l'eau au camping
+    difficulte: 2
+    type: application
+    enonce: |
+      On veut porter 1,0 L d'eau de 20 °C à 100 °C avec un réchaud à butane. Il faut pour cela $Q = 3{,}3 \times 10^{5}\ \mathrm{J}$. Le pouvoir calorifique du butane est $46\ \mathrm{MJ \cdot kg^{-1}}$.
+      1. Quelle masse de butane faut-il brûler si toute l'énergie va dans l'eau ?
+      2. En réalité, il en faut environ deux fois plus. Pourquoi ?
+    indice: $Q = m \times PC$, attention aux unités.
+    etapes:
+      - type: calcul
+        titre: La masse
+        texte: $m = Q/PC = 3{,}3 \times 10^{5} / 46 \times 10^{6} \approx 7{,}2 \times 10^{-3}\ \mathrm{kg}$, soit environ 7 g.
+      - type: conc
+        titre: Les pertes
+        texte: Une grande partie de l'énergie chauffe l'air autour, la casserole et le réchaud. <mark>Le transfert vers l'eau est loin d'être total</mark>.
+
+  - titre: Énergie de combustion de l'éthanol
+    difficulte: 3
+    type: bac
+    enonce: |
+      La combustion de l'éthanol $\mathrm{CH_3{-}CH_2{-}OH}$ s'écrit $\mathrm{C_2H_6O} + 3\,\mathrm{O_2} \longrightarrow 2\,\mathrm{CO_2} + 3\,\mathrm{H_2O}$ (tout gazeux).
+      Énergies de liaison ($\mathrm{kJ \cdot mol^{-1}}$) : C-H 415, C-C 348, C-O 358, O-H 463, O=O 498, C=O 804.
+      1. Compter les liaisons de la molécule d'éthanol.
+      2. Calculer l'énergie molaire de combustion.
+      3. En déduire l'énergie libérée par 1,0 kg d'éthanol ($M = 46\ \mathrm{g \cdot mol^{-1}}$).
+    indice: Dessiner la formule développée et compter chaque trait.
+    etapes:
+      - type: methode
+        titre: Les liaisons de l'éthanol
+        texte: 5 liaisons C-H, 1 liaison C-C, 1 liaison C-O, 1 liaison O-H.
+      - type: calcul
+        titre: Liaisons cassées
+        texte: $5 \times 415 + 348 + 358 + 463 + 3 \times 498 = 4738\ \mathrm{kJ}$.
+      - type: calcul
+        titre: Liaisons formées
+        texte: Dans $2\,\mathrm{CO_2}$, 4 liaisons C=O. Dans $3\,\mathrm{H_2O}$, 6 liaisons O-H. $4 \times 804 + 6 \times 463 = 5994\ \mathrm{kJ}$.
+      - type: calcul
+        titre: Énergie molaire
+        texte: $E_r = 4738 - 5994 = -1256\ \mathrm{kJ \cdot mol^{-1}}$. Négative, la combustion libère de l'énergie.
+      - type: conc
+        titre: Pour un kilogramme
+        texte: 1,0 kg contient $1000/46 \approx 21{,}7\ \mathrm{mol}$. <mark>Énergie libérée environ $21{,}7 \times 1256 \approx 2{,}7 \times 10^{4}\ \mathrm{kJ}$, soit $27\ \mathrm{MJ}$</mark>, le pouvoir calorifique de l'éthanol.
+
+  - titre: Le signe de l'énergie
+    difficulte: 2
+    type: piege
+    enonce: |
+      Un élève calcule pour le méthane : $E_r = 3460 - 2656 = +804\ \mathrm{kJ \cdot mol^{-1}}$ et conclut que la combustion absorbe de l'énergie. Corriger.
+    indice: Dans quel ordre fait-on la différence ?
+    etapes:
+      - type: piege
+        titre: L'erreur
+        texte: Il a fait formées moins cassées. Or casser coûte (on fournit), former libère.
+      - type: calcul
+        titre: Le bon calcul
+        texte: $E_r = 2656 - 3460 = -804\ \mathrm{kJ \cdot mol^{-1}}$.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>Le signe est négatif, la réaction est exothermique</mark>. Heureusement pour la cuisinière.

@@ -1,0 +1,48 @@
+questions:
+  - question: Le groupe $\mathrm{{-}COOH}$ caractérise…
+    choix: ['un ester', 'un acide carboxylique', 'un aldéhyde', 'un alcool']
+    bonne: 1
+    explication: Groupe carboxyle, famille des acides carboxyliques.
+    revoir: cours
+
+  - question: La propanone est…
+    choix: ['un aldéhyde', 'une cétone', 'un alcool', 'un ester']
+    bonne: 1
+    explication: Le suffixe -one et le $\mathrm{C{=}O}$ au milieu de la chaîne.
+    revoir: cours
+
+  - question: Le propan-1-ol et le propan-2-ol sont…
+    choix: ['la même molécule', 'des isomères de constitution', 'des polymères', 'des esters']
+    bonne: 1
+    explication: Même formule brute $\mathrm{C_3H_8O}$, position du groupe hydroxyle différente.
+    revoir: cours
+
+  - question: Une réaction où une liaison double devient simple et deux molécules s'assemblent est…
+    choix: ['une substitution', 'une addition', 'une élimination', 'une oxydation']
+    bonne: 1
+    explication: C'est la définition de l'addition.
+    revoir: cours
+
+  - question: Pour augmenter le rendement d'une estérification, on peut…
+    choix: ['ajouter un catalyseur', 'chauffer plus fort', 'éliminer l''eau formée', 'agiter plus vite']
+    bonne: 2
+    explication: Éliminer un produit déplace l'état final. Les autres actions accélèrent seulement.
+    revoir: cours
+
+  - question: Trois étapes de rendements 50 %, 50 % et 50 % donnent un rendement global de…
+    choix: ['50 %', '150 %', '12,5 %', '25 %']
+    bonne: 2
+    explication: $0{,}5^3 = 0{,}125$.
+    revoir: exercices
+
+  - question: Protéger un groupe caractéristique sert à…
+    choix: ['le rendre plus réactif', 'l''empêcher de réagir lors d''une étape', 'accélérer la synthèse', 'le transformer définitivement']
+    bonne: 1
+    explication: Comme un ruban de masquage, on le retire à la fin.
+    revoir: cours
+
+  - question: Une polycondensation…
+    choix: ['ne libère rien', 'libère une petite molécule à chaque liaison formée', 'nécessite une double liaison C=C', 'détruit le polymère']
+    bonne: 1
+    explication: Souvent de l'eau. C'est la voie des polyesters et des polyamides.
+    revoir: cours

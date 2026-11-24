@@ -1,0 +1,49 @@
+questions:
+  - question: En chute libre, l'accélération d'un objet…
+    choix: ['dépend de sa masse', 'est égale à $\vec{g}$', 'est nulle au sommet', 'augmente avec la vitesse']
+    bonne: 1
+    explication: $m\vec{a} = m\vec{g}$, la masse se simplifie.
+    revoir: cours
+
+  - question: Pour un projectile lancé obliquement, la composante horizontale de la vitesse…
+    choix: ['augmente', 'diminue', 'reste constante', 's''annule au sommet']
+    bonne: 2
+    explication: >-
+      Aucune force horizontale, $a_x = 0$ : l'ombre sur le sol avance à vitesse constante.
+    revoir: cours
+
+  - question: La trajectoire d'un projectile lancé obliquement est…
+    choix: ['une droite', 'un cercle', 'une parabole', 'une sinusoïde']
+    bonne: 2
+    explication: $y$ est un polynôme du second degré en $x$.
+    revoir: cours
+
+  - question: Au sommet de la trajectoire…
+    choix: ['$v = 0$', '$v_y = 0$', '$v_x = 0$', '$a = 0$']
+    bonne: 1
+    explication: Seule la composante verticale s'annule. L'accélération reste $\vec{g}$.
+    revoir: cours
+
+  - question: Entre deux plaques distantes de 2,0 cm sous 400 V, le champ électrique vaut…
+    choix: ['$8{,}0\ \mathrm{V \cdot m^{-1}}$', '$200\ \mathrm{V \cdot m^{-1}}$', '$2{,}0 \times 10^4\ \mathrm{V \cdot m^{-1}}$', '$800\ \mathrm{V \cdot m^{-1}}$']
+    bonne: 2
+    explication: $E = U/d = 400 / 0{,}020$.
+    revoir: cours
+
+  - question: La force subie par une charge $q$ dans un champ $\vec{E}$ est…
+    choix: ['$q\vec{E}$', '$\vec{E}/q$', '$m\vec{E}$', '$q E^2$']
+    bonne: 0
+    explication: Si $q < 0$, la force est de sens opposé au champ.
+    revoir: cours
+
+  - question: Une particule chargée accélérée sous une tension $U$, partant du repos, a une énergie cinétique finale…
+    choix: ['$q\,U$', '$U/q$', '$\frac{1}{2} q U^2$', '$m U$']
+    bonne: 0
+    explication: Théorème de l'énergie cinétique, le travail de la force électrique vaut $qU$ (en valeur absolue).
+    revoir: cours
+
+  - question: Pour un électron dans un champ électrique, on néglige en général…
+    choix: ['la force électrique', 'son poids', 'sa charge', 'sa vitesse']
+    bonne: 1
+    explication: Le poids est des milliards de milliards de fois plus faible que la force électrique.
+    revoir: exercices

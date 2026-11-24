@@ -1,0 +1,31 @@
+questions:
+  - question: Deux charges de même signe…
+    choix: ["s'attirent", 'se repoussent', "n'interagissent pas", 'dépend de leur masse']
+    bonne: 1
+    explication: Même signe, répulsion.
+    revoir: cours
+
+  - question: Si on divise par 3 la distance entre deux masses, la force de gravitation est…
+    choix: ['divisée par 3', 'multipliée par 3', 'multipliée par 9', 'divisée par 9']
+    bonne: 2
+    explication: >-
+      $1/d^2$ : $d$ divisé par 3, $d^2$ divisé par 9, force multipliée par 9.
+    revoir: cours
+
+  - question: Un électron placé dans un champ électrique $\vec{E}$ subit une force…
+    choix: ['de même sens que $\vec{E}$', 'de sens opposé à $\vec{E}$', 'perpendiculaire à $\vec{E}$', 'nulle']
+    bonne: 1
+    explication: $\vec{F} = q\vec{E}$ avec $q < 0$.
+    revoir: cours
+
+  - question: Dans un condensateur plan, le champ électrique est dirigé…
+    choix: ['de la plaque − vers la plaque +', 'de la plaque + vers la plaque −', 'parallèlement aux plaques', 'dans tous les sens']
+    bonne: 1
+    explication: Du + vers le −, perpendiculaire aux plaques.
+    revoir: cours
+
+  - question: Tension 100 V, plaques distantes de 5,0 mm. Le champ vaut…
+    choix: ['$20\ \mathrm{V \cdot m^{-1}}$', '$500\ \mathrm{V \cdot m^{-1}}$', '$2{,}0 \times 10^{4}\ \mathrm{V \cdot m^{-1}}$', '$5{,}0 \times 10^{2}\ \mathrm{V \cdot m^{-1}}$']
+    bonne: 2
+    explication: $E = 100/0{,}0050 = 2{,}0 \times 10^{4}$.
+    revoir: exercices

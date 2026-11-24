@@ -1,0 +1,30 @@
+questions:
+  - question: Pour étudier le mouvement de la Lune autour de la Terre, on choisit le référentiel…
+    choix: ['terrestre', 'géocentrique', 'héliocentrique', 'lunaire']
+    bonne: 1
+    explication: Centre de la Terre et étoiles lointaines.
+    revoir: cours
+
+  - question: Sur une chronophotographie, des points alignés et équidistants indiquent un mouvement…
+    choix: ['rectiligne accéléré', 'rectiligne uniforme', 'circulaire uniforme', 'rectiligne ralenti']
+    bonne: 1
+    explication: Même distance pendant la même durée.
+    revoir: cours
+
+  - question: $20\ \mathrm{m \cdot s^{-1}}$ correspond à…
+    choix: ['5,6 km/h', '72 km/h', '20 km/h', '200 km/h']
+    bonne: 1
+    explication: $20 \times 3{,}6$.
+    revoir: cours
+
+  - question: Le vecteur vitesse est…
+    choix: ['perpendiculaire à la trajectoire', 'tangent à la trajectoire', 'toujours vertical', 'dirigé vers le centre']
+    bonne: 1
+    explication: Il suit la direction du déplacement.
+    revoir: cours
+
+  - question: Dans un mouvement circulaire uniforme, le vecteur vitesse…
+    choix: ['est constant', 'change de direction', 'est nul', 'augmente en valeur']
+    bonne: 1
+    explication: Sa valeur reste la même, sa direction tourne.
+    revoir: exercices

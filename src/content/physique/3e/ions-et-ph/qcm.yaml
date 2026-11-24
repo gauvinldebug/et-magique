@@ -1,0 +1,30 @@
+questions:
+  - question: L'ion $\mathrm{Cl^-}$ est un atome de chlore qui a…
+    choix: ['perdu un électron', 'gagné un électron', 'gagné un proton', 'perdu un proton']
+    bonne: 1
+    explication: Une charge négative en plus.
+    revoir: cours
+
+  - question: Avec la soude, les ions cuivre $\mathrm{Cu^{2+}}$ donnent un précipité…
+    choix: ['vert', 'rouille', 'bleu', 'blanc']
+    bonne: 2
+    explication: Hydroxyde de cuivre, bleu.
+    revoir: cours
+
+  - question: Une solution de pH 9 est…
+    choix: ['acide', 'neutre', 'basique', 'corrosive forcément']
+    bonne: 2
+    explication: pH supérieur à 7.
+    revoir: cours
+
+  - question: Une solution acide contient…
+    choix: ["plus d'ions $\\mathrm{H^+}$ que d'ions $\\mathrm{HO^-}$", "plus d'ions $\\mathrm{HO^-}$", 'aucun ion', "autant de $\\mathrm{H^+}$ que de $\\mathrm{HO^-}$"]
+    bonne: 0
+    explication: La balance penche du côté $\mathrm{H^+}$.
+    revoir: cours
+
+  - question: Pour diluer un acide concentré, on verse…
+    choix: ["l'eau dans l'acide", "l'acide dans l'eau", "les deux en même temps", "peu importe"]
+    bonne: 1
+    explication: Pour éviter les projections.
+    revoir: cours

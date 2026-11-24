@@ -1,0 +1,95 @@
+exercices:
+  - titre: Compléter une équation nucléaire
+    difficulte: 1
+    type: application
+    enonce: |
+      Compléter les équations et donner le type de désintégration.
+      1. $^{210}_{84}\mathrm{Po} \longrightarrow {}^{A}_{Z}\mathrm{Pb} + {}^{4}_{2}\mathrm{He}$
+      2. $^{60}_{27}\mathrm{Co} \longrightarrow {}^{60}_{Z}\mathrm{Ni} + {}^{\ 0}_{-1}\mathrm{e}$
+    indice: Les A s'ajoutent de chaque côté, les Z aussi.
+    etapes:
+      - type: calcul
+        titre: Équation 1
+        texte: $210 = A + 4$ donc $A = 206$ ; $84 = Z + 2$ donc $Z = 82$. On obtient $^{206}_{82}\mathrm{Pb}$, désintégration $\alpha$.
+      - type: calcul
+        titre: Équation 2
+        texte: $27 = Z - 1$ donc $Z = 28$. On obtient $^{60}_{28}\mathrm{Ni}$, désintégration $\beta^-$.
+      - type: conc
+        titre: À retenir
+        texte: <mark>Conservation du nombre de nucléons et du nombre de charge</mark>.
+
+  - titre: Compter les demi-vies
+    difficulte: 1
+    type: methode
+    enonce: |
+      Un échantillon contient $N_0 = 8{,}0 \times 10^{12}$ noyaux d'iode 131 ($t_{1/2} = 8{,}0$ jours). Combien en reste-t-il au bout de 24 jours ?
+    indice: 24 jours, c'est combien de demi-vies ?
+    etapes:
+      - type: calcul
+        titre: Le nombre de demi-vies
+        texte: $24 / 8{,}0 = 3$ demi-vies.
+      - type: conc
+        titre: Le résultat
+        texte: <mark>$N = \dfrac{N_0}{2^3} = \dfrac{8{,}0 \times 10^{12}}{8} = 1{,}0 \times 10^{12}$ noyaux</mark>.
+
+  - titre: De la demi-vie à l'activité
+    difficulte: 2
+    type: methode
+    enonce: |
+      Un échantillon contient $N = 2{,}0 \times 10^{15}$ noyaux de césium 137, de demi-vie 30 ans.
+      Calculer la constante radioactive en $\mathrm{s^{-1}}$ puis l'activité de l'échantillon. On prendra 1 an $= 3{,}15 \times 10^7$ s.
+    indice: $\lambda = \ln 2 / t_{1/2}$ avec $t_{1/2}$ en secondes, puis $A = \lambda N$.
+    etapes:
+      - type: piege
+        titre: Les unités
+        texte: Pour obtenir des becquerels, il faut $\lambda$ en $\mathrm{s^{-1}}$. $t_{1/2} = 30 \times 3{,}15 \times 10^7 \approx 9{,}5 \times 10^8\ \mathrm{s}$.
+      - type: calcul
+        titre: La constante radioactive
+        texte: $\lambda = \dfrac{0{,}693}{9{,}5 \times 10^8} \approx 7{,}3 \times 10^{-10}\ \mathrm{s^{-1}}$.
+      - type: conc
+        titre: L'activité
+        texte: <mark>$A = \lambda N \approx 7{,}3 \times 10^{-10} \times 2{,}0 \times 10^{15} \approx 1{,}5 \times 10^{6}\ \mathrm{Bq}$</mark>.
+
+  - titre: La demi-vie n'est pas une date de fin
+    difficulte: 2
+    type: piege
+    enonce: |
+      Un hôpital utilise du technétium 99m, de demi-vie 6,0 h. Un élève affirme qu'au bout de 12 h, le produit injecté a complètement disparu. Quelle fraction de l'activité initiale reste-t-il en réalité ? Au bout de combien de temps l'activité est-elle inférieure à 1 % de sa valeur initiale ?
+    indice: La moitié de la moitié. Puis $\mathrm{e}^{-\lambda t} = 0{,}01$.
+    etapes:
+      - type: piege
+        titre: L'erreur
+        texte: 12 h = 2 demi-vies. À chaque demi-vie, on perd la moitié de ce qui reste, pas la moitié du départ.
+      - type: calcul
+        titre: Au bout de 12 h
+        texte: Il reste $\frac{1}{2} \times \frac{1}{2} = \frac{1}{4}$ de l'activité initiale, soit 25 %.
+      - type: calcul
+        titre: Moins de 1 %
+        texte: $t = \dfrac{t_{1/2}}{\ln 2} \ln(100) = \dfrac{6{,}0}{0{,}693} \times 4{,}61 \approx 40$ h.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>Il reste 25 % à 12 h, et il faut environ 40 h (près de 7 demi-vies) pour descendre sous 1 %</mark>.
+
+  - titre: Dater un charbon de bois
+    difficulte: 3
+    type: bac
+    enonce: |
+      Un charbon de bois trouvé dans une grotte ornée a une activité due au carbone 14 de 1,2 désintégrations par minute et par gramme de carbone. Un charbon actuel a une activité de 13,6 désintégrations par minute et par gramme. Demi-vie du carbone 14 : 5 730 ans.
+      1. Pourquoi l'activité d'un être vivant reste-t-elle constante ?
+      2. Établir l'expression de la date $t$ en fonction de $A_0$, $A$ et $t_{1/2}$.
+      3. Calculer l'âge du charbon.
+    indice: $A = A_0\,\mathrm{e}^{-\lambda t}$, on isole $t$ en prenant le logarithme.
+    etapes:
+      - type: methode
+        titre: Un être vivant
+        texte: Il échange du carbone avec l'atmosphère (respiration, photosynthèse, alimentation), donc la proportion de carbone 14 reste celle de l'air. Elle ne décroît qu'après la mort.
+      - type: calcul
+        titre: L'expression
+        texte: |
+          $$\frac{A}{A_0} = \mathrm{e}^{-\lambda t} \iff \ln\frac{A_0}{A} = \lambda t \iff t = \frac{t_{1/2}}{\ln 2}\,\ln\frac{A_0}{A}$$
+      - type: calcul
+        titre: Le calcul
+        texte: $t = \dfrac{5730}{0{,}693} \times \ln\dfrac{13{,}6}{1{,}2} \approx 8270 \times 2{,}43 \approx 2{,}0 \times 10^4$ ans.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>Le charbon a environ 20 000 ans</mark>, ce qui correspond à la fin du Paléolithique supérieur.

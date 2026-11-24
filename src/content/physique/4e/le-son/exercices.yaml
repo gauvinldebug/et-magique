@@ -1,0 +1,62 @@
+exercices:
+  - titre: Le son dans le rail
+    difficulte: 1
+    type: application
+    enonce: |
+      On frappe un rail d'acier de 500 m de long. Combien de temps met le son pour le parcourir dans l'acier (5000 m/s), puis dans l'air (340 m/s) ?
+    indice: $t = d/v$.
+    etapes:
+      - type: calcul
+        titre: Dans l'acier
+        texte: $t = 500/5000 = 0{,}10\ \mathrm{s}$.
+      - type: calcul
+        titre: Dans l'air
+        texte: $t = 500/340 \approx 1{,}5\ \mathrm{s}$.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>On entend d'abord le son par le rail, puis par l'air</mark>, environ 1,4 s plus tard.
+
+  - titre: Le sonar du bateau
+    difficulte: 2
+    type: brevet
+    enonce: |
+      Un sonar envoie des ultrasons vers le fond de la mer. L'écho revient 0,40 s plus tard. Le son va à 1500 m/s dans l'eau.
+      Calculer la profondeur.
+    indice: Le son fait l'aller et le retour.
+    etapes:
+      - type: calcul
+        titre: La distance totale
+        texte: $d = 1500 \times 0{,}40 = 600\ \mathrm{m}$, aller et retour.
+      - type: conc
+        titre: La profondeur
+        texte: <mark>$600/2 = 300\ \mathrm{m}$</mark>.
+
+  - titre: L'explosion dans l'espace
+    difficulte: 1
+    type: piege
+    enonce: |
+      Dans un film, un vaisseau explose dans l'espace avec un énorme bruit. Est-ce réaliste ?
+    indice: Qu'y a-t-il entre les vaisseaux ?
+    etapes:
+      - type: piege
+        titre: L'erreur
+        texte: Le son a besoin d'un milieu matériel pour se propager. L'espace est presque vide.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>Non, l'explosion serait silencieuse</mark> pour un observateur dans un autre vaisseau.
+
+  - titre: Le casque audio
+    difficulte: 2
+    type: brevet
+    enonce: |
+      Un casque audio réglé au maximum produit 100 dB. Une conversation produit environ 60 dB.
+      1. Ce niveau est-il dangereux ? Justifier.
+      2. Proposer deux gestes pour protéger son audition.
+    indice: Quel est le seuil de danger ?
+    etapes:
+      - type: calcul
+        titre: Le danger
+        texte: 100 dB dépasse le seuil de danger de 85 dB. Une écoute prolongée peut abîmer définitivement l'oreille.
+      - type: conc
+        titre: Les gestes
+        texte: <mark>Baisser le volume et faire des pauses régulières</mark>, ou limiter la durée d'écoute.

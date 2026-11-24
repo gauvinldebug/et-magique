@@ -1,0 +1,102 @@
+exercices:
+  - titre: Reconnaître les facteurs cinétiques
+    difficulte: 1
+    type: application
+    enonce: |
+      Pour chaque situation, nommer le facteur cinétique ou le procédé utilisé.
+      1. On conserve les aliments au réfrigérateur.
+      2. On écrase un comprimé avant de le dissoudre.
+      3. Le pot catalytique d'une voiture contient du platine.
+      4. On plonge un prélèvement dans de l'eau glacée avant de le doser.
+    indice: Température, surface de contact, catalyse, trempe.
+    etapes:
+      - type: calcul
+        titre: Les réponses
+        texte: 1. Température basse, les réactions de dégradation sont ralenties. 2. Surface de contact augmentée. 3. Catalyse hétérogène (solide et gaz). 4. Trempe, pour arrêter la réaction.
+      - type: conc
+        titre: À retenir
+        texte: <mark>La température est le facteur cinétique le plus courant</mark>, dans un sens comme dans l'autre.
+
+  - titre: Lire un temps de demi-réaction
+    difficulte: 1
+    type: methode
+    enonce: |
+      Lors de la décomposition de l'eau oxygénée, la concentration de $\mathrm{H_2O_2}$ passe de $[\mathrm{H_2O_2}]_0 = 0{,}080\ \mathrm{mol \cdot L^{-1}}$ à 0 (réaction totale). On lit sur la courbe que $[\mathrm{H_2O_2}] = 0{,}040\ \mathrm{mol \cdot L^{-1}}$ à $t = 12$ min.
+      Donner $t_{1/2}$ et estimer la durée de la transformation.
+    indice: La moitié du réactif limitant a disparu quand l'avancement vaut la moitié de sa valeur finale.
+    etapes:
+      - type: methode
+        titre: La définition
+        texte: La réaction est totale, l'état final est $[\mathrm{H_2O_2}] = 0$. La moitié de l'avancement final correspond à $[\mathrm{H_2O_2}] = 0{,}040\ \mathrm{mol \cdot L^{-1}}$.
+      - type: conc
+        titre: Le résultat
+        texte: <mark>$t_{1/2} = 12$ min</mark>. La transformation est pratiquement terminée au bout de quelques $t_{1/2}$, soit environ une heure.
+
+  - titre: Vérifier une loi d'ordre 1
+    difficulte: 2
+    type: methode
+    enonce: |
+      On mesure la concentration d'un colorant $\mathrm{C}$ qui se décolore.
+      <table><tr><td>t (min)</td><td>0</td><td>5</td><td>10</td><td>15</td></tr><tr><td>[C] (µmol/L)</td><td>40</td><td>20</td><td>10</td><td>5</td></tr></table>
+      La réaction suit-elle une loi de vitesse d'ordre 1 ? Déterminer $k$.
+    indice: Pour une loi d'ordre 1, $t_{1/2}$ ne dépend pas de la concentration de départ.
+    etapes:
+      - type: calcul
+        titre: Ce qu'on observe
+        texte: La concentration est divisée par 2 toutes les 5 minutes, quelle que soit la valeur de départ (40 → 20 → 10 → 5).
+      - type: methode
+        titre: Interprétation
+        texte: Un temps de demi-réaction constant est la signature d'une décroissance exponentielle, donc d'une loi d'ordre 1. (On peut aussi vérifier que $\ln[\mathrm{C}]$ est une fonction affine de $t$.)
+      - type: conc
+        titre: La constante
+        texte: <mark>$k = \dfrac{\ln 2}{t_{1/2}} = \dfrac{0{,}693}{5{,}0} \approx 0{,}14\ \mathrm{min^{-1}}$</mark>.
+
+  - titre: Le catalyseur dans un mécanisme
+    difficulte: 2
+    type: piege
+    enonce: |
+      La décomposition de l'eau oxygénée catalysée par les ions iodure se fait en deux actes élémentaires :
+      $$\mathrm{H_2O_2} + \mathrm{I^-} \longrightarrow \mathrm{H_2O} + \mathrm{IO^-} \qquad \mathrm{H_2O_2} + \mathrm{IO^-} \longrightarrow \mathrm{H_2O} + \mathrm{O_2} + \mathrm{I^-}$$
+      1. Écrire l'équation bilan.
+      2. Un élève dit que $\mathrm{I^-}$ et $\mathrm{IO^-}$ sont tous les deux des catalyseurs. Corriger.
+    indice: Additionne les deux actes et regarde qui disparaît.
+    etapes:
+      - type: calcul
+        titre: Le bilan
+        texte: En additionnant, $\mathrm{I^-}$ et $\mathrm{IO^-}$ se simplifient, il reste $2\,\mathrm{H_2O_2} \longrightarrow 2\,\mathrm{H_2O} + \mathrm{O_2}$.
+      - type: piege
+        titre: La confusion
+        texte: >-
+          $\mathrm{I^-}$ est introduit au départ, consommé dans le premier acte et régénéré dans le second : c'est le catalyseur. $\mathrm{IO^-}$ est formé puis consommé : c'est un intermédiaire réactionnel.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>Catalyseur = présent au début et à la fin ; intermédiaire = apparaît puis disparaît</mark>.
+
+  - titre: Une réaction d'ordre 1, du début à la fin
+    difficulte: 3
+    type: bac
+    enonce: |
+      La transformation du pentaoxyde de diazote $\mathrm{N_2O_5}$ suit une loi d'ordre 1, avec $k = 5{,}0 \times 10^{-4}\ \mathrm{s^{-1}}$ à la température de l'expérience. On part de $[\mathrm{N_2O_5}]_0 = 2{,}0 \times 10^{-2}\ \mathrm{mol \cdot L^{-1}}$.
+      1. Écrire l'équation différentielle vérifiée par $[\mathrm{N_2O_5}]$ et donner sa solution.
+      2. Calculer $t_{1/2}$.
+      3. Calculer la vitesse de disparition à $t = 0$ puis à $t = t_{1/2}$. Commenter.
+      4. Au bout de combien de temps reste-t-il 1 % du réactif ?
+    indice: $v = k[\mathrm{N_2O_5}]$, et pour la question 4, $\mathrm{e}^{-kt} = 0{,}01$.
+    etapes:
+      - type: calcul
+        titre: L'équation et sa solution
+        texte: $\dfrac{\mathrm{d}[\mathrm{N_2O_5}]}{\mathrm{d}t} = -k[\mathrm{N_2O_5}]$, donc $[\mathrm{N_2O_5}](t) = [\mathrm{N_2O_5}]_0\,\mathrm{e}^{-kt}$.
+      - type: calcul
+        titre: Le temps de demi-réaction
+        texte: $t_{1/2} = \dfrac{\ln 2}{k} = \dfrac{0{,}693}{5{,}0 \times 10^{-4}} \approx 1{,}4 \times 10^3\ \mathrm{s}$, environ 23 min.
+      - type: calcul
+        titre: Les vitesses
+        texte: >-
+          À $t = 0$ : $v = 5{,}0 \times 10^{-4} \times 2{,}0 \times 10^{-2} = 1{,}0 \times 10^{-5}\ \mathrm{mol \cdot L^{-1} \cdot s^{-1}}$. À $t_{1/2}$, la concentration est divisée par 2, donc $v = 5{,}0 \times 10^{-6}\ \mathrm{mol \cdot L^{-1} \cdot s^{-1}}$.
+        note: le stade se vide moins vite
+      - type: calcul
+        titre: Il reste 1 %
+        texte: $\mathrm{e}^{-kt} = 0{,}01 \iff t = \dfrac{\ln 100}{k} = \dfrac{4{,}61}{5{,}0 \times 10^{-4}} \approx 9{,}2 \times 10^3\ \mathrm{s}$.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>Il faut environ 2 h 30, soit à peu près 7 temps de demi-réaction</mark>.

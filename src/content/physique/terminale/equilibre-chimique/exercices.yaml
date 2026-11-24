@@ -1,0 +1,104 @@
+exercices:
+  - titre: Écrire un quotient de réaction
+    difficulte: 1
+    type: application
+    enonce: |
+      Écrire le quotient de réaction de chaque réaction (en solution aqueuse).
+      1. $\mathrm{CH_3COOH} + \mathrm{H_2O} \rightleftharpoons \mathrm{CH_3COO^-} + \mathrm{H_3O^+}$
+      2. $\mathrm{Cu^{2+}} + \mathrm{Zn(s)} \rightleftharpoons \mathrm{Cu(s)} + \mathrm{Zn^{2+}}$
+    indice: Produits en haut, réactifs en bas. Ni l'eau, ni les solides.
+    etapes:
+      - type: calcul
+        titre: Réaction 1
+        texte: |
+          $$Q_r = \frac{[\mathrm{CH_3COO^-}]\,[\mathrm{H_3O^+}]}{[\mathrm{CH_3COOH}]\,c^\circ}$$
+          L'eau, solvant, n'apparaît pas.
+      - type: calcul
+        titre: Réaction 2
+        texte: |
+          $$Q_r = \frac{[\mathrm{Zn^{2+}}]}{[\mathrm{Cu^{2+}}]}$$
+          Les métaux solides n'apparaissent pas.
+      - type: conc
+        titre: À retenir
+        texte: <mark>Seules les espèces dissoutes (et les gaz) figurent dans le quotient</mark>.
+
+  - titre: Prévoir le sens d'évolution
+    difficulte: 1
+    type: methode
+    enonce: |
+      Pour la réaction $\mathrm{Cu^{2+}} + \mathrm{Zn(s)} \rightleftharpoons \mathrm{Cu(s)} + \mathrm{Zn^{2+}}$, $K = 10^{37}$ à 25 °C.
+      On plonge une lame de zinc dans une solution où $[\mathrm{Cu^{2+}}] = [\mathrm{Zn^{2+}}] = 0{,}10\ \mathrm{mol \cdot L^{-1}}$. Dans quel sens le système évolue-t-il ?
+    indice: Calcule $Q_{r,i}$ et compare-le à $K$.
+    etapes:
+      - type: calcul
+        titre: Le quotient initial
+        texte: $Q_{r,i} = \dfrac{0{,}10}{0{,}10} = 1$.
+      - type: methode
+        titre: La comparaison
+        texte: $Q_{r,i} = 1 < K = 10^{37}$.
+      - type: conc
+        titre: Conclusion
+        texte: >-
+          <mark>Le système évolue dans le sens direct</mark> : du cuivre se dépose, le zinc est consommé. Avec un $K$ aussi grand, la transformation est totale.
+
+  - titre: Un ajout qui relance la réaction
+    difficulte: 2
+    type: piege
+    enonce: |
+      Un système siège de la réaction $\mathrm{A} + \mathrm{B} \rightleftharpoons \mathrm{C} + \mathrm{D}$ (toutes les espèces dissoutes) est à l'équilibre. On ajoute une quantité de $\mathrm{C}$.
+      Un élève dit que l'équilibre étant atteint, plus rien ne se passe. Que se passe-t-il vraiment ?
+    indice: Que devient $Q_r$ juste après l'ajout ?
+    etapes:
+      - type: piege
+        titre: L'erreur
+        texte: Un équilibre n'est pas une fin définitive. Si on modifie une concentration, le quotient change et peut s'écarter de $K$.
+      - type: calcul
+        titre: Le quotient après ajout
+        texte: $[\mathrm{C}]$ augmente au numérateur, donc $Q_r$ devient supérieur à $K$.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>Le système évolue dans le sens indirect</mark>, jusqu'à ce que $Q_r$ redevienne égal à $K$. Une partie de C et D se retransforme en A et B.
+
+  - titre: Équilibre dynamique
+    difficulte: 2
+    type: methode
+    enonce: |
+      Expliquer, avec l'image des deux salles reliées par des portes, pourquoi les concentrations restent constantes à l'équilibre alors que des molécules continuent de réagir.
+    indice: Compare le nombre de passages dans chaque sens.
+    etapes:
+      - type: methode
+        titre: Deux réactions opposées
+        texte: À l'équilibre, la réaction directe et la réaction inverse se produisent toujours.
+      - type: calcul
+        titre: Même vitesse
+        texte: Elles se produisent à la même vitesse. Chaque fois qu'une molécule de produit se forme, une autre redevient réactif.
+      - type: conc
+        titre: Conclusion
+        texte: >-
+          <mark>Autant de passages dans chaque sens, donc des quantités constantes</mark> : l'équilibre est dynamique.
+
+  - titre: Estérification et rendement
+    difficulte: 3
+    type: bac
+    enonce: |
+      On mélange 1,0 mol d'acide éthanoïque et 1,0 mol d'éthanol. La réaction d'estérification
+      $$\mathrm{CH_3COOH} + \mathrm{C_2H_5OH} \rightleftharpoons \mathrm{CH_3COOC_2H_5} + \mathrm{H_2O}$$
+      a une constante $K = 4{,}0$ (ici l'eau est un produit, pas le solvant : elle figure dans $Q_r$ ; on raisonne sur les quantités de matière, le volume se simplifie).
+      1. Construire le tableau d'avancement et exprimer $K$ en fonction de $x_{\mathrm{\acute eq}}$.
+      2. Montrer que $x_{\mathrm{\acute eq}} = \frac{2}{3}$ mol et calculer le taux d'avancement final.
+      3. Proposer deux façons d'augmenter le rendement.
+    indice: $K = \dfrac{x^2}{(1-x)^2}$, donc $\dfrac{x}{1-x} = 2$.
+    etapes:
+      - type: calcul
+        titre: Le tableau
+        texte: À l'équilibre, il reste $1{,}0 - x$ mol d'acide et d'alcool, et il s'est formé $x$ mol d'ester et d'eau. Donc $K = \dfrac{x^2}{(1{,}0 - x)^2}$.
+      - type: calcul
+        titre: La résolution
+        texte: $\dfrac{x}{1{,}0 - x} = \sqrt{4{,}0} = 2$ (grandeurs positives), donc $x = 2 - 2x$ et $x_{\mathrm{\acute eq}} = \frac{2}{3} \approx 0{,}67$ mol.
+      - type: calcul
+        titre: Le taux d'avancement
+        texte: $x_{\max} = 1{,}0$ mol, donc $\tau = 0{,}67$. La transformation est non totale.
+      - type: conc
+        titre: Améliorer le rendement
+        texte: >-
+          <mark>Mettre un réactif en excès, ou éliminer un produit au fur et à mesure</mark> (distiller l'ester ou piéger l'eau). Dans les deux cas $Q_r$ reste inférieur à $K$ et la réaction continue dans le sens direct.

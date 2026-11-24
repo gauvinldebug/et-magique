@@ -1,0 +1,30 @@
+questions:
+  - question: Pour mesurer une intensité, on branche un ampèremètre…
+    choix: ['en dérivation', 'en série', 'aux bornes du générateur seulement', 'sans le circuit']
+    bonne: 1
+    explication: Le courant doit le traverser.
+    revoir: cours
+
+  - question: Deux lampes en dérivation ont…
+    choix: ['la même intensité', 'la même tension', 'la même résistance obligatoirement', 'une tension nulle']
+    bonne: 1
+    explication: Elles sont branchées entre les deux mêmes points.
+    revoir: cours
+
+  - question: Une résistance de 100 Ω traversée par 0,20 A a une tension à ses bornes de…
+    choix: ['20 V', '500 V', '0,002 V', '100 V']
+    bonne: 0
+    explication: $U = RI = 100 \times 0{,}20$.
+    revoir: exercices
+
+  - question: La caractéristique d'un conducteur ohmique est…
+    choix: ['une courbe quelconque', "une droite passant par l'origine", 'une droite horizontale', 'un cercle']
+    bonne: 1
+    explication: $U$ proportionnelle à $I$.
+    revoir: cours
+
+  - question: Quand la température augmente, la résistance d'une CTN…
+    choix: ['augmente', 'diminue', 'reste constante', 'devient infinie']
+    bonne: 1
+    explication: CTN = coefficient de température négatif.
+    revoir: cours

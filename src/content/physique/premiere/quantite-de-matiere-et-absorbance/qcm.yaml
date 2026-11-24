@@ -1,0 +1,48 @@
+questions:
+  - question: Une mole d'entités contient…
+    choix: ['$6{,}02 \times 10^{23}$ entités', '$1\,000$ entités', '$22{,}4$ entités', '$6{,}02 \times 10^{-23}$ entités']
+    bonne: 0
+    explication: C'est le nombre d'Avogadro, le « sachet » standard du chimiste.
+    revoir: cours
+
+  - question: La quantité de matière contenue dans une masse $m$ vaut…
+    choix: ['$m \times M$', '$m / M$', '$M / m$', '$m \times N_A$']
+    bonne: 1
+    explication: Comme les vis au poids, masse totale divisée par la masse d'un « sachet ».
+    revoir: cours
+
+  - question: La masse molaire de $\mathrm{CO_2}$ ($M(\mathrm{C}) = 12$, $M(\mathrm{O}) = 16$) vaut…
+    choix: ['$28\ \mathrm{g \cdot mol^{-1}}$', '$44\ \mathrm{g \cdot mol^{-1}}$', '$40\ \mathrm{g \cdot mol^{-1}}$', '$32\ \mathrm{g \cdot mol^{-1}}$']
+    bonne: 1
+    explication: $12 + 2 \times 16 = 44$.
+    revoir: cours
+
+  - question: La concentration en masse et la concentration en quantité de matière sont reliées par…
+    choix: ['$c_m = c / M$', '$c_m = c \times M$', '$c_m = c \times V$', '$c_m = c$']
+    bonne: 1
+    explication: $c_m$ en $\mathrm{g \cdot L^{-1}}$, $c$ en $\mathrm{mol \cdot L^{-1}}$, $M$ en $\mathrm{g \cdot mol^{-1}}$.
+    revoir: cours
+
+  - question: Une solution qui absorbe le bleu paraît…
+    choix: ['bleue', 'jaune-orangé', 'noire', 'blanche']
+    bonne: 1
+    explication: On voit la couleur complémentaire de la couleur absorbée.
+    revoir: cours
+
+  - question: La loi de Beer-Lambert affirme que l'absorbance est…
+    choix: ['inversement proportionnelle à la concentration', 'proportionnelle à la concentration', 'indépendante de la concentration', 'proportionnelle au volume']
+    bonne: 1
+    explication: $A = k\,c$, pour une solution diluée.
+    revoir: cours
+
+  - question: Pour un dosage par spectrophotométrie, on règle la longueur d'onde…
+    choix: ['au minimum d''absorption', 'au maximum d''absorption', 'sur la couleur de la solution', 'à 1 000 nm']
+    bonne: 1
+    explication: Là où la mesure est la plus sensible.
+    revoir: cours
+
+  - question: À 20 °C et 1 bar, 2,0 mol de dioxygène occupent environ…
+    choix: ['$12$ L', '$24$ L', '$48$ L', '$2{,}0$ L']
+    bonne: 2
+    explication: $V = n\,V_m = 2{,}0 \times 24$.
+    revoir: cours

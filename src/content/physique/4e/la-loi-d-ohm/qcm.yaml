@@ -1,0 +1,30 @@
+questions:
+  - question: La résistance électrique s'exprime en…
+    choix: ['volts', 'ampères', 'ohms', 'watts']
+    bonne: 2
+    explication: Symbole Ω.
+    revoir: cours
+
+  - question: Ajouter une résistance en série dans un circuit…
+    choix: ["augmente l'intensité", "diminue l'intensité", "ne change rien", 'coupe le circuit']
+    bonne: 1
+    explication: Le couloir est plus étroit.
+    revoir: cours
+
+  - question: La caractéristique d'un conducteur ohmique est…
+    choix: ["une droite passant par l'origine", 'une courbe', 'une droite horizontale', 'un point']
+    bonne: 0
+    explication: U est proportionnelle à I.
+    revoir: cours
+
+  - question: Une résistance de 50 Ω a une tension de 10 V à ses bornes. L'intensité vaut…
+    choix: ['500 A', '0,20 A', '5,0 A', '60 A']
+    bonne: 1
+    explication: $I = U/R = 10/50$.
+    revoir: exercices
+
+  - question: L'effet Joule, c'est…
+    choix: ["l'échauffement d'un conducteur parcouru par un courant", 'la production de lumière par une LED', "la mesure d'une résistance", 'un court-circuit']
+    bonne: 0
+    explication: Utile dans un radiateur, gênant dans les câbles.
+    revoir: cours

@@ -1,0 +1,48 @@
+questions:
+  - question: La relation entre charge et tension d'un condensateur est…
+    choix: ['$q = C/u$', '$q = C\,u$', '$q = u/C$', '$q = R\,C$']
+    bonne: 1
+    explication: La charge est proportionnelle à la tension, $C$ est la capacité.
+    revoir: cours
+
+  - question: L'intensité du courant est…
+    choix: ['$i = \frac{\mathrm{d}q}{\mathrm{d}t}$', '$i = q \times t$', '$i = C\,u$', '$i = \frac{q}{C}$']
+    bonne: 0
+    explication: C'est le débit de charges électriques.
+    revoir: cours
+
+  - question: La constante de temps d'un circuit RC vaut…
+    choix: ['$R/C$', '$R\,C$', '$C/R$', '$1/(RC)$']
+    bonne: 1
+    explication: $\tau = RC$, en secondes.
+    revoir: cours
+
+  - question: Au bout d'une durée $\tau$, un condensateur en charge est chargé à environ…
+    choix: ['37 %', '50 %', '63 %', '100 %']
+    bonne: 2
+    explication: $1 - \mathrm{e}^{-1} \approx 0{,}63$.
+    revoir: cours
+
+  - question: On considère le condensateur chargé au bout de…
+    choix: ['$\tau$', '$2\tau$', '$5\tau$', '$100\tau$']
+    bonne: 2
+    explication: À $5\tau$, $u_C \approx 0{,}99\,E$.
+    revoir: cours
+
+  - question: Pendant la charge, l'intensité dans le circuit…
+    choix: ['est constante', 'augmente', 'diminue jusqu''à s''annuler', 'change de signe']
+    bonne: 2
+    explication: Le débit du tuyau diminue à mesure que le réservoir se remplit, $i = \frac{E}{R}\mathrm{e}^{-t/\tau}$.
+    revoir: cours
+
+  - question: Si on double la résistance, la charge est…
+    choix: ['deux fois plus rapide', 'deux fois plus lente', 'inchangée', 'quatre fois plus lente']
+    bonne: 1
+    explication: $\tau = RC$ double. Le tuyau est plus étroit.
+    revoir: cours
+
+  - question: Sur la courbe de charge, la tangente à l'origine coupe l'asymptote $u_C = E$ à la date…
+    choix: ['$0$', '$\tau$', '$5\tau$', '$\tau \ln 2$']
+    bonne: 1
+    explication: C'est une méthode graphique classique pour lire $\tau$.
+    revoir: cours

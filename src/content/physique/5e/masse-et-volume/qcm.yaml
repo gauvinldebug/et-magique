@@ -1,0 +1,30 @@
+questions:
+  - question: La masse se mesure avec…
+    choix: ['une éprouvette', 'une balance', 'un thermomètre', 'une règle']
+    bonne: 1
+    explication: En grammes ou kilogrammes.
+    revoir: cours
+
+  - question: 1 mL est égal à…
+    choix: ['1 L', '1 cm³', '1 dm³', '1 g']
+    bonne: 1
+    explication: Un millilitre = un centimètre cube.
+    revoir: cours
+
+  - question: Pour lire le volume dans une éprouvette, on regarde…
+    choix: ['le haut du ménisque', 'le bas du ménisque', 'le fond', 'la graduation la plus proche']
+    bonne: 1
+    explication: L'œil à la hauteur du liquide.
+    revoir: cours
+
+  - question: Un objet de 30 g a un volume de 10 cm³. Sa masse volumique vaut…
+    choix: ['0,33 g/cm³', '3,0 g/cm³', '300 g/cm³', '40 g/cm³']
+    bonne: 1
+    explication: $30/10$.
+    revoir: exercices
+
+  - question: L'huile flotte sur l'eau car…
+    choix: ['elle est plus lourde', 'sa masse volumique est plus petite', "elle est jaune", 'elle a plus de volume']
+    bonne: 1
+    explication: 0,9 g/mL contre 1 g/mL.
+    revoir: cours

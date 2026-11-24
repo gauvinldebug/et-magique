@@ -1,0 +1,75 @@
+exercices:
+  - titre: Calculer une vitesse sur une chronophotographie
+    difficulte: 1
+    type: application
+    enonce: |
+      Sur une chronophotographie d'un palet, les positions sont prises toutes les $\Delta t = 40\ \mathrm{ms}$. On mesure $M_3M_4 = 2{,}4\ \mathrm{cm}$ et $M_4M_5 = 2{,}4\ \mathrm{cm}$, les points étant alignés.
+      1. Calculer $v_3$ et $v_4$.
+      2. Que vaut $\Delta \vec{v}$ ? Que dire des forces qui s'exercent sur le palet ?
+    indice: Convertir en mètres et en secondes.
+    etapes:
+      - type: calcul
+        titre: Les vitesses
+        texte: $v_3 = 0{,}024 / 0{,}040 = 0{,}60\ \mathrm{m \cdot s^{-1}}$, et de même $v_4 = 0{,}60\ \mathrm{m \cdot s^{-1}}$, même direction, même sens.
+      - type: conc
+        titre: Les forces
+        texte: $\Delta \vec{v} = \vec{0}$. <mark>Les forces se compensent</mark>, et pourtant le palet avance.
+
+  - titre: Démarrer une voiture
+    difficulte: 2
+    type: application
+    enonce: |
+      Une voiture de masse $m = 1{,}2 \times 10^{3}\ \mathrm{kg}$ passe de 0 à $90\ \mathrm{km \cdot h^{-1}}$ en ligne droite en $10\ \mathrm{s}$.
+      Estimer la valeur de la somme des forces qui s'exercent sur elle, supposée constante.
+    indice: $90\ \mathrm{km \cdot h^{-1}} = 25\ \mathrm{m \cdot s^{-1}}$.
+    etapes:
+      - type: calcul
+        titre: La variation de vitesse
+        texte: $\Delta v = 25 - 0 = 25\ \mathrm{m \cdot s^{-1}}$ en $\Delta t = 10\ \mathrm{s}$.
+      - type: calcul
+        titre: La relation
+        texte: $\sum F \approx m\,\Delta v/\Delta t = 1{,}2 \times 10^{3} \times 25/10$.
+      - type: conc
+        titre: Résultat
+        texte: <mark>$\sum F \approx 3{,}0 \times 10^{3}\ \mathrm{N}$</mark>, dirigée vers l'avant.
+
+  - titre: La balle au sommet
+    difficulte: 2
+    type: piege
+    enonce: |
+      On lance une balle verticalement vers le haut. Un élève affirme : « au sommet, la vitesse est nulle, donc aucune force ne s'exerce sur la balle ». Corriger, en négligeant l'air.
+    indice: Que fait la vitesse juste après le sommet ?
+    etapes:
+      - type: piege
+        titre: L'erreur
+        texte: L'élève confond vitesse nulle et force nulle. La relation relie la force à la variation de vitesse, pas à la vitesse elle-même.
+      - type: her
+        titre: Ce qui se passe
+        texte: Juste avant le sommet, la balle monte. Juste après, elle descend. Sa vitesse change, donc $\Delta \vec{v}$ n'est pas nul.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>Au sommet, la balle subit toujours son poids</mark>, vertical, vers le bas. C'est lui qui la fait redescendre.
+
+  - titre: Le virage
+    difficulte: 3
+    type: bac
+    enonce: |
+      Un cycliste de masse totale $m = 80\ \mathrm{kg}$ prend un virage circulaire à vitesse constante $v = 10\ \mathrm{m \cdot s^{-1}}$. En $\Delta t = 0{,}50\ \mathrm{s}$, la direction de sa vitesse tourne d'un angle petit : on mesure sur le schéma $\Delta v = 1{,}0\ \mathrm{m \cdot s^{-1}}$.
+      1. Le mouvement est-il uniforme ? La vitesse change-t-elle ?
+      2. Donner la direction et le sens de $\Delta \vec{v}$.
+      3. Estimer la valeur de la somme des forces et donner sa direction.
+    indice: Uniforme concerne la valeur, pas la direction.
+    etapes:
+      - type: methode
+        titre: Uniforme mais pas constant
+        texte: La valeur de la vitesse est constante, le mouvement est uniforme. Mais la direction du vecteur vitesse tourne, donc le vecteur vitesse change.
+      - type: calcul
+        titre: Le sens de Δv
+        texte: Dans un mouvement circulaire uniforme, $\Delta \vec{v}$ est dirigé vers le centre du virage.
+      - type: calcul
+        titre: La force
+        texte: $\sum F \approx m\,\Delta v/\Delta t = 80 \times 1{,}0 / 0{,}50 = 1{,}6 \times 10^{2}\ \mathrm{N}$.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>Une somme des forces d'environ 160 N, dirigée vers le centre du virage</mark>. Elle vient du frottement des pneus sur la route.
+        note: sur le verglas, pas de virage possible

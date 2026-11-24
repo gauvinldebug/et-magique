@@ -2,21 +2,24 @@
 // En-tête : logo, menu « Chapitres » à intercalaires (ordinateur), menu plein écran (téléphone).
 import Logo from './Logo.astro';
 import Recherche from './Recherche.astro';
-import { NIVEAUX, matiere as getMatiere } from '../data/site';
+import { niveauxDe, marque, matiere as getMatiere } from '../data/site';
 import { menuMatiere } from '../lib/contenu';
 
 interface Props { matiere?: string; niveau?: string; actif?: string }
 const { matiere = 'maths', niveau, actif } = Astro.props;
 const m = getMatiere(matiere)!;
+const NIVEAUX = niveauxDe(matiere);
 const menu = await menuMatiere(matiere);
 const niveauOuvert = niveau ?? 'terminale';
 const base = `/${matiere}`;
 const liens = [
-  { href: `${base}/annales/`, titre: 'Annales', sous: 'bac et brevet', id: 'annales' },
-  { href: `${base}/planning-bac/`, titre: 'Planning bac', sous: 'un e‑mail par semaine', id: 'planning' },
+  ...(m.bac ? [
+    { href: `${base}/annales/`, titre: 'Annales', sous: 'bac et brevet', id: 'annales' },
+    { href: `${base}/planning-bac/`, titre: 'Planning bac', sous: 'un e‑mail par semaine', id: 'planning' },
+  ] : [{ href: `${base}/fiches/`, titre: 'Fiches', sous: '1 page par chapitre', id: 'fiches' }]),
   { href: '/demandes/', titre: 'Demandes', sous: 'chapitre, erreur, question', id: 'demandes' },
 ];
-const grouped = ['Collège', 'Lycée', 'Options', 'Ens. scientifique'].map((cycle) => ({ cycle, niveaux: NIVEAUX.filter((n) => n.cycle === cycle) }));
+const grouped = ['Collège', 'Lycée', 'Options', 'Ens. scientifique'].map((cycle) => ({ cycle, niveaux: NIVEAUX.filter((n) => n.cycle === cycle) })).filter((g) => g.niveaux.length);
 ---
 <header class="s-nav" data-entete>
   <div class="wrap">
@@ -25,9 +28,9 @@ const grouped = ['Collège', 'Lycée', 'Options', 'Ens. scientifique'].map((cycl
       <button type="button" aria-expanded="false" aria-controls="mega" data-mega-btn>Chapitres <span class="chev"></span></button>
       {liens.map((l) => <a href={l.href} aria-current={actif === l.id ? 'page' : undefined}>{l.titre}</a>)}
     </nav>
-    <div class="nav-rq"><Recherche id="rq-entete" placeholder="Rechercher  /" compact /></div>
+    <div class="nav-rq"><Recherche id="rq-entete" placeholder="Rechercher  /" compact matiere={matiere} /></div>
     {m.youtube && (
-      <a class="btn-yt" href={m.youtube} target="_blank" rel="noopener" data-umami-event="chaine-entete" aria-label="La chaîne YouTube Maths et Magique (nouvel onglet)">
+      <a class="btn-yt" href={m.youtube} target="_blank" rel="noopener" data-umami-event="chaine-entete" aria-label={`La chaîne YouTube ${marque(matiere)} (nouvel onglet)`}>
         <svg viewBox="0 0 28 20" aria-hidden="true"><rect width="28" height="20" rx="5" fill="#FF0033"/><path d="M11 5.5v9l8-4.5z" fill="#fff"/></svg><span>La chaîne</span>
       </a>
     )}
@@ -65,7 +68,7 @@ const grouped = ['Collège', 'Lycée', 'Options', 'Ens. scientifique'].map((cycl
       <div class="mega-side">
         <span class="k">Aussi</span>
         <a class="carte-lien" href={`${base}/fiches/`}><b>Fiches de révision</b><small>1 page par chapitre</small></a>
-        <a class="carte-lien" href={`${base}/annales/`}><b>Annales</b><small>Sujets et corrigés</small></a>
+        {m.bac && <a class="carte-lien" href={`${base}/annales/`}><b>Annales</b><small>Sujets et corrigés</small></a>}
         <a class="carte-lien" href="/demandes/"><b>Faire une demande</b><small>Un chapitre, une erreur</small></a>
       </div>
     </div>
@@ -74,7 +77,7 @@ const grouped = ['Collège', 'Lycée', 'Options', 'Ens. scientifique'].map((cycl
 
 <div class="ph-menu" id="ph-menu" hidden data-ph-menu>
   <a class="ph-retour" href="/"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M10 3 5 8l5 5"/></svg>Toutes les matières</a>
-  <Recherche id="rq-menu" placeholder="Chercher un chapitre…" />
+  <Recherche id="rq-menu" placeholder="Chercher un chapitre…" matiere={matiere} />
   <div>
     <div class="k" style="margin-bottom:8px">Ton niveau</div>
     <div class="lvl-grid">
@@ -85,11 +88,11 @@ const grouped = ['Collège', 'Lycée', 'Options', 'Ens. scientifique'].map((cycl
   {m.youtube && (
     <a class="yt-menu" href={m.youtube} target="_blank" rel="noopener" data-umami-event="chaine-menu">
       <svg viewBox="0 0 28 20" aria-hidden="true"><rect width="28" height="20" rx="5" fill="#FF0033"/><path d="M11 5.5v9l8-4.5z" fill="#fff"/></svg>
-      <span><b>Voir la chaîne YouTube</b><small>Toutes les vidéos Maths et Magique</small></span>
+      <span><b>Voir la chaîne YouTube</b><small>Toutes les vidéos {marque(matiere)}</small></span>
     </a>
   )}
   <div class="menu-links">
-    <a href={`${base}/fiches/`}><span>Fiches de révision <small>1 page par chapitre</small></span></a>
+    {m.bac && <a href={`${base}/fiches/`}><span>Fiches de révision <small>1 page par chapitre</small></span></a>}
     {liens.map((l) => <a href={l.href}><span>{l.titre} <small>{l.sous}</small></span></a>)}
   </div>
 </div>
@@ -154,7 +157,7 @@ const grouped = ['Collège', 'Lycée', 'Options', 'Ens. scientifique'].map((cycl
       e.preventDefault();
       const champ = document.getElementById('rq-entete') as HTMLInputElement | null;
       if (champ && champ.offsetParent) champ.focus();
-      else location.href = '/maths/recherche/';
+      else location.href = `/${document.documentElement.dataset.matiere || 'maths'}/recherche/`;
     }
   });
 </script>

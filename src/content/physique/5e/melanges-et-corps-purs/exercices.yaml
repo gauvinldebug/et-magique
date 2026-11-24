@@ -1,0 +1,64 @@
+exercices:
+  - titre: Homogène ou hétérogène ?
+    difficulte: 1
+    type: application
+    enonce: |
+      Classer : l'eau boueuse, l'eau sucrée, le lait chocolaté avec dépôt au fond, l'air, la vinaigrette, l'eau minérale.
+    indice: Distingue-t-on plusieurs constituants à l'œil nu ?
+    etapes:
+      - type: calcul
+        titre: Hétérogènes
+        texte: L'eau boueuse, le lait avec dépôt, la vinaigrette.
+      - type: conc
+        titre: Homogènes
+        texte: <mark>L'eau sucrée, l'air, l'eau minérale</mark>.
+
+  - titre: La masse de l'eau salée
+    difficulte: 1
+    type: application
+    enonce: |
+      On dissout 15 g de sel dans 250 g d'eau. Quelle est la masse de la solution ?
+    indice: La masse se conserve.
+    etapes:
+      - type: calcul
+        titre: Le calcul
+        texte: $m = 250 + 15$.
+      - type: conc
+        titre: Résultat
+        texte: <mark>265 g</mark>, même si le sel a disparu à la vue.
+
+  - titre: L'eau filtrée est-elle pure ?
+    difficulte: 2
+    type: piege
+    enonce: |
+      On filtre de l'eau de mer : le filtrat est parfaitement limpide. Un élève pense avoir obtenu de l'eau pure. A-t-il raison ? Comment le vérifier ?
+    indice: Le sel est dissous.
+    etapes:
+      - type: piege
+        titre: L'erreur
+        texte: Le filtre retient les particules visibles, pas le sel dissous. Le filtrat est un mélange homogène.
+      - type: calcul
+        titre: La vérification
+        texte: On fait évaporer quelques gouttes du filtrat dans une coupelle. Un dépôt blanc de sel apparaît.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>Le filtrat n'est pas de l'eau pure</mark>. Pour l'obtenir, il faudrait une distillation.
+
+  - titre: Récupérer l'eau et le sel
+    difficulte: 3
+    type: brevet
+    enonce: |
+      On dispose d'eau de mer boueuse. On veut récupérer d'un côté de l'eau pure, de l'autre côté le sel.
+      Proposer une suite d'étapes et nommer chaque technique.
+    indice: D'abord le visible, ensuite le dissous.
+    etapes:
+      - type: calcul
+        titre: Le visible
+        texte: Décantation pour laisser tomber la boue, puis filtration pour obtenir un filtrat limpide.
+      - type: calcul
+        titre: L'eau pure
+        texte: >-
+          Distillation du filtrat. La vapeur d'eau est refroidie et recueillie : c'est de l'eau distillée.
+      - type: conc
+        titre: Le sel
+        texte: <mark>Le sel reste dans le ballon de distillation quand toute l'eau est partie</mark>. C'est le principe des marais salants, avec le soleil à la place du chauffage.

@@ -1,0 +1,86 @@
+exercices:
+  - titre: Oxydant ou réducteur ?
+    difficulte: 1
+    type: application
+    enonce: |
+      Pour chaque demi-équation, préciser si l'espèce de gauche est un oxydant ou un réducteur, et nommer la transformation qu'elle subit dans ce sens.
+      1. $\mathrm{Zn} \longrightarrow \mathrm{Zn^{2+}} + 2\,\mathrm{e^-}$
+      2. $\mathrm{Ag^+} + \mathrm{e^-} \longrightarrow \mathrm{Ag}$
+    indice: Qui donne, qui reçoit ?
+    etapes:
+      - type: calcul
+        titre: Le zinc
+        texte: Il cède des électrons, c'est un réducteur, et il subit une oxydation.
+      - type: conc
+        titre: L'ion argent
+        texte: <mark>Il capte un électron, c'est un oxydant, et il subit une réduction</mark>.
+
+  - titre: Équilibrer une demi-équation
+    difficulte: 2
+    type: methode
+    enonce: |
+      Écrire la demi-équation électronique du couple $\mathrm{Cr_2O_7^{2-}/Cr^{3+}}$ en milieu acide.
+    indice: Cr, puis O avec de l'eau, H avec $\mathrm{H^+}$, charges avec des électrons.
+    etapes:
+      - type: calcul
+        titre: Le chrome
+        texte: $\mathrm{Cr_2O_7^{2-}} \rightleftharpoons 2\,\mathrm{Cr^{3+}}$.
+      - type: calcul
+        titre: Oxygène et hydrogène
+        texte: $\mathrm{Cr_2O_7^{2-}} + 14\,\mathrm{H^+} \rightleftharpoons 2\,\mathrm{Cr^{3+}} + 7\,\mathrm{H_2O}$.
+      - type: calcul
+        titre: Les charges
+        texte: À gauche $-2 + 14 = +12$, à droite $+6$. Il faut 6 électrons à gauche.
+      - type: conc
+        titre: Résultat
+        texte: <mark>$\mathrm{Cr_2O_7^{2-}} + 14\,\mathrm{H^+} + 6\,\mathrm{e^-} \rightleftharpoons 2\,\mathrm{Cr^{3+}} + 7\,\mathrm{H_2O}$</mark>.
+
+  - titre: Le zinc dans le sulfate de cuivre
+    difficulte: 1
+    type: methode
+    enonce: |
+      Une lame de zinc plongée dans une solution bleue de sulfate de cuivre se recouvre d'un dépôt rouge, et la solution se décolore. Écrire l'équation de la réaction.
+    indice: Le dépôt rouge est du cuivre. Couples $\mathrm{Cu^{2+}/Cu}$ et $\mathrm{Zn^{2+}/Zn}$.
+    etapes:
+      - type: calcul
+        titre: Demi-équations
+        texte: $\mathrm{Cu^{2+}} + 2\,\mathrm{e^-} \longrightarrow \mathrm{Cu}$ et $\mathrm{Zn} \longrightarrow \mathrm{Zn^{2+}} + 2\,\mathrm{e^-}$, 2 électrons de chaque côté.
+      - type: conc
+        titre: Bilan
+        texte: <mark>$\mathrm{Cu^{2+}} + \mathrm{Zn} \longrightarrow \mathrm{Cu} + \mathrm{Zn^{2+}}$</mark>.
+
+  - titre: Égaliser les électrons
+    difficulte: 2
+    type: piege
+    enonce: |
+      Écrire l'équation de la réaction entre le diiode $\mathrm{I_2}$ et les ions thiosulfate $\mathrm{S_2O_3^{2-}}$ (couples $\mathrm{I_2/I^-}$ et $\mathrm{S_4O_6^{2-}/S_2O_3^{2-}}$). Un élève écrit $\mathrm{I_2} + \mathrm{S_2O_3^{2-}} \longrightarrow 2\,\mathrm{I^-} + \mathrm{S_4O_6^{2-}}$. Corriger.
+    indice: Vérifie le soufre et les charges.
+    etapes:
+      - type: calcul
+        titre: Les demi-équations
+        texte: $\mathrm{I_2} + 2\,\mathrm{e^-} \longrightarrow 2\,\mathrm{I^-}$ et $2\,\mathrm{S_2O_3^{2-}} \longrightarrow \mathrm{S_4O_6^{2-}} + 2\,\mathrm{e^-}$.
+      - type: piege
+        titre: L'erreur
+        texte: L'élève a oublié le coefficient 2 devant $\mathrm{S_2O_3^{2-}}$. Son équation n'est équilibrée ni en soufre (2 contre 4) ni en charges.
+      - type: conc
+        titre: La bonne équation
+        texte: <mark>$\mathrm{I_2} + 2\,\mathrm{S_2O_3^{2-}} \longrightarrow 2\,\mathrm{I^-} + \mathrm{S_4O_6^{2-}}$</mark>.
+
+  - titre: L'eau oxygénée et les ions iodure
+    difficulte: 3
+    type: methode
+    enonce: |
+      En milieu acide, l'eau oxygénée $\mathrm{H_2O_2}$ (couple $\mathrm{H_2O_2/H_2O}$) oxyde les ions iodure (couple $\mathrm{I_2/I^-}$). La solution brunit.
+      1. Équilibrer la demi-équation du couple $\mathrm{H_2O_2/H_2O}$.
+      2. Écrire l'équation de la réaction et expliquer le brunissement.
+    indice: $\mathrm{H_2O_2} \rightleftharpoons 2\,\mathrm{H_2O}$, puis H et charges.
+    etapes:
+      - type: calcul
+        titre: Demi-équation de l'oxydant
+        texte: $\mathrm{H_2O_2} + 2\,\mathrm{H^+} + 2\,\mathrm{e^-} \rightleftharpoons 2\,\mathrm{H_2O}$.
+      - type: calcul
+        titre: Bilan
+        texte: $\mathrm{H_2O_2} + 2\,\mathrm{H^+} + 2\,\mathrm{I^-} \longrightarrow 2\,\mathrm{H_2O} + \mathrm{I_2}$.
+      - type: conc
+        titre: Le brunissement
+        texte: <mark>Le diiode formé colore la solution en brun</mark>, plus il s'en forme, plus la teinte est foncée.

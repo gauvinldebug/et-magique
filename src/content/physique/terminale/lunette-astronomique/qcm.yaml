@@ -1,0 +1,48 @@
+questions:
+  - question: Une lunette astronomique est dite afocale car…
+    choix: ['elle n''a pas de foyer', 'le foyer image de l''objectif est confondu avec le foyer objet de l''oculaire', 'ses deux lentilles ont la même focale', 'elle donne une image réelle']
+    bonne: 1
+    explication: $F'_1 = F_2$, un objet à l'infini donne une image à l'infini.
+    revoir: cours
+
+  - question: L'image intermédiaire d'une étoile se forme…
+    choix: ['dans le plan focal image de l''objectif', 'au centre de l''oculaire', 'sur la rétine', 'à l''infini']
+    bonne: 0
+    explication: Un objet à l'infini donne une image dans le plan focal image.
+    revoir: cours
+
+  - question: Le grossissement d'une lunette vaut…
+    choix: ['$f''_2 / f''_1$', '$f''_1 / f''_2$', '$f''_1 \times f''_2$', '$f''_1 + f''_2$']
+    bonne: 1
+    explication: La focale de l'objectif au numérateur.
+    revoir: cours
+
+  - question: Pour augmenter le grossissement d'une lunette, on choisit un oculaire…
+    choix: ['de plus grande focale', 'de plus petite focale', 'divergent', 'identique à l''objectif']
+    bonne: 1
+    explication: $G = f'_1/f'_2$ augmente quand $f'_2$ diminue.
+    revoir: cours
+
+  - question: L'image donnée par une lunette astronomique est…
+    choix: ['droite', 'renversée', 'colorée', 'virtuelle et proche']
+    bonne: 1
+    explication: L'objectif renverse l'image, l'oculaire ne la redresse pas.
+    revoir: cours
+
+  - question: Le cercle oculaire est…
+    choix: ['le bord de l''oculaire', 'l''image de l''objectif par l''oculaire, où placer l''œil', 'la monture de l''objectif', 'le champ de vision']
+    bonne: 1
+    explication: Tous les rayons sortant de la lunette y passent.
+    revoir: cours
+
+  - question: Une lunette a un objectif de 1 200 mm et un oculaire de 6 mm. Son grossissement vaut…
+    choix: ['$7{,}2$', '$200$', '$1\,206$', '$0{,}005$']
+    bonne: 1
+    explication: $1200/6 = 200$.
+    revoir: exercices
+
+  - question: Le grossissement est…
+    choix: ['un rapport de tailles', 'un rapport d''angles, sans unité', 'une longueur', 'une puissance en dioptries']
+    bonne: 1
+    explication: $G = \theta'/\theta$.
+    revoir: cours

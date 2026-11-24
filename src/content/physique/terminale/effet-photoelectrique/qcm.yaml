@@ -1,0 +1,48 @@
+questions:
+  - question: L'énergie d'un photon de fréquence $\nu$ vaut…
+    choix: ['$h/\nu$', '$h\,\nu$', '$\nu/h$', '$h\,\nu^2$']
+    bonne: 1
+    explication: $E = h\nu = hc/\lambda$.
+    revoir: cours
+
+  - question: Quel photon est le plus énergétique ?
+    choix: ['rouge (700 nm)', 'vert (530 nm)', 'violet (400 nm)', 'infrarouge (1 000 nm)']
+    bonne: 2
+    explication: $E$ est inversement proportionnelle à $\lambda$.
+    revoir: cours
+
+  - question: Sous le seuil photoélectrique, si on augmente l'intensité de la lumière…
+    choix: ['des électrons finissent par sortir', 'aucun électron ne sort', 'les électrons sortent plus vite', 'le métal fond']
+    bonne: 1
+    explication: Chaque photon reste trop faible, et un électron n'en absorbe qu'un.
+    revoir: cours
+
+  - question: Au-dessus du seuil, augmenter l'intensité lumineuse…
+    choix: ['augmente le nombre d''électrons extraits', 'augmente leur énergie cinétique maximale', 'diminue leur nombre', 'n''a aucun effet']
+    bonne: 0
+    explication: Plus de photons, donc plus d'électrons, chacun avec la même énergie maximale.
+    revoir: cours
+
+  - question: L'énergie cinétique maximale d'un électron extrait vaut…
+    choix: ['$h\nu + W$', '$h\nu - W$', '$W - h\nu$', '$h\nu$']
+    bonne: 1
+    explication: L'énergie du photon moins le travail d'extraction, c'est la monnaie rendue.
+    revoir: cours
+
+  - question: 1 eV vaut…
+    choix: ['$1{,}60 \times 10^{-19}$ J', '$6{,}63 \times 10^{-34}$ J', '$1$ J', '$3{,}00 \times 10^{8}$ J']
+    bonne: 0
+    explication: C'est l'énergie acquise par un électron accéléré sous 1 V.
+    revoir: cours
+
+  - question: Le rendement d'une cellule photovoltaïque s'écrit…
+    choix: ['$\frac{P_{\text{lumineuse}}}{P_{\text{électrique}}}$', '$\frac{P_{\text{électrique}}}{P_{\text{lumineuse}}}$', '$U \times I$', '$E \times S$']
+    bonne: 1
+    explication: Puissance utile sur puissance reçue, toujours inférieur à 1.
+    revoir: cours
+
+  - question: L'effet photoélectrique est une preuve…
+    choix: ['du caractère ondulatoire de la lumière', 'du caractère particulaire de la lumière', 'de la diffraction', 'de l''effet Doppler']
+    bonne: 1
+    explication: Il ne s'explique qu'avec des paquets d'énergie, les photons.
+    revoir: cours

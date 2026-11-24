@@ -16,11 +16,19 @@ export type Matiere = {
   youtubeId?: string; // identifiant de la chaîne (UC…), pour lire son flux RSS
   instagram?: string; // URL du compte Instagram
   active: boolean;
+  nomLong?: string; // « physique-chimie » dans les phrases (sinon nom en minuscules)
+  niveaux?: string[]; // niveaux proposés (par défaut : tous)
+  sousTitres?: Record<string, string>; // sous-titre d'un niveau propre à la matière
+  bac?: boolean; // annales et planning bac disponibles
 };
 
 export const MATIERES: Matiere[] = [
-  { slug: 'maths', nom: 'Maths', couleur: 'var(--terme)', youtube: 'https://www.youtube.com/@mathsetmagique', youtubeId: 'UChNsi3Kbyr6fey6cAJy6I5A', instagram: 'https://www.instagram.com/maths_et_magique/', active: true },
-  { slug: 'physique', nom: 'Physique', couleur: 'var(--physique)', active: false },
+  { slug: 'maths', nom: 'Maths', couleur: 'var(--terme)', youtube: 'https://www.youtube.com/@mathsetmagique', youtubeId: 'UChNsi3Kbyr6fey6cAJy6I5A', instagram: 'https://www.instagram.com/maths_et_magique/', active: true, bac: true },
+  {
+    slug: 'physique', nom: 'Physique-chimie', nomLong: 'physique-chimie', couleur: 'var(--physique)', active: true,
+    niveaux: ['6e', '5e', '4e', '3e', 'seconde', 'premiere', 'terminale'],
+    sousTitres: { '6e': 'sciences et technologie' },
+  },
   { slug: 'svt', nom: 'SVT', couleur: 'var(--svt)', active: false },
   { slug: 'histoire', nom: 'Histoire', couleur: 'var(--histoire)', active: false },
   { slug: 'francais', nom: 'Français', couleur: 'var(--francais)', active: false },
@@ -53,3 +61,16 @@ export const NIVEAUX: Niveau[] = [
 ];
 
 export const niveau = (slug: string) => NIVEAUX.find((n) => n.slug === slug);
+
+/** Les niveaux d'une matière, avec ses sous-titres propres (6e : « sciences et technologie » en physique-chimie). */
+export const niveauxDe = (slug: string): Niveau[] => {
+  const m = matiere(slug);
+  return NIVEAUX.filter((n) => !m?.niveaux || m.niveaux.includes(n.slug)).map((n) =>
+    m?.sousTitres?.[n.slug] ? { ...n, sousTitre: m.sousTitres[n.slug] } : n,
+  );
+};
+export const niveauDe = (matiereSlug: string, niveauSlug: string) => niveauxDe(matiereSlug).find((n) => n.slug === niveauSlug);
+/** « Maths et Magique », « Physique-chimie et Magique ». */
+export const marque = (slug: string) => `${matiere(slug)?.nom ?? 'Maths'} et Magique`;
+/** « maths », « physique-chimie ». */
+export const nomDans = (slug: string) => { const m = matiere(slug); return m?.nomLong ?? m?.nom.toLowerCase() ?? 'maths'; };

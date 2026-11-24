@@ -1,0 +1,52 @@
+questions:
+  - question: Une transformation non totale aboutit à…
+    choix: ['l''épuisement d''un réactif', 'un état d''équilibre où réactifs et produits coexistent', 'une explosion', 'la disparition des produits']
+    bonne: 1
+    explication: Aucun réactif n'est épuisé, le système s'arrête au match nul entre les deux sens de réaction.
+    revoir: cours
+
+  - question: À l'équilibre, les réactions directe et inverse…
+    choix: ['sont arrêtées', 'ont la même vitesse', 'n''ont jamais eu lieu', 'sont toutes les deux totales']
+    bonne: 1
+    explication: L'équilibre est dynamique, autant de passages dans chaque sens.
+    revoir: cours
+
+  - question: Dans le quotient de réaction, on ne fait pas figurer…
+    choix: ['les ions', 'les produits', 'le solvant et les solides', 'les espèces colorées']
+    bonne: 2
+    explication: Ils comptent pour 1.
+    revoir: cours
+
+  - question: Si $Q_{r,i} < K$, le système évolue…
+    choix: ['dans le sens direct', 'dans le sens indirect', 'pas du tout', 'dans les deux sens jusqu''à disparaître']
+    bonne: 0
+    explication: $Q_r$ doit augmenter pour atteindre $K$, il faut former des produits.
+    revoir: cours
+
+  - question: La constante d'équilibre $K$ dépend…
+    choix: ['des quantités initiales', 'de la température', 'du volume de la solution', 'du temps']
+    bonne: 1
+    explication: Pour une réaction donnée, $K$ ne dépend que de la température.
+    revoir: cours
+
+  - question: Quel est le quotient de $2\,\mathrm{Fe^{3+}} + 2\,\mathrm{I^-} \rightleftharpoons 2\,\mathrm{Fe^{2+}} + \mathrm{I_2}$ ?
+    choix:
+      - '$\frac{[\mathrm{Fe^{2+}}][\mathrm{I_2}]}{[\mathrm{Fe^{3+}}][\mathrm{I^-}]}$'
+      - '$\frac{[\mathrm{Fe^{2+}}]^2[\mathrm{I_2}]}{[\mathrm{Fe^{3+}}]^2[\mathrm{I^-}]^2}$'
+      - '$\frac{[\mathrm{Fe^{3+}}]^2[\mathrm{I^-}]^2}{[\mathrm{Fe^{2+}}]^2[\mathrm{I_2}]}$'
+      - '$2\,[\mathrm{Fe^{2+}}] + [\mathrm{I_2}]$'
+    bonne: 1
+    explication: Produits au numérateur, réactifs au dénominateur, chacun à la puissance de son coefficient (on omet $c^\circ$ ici).
+    revoir: cours
+
+  - question: On retire un produit au fur et à mesure qu'il se forme. Le taux d'avancement final…
+    choix: ['diminue', 'augmente', 'ne change pas', 'devient négatif']
+    bonne: 1
+    explication: $Q_r$ reste inférieur à $K$, la réaction continue dans le sens direct.
+    revoir: exercices
+
+  - question: Une réaction de constante $K = 10^{30}$ est en pratique…
+    choix: ['totale', 'très peu avancée', 'impossible', 'à l''équilibre dès le départ']
+    bonne: 0
+    explication: Quand $K$ est très grand (au-delà de $10^4$ environ), on peut en général considérer la transformation comme totale.
+    revoir: cours

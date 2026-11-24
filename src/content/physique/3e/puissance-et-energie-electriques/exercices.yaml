@@ -1,0 +1,69 @@
+exercices:
+  - titre: L'intensité dans un sèche-cheveux
+    difficulte: 1
+    type: application
+    enonce: |
+      Un sèche-cheveux de 2000 W est branché sur le secteur (230 V). Calculer l'intensité du courant qui le traverse.
+    indice: $I = P/U$.
+    etapes:
+      - type: calcul
+        titre: Le calcul
+        texte: $I = 2000/230$.
+      - type: conc
+        titre: Résultat
+        texte: <mark>$I \approx 8{,}7\ \mathrm{A}$</mark>.
+
+  - titre: Combien coûte un radiateur ?
+    difficulte: 2
+    type: brevet
+    enonce: |
+      Un radiateur de 1500 W fonctionne 6 heures par jour pendant 30 jours. Le kWh coûte 0,20 €.
+      1. Calculer l'énergie consommée en kWh.
+      2. Calculer le coût.
+    indice: 1500 W = 1,5 kW.
+    etapes:
+      - type: calcul
+        titre: La durée
+        texte: $t = 6 \times 30 = 180\ \mathrm{h}$.
+      - type: calcul
+        titre: L'énergie
+        texte: $E = 1{,}5 \times 180 = 270\ \mathrm{kWh}$.
+      - type: conc
+        titre: Le coût
+        texte: <mark>$270 \times 0{,}20 = 54$ €</mark> pour le mois.
+
+  - titre: La LED et le radiateur
+    difficulte: 2
+    type: piege
+    enonce: |
+      Un élève affirme qu'une ampoule LED de 10 W « ne consomme rien » par rapport à un radiateur de 1000 W. On laisse la LED allumée 100 heures et le radiateur 1 heure. Comparer.
+    indice: Calculer les deux énergies.
+    etapes:
+      - type: calcul
+        titre: La LED
+        texte: $E = 0{,}010\ \mathrm{kW} \times 100\ \mathrm{h} = 1{,}0\ \mathrm{kWh}$.
+      - type: calcul
+        titre: Le radiateur
+        texte: $E = 1{,}0\ \mathrm{kW} \times 1\ \mathrm{h} = 1{,}0\ \mathrm{kWh}$.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>Même énergie, même coût</mark>. La LED a une petite puissance, mais l'énergie dépend aussi de la durée.
+
+  - titre: La multiprise qui disjoncte
+    difficulte: 3
+    type: brevet
+    enonce: |
+      Sur une même prise multiple (230 V), on branche un four de 2500 W et un radiateur de 2000 W. Le circuit est protégé par un disjoncteur de 16 A.
+      1. Calculer l'intensité dans chaque appareil.
+      2. Calculer l'intensité totale dans le fil de la multiprise. Que va-t-il se passer ?
+    indice: Les appareils sont en dérivation.
+    etapes:
+      - type: calcul
+        titre: Les intensités
+        texte: Four $2500/230 \approx 10{,}9\ \mathrm{A}$. Radiateur $2000/230 \approx 8{,}7\ \mathrm{A}$.
+      - type: calcul
+        titre: Le total
+        texte: En dérivation, les intensités s'additionnent. $I \approx 10{,}9 + 8{,}7 = 19{,}6\ \mathrm{A}$.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>19,6 A dépasse 16 A, le disjoncteur coupe le courant</mark>. Sans lui, les fils chaufferaient dangereusement.

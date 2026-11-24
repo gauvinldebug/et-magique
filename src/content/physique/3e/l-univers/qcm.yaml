@@ -1,0 +1,30 @@
+questions:
+  - question: Combien de planètes compte le système solaire ?
+    choix: ['7', '8', '9', '12']
+    bonne: 1
+    explication: Pluton est une planète naine depuis 2006.
+    revoir: cours
+
+  - question: La lumière du Soleil met environ… pour arriver sur Terre.
+    choix: ['1 seconde', '8 minutes', '8 heures', '4 ans']
+    bonne: 1
+    explication: 150 millions de km à 300 000 km/s.
+    revoir: cours
+
+  - question: Une planète…
+    choix: ['produit sa propre lumière', 'renvoie la lumière de son étoile', 'est toujours gazeuse', "est plus grande qu'une étoile"]
+    bonne: 1
+    explication: Seules les étoiles produisent leur lumière.
+    revoir: cours
+
+  - question: Le Big Bang a eu lieu il y a environ…
+    choix: ["4,6 milliards d'années", "13,8 milliards d'années", '2 000 ans', "100 millions d'années"]
+    bonne: 1
+    explication: Le système solaire, lui, a 4,6 milliards d'années.
+    revoir: cours
+
+  - question: Les atomes de carbone de notre corps ont été fabriqués…
+    choix: ['sur Terre', "au cœur d'étoiles", 'par les plantes', 'au moment du Big Bang']
+    bonne: 1
+    explication: Par fusion nucléaire dans les étoiles.
+    revoir: cours

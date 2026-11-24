@@ -1,0 +1,30 @@
+questions:
+  - question: L'eau salée est…
+    choix: ['un corps pur', 'un mélange homogène', 'un mélange hétérogène', 'un solvant pur']
+    bonne: 1
+    explication: Deux espèces, qu'on ne distingue pas à l'œil nu.
+    revoir: cours
+
+  - question: Pendant la fusion d'un corps pur, la température…
+    choix: ['augmente', 'diminue', 'reste constante', 'oscille']
+    bonne: 2
+    explication: C'est le palier qui signale un corps pur.
+    revoir: cours
+
+  - question: On dissout 5,0 g de soluté pour obtenir 0,50 L de solution. La concentration en masse vaut…
+    choix: ['2,5 g/L', '10 g/L', '0,10 g/L', '5,0 g/L']
+    bonne: 1
+    explication: $5{,}0/0{,}50$.
+    revoir: exercices
+
+  - question: Pour diluer 20 fois une solution et obtenir 100 mL, on prélève…
+    choix: ['20 mL', '5,0 mL', '2,0 mL', '50 mL']
+    bonne: 1
+    explication: $V_0 = 100/20$.
+    revoir: exercices
+
+  - question: Pour prélever précisément 10,0 mL de solution mère, on utilise…
+    choix: ['une éprouvette graduée', 'un bécher', 'une pipette jaugée', 'un erlenmeyer']
+    bonne: 2
+    explication: La verrerie jaugée est la plus précise.
+    revoir: cours
