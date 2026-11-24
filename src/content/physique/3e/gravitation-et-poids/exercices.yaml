@@ -1,0 +1,68 @@
+exercices:
+  - titre: Calculer un poids
+    difficulte: 1
+    type: application
+    enonce: |
+      Calculer le poids sur Terre d'un sac de 12 kg ($g = 9{,}8\ \mathrm{N/kg}$).
+    indice: $P = m \times g$.
+    etapes:
+      - type: calcul
+        titre: Le calcul
+        texte: $P = 12 \times 9{,}8$.
+      - type: conc
+        titre: Résultat
+        texte: <mark>$P \approx 118\ \mathrm{N}$</mark>.
+
+  - titre: Retrouver une masse
+    difficulte: 2
+    type: brevet
+    enonce: |
+      Sur la Lune, un rocher a un poids de 48 N ($g_{\text{Lune}} = 1{,}6\ \mathrm{N/kg}$).
+      1. Calculer sa masse.
+      2. Calculer son poids sur Terre.
+    indice: $m = P/g$.
+    etapes:
+      - type: calcul
+        titre: La masse
+        texte: $m = 48/1{,}6 = 30\ \mathrm{kg}$.
+      - type: conc
+        titre: Sur Terre
+        texte: <mark>$P = 30 \times 9{,}8 = 294\ \mathrm{N}$</mark>. La masse est la même, le poids est environ 6 fois plus grand.
+
+  - titre: Je pèse 60 kilos
+    difficulte: 1
+    type: piege
+    enonce: |
+      Léa dit : « je pèse 60 kg, donc sur la Lune je pèserai 10 kg ». Corriger sa phrase.
+    indice: Quelle grandeur se mesure en kg ?
+    etapes:
+      - type: piege
+        titre: L'erreur
+        texte: Le kilogramme est l'unité de la masse, et la masse ne change pas sur la Lune.
+      - type: calcul
+        titre: Les vraies valeurs
+        texte: Masse 60 kg partout. Poids sur Terre $60 \times 9{,}8 = 588\ \mathrm{N}$, sur la Lune $60 \times 1{,}6 = 96\ \mathrm{N}$.
+      - type: conc
+        titre: La bonne phrase
+        texte: <mark>« Ma masse est 60 kg partout ; mon poids passe de 588 N à 96 N »</mark>.
+
+  - titre: Tracer la courbe P en fonction de m
+    difficulte: 3
+    type: brevet
+    enonce: >-
+      On mesure le poids de plusieurs objets avec un dynamomètre :
+      <table><tr><th>m (kg)</th><th>0,10</th><th>0,20</th><th>0,30</th><th>0,50</th></tr>
+      <tr><td>P (N)</td><td>0,98</td><td>1,96</td><td>2,94</td><td>4,90</td></tr></table>
+      1. Le poids est-il proportionnel à la masse ? Justifier.
+      2. Calculer le coefficient de proportionnalité. Que représente-t-il ?
+    indice: Calculer P/m pour chaque colonne.
+    etapes:
+      - type: calcul
+        titre: Le rapport
+        texte: $0{,}98/0{,}10 = 9{,}8$ ; $1{,}96/0{,}20 = 9{,}8$ ; $2{,}94/0{,}30 = 9{,}8$ ; $4{,}90/0{,}50 = 9{,}8$.
+      - type: calcul
+        titre: Proportionnalité
+        texte: Le rapport est le même pour tous les objets, le poids est proportionnel à la masse.
+      - type: conc
+        titre: Le coefficient
+        texte: <mark>9,8 N/kg, l'intensité de la pesanteur terrestre $g$</mark>.

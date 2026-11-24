@@ -1,0 +1,67 @@
+exercices:
+  - titre: Calculer une énergie cinétique
+    difficulte: 1
+    type: application
+    enonce: |
+      Un cycliste et son vélo ont une masse de 80 kg et roulent à 10 m/s. Calculer leur énergie cinétique.
+    indice: Ne pas oublier le carré.
+    etapes:
+      - type: calcul
+        titre: Le calcul
+        texte: $E_c = 0{,}5 \times 80 \times 10^2 = 0{,}5 \times 80 \times 100$.
+      - type: conc
+        titre: Résultat
+        texte: <mark>$E_c = 4000\ \mathrm{J}$</mark>.
+
+  - titre: 50 ou 60 km/h
+    difficulte: 2
+    type: brevet
+    enonce: |
+      Une voiture de 1200 kg roule d'abord à 50 km/h, puis à 60 km/h.
+      1. Convertir les deux vitesses en m/s.
+      2. Calculer l'énergie cinétique dans les deux cas.
+      3. De quel pourcentage augmente-t-elle ?
+    indice: Diviser par 3,6.
+    etapes:
+      - type: calcul
+        titre: Les vitesses
+        texte: $50/3{,}6 \approx 13{,}9\ \mathrm{m/s}$ et $60/3{,}6 \approx 16{,}7\ \mathrm{m/s}$.
+      - type: calcul
+        titre: Les énergies
+        texte: $E_1 = 0{,}5 \times 1200 \times 13{,}9^2 \approx 116\,000\ \mathrm{J}$ ; $E_2 = 0{,}5 \times 1200 \times 16{,}7^2 \approx 167\,000\ \mathrm{J}$.
+      - type: conc
+        titre: L'augmentation
+        texte: $167/116 \approx 1{,}44$. <mark>La vitesse augmente de 20 %, l'énergie cinétique de 44 %</mark>.
+
+  - titre: Deux fois plus vite
+    difficulte: 1
+    type: piege
+    enonce: |
+      Un élève affirme qu'à 100 km/h, une voiture a deux fois plus d'énergie cinétique qu'à 50 km/h. Corriger.
+    indice: Où est la vitesse dans la formule ?
+    etapes:
+      - type: piege
+        titre: L'erreur
+        texte: La vitesse est au carré dans $E_c = \frac{1}{2}mv^2$.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>Vitesse doublée, énergie multipliée par $2^2 = 4$</mark>.
+
+  - titre: Le téléphone au volant
+    difficulte: 3
+    type: brevet
+    enonce: |
+      Une voiture roule à 90 km/h, soit 25 m/s. Sa distance de freinage est 45 m. Le temps de réaction d'un conducteur attentif est 1 s ; il passe à 2 s s'il regarde son téléphone.
+      1. Calculer la distance d'arrêt dans les deux cas.
+      2. Un obstacle apparaît à 80 m. Que se passe-t-il dans chaque cas ?
+    indice: $d_A = v \times t_R + d_F$.
+    etapes:
+      - type: calcul
+        titre: Conducteur attentif
+        texte: $d_R = 25 \times 1 = 25\ \mathrm{m}$, $d_A = 25 + 45 = 70\ \mathrm{m}$.
+      - type: calcul
+        titre: Conducteur au téléphone
+        texte: $d_R = 25 \times 2 = 50\ \mathrm{m}$, $d_A = 50 + 45 = 95\ \mathrm{m}$.
+      - type: conc
+        titre: L'obstacle à 80 m
+        texte: <mark>Le conducteur attentif s'arrête 10 m avant, celui au téléphone percute l'obstacle</mark>, encore lancé.

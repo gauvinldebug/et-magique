@@ -1,0 +1,59 @@
+exercices:
+  - titre: La lumière de la Lune
+    difficulte: 1
+    type: application
+    enonce: |
+      La Lune est à 384 000 km de la Terre. Combien de temps met la lumière pour venir de la Lune ?
+    indice: $t = d/c$, avec $c = 300\,000$ km/s.
+    etapes:
+      - type: calcul
+        titre: Le calcul
+        texte: $t = 384\,000 / 300\,000$.
+      - type: conc
+        titre: Résultat
+        texte: <mark>$t \approx 1{,}3\ \mathrm{s}$</mark>.
+
+  - titre: Calculer une année-lumière
+    difficulte: 2
+    type: brevet
+    enonce: |
+      Retrouver la valeur de l'année-lumière en kilomètres, sachant qu'une année compte environ 365 jours et que $c = 300\,000$ km/s.
+    indice: Calculer d'abord le nombre de secondes dans une année.
+    etapes:
+      - type: calcul
+        titre: Une année en secondes
+        texte: $365 \times 24 \times 3600 \approx 3{,}15 \times 10^{7}\ \mathrm{s}$.
+      - type: calcul
+        titre: La distance
+        texte: $d = 300\,000 \times 3{,}15 \times 10^{7}$.
+      - type: conc
+        titre: Résultat
+        texte: <mark>$1\ \mathrm{al} \approx 9{,}5 \times 10^{12}\ \mathrm{km}$</mark>.
+
+  - titre: Une durée ou une distance ?
+    difficulte: 1
+    type: piege
+    enonce: |
+      Un élève lit qu'une étoile est à 600 années-lumière et en déduit « qu'elle a 600 ans ». Corriger.
+    indice: Que mesure l'année-lumière ?
+    etapes:
+      - type: piege
+        titre: L'erreur
+        texte: L'année-lumière est une distance, pas un âge.
+      - type: conc
+        titre: Ce qu'on peut dire
+        texte: <mark>La lumière reçue aujourd'hui est partie il y a 600 ans</mark>. On voit l'étoile telle qu'elle était à cette époque. Son âge réel peut être de plusieurs milliards d'années.
+
+  - titre: Classer du plus petit au plus grand
+    difficulte: 2
+    type: brevet
+    enonce: |
+      Classer du plus petit au plus grand : la Voie lactée, la Terre, le système solaire, le Soleil, l'Univers observable, la Lune.
+    indice: Qui contient qui ?
+    etapes:
+      - type: methode
+        titre: Le raisonnement
+        texte: La Lune est plus petite que la Terre. Le Soleil est bien plus grand que la Terre. Le système solaire contient le Soleil et ses planètes. La Voie lactée contient le système solaire. L'Univers contient les galaxies.
+      - type: conc
+        titre: Le classement
+        texte: <mark>Lune, Terre, Soleil, système solaire, Voie lactée, Univers observable</mark>.

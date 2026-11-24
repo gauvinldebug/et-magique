@@ -1,0 +1,30 @@
+questions:
+  - question: Le gaz qui se dégage quand l'acide chlorhydrique attaque le fer est…
+    choix: ['du dioxygène', 'du dihydrogène', 'du dioxyde de carbone', 'du chlore']
+    bonne: 1
+    explication: Il détone à la flamme.
+    revoir: cours
+
+  - question: Le test du dihydrogène, c'est…
+    choix: ["l'eau de chaux qui se trouble", 'une détonation à la flamme', 'une allumette qui se rallume', 'un papier pH']
+    bonne: 1
+    explication: Une petite détonation, le « pop ».
+    revoir: cours
+
+  - question: Après la réaction, la soude donne un précipité vert. La solution contient…
+    choix: ['des ions $\mathrm{Cu^{2+}}$', 'des ions $\mathrm{Fe^{2+}}$', 'des ions $\mathrm{Fe^{3+}}$', 'du fer métallique']
+    bonne: 1
+    explication: Précipité vert, ions fer II.
+    revoir: cours
+
+  - question: Pendant la réaction entre un acide et le fer, le pH…
+    choix: ['diminue', 'augmente', 'reste égal', 'devient 0']
+    bonne: 1
+    explication: Les ions $\mathrm{H^+}$ sont consommés.
+    revoir: exercices
+
+  - question: Les ions chlorure dans cette réaction sont…
+    choix: ['des réactifs', 'des produits', 'des ions spectateurs', 'transformés en gaz']
+    bonne: 2
+    explication: On les retrouve à la fin, ils ne réagissent pas.
+    revoir: cours

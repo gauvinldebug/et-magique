@@ -1,0 +1,30 @@
+questions:
+  - question: La puissance électrique se mesure en…
+    choix: ['joules', 'watts', 'kilowattheures', 'ampères']
+    bonne: 1
+    explication: Le watt est l'unité de puissance.
+    revoir: cours
+
+  - question: Un appareil de 230 V traversé par 2,0 A a une puissance de…
+    choix: ['115 W', '460 W', '232 W', '0,0087 W']
+    bonne: 1
+    explication: $P = 230 \times 2{,}0$.
+    revoir: exercices
+
+  - question: Un appareil de 2 kW fonctionne 3 h. Il consomme…
+    choix: ['6 kWh', '1,5 kWh', '5 kWh', '6 W']
+    bonne: 0
+    explication: $E = 2 \times 3$.
+    revoir: exercices
+
+  - question: Le fournisseur d'électricité facture…
+    choix: ['la puissance', "l'énergie", "l'intensité", 'la tension']
+    bonne: 1
+    explication: En kWh.
+    revoir: cours
+
+  - question: Le rôle d'un disjoncteur est de…
+    choix: ["augmenter la tension", "couper le courant si l'intensité est trop grande", "mesurer l'énergie", "stocker l'électricité"]
+    bonne: 1
+    explication: Il protège contre la surcharge.
+    revoir: cours

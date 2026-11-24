@@ -1,0 +1,30 @@
+questions:
+  - question: Le poids d'un objet se mesure en…
+    choix: ['kilogrammes', 'newtons', 'newtons par kilogramme', 'grammes']
+    bonne: 1
+    explication: C'est une force.
+    revoir: cours
+
+  - question: L'interaction gravitationnelle est…
+    choix: ['toujours attractive', 'toujours répulsive', 'parfois attractive, parfois répulsive', 'une action de contact']
+    bonne: 0
+    explication: Les masses s'attirent toujours.
+    revoir: cours
+
+  - question: Quand la distance entre deux astres augmente, l'attraction gravitationnelle…
+    choix: ['augmente', 'diminue', 'reste la même', 'change de sens']
+    bonne: 1
+    explication: La laisse tire moins fort de loin.
+    revoir: cours
+
+  - question: Un objet de 5,0 kg a sur Terre un poids d'environ…
+    choix: ['5,0 N', '49 N', '0,51 N', '14,8 N']
+    bonne: 1
+    explication: $5{,}0 \times 9{,}8$.
+    revoir: exercices
+
+  - question: Sur la Lune, la masse d'un astronaute est…
+    choix: ['6 fois plus petite', 'la même que sur Terre', 'nulle', '6 fois plus grande']
+    bonne: 1
+    explication: La masse ne dépend pas de l'astre.
+    revoir: cours
