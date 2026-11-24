@@ -32,7 +32,11 @@ npm run build      # site dans dist/ + index de recherche
 npm run pdf        # régénère les PDF (cours, fiche, exercices) depuis dist/, puis relancer npm run build
 ```
 
-## Mise en ligne sur Cloudflare Pages (hébergeur principal)
+## Mise en ligne sur Cloudflare Workers (hébergeur principal)
+
+Le projet Cloudflare « et-magique » est un **Worker** relié au dépôt GitHub : chaque fusion sur `main` construit (`npm run build`) puis déploie selon `wrangler.jsonc` (pages de `dist/`, API `/api/*` via `cloudflare/worker.ts`, KV `DONNEES` créé automatiquement, `nodejs_compat`). Il reste seulement à mettre les clés dans *Settings → Variables and Secrets* (type Secret).
+
+### Variante Cloudflare Pages (non utilisée)
 
 1. dash.cloudflare.com → *Workers & Pages* → *Create* → *Pages* → *Connect to Git* → `et-magique`. Preset Astro, build `npm run build`, dossier `dist`, variable `NODE_VERSION=22`.
 2. *Settings → Runtime → Compatibility flags* : `nodejs_compat` (production et preview).

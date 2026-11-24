@@ -1,0 +1,20 @@
+// Configuration Cloudflare Workers du site (déploiement automatique à chaque fusion sur main).
+// Le KV « DONNEES » est créé automatiquement au premier déploiement (pas d'identifiant à recopier).
+// Les clés (ADMIN_PASSWORD, ADMIN_SECRET, BREVO_API_KEY…) se mettent dans le tableau de bord,
+// projet > Settings > Variables and Secrets, en type « Secret ».
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "et-magique",
+  "main": "cloudflare/worker.ts",
+  "compatibility_date": "2025-11-01",
+  "compatibility_flags": ["nodejs_compat"],
+  "build": { "command": "npm run build" },
+  "assets": {
+    "directory": "./dist",
+    "binding": "ASSETS",
+    "not_found_handling": "404-page",
+    "run_worker_first": ["/api/*"]
+  },
+  "kv_namespaces": [{ "binding": "DONNEES" }],
+  "observability": { "enabled": true }
+}
