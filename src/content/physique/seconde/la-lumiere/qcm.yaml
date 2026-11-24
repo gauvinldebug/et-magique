@@ -1,0 +1,30 @@
+questions:
+  - question: L'année-lumière est…
+    choix: ['une durée', 'une distance', 'une vitesse', 'une énergie']
+    bonne: 1
+    explication: La distance parcourue par la lumière en un an.
+    revoir: cours
+
+  - question: Un corps chauffé de plus en plus fort émet un spectre…
+    choix: ['de raies', "qui s'enrichit vers le violet", "qui s'enrichit vers le rouge", 'qui ne change pas']
+    bonne: 1
+    explication: Le métal passe du rouge au blanc.
+    revoir: cours
+
+  - question: Passant de l'air à l'eau, un rayon oblique…
+    choix: ["s'éloigne de la normale", 'se rapproche de la normale', 'ne change pas de direction', 'est entièrement réfléchi']
+    bonne: 1
+    explication: L'eau est plus réfringente que l'air.
+    revoir: cours
+
+  - question: L'indice de réfraction d'un milieu où la lumière va à $2{,}0 \times 10^{8}\ \mathrm{m \cdot s^{-1}}$ est…
+    choix: ['0,67', '1,5', '2,0', '6,0']
+    bonne: 1
+    explication: $n = c/v = 3{,}0/2{,}0$.
+    revoir: exercices
+
+  - question: Une radiation de longueur d'onde 650 nm est perçue…
+    choix: ['violette', 'verte', 'rouge', 'invisible']
+    bonne: 2
+    explication: Proche de l'extrémité rouge du visible.
+    revoir: cours

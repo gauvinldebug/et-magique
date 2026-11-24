@@ -1,0 +1,70 @@
+exercices:
+  - titre: Poids sur Terre et sur Mars
+    difficulte: 1
+    type: application
+    enonce: |
+      Le robot Curiosity a une masse de 900 kg. Calculer son poids sur Terre ($g = 9{,}8\ \mathrm{N \cdot kg^{-1}}$) et sur Mars ($g = 3{,}7\ \mathrm{N \cdot kg^{-1}}$). Sa masse change-t-elle ?
+    indice: $P = mg$.
+    etapes:
+      - type: calcul
+        titre: Les poids
+        texte: Terre $P = 900 \times 9{,}8 \approx 8{,}8 \times 10^{3}\ \mathrm{N}$. Mars $P = 900 \times 3{,}7 \approx 3{,}3 \times 10^{3}\ \mathrm{N}$.
+      - type: conc
+        titre: La masse
+        texte: <mark>La masse reste 900 kg partout</mark>, seul le poids change.
+
+  - titre: Le livre sur la table
+    difficulte: 1
+    type: methode
+    enonce: |
+      Un livre de 500 g est posé sur une table horizontale. Faire l'inventaire des forces, et donner leurs caractéristiques.
+    indice: Le livre est immobile.
+    etapes:
+      - type: calcul
+        titre: Le poids
+        texte: Vertical, vers le bas, appliqué au centre du livre, $P = 0{,}500 \times 9{,}8 = 4{,}9\ \mathrm{N}$.
+      - type: methode
+        titre: La réaction
+        texte: Le livre est immobile, donc d'après le principe d'inertie les forces se compensent.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>La réaction de la table est verticale, vers le haut, de valeur 4,9 N</mark>.
+
+  - titre: La voiture sur l'autoroute
+    difficulte: 2
+    type: piege
+    enonce: |
+      Une voiture roule à 130 km/h en ligne droite, à vitesse constante. Un élève affirme : « la force du moteur est plus grande que les frottements, sinon la voiture ne pourrait pas avancer ». Corriger.
+    indice: Quel est le type de mouvement ?
+    etapes:
+      - type: methode
+        titre: Le mouvement
+        texte: Ligne droite à vitesse constante, c'est un mouvement rectiligne uniforme.
+      - type: piege
+        titre: L'erreur
+        texte: D'après le principe d'inertie, les forces se compensent. Il n'y a pas besoin d'une force en plus pour garder la vitesse.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>La force motrice est égale aux frottements</mark>. Si elle était plus grande, la voiture accélérerait.
+
+  - titre: La Terre et la pomme
+    difficulte: 3
+    type: bac
+    enonce: |
+      Une pomme de masse $m = 0{,}20\ \mathrm{kg}$ est posée au sol. On donne $M_T = 5{,}97 \times 10^{24}\ \mathrm{kg}$, $R_T = 6{,}37 \times 10^{6}\ \mathrm{m}$, $G = 6{,}67 \times 10^{-11}\ \mathrm{N \cdot m^2 \cdot kg^{-2}}$.
+      1. Calculer la force de gravitation exercée par la Terre sur la pomme. Comparer au poids.
+      2. Quelle force la pomme exerce-t-elle sur la Terre ?
+      3. Pourquoi est-ce la pomme qui tombe, et pas la Terre qui monte ?
+    indice: Troisième loi de Newton.
+    etapes:
+      - type: calcul
+        titre: La gravitation
+        texte: >-
+          $F = 6{,}67 \times 10^{-11} \times 0{,}20 \times 5{,}97 \times 10^{24} / (6{,}37 \times 10^{6})^2 \approx 1{,}96\ \mathrm{N}$. Le poids vaut $0{,}20 \times 9{,}8 = 1{,}96\ \mathrm{N}$ : c'est la même force.
+      - type: calcul
+        titre: La réciproque
+        texte: La pomme attire la Terre avec une force de même valeur, 1,96 N, dirigée vers la pomme.
+      - type: conc
+        titre: Qui bouge ?
+        texte: >-
+          <mark>La même force agit sur une masse énorme et sur une masse minuscule</mark>. La Terre est $3 \times 10^{25}$ fois plus massive : son déplacement est imperceptible.

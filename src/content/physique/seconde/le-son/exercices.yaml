@@ -1,0 +1,72 @@
+exercices:
+  - titre: À quelle distance est l'orage ?
+    difficulte: 1
+    type: application
+    enonce: |
+      Tu entends le tonnerre 4,5 s après avoir vu l'éclair. À quelle distance est tombée la foudre ?
+    indice: La lumière arrive presque instantanément.
+    etapes:
+      - type: calcul
+        titre: Le calcul
+        texte: $d = v \times \Delta t = 340 \times 4{,}5$.
+      - type: conc
+        titre: Résultat
+        texte: <mark>$d \approx 1{,}5 \times 10^{3}\ \mathrm{m}$, soit 1,5 km</mark>.
+
+  - titre: Lire un oscillogramme
+    difficulte: 2
+    type: methode
+    enonce: |
+      Sur l'écran d'un oscilloscope, 4 périodes d'un son occupent 9,1 ms.
+      1. Calculer la période et la fréquence.
+      2. Le son est-il audible ? De quelle note s'agit-il ?
+    indice: Diviser par le nombre de périodes.
+    etapes:
+      - type: calcul
+        titre: La période
+        texte: $T = 9{,}1/4 \approx 2{,}27\ \mathrm{ms} = 2{,}27 \times 10^{-3}\ \mathrm{s}$.
+      - type: calcul
+        titre: La fréquence
+        texte: $f = 1/T \approx 440\ \mathrm{Hz}$.
+      - type: conc
+        titre: Conclusion
+        texte: >-
+          <mark>440 Hz, dans le domaine audible : c'est le la du diapason</mark>.
+
+  - titre: Aigu ou fort ?
+    difficulte: 2
+    type: piege
+    enonce: |
+      On compare deux sons. Le son A a une fréquence de 200 Hz et une grande amplitude. Le son B a une fréquence de 2000 Hz et une petite amplitude. Un élève dit que A est plus aigu « parce qu'on l'entend plus ». Corriger.
+    indice: Quelle grandeur donne la hauteur ?
+    etapes:
+      - type: piege
+        titre: L'erreur
+        texte: L'élève confond hauteur et intensité. On entend A plus fort à cause de son amplitude.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>B est plus aigu (fréquence plus grande), A est plus fort (amplitude plus grande)</mark>.
+
+  - titre: L'écholocation de la chauve-souris
+    difficulte: 3
+    type: bac
+    enonce: |
+      Une chauve-souris émet des cris de fréquence 50 kHz. L'écho renvoyé par un insecte lui revient 12 ms après l'émission.
+      1. L'homme peut-il entendre ces cris ?
+      2. Calculer la période des cris.
+      3. À quelle distance se trouve l'insecte ?
+    indice: L'écho fait l'aller et le retour.
+    etapes:
+      - type: calcul
+        titre: Audible ?
+        texte: >-
+          50 kHz dépasse 20 kHz : ce sont des ultrasons, inaudibles pour l'homme.
+      - type: calcul
+        titre: La période
+        texte: $T = 1/f = 1/50\,000 = 2{,}0 \times 10^{-5}\ \mathrm{s}$, soit 20 µs.
+      - type: calcul
+        titre: Aller-retour
+        texte: Le son parcourt $340 \times 0{,}012 \approx 4{,}1\ \mathrm{m}$ en tout.
+      - type: conc
+        titre: La distance
+        texte: <mark>L'insecte est à environ 2 m</mark>, la moitié du trajet.

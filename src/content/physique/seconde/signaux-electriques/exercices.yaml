@@ -1,0 +1,69 @@
+exercices:
+  - titre: La loi des nœuds
+    difficulte: 1
+    type: application
+    enonce: |
+      Un générateur débite 0,50 A dans deux lampes montées en dérivation. La première est traversée par 0,20 A. Quelle intensité traverse la seconde ?
+    indice: Le courant se partage au nœud.
+    etapes:
+      - type: calcul
+        titre: La loi des nœuds
+        texte: $I = I_1 + I_2$ donc $I_2 = 0{,}50 - 0{,}20$.
+      - type: conc
+        titre: Résultat
+        texte: <mark>$I_2 = 0{,}30\ \mathrm{A}$</mark>.
+
+  - titre: Deux résistances en série
+    difficulte: 2
+    type: methode
+    enonce: |
+      Un générateur de 12 V alimente deux résistances en série, $R_1 = 100\ \Omega$ et $R_2 = 200\ \Omega$. On mesure $I = 40\ \mathrm{mA}$.
+      Calculer les tensions $U_1$ et $U_2$, puis vérifier la loi des mailles.
+    indice: Même intensité partout en série.
+    etapes:
+      - type: calcul
+        titre: Les tensions
+        texte: $U_1 = R_1 I = 100 \times 0{,}040 = 4{,}0\ \mathrm{V}$ et $U_2 = 200 \times 0{,}040 = 8{,}0\ \mathrm{V}$.
+      - type: conc
+        titre: Vérification
+        texte: <mark>$U_1 + U_2 = 12\ \mathrm{V} = U_G$</mark>, la loi des mailles est vérifiée.
+
+  - titre: Les milliampères
+    difficulte: 1
+    type: piege
+    enonce: |
+      Une résistance de 470 Ω est traversée par 25 mA. Un élève calcule $U = 470 \times 25 = 11\,750\ \mathrm{V}$. Corriger.
+    indice: Quelle unité pour l'intensité ?
+    etapes:
+      - type: piege
+        titre: L'erreur
+        texte: L'intensité doit être en ampères. 25 mA = 0,025 A.
+      - type: conc
+        titre: Le bon calcul
+        texte: <mark>$U = 470 \times 0{,}025 \approx 11{,}8\ \mathrm{V}$</mark>, mille fois moins.
+
+  - titre: Un thermomètre électronique
+    difficulte: 3
+    type: bac
+    enonce: >-
+      On étalonne une thermistance CTN :
+      <table><tr><th>T (°C)</th><th>0</th><th>20</th><th>40</th><th>60</th><th>80</th></tr>
+      <tr><td>R (kΩ)</td><td>33</td><td>12,5</td><td>5,3</td><td>2,5</td><td>1,3</td></tr></table>
+      1. Comment évolue la résistance ? Est-ce cohérent avec une CTN ?
+      2. Dans un bain, on mesure $R = 5{,}3\ \mathrm{k\Omega}$. Quelle est la température ?
+      3. On mesure ensuite $R = 3{,}8\ \mathrm{k\Omega}$. Donner un encadrement de la température. Pourquoi ne peut-on pas faire une simple règle de trois ?
+    indice: La courbe n'est pas une droite.
+    etapes:
+      - type: methode
+        titre: L'évolution
+        texte: La résistance diminue quand la température augmente, c'est bien le comportement d'une CTN.
+      - type: calcul
+        titre: Lecture directe
+        texte: $R = 5{,}3\ \mathrm{k\Omega}$ correspond à 40 °C.
+      - type: calcul
+        titre: Encadrement
+        texte: 3,8 kΩ est entre 5,3 kΩ (40 °C) et 2,5 kΩ (60 °C). La température est entre 40 et 60 °C.
+      - type: conc
+        titre: La règle de trois
+        texte: >-
+          <mark>La résistance ne varie pas proportionnellement à la température</mark> : la courbe d'étalonnage est courbée. Il faut tracer la courbe et lire dessus, ou faire plus de mesures.

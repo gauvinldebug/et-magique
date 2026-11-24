@@ -1,0 +1,30 @@
+questions:
+  - question: Le son peut se propager…
+    choix: ["seulement dans l'air", 'dans un milieu matériel, pas dans le vide', "dans le vide plus vite que dans l'air", 'seulement dans les solides']
+    bonne: 1
+    explication: Il faut des molécules pour transmettre la poussée.
+    revoir: cours
+
+  - question: Un son de période 5,0 ms a une fréquence de…
+    choix: ['5,0 Hz', '200 Hz', '0,20 Hz', '2000 Hz']
+    bonne: 1
+    explication: $1/0{,}0050 = 200\ \mathrm{Hz}$.
+    revoir: exercices
+
+  - question: Plus la fréquence d'un son est grande, plus il est…
+    choix: ['fort', 'grave', 'aigu', 'lent']
+    bonne: 2
+    explication: La hauteur est liée à la fréquence.
+    revoir: cours
+
+  - question: Ce qui distingue un violon d'une flûte jouant la même note, c'est…
+    choix: ['la fréquence', 'le timbre', 'la vitesse du son', 'la période']
+    bonne: 1
+    explication: Même fréquence, forme du signal différente.
+    revoir: cours
+
+  - question: Une exposition prolongée devient dangereuse pour l'oreille à partir d'environ…
+    choix: ['20 dB', '60 dB', '85 dB', '150 dB']
+    bonne: 2
+    explication: Au-delà, les lésions peuvent être définitives.
+    revoir: cours

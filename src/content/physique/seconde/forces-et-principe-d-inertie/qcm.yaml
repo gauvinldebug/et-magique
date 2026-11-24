@@ -1,0 +1,30 @@
+questions:
+  - question: Le poids d'un objet de 2,0 kg sur Terre vaut environ…
+    choix: ['2,0 N', '9,8 N', '20 N', '2,0 kg']
+    bonne: 2
+    explication: $2{,}0 \times 9{,}8 \approx 20\ \mathrm{N}$.
+    revoir: cours
+
+  - question: Un objet en mouvement rectiligne uniforme…
+    choix: ['subit une force dans le sens du mouvement', 'subit des forces qui se compensent', 'ne subit aucune force', 'ralentit forcément']
+    bonne: 1
+    explication: Principe d'inertie.
+    revoir: cours
+
+  - question: Si les forces qui s'exercent sur un objet ne se compensent pas…
+    choix: ['il est immobile', 'il est en mouvement rectiligne uniforme', 'sa vitesse change (valeur ou direction)', 'il disparaît']
+    bonne: 2
+    explication: Contraposée du principe d'inertie.
+    revoir: cours
+
+  - question: La Terre attire la Lune avec une force F. La Lune attire la Terre avec une force…
+    choix: ['plus petite', 'plus grande', 'de même valeur', 'nulle']
+    bonne: 2
+    explication: Principe des actions réciproques.
+    revoir: cours
+
+  - question: La réaction d'un support horizontal sans frottement est…
+    choix: ['horizontale', 'verticale vers le haut', 'verticale vers le bas', 'oblique']
+    bonne: 1
+    explication: Perpendiculaire au support, vers l'objet.
+    revoir: cours
