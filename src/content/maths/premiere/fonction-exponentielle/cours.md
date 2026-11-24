@@ -34,6 +34,8 @@ On note $\mathrm{e} = \exp(1) \approx 2{,}718$, et $\exp(\corange{x}) = \mathrm{
 
 </div>
 
+<div class="labo" data-labo="exponentielle"></div>
+
 ## Les règles de calcul
 
 <div class="encadre">

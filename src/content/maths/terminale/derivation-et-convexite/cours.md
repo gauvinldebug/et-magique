@@ -83,6 +83,8 @@ Un **point d'inflexion** est un point où la courbe **traverse sa tangente**. Si
 
 Avec $\cbleu{f}(\corange{x}) = \corange{x}^3 - 3\corange{x}^2$ : $\cbleu{f}''(\corange{x}) = 6(\corange{x} - 1)$ est négative avant 1 et positive après. La fonction est concave sur $]-\infty\,;1]$, convexe sur $[1\,;+\infty[$, et le point $(1\,;-2)$ est un point d'inflexion : c'est là que la voiture change le sens du volant.
 
+<div class="labo" data-labo="convexite"></div>
+
 ## Utiliser la convexité pour une inégalité
 
 La fonction exponentielle est convexe, donc sa courbe est au-dessus de sa tangente en 0, la droite $y = \corange{x} + 1$. On obtient, sans aucun calcul :

@@ -60,6 +60,8 @@ Un exemple de fonction **non** continue : la partie entière, qui fait des march
 
 Le corollaire marche aussi sur un intervalle ouvert ou infini, en remplaçant $\cbleu{f}(a)$ et $\cbleu{f}(b)$ par les limites aux bornes.
 
+<div class="labo" data-labo="tvi"></div>
+
 ## Retour au problème
 
 Soit $\cbleu{f}(\corange{x}) = \corange{x}^3 + \corange{x} - 1$ sur $[0\,;1]$.

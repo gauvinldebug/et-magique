@@ -1,0 +1,149 @@
+/* ==========================================================================
+   Les encadrés « Manipule » des cours : une figure que l'on fait bouger.
+   Même charte que le reste du site : cadre encre, ombre jaune décalée, pastille rose.
+   ========================================================================== */
+.labo { --lb-c: var(--terme); position: relative; border: 2px solid var(--encre); background: var(--carte); box-shadow: 8px 8px 0 var(--jaune); margin: 8px 8px 12px 0; display: grid; }
+.labo > * { min-width: 0; }
+html:not(.js) .labo { display: none; }
+.js .labo:empty { min-height: 420px; background: linear-gradient(90deg, var(--gris), var(--carte), var(--gris)) 0 0 / 200% 100%; animation: lb-attente 1.4s linear infinite; }
+@keyframes lb-attente { to { background-position: -200% 0; } }
+@media print { .labo { display: none !important; } }
+
+.lb-tete { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; padding: 16px 18px 0; }
+.lb-tag { background: var(--rose); color: var(--ink); font-weight: 800; font-size: .72rem; letter-spacing: .09em; text-transform: uppercase; padding: 3px 10px; line-height: 20px; }
+.lb-titre { font-family: var(--f-titre); font-stretch: 75%; font-weight: 800; font-size: 1.4rem; line-height: 1.15; }
+.lb-consigne { padding: 8px 18px 14px; color: var(--encre-2); font-size: .95rem; line-height: 1.5; }
+.lb-scene { border-block: 1px solid var(--trait); background: var(--carte); overflow: hidden; }
+.lb-lecture { padding: 12px 18px; background: var(--gris); font-size: .95rem; line-height: 1.7; font-variant-numeric: tabular-nums; min-height: 3.1em; }
+.lb-lecture b { font-weight: 800; }
+.lb-ctrl { padding: 14px 18px 18px; display: flex; flex-wrap: wrap; gap: 12px 24px; align-items: center; }
+.lb-v { font-family: var(--f-math); font-style: italic; font-size: 1.06em; }
+.lb-ok { background: var(--ok-doux); color: var(--ok); font-weight: 700; padding: 1px 8px; white-space: nowrap; }
+.lb-pale { color: var(--encre-2); }
+.lb-barre-sus { text-decoration: overline; text-decoration-thickness: 1.5px; }
+
+/* Curseurs */
+.lb-c { --c: var(--bleu); flex: 1 1 260px; display: grid; grid-template-columns: minmax(3.2em, auto) 1fr minmax(6.5em, auto); align-items: center; gap: 12px; font-weight: 700; }
+.lb-c.i { --c: var(--indice); } .lb-c.o { --c: var(--ok); } .lb-c.p { --c: var(--piege); }
+.lb-cn { white-space: nowrap; }
+.lb-cv { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; color: var(--encre); }
+.lb-c input[type="range"] { -webkit-appearance: none; appearance: none; width: 100%; height: 34px; margin: 0; background: transparent; cursor: pointer; touch-action: pan-y; }
+.lb-c input[type="range"]::-webkit-slider-runnable-track { height: 6px; background: linear-gradient(90deg, var(--c) var(--r, 50%), var(--trait) var(--r, 50%)); }
+.lb-c input[type="range"]::-moz-range-track { height: 6px; background: var(--trait); }
+.lb-c input[type="range"]::-moz-range-progress { height: 6px; background: var(--c); }
+.lb-c input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; width: 24px; height: 24px; margin-top: -9px; border-radius: 50%; background: var(--jaune); border: 2.5px solid var(--ink); transition: transform .15s var(--ease); }
+.lb-c input[type="range"]::-moz-range-thumb { width: 19px; height: 19px; border-radius: 50%; background: var(--jaune); border: 2.5px solid var(--ink); }
+.lb-c input[type="range"]:active::-webkit-slider-thumb { transform: scale(1.18); }
+.lb-c input[type="range"]:focus-visible { outline: 3px solid var(--terme); outline-offset: 2px; }
+
+/* Boutons */
+.lb-choix { flex: 1 1 100%; display: flex; flex-wrap: wrap; gap: 8px; }
+.lb-b { border: 2px solid var(--encre); background: transparent; color: var(--encre); border-radius: 999px; padding: 6px 16px; font-weight: 700; font-size: .9rem; line-height: 20px; cursor: pointer; transition: background-color .15s var(--ease), color .15s var(--ease), transform .1s var(--ease); }
+.lb-b:hover { background: var(--gris); }
+.lb-b:active { transform: translateY(1px); }
+.lb-b[aria-pressed="true"] { background: var(--jaune); color: var(--ink); border-color: var(--ink); }
+.lb-b-plein { background: var(--bleu); border-color: var(--bleu); color: #fff; }
+.lb-b-plein:hover { background: var(--ink); border-color: var(--ink); }
+.lb-b-pale { border-color: var(--trait); color: var(--encre-2); }
+.lb-b[disabled] { opacity: .45; cursor: default; }
+.lb-bas-o[aria-pressed="false"], .lb-bas-i[aria-pressed="false"] { text-decoration: line-through; color: var(--encre-2); border-color: var(--trait); }
+
+/* Deux figures côte à côte */
+.lb-duo { display: grid; }
+.lb-duo > * { min-width: 0; }
+@media (min-width: 560px) {
+  .lb-duo { grid-template-columns: 1fr 1fr; }
+  .lb-duo-large { grid-template-columns: 1.7fr 1fr; }
+  .lb-duo > * + * { border-left: 1px solid var(--trait); }
+}
+
+/* La figure */
+.lb-svg { display: block; width: 100%; height: auto; user-select: none; -webkit-user-select: none; font-family: var(--f-texte); overflow: visible; }
+.lb-grille { stroke: var(--trait); stroke-width: 1; opacity: .7; }
+.lb-axe { stroke: var(--encre); stroke-width: 1.5; }
+.lb-grad { fill: var(--encre-2); font-size: 11px; font-variant-numeric: tabular-nums; }
+.lb-nom { fill: var(--encre-2); font-size: 12px; font-style: italic; }
+.lb-et { fill: var(--encre); font-size: 13px; font-weight: 700; paint-order: stroke; stroke: var(--carte); stroke-width: 4px; stroke-linejoin: round; }
+.lb-et-t { fill: var(--terme); } .lb-et-i { fill: var(--indice); } .lb-et-o { fill: var(--ok); } .lb-et-p { fill: var(--piege); }
+.lb-it { font-family: var(--f-math); font-style: italic; font-size: 15px; }
+.lb-f { fill: none; stroke: var(--terme); stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+.lb-f-i { stroke: var(--indice); }
+.lb-f-pale { opacity: .45; stroke-width: 2.5; }
+.lb-f2 { fill: none; stroke: var(--encre-2); stroke-width: 2; opacity: .55; }
+.lb-mince { stroke-width: 2; }
+.lb-tan { stroke: var(--ok); stroke-width: 2.5; }
+.lb-tan-o { stroke: var(--ok); } .lb-tan-p { stroke: var(--piege); } .lb-tan-i { stroke: var(--indice); }
+.lb-sec { stroke: var(--indice); stroke-width: 2; stroke-dasharray: 7 5; }
+.lb-triangle { fill: none; stroke: var(--encre); stroke-width: 1.5; stroke-dasharray: 3 3; }
+.lb-pt { fill: var(--encre); stroke: var(--carte); stroke-width: 2; }
+.lb-pt-t { fill: var(--terme); } .lb-pt-o { fill: var(--ok); } .lb-pt-i, .lb-pt-sec { fill: var(--indice); } .lb-pt-p { fill: var(--piege); }
+.lb-pt-p2 { fill: var(--piege); opacity: .45; } .lb-pt-t2 { fill: var(--encre-2); }
+.lb-pt-vide { fill: var(--carte); stroke: var(--terme); stroke-width: 2.5; }
+.lb-pointille { stroke: var(--encre-2); stroke-width: 1.2; stroke-dasharray: 4 4; }
+.lb-pointille-o { stroke: var(--ok); stroke-width: 1.5; stroke-dasharray: 4 4; }
+.lb-pointille-i { stroke: var(--indice); stroke-width: 1.5; stroke-dasharray: 4 4; }
+.lb-haut { stroke: var(--ok); stroke-width: 4; opacity: .55; }
+.lb-arc { fill: none; stroke: var(--ok); stroke-width: 7; stroke-linecap: round; opacity: .75; }
+.lb-arc-fin { fill: none; stroke: var(--indice); stroke-width: 2; }
+.lb-rayon { stroke: var(--encre); stroke-width: 1.5; }
+.lb-cos { stroke: var(--terme); stroke-width: 5; stroke-linecap: round; }
+.lb-sin { stroke: var(--indice); stroke-width: 5; stroke-linecap: round; }
+.lb-barre { stroke: var(--terme); stroke-width: 3; opacity: .22; }
+.lb-vec line { stroke: currentColor; stroke-width: 3; stroke-linecap: round; }
+.lb-vec .lb-pointe { fill: currentColor; }
+.lb-vec-t { color: var(--terme); } .lb-vec-i { color: var(--indice); } .lb-vec-o { color: var(--ok); }
+.lb-virtuel, .lb-virtuel line { stroke-dasharray: 6 5; opacity: .75; }
+.lb-ombre { stroke: var(--encre-2); stroke-width: 1.2; stroke-dasharray: 3 4; }
+.lb-proj-o { stroke: var(--ok); stroke-width: 7; opacity: .55; }
+.lb-proj-p { stroke: var(--piege); stroke-width: 7; opacity: .55; }
+.lb-branche { stroke: var(--encre-2); stroke-linecap: round; opacity: .45; }
+.lb-br-o { stroke: var(--ok); opacity: .9; } .lb-br-p { stroke: var(--piege); opacity: .9; }
+.lb-proba { font-size: 12px; font-weight: 600; fill: var(--encre-2); }
+.lb-noeud { font-family: var(--f-math); font-style: italic; font-size: 18px; font-weight: 700; fill: var(--encre); paint-order: stroke; stroke: var(--carte); stroke-width: 8px; }
+.lb-bande { fill: var(--ok-doux); }
+.lb-lim { stroke: var(--ok); stroke-width: 2; stroke-dasharray: 8 5; }
+.lb-drapeau { fill: var(--jaune); stroke: var(--ink); stroke-width: 2; stroke-linejoin: round; }
+.lb-rang { stroke: var(--indice); stroke-width: 1.5; stroke-dasharray: 2 4; }
+.lb-gend { fill: none; stroke: var(--ok); stroke-width: 2; }
+.lb-k { stroke: var(--ok); stroke-width: 2.5; }
+.lb-zone-p { fill: var(--piege-doux); } .lb-zone-o { fill: var(--ok-doux); }
+.lb-reflet { stroke: var(--rose); stroke-width: 2.5; stroke-dasharray: 5 4; }
+.lb-rect-bas { fill: var(--terme-doux); stroke: var(--terme); stroke-width: 1; }
+.lb-rect-haut { fill: var(--indice-doux); stroke: var(--indice); stroke-width: 1; }
+.lb-bar { fill: var(--terme); opacity: .35; }
+.lb-bar-i { fill: var(--indice); } .lb-bar-o { fill: var(--ok); opacity: .55; } .lb-bar-t { fill: var(--terme); }
+.lb-bille { fill: var(--rose); stroke: var(--ink); stroke-width: 1; }
+.lb-esp { stroke: var(--ok); stroke-width: 2; stroke-dasharray: 6 4; }
+.lb-champ { stroke: var(--encre-2); stroke-width: 1.5; stroke-linecap: round; opacity: .5; }
+.lb-lentille line { stroke: var(--encre); stroke-width: 2.5; } .lb-lentille .lb-pointe { fill: var(--encre); }
+.lb-rayon1 { stroke: var(--terme); stroke-width: 1.8; } .lb-rayon2 { stroke: var(--indice); stroke-width: 1.8; } .lb-rayon3 { stroke: var(--ok); stroke-width: 1.8; }
+.lb-lambda { stroke: var(--ok); stroke-width: 3; }
+.lb-piste { fill: none; stroke: var(--encre); stroke-width: 4; stroke-linecap: round; }
+.lb-traj { fill: none; stroke: var(--terme); stroke-width: 2.5; stroke-dasharray: 1 7; stroke-linecap: round; }
+.lb-ombre-pt { fill: var(--encre-2); opacity: .45; }
+.lb-noyau { fill: var(--jaune); stroke: var(--ink); stroke-width: 1.5; transition: fill .25s var(--ease); }
+.lb-noyau-fini { fill: var(--trait); }
+.lb-marches { fill: none; stroke: var(--indice); stroke-width: 2; }
+
+/* Les dominos */
+.lb-dom { fill: var(--bleu); transition: transform .32s cubic-bezier(.55, 0, .8, .2); transition-delay: var(--d, 0ms); }
+.lb-dom-o { fill: var(--ok); }
+.lb-domino.tombe .lb-dom { transform: rotate(var(--a, 60deg)); }
+.lb-calme .lb-dom { transition: none; }
+
+/* La poignée : un rond jaune cerclé d'encre, comme le curseur */
+.lb-poignee { cursor: grab; touch-action: none; outline: none; }
+.lb-poignee.tenu { cursor: grabbing; }
+.lb-zone { fill: transparent; }
+.lb-rond { fill: var(--jaune); stroke: var(--ink); stroke-width: 2.5; transition: r .15s var(--ease); }
+.lb-poignee:hover .lb-rond, .lb-poignee.tenu .lb-rond { r: 12px; }
+.lb-poignee:focus-visible .lb-rond { stroke: var(--terme); stroke-width: 4; }
+
+@media (max-width: 560px) {
+  .labo { box-shadow: 5px 5px 0 var(--jaune); margin-right: 5px; }
+  .lb-tete { padding: 14px 14px 0; }
+  .lb-consigne, .lb-lecture { padding-inline: 14px; }
+  .lb-ctrl { padding: 12px 14px 16px; gap: 10px 18px; }
+  .lb-titre { font-size: 1.25rem; }
+  .lb-c { flex-basis: 100%; grid-template-columns: minmax(2.6em, auto) 1fr minmax(5.5em, auto); }
+}

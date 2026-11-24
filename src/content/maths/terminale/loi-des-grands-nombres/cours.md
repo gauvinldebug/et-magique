@@ -103,6 +103,8 @@ $$
 
 Quand la chorale devient immense, la probabilité d'entendre une note éloignée de la note juste devient aussi petite qu'on veut. C'est ce qui justifie qu'on estime une probabilité par une **fréquence** observée sur un très grand nombre d'expériences.
 
+<div class="labo" data-labo="grands-nombres"></div>
+
 ## Retour au problème
 
 Pour un dé, $\mu = 3{,}5$ et $V = \frac{35}{12} \approx 2{,}92$. Avec $n = 10\,000$ lancers et $\delta = 0{,}1$ :

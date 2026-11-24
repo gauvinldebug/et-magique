@@ -66,6 +66,8 @@ Le jet d'eau : $\Delta > 0$, il touche le bassin en deux points ; $\Delta = 0$, 
 
 Quand on connaît une racine évidente ($1$, $-1$, $2$…), on peut trouver l'autre avec le **produit des racines** : $\corange{x}_1\corange{x}_2 = \dfrac{c}{a}$. Et la somme vaut $\corange{x}_1 + \corange{x}_2 = -\dfrac{b}{a}$.
 
+<div class="labo" data-labo="parabole"></div>
+
 ## Le signe d'un trinôme
 
 <div class="encadre">

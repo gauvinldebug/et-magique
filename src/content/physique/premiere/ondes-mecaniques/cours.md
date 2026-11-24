@@ -74,6 +74,8 @@ Deux points séparés d'un nombre entier de longueurs d'onde vibrent **en phase*
 
 Une onde périodique **sinusoïdale** a une forme de sinusoïde, et c'est le modèle qu'on utilise au lycée pour le son pur d'un diapason.
 
+<div class="labo" data-labo="onde"></div>
+
 ## Lire les deux graphes
 
 Il ne faut jamais confondre :

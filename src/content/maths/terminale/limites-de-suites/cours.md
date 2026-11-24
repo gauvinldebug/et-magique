@@ -58,6 +58,8 @@ L'intervalle ouvert, c'est la bande autour du drapeau. « À partir d'un certain
 
 Une suite qui tend vers $\pm\infty$, ou qui n'a pas de limite (comme $(-1)^{\corange{n}}$), **diverge**.
 
+<div class="labo" data-labo="epsilon"></div>
+
 ## Les limites à connaître
 
 | Suite | Limite |

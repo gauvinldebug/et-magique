@@ -88,16 +88,18 @@ const pleinTitre = titre.includes('Magique') ? titre : `${titre} · ${marque(get
       if (!matchMedia('(prefers-reduced-motion: reduce)').matches && 'IntersectionObserver' in window) {
         const root = document.documentElement;
         root.classList.add('anim');
-        const cibles = '.bloc > h2, .som-tete, .som-grille > li, .p-affiches > li, .p-chaine, .dv, .band, .chaine, .lvl-grid, .liste-ch > li, .exo, .encadre, .nextstep';
+        const cibles = '.bloc > h2, .som-tete, .som-grille > li, .p-affiches > li, .p-chaine, .dv, .band, .chaine, .lvl-grid, .liste-ch > li, .exo, .encadre, .nextstep, .prose > h2, .labo, .parcours';
         const vu = new IntersectionObserver((es) => es.forEach((e) => {
           if (e.isIntersecting) { e.target.classList.add('vu'); vu.unobserve(e.target); }
         }), { rootMargin: '0px 0px -8% 0px' });
         document.querySelectorAll<HTMLElement>(cibles).forEach((el) => {
           const freres = el.parentElement ? [...el.parentElement.children].filter((c) => c.matches(cibles)) : [];
-          if (freres.length > 1) el.style.setProperty('--i', String(Math.min(freres.indexOf(el), 8)));
+          // dans un cours, les blocs arrivent un par un en lisant : pas de décalage en cascade
+          if (freres.length > 1 && !el.parentElement?.matches('.prose')) el.style.setProperty('--i', String(Math.min(freres.indexOf(el), 8)));
           el.classList.add('rv');
           vu.observe(el);
         });
+        document.querySelectorAll<HTMLElement>('.prose mark').forEach((m) => { m.classList.add('sur'); vu.observe(m); });
         const zones = new Set<HTMLElement>();
         const suit = new IntersectionObserver((es) => es.forEach((e) => {
           e.isIntersecting ? zones.add(e.target as HTMLElement) : zones.delete(e.target as HTMLElement);

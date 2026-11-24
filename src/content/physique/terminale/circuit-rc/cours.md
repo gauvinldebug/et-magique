@@ -78,6 +78,8 @@ $$
 
 À $t = \tau$, il ne reste que 37 % de la tension initiale. Le réservoir se vide par le même tuyau étroit.
 
+<div class="labo" data-labo="rc"></div>
+
 ## Les capteurs capacitifs
 
 La capacité d'un condensateur dépend de la surface des armatures, de leur distance et de l'isolant entre elles. Si l'un de ces paramètres varie, $C$ varie, donc aussi la constante de temps $\tau = RC$ : en mesurant $\tau$, on détecte la variation. C'est le principe des **écrans tactiles** (ton doigt modifie la capacité locale), des capteurs d'humidité, de niveau de liquide ou d'accélération.

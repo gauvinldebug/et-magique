@@ -64,6 +64,8 @@ $$
 
 Sur un graphique, on lit $\cbleu{f}'(a)$ comme la pente de la tangente : « on avance de 1, on monte de $\cbleu{f}'(a)$ ».
 
+<div class="labo" data-labo="tangente"></div>
+
 ## La fonction dérivée et les formules
 
 Si $\cbleu{f}$ est dérivable en tout point d'un intervalle $I$, la fonction $\corange{x} \mapsto \cbleu{f}'(\corange{x})$ est la **fonction dérivée** de $\cbleu{f}$.

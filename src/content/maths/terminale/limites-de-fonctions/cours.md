@@ -107,3 +107,5 @@ Par composition, $\lim\limits_{\corange{x} \to +\infty} \mathrm{e}^{-\corange{x}
 </div>
 
 Exemple : $-1 \le \cos \corange{x} \le 1$, donc pour $\corange{x} > 0$, $-\frac{1}{\corange{x}} \le \frac{\cos \corange{x}}{\corange{x}} \le \frac{1}{\corange{x}}$. Les deux bornes tendent vers 0, donc $\lim\limits_{+\infty} \frac{\cos \corange{x}}{\corange{x}} = \cvert{0}$ : le train oscille, mais il se colle quand même au rail $y = 0$.
+
+<div class="labo" data-labo="gendarmes"></div>

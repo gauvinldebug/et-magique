@@ -17,7 +17,7 @@ const base = `/${p.matiere.slug}/${p.niveau.slug}/${p.chapitre.slug}`;
     </div>
     <div class="side">
       <div class="k">Dans ce chapitre</div>
-      <a class="dl" href={`${base}/cours/`}><span class="ic">COURS</span><div><b>Le cours</b><small>À lire ou imprimer</small></div></a>
+      <a class="dl" href={`${base}/cours/`}><span class="ic">COURS</span><div><b>Le cours</b><small>{(p.chapitre.body ?? '').includes('data-labo') ? 'Avec une figure à manipuler' : 'À lire ou imprimer'}</small></div>{(p.chapitre.body ?? '').includes('data-labo') && <span class="som-fig">à manipuler</span>}</a>
       <a class="dl" href={`${base}/exercices/`}><span class="ic">EXOS</span><div><b>Exercices corrigés</b><small>Étape par étape</small></div></a>
       <a class="dl" href={`${base}/qcm/`}><span class="ic">QCM</span><div><b>Le QCM</b><small>Pour vérifier que c'est compris</small></div></a>
       {p.fiche && (
