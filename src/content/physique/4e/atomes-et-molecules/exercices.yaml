@@ -1,0 +1,63 @@
+exercices:
+  - titre: Lire une formule
+    difficulte: 1
+    type: application
+    enonce: |
+      Donner la composition de l'ammoniac $\mathrm{NH_3}$ et de l'éthanol $\mathrm{C_2H_6O}$.
+    indice: Le chiffre en indice suit l'atome qu'il compte.
+    etapes:
+      - type: calcul
+        titre: Ammoniac
+        texte: 1 atome d'azote, 3 atomes d'hydrogène, soit 4 atomes.
+      - type: conc
+        titre: Éthanol
+        texte: <mark>2 atomes de carbone, 6 d'hydrogène, 1 d'oxygène</mark>, soit 9 atomes.
+
+  - titre: Simple ou composé ?
+    difficulte: 1
+    type: brevet
+    enonce: |
+      Classer en corps purs simples et composés : $\mathrm{O_2}$, $\mathrm{H_2O}$, $\mathrm{N_2}$, $\mathrm{CH_4}$, $\mathrm{Fe}$, $\mathrm{CO_2}$.
+    indice: Combien de types d'atomes différents ?
+    etapes:
+      - type: calcul
+        titre: Simples
+        texte: >-
+          $\mathrm{O_2}$, $\mathrm{N_2}$, $\mathrm{Fe}$ : un seul type d'atome.
+      - type: conc
+        titre: Composés
+        texte: >-
+          <mark>$\mathrm{H_2O}$, $\mathrm{CH_4}$, $\mathrm{CO_2}$</mark> : plusieurs types d'atomes.
+
+  - titre: Compter des atomes
+    difficulte: 2
+    type: piege
+    enonce: |
+      Un élève affirme que $2\,\mathrm{CO_2}$ contient 2 atomes de carbone et 2 atomes d'oxygène. Corriger.
+    indice: Le 2 devant multiplie toute la molécule.
+    etapes:
+      - type: piege
+        titre: L'erreur
+        texte: Le 2 devant la formule veut dire 2 molécules. Chaque molécule contient déjà 2 atomes d'oxygène.
+      - type: conc
+        titre: Le bon compte
+        texte: <mark>2 atomes de carbone et 4 atomes d'oxygène</mark>.
+
+  - titre: La seringue bouchée
+    difficulte: 3
+    type: brevet
+    enonce: |
+      On bouche une seringue pleine d'air et on appuie sur le piston : il s'enfonce. On recommence avec une seringue pleine d'eau : le piston ne bouge presque pas.
+      Expliquer ces observations avec le modèle particulaire.
+    indice: Comment sont les particules dans un gaz et dans un liquide ?
+    etapes:
+      - type: calcul
+        titre: L'air
+        texte: >-
+          Dans un gaz, les particules sont éloignées les unes des autres. En appuyant, on les rapproche : le volume diminue, l'air est compressible.
+      - type: calcul
+        titre: L'eau
+        texte: Dans un liquide, les particules sont déjà serrées. On ne peut presque pas les rapprocher davantage.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>Un gaz se comprime, un liquide presque pas</mark>, à cause de l'espace entre les particules.

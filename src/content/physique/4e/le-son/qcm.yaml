@@ -1,0 +1,30 @@
+questions:
+  - question: Un son est produit par…
+    choix: ['un objet qui vibre', 'un objet lumineux', 'un objet immobile', 'le vide']
+    bonne: 0
+    explication: La vibration se transmet à l'air.
+    revoir: cours
+
+  - question: Dans l'air, le son se propage à environ…
+    choix: ['3 m/s', '340 m/s', '300 000 km/s', '5000 m/s']
+    bonne: 1
+    explication: 340 m/s à température ambiante.
+    revoir: cours
+
+  - question: Un son de fréquence 30 000 Hz est…
+    choix: ['un infrason', 'audible et grave', 'un ultrason', 'audible et aigu']
+    bonne: 2
+    explication: Au-delà de 20 000 Hz.
+    revoir: cours
+
+  - question: Le niveau sonore se mesure en…
+    choix: ['hertz', 'décibels', 'mètres par seconde', 'watts']
+    bonne: 1
+    explication: Avec un sonomètre.
+    revoir: cours
+
+  - question: Le son se propage le plus vite…
+    choix: ["dans l'air", "dans l'eau", "dans l'acier", 'dans le vide']
+    bonne: 2
+    explication: Les atomes d'un solide sont très serrés.
+    revoir: cours

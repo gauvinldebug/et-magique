@@ -1,0 +1,68 @@
+exercices:
+  - titre: Deux lampes en série
+    difficulte: 1
+    type: application
+    enonce: |
+      Un générateur de 6,0 V alimente deux lampes en série. La tension aux bornes de la première lampe est 2,5 V. L'intensité mesurée près du générateur est 0,15 A.
+      Trouver la tension aux bornes de la seconde lampe et l'intensité qui la traverse.
+    indice: >-
+      Série : additivité des tensions, unicité de l'intensité.
+    etapes:
+      - type: calcul
+        titre: La tension
+        texte: $U_2 = U_G - U_1 = 6{,}0 - 2{,}5 = 3{,}5\ \mathrm{V}$.
+      - type: conc
+        titre: L'intensité
+        texte: <mark>$U_2 = 3{,}5\ \mathrm{V}$ et $I_2 = 0{,}15\ \mathrm{A}$</mark>, la même partout en série.
+
+  - titre: Deux lampes en dérivation
+    difficulte: 2
+    type: brevet
+    enonce: |
+      Un générateur de 4,5 V alimente deux lampes en dérivation. Un ampèremètre placé dans la branche principale indique 400 mA, un autre dans la branche de la première lampe indique 150 mA.
+      Trouver la tension aux bornes de chaque lampe et l'intensité dans la seconde.
+    indice: >-
+      Dérivation : égalité des tensions, loi des nœuds.
+    etapes:
+      - type: calcul
+        titre: Les tensions
+        texte: En dérivation, $U_1 = U_2 = U_G = 4{,}5\ \mathrm{V}$.
+      - type: conc
+        titre: L'intensité
+        texte: <mark>$I_2 = 400 - 150 = 250\ \mathrm{mA}$</mark>.
+
+  - titre: La guirlande qui s'éteint
+    difficulte: 2
+    type: piege
+    enonce: |
+      Dans une guirlande, une ampoule grille et toutes s'éteignent. Un élève pense que les ampoules sont en dérivation. A-t-il raison ?
+    indice: Que se passe-t-il quand une boucle est ouverte ?
+    etapes:
+      - type: piege
+        titre: L'erreur
+        texte: >-
+          En dérivation, une ampoule grillée ne coupe que sa branche : les autres resteraient allumées.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>Les ampoules sont en série</mark>. L'ampoule grillée ouvre l'unique boucle, le courant ne passe plus nulle part.
+
+  - titre: Brancher les appareils de mesure
+    difficulte: 3
+    type: brevet
+    enonce: |
+      On veut mesurer l'intensité qui traverse une lampe et la tension à ses bornes, dans un circuit simple avec une pile et un interrupteur.
+      1. Comment brancher l'ampèremètre ? Le voltmètre ?
+      2. Par quelle borne le courant doit-il entrer dans chaque appareil ?
+      3. L'ampèremètre affiche « 1. » sur le calibre 200 mA. Que faire ?
+    indice: Le « 1 » à gauche signifie que la valeur dépasse le calibre.
+    etapes:
+      - type: calcul
+        titre: Les branchements
+        texte: L'ampèremètre en série, dans la boucle, avant ou après la lampe. Le voltmètre en dérivation, ses deux fils aux deux bornes de la lampe.
+      - type: calcul
+        titre: Les bornes
+        texte: Le courant entre par la borne A (ou mA) de l'ampèremètre et par la borne V du voltmètre, et sort par COM.
+      - type: conc
+        titre: Le calibre
+        texte: >-
+          <mark>L'intensité dépasse 200 mA : il faut passer à un calibre plus grand</mark>, par exemple 10 A.

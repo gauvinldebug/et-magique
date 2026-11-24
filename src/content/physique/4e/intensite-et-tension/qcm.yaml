@@ -1,0 +1,30 @@
+questions:
+  - question: Un ampèremètre se branche…
+    choix: ['en dérivation', 'en série', 'aux bornes de la pile seulement', 'nulle part']
+    bonne: 1
+    explication: Le courant doit le traverser.
+    revoir: cours
+
+  - question: Dans un circuit en série, l'intensité…
+    choix: ['est la même partout', 'diminue après chaque lampe', 'est nulle', 'dépend de la branche']
+    bonne: 0
+    explication: Loi d'unicité de l'intensité.
+    revoir: cours
+
+  - question: Deux lampes en dérivation sur une pile de 9 V ont chacune une tension de…
+    choix: ['4,5 V', '9 V', '18 V', '0 V']
+    bonne: 1
+    explication: Même tension aux bornes de chaque branche.
+    revoir: cours
+
+  - question: Dans la branche principale, I = 0,80 A ; dans une branche, 0,30 A. Dans l'autre branche…
+    choix: ['0,30 A', '0,50 A', '1,10 A', '0,80 A']
+    bonne: 1
+    explication: Loi des nœuds.
+    revoir: exercices
+
+  - question: Les prises d'une maison sont branchées…
+    choix: ['en série', 'en dérivation', 'sans fil', 'au hasard']
+    bonne: 1
+    explication: Pour que chaque appareil fonctionne seul.
+    revoir: cours

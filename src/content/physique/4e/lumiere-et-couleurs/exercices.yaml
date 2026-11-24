@@ -1,0 +1,64 @@
+exercices:
+  - titre: Source ou objet diffusant ?
+    difficulte: 1
+    type: application
+    enonce: |
+      Classer : le Soleil, la Lune, une bougie allumée, un miroir, l'écran allumé d'un téléphone, un livre.
+    indice: Produit-il sa propre lumière ?
+    etapes:
+      - type: calcul
+        titre: Sources primaires
+        texte: Le Soleil, la bougie allumée, l'écran allumé.
+      - type: conc
+        titre: Objets qui renvoient la lumière
+        texte: <mark>La Lune, le miroir, le livre</mark>.
+
+  - titre: Le filtre et le projecteur
+    difficulte: 2
+    type: brevet
+    enonce: |
+      Un projecteur éclaire un écran blanc. On place devant lui un filtre vert. Quelle couleur voit-on sur l'écran ? Et si on ajoute ensuite un filtre rouge derrière le vert ?
+    indice: Chaque filtre ne laisse passer que sa couleur.
+    etapes:
+      - type: calcul
+        titre: Le filtre vert
+        texte: Il ne laisse passer que le vert. L'écran blanc diffuse ce vert.
+      - type: conc
+        titre: Les deux filtres
+        texte: >-
+          <mark>Le filtre rouge arrête le vert : plus aucune lumière ne passe, l'écran est noir</mark>.
+
+  - titre: La tomate dans le noir
+    difficulte: 2
+    type: piege
+    enonce: |
+      Une tomate est éclairée par une lumière verte. Un élève affirme qu'elle reste rouge « parce qu'elle est rouge ». Corriger.
+    indice: Quelle couleur peut-elle diffuser ?
+    etapes:
+      - type: piege
+        titre: L'erreur
+        texte: Un objet n'a pas de couleur à lui seul. La tomate diffuse le rouge, mais elle ne reçoit pas de rouge.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>Elle absorbe le vert qu'elle reçoit et paraît noire</mark>.
+
+  - titre: L'orage et la lumière
+    difficulte: 3
+    type: brevet
+    enonce: |
+      La foudre tombe à 3,0 km d'un observateur.
+      1. Combien de temps met la lumière de l'éclair pour lui parvenir ? ($c = 300\,000$ km/s)
+      2. Le son va à 340 m/s. Combien de temps met le tonnerre ?
+      3. Expliquer pourquoi on voit l'éclair avant d'entendre le tonnerre.
+    indice: $t = d/v$, attention aux unités.
+    etapes:
+      - type: calcul
+        titre: La lumière
+        texte: $t = 3{,}0/300\,000 = 1{,}0 \times 10^{-5}\ \mathrm{s}$, un centième de milliseconde.
+      - type: calcul
+        titre: Le son
+        texte: $t = 3000/340 \approx 8{,}8\ \mathrm{s}$.
+      - type: conc
+        titre: Conclusion
+        texte: >-
+          <mark>La lumière est près d'un million de fois plus rapide que le son</mark> : l'éclair arrive presque instantanément, le tonnerre près de 9 secondes plus tard.

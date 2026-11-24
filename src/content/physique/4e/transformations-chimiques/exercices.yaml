@@ -1,0 +1,66 @@
+exercices:
+  - titre: Réactifs et produits
+    difficulte: 1
+    type: application
+    enonce: |
+      Lors de la combustion du butane $\mathrm{C_4H_{10}}$ dans le dioxygène, il se forme du dioxyde de carbone et de l'eau.
+      Nommer les réactifs et les produits. Comment mettre en évidence le dioxyde de carbone ?
+    indice: Ce qui disparaît, ce qui apparaît.
+    etapes:
+      - type: calcul
+        titre: Réactifs et produits
+        texte: Réactifs, le butane et le dioxygène. Produits, le dioxyde de carbone et l'eau.
+      - type: conc
+        titre: Le test
+        texte: <mark>Le dioxyde de carbone trouble l'eau de chaux</mark>.
+
+  - titre: Ajuster une équation
+    difficulte: 2
+    type: methode
+    enonce: |
+      Ajuster l'équation de la combustion du dihydrogène : $\dots\,\mathrm{H_2} + \mathrm{O_2} \longrightarrow \dots\,\mathrm{H_2O}$.
+    indice: Commencer par l'oxygène.
+    etapes:
+      - type: calcul
+        titre: L'oxygène
+        texte: 2 atomes O à gauche, 1 seul dans $\mathrm{H_2O}$. Il faut $2\,\mathrm{H_2O}$.
+      - type: calcul
+        titre: L'hydrogène
+        texte: À droite, $2 \times 2 = 4$ atomes H. Il faut $2\,\mathrm{H_2}$ à gauche.
+      - type: conc
+        titre: Équation
+        texte: <mark>$2\,\mathrm{H_2} + \mathrm{O_2} \longrightarrow 2\,\mathrm{H_2O}$</mark>.
+
+  - titre: La masse qui disparaît
+    difficulte: 2
+    type: piege
+    enonce: |
+      On pose un bécher contenant du vinaigre et un morceau de craie sur une balance. Des bulles se forment, et la masse passe de 152,0 g à 151,2 g. Un élève dit que la masse ne s'est pas conservée. Expliquer.
+    indice: Les bulles, c'est un gaz.
+    etapes:
+      - type: piege
+        titre: L'erreur
+        texte: Le récipient est ouvert. Le gaz formé (du dioxyde de carbone) s'échappe dans l'air, il n'est plus pesé.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>0,8 g de gaz est parti</mark>. Dans un flacon fermé, la balance afficherait toujours 152,0 g.
+
+  - titre: Le charbon du barbecue
+    difficulte: 3
+    type: brevet
+    enonce: |
+      Lors de la combustion complète de 12 g de carbone, il se forme 44 g de dioxyde de carbone.
+      1. Écrire l'équation de la réaction.
+      2. Quelle masse de dioxygène a été consommée ?
+      3. Pourquoi faut-il faire un barbecue en plein air ?
+    indice: Conservation de la masse.
+    etapes:
+      - type: calcul
+        titre: L'équation
+        texte: $\mathrm{C} + \mathrm{O_2} \longrightarrow \mathrm{CO_2}$.
+      - type: calcul
+        titre: La masse de dioxygène
+        texte: $m(\mathrm{C}) + m(\mathrm{O_2}) = m(\mathrm{CO_2})$, donc $m(\mathrm{O_2}) = 44 - 12 = 32\ \mathrm{g}$.
+      - type: conc
+        titre: En plein air
+        texte: <mark>Dans un lieu fermé, le dioxygène manquerait et il se formerait du monoxyde de carbone</mark>, un gaz mortel.
