@@ -1,0 +1,81 @@
+exercices:
+  - titre: L'énergie d'un photon vert
+    difficulte: 1
+    type: application
+    enonce: |
+      Un laser vert émet à $\lambda = 532\ \mathrm{nm}$.
+      Calculer la fréquence de la radiation, puis l'énergie d'un photon en joules et en électronvolts.
+    indice: $\nu = c/\lambda$, puis $E = h\nu$.
+    etapes:
+      - type: calcul
+        titre: La fréquence
+        texte: $\nu = 3{,}00 \times 10^{8} / 532 \times 10^{-9} \approx 5{,}64 \times 10^{14}\ \mathrm{Hz}$.
+      - type: calcul
+        titre: L'énergie
+        texte: $E = 6{,}63 \times 10^{-34} \times 5{,}64 \times 10^{14} \approx 3{,}74 \times 10^{-19}\ \mathrm{J}$.
+      - type: conc
+        titre: En électronvolts
+        texte: <mark>$E = 3{,}74 \times 10^{-19} / 1{,}60 \times 10^{-19} \approx 2{,}34\ \mathrm{eV}$</mark>.
+
+  - titre: La raie rouge de l'hydrogène
+    difficulte: 2
+    type: methode
+    enonce: |
+      L'atome d'hydrogène passe du niveau $E_3 = -1{,}51\ \mathrm{eV}$ au niveau $E_2 = -3{,}40\ \mathrm{eV}$.
+      1. S'agit-il d'une émission ou d'une absorption ?
+      2. Calculer la longueur d'onde du photon. Dans quel domaine est-il ?
+    indice: $\lambda = hc/\Delta E$, avec $\Delta E$ en joules.
+    etapes:
+      - type: methode
+        titre: Le sens
+        texte: L'atome descend d'une marche, il émet un photon.
+      - type: calcul
+        titre: L'énergie
+        texte: $\Delta E = -1{,}51 - (-3{,}40) = 1{,}89\ \mathrm{eV} = 1{,}89 \times 1{,}60 \times 10^{-19} \approx 3{,}02 \times 10^{-19}\ \mathrm{J}$.
+      - type: calcul
+        titre: La longueur d'onde
+        texte: $\lambda = 6{,}63 \times 10^{-34} \times 3{,}00 \times 10^{8} / 3{,}02 \times 10^{-19} \approx 6{,}58 \times 10^{-7}\ \mathrm{m}$.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>$\lambda \approx 658\ \mathrm{nm}$, une raie rouge du visible</mark>, celle qui colore les nébuleuses sur les photos.
+
+  - titre: Un photon qui ne convient pas
+    difficulte: 2
+    type: piege
+    enonce: |
+      Un atome d'hydrogène est dans son état fondamental $E_1 = -13{,}6\ \mathrm{eV}$. Il reçoit un photon de 11,0 eV. Un élève affirme : « il absorbe le photon et monte entre $E_2$ et $E_3$ ». Corriger. ($E_2 = -3{,}40\ \mathrm{eV}$, $E_3 = -1{,}51\ \mathrm{eV}$)
+    indice: Peut-on s'arrêter entre deux marches ?
+    etapes:
+      - type: calcul
+        titre: Les écarts possibles
+        texte: $E_2 - E_1 = 10{,}2\ \mathrm{eV}$, $E_3 - E_1 = 12{,}1\ \mathrm{eV}$.
+      - type: piege
+        titre: L'erreur
+        texte: Il n'existe aucun niveau entre $E_2$ et $E_3$. Les niveaux sont quantifiés, l'atome ne peut pas s'arrêter entre deux.
+      - type: conc
+        titre: Conclusion
+        texte: 11,0 eV ne correspond à aucun écart. <mark>Le photon n'est pas absorbé</mark>, il traverse le gaz.
+
+  - titre: Le spectre d'une étoile
+    difficulte: 3
+    type: bac
+    enonce: |
+      Le spectre de la lumière d'une étoile présente un fond continu coloré barré de raies noires, notamment à 589 nm et 656 nm.
+      Le sodium émet une raie à 589 nm, l'hydrogène une raie à 656 nm.
+      1. Quel type de spectre est-ce ?
+      2. Que peut-on en conclure sur l'atmosphère de l'étoile ?
+      3. Calculer l'énergie, en eV, de la transition du sodium correspondante.
+    indice: Absorption et émission se font aux mêmes longueurs d'onde.
+    etapes:
+      - type: methode
+        titre: Le type
+        texte: Raies noires sur fond coloré, c'est un spectre d'absorption.
+      - type: her
+        titre: L'atmosphère
+        texte: Un atome absorbe exactement les longueurs d'onde qu'il sait émettre. Les raies à 589 et 656 nm sont celles du sodium et de l'hydrogène.
+      - type: calcul
+        titre: L'énergie
+        texte: $E = hc/\lambda = 6{,}63 \times 10^{-34} \times 3{,}00 \times 10^{8} / 589 \times 10^{-9} \approx 3{,}38 \times 10^{-19}\ \mathrm{J}$, soit environ 2,11 eV.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>L'atmosphère de l'étoile contient du sodium et de l'hydrogène</mark>, la transition du sodium vaut environ 2,11 eV.

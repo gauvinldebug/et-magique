@@ -1,0 +1,76 @@
+exercices:
+  - titre: Superposer des lumières
+    difficulte: 1
+    type: application
+    enonce: |
+      Sur un écran blanc, on superpose des faisceaux. Donner la couleur obtenue :
+      a. rouge et bleu ;
+      b. vert et bleu ;
+      c. jaune et bleu.
+    indice: Le jaune, c'est déjà rouge plus vert.
+    etapes:
+      - type: calcul
+        titre: a et b
+        texte: a. magenta. b. cyan.
+      - type: conc
+        titre: c
+        texte: Jaune + bleu = rouge + vert + bleu, <mark>donc blanc</mark>. Jaune et bleu sont complémentaires.
+
+  - titre: Deux filtres à la suite
+    difficulte: 2
+    type: methode
+    enonce: |
+      On éclaire en lumière blanche un filtre magenta, suivi d'un filtre jaune. Quelle couleur sort ?
+    indice: Chaque filtre enlève sa complémentaire.
+    etapes:
+      - type: calcul
+        titre: Premier videur
+        texte: Le blanc, c'est R, V, B. Le magenta absorbe V, il reste R et B.
+      - type: calcul
+        titre: Second videur
+        texte: Le jaune absorbe B. Il reste R.
+      - type: conc
+        titre: Résultat
+        texte: <mark>La lumière qui sort est rouge</mark>.
+
+  - titre: La tomate en boîte de nuit
+    difficulte: 2
+    type: piege
+    enonce: |
+      Une tomate rouge est éclairée par un projecteur vert. Un élève affirme qu'elle paraît « marron, un mélange de rouge et de vert ». Corriger.
+    indice: Quelle lumière la tomate peut-elle renvoyer ?
+    etapes:
+      - type: piege
+        titre: L'erreur
+        texte: La couleur perçue ne se calcule pas en mélangeant la couleur de l'objet et celle de la lumière, comme de la peinture.
+      - type: her
+        titre: Ce qui se passe
+        texte: La tomate ne diffuse que le rouge. Elle reçoit uniquement du vert, qu'elle absorbe.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>Aucune lumière n'est diffusée, la tomate paraît noire</mark>.
+
+  - titre: Le drapeau sous trois éclairages
+    difficulte: 3
+    type: bac
+    enonce: >-
+      Un drapeau a trois bandes : bleue, blanche, rouge. On l'éclaire successivement en lumière rouge, verte, puis jaune.
+      Compléter le tableau des couleurs perçues :
+      <table><tr><th>Éclairage</th><th>bande bleue</th><th>bande blanche</th><th>bande rouge</th></tr>
+      <tr><td>rouge</td><td>?</td><td>?</td><td>?</td></tr>
+      <tr><td>vert</td><td>?</td><td>?</td><td>?</td></tr>
+      <tr><td>jaune</td><td>?</td><td>?</td><td>?</td></tr></table>
+    indice: La bande blanche diffuse tout, la bleue seulement B, la rouge seulement R.
+    etapes:
+      - type: calcul
+        titre: En lumière rouge
+        texte: Bleue → noire. Blanche → rouge. Rouge → rouge.
+      - type: calcul
+        titre: En lumière verte
+        texte: Bleue → noire. Blanche → verte. Rouge → noire.
+      - type: calcul
+        titre: En lumière jaune (R + V)
+        texte: Bleue → noire. Blanche → jaune. Rouge → rouge.
+      - type: conc
+        titre: À retenir
+        texte: <mark>La bande blanche prend toujours la couleur de l'éclairage</mark>, les autres ne gardent que ce qu'elles savent renvoyer.

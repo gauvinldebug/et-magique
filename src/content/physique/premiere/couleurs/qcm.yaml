@@ -1,0 +1,30 @@
+questions:
+  - question: En synthèse additive, rouge + vert donne…
+    choix: ['marron', 'jaune', 'cyan', 'blanc']
+    bonne: 1
+    explication: Superposition de lumières, comme sur un écran.
+    revoir: cours
+
+  - question: La couleur complémentaire du bleu est…
+    choix: ['le rouge', 'le jaune', 'le cyan', 'le vert']
+    bonne: 1
+    explication: Bleu + jaune (R + V) = blanc.
+    revoir: cours
+
+  - question: Un filtre cyan absorbe…
+    choix: ['le bleu', 'le vert', 'le rouge', 'rien']
+    bonne: 2
+    explication: Il laisse passer vert et bleu, il absorbe sa complémentaire.
+    revoir: cours
+
+  - question: Un objet blanc éclairé en lumière magenta paraît…
+    choix: ['blanc', 'magenta', 'noir', 'vert']
+    bonne: 1
+    explication: Il diffuse toute la lumière qu'il reçoit.
+    revoir: exercices
+
+  - question: Un citron jaune éclairé en lumière bleue paraît…
+    choix: ['jaune', 'vert', 'noir', 'bleu']
+    bonne: 2
+    explication: Il ne diffuse que R et V, absents de l'éclairage.
+    revoir: exercices

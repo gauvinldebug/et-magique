@@ -1,0 +1,75 @@
+exercices:
+  - titre: Position et taille d'une image
+    difficulte: 1
+    type: application
+    enonce: |
+      Un objet AB de 2,0 cm est placé à 30 cm avant une lentille convergente de distance focale $f' = 10\ \mathrm{cm}$.
+      Calculer la position de l'image, le grandissement et la taille de l'image. Décrire l'image.
+    indice: $\overline{OA} = -30\ \mathrm{cm}$.
+    etapes:
+      - type: calcul
+        titre: Conjugaison
+        texte: $\dfrac{1}{\overline{OA'}} = \dfrac{1}{10} + \dfrac{1}{-30} = \dfrac{2}{30}$, donc $\overline{OA'} = 15\ \mathrm{cm}$.
+      - type: calcul
+        titre: Grandissement
+        texte: $\gamma = 15/(-30) = -0{,}50$, donc $\overline{A'B'} = -0{,}50 \times 2{,}0 = -1{,}0\ \mathrm{cm}$.
+      - type: conc
+        titre: L'image
+        texte: <mark>Réelle, à 15 cm après la lentille, renversée, deux fois plus petite</mark>.
+
+  - titre: La loupe
+    difficulte: 2
+    type: methode
+    enonce: |
+      On regarde un timbre à travers une loupe de distance focale $f' = 10\ \mathrm{cm}$, placée à 5,0 cm du timbre.
+      Calculer la position de l'image et le grandissement. Peut-on projeter cette image sur un écran ?
+    indice: L'objet est entre F et O.
+    etapes:
+      - type: calcul
+        titre: Conjugaison
+        texte: $\dfrac{1}{\overline{OA'}} = \dfrac{1}{10} + \dfrac{1}{-5{,}0} = -\dfrac{1}{10}$, donc $\overline{OA'} = -10\ \mathrm{cm}$.
+      - type: calcul
+        titre: Grandissement
+        texte: $\gamma = -10/(-5{,}0) = 2{,}0$.
+      - type: conc
+        titre: L'image
+        texte: <mark>Virtuelle, droite, deux fois plus grande</mark>, du même côté que le timbre. On ne peut pas la projeter, on la voit à travers la loupe.
+
+  - titre: Le signe oublié
+    difficulte: 2
+    type: piege
+    enonce: |
+      Pour un objet à 20 cm avant une lentille de focale 5,0 cm, un élève écrit $\dfrac{1}{\overline{OA'}} = \dfrac{1}{5{,}0} + \dfrac{1}{20}$ et trouve $\overline{OA'} = 4{,}0\ \mathrm{cm}$. Corriger.
+    indice: Que vaut $\overline{OA}$ ?
+    etapes:
+      - type: piege
+        titre: L'erreur
+        texte: >-
+          On isole $1/\overline{OA'}$ : $\dfrac{1}{\overline{OA'}} = \dfrac{1}{f'} + \dfrac{1}{\overline{OA}}$. L'élève a remplacé $\overline{OA}$ par $+20$ au lieu de $-20$ : l'objet est avant la lentille.
+      - type: calcul
+        titre: Le bon calcul
+        texte: $\dfrac{1}{\overline{OA'}} = \dfrac{1}{5{,}0} + \dfrac{1}{-20} = \dfrac{4 - 1}{20} = \dfrac{3}{20}$.
+      - type: conc
+        titre: Résultat
+        texte: <mark>$\overline{OA'} \approx 6{,}7\ \mathrm{cm}$</mark>. Pour ne pas se tromper, on isole d'abord $1/\overline{OA'}$, puis on remplace $\overline{OA}$ par sa valeur avec son signe.
+        note: le signe voyage avec la valeur
+
+  - titre: L'œil qui accommode
+    difficulte: 3
+    type: bac
+    enonce: |
+      On modélise l'œil par une lentille convergente placée à 17 mm d'un écran (la rétine).
+      1. Quelle est la distance focale du cristallin quand l'œil regarde un objet très éloigné ?
+      2. Calculer sa distance focale pour lire un livre à 25 cm.
+      3. Expliquer pourquoi lire longtemps de près fatigue les yeux.
+    indice: L'image doit toujours être à $\overline{OA'} = 17\ \mathrm{mm}$.
+    etapes:
+      - type: calcul
+        titre: Objet à l'infini
+        texte: $1/\overline{OA} \to 0$, donc $f' = \overline{OA'} = 17\ \mathrm{mm}$.
+      - type: calcul
+        titre: Objet à 25 cm
+        texte: $\dfrac{1}{f'} = \dfrac{1}{17} - \dfrac{1}{-250} = \dfrac{1}{17} + \dfrac{1}{250} \approx 0{,}0628\ \mathrm{mm^{-1}}$, donc $f' \approx 15{,}9\ \mathrm{mm}$.
+      - type: conc
+        titre: La fatigue
+        texte: Pour voir de près, les muscles doivent bomber le cristallin et le maintenir ainsi. <mark>L'effort est permanent, d'où la fatigue</mark>. Regarder au loin de temps en temps relâche ces muscles.

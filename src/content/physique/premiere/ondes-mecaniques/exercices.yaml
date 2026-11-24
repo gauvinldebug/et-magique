@@ -1,0 +1,67 @@
+exercices:
+  - titre: Mesurer la vitesse du son
+    difficulte: 1
+    type: application
+    enonce: |
+      Deux micros sont alignés avec un haut-parleur qui émet un clap. Ils sont distants de $d = 1{,}70\ \mathrm{m}$. Le second enregistre le clap avec un retard $\tau = 5{,}0\ \mathrm{ms}$ sur le premier.
+      Calculer la célérité du son.
+    indice: $v = d/\tau$, le retard en secondes.
+    etapes:
+      - type: calcul
+        titre: Le calcul
+        texte: $v = 1{,}70 / 5{,}0 \times 10^{-3}$.
+      - type: conc
+        titre: Résultat
+        texte: <mark>$v = 340\ \mathrm{m \cdot s^{-1}}$</mark>.
+
+  - titre: La houle
+    difficulte: 2
+    type: application
+    enonce: |
+      Au large, une houle a une période $T = 8{,}0\ \mathrm{s}$ et des crêtes espacées de $\lambda = 100\ \mathrm{m}$.
+      1. Calculer sa fréquence et sa célérité.
+      2. Un surfeur immobile au large, sur sa planche, se déplace-t-il avec la houle ?
+    indice: $v = \lambda/T$.
+    etapes:
+      - type: calcul
+        titre: Fréquence et célérité
+        texte: $f = 1/8{,}0 = 0{,}125\ \mathrm{Hz}$. $v = 100/8{,}0 = 12{,}5\ \mathrm{m \cdot s^{-1}}$, environ 45 km/h.
+      - type: conc
+        titre: Le surfeur
+        texte: <mark>Non, il monte et descend sur place</mark>. Pour avancer, il doit ramer et se placer sur la pente de la vague qui déferle près du bord.
+
+  - titre: L'écho dans la montagne
+    difficulte: 2
+    type: piege
+    enonce: |
+      Face à une falaise, tu cries et entends l'écho 1,2 s plus tard. Un camarade calcule la distance à la falaise : $340 \times 1{,}2 = 408\ \mathrm{m}$. Corriger.
+    indice: Quel trajet fait le son ?
+    etapes:
+      - type: piege
+        titre: L'erreur
+        texte: En 1,2 s, le son est allé jusqu'à la falaise et en est revenu. 408 m, c'est l'aller et le retour.
+      - type: conc
+        titre: Le bon calcul
+        texte: <mark>$d = 340 \times 1{,}2 / 2 \approx 2{,}0 \times 10^{2}\ \mathrm{m}$</mark>.
+
+  - titre: Lire deux graphes
+    difficulte: 3
+    type: bac
+    enonce: |
+      Une corde est mise en vibration sinusoïdale par un vibreur.
+      Graphe 1 : élongation d'un point M de la corde en fonction du temps. Deux maximums successifs sont séparés de 20 ms.
+      Graphe 2 : photo de la corde à un instant donné. Cinq longueurs d'onde occupent 1,20 m.
+      1. Indiquer sur quel graphe on lit la période, sur lequel on lit la longueur d'onde, et donner leurs valeurs.
+      2. Calculer la célérité de l'onde.
+      3. Un point N est situé à 48 cm de M. Les deux points vibrent-ils en phase ?
+    indice: Mesurer plusieurs longueurs d'onde pour plus de précision.
+    etapes:
+      - type: methode
+        titre: Les deux lectures
+        texte: Graphe en fonction du temps → période, $T = 20\ \mathrm{ms}$. Photo en fonction de la position → longueur d'onde, $\lambda = 1{,}20/5 = 0{,}24\ \mathrm{m}$.
+      - type: calcul
+        titre: La célérité
+        texte: $v = \lambda/T = 0{,}24 / 0{,}020 = 12\ \mathrm{m \cdot s^{-1}}$.
+      - type: conc
+        titre: En phase ?
+        texte: $48/24 = 2$, un nombre entier de longueurs d'onde. <mark>M et N vibrent en phase</mark>.

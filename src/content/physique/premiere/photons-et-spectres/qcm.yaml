@@ -1,0 +1,30 @@
+questions:
+  - question: Une radiation de longueur d'onde 300 nm appartient au domaine…
+    choix: ['visible', 'ultraviolet', 'infrarouge', 'des ondes radio']
+    bonne: 1
+    explication: Moins de 400 nm.
+    revoir: cours
+
+  - question: Quand la longueur d'onde d'une lumière diminue, l'énergie de ses photons…
+    choix: ['diminue', 'augmente', 'ne change pas', 'devient négative']
+    bonne: 1
+    explication: $E = hc/\lambda$.
+    revoir: cours
+
+  - question: L'énergie d'un atome est dite quantifiée car…
+    choix: ["elle est très petite", "elle ne peut prendre que certaines valeurs", "elle se mesure en eV", "elle est toujours négative"]
+    bonne: 1
+    explication: Les marches de l'escalier.
+    revoir: cours
+
+  - question: Un atome passe de $E_4 = -0{,}85\ \mathrm{eV}$ à $E_2 = -3{,}40\ \mathrm{eV}$. Le photon émis a une énergie de…
+    choix: ['4,25 eV', '2,55 eV', '−2,55 eV', '0,85 eV']
+    bonne: 1
+    explication: $-0{,}85 - (-3{,}40) = 2{,}55\ \mathrm{eV}$.
+    revoir: exercices
+
+  - question: Un spectre de raies d'absorption est…
+    choix: ['des raies colorées sur fond noir', 'des raies noires sur fond coloré', 'un arc-en-ciel continu', 'entièrement noir']
+    bonne: 1
+    explication: Le gaz froid retire certaines longueurs d'onde de la lumière blanche.
+    revoir: cours
