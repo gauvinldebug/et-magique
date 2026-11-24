@@ -1,0 +1,79 @@
+exercices:
+  - titre: Reconnaître la famille
+    difficulte: 1
+    type: application
+    enonce: |
+      Donner la famille et le nom de chaque molécule :
+      a. $\mathrm{CH_3{-}CH_2{-}CH_2{-}OH}$
+      b. $\mathrm{CH_3{-}CH_2{-}CHO}$
+      c. $\mathrm{CH_3{-}CO{-}CH_2{-}CH_3}$
+      d. $\mathrm{CH_3{-}CH_2{-}COOH}$
+    indice: Où est la locomotive, et combien de wagons ?
+    etapes:
+      - type: calcul
+        titre: a et b
+        texte: a. groupe hydroxyle, 3 carbones, OH en 1 → propan-1-ol (alcool). b. CHO en bout, 3 carbones → propanal (aldéhyde).
+      - type: calcul
+        titre: c et d
+        texte: c. C=O en position 2 sur 4 carbones → butan-2-one, ou butanone (cétone). d. COOH, 3 carbones → acide propanoïque.
+      - type: conc
+        titre: À retenir
+        texte: <mark>Le préfixe compte les carbones, la terminaison dit la famille</mark>.
+
+  - titre: Numéroter du bon côté
+    difficulte: 2
+    type: piege
+    enonce: |
+      Un élève nomme la molécule $\mathrm{CH_3{-}CH_2{-}CH(OH){-}CH_3}$ « butan-3-ol ». Corriger.
+    indice: On part du côté le plus proche du OH.
+    etapes:
+      - type: methode
+        titre: La chaîne
+        texte: Quatre carbones en ligne, le OH est porté par l'avant-dernier.
+      - type: piege
+        titre: L'erreur
+        texte: L'élève a numéroté depuis la gauche, ce qui donne 3. Depuis la droite, le OH est sur le carbone 2.
+      - type: conc
+        titre: Le bon nom
+        texte: <mark>butan-2-ol</mark>, le plus petit numéro possible.
+
+  - titre: Lire un spectre infrarouge
+    difficulte: 2
+    type: methode
+    enonce: |
+      On hésite entre trois molécules : le propan-1-ol, le propanal et l'acide propanoïque.
+      Le spectre IR montre une bande fine et intense vers $1715\ \mathrm{cm^{-1}}$, des bandes vers $2900\ \mathrm{cm^{-1}}$, et aucune bande large entre 2500 et $3400\ \mathrm{cm^{-1}}$.
+      Identifier la molécule.
+    indice: Regarder d'abord C=O, puis O-H.
+    etapes:
+      - type: her
+        titre: La bande à 1715
+        texte: Elle signale une liaison C=O. Le propan-1-ol n'en a pas, il est éliminé.
+      - type: her
+        titre: Pas de bande large
+        texte: Un acide carboxylique aurait une bande O-H très large entre 2500 et 3200. Elle est absente, l'acide propanoïque est éliminé.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>C'est le propanal</mark>. Les bandes vers 2900 sont des C-H, présentes dans les trois molécules.
+
+  - titre: Rendement d'une synthèse
+    difficulte: 3
+    type: bac
+    enonce: |
+      On oxyde $m_1 = 7{,}4\ \mathrm{g}$ de butan-1-ol ($M_1 = 74\ \mathrm{g \cdot mol^{-1}}$) en acide butanoïque ($M_2 = 88\ \mathrm{g \cdot mol^{-1}}$). L'oxydant est en excès. Une mole d'alcool donne au mieux une mole d'acide.
+      Après purification, on obtient $m_2 = 6{,}2\ \mathrm{g}$ d'acide. Calculer le rendement.
+    indice: L'alcool est le réactif limitant. Passer par les quantités de matière.
+    etapes:
+      - type: calcul
+        titre: Quantité d'alcool
+        texte: $n_1 = m_1/M_1 = 7{,}4/74 = 0{,}10\ \mathrm{mol}$.
+      - type: calcul
+        titre: Le maximum possible
+        texte: Une mole d'alcool donne une mole d'acide, donc $n_{\text{max}} = 0{,}10\ \mathrm{mol}$.
+      - type: calcul
+        titre: Ce qu'on a obtenu
+        texte: $n_{\text{obtenu}} = m_2/M_2 = 6{,}2/88 \approx 0{,}070\ \mathrm{mol}$.
+      - type: conc
+        titre: Rendement
+        texte: <mark>$\eta = 0{,}070/0{,}10 = 0{,}70$, soit 70 %</mark>.
+        note: on compare des moles, pas des grammes

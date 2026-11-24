@@ -1,0 +1,30 @@
+questions:
+  - question: La molécule $\mathrm{CH_3{-}CH_2{-}CHO}$ est…
+    choix: ['un alcool', 'un aldéhyde', 'une cétone', 'un acide carboxylique']
+    bonne: 1
+    explication: Le groupe carbonyle est en bout de chaîne.
+    revoir: cours
+
+  - question: Le nom de $\mathrm{CH_3{-}CO{-}CH_3}$ est…
+    choix: ['propanal', 'propan-2-ol', 'propanone', 'acide propanoïque']
+    bonne: 2
+    explication: C=O au milieu d'une chaîne de 3 carbones.
+    revoir: cours
+
+  - question: Dans une formule topologique, chaque sommet du zigzag représente…
+    choix: ['un hydrogène', 'un carbone', 'un oxygène', 'une liaison double']
+    bonne: 1
+    explication: Les H portés par les carbones ne sont pas écrits.
+    revoir: cours
+
+  - question: Une bande très large entre 2500 et $3200\ \mathrm{cm^{-1}}$ et une bande vers $1710\ \mathrm{cm^{-1}}$ signalent…
+    choix: ['un alcool', 'une cétone', 'un acide carboxylique', 'un alcane']
+    bonne: 2
+    explication: O-H d'acide très large, et C=O.
+    revoir: exercices
+
+  - question: On attend au mieux 0,20 mol de produit et on en obtient 0,15 mol. Le rendement est…
+    choix: ['15 %', '75 %', '133 %', '20 %']
+    bonne: 1
+    explication: $0{,}15/0{,}20 = 0{,}75$.
+    revoir: exercices

@@ -1,0 +1,30 @@
+questions:
+  - question: Les produits d'une combustion complète du méthane sont…
+    choix: ["$\\mathrm{CO}$ et $\\mathrm{H_2}$", "$\\mathrm{CO_2}$ et $\\mathrm{H_2O}$", "$\\mathrm{C}$ et $\\mathrm{H_2O}$", "$\\mathrm{CO_2}$ seul"]
+    bonne: 1
+    explication: Combustion complète, uniquement dioxyde de carbone et eau.
+    revoir: cours
+
+  - question: Le monoxyde de carbone se forme quand…
+    choix: ['il y a trop de dioxygène', 'le dioxygène manque', 'le combustible est humide', 'la flamme est bleue']
+    bonne: 1
+    explication: Combustion incomplète.
+    revoir: cours
+
+  - question: Casser une liaison chimique…
+    choix: ["libère de l'énergie", "demande de l'énergie", "ne change rien", 'dépend du signe de la charge']
+    bonne: 1
+    explication: L'énergie de liaison est l'énergie à fournir pour la casser.
+    revoir: cours
+
+  - question: Une réaction d'énergie molaire $E_r = -890\ \mathrm{kJ \cdot mol^{-1}}$ est…
+    choix: ['endothermique', 'exothermique', 'athermique', 'impossible']
+    bonne: 1
+    explication: Elle libère de l'énergie.
+    revoir: cours
+
+  - question: On brûle 2,0 kg de bois sec ($PC = 15\ \mathrm{MJ \cdot kg^{-1}}$). L'énergie libérée est…
+    choix: ['7,5 MJ', '15 MJ', '30 MJ', '17 MJ']
+    bonne: 2
+    explication: $Q = 2{,}0 \times 15 = 30\ \mathrm{MJ}$.
+    revoir: exercices

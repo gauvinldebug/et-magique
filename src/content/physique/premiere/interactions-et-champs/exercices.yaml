@@ -1,0 +1,78 @@
+exercices:
+  - titre: Force entre deux charges
+    difficulte: 1
+    type: application
+    enonce: |
+      Deux charges $q_A = 2{,}0 \times 10^{-6}\ \mathrm{C}$ et $q_B = -3{,}0 \times 10^{-6}\ \mathrm{C}$ sont à $d = 30\ \mathrm{cm}$ l'une de l'autre.
+      1. La force est-elle attractive ou répulsive ?
+      2. Calculer sa valeur.
+    indice: Les distances en mètres.
+    etapes:
+      - type: methode
+        titre: Le sens
+        texte: Charges de signes opposés, la force est attractive.
+      - type: calcul
+        titre: La valeur
+        texte: $F = 9{,}0 \times 10^{9} \times \dfrac{2{,}0 \times 10^{-6} \times 3{,}0 \times 10^{-6}}{0{,}30^2} = 9{,}0 \times 10^{9} \times \dfrac{6{,}0 \times 10^{-12}}{0{,}090}$.
+      - type: conc
+        titre: Résultat
+        texte: <mark>$F = 0{,}60\ \mathrm{N}$</mark>.
+
+  - titre: Doubler la distance
+    difficulte: 1
+    type: piege
+    enonce: |
+      Deux charges exercent l'une sur l'autre une force de 0,80 N. On double la distance qui les sépare. Un élève annonce 0,40 N. Corriger.
+    indice: Où est la distance dans la formule ?
+    etapes:
+      - type: piege
+        titre: L'erreur
+        texte: L'élève a divisé par 2, comme si la force était en $1/d$.
+      - type: calcul
+        titre: Le bon calcul
+        texte: La force est en $1/d^2$. Distance multipliée par 2, carré multiplié par 4.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>$F' = 0{,}80/4 = 0{,}20\ \mathrm{N}$</mark>.
+
+  - titre: Le champ de pesanteur sur la Lune
+    difficulte: 2
+    type: application
+    enonce: |
+      La Lune a une masse $M_L = 7{,}35 \times 10^{22}\ \mathrm{kg}$ et un rayon $R_L = 1{,}74 \times 10^{6}\ \mathrm{m}$.
+      1. Calculer la valeur du champ de gravitation à sa surface.
+      2. Un astronaute a une masse de 120 kg avec sa combinaison. Calculer son poids sur la Lune et sur Terre ($g = 9{,}8\ \mathrm{N \cdot kg^{-1}}$).
+    indice: $\mathcal{G} = GM/R^2$.
+    etapes:
+      - type: calcul
+        titre: Le champ lunaire
+        texte: $\mathcal{G}_L = 6{,}67 \times 10^{-11} \times 7{,}35 \times 10^{22} / (1{,}74 \times 10^{6})^2 \approx 1{,}6\ \mathrm{N \cdot kg^{-1}}$.
+      - type: calcul
+        titre: Les poids
+        texte: Sur la Lune, $P_L = 120 \times 1{,}6 \approx 1{,}9 \times 10^{2}\ \mathrm{N}$. Sur Terre, $P_T = 120 \times 9{,}8 \approx 1{,}2 \times 10^{3}\ \mathrm{N}$.
+      - type: conc
+        titre: Conclusion
+        texte: <mark>Le poids est environ 6 fois plus faible sur la Lune</mark>, la masse est la même.
+
+  - titre: Un électron dans un condensateur
+    difficulte: 3
+    type: bac
+    enonce: |
+      Deux plaques parallèles distantes de $d = 2{,}0\ \mathrm{cm}$ sont soumises à une tension $U = 200\ \mathrm{V}$. La plaque A est positive.
+      1. Calculer la valeur du champ entre les plaques et donner son sens.
+      2. Un électron ($q = -1{,}6 \times 10^{-19}\ \mathrm{C}$, $m = 9{,}1 \times 10^{-31}\ \mathrm{kg}$) est placé entre les plaques. Calculer la force électrique et donner son sens.
+      3. Comparer à son poids.
+    indice: $E = U/d$, et l'électron est négatif.
+    etapes:
+      - type: calcul
+        titre: Le champ
+        texte: $E = U/d = 200/0{,}020 = 1{,}0 \times 10^{4}\ \mathrm{V \cdot m^{-1}}$, perpendiculaire aux plaques, de A (+) vers B (−).
+      - type: calcul
+        titre: La force
+        texte: $F = |q|\,E = 1{,}6 \times 10^{-19} \times 1{,}0 \times 10^{4} = 1{,}6 \times 10^{-15}\ \mathrm{N}$. La charge est négative, la force est opposée au champ, dirigée vers la plaque A.
+      - type: calcul
+        titre: Le poids
+        texte: $P = mg = 9{,}1 \times 10^{-31} \times 9{,}8 \approx 8{,}9 \times 10^{-30}\ \mathrm{N}$.
+      - type: conc
+        titre: Comparaison
+        texte: $F/P \approx 2 \times 10^{14}$. <mark>Le poids de l'électron est totalement négligeable</mark> devant la force électrique.
