@@ -1,0 +1,53 @@
+exercices:
+- titre: Indices
+  difficulte: 1
+  type: application
+  enonce: |
+    Avec `t = [5, 8, 2, 7]`, que valent `t[0]`, `t[3]`, `t[-1]` et `len(t)` ? Que fait `t[4]` ?
+  indice: Les indices commencent à 0 ; -1 désigne le dernier.
+  etapes:
+  - type: calcul
+    titre: Les valeurs
+    texte: '`t[0]` = 5, `t[3]` = 7, `t[-1]` = 7, `len(t)` = 4.'
+  - type: conc
+    titre: t[4]
+    texte: '<mark>`t[4]` provoque une IndexError</mark> : le dernier indice est 3.'
+- titre: Compréhension
+  difficulte: 2
+  type: methode
+  enonce: |
+    Avec `notes = [12, 7, 15, 9, 18]`, écrire en une ligne la liste des notes supérieures ou égales à 10, augmentées d'un point.
+  indice: '`[expression for x in liste if condition]`.'
+  etapes:
+  - type: conc
+    titre: La liste
+    texte: <mark>`[n + 1 for n in notes if n >= 10]`</mark> donne [13, 16, 19].
+- titre: L'alias
+  difficulte: 2
+  type: piege
+  enonce: |
+    Que vaut `a` à la fin ?
+
+    ```python
+    a = [1, 2, 3]
+    b = a
+    b[0] = 99
+    ```
+  indice: '`b = a` crée-t-il un nouveau tableau ?'
+  etapes:
+  - type: piege
+    titre: L'erreur
+    texte: On croit que `a` vaut toujours [1, 2, 3]. Mais `a` et `b` désignent le même tableau.
+  - type: conc
+    titre: La réponse
+    texte: '<mark>`a` vaut [99, 2, 3].</mark> Pour l''éviter : `b = a.copy()`.'
+- titre: Somme d'une grille
+  difficulte: 3
+  type: bac
+  enonce: |
+    Écrire une fonction `somme_grille(g)` qui renvoie la somme de tous les nombres d'un tableau de tableaux, et une fonction `diagonale(g)` qui renvoie la liste des éléments `g[i][i]` d'une grille carrée.
+  indice: Deux boucles imbriquées pour la somme, une seule pour la diagonale.
+  etapes:
+  - type: conc
+    titre: Les fonctions
+    texte: "```python\ndef somme_grille(g):\n    s = 0\n    for ligne in g:\n        for x in ligne:\n            s = s + x\n    return s\n\ndef diagonale(g):\n    return [g[i][i] for i in range(len(g))]\n```"

@@ -1,0 +1,50 @@
+exercices:
+- titre: Lire une URL
+  difficulte: 1
+  type: application
+  enonce: |
+    Décomposer l'URL `https://meteo.fr/prevision?ville=Brest&jours=3`.
+  indice: Protocole, serveur, chemin, paramètres.
+  etapes:
+  - type: calcul
+    titre: Les parties
+    texte: 'Protocole : https. Serveur : meteo.fr. Chemin : /prevision. Paramètres : ville = Brest et jours = 3.'
+  - type: conc
+    titre: La méthode
+    texte: <mark>Les paramètres visibles dans l'URL indiquent une requête GET.</mark>
+- titre: Codes de statut
+  difficulte: 2
+  type: methode
+  enonce: |
+    Quel code de statut renvoie le serveur dans chaque cas : (a) la page existe ; (b) l'adresse contient une faute de frappe ; (c) le programme du serveur plante ?
+  indice: 2xx succès, 4xx erreur du client, 5xx erreur du serveur.
+  etapes:
+  - type: conc
+    titre: Les codes
+    texte: <mark>(a) 200 ; (b) 404 ; (c) 500.</mark>
+- titre: Le mot de passe dans l'URL
+  difficulte: 2
+  type: piege
+  enonce: |
+    Un formulaire de connexion utilise `method="get"`. Après validation, l'URL devient `.../login?user=lea&mdp=chat123`. Quel est le problème ?
+  indice: Où les URL sont-elles enregistrées ?
+  etapes:
+  - type: piege
+    titre: L'erreur
+    texte: 'Le mot de passe apparaît en clair dans l''URL : il reste dans l''historique du navigateur, les journaux du serveur, et peut être vu par-dessus l''épaule.'
+  - type: conc
+    titre: La correction
+    texte: <mark>Utiliser `method="post"` et HTTPS.</mark>
+- titre: Client ou serveur
+  difficulte: 3
+  type: bac
+  enonce: |
+    Pour chaque action, dire si elle se fait côté client ou côté serveur : (a) un menu qui se déplie au clic ; (b) vérifier qu'un mot de passe correspond à celui enregistré ; (c) afficher un message si un champ du formulaire est vide avant l'envoi ; (d) enregistrer une commande dans la base de données.
+  indice: Qui a accès à la base de données ?
+  etapes:
+  - type: calcul
+    titre: Côté client
+    texte: '(a) et (c) : du JavaScript dans le navigateur, sans échange avec le serveur.'
+  - type: conc
+    titre: Côté serveur
+    texte: '<mark>(b) et (d)</mark> : seuls le serveur et sa base de données connaissent les mots de passe et les commandes.'

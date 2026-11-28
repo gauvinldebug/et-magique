@@ -1,0 +1,56 @@
+exercices:
+- titre: Lire et modifier
+  difficulte: 1
+  type: application
+  enonce: |
+    Que contient `stock` après ces lignes ?
+
+    ```python
+    stock = {"pommes": 10, "poires": 4}
+    stock["pommes"] = stock["pommes"] - 3
+    stock["kiwis"] = 12
+    ```
+  indice: Une modification, un ajout.
+  etapes:
+  - type: conc
+    titre: Le dictionnaire
+    texte: '<mark>`{"pommes": 7, "poires": 4, "kiwis": 12}`</mark>'
+- titre: La meilleure note
+  difficulte: 2
+  type: methode
+  enonce: |
+    Écrire une fonction `meilleur(notes)` qui renvoie le nom de l'élève qui a la meilleure note, à partir d'un dictionnaire `{nom: note}` non vide.
+  indice: Parcourir les couples avec `items()` en gardant le meilleur.
+  etapes:
+  - type: conc
+    titre: La fonction
+    texte: "```python\ndef meilleur(notes):\n    nom_max = None\n    for nom, note in notes.items():\n        if nom_max is None or note > notes[nom_max]:\n            nom_max = nom\n    return nom_max\n```"
+- titre: La clé absente
+  difficulte: 2
+  type: piege
+  enonce: |
+    Ce code plante sur la ligne 4. Pourquoi ?
+
+    ```python
+    c = {}
+    for mot in ["chat", "chien", "chat"]:
+        c[mot] = c[mot] + 1
+    ```
+  indice: Que vaut `c["chat"]` au premier passage ?
+  etapes:
+  - type: piege
+    titre: L'erreur
+    texte: 'Au premier passage, la clé "chat" n''existe pas : lire `c[mot]` provoque une KeyError.'
+  - type: conc
+    titre: La correction
+    texte: <mark>`c[mot] = c.get(mot, 0) + 1`</mark>
+- titre: Inverser un dictionnaire
+  difficulte: 3
+  type: bac
+  enonce: |
+    Écrire une fonction `inverser(d)` qui, à partir d'un dictionnaire `{nom: classe}`, renvoie un dictionnaire `{classe: liste des noms}`. Exemple : `{"Léa": "1A", "Tom": "1B", "Sami": "1A"}` donne `{"1A": ["Léa", "Sami"], "1B": ["Tom"]}`.
+  indice: Créer la liste vide la première fois qu'une classe apparaît.
+  etapes:
+  - type: conc
+    titre: La fonction
+    texte: "```python\ndef inverser(d):\n    res = {}\n    for nom, classe in d.items():\n        if classe not in res:\n            res[classe] = []\n        res[classe].append(nom)\n    return res\n```"

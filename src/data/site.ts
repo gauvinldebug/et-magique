@@ -42,7 +42,7 @@ export const MATIERES: Matiere[] = [
     sousTitres: { seconde: 'SNT' },
   },
   {
-    slug: 'technologie', nom: 'Techno', nomLong: 'technologie', couleur: 'var(--brique)', active: false,
+    slug: 'technologie', nom: 'Technologie', nomLong: 'technologie', couleur: 'var(--rose)', active: false,
     niveaux: ['5e', '4e', '3e'],
   },
   { slug: 'histoire', nom: 'Histoire', couleur: 'var(--histoire)', active: false },

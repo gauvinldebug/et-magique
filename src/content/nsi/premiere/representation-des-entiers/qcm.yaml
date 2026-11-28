@@ -1,0 +1,55 @@
+questions:
+- question: $101_2$ vaut…
+  choix:
+  - '3'
+  - '5'
+  - '6'
+  - '101'
+  bonne: 1
+  explication: 4 + 1.
+  revoir: cours
+- question: Un octet contient…
+  choix:
+  - 4 bits
+  - 8 bits
+  - 16 bits
+  - 10 bits
+  bonne: 1
+  explication: Huit bits.
+  revoir: cours
+- question: Combien de valeurs peut-on coder sur 10 bits ?
+  choix:
+  - '10'
+  - '100'
+  - 1 024
+  - 2 048
+  bonne: 2
+  explication: 2¹⁰ = 1024.
+  revoir: cours
+- question: $\mathrm{F}_{16}$ vaut…
+  choix:
+  - '10'
+  - '15'
+  - '16'
+  - '6'
+  bonne: 1
+  explication: A = 10, …, F = 15.
+  revoir: cours
+- question: En complément à deux, un nombre négatif a son bit de gauche à…
+  choix:
+  - '0'
+  - '1'
+  - cela dépend
+  - il n'a pas de bit de gauche
+  bonne: 1
+  explication: Bit de poids fort à 1.
+  revoir: cours
+- question: '`int("11", 2)` renvoie…'
+  choix:
+  - '11'
+  - '3'
+  - '2'
+  - '1011'
+  bonne: 1
+  explication: 2 + 1.
+  revoir: cours

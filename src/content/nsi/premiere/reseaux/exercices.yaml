@@ -1,0 +1,56 @@
+exercices:
+- titre: Même réseau ?
+  difficulte: 1
+  type: application
+  enonce: |
+    Les machines `192.168.1.17/24` et `192.168.1.200/24` sont-elles sur le même réseau ? Et `192.168.2.5/24` ?
+  indice: Comparer les 3 premiers octets.
+  etapes:
+  - type: calcul
+    titre: Les deux premières
+    texte: 'Partie réseau 192.168.1 pour les deux : même réseau.'
+  - type: conc
+    titre: La troisième
+    texte: '<mark>192.168.2 : réseau différent</mark>, il faut passer par un routeur.'
+- titre: Nombre d'adresses
+  difficulte: 2
+  type: methode
+  enonce: |
+    Combien de machines peut-on adresser dans un réseau `/24` ? Dans un `/16` ?
+  indice: Il reste 32 − masque bits pour les machines ; deux adresses sont réservées.
+  etapes:
+  - type: calcul
+    titre: /24
+    texte: '8 bits : $2^8 = 256$ adresses, moins l''adresse du réseau et celle de diffusion : 254.'
+  - type: conc
+    titre: /16
+    texte: '<mark>16 bits : $2^{16} - 2 = 65\,534$ machines.</mark>'
+- titre: IP fiable ?
+  difficulte: 2
+  type: piege
+  enonce: |
+    « Grâce au protocole IP, tous les paquets d'une vidéo arrivent dans l'ordre. » Corriger.
+  indice: Quel protocole gère l'ordre et les pertes ?
+  etapes:
+  - type: piege
+    titre: L'erreur
+    texte: IP achemine les paquets indépendamment, sans garantie d'arrivée ni d'ordre.
+  - type: conc
+    titre: La correction
+    texte: <mark>C'est TCP qui numérote les paquets, les remet en ordre et fait renvoyer ceux qui sont perdus.</mark>
+- titre: Le bit alterné
+  difficulte: 3
+  type: bac
+  enonce: |
+    Avec le protocole du bit alterné, l'expéditeur envoie M1 (bit 0). L'accusé de réception est perdu. Décrire la suite et expliquer comment le destinataire évite d'enregistrer M1 deux fois.
+  indice: Que fait l'expéditeur sans accusé ? Que voit le destinataire ?
+  etapes:
+  - type: calcul
+    titre: L'expéditeur
+    texte: Sans accusé au bout du délai, il renvoie M1 avec le bit 0.
+  - type: calcul
+    titre: Le destinataire
+    texte: 'Il a déjà reçu un message de bit 0 et attend maintenant un bit 1 : il reconnaît un doublon, l''ignore, mais renvoie l''accusé 0.'
+  - type: conc
+    titre: La suite
+    texte: <mark>L'expéditeur reçoit l'accusé 0 et envoie M2 avec le bit 1.</mark>

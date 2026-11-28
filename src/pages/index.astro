@@ -7,6 +7,7 @@ import Histoire from '../components/Histoire.astro';
 import Pied from '../components/Pied.astro';
 import QRCode from 'qrcode';
 import { MATIERES, SITE } from '../data/site';
+import Recherche from '../components/Recherche.astro';
 import { AFFICHES } from '../data/affiches';
 import { chapitresPublies } from '../lib/contenu';
 
@@ -38,6 +39,7 @@ const qr = abonnement ? await QRCode.toString(abonnement, { type: 'svg', margin:
           <a class="btn jaune grand" href="#matieres">Choisir ma matière</a>
           <span>Gratuit, sans compte, sans publicité.</span>
         </div>
+        <div class="ah-rq"><Recherche id="rq-site" matiere="toutes" placeholder="Cherche un chapitre dans toutes les matières" /></div>
       </div>
     </div>
   </header>

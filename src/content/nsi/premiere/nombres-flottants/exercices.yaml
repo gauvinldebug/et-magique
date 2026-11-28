@@ -1,0 +1,63 @@
+exercices:
+- titre: Écriture binaire
+  difficulte: 1
+  type: application
+  enonce: |
+    Convertir $0{,}011_2$ et $10{,}1_2$ en base 10.
+  indice: Poids $\frac12$, $\frac14$, $\frac18$ après la virgule.
+  etapes:
+  - type: calcul
+    titre: Les calculs
+    texte: $0{,}011_2 = \frac14 + \frac18 = 0{,}375$. $10{,}1_2 = 2 + \frac12 = 2{,}5$.
+  - type: conc
+    titre: Les réponses
+    texte: <mark>0,375 et 2,5.</mark>
+- titre: Exact ou approché
+  difficulte: 2
+  type: methode
+  enonce: |
+    Parmi 0,5, 0,75, 0,1 et 0,2, lesquels sont stockés exactement dans un flottant ?
+  indice: Exact si le nombre est une somme finie de $\frac12$, $\frac14$, $\frac18$…
+  etapes:
+  - type: calcul
+    titre: Les exacts
+    texte: 0,5 = $\frac12$ ; 0,75 = $\frac12 + \frac14$.
+  - type: conc
+    titre: Les approchés
+    texte: <mark>0,5 et 0,75 sont exacts ; 0,1 et 0,2 sont approchés</mark>, leur écriture binaire est infinie.
+- titre: Le test d'égalité
+  difficulte: 2
+  type: piege
+  enonce: |
+    Un programme fait :
+
+    ```python
+    x = 0
+    for i in range(10):
+        x = x + 0.1
+    if x == 1:
+        print("fini")
+    ```
+
+    Rien ne s'affiche. Pourquoi ? Corriger.
+  indice: Que vaut exactement x à la fin ?
+  etapes:
+  - type: piege
+    titre: L'erreur
+    texte: 'Les arrondis s''accumulent : x vaut 0.9999999999999999, pas exactement 1.'
+  - type: conc
+    titre: La correction
+    texte: <mark>`if abs(x - 1) < 1e-9:`</mark> compare avec une tolérance.
+- titre: Les centimes
+  difficulte: 3
+  type: bac
+  enonce: |
+    Un logiciel de caisse additionne des prix en euros avec des flottants. Expliquer le risque et proposer une solution.
+  indice: Les prix comme 0,10 € sont-ils exacts ?
+  etapes:
+  - type: calcul
+    titre: Le risque
+    texte: 'Des prix comme 0,10 € ou 0,20 € sont approchés : après de nombreuses additions, le total peut différer d''un centime du bon résultat.'
+  - type: conc
+    titre: La solution
+    texte: <mark>Compter en centimes avec des entiers</mark> (10, 20…), qui sont exacts, et ne convertir en euros qu'à l'affichage.

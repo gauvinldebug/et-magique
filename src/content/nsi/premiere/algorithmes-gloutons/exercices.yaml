@@ -1,0 +1,56 @@
+exercices:
+- titre: Rendre la monnaie
+  difficulte: 1
+  type: application
+  enonce: |
+    Avec les pièces et billets de 50, 20, 10, 5, 2 et 1 €, appliquer l'algorithme glouton pour rendre 87 €.
+  indice: Prendre la plus grosse valeur tant que possible.
+  etapes:
+  - type: calcul
+    titre: Les étapes
+    texte: 50 (reste 37), 20 (17), 10 (7), 5 (2), 2 (0).
+  - type: conc
+    titre: Le résultat
+    texte: '<mark>50 + 20 + 10 + 5 + 2 : 5 pièces et billets.</mark>'
+- titre: Planifier des réunions
+  difficulte: 2
+  type: methode
+  enonce: |
+    Une salle, des réunions (début, fin) : (9, 11), (10, 12), (11, 13), (12, 14), (13, 15). Stratégie gloutonne : choisir à chaque fois la réunion qui finit le plus tôt parmi celles compatibles avec les précédentes. Combien de réunions obtient-on ?
+  indice: Trier par heure de fin.
+  etapes:
+  - type: calcul
+    titre: Les choix
+    texte: (9, 11) finit le plus tôt. Puis (11, 13), qui commence à 11. Puis (13, 15).
+  - type: conc
+    titre: Le résultat
+    texte: '<mark>3 réunions : (9, 11), (11, 13), (13, 15).</mark> Pour ce problème, ce glouton est prouvé optimal.'
+- titre: Le glouton trompé
+  difficulte: 2
+  type: piege
+  enonce: |
+    Un pays utilise des pièces de 1, 7 et 10. Le glouton rend 14 comment ? Est-ce optimal ?
+  indice: Comparer avec 7 + 7.
+  etapes:
+  - type: piege
+    titre: Le glouton
+    texte: '10, puis 1, 1, 1, 1 : 5 pièces.'
+  - type: conc
+    titre: L'optimum
+    texte: '<mark>7 + 7 : 2 pièces.</mark> Le glouton n''est pas optimal avec ce système de pièces.'
+- titre: Sac à dos glouton
+  difficulte: 3
+  type: bac
+  enonce: |
+    Sac de 15 kg. Objets (poids, valeur) : A (12, 60), B (5, 40), C (5, 35), D (4, 20). Appliquer le glouton par rapport valeur/poids décroissant, puis chercher mieux.
+  indice: Calculer les rapports et les trier.
+  etapes:
+  - type: calcul
+    titre: Les rapports
+    texte: 'B : 8, C : 7, A : 5, D : 5.'
+  - type: calcul
+    titre: Le glouton
+    texte: 'B (5 kg), C (10 kg), A ne rentre plus, D (14 kg) : valeur 40 + 35 + 20 = 95.'
+  - type: conc
+    titre: La comparaison
+    texte: '<mark>Glouton : 95.</mark> Les autres combinaisons possibles (A seul : 60 ; A avec rien d''autre, car 12 + 4 > 15) font moins : ici, le glouton est optimal.'

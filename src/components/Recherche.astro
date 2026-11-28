@@ -5,8 +5,8 @@ interface Props { placeholder?: string; id: string; autofocus?: boolean; compact
 const { id, autofocus = false, compact = false, matiere = 'maths' } = Astro.props;
 const placeholder = Astro.props.placeholder ?? (matiere === 'physique' ? 'Cherche un chapitre : ondes, pH, forces…' : matiere === 'svt' ? 'Cherche un chapitre : méiose, immunité, climat…' : matiere === 'nsi' ? 'Cherche un chapitre : récursivité, SQL, graphes…' : matiere === 'technologie' ? 'Cherche un chapitre : énergie, capteurs, réseau…' : 'Cherche un chapitre : récurrence, fractions…');
 ---
-<div class:list={['rq', { compact }]} data-rq>
-  <form class="s-search" role="search" action={`/${matiere}/recherche/`} method="get" style="margin:0">
+<div class:list={['rq', { compact }]} data-rq data-matiere={matiere === 'toutes' ? '' : matiere}>
+  <form class="s-search" role="search" action={`/${matiere === 'toutes' ? 'maths' : matiere}/recherche/`} method="get" style="margin:0">
     <input
       type="search" name="q" id={id} placeholder={placeholder} autocomplete="off" spellcheck="false"
       role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls={`${id}-liste`} aria-label="Chercher un chapitre"
@@ -18,7 +18,7 @@ const placeholder = Astro.props.placeholder ?? (matiere === 'physique' ? 'Cherch
 </div>
 
 <script>
-  type Item = { t: string; s: string; u: string; k: string; d: 0 | 1 };
+  type Item = { t: string; s: string; u: string; k: string; d: 0 | 1; m?: string };
   let index: Promise<Item[]> | undefined;
   const charger = (): Promise<Item[]> => (index ??= fetch('/recherche.json').then((r) => r.json() as Promise<Item[]>).catch(() => [] as Item[]));
   const norm = (s: string) => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
@@ -53,6 +53,10 @@ const placeholder = Astro.props.placeholder ?? (matiere === 'physique' ? 'Cherch
   document.querySelectorAll<HTMLElement>('[data-rq]').forEach((box) => {
     const input = box.querySelector('input')!;
     const pop = box.querySelector<HTMLElement>('.rq-pop')!;
+    // sur une page de matière, seulement les chapitres de cette matière ; sur l'accueil, tout
+    const mat = box.dataset.matiere || '';
+    const ici = (items: Item[]) => (mat ? items.filter((i) => !i.m || i.m === mat) : items);
+    const recentsIci = () => recents().filter((r) => !mat || r.u.startsWith(`/${mat}/`));
     let liste: { t: string; s: string; u: string }[] = [];
     let actif = -1;
     const ouvrir = (o: boolean) => { pop.hidden = !o; input.setAttribute('aria-expanded', String(o)); };
@@ -67,13 +71,13 @@ const placeholder = Astro.props.placeholder ?? (matiere === 'physique' ? 'Cherch
     const maj = async () => {
       const q = input.value.trim();
       if (!q) {
-        const r = recents();
-        const items = await charger();
+        const r = recentsIci();
+        const items = ici(await charger());
         if (r.length) dessiner('Recherches récentes', r);
         else dessiner('Suggestions', items.filter((i) => i.d && !/^Tous/.test(i.t)).slice(0, 5));
         return;
       }
-      const res = chercher(await charger(), q);
+      const res = chercher(ici(await charger()), q);
       dessiner('', res, `Rien pour « ${esc(q)} ». <a href="/demandes/?type=chapitre&chapitre=${encodeURIComponent(q)}">Demander ce chapitre</a>`);
     };
     const surligner = (i: number) => {
@@ -97,7 +101,7 @@ const placeholder = Astro.props.placeholder ?? (matiere === 'physique' ? 'Cherch
     box.querySelector('form')!.addEventListener('submit', async (e) => {
       const q = input.value.trim();
       if (!q) { e.preventDefault(); return; }
-      const cible = actif >= 0 ? liste[actif] : chercher(await charger(), q)[0];
+      const cible = actif >= 0 ? liste[actif] : chercher(ici(await charger()), q)[0];
       if (cible) { e.preventDefault(); retenir(cible); location.href = cible.u; }
     });
     pop.addEventListener('mousedown', (e) => e.preventDefault());

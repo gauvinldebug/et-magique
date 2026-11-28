@@ -1,0 +1,55 @@
+questions:
+- question: Dans l'architecture de von Neumann, le programme est stocké…
+  choix:
+  - dans le processeur
+  - dans la même mémoire que les données
+  - sur l'écran
+  - dans le bus
+  bonne: 1
+  explication: C'est sa particularité.
+  revoir: cours
+- question: L'UAL sert à…
+  choix:
+  - afficher
+  - calculer
+  - stocker
+  - connecter au réseau
+  bonne: 1
+  explication: Unité arithmétique et logique.
+  revoir: cours
+- question: Le cycle d'exécution est…
+  choix:
+  - décoder, charger, exécuter
+  - charger, décoder, exécuter
+  - exécuter, charger, décoder
+  - charger, exécuter
+  bonne: 1
+  explication: On lit, on comprend, on agit.
+  revoir: cours
+- question: Un registre est…
+  choix:
+  - un fichier
+  - une petite mémoire très rapide dans le processeur
+  - un disque dur
+  - un câble
+  bonne: 1
+  explication: Interne au processeur.
+  revoir: cours
+- question: La porte ET donne 1 si…
+  choix:
+  - au moins une entrée vaut 1
+  - les deux entrées valent 1
+  - aucune entrée ne vaut 1
+  - toujours
+  bonne: 1
+  explication: Les deux à la fois.
+  revoir: cours
+- question: La mémoire vive (RAM)…
+  choix:
+  - garde tout après extinction
+  - s'efface à l'extinction
+  - est un disque
+  - contient l'UAL
+  bonne: 1
+  explication: Elle est volatile.
+  revoir: cours

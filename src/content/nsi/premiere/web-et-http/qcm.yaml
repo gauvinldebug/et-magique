@@ -1,0 +1,55 @@
+questions:
+- question: Dans le modèle du Web, le navigateur est…
+  choix:
+  - le serveur
+  - le client
+  - le routeur
+  - la base de données
+  bonne: 1
+  explication: Il envoie les requêtes.
+  revoir: cours
+- question: Le code 404 signifie…
+  choix:
+  - tout va bien
+  - ressource introuvable
+  - erreur du serveur
+  - page déplacée
+  bonne: 1
+  explication: Souvent une faute dans l'adresse.
+  revoir: cours
+- question: Avec GET, les données d'un formulaire sont…
+  choix:
+  - chiffrées
+  - dans l'URL
+  - dans un cookie
+  - perdues
+  bonne: 1
+  explication: Visibles après le ?.
+  revoir: cours
+- question: Le JavaScript d'une page s'exécute…
+  choix:
+  - sur le serveur
+  - dans le navigateur
+  - dans le routeur
+  - dans la base de données
+  bonne: 1
+  explication: Côté client.
+  revoir: cours
+- question: HTTPS sert à…
+  choix:
+  - accélérer la page
+  - chiffrer les échanges
+  - compresser les images
+  - remplacer HTML
+  bonne: 1
+  explication: HTTP + chiffrement.
+  revoir: cours
+- question: HTML décrit…
+  choix:
+  - la structure de la page
+  - les couleurs uniquement
+  - la base de données
+  - le réseau
+  bonne: 0
+  explication: Titres, paragraphes, liens.
+  revoir: cours

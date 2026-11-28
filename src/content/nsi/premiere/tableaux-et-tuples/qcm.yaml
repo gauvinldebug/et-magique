@@ -1,0 +1,55 @@
+questions:
+- question: Un p-uplet est…
+  choix:
+  - modifiable
+  - non modifiable
+  - toujours vide
+  - un dictionnaire
+  bonne: 1
+  explication: Une enveloppe scellée.
+  revoir: cours
+- question: Avec `t = [4, 6, 8]`, `t[1]` vaut…
+  choix:
+  - '4'
+  - '6'
+  - '8'
+  - une erreur
+  bonne: 1
+  explication: Indices à partir de 0.
+  revoir: cours
+- question: '`[x * 2 for x in range(3)]` vaut…'
+  choix:
+  - '[0, 2, 4]'
+  - '[2, 4, 6]'
+  - '[0, 1, 2]'
+  - '[1, 2, 3]'
+  bonne: 0
+  explication: range(3) donne 0, 1, 2.
+  revoir: cours
+- question: 'Pour copier vraiment une liste `a` :'
+  choix:
+  - b = a
+  - b = a.copy()
+  - b == a
+  - b = [a]
+  bonne: 1
+  explication: b = a crée un alias.
+  revoir: cours
+- question: Dans `g = [[1, 2], [3, 4]]`, `g[1][0]` vaut…
+  choix:
+  - '1'
+  - '2'
+  - '3'
+  - '4'
+  bonne: 2
+  explication: Ligne 1, colonne 0.
+  revoir: cours
+- question: '`a, b = (3, 7)` donne…'
+  choix:
+  - a = 3, b = 7
+  - a = (3, 7)
+  - une erreur
+  - a = 7, b = 3
+  bonne: 0
+  explication: Déballage du p-uplet.
+  revoir: cours

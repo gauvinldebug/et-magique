@@ -1,0 +1,55 @@
+questions:
+- question: '`True and False` vaut…'
+  choix:
+  - 'True'
+  - 'False'
+  - None
+  - une erreur
+  bonne: 1
+  explication: and exige les deux vrais.
+  revoir: cours
+- question: '`True or False` vaut…'
+  choix:
+  - 'True'
+  - 'False'
+  - None
+  - une erreur
+  bonne: 0
+  explication: Un seul vrai suffit.
+  revoir: cours
+- question: Le ou exclusif de deux valeurs vraies vaut…
+  choix:
+  - vrai
+  - faux
+  - cela dépend
+  - indéfini
+  bonne: 1
+  explication: Exactement une doit être vraie.
+  revoir: cours
+- question: ASCII code…
+  choix:
+  - tous les caractères du monde
+  - 128 caractères
+  - 256 caractères avec accents
+  - les emojis
+  bonne: 1
+  explication: Sur 7 bits.
+  revoir: cours
+- question: '`ord("A")` renvoie…'
+  choix:
+  - '"A"'
+  - '65'
+  - '97'
+  - '1'
+  bonne: 1
+  explication: Le code du caractère.
+  revoir: cours
+- question: UTF-8 encode un caractère sur…
+  choix:
+  - exactement 1 octet
+  - 1 à 4 octets
+  - exactement 2 octets
+  - 7 bits
+  bonne: 1
+  explication: Taille variable.
+  revoir: cours

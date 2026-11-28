@@ -1,0 +1,53 @@
+exercices:
+- titre: Dérouler la sélection
+  difficulte: 1
+  type: application
+  enonce: |
+    Dérouler le tri par sélection sur [5, 2, 8, 1].
+  indice: À chaque tour, le minimum de la partie non triée vient en tête.
+  etapes:
+  - type: calcul
+    titre: Les tours
+    texte: 'i = 0 : minimum 1, échange : [1, 2, 8, 5]. i = 1 : minimum 2, déjà en place. i = 2 : minimum 5, échange : [1, 2, 5, 8].'
+  - type: conc
+    titre: Le résultat
+    texte: <mark>[1, 2, 5, 8] en 3 tours.</mark>
+- titre: Dérouler l'insertion
+  difficulte: 2
+  type: methode
+  enonce: |
+    Dérouler le tri par insertion sur [5, 2, 8, 1] en donnant le tableau à la fin de chaque tour.
+  indice: On insère t[1], puis t[2], puis t[3] dans la partie de gauche.
+  etapes:
+  - type: calcul
+    titre: Tour 1 et 2
+    texte: 'On insère 2 : [2, 5, 8, 1]. On insère 8 : il reste à sa place, [2, 5, 8, 1].'
+  - type: conc
+    titre: Tour 3
+    texte: '<mark>On insère 1, qui glisse tout à gauche : [1, 2, 5, 8].</mark>'
+- titre: Le temps multiplié
+  difficulte: 2
+  type: piege
+  enonce: |
+    Un tri par insertion met 1 seconde pour 10 000 valeurs. Un élève pense qu'il mettra 10 secondes pour 100 000 valeurs. Corriger.
+  indice: Le coût est quadratique.
+  etapes:
+  - type: piege
+    titre: L'erreur
+    texte: Le temps n'est pas proportionnel au nombre de valeurs mais à son carré.
+  - type: conc
+    titre: La correction
+    texte: '<mark>10 fois plus de valeurs, donc environ 100 fois plus de temps : 100 secondes.</mark>'
+- titre: L'invariant de la sélection
+  difficulte: 3
+  type: bac
+  enonce: |
+    Énoncer un invariant de boucle pour le tri par sélection et expliquer pourquoi il prouve que le tableau est trié à la fin.
+  indice: Que sait-on de `t[0:i]` au début du tour `i` ?
+  etapes:
+  - type: calcul
+    titre: L'invariant
+    texte: Au début du tour `i`, `t[0:i]` contient les `i` plus petites valeurs du tableau, rangées dans l'ordre croissant.
+  - type: conc
+    titre: La conclusion
+    texte: '<mark>À la fin, `i = n - 1` : les `n - 1` plus petites valeurs sont triées en tête, et la dernière case contient forcément la plus grande.</mark> Le tableau est trié.'
