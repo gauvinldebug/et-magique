@@ -15,7 +15,7 @@ if (labos.length) {
         : MATHS.includes(nom) ? await import('./maths')
         : MATHS2.includes(nom) ? await import('./maths2')
           : PHYSIQUE2.includes(nom) ? await import('./physique2') : await import('./physique');
-      const f = mod.LABOS[nom];
+      const f = mod.LABOS[nom] ?? (nom.startsWith('defi-') ? (await import('./defis2')).LABOS2[nom] : undefined);
       if (!f) { r.hidden = true; return; }
       f(r);
       r.classList.add('pret');
