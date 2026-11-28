@@ -1,0 +1,51 @@
+exercices:
+- titre: Les étapes du papillon
+  difficulte: 1
+  type: application
+  enonce: |
+    Remettre dans l'ordre : chrysalide, papillon, œuf, chenille.
+  indice: De l'œuf à l'adulte.
+  etapes:
+  - type: conc
+    titre: L'ordre
+    texte: <mark>œuf, chenille, chrysalide, papillon</mark>.
+- titre: Les conditions de germination
+  difficulte: 2
+  type: methode
+  enonce: |
+    On place des graines de haricot dans quatre pots : (A) coton humide, 20 °C, lumière ; (B) coton sec, 20 °C, lumière ; (C) coton humide, 4 °C, lumière ; (D) coton humide, 20 °C, dans le noir. Seuls A et D germent. Conclure.
+  indice: Comparer chaque pot au pot A.
+  etapes:
+  - type: calcul
+    titre: Les comparaisons
+    texte: B (sans eau) et C (froid) ne germent pas ; D (sans lumière) germe.
+  - type: conc
+    titre: La conclusion
+    texte: <mark>La germination demande de l'eau et une température douce, mais pas de lumière</mark>.
+- titre: La graine morte
+  difficulte: 2
+  type: piege
+  enonce: |
+    « Une graine sèche est morte, puisqu'elle ne bouge pas et ne grandit pas. » Corriger.
+  indice: Que se passe-t-il si on l'arrose ?
+  etapes:
+  - type: piege
+    titre: L'erreur
+    texte: Ne pas grandir ne veut pas dire être mort.
+  - type: conc
+    titre: La correction
+    texte: '<mark>La graine est en vie ralentie</mark> : avec de l''eau et une bonne température, elle germe.'
+- titre: Le têtard et la grenouille
+  difficulte: 3
+  type: application
+  enonce: |
+    Le têtard vit dans l'eau, respire avec des branchies et mange des algues. La grenouille adulte respire avec des poumons et sa peau, et mange des insectes.
+    Quel type de développement est-ce ? Quel avantage y a-t-il à ce que la larve et l'adulte ne mangent pas la même chose ?
+  indice: La larve ressemble-t-elle à l'adulte ?
+  etapes:
+  - type: calcul
+    titre: Le type
+    texte: 'La larve ne ressemble pas à l''adulte : c''est un développement avec métamorphose.'
+  - type: conc
+    titre: L'avantage
+    texte: <mark>Larves et adultes ne se font pas concurrence pour la nourriture</mark>.

@@ -1,0 +1,55 @@
+questions:
+- question: Une plante verte a besoin de…
+  choix:
+  - terre et viande
+  - eau, sels minéraux, CO₂ et lumière
+  - sucre uniquement
+  - obscurité
+  bonne: 1
+  explication: Elle fabrique sa propre matière.
+  revoir: cours
+- question: L'eau est absorbée par…
+  choix:
+  - les feuilles
+  - les poils absorbants des racines
+  - les fleurs
+  - les fruits
+  bonne: 1
+  explication: Au bout des racines.
+  revoir: cours
+- question: Le CO₂ entre dans la feuille par…
+  choix:
+  - les racines
+  - les stomates
+  - les fleurs
+  - la tige
+  bonne: 1
+  explication: De petits trous de la feuille.
+  revoir: cours
+- question: La sève brute contient…
+  choix:
+  - des sucres
+  - de l'eau et des sels minéraux
+  - du sang
+  - de l'amidon
+  bonne: 1
+  explication: Elle monte vers les feuilles.
+  revoir: cours
+- question: L'eau iodée devient bleu-noir avec…
+  choix:
+  - l'eau
+  - l'amidon
+  - le sel
+  - le dioxygène
+  bonne: 1
+  explication: C'est le test de l'amidon.
+  revoir: cours
+- question: La photosynthèse a lieu dans…
+  choix:
+  - les racines
+  - les parties vertes éclairées
+  - les graines dans le sol
+  - le noir
+  bonne: 1
+  explication: Grâce à la chlorophylle.
+  revoir: cours

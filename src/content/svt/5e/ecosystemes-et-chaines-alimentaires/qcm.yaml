@@ -1,0 +1,55 @@
+questions:
+- question: Un écosystème, c'est…
+  choix:
+  - seulement des animaux
+  - un biotope et une biocénose
+  - seulement le sol
+  - une chaîne
+  bonne: 1
+  explication: Le milieu et ses êtres vivants.
+  revoir: cours
+- question: Dans une chaîne alimentaire, la flèche signifie…
+  choix:
+  - mange
+  - est mangé par
+  - vit avec
+  - fuit
+  bonne: 1
+  explication: herbe → lapin.
+  revoir: cours
+- question: Une chaîne alimentaire commence toujours par…
+  choix:
+  - un carnivore
+  - un producteur
+  - un décomposeur
+  - un humain
+  bonne: 1
+  explication: Une plante ou une algue.
+  revoir: cours
+- question: Les décomposeurs…
+  choix:
+  - fabriquent de la matière avec la lumière
+  - transforment la matière morte en sels minéraux
+  - mangent seulement des animaux vivants
+  - n'existent pas
+  bonne: 1
+  explication: Champignons, bactéries, vers.
+  revoir: cours
+- question: Le biotope, c'est…
+  choix:
+  - les êtres vivants
+  - le milieu physique
+  - une chaîne
+  - un animal
+  bonne: 1
+  explication: Sol, eau, climat.
+  revoir: cours
+- question: Plusieurs chaînes reliées forment…
+  choix:
+  - un biotope
+  - un réseau alimentaire
+  - une cellule
+  - une biocénose
+  bonne: 1
+  explication: Comme une toile.
+  revoir: cours

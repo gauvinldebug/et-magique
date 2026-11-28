@@ -1,0 +1,55 @@
+questions:
+- question: L'érosion, c'est…
+  choix:
+  - la formation d'un volcan
+  - l'usure des roches
+  - la pousse des plantes
+  - un séisme
+  bonne: 1
+  explication: Par l'eau, le vent, la glace.
+  revoir: cours
+- question: Les sédiments se déposent quand…
+  choix:
+  - le courant accélère
+  - le courant ralentit
+  - il fait chaud
+  - il y a du vent
+  bonne: 1
+  explication: Au fond des lacs et des mers.
+  revoir: cours
+- question: Les fossiles se trouvent surtout dans…
+  choix:
+  - les roches sédimentaires
+  - la lave
+  - le granite
+  - le noyau terrestre
+  bonne: 0
+  explication: Pris dans les couches de sédiments.
+  revoir: cours
+- question: Dans une pile de couches, la plus ancienne est en général…
+  choix:
+  - en haut
+  - en bas
+  - au milieu
+  - impossible à savoir
+  bonne: 1
+  explication: Elle s'est déposée la première.
+  revoir: cours
+- question: L'eau qui gèle dans une fissure…
+  choix:
+  - colle la roche
+  - fait éclater la roche
+  - n'a aucun effet
+  - fait fondre la roche
+  bonne: 1
+  explication: La glace prend plus de place que l'eau.
+  revoir: cours
+- question: Une roche tendre comme l'argile donne…
+  choix:
+  - des falaises abruptes
+  - des pentes douces
+  - des volcans
+  - des glaciers
+  bonne: 1
+  explication: Elle s'use vite.
+  revoir: cours

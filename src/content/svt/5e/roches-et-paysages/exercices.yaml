@@ -1,0 +1,52 @@
+exercices:
+- titre: Les agents d'érosion
+  difficulte: 1
+  type: application
+  enonce: |
+    Citer trois agents qui usent les roches.
+  indice: Pense aux éléments naturels.
+  etapes:
+  - type: conc
+    titre: La réponse
+    texte: <mark>L'eau, le vent, la glace</mark> (et aussi les êtres vivants, comme les racines).
+- titre: Le recul d'une falaise
+  difficulte: 2
+  type: methode
+  enonce: |
+    Une falaise recule de 30 cm par an. De combien aura-t-elle reculé en 100 ans ? Une maison est à 20 m du bord : sera-t-elle menacée dans 100 ans ?
+  indice: Multiplier, puis comparer en mètres.
+  etapes:
+  - type: calcul
+    titre: Le recul
+    texte: $30 \times 100 = 3\,000$ cm, soit 30 m.
+  - type: conc
+    titre: La maison
+    texte: '<mark>Oui</mark> : 30 m de recul dépasse les 20 m qui la séparent du bord.'
+- titre: Les montagnes éternelles
+  difficulte: 2
+  type: piege
+  enonce: |
+    « Les montagnes ne changent jamais. » Corriger.
+  indice: Que fait l'érosion, même lentement ?
+  etapes:
+  - type: piege
+    titre: L'erreur
+    texte: On ne voit pas le changement à l'échelle d'une vie.
+  - type: conc
+    titre: La correction
+    texte: <mark>Les montagnes s'usent sans arrêt</mark> sous l'effet de l'érosion, mais très lentement.
+- titre: Lire des couches
+  difficulte: 3
+  type: brevet
+  enonce: |
+    Une falaise montre trois couches : en bas un calcaire avec des coquillages marins, au milieu un grès, en haut une argile avec des feuilles fossiles.
+    1. Quelle couche est la plus ancienne ?
+    2. Que peut-on dire du milieu au moment où la couche du bas s'est formée ?
+  indice: Le bas est en général le plus ancien ; les coquillages marins indiquent un milieu.
+  etapes:
+  - type: calcul
+    titre: La plus ancienne
+    texte: La couche du bas, le calcaire.
+  - type: conc
+    titre: Le milieu
+    texte: '<mark>Il y avait la mer</mark> : les coquillages marins le montrent. Le paysage a beaucoup changé depuis.'

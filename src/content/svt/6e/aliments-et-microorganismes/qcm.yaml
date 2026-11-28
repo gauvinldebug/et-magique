@@ -1,0 +1,55 @@
+questions:
+- question: Les pâtes et le riz sont des…
+  choix:
+  - produits laitiers
+  - féculents
+  - matières grasses
+  - fruits
+  bonne: 1
+  explication: Ils apportent de l'énergie.
+  revoir: cours
+- question: Le yaourt est fabriqué grâce à…
+  choix:
+  - des levures
+  - des bactéries
+  - du sel
+  - du vinaigre
+  bonne: 1
+  explication: Elles rendent le lait acide et épais.
+  revoir: cours
+- question: Le pain gonfle grâce à…
+  choix:
+  - la levure
+  - le sel
+  - le four seulement
+  - l'eau
+  bonne: 0
+  explication: Elle produit un gaz.
+  revoir: cours
+- question: Le réfrigérateur…
+  choix:
+  - tue tous les microbes
+  - ralentit les microbes
+  - fait pousser les microbes
+  - n'a aucun effet
+  bonne: 1
+  explication: Il ne les tue pas tous.
+  revoir: cours
+- question: Les lentilles apportent surtout…
+  choix:
+  - du sucre
+  - des protéines
+  - de la graisse
+  - de l'eau
+  bonne: 1
+  explication: Comme la viande et les œufs.
+  revoir: cours
+- question: Une alimentation équilibrée contient beaucoup de…
+  choix:
+  - sodas
+  - fruits et légumes
+  - bonbons
+  - beurre
+  bonne: 1
+  explication: Et peu de produits sucrés.
+  revoir: cours

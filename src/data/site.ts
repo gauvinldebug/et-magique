@@ -33,8 +33,8 @@ export const MATIERES: Matiere[] = [
   },
   {
     slug: 'svt', nom: 'SVT', nomLong: 'SVT', couleur: 'var(--svt)', active: true,
-    niveaux: ['4e', '3e', 'seconde', 'premiere', 'terminale', 'ens-scientifique-premiere', 'ens-scientifique-terminale'],
-    sousTitres: { 'ens-scientifique-premiere': 'partie SVT', 'ens-scientifique-terminale': 'partie SVT' },
+    niveaux: ['6e', '5e', '4e', '3e', 'seconde', 'premiere', 'terminale', 'ens-scientifique-premiere', 'ens-scientifique-terminale'],
+    sousTitres: { '6e': 'sciences et technologie', 'ens-scientifique-premiere': 'partie SVT', 'ens-scientifique-terminale': 'partie SVT' },
   },
   { slug: 'histoire', nom: 'Histoire', couleur: 'var(--histoire)', active: false },
   { slug: 'francais', nom: 'Français', couleur: 'var(--francais)', active: false },

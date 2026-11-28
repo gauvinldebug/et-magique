@@ -1,0 +1,51 @@
+exercices:
+- titre: Écrire une chaîne
+  difficulte: 1
+  type: application
+  enonce: |
+    Remettre dans l'ordre avec des flèches : renard, herbe, lapin.
+  indice: Commencer par le producteur.
+  etapes:
+  - type: conc
+    titre: La chaîne
+    texte: <mark>herbe → lapin → renard</mark>.
+- titre: Le rôle des décomposeurs
+  difficulte: 2
+  type: methode
+  enonce: |
+    On place des feuilles mortes dans deux boîtes de terre : l'une normale, l'autre stérilisée (sans êtres vivants). Après 2 mois, les feuilles ont disparu dans la première, pas dans la seconde. Conclure.
+  indice: Qu'est-ce qui manque dans la terre stérilisée ?
+  etapes:
+  - type: calcul
+    titre: La différence
+    texte: La terre stérilisée ne contient plus de champignons, de bactéries ni de petits animaux.
+  - type: conc
+    titre: La conclusion
+    texte: <mark>Ce sont les êtres vivants du sol, les décomposeurs, qui font disparaître les feuilles</mark>.
+- titre: Le sens de la flèche
+  difficulte: 2
+  type: piege
+  enonce: |
+    Un élève écrit : renard → lapin → herbe. Qu'est-ce qui ne va pas ?
+  indice: Que veut dire la flèche ?
+  etapes:
+  - type: piege
+    titre: L'erreur
+    texte: Il a lu la flèche comme « mange ».
+  - type: conc
+    titre: La correction
+    texte: '<mark>herbe → lapin → renard</mark> : la flèche veut dire « est mangé par ».'
+- titre: Les loups de Yellowstone
+  difficulte: 3
+  type: brevet
+  enonce: |
+    Dans le parc de Yellowstone, les loups ont disparu vers 1930. Les cerfs se sont multipliés et ont mangé les jeunes arbres le long des rivières. En 1995, on a réintroduit des loups : les cerfs sont devenus moins nombreux et les arbres ont repoussé.
+    Écrire la chaîne alimentaire et expliquer l'effet des loups.
+  indice: Arbres, cerfs, loups.
+  etapes:
+  - type: calcul
+    titre: La chaîne
+    texte: jeunes arbres → cerf → loup.
+  - type: conc
+    titre: L'effet
+    texte: '<mark>Les loups limitent le nombre de cerfs, ce qui laisse les arbres repousser</mark> : retirer ou remettre un maillon change tout l''écosystème.'
