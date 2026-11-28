@@ -12,14 +12,14 @@ const { matiere = 'maths' } = Astro.props;
       <span class="gbar-fleche" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M14 6 8 12l6 6" /></svg></span>
       <span class="gbar-long">Toutes les matières</span><span class="gbar-court">Matières</span>
     </a>
-    <nav aria-label="Matières">
+    <nav aria-label="Matières" data-profil-groupe>
       {MATIERES.map((m) => {
         const a = AFFICHES[m.slug];
         const mini = <span class="gbar-mini" style={`--fond:${a?.fond ?? 'var(--ink)'}`} aria-hidden="true"><Fragment set:html={a?.forme ?? ''} /></span>;
         return m.active ? (
-          <a href={`/${m.slug}/`} aria-current={m.slug === matiere ? 'page' : undefined}>{mini}<span>{m.nom}</span></a>
+          <a href={`/${m.slug}/`} data-matiere={m.slug} aria-current={m.slug === matiere ? 'page' : undefined}>{mini}<span>{m.nom}</span></a>
         ) : (
-          <span class="gbar-bientot" title="Bientôt">{mini}<span>{m.nom}</span></span>
+          <span class="gbar-bientot" data-matiere={m.slug} title="Bientôt">{mini}<span>{m.nom}</span></span>
         );
       })}
     </nav>

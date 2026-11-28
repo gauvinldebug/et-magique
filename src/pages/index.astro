@@ -8,6 +8,7 @@ import Pied from '../components/Pied.astro';
 import QRCode from 'qrcode';
 import { MATIERES, SITE } from '../data/site';
 import Recherche from '../components/Recherche.astro';
+import Profil from '../components/Profil.astro';
 import { AFFICHES } from '../data/affiches';
 import { chapitresPublies } from '../lib/contenu';
 
@@ -43,12 +44,13 @@ const qr = abonnement ? await QRCode.toString(abonnement, { type: 'svg', margin:
       </div>
     </div>
   </header>
+  <Profil />
   <Histoire />
   <div class="portail-p">
     <div class="wrap">
       <section class="bloc" id="matieres" aria-labelledby="t-matieres">
         <h2 id="t-matieres" data-rv>Choisis ta matière.</h2>
-        <ul class="bloc-c p-affiches">
+        <div class="bloc-c" data-profil-groupe><ul class="p-affiches">
           {MATIERES.map((m, i) => {
             const a = AFFICHES[m.slug] ?? { fond: 'var(--ink)', txt: '#fff', forme: '' };
             const style = `--fond:${a.fond};--txt:${a.txt};--i:${i}`;
@@ -59,7 +61,7 @@ const qr = abonnement ? await QRCode.toString(abonnement, { type: 'svg', margin:
               </>
             );
             return (
-              <li data-rv style={`--i:${i}`}>
+              <li data-rv style={`--i:${i}`} data-matiere={m.slug}>
                 {m.active
                   ? <a class:list={['poster', { grand: i === 0 }]} href={`/${m.slug}/`} style={style}>{contenu}</a>
                   : <div class="poster" style={style}>{contenu}</div>}
@@ -67,6 +69,8 @@ const qr = abonnement ? await QRCode.toString(abonnement, { type: 'svg', margin:
             );
           })}
         </ul>
+        <button type="button" class="profil-tout-b" data-profil-tout hidden>Tout afficher</button>
+        </div>
       </section>
 
       {principale.youtube && (

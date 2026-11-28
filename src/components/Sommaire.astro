@@ -17,14 +17,15 @@ const legende = (n: (typeof NIVEAUX)[number]) => {
   return n.examen ? `${t}, ${n.examen}` : t;
 };
 ---
-<section class="som" aria-labelledby={`som-${matiere}`}>
+<section class="som" aria-labelledby={`som-${matiere}`} data-profil-groupe>
   <div class="som-tete"><h2 id={`som-${matiere}`}>{titre}</h2><span>{total} chapitre{total > 1 ? "s" : ""} en ligne</span></div>
   <ul class="som-grille">
     {principaux.map((n) => (
-      <li><a href={`/${matiere}/${n.slug}/`} class:list={{ examen: n.examen === 'bac' }} aria-label={`${n.nom} : ${legende(n)}`}><b>{n.court}</b><span>{legende(n)}</span></a></li>
+      <li data-niveau={n.slug}><a href={`/${matiere}/${n.slug}/`} class:list={{ examen: n.examen === 'bac' }} aria-label={`${n.nom} : ${legende(n)}`}><b>{n.court}</b><span>{legende(n)}</span></a></li>
     ))}
   </ul>
   {autres.length > 0 && (
-    <p class="som-aussi"><span>Aussi :</span>{autres.map((n) => <a href={`/${matiere}/${n.slug}/`}>{n.nom}</a>)}</p>
+    <p class="som-aussi"><span>Aussi :</span>{autres.map((n) => <a data-niveau={n.slug} href={`/${matiere}/${n.slug}/`}>{n.nom}</a>)}</p>
   )}
+  <button type="button" class="profil-tout-b" data-profil-tout hidden>Tout afficher</button>
 </section>
