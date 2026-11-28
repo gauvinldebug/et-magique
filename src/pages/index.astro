@@ -4,6 +4,7 @@
 import Base from '../layouts/Base.astro';
 import Reseaux from '../components/Reseaux.astro';
 import Histoire from '../components/Histoire.astro';
+import DefiDuJour from '../components/DefiDuJour.astro';
 import Pied from '../components/Pied.astro';
 import QRCode from 'qrcode';
 import { MATIERES, SITE } from '../data/site';
@@ -41,6 +42,7 @@ const qr = abonnement ? await QRCode.toString(abonnement, { type: 'svg', margin:
       </div>
     </div>
   </header>
+  <div class="portail-p dj-zone"><div class="wrap"><DefiDuJour /></div></div>
   <Histoire />
   <div class="portail-p">
     <div class="wrap">

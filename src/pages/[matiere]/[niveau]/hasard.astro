@@ -1,0 +1,46 @@
+---
+// 10 questions tirées au hasard parmi tous les QCM d'un niveau.
+import Base from '../../../layouts/Base.astro';
+import Bandeau from '../../../components/Bandeau.astro';
+import Qcm from '../../../components/Qcm.astro';
+import { MATIERES, niveauxDe, nomDans } from '../../../data/site';
+import { chapitresPublies, complements } from '../../../lib/contenu';
+
+export async function getStaticPaths() {
+  const chapitres = await chapitresPublies();
+  const chemins = [];
+  for (const m of MATIERES.filter((x) => x.active)) {
+    for (const n of niveauxDe(m.slug)) {
+      const ici = chapitres.filter((c) => c.matiere === m.slug && c.niveau === n.slug).sort((a, b) => a.data.ordre - b.data.ordre);
+      const questions = [];
+      for (const c of ici) {
+        const base = `/${m.slug}/${n.slug}/${c.slug}`;
+        const { qcm } = await complements(c.id);
+        for (const q of qcm) questions.push({ ...q, revoir: { href: `${base}/cours/`, t: 'Relire le cours' }, source: { href: `${base}/`, t: c.data.court } });
+      }
+      if (questions.length >= 10) chemins.push({ params: { matiere: m.slug, niveau: n.slug }, props: { matiere: m, niveau: n, questions, nbChapitres: ici.length } });
+    }
+  }
+  return chemins;
+}
+const { matiere, niveau, questions, nbChapitres } = Astro.props;
+---
+<Base titre={`QCM de ${nomDans(matiere.slug)} en ${niveau.nom} : 10 questions au hasard`} description={`10 questions tirées au hasard parmi les ${questions.length} questions des QCM de ${nomDans(matiere.slug)} de ${niveau.nom}, avec la correction expliquée. Pour réviser tout le programme en quelques minutes. Gratuit, sans compte.`} matiere={matiere.slug} niveau={niveau.slug}>
+  <div class="page-feuille cahier">
+    <div class="feuille">
+      <Bandeau niveau={niveau.slug} petit>
+        <div class="crumb"><a href={`/${matiere.slug}/${niveau.slug}/`}>{niveau.nom}</a> › <b>10 questions au hasard</b></div>
+        <h1>10 questions au hasard</h1>
+      </Bandeau>
+      <p class="hasard-intro">Les questions sont tirées parmi les {nbChapitres} chapitres de {niveau.nom}. Chaque nouvelle série est différente. Si tu bloques, le nom du chapitre en haut de la question t'y emmène.</p>
+      <Qcm
+        questions={questions}
+        cle={`hasard/${matiere.slug}/${niveau.slug}`}
+        matiere={matiere.slug}
+        titreImage={`10 questions de ${nomDans(matiere.slug)} au hasard`}
+        sousTitreImage={`${niveau.nom} · ${matiere.nom}`}
+        tirage={10}
+      />
+    </div>
+  </div>
+</Base>

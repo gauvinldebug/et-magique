@@ -3,6 +3,7 @@ import Base from './Base.astro';
 import EnteteImpression from '../components/EnteteImpression.astro';
 import Bandeau from '../components/Bandeau.astro';
 import type { ChapitreProps } from '../lib/routes';
+import { nomDans } from '../data/site';
 
 type Onglet = 'video' | 'cours' | 'exercices' | 'qcm';
 interface Props extends ChapitreProps { onglet: Onglet; titrePage?: string }
@@ -25,9 +26,40 @@ const phrases: Record<Onglet, string> = {
   exercices: `Fini les exercices ? Teste-toi avec le ${lien(`${base}/qcm/`, 'QCM')}, ou relis ${lien(`${base}/cours/`, 'le cours')}.`,
   qcm: `Prêt pour la suite ? Garde ${fiche} pour réviser avant le contrôle.`,
 };
-const titre = titrePage ?? (onglet === 'video' ? chapitre.data.titre : `${chapitre.data.court} : ${onglets[i].titre.toLowerCase()}`);
+// Titres pensés pour la recherche : ce que l'élève tape (« limites de suites exercices corrigés terminale »).
+const niveauTxt = matiere.slug === 'maths' ? niveau.nom : `${niveau.nom} ${nomDans(matiere.slug)}`;
+const titresSeo: Record<Onglet, string> = {
+  video: `${chapitre.data.titre} : cours en vidéo, ${niveauTxt}`,
+  cours: `${chapitre.data.titre} : cours de ${niveauTxt}`,
+  exercices: `${chapitre.data.court} : exercices corrigés, ${niveauTxt}`,
+  qcm: `${chapitre.data.court} : QCM corrigé, ${niveauTxt}`,
+};
+const titre = titrePage ?? titresSeo[onglet];
+// Données structurées : fil d'Ariane, ressource pédagogique, quiz, vidéo.
+const site = Astro.site ?? new URL('https://et-magique.etmagique.workers.dev');
+const abs = (h: string) => new URL(h, site).href;
+const brut = (t: string) => t.replace(/\$/g, '').replace(/\*\*/g, '').replace(/<[^>]+>/g, '').trim();
+const types: Record<Onglet, string> = { video: 'Vidéo', cours: 'Cours', exercices: 'Exercices corrigés', qcm: 'Quiz' };
+const graphe: object[] = [
+  { '@type': 'BreadcrumbList', itemListElement: [
+    { '@type': 'ListItem', position: 1, name: matiere.nom, item: abs(`/${matiere.slug}/`) },
+    { '@type': 'ListItem', position: 2, name: niveau.nom, item: abs(`/${matiere.slug}/${niveau.slug}/`) },
+    { '@type': 'ListItem', position: 3, name: chapitre.data.court, item: abs(`${base}/`) },
+    ...(onglet === 'video' ? [] : [{ '@type': 'ListItem', position: 4, name: onglets[i].titre, item: abs(onglets[i].href) }]),
+  ] },
+  onglet === 'qcm'
+    ? { '@type': 'Quiz', name: titre, about: chapitre.data.titre, educationalLevel: niveauTxt, inLanguage: 'fr-FR', isAccessibleForFree: true, url: abs(onglets[i].href), provider: { '@id': `${site.origin}/#org` },
+        hasPart: qcm.map((q) => ({ '@type': 'Question', eduQuestionType: 'Multiple choice', text: brut(q.question),
+          suggestedAnswer: q.choix.filter((_, k) => k !== q.bonne).map((c) => ({ '@type': 'Answer', text: brut(c) })),
+          acceptedAnswer: { '@type': 'Answer', text: brut(q.choix[q.bonne]), answerExplanation: { '@type': 'Comment', text: brut(q.explication) } } })) }
+    : { '@type': 'LearningResource', name: titre, description: chapitre.data.description, learningResourceType: types[onglet], educationalLevel: niveauTxt, teaches: chapitre.data.titre, inLanguage: 'fr-FR', isAccessibleForFree: true, url: abs(onglets[i].href), provider: { '@id': `${site.origin}/#org` } },
+];
+const v = chapitre.data.video;
+if (onglet === 'video' && v.youtube && v.date) graphe.push({ '@type': 'VideoObject', name: chapitre.data.titre, description: chapitre.data.description, thumbnailUrl: `https://i.ytimg.com/vi/${v.youtube}/hqdefault.jpg`, uploadDate: String(v.date), embedUrl: `https://www.youtube.com/embed/${v.youtube}`, contentUrl: `https://www.youtube.com/watch?v=${v.youtube}`, inLanguage: 'fr-FR' });
+const ld = { '@context': 'https://schema.org', '@graph': graphe };
 ---
-<Base titre={`${titre} · ${niveau.nom}`} description={chapitre.data.description} matiere={matiere.slug} niveau={niveau.slug}>
+<Base titre={titre} description={chapitre.data.description} matiere={matiere.slug} niveau={niveau.slug}>
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify(ld)} />
   <div class="page-feuille cahier">
     <div class="feuille">
       <EnteteImpression niveau={niveau.slug} niveauNom={matiere.slug === 'maths' ? niveau.nom : `${matiere.nom} · ${niveau.nom}`} matiere={matiere.slug} type={{ video: 'Cours', cours: 'Cours', exercices: 'Exercices corrigés', qcm: 'QCM' }[onglet]} titre={chapitre.data.titre} adresse={`etmagique.fr${base}/`} />

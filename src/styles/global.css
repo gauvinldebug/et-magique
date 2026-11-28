@@ -1031,3 +1031,23 @@ html[data-matiere="svt"] .s-nav { --nav-fond: #127C59; }
 .s-nav .burger { background: transparent; border-color: #fff; }
 .s-nav .burger:hover { background: rgba(255, 255, 255, .16); }
 .s-nav .burger.x span::before, .s-nav .burger.x span::after { background: #fff; }
+
+/* QCM : partage du score, abonnement, chapitre d'origine (tirage au hasard) */
+.qcm-partage, .qcm-abo { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; padding: 16px 18px; border: 2px solid var(--encre); background: var(--carte); }
+.qcm-partage { box-shadow: 6px 6px 0 var(--jaune); }
+.qcm-abo { box-shadow: 6px 6px 0 var(--rose); }
+.qcm-partage b, .qcm-abo b { font-family: var(--f-titre); font-size: 1.15rem; }
+.qcm-partage p, .qcm-abo p { margin: 2px 0 0; color: var(--encre-2); font-size: .9rem; }
+.qcm-source { justify-self: start; font-size: .78rem; font-weight: 700; text-transform: uppercase; letter-spacing: .04em; color: var(--encre-2); text-decoration: none; border-bottom: 2px solid var(--jaune); }
+.qcm-source:hover { color: var(--encre); }
+.hasard-cta { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin: 0 0 24px; padding: 18px 20px; background: var(--ink); color: #fff; text-decoration: none; box-shadow: 6px 6px 0 var(--rose); transition: transform .2s var(--ease), box-shadow .2s var(--ease); }
+.hasard-cta:hover { transform: translate(-2px, -2px); box-shadow: 8px 8px 0 var(--rose); }
+.hasard-cta b { display: block; font-family: var(--f-titre); font-size: 1.35rem; font-stretch: 75%; letter-spacing: -.01em; }
+.hasard-cta small { color: rgba(255, 255, 255, .78); font-size: .9rem; }
+.hasard-intro { max-width: 640px; color: var(--encre-2); margin: 0 0 20px; }
+.cours-col { min-width: 0; display: grid; gap: 28px; align-content: start; }
+.cours-video { display: grid; grid-template-columns: minmax(0, 260px) 1fr; gap: 18px; align-items: center; padding: 14px; border: 2px solid var(--encre); background: var(--carte); box-shadow: 6px 6px 0 var(--jaune); }
+.cours-video .thumb { box-shadow: none; }
+.cours-video p { margin: 4px 0 0; color: var(--encre-2); font-size: .92rem; }
+@media (max-width: 560px) { .cours-video { grid-template-columns: 1fr; } }
+.dj-zone > .wrap { padding-bottom: clamp(40px, 6vw, 72px); }

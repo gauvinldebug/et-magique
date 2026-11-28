@@ -1,0 +1,215 @@
+---
+// Un QCM : celui d'un chapitre, ou « 10 questions au hasard » sur tout un niveau (tirage = 10).
+// Le score reste sur l'appareil. À la fin : record, image du score à partager, abonnement à la chaîne.
+import { md } from '../lib/markdown';
+import { matiere as getMatiere } from '../data/site';
+
+export interface QuestionQcm {
+  question: string;
+  choix: string[];
+  bonne: number;
+  explication: string;
+  revoir?: { href: string; t: string };
+  source?: { href: string; t: string }; // chapitre d'origine (tirage au hasard)
+}
+interface Props {
+  questions: QuestionQcm[];
+  cle: string; // clé du record dans localStorage
+  matiere: string;
+  titreImage: string; // titre écrit sur l'image du score
+  sousTitreImage: string; // « Terminale · Physique-chimie »
+  refaire?: { href: string; t: string };
+  tirage?: number;
+}
+const { questions, cle, matiere, titreImage, sousTitreImage, refaire, tirage } = Astro.props;
+const total = tirage ? Math.min(tirage, questions.length) : questions.length;
+const lettres = 'ABCDE';
+const chaine = getMatiere(matiere)?.youtube;
+---
+<div class="qcm" data-qcm={cle} data-total={total} data-tirage={tirage} data-titre-image={titreImage} data-sous-titre-image={sousTitreImage} data-matiere={matiere}>
+  <div>
+    <div class="qcm-top"><span>Question <b data-num>1</b> sur {total}</span><span data-best></span></div>
+    <div class="prog" style="margin-top:7px"><i data-prog></i></div>
+  </div>
+  {questions.map((q, n) => (
+    <section class="qcm-q" data-q={n} data-bonne={q.bonne} hidden={n > 0}>
+      <div style="display:grid;gap:20px">
+        {q.source && <a class="qcm-source" href={q.source.href}>{q.source.t}</a>}
+        <p class="qtext" set:html={md(q.question, true)} />
+        <div class="ans">
+          {q.choix.map((c, i) => (
+            <button type="button" data-c={i}><span class="lt">{lettres[i]}</span><span set:html={md(c, true)} /></button>
+          ))}
+        </div>
+        <div class="fb" data-fb hidden>
+          <b data-fb-titre></b>
+          <div set:html={md(q.explication)} />
+          {q.revoir && <a href={q.revoir.href} data-fb-revoir hidden>{q.revoir.t} →</a>}
+        </div>
+        <div style="display:flex;justify-content:flex-end"><button type="button" class="btn" data-suivante hidden>Question suivante →</button></div>
+      </div>
+    </section>
+  ))}
+  <section data-fin hidden style="display:grid;gap:20px">
+    <span class="k">Ton score</span>
+    <div class="score"><span data-score></span> / {total}</div>
+    <p data-message></p>
+    <div style="display:flex;gap:10px;flex-wrap:wrap">
+      <button type="button" class="btn ghost" data-recommencer>{tirage ? '10 autres questions' : 'Recommencer'}</button>
+      {refaire && <a class="btn" href={refaire.href}>{refaire.t}</a>}
+    </div>
+    <div class="qcm-partage">
+      <div>
+        <b>Montre ton score</b>
+        <p>Une image à envoyer à tes amis ou à mettre en story.</p>
+      </div>
+      <button type="button" class="btn jaune" data-partager>Partager mon score</button>
+    </div>
+    {chaine && (
+      <div class="qcm-abo">
+        <div>
+          <b>La suite en vidéo</b>
+          <p>Abonne-toi à la chaîne pour voir passer les nouveaux chapitres.</p>
+        </div>
+        <a class="btn rouge" href={`${chaine}?sub_confirmation=1`} target="_blank" rel="noopener" data-umami-event="abonnement-qcm">S'abonner</a>
+      </div>
+    )}
+    <p class="aide">Ton score reste sur ton appareil. Rien n'est envoyé.</p>
+  </section>
+</div>
+
+<script>
+  import { imageScore } from '../scripts/score-image';
+  const track = (e: string, d?: object) => (window as any).umami?.track(e, d);
+  // Bonne réponse : une poignée de formes de l'affiche jaillit du bouton.
+  const eclat = (el: HTMLElement, n = 9) => {
+    if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const r = el.getBoundingClientRect();
+    const x = r.left + Math.min(r.width - 20, 60), y = r.top + r.height / 2;
+    for (let i = 0; i < n; i++) {
+      const s = document.createElement('span');
+      s.className = 'eclat ' + 'ctk'[i % 3];
+      const a = (i / n) * Math.PI * 2 + Math.random() * .5, d = 50 + Math.random() * 50;
+      s.style.setProperty('--x0', `${x}px`); s.style.setProperty('--y0', `${y}px`);
+      s.style.setProperty('--x1', `${x + Math.cos(a) * d}px`); s.style.setProperty('--y1', `${y + Math.sin(a) * d - 20}px`);
+      s.style.setProperty('--r', `${(Math.random() - .5) * 360}deg`);
+      document.body.append(s);
+      s.addEventListener('animationend', () => s.remove());
+    }
+  };
+  const melanger = <T,>(t: T[]) => { for (let i = t.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [t[i], t[j]] = [t[j], t[i]]; } return t; };
+
+  document.querySelectorAll<HTMLElement>('[data-qcm]').forEach((root) => {
+    const total = Number(root.dataset.total);
+    const tirage = Number(root.dataset.tirage) || 0;
+    const key = `qcm:${root.dataset.qcm}`;
+    const toutes = [...root.querySelectorAll<HTMLElement>('[data-q]')];
+    const fin = root.querySelector<HTMLElement>('[data-fin]')!;
+    const num = root.querySelector<HTMLElement>('[data-num]')!;
+    const prog = root.querySelector<HTMLElement>('[data-prog]')!;
+    const bestEl = root.querySelector<HTMLElement>('[data-best]')!;
+    const lire = () => { try { return Number(localStorage.getItem(key) ?? NaN); } catch { return NaN; } };
+    const ecrire = (v: number) => { try { localStorage.setItem(key, String(v)); } catch { /* navigation privée */ } };
+    const showBest = () => { const b = lire(); bestEl.textContent = Number.isFinite(b) ? `Ton record : ${b}/${total}` : ''; };
+    let qs = toutes, cur = 0, score = 0;
+
+    // Tirage : on garde `tirage` questions prises au hasard, dans un ordre au hasard.
+    const tirer = () => {
+      if (!tirage) return;
+      qs = melanger([...toutes]).slice(0, total);
+      toutes.forEach((q) => { q.hidden = true; });
+      qs.forEach((q) => fin.before(q));
+    };
+    const libelles = () => qs.forEach((q, i) => { q.querySelector<HTMLElement>('[data-suivante]')!.textContent = i + 1 < qs.length ? 'Question suivante →' : 'Voir mon score →'; });
+    const go = (i: number) => {
+      toutes.forEach((q) => { q.hidden = q !== qs[i]; });
+      fin.hidden = i < total;
+      num.textContent = String(Math.min(i + 1, total));
+      prog.style.width = `${(i / total) * 100}%`;
+    };
+    const terminer = () => {
+      const sc = root.querySelector<HTMLElement>('[data-score]')!;
+      let k = 0; sc.textContent = '0';
+      const monte = () => { if (k < score) { sc.textContent = String(++k); setTimeout(monte, 90); } else if (score / total >= .7) eclat(sc, 14); };
+      setTimeout(monte, 350);
+      const r = score / total;
+      root.querySelector<HTMLElement>('[data-message]')!.textContent =
+        r === 1 ? 'Parfait. Tu maîtrises.' : r >= 0.7 ? 'Très bien. Revois les questions ratées et tu seras prêt.' : r >= 0.4 ? "C'est un début. Relis le cours, puis refais les exercices." : 'Pas de panique : revois la vidéo et le cours, puis réessaie.';
+      const b = lire();
+      if (!Number.isFinite(b) || score > b) ecrire(score);
+      showBest();
+      track(tirage ? 'hasard-termine' : 'qcm-termine', { score, total });
+    };
+
+    toutes.forEach((q) => {
+      const bonne = Number(q.dataset.bonne);
+      const btns = [...q.querySelectorAll<HTMLButtonElement>('[data-c]')];
+      btns.forEach((b) =>
+        b.addEventListener('click', () => {
+          const ok = Number(b.dataset.c) === bonne;
+          if (ok) score++;
+          btns.forEach((x) => { x.disabled = true; });
+          btns[bonne].classList.add('good');
+          if (!ok) b.classList.add('bad'); else eclat(b);
+          const fb = q.querySelector<HTMLElement>('[data-fb]')!;
+          fb.hidden = false;
+          fb.classList.add(ok ? 'ok' : 'ko');
+          q.querySelector<HTMLElement>('[data-fb-titre]')!.textContent = ok ? 'Bien joué !' : 'Pas tout à fait.';
+          const rv = q.querySelector<HTMLElement>('[data-fb-revoir]');
+          if (rv && !ok) rv.hidden = false;
+          const s = q.querySelector<HTMLElement>('[data-suivante]')!;
+          s.hidden = false;
+          s.focus({ preventScroll: true });
+        }),
+      );
+      q.querySelector('[data-suivante]')!.addEventListener('click', () => {
+        cur = qs.indexOf(q) + 1;
+        if (cur >= total) terminer();
+        go(cur);
+        root.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
+
+    root.querySelector('[data-recommencer]')!.addEventListener('click', () => {
+      score = 0; cur = 0;
+      toutes.forEach((q) => {
+        q.querySelectorAll<HTMLButtonElement>('[data-c]').forEach((x) => { x.disabled = false; x.classList.remove('good', 'bad'); });
+        const fb = q.querySelector<HTMLElement>('[data-fb]')!; fb.hidden = true; fb.classList.remove('ok', 'ko');
+        q.querySelector<HTMLElement>('[data-fb-revoir]')?.setAttribute('hidden', '');
+        q.querySelector<HTMLElement>('[data-suivante]')!.hidden = true;
+      });
+      tirer(); libelles(); go(0);
+      root.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+
+    root.querySelector<HTMLButtonElement>('[data-partager]')!.addEventListener('click', async (ev) => {
+      const bouton = ev.currentTarget as HTMLButtonElement;
+      bouton.disabled = true;
+      try {
+        const blob = await imageScore({
+          score, total,
+          titre: root.dataset.titreImage ?? '',
+          sousTitre: root.dataset.sousTitreImage ?? '',
+          matiere: root.dataset.matiere ?? 'maths',
+        });
+        const nom = `mon-score-${score}-sur-${total}.png`;
+        const fichier = new File([blob], nom, { type: 'image/png' });
+        const texte = `${score}/${total} au QCM « ${root.dataset.titreImage} ». À toi : ${location.href}`;
+        if (navigator.canShare?.({ files: [fichier] })) {
+          await navigator.share({ files: [fichier], text: texte });
+          track('score-partage', { mode: 'partage', score, total });
+        } else {
+          const a = document.createElement('a');
+          a.href = URL.createObjectURL(blob);
+          a.download = nom;
+          a.click();
+          setTimeout(() => URL.revokeObjectURL(a.href), 4000);
+          track('score-partage', { mode: 'image', score, total });
+        }
+      } catch { /* partage annulé */ }
+      bouton.disabled = false;
+    });
+
+    tirer(); libelles(); go(0); showBest();
+  });
+</script>
