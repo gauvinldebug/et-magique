@@ -1,0 +1,55 @@
+questions:
+- question: Toutes les cellules ont…
+  choix:
+  - une paroi
+  - une membrane et un cytoplasme
+  - des chloroplastes
+  - une forme carrée
+  bonne: 1
+  explication: Et presque toutes un noyau.
+  revoir: cours
+- question: Les chloroplastes se trouvent…
+  choix:
+  - dans toutes les cellules
+  - dans les cellules des parties vertes des plantes
+  - dans les cellules animales
+  - dans le sang
+  bonne: 1
+  explication: Ils sont verts.
+  revoir: cours
+- question: Un être unicellulaire est formé…
+  choix:
+  - d'une seule cellule
+  - de deux cellules
+  - de milliards de cellules
+  - d'aucune cellule
+  bonne: 0
+  explication: Bactérie, levure, paramécie.
+  revoir: cours
+- question: Avec un oculaire × 10 et un objectif × 40, le grossissement est…
+  choix:
+  - × 50
+  - × 400
+  - × 4
+  - × 30
+  bonne: 1
+  explication: On multiplie.
+  revoir: cours
+- question: La paroi existe chez…
+  choix:
+  - la cellule animale
+  - la cellule végétale
+  - aucune cellule
+  - le sang
+  bonne: 1
+  explication: Elle la rend rigide.
+  revoir: cours
+- question: Le noyau contient…
+  choix:
+  - l'information génétique
+  - la chlorophylle
+  - l'eau seulement
+  - de l'air
+  bonne: 0
+  explication: L'ADN.
+  revoir: cours

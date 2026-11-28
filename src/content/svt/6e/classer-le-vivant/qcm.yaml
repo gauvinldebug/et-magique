@@ -1,0 +1,55 @@
+questions:
+- question: Classer, c'est regrouper selon…
+  choix:
+  - le milieu de vie
+  - les attributs possédés
+  - la taille
+  - la couleur
+  bonne: 1
+  explication: Ce qu'ils ont, pas ce qu'ils font.
+  revoir: cours
+- question: Les mammifères ont…
+  choix:
+  - des plumes
+  - des poils et des mamelles
+  - 6 pattes
+  - des écailles seulement
+  bonne: 1
+  explication: Comme le chat et la baleine.
+  revoir: cours
+- question: Un insecte a…
+  choix:
+  - 4 pattes
+  - 6 pattes
+  - 8 pattes
+  - pas de pattes
+  bonne: 1
+  explication: L'araignée en a 8.
+  revoir: cours
+- question: La chauve-souris est…
+  choix:
+  - un oiseau
+  - un mammifère
+  - un insecte
+  - un poisson
+  bonne: 1
+  explication: Elle a des poils et allaite.
+  revoir: cours
+- question: Les vertébrés ont…
+  choix:
+  - des plumes
+  - une colonne vertébrale
+  - 6 pattes
+  - des ailes
+  bonne: 1
+  explication: Un squelette intérieur.
+  revoir: cours
+- question: Les groupes de la classification sont…
+  choix:
+  - au hasard
+  - emboîtés
+  - tous séparés
+  - rangés par taille
+  bonne: 1
+  explication: Des boîtes dans des boîtes.
+  revoir: cours

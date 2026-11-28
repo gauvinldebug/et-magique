@@ -1,0 +1,51 @@
+exercices:
+- titre: Les besoins
+  difficulte: 1
+  type: application
+  enonce: |
+    Citer les quatre besoins d'une plante verte pour fabriquer sa matière.
+  indice: Deux viennent du sol, un de l'air, un du Soleil.
+  etapes:
+  - type: conc
+    titre: La réponse
+    texte: <mark>Eau, sels minéraux, dioxyde de carbone, lumière</mark>.
+- titre: La feuille panachée
+  difficulte: 2
+  type: methode
+  enonce: |
+    Une feuille de géranium a des zones vertes et des zones blanches. Après une journée au soleil, on la teste à l'eau iodée : seules les zones vertes deviennent bleu-noir. Conclure.
+  indice: Que contiennent les zones vertes ?
+  etapes:
+  - type: calcul
+    titre: L'observation
+    texte: De l'amidon n'apparaît que dans les zones vertes.
+  - type: conc
+    titre: La conclusion
+    texte: <mark>Seules les parties contenant de la chlorophylle fabriquent de la matière</mark>.
+- titre: La plante mange la terre
+  difficulte: 2
+  type: piege
+  enonce: |
+    « Une plante grandit en mangeant la terre de son pot. » Corriger.
+  indice: D'où vient le carbone de la plante ?
+  etapes:
+  - type: piege
+    titre: L'erreur
+    texte: Le sol ne fournit que de l'eau et un peu de sels minéraux.
+  - type: conc
+    titre: La correction
+    texte: <mark>L'essentiel de la matière de la plante vient du CO₂ de l'air</mark>, transformé dans les feuilles grâce à la lumière.
+- titre: Le pot qui ne perd presque rien
+  difficulte: 3
+  type: brevet
+  enonce: |
+    On fait pousser un plant de tomate pendant 3 mois. Le plant passe de 5 g à 900 g. La terre du pot n'a perdu que 10 g. On a seulement ajouté de l'eau.
+    D'où vient la masse gagnée par la plante ?
+  indice: Comparer la masse gagnée et la masse perdue par la terre.
+  etapes:
+  - type: calcul
+    titre: Le bilan
+    texte: La plante a gagné 895 g ; la terre a perdu seulement 10 g.
+  - type: conc
+    titre: La conclusion
+    texte: <mark>La masse vient de l'eau absorbée et du CO₂ de l'air</mark>, pas de la terre.

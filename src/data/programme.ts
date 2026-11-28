@@ -121,6 +121,20 @@ export const PROGRAMME: Record<string, Record<string, ChapitreProgramme[]>> = {
   // 6e : sciences et technologie (cycle 3, BO du 22 juin 2023), partie matière, mouvement, énergie et signaux.
   // SVT, spécialité : 1re BO spécial n°1 du 22/01/2019, Tle BO spécial n°8 du 25/07/2019.
   svt: {
+    // Cycle 3 et 5e : sciences et technologie (6e), SVT de 5e (cycle 4).
+    '6e': [
+      { slug: 'classer-le-vivant', titre: 'Classer les êtres vivants' },
+      { slug: 'developpement-des-etres-vivants', titre: 'Le développement des êtres vivants' },
+      { slug: 'aliments-et-microorganismes', titre: "Les aliments, l'alimentation et les microorganismes" },
+      { slug: 'peuplement-des-milieux', titre: 'Le peuplement des milieux' },
+    ],
+    '5e': [
+      { slug: 'respiration-et-milieux', titre: 'La respiration des êtres vivants dans leur milieu' },
+      { slug: 'nutrition-des-vegetaux', titre: 'Les besoins des plantes vertes' },
+      { slug: 'la-cellule', titre: 'La cellule, unité du vivant' },
+      { slug: 'ecosystemes-et-chaines-alimentaires', titre: 'Écosystèmes et chaînes alimentaires' },
+      { slug: 'roches-et-paysages', titre: "Les roches et l'évolution des paysages" },
+    ],
     // Collège, cycle 4 : BO n°31 du 30/07/2020, réparti par année.
     '4e': [
       { slug: 'seismes-et-volcans', titre: 'Séismes et volcans' },

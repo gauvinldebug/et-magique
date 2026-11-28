@@ -1,0 +1,55 @@
+questions:
+- question: La répartition des êtres vivants dépend…
+  choix:
+  - du hasard
+  - des conditions du milieu
+  - de la couleur du sol seulement
+  - de rien
+  bonne: 1
+  explication: Lumière, température, humidité.
+  revoir: cours
+- question: L'hirondelle passe l'hiver en…
+  choix:
+  - hibernant
+  - migrant
+  - vie ralentie
+  - restant active
+  bonne: 1
+  explication: Elle part en Afrique.
+  revoir: cours
+- question: Le hérisson passe l'hiver en…
+  choix:
+  - migrant
+  - hibernant
+  - changeant de couleur
+  - pondant
+  bonne: 1
+  explication: Son corps fonctionne au ralenti.
+  revoir: cours
+- question: En hiver, un arbre sans feuilles est…
+  choix:
+  - mort
+  - en vie ralentie
+  - malade
+  - coupé
+  bonne: 1
+  explication: Ses bourgeons sont protégés.
+  revoir: cours
+- question: Les cloportes préfèrent…
+  choix:
+  - le sec et la lumière
+  - l'humidité et l'ombre
+  - le froid et le soleil
+  - l'eau profonde
+  bonne: 1
+  explication: Sous les pierres.
+  revoir: cours
+- question: Installer des haies et des mares permet…
+  choix:
+  - de faire fuir les animaux
+  - de faire revenir des espèces
+  - de chauffer le sol
+  - rien du tout
+  bonne: 1
+  explication: On améliore les conditions du milieu.
+  revoir: cours

@@ -1,0 +1,55 @@
+questions:
+- question: Une graine contient…
+  choix:
+  - seulement de l'eau
+  - un embryon et des réserves
+  - une fleur
+  - rien
+  bonne: 1
+  explication: Une plante miniature.
+  revoir: cours
+- question: Pour germer, une graine n'a pas besoin de…
+  choix:
+  - eau
+  - température douce
+  - lumière
+  - dioxygène
+  bonne: 2
+  explication: Elle germe même dans le noir.
+  revoir: cours
+- question: La chenille est…
+  choix:
+  - un autre animal
+  - la larve du papillon
+  - un ver
+  - une araignée
+  bonne: 1
+  explication: Elle devient papillon après la chrysalide.
+  revoir: cours
+- question: Le criquet grandit…
+  choix:
+  - sans changer
+  - par mues
+  - par métamorphose complète
+  - seulement en hiver
+  bonne: 1
+  explication: Son enveloppe rigide ne grandit pas.
+  revoir: cours
+- question: Le têtard respire avec…
+  choix:
+  - des poumons
+  - des branchies
+  - des trachées
+  - des stomates
+  bonne: 1
+  explication: Il vit dans l'eau.
+  revoir: cours
+- question: Le développement d'un chat est…
+  choix:
+  - direct
+  - avec métamorphose
+  - par mues
+  - avec chrysalide
+  bonne: 0
+  explication: Le chaton ressemble à l'adulte.
+  revoir: cours

@@ -1,0 +1,51 @@
+exercices:
+- titre: Quelle stratégie ?
+  difficulte: 1
+  type: application
+  enonce: |
+    Associer : hirondelle, marmotte, graine de coquelicot.
+  indice: Migration, hibernation, vie ralentie.
+  etapes:
+  - type: conc
+    titre: Les réponses
+    texte: '<mark>Hirondelle : migration. Marmotte : hibernation. Graine : vie ralentie.</mark>'
+- titre: Les cloportes
+  difficulte: 2
+  type: methode
+  enonce: |
+    On place des cloportes dans une boîte dont une moitié est sèche et éclairée, l'autre humide et sombre. Au bout de 10 minutes, presque tous sont du côté humide et sombre. Conclure.
+  indice: Quelles conditions préfèrent-ils ?
+  etapes:
+  - type: calcul
+    titre: L'observation
+    texte: Ils se regroupent du côté humide et sombre.
+  - type: conc
+    titre: La conclusion
+    texte: '<mark>Les cloportes recherchent l''humidité et l''obscurité</mark> : c''est pour ça qu''on les trouve sous les pierres.'
+- titre: L'arbre mort
+  difficulte: 2
+  type: piege
+  enonce: |
+    « En hiver, le chêne n'a plus de feuilles : il est mort et revivra au printemps. » Corriger.
+  indice: Que porte la branche en hiver ?
+  etapes:
+  - type: piege
+    titre: L'erreur
+    texte: Perdre ses feuilles ne veut pas dire mourir.
+  - type: conc
+    titre: La correction
+    texte: '<mark>Le chêne est vivant, en vie ralentie</mark> : ses bourgeons protégés donneront les nouvelles feuilles.'
+- titre: La prairie fleurie
+  difficulte: 3
+  type: application
+  enonce: |
+    Une commune arrête de tondre une partie d'un parc et y laisse pousser des fleurs. Deux ans plus tard, on y compte 5 fois plus d'espèces d'insectes que sur le gazon tondu.
+    Expliquer ce résultat.
+  indice: Qu'apportent les fleurs aux insectes ?
+  etapes:
+  - type: calcul
+    titre: Le changement
+    texte: Les fleurs apportent nourriture (nectar, pollen) et abris.
+  - type: conc
+    titre: L'explication
+    texte: '<mark>En changeant les conditions du milieu, on a changé son peuplement</mark> : plus de ressources, plus d''espèces.'

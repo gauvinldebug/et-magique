@@ -1,0 +1,51 @@
+exercices:
+- titre: Quel organe ?
+  difficulte: 1
+  type: application
+  enonce: |
+    Associer à chaque animal son organe respiratoire : truite, criquet, lapin.
+  indice: Branchies, trachées, poumons.
+  etapes:
+  - type: conc
+    titre: Les réponses
+    texte: '<mark>Truite : branchies. Criquet : trachées. Lapin : poumons.</mark>'
+- titre: L'eau de chaux
+  difficulte: 2
+  type: methode
+  enonce: |
+    On place des graines en germination dans un bocal fermé avec un petit récipient d'eau de chaux. Au bout d'un jour, l'eau de chaux est trouble. Dans un bocal témoin sans graines, elle reste claire. Conclure.
+  indice: Que révèle l'eau de chaux troublée ?
+  etapes:
+  - type: calcul
+    titre: L'observation
+    texte: Seul le bocal avec les graines contient du CO₂ en plus.
+  - type: conc
+    titre: La conclusion
+    texte: '<mark>Les graines rejettent du CO₂ : elles respirent</mark>.'
+- titre: Le poisson respire l'eau
+  difficulte: 2
+  type: piege
+  enonce: |
+    « Les poissons respirent de l'eau, c'est pour ça qu'ils ont des branchies. » Corriger.
+  indice: Que prélèvent les branchies ?
+  etapes:
+  - type: piege
+    titre: L'erreur
+    texte: L'eau passe dans les branchies, mais ce n'est pas elle qui est respirée.
+  - type: conc
+    titre: La correction
+    texte: <mark>Les poissons prélèvent le dioxygène dissous dans l'eau</mark>, grâce à leurs branchies.
+- titre: Les truites et la canicule
+  difficulte: 3
+  type: brevet
+  enonce: |
+    Une rivière contient 10 mg de dioxygène par litre à 10 °C et seulement 7 mg par litre à 25 °C. Les truites ont besoin d'au moins 8 mg par litre.
+    Que risque-t-il d'arriver aux truites lors d'une canicule ? Pourquoi ?
+  indice: Comparer la quantité disponible et le besoin.
+  etapes:
+  - type: calcul
+    titre: La comparaison
+    texte: À 25 °C, 7 mg/L, moins que les 8 mg/L nécessaires.
+  - type: conc
+    titre: La conséquence
+    texte: '<mark>Les truites manquent de dioxygène</mark> : elles fuient vers des eaux plus fraîches ou meurent. L''eau chaude contient moins de dioxygène.'

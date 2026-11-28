@@ -1,0 +1,48 @@
+exercices:
+- titre: Dans quel groupe ?
+  difficulte: 1
+  type: application
+  enonce: |
+    Le pingouin a des plumes, mais ne vole pas. Dans quel groupe le classe-t-on ?
+  indice: Quel attribut possède-t-il ?
+  etapes:
+  - type: conc
+    titre: La réponse
+    texte: <mark>Les oiseaux</mark>, car il a des plumes.
+- titre: Les pattes
+  difficulte: 2
+  type: methode
+  enonce: |
+    Classer en insectes ou non : fourmi (6 pattes), araignée (8 pattes), papillon (6 pattes), mille-pattes (beaucoup de pattes).
+  indice: Les insectes ont 6 pattes.
+  etapes:
+  - type: conc
+    titre: Le classement
+    texte: '<mark>Insectes : fourmi, papillon. Pas des insectes : araignée, mille-pattes.</mark>'
+- titre: La baleine est un poisson
+  difficulte: 2
+  type: piege
+  enonce: |
+    « La baleine vit dans l'eau et nage, donc c'est un poisson. » Corriger.
+  indice: On classe selon ce qu'on a, pas selon où on vit.
+  etapes:
+  - type: piege
+    titre: L'erreur
+    texte: Il classe selon le milieu de vie.
+  - type: conc
+    titre: La correction
+    texte: '<mark>La baleine a des poils et des mamelles : c''est un mammifère</mark>, comme le chat.'
+- titre: Qui est le plus proche ?
+  difficulte: 3
+  type: application
+  enonce: |
+    Le chat a : squelette intérieur, poils, mamelles. La truite a : squelette intérieur, nageoires. L'aigle a : squelette intérieur, plumes. La baleine a : squelette intérieur, poils, mamelles.
+    Avec qui le chat partage-t-il le plus d'attributs ?
+  indice: Compter les attributs communs.
+  etapes:
+  - type: calcul
+    titre: Le décompte
+    texte: 'Chat-baleine : 3. Chat-truite : 1. Chat-aigle : 1.'
+  - type: conc
+    titre: La réponse
+    texte: <mark>Le chat est plus proche de la baleine</mark> que de la truite ou de l'aigle.

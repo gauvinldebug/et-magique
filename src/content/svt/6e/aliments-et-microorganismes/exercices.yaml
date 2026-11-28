@@ -1,0 +1,51 @@
+exercices:
+- titre: Les groupes d'aliments
+  difficulte: 1
+  type: application
+  enonce: |
+    Dans quel groupe ranger : riz, yaourt, lentilles, pomme ?
+  indice: Féculents, produits laitiers, légumineuses, fruits.
+  etapes:
+  - type: conc
+    titre: Les réponses
+    texte: '<mark>Riz : féculents. Yaourt : produits laitiers. Lentilles : avec les viandes et œufs (protéines). Pomme : fruits et légumes.</mark>'
+- titre: L'expérience du yaourt
+  difficulte: 2
+  type: methode
+  enonce: |
+    On met du lait avec un peu de yaourt dans trois pots : à 4 °C, à 40 °C, et à 40 °C avec du lait bouilli puis refroidi mais sans yaourt. Seul le pot à 40 °C avec yaourt devient un yaourt. Conclure.
+  indice: Que contient le yaourt ajouté ? Quelle température faut-il ?
+  etapes:
+  - type: calcul
+    titre: Les comparaisons
+    texte: Sans yaourt, pas de bactéries ; à 4 °C, les bactéries ne travaillent pas.
+  - type: conc
+    titre: La conclusion
+    texte: <mark>Il faut des bactéries et une température douce pour transformer le lait en yaourt</mark>.
+- titre: Tous les microbes sont dangereux
+  difficulte: 2
+  type: piege
+  enonce: |
+    « Il faut éliminer tous les microbes des aliments, ils sont tous dangereux. » Corriger.
+  indice: Comment fait-on le yaourt et le pain ?
+  etapes:
+  - type: piege
+    titre: L'erreur
+    texte: Il confond microbes dangereux et microbes utiles.
+  - type: conc
+    titre: La correction
+    texte: <mark>Certains microbes sont indispensables pour fabriquer le yaourt, le pain ou le fromage</mark>. Seuls certains abîment les aliments ou rendent malade.
+- titre: Le pain qui lève
+  difficulte: 3
+  type: application
+  enonce: |
+    Une pâte à pain avec de la levure gonfle à 25 °C. La même pâte dans le réfrigérateur gonfle à peine. Une pâte sans levure ne gonfle pas.
+    Que peut-on en déduire sur le rôle de la levure et sur la température ?
+  indice: Comparer les trois pâtes.
+  etapes:
+  - type: calcul
+    titre: La levure
+    texte: 'Sans levure, pas de gonflement : c''est elle qui fait lever la pâte.'
+  - type: conc
+    titre: La température
+    texte: <mark>La levure travaille bien à température douce, très peu au froid</mark>.

@@ -1,0 +1,55 @@
+questions:
+- question: Respirer, c'est…
+  choix:
+  - rejeter de l'O₂
+  - prélever de l'O₂ et rejeter du CO₂
+  - boire de l'eau
+  - manger
+  bonne: 1
+  explication: Un échange de gaz.
+  revoir: cours
+- question: L'eau de chaux se trouble en présence de…
+  choix:
+  - dioxygène
+  - dioxyde de carbone
+  - eau
+  - lumière
+  bonne: 1
+  explication: C'est le test du CO₂.
+  revoir: cours
+- question: Les insectes respirent avec…
+  choix:
+  - des poumons
+  - des branchies
+  - des trachées
+  - des stomates
+  bonne: 2
+  explication: Un réseau de petits tubes.
+  revoir: cours
+- question: Les branchies prélèvent…
+  choix:
+  - l'eau
+  - le dioxygène dissous dans l'eau
+  - le CO₂
+  - le sel
+  bonne: 1
+  explication: Le poisson ne respire pas l'eau.
+  revoir: cours
+- question: Une eau riche en dioxygène est plutôt…
+  choix:
+  - chaude et stagnante
+  - froide et agitée
+  - polluée
+  - salée
+  bonne: 1
+  explication: On y trouve des truites.
+  revoir: cours
+- question: Les plantes respirent…
+  choix:
+  - jamais
+  - seulement la nuit
+  - jour et nuit
+  - seulement en été
+  bonne: 2
+  explication: Par leurs stomates.
+  revoir: cours
