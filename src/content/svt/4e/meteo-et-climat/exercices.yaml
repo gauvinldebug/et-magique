@@ -1,0 +1,52 @@
+exercices:
+- titre: Météo ou climat ?
+  difficulte: 1
+  type: application
+  enonce: |
+    Classer : (a) « Demain, il pleuvra à Lille. » (b) « Le sud de la France a des étés chauds et secs. »
+  indice: Un jour précis, ou une moyenne ?
+  etapes:
+  - type: conc
+    titre: Le classement
+    texte: <mark>(a) météo, (b) climat</mark>.
+- titre: Lire une augmentation
+  difficulte: 2
+  type: methode
+  enonce: |
+    La concentration de CO₂ dans l'air était de 280 ppm en 1850 et de 420 ppm en 2023. Calculer l'augmentation en pourcentage.
+  indice: Différence divisée par la valeur de départ.
+  etapes:
+  - type: calcul
+    titre: La différence
+    texte: $420 - 280 = 140$ ppm.
+  - type: conc
+    titre: Le pourcentage
+    texte: <mark>$140 / 280 = 0{,}5$, soit 50 % d'augmentation</mark>.
+- titre: Supprimer l'effet de serre
+  difficulte: 2
+  type: piege
+  enonce: |
+    « Il faut supprimer complètement l'effet de serre pour sauver la planète. » Corriger.
+  indice: Quelle serait la température sans effet de serre ?
+  etapes:
+  - type: piege
+    titre: L'erreur
+    texte: On confond l'effet de serre naturel et son renforcement.
+  - type: conc
+    titre: La correction
+    texte: <mark>Sans effet de serre, il ferait −18 °C</mark>. Il faut éviter de le renforcer, pas le supprimer.
+- titre: Le glacier qui recule
+  difficulte: 3
+  type: brevet
+  enonce: |
+    Le front d'un glacier des Alpes a reculé de 1,2 km entre 1950 et 2010.
+    1. Calculer la vitesse moyenne de recul en mètres par an.
+    2. Relier cette observation au climat.
+  indice: 1,2 km = 1 200 m, sur 60 ans.
+  etapes:
+  - type: calcul
+    titre: La vitesse
+    texte: $1\,200 / 60 = 20$ m par an.
+  - type: conc
+    titre: Le lien
+    texte: '<mark>Le glacier fond plus vite qu''il ne se reforme</mark> : c''est un signe du réchauffement climatique.'

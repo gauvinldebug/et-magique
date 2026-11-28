@@ -1,0 +1,55 @@
+questions:
+- question: La puberté est déclenchée par…
+  choix:
+  - l'estomac
+  - le cerveau
+  - les poumons
+  - la peau
+  bonne: 1
+  explication: Hypothalamus et hypophyse.
+  revoir: cours
+- question: Les hormones voyagent…
+  choix:
+  - par les nerfs
+  - par le sang
+  - par l'air
+  - par les os
+  bonne: 1
+  explication: Ce sont des messagers chimiques.
+  revoir: cours
+- question: L'ovulation a lieu en moyenne…
+  choix:
+  - le 1er jour du cycle
+  - vers le 14e jour
+  - le 28e jour
+  - chaque jour
+  bonne: 1
+  explication: Sa date varie d'un cycle à l'autre.
+  revoir: cours
+- question: La fécondation a lieu en général…
+  choix:
+  - dans l'utérus
+  - dans une trompe
+  - dans l'ovaire
+  - dans le vagin
+  bonne: 1
+  explication: Puis l'embryon s'implante dans l'utérus.
+  revoir: cours
+- question: Le seul moyen qui protège des IST est…
+  choix:
+  - la pilule
+  - le préservatif
+  - l'implant
+  - aucun
+  bonne: 1
+  explication: Il protège aussi d'une grossesse.
+  revoir: cours
+- question: Une grossesse dure environ…
+  choix:
+  - 3 mois
+  - 6 mois
+  - 9 mois
+  - 12 mois
+  bonne: 2
+  explication: Le fœtus est nourri par le placenta.
+  revoir: cours

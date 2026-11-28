@@ -1,0 +1,51 @@
+exercices:
+- titre: Foyer ou épicentre ?
+  difficulte: 1
+  type: application
+  enonce: |
+    Un séisme se produit à 15 km de profondeur sous une ville. Où est le foyer ? Où est l'épicentre ?
+  indice: L'un est en profondeur, l'autre en surface.
+  etapes:
+  - type: conc
+    titre: La réponse
+    texte: <mark>Le foyer est à 15 km sous la ville ; l'épicentre est en surface, dans la ville, juste au-dessus</mark>.
+- titre: Comparer deux magnitudes
+  difficulte: 2
+  type: methode
+  enonce: |
+    Un séisme de magnitude 6 libère environ 30 fois plus d'énergie qu'un séisme de magnitude 5. Combien de fois plus d'énergie libère un séisme de magnitude 7 par rapport à 5 ?
+  indice: Deux fois × 30.
+  etapes:
+  - type: calcul
+    titre: Le calcul
+    texte: $30 \times 30 = 900$.
+  - type: conc
+    titre: La réponse
+    texte: <mark>Environ 900 fois plus</mark>.
+- titre: La lave explosive
+  difficulte: 2
+  type: piege
+  enonce: |
+    « Une lave très liquide donne les éruptions les plus explosives. » Corriger.
+  indice: Dans quelle lave les gaz restent-ils piégés ?
+  etapes:
+  - type: piege
+    titre: L'erreur
+    texte: 'C''est l''inverse : les gaz s''échappent facilement d''une lave fluide.'
+  - type: conc
+    titre: La correction
+    texte: <mark>Les éruptions explosives viennent d'une lave pâteuse</mark>, qui retient les gaz jusqu'à l'explosion.
+- titre: La ceinture de feu
+  difficulte: 3
+  type: brevet
+  enonce: |
+    Sur une carte, on observe que beaucoup de séismes et de volcans se trouvent autour de l'océan Pacifique, et presque aucun au centre de l'Australie.
+    Que peut-on en déduire ?
+  indice: Les séismes sont-ils répartis au hasard ?
+  etapes:
+  - type: calcul
+    titre: L'observation
+    texte: Les séismes et les volcans sont concentrés sur des lignes, pas répartis au hasard.
+  - type: conc
+    titre: La déduction
+    texte: '<mark>Ces lignes correspondent à des zones actives</mark> : les limites des plaques. Le centre de l''Australie est au milieu d''une plaque, une zone calme.'

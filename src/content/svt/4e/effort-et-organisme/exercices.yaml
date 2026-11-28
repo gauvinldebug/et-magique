@@ -1,0 +1,51 @@
+exercices:
+- titre: Lire des mesures
+  difficulte: 1
+  type: application
+  enonce: |
+    Au repos, le cœur de Malik bat 72 fois par minute. Après une course, 162 fois. De combien de battements par minute a-t-il augmenté ?
+  indice: Faire la différence.
+  etapes:
+  - type: conc
+    titre: Le calcul
+    texte: <mark>$162 - 72 = 90$ battements de plus par minute</mark>.
+- titre: Le volume d'air
+  difficulte: 2
+  type: methode
+  enonce: |
+    Au repos, Inès respire 15 fois par minute et fait entrer 0,5 L d'air à chaque fois. À l'effort, 40 fois par minute et 2 L à chaque fois. Calculer le volume d'air par minute dans les deux cas.
+  indice: Fréquence × volume par mouvement.
+  etapes:
+  - type: calcul
+    titre: Au repos
+    texte: $15 \times 0{,}5 = 7{,}5$ L par minute.
+  - type: conc
+    titre: À l'effort
+    texte: <mark>$40 \times 2 = 80$ L par minute</mark>, plus de dix fois plus.
+- titre: Le cœur pompe l'oxygène
+  difficulte: 2
+  type: piege
+  enonce: |
+    « Pendant le sport, le cœur pompe de l'oxygène vers les muscles. » Corriger.
+  indice: Que contiennent les vaisseaux ?
+  etapes:
+  - type: piege
+    titre: L'erreur
+    texte: Le cœur ne pompe pas de l'air.
+  - type: conc
+    titre: La correction
+    texte: <mark>Le cœur pompe du sang, et c'est le sang qui transporte le dioxygène</mark>, pris dans les poumons.
+- titre: Le cœur du sportif
+  difficulte: 3
+  type: brevet
+  enonce: |
+    Au repos, un adulte non sportif a une fréquence cardiaque de 75 battements par minute. Un cycliste entraîné, de 45. Les deux ont pourtant besoin de la même quantité de sang par minute au repos.
+    Proposer une explication.
+  indice: Quantité de sang par minute = fréquence × volume envoyé à chaque battement.
+  etapes:
+  - type: calcul
+    titre: Le raisonnement
+    texte: Pour envoyer la même quantité de sang avec moins de battements, il faut envoyer plus de sang à chaque battement.
+  - type: conc
+    titre: L'explication
+    texte: '<mark>L''entraînement a rendu le cœur du cycliste plus fort</mark> : il éjecte plus de sang à chaque contraction, donc il peut battre moins souvent.'

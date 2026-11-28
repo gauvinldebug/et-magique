@@ -122,6 +122,14 @@ export const PROGRAMME: Record<string, Record<string, ChapitreProgramme[]>> = {
   // SVT, spécialité : 1re BO spécial n°1 du 22/01/2019, Tle BO spécial n°8 du 25/07/2019.
   svt: {
     // Collège, cycle 4 : BO n°31 du 30/07/2020, réparti par année.
+    '4e': [
+      { slug: 'seismes-et-volcans', titre: 'Séismes et volcans' },
+      { slug: 'tectonique-des-plaques', titre: 'La tectonique des plaques' },
+      { slug: 'meteo-et-climat', titre: 'Météo, climat et changement climatique' },
+      { slug: 'reproduction-des-etres-vivants', titre: 'La reproduction des êtres vivants' },
+      { slug: 'puberte-et-reproduction-humaine', titre: 'Puberté et reproduction humaine' },
+      { slug: 'effort-et-organisme', titre: "L'activité physique et l'organisme" },
+    ],
     '3e': [
       { slug: 'genetique-et-heredite', titre: 'Chromosomes, gènes et hérédité' },
       { slug: 'evolution-des-especes', titre: "L'évolution des êtres vivants" },

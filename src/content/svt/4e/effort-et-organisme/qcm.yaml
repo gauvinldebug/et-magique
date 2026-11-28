@@ -1,0 +1,55 @@
+questions:
+- question: Pour fonctionner, les muscles utilisent…
+  choix:
+  - du CO₂ et de l'eau
+  - du glucose et du dioxygène
+  - de l'azote
+  - de la lumière
+  bonne: 1
+  explication: Et rejettent du CO₂.
+  revoir: cours
+- question: Pendant l'effort, la fréquence cardiaque…
+  choix:
+  - diminue
+  - augmente
+  - reste la même
+  - s'arrête
+  bonne: 1
+  explication: Pour livrer plus de sang aux muscles.
+  revoir: cours
+- question: Le dioxygène passe dans le sang au niveau…
+  choix:
+  - du cœur
+  - des alvéoles des poumons
+  - des muscles
+  - de l'estomac
+  bonne: 1
+  explication: Les alvéoles ont une très grande surface.
+  revoir: cours
+- question: Le cœur pompe…
+  choix:
+  - de l'air
+  - du sang
+  - du glucose seul
+  - de l'eau
+  bonne: 1
+  explication: Le sang transporte le dioxygène.
+  revoir: cours
+- question: Le CO₂ produit par les muscles est éliminé par…
+  choix:
+  - les reins
+  - les poumons
+  - la peau seulement
+  - l'estomac
+  bonne: 1
+  explication: On l'expire.
+  revoir: cours
+- question: Le dopage est…
+  choix:
+  - recommandé
+  - interdit et dangereux
+  - sans effet
+  - obligatoire
+  bonne: 1
+  explication: Il met la santé en danger.
+  revoir: cours

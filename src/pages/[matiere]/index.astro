@@ -4,6 +4,9 @@ import DerniereVideo from '../../components/DerniereVideo.astro';
 import Recherche from '../../components/Recherche.astro';
 import Chaine from '../../components/Chaine.astro';
 import Sommaire from '../../components/Sommaire.astro';
+import DefiDuJour from '../../components/DefiDuJour.astro';
+import { niveauxDe } from '../../data/site';
+import { chapitresPublies } from '../../lib/contenu';
 import { cheminsMatieres } from '../../lib/matieres-paths';
 export const getStaticPaths = cheminsMatieres;
 const { matiere } = Astro.props;
@@ -25,10 +28,12 @@ const TEXTES: Record<string, { titre: string; description: string; h1: string; c
     titre: 'SVT et Magique : les SVT du lycée, enfin claires',
     description: 'Le programme de SVT du lycée, seconde, spécialité de première et terminale, enseignement scientifique : cours avec une image pour chaque notion, exercices corrigés pas à pas, QCM et fiches à imprimer. Gratuit, sans compte, sans publicité.',
     h1: 'Les SVT, expliquées simplement.',
-    chapeau: 'La 3e, la seconde, la première et la terminale spécialité, et la partie SVT de l\'enseignement scientifique. La 6e, la 5e et la 4e arrivent ensuite. Cours, exercices corrigés et QCM pour chaque chapitre. Gratuit, sans compte, sans publicité.',
+    chapeau: 'De la 4e à la terminale spécialité, avec la partie SVT de l\'enseignement scientifique. La 6e et la 5e arrivent ensuite. Cours, exercices corrigés et QCM pour chaque chapitre. Gratuit, sans compte, sans publicité.',
   },
 };
 const tx = TEXTES[matiere.slug] ?? TEXTES.maths;
+const publiesIci = (await chapitresPublies()).filter((c) => c.matiere === matiere.slug);
+const niveauxDefi = niveauxDe(matiere.slug).filter((n) => publiesIci.some((c) => c.niveau === n.slug)).map((n) => ({ slug: n.slug, court: n.court }));
 ---
 <Base titre={tx.titre} description={tx.description} matiere={matiere.slug} actif="accueil">
   <div class="page-feuille cahier">
@@ -51,6 +56,7 @@ const tx = TEXTES[matiere.slug] ?? TEXTES.maths;
         </div>
       </div>
       <Sommaire matiere={matiere.slug} />
+      {niveauxDefi.length > 0 && <DefiDuJour matiere={matiere.slug} niveaux={niveauxDefi} />}
       {matiere.youtube && (
       <section class="bloc" aria-labelledby="t-video">
         <h2 id="t-video">Dernière vidéo</h2>

@@ -1050,4 +1050,4 @@ html[data-matiere="svt"] .s-nav { --nav-fond: #127C59; }
 .cours-video .thumb { box-shadow: none; }
 .cours-video p { margin: 4px 0 0; color: var(--encre-2); font-size: .92rem; }
 @media (max-width: 560px) { .cours-video { grid-template-columns: 1fr; } }
-.dj-zone > .wrap { padding-bottom: clamp(40px, 6vw, 72px); }
+.dj-niveau { margin: 48px 0 8px; }

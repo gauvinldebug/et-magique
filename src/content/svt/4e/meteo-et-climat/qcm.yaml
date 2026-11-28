@@ -1,0 +1,55 @@
+questions:
+- question: Le climat est une moyenne sur au moins…
+  choix:
+  - 1 jour
+  - 1 an
+  - 30 ans
+  - 1 000 ans
+  bonne: 2
+  explication: La météo, c'est un instant.
+  revoir: cours
+- question: Sans effet de serre, la température moyenne serait de…
+  choix:
+  - −18 °C
+  - 0 °C
+  - 15 °C
+  - 40 °C
+  bonne: 0
+  explication: L'effet de serre naturel est vital.
+  revoir: cours
+- question: Le principal gaz rejeté par les activités humaines est…
+  choix:
+  - le dioxygène
+  - le dioxyde de carbone
+  - l'azote
+  - l'hélium
+  bonne: 1
+  explication: En brûlant charbon, pétrole, gaz.
+  revoir: cours
+- question: Depuis 1850, la Terre s'est réchauffée d'environ…
+  choix:
+  - 0,1 °C
+  - 1,2 °C
+  - 10 °C
+  - 20 °C
+  bonne: 1
+  explication: En moyenne sur toute la planète.
+  revoir: cours
+- question: Isoler sa maison permet surtout de…
+  choix:
+  - s'adapter
+  - réduire les émissions
+  - refroidir l'océan
+  - agrandir la couche d'ozone
+  bonne: 1
+  explication: On chauffe moins.
+  revoir: cours
+- question: Un hiver très froid…
+  choix:
+  - prouve que le climat ne change pas
+  - est de la météo, pas le climat
+  - arrête le réchauffement
+  - est impossible
+  bonne: 1
+  explication: Le climat se lit sur 30 ans.
+  revoir: cours

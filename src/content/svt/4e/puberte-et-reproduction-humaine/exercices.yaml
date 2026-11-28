@@ -1,0 +1,51 @@
+exercices:
+- titre: Les hormones
+  difficulte: 1
+  type: application
+  enonce: |
+    Quel organe fabrique la testostérone ? Et les œstrogènes ?
+  indice: Les organes reproducteurs.
+  etapes:
+  - type: conc
+    titre: La réponse
+    texte: <mark>Les testicules fabriquent la testostérone ; les ovaires fabriquent les œstrogènes</mark>.
+- titre: Calculer une date
+  difficulte: 2
+  type: methode
+  enonce: |
+    Les règles de Sarah ont commencé le 3 avril. Son cycle dure 28 jours. Quand auront lieu les prochaines règles, et vers quelle date l'ovulation ?
+  indice: Ajouter 28 jours, et 14 jours pour l'ovulation.
+  etapes:
+  - type: calcul
+    titre: L'ovulation
+    texte: Vers le 3 + 13 = 16 avril (14e jour du cycle).
+  - type: conc
+    titre: Les prochaines règles
+    texte: <mark>Le 1er mai</mark> (3 avril + 28 jours), si le cycle est régulier.
+- titre: Protégé de tout
+  difficulte: 2
+  type: piege
+  enonce: |
+    « Avec la pilule, on est protégé de tout. » Corriger.
+  indice: Sur quoi agit la pilule ?
+  etapes:
+  - type: piege
+    titre: L'erreur
+    texte: La pilule agit sur l'ovulation, pas sur les microbes.
+  - type: conc
+    titre: La correction
+    texte: <mark>La pilule évite une grossesse, mais ne protège pas des IST</mark>. Il faut le préservatif pour ça.
+- titre: Le placenta
+  difficulte: 3
+  type: brevet
+  enonce: |
+    Le sang de la mère et celui du fœtus ne se mélangent pas, mais ils sont très proches dans le placenta. On retrouve dans le sang du fœtus l'alcool bu par la mère.
+    Que peut-on en déduire sur le rôle du placenta ? Quel conseil donner aux femmes enceintes ?
+  indice: Qu'est-ce qui passe à travers le placenta ?
+  etapes:
+  - type: calcul
+    titre: Le rôle
+    texte: 'Le placenta permet les échanges entre la mère et le fœtus : nutriments, dioxygène, mais aussi certaines substances nocives.'
+  - type: conc
+    titre: Le conseil
+    texte: <mark>Zéro alcool, zéro tabac pendant la grossesse</mark>, car ils atteignent le fœtus.
