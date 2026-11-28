@@ -38,8 +38,6 @@ export const AFFICHES: Record<string, { fond: string; txt: string; forme: string
   arts: { fond: '#FF4FD8', txt: 'var(--ink)', forme: '<svg viewBox="0 0 200 200" preserveAspectRatio="xMaxYMin meet"><circle class="f-a" cx="80" cy="120" r="64" fill="#F2E94E"/><g class="f-b"><g transform="rotate(-40 130 80)"><rect x="122" y="-10" width="16" height="110" fill="#1A1A40"/><path d="M116 100 H144 L140 140 Q130 160 120 140 Z" fill="#2B2BD9"/></g></g></svg>' },
   // deux croches
   musique: { fond: '#3FA9F5', txt: 'var(--ink)', forme: '<svg viewBox="0 0 200 200" preserveAspectRatio="xMaxYMin meet"><g fill="#1A1A40"><ellipse class="f-a" cx="52" cy="160" rx="30" ry="22"/><ellipse class="f-b" cx="146" cy="140" rx="30" ry="22"/><rect x="70" y="30" width="12" height="132"/><rect x="164" y="10" width="12" height="132"/><path d="M70 30 L176 10 V40 L70 60 Z"/></g></svg>' },
-  // un ballon
-  eps: { fond: '#B39DFF', txt: 'var(--ink)', forme: '<svg viewBox="0 0 200 200" preserveAspectRatio="xMaxYMin meet"><circle class="f-a" cx="100" cy="100" r="82" fill="#FF8A3D"/><g class="f-b" fill="none" stroke="#1A1A40" stroke-width="7"><circle cx="100" cy="100" r="82"/><path d="M100 18 V182 M18 100 H182"/><path d="M42 42 Q80 100 42 158 M158 42 Q120 100 158 158"/></g></svg>' },
 };
 
 // Une couleur d'affiche par niveau (la même que sur les tuiles du sommaire), avec les quatre formes
