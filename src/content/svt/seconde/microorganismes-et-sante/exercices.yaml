@@ -1,0 +1,51 @@
+exercices:
+- titre: Bactérie ou virus ?
+  difficulte: 1
+  type: application
+  enonce: |
+    Un microbe mesure 0,1 µm et ne peut se multiplier qu'à l'intérieur d'une cellule. Est-ce une bactérie ou un virus ? Un antibiotique serait-il utile ?
+  indice: Taille et mode de multiplication.
+  etapes:
+  - type: conc
+    titre: La réponse
+    texte: <mark>Un virus</mark>. Un antibiotique serait inutile.
+- titre: La protection collective
+  difficulte: 2
+  type: methode
+  enonce: |
+    Dans une ville de 50 000 habitants, 92 % sont vaccinés contre la rougeole. Combien de personnes ne sont pas vaccinées ? Pourquoi sont-elles quand même en partie protégées ?
+  indice: 8 % de 50 000.
+  etapes:
+  - type: calcul
+    titre: Le calcul
+    texte: $0{,}08 \times 50\,000 = 4\,000$ personnes.
+  - type: conc
+    titre: La protection
+    texte: <mark>Le virus circule mal parmi les vaccinés</mark>, donc il atteint rarement ces 4 000 personnes.
+- titre: Un antibiotique pour la grippe
+  difficulte: 2
+  type: piege
+  enonce: |
+    « J'ai la grippe, je vais prendre les antibiotiques qui me restent. » Qu'en penser ?
+  indice: La grippe est due à quel type de microbe ?
+  etapes:
+  - type: piege
+    titre: L'erreur
+    texte: La grippe est due à un virus.
+  - type: conc
+    titre: La réponse
+    texte: <mark>L'antibiotique ne servira à rien contre la grippe</mark>, il perturbera le microbiote et favorisera les bactéries résistantes.
+- titre: Après les antibiotiques
+  difficulte: 3
+  type: bac
+  enonce: |
+    Après un traitement antibiotique, certaines personnes souffrent de diarrhées. Chez quelques-unes, une bactérie pathogène, Clostridioides difficile, se développe alors dans l'intestin.
+    Proposer une explication en utilisant la notion de microbiote.
+  indice: Que fait l'antibiotique au microbiote intestinal ?
+  etapes:
+  - type: calcul
+    titre: L'effet
+    texte: L'antibiotique tue aussi une partie des bactéries utiles du microbiote.
+  - type: conc
+    titre: L'explication
+    texte: '<mark>La place est libérée : une bactérie pathogène résistante peut s''installer</mark>, alors que le microbiote l''en empêchait.'

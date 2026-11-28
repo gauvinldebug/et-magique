@@ -1,0 +1,51 @@
+exercices:
+- titre: Niveau de biodiversité
+  difficulte: 1
+  type: application
+  enonce: |
+    Des escargots d'une même espèce ont des coquilles jaunes, roses ou brunes. Quel niveau de biodiversité est illustré ?
+  indice: Même espèce, différences entre individus.
+  etapes:
+  - type: conc
+    titre: Le niveau
+    texte: '<mark>La diversité génétique</mark> : les individus portent des allèles différents du gène de couleur.'
+- titre: Une fréquence qui change
+  difficulte: 2
+  type: methode
+  enonce: |
+    Dans une population de 200 papillons, 40 sont sombres en 1850, et 180 en 1900. Calculer la fréquence des sombres aux deux dates.
+  indice: Fréquence = effectif / total.
+  etapes:
+  - type: calcul
+    titre: En 1850
+    texte: $40 / 200 = 0{,}20$, soit 20 %.
+  - type: conc
+    titre: En 1900
+    texte: '<mark>$180 / 200 = 0{,}90$, soit 90 %</mark> : la forme sombre est devenue majoritaire.'
+- titre: Le papillon change de couleur ?
+  difficulte: 2
+  type: piege
+  enonce: |
+    « Les papillons sont devenus sombres pour se camoufler sur les arbres noircis. » Corriger.
+  indice: Un individu peut-il changer son ADN pour s'adapter ?
+  etapes:
+  - type: piege
+    titre: L'erreur
+    texte: La phrase suggère une transformation volontaire des individus.
+  - type: conc
+    titre: La correction
+    texte: <mark>Des papillons sombres existaient déjà ; mieux camouflés, ils ont été moins mangés et ont laissé plus de descendants</mark>.
+- titre: Une petite île
+  difficulte: 3
+  type: bac
+  enonce: |
+    Dix oiseaux d'une espèce colonisent une île. Sur le continent, un allèle A est présent chez 50 % des oiseaux. Sur l'île, après quelques générations, il a disparu, alors qu'il ne donne ni avantage ni désavantage.
+    Quel mécanisme peut l'expliquer ? Pourquoi est-il plus fort sur l'île ?
+  indice: Un allèle neutre peut-il disparaître par sélection ?
+  etapes:
+  - type: calcul
+    titre: Le mécanisme
+    texte: 'L''allèle est neutre : ce n''est pas la sélection. C''est la dérive génétique, due au hasard de la reproduction.'
+  - type: conc
+    titre: La petite population
+    texte: '<mark>Dans une population de 10 individus, le hasard pèse beaucoup</mark> : un allèle peut disparaître en quelques générations.'

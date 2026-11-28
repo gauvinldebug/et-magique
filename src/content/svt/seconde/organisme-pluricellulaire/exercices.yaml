@@ -1,0 +1,52 @@
+exercices:
+- titre: Classer les niveaux
+  difficulte: 1
+  type: application
+  enonce: |
+    Classer du plus grand au plus petit : cellule musculaire, cœur, protéine, tissu musculaire, être humain.
+  indice: Organisme, organe, tissu, cellule, molécule.
+  etapes:
+  - type: conc
+    titre: Le classement
+    texte: <mark>Être humain, cœur, tissu musculaire, cellule musculaire, protéine</mark>.
+- titre: Combien de cellules ?
+  difficulte: 2
+  type: methode
+  enonce: |
+    Une cellule de la peau mesure 30 µm. Combien de cellules alignées faut-il pour couvrir 3 cm ?
+  indice: 3 cm = 30 000 µm.
+  etapes:
+  - type: calcul
+    titre: La conversion
+    texte: $3\ \mathrm{cm} = 3 \times 10^{4}$ µm.
+  - type: conc
+    titre: Le calcul
+    texte: <mark>$3 \times 10^{4} / 30 = 1\,000$ cellules</mark>.
+- titre: Des gènes différents ?
+  difficulte: 2
+  type: piege
+  enonce: |
+    « Une cellule de l'œil et une cellule du foie ont des gènes différents, sinon elles seraient pareilles. » Corriger.
+  indice: D'où viennent toutes les cellules du corps ?
+  etapes:
+  - type: piege
+    titre: L'erreur
+    texte: On confond posséder un gène et l'utiliser.
+  - type: conc
+    titre: La correction
+    texte: <mark>Elles ont le même ADN</mark>, hérité de l'œuf par divisions successives ; elles n'expriment simplement pas les mêmes gènes.
+- titre: Les replis de l'intestin
+  difficulte: 3
+  type: bac
+  enonce: |
+    Les cellules de l'intestin portent des microvillosités qui multiplient par 20 la surface de leur membrane. L'intestin grêle a une surface intérieure d'environ 1,5 m² sans ces replis.
+    1. Calculer la surface d'échange avec les microvillosités.
+    2. Relier cette forme à la fonction des cellules.
+  indice: Multiplier la surface.
+  etapes:
+  - type: calcul
+    titre: La surface
+    texte: $1{,}5 \times 20 = 30$ m².
+  - type: conc
+    titre: Forme et fonction
+    texte: '<mark>Une grande surface permet d''absorber beaucoup de nutriments</mark> : la forme de la cellule est adaptée à sa fonction d''absorption.'

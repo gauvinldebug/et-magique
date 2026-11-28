@@ -1,0 +1,51 @@
+exercices:
+- titre: Écosystème ou agrosystème ?
+  difficulte: 1
+  type: application
+  enonce: |
+    Classer : une prairie de montagne jamais fauchée, un verger de pommiers, une forêt naturelle, une serre de tomates.
+  indice: Y a-t-il une gestion humaine et une récolte ?
+  etapes:
+  - type: conc
+    titre: Le classement
+    texte: '<mark>Agrosystèmes : verger, serre. Écosystèmes : prairie non fauchée, forêt naturelle.</mark>'
+- titre: L'azote exporté
+  difficulte: 2
+  type: methode
+  enonce: |
+    Une récolte de blé de 7 tonnes de grains par hectare contient 2 % d'azote. Quelle masse d'azote est exportée par hectare ?
+  indice: 2 % de 7 tonnes.
+  etapes:
+  - type: calcul
+    titre: Le calcul
+    texte: $0{,}02 \times 7\,000 = 140$ kg.
+  - type: conc
+    titre: Le sens
+    texte: <mark>140 kg d'azote quittent le champ chaque année</mark>, qu'il faut compenser pour garder la fertilité.
+- titre: Toujours plus d'engrais ?
+  difficulte: 2
+  type: piege
+  enonce: |
+    « Pour avoir plus de blé, il suffit de mettre toujours plus d'engrais. » Qu'en penser ?
+  indice: Que devient l'engrais que la plante n'absorbe pas ?
+  etapes:
+  - type: piege
+    titre: L'erreur
+    texte: 'Le rendement plafonne : au-delà d''une certaine dose, la plante n''en absorbe pas plus.'
+  - type: conc
+    titre: La réponse
+    texte: <mark>L'excès part vers les rivières et les nappes</mark>, où il pollue, sans augmenter la récolte.
+- titre: La rotation avec la luzerne
+  difficulte: 3
+  type: bac
+  enonce: |
+    Un agriculteur alterne une année de luzerne (une légumineuse) et deux années de blé. Il constate qu'il a besoin de moins d'engrais azoté sur le blé qui suit la luzerne.
+    Expliquer cette observation.
+  indice: Que font les bactéries des racines de la luzerne ?
+  etapes:
+  - type: calcul
+    titre: La luzerne
+    texte: Ses racines hébergent des bactéries qui fixent l'azote de l'air.
+  - type: conc
+    titre: L'effet
+    texte: <mark>Les résidus de luzerne enrichissent le sol en azote</mark>, que le blé utilise l'année suivante.

@@ -1,0 +1,55 @@
+questions:
+- question: Un agrosystème se distingue d'un écosystème naturel par…
+  choix:
+  - l'absence de sol
+  - l'exportation de la récolte
+  - l'absence d'êtres vivants
+  - l'absence d'eau
+  bonne: 1
+  explication: On emporte la biomasse produite.
+  revoir: cours
+- question: Les plantes prennent surtout leur azote…
+  choix:
+  - dans l'air directement
+  - dans le sol, sous forme de nitrates
+  - dans la lumière
+  - dans le CO₂
+  bonne: 1
+  explication: Sauf les légumineuses, aidées par des bactéries.
+  revoir: cours
+- question: Les légumineuses…
+  choix:
+  - appauvrissent le sol en azote
+  - hébergent des bactéries qui fixent l'azote de l'air
+  - n'ont pas de racines
+  - sont des champignons
+  bonne: 1
+  explication: Pois, trèfle, luzerne.
+  revoir: cours
+- question: Un sol fertile contient…
+  choix:
+  - seulement des minéraux
+  - des minéraux, de l'humus et des êtres vivants
+  - seulement de l'eau
+  - aucun être vivant
+  bonne: 1
+  explication: Un sol fertile est vivant.
+  revoir: cours
+- question: L'excès de nitrates dans les rivières provoque…
+  choix:
+  - moins d'algues
+  - une prolifération d'algues
+  - plus de poissons
+  - aucun effet
+  bonne: 1
+  explication: C'est l'eutrophisation.
+  revoir: cours
+- question: Un sol se forme en…
+  choix:
+  - quelques jours
+  - quelques années
+  - des milliers d'années
+  - une saison
+  bonne: 2
+  explication: Il se perd beaucoup plus vite.
+  revoir: cours

@@ -1,0 +1,52 @@
+exercices:
+- titre: Autotrophe ou hétérotrophe ?
+  difficulte: 1
+  type: application
+  enonce: |
+    Classer : une cellule de feuille de chêne, une levure, une cellule de foie humain, une algue verte.
+  indice: Fabrique-t-elle sa matière organique à partir de matière minérale ?
+  etapes:
+  - type: conc
+    titre: Le classement
+    texte: '<mark>Autotrophes : feuille de chêne, algue verte. Hétérotrophes : levure, cellule de foie.</mark>'
+- titre: Lire une expérience
+  difficulte: 2
+  type: methode
+  enonce: |
+    Dans une enceinte éclairée, des algues vertes font baisser la quantité de CO₂ et monter celle de O₂. On éteint la lumière : le CO₂ remonte et le O₂ baisse. Interpréter.
+  indice: Quelle voie fonctionne à la lumière, laquelle dans le noir ?
+  etapes:
+  - type: calcul
+    titre: À la lumière
+    texte: La photosynthèse consomme plus de CO₂ que la respiration n'en produit.
+  - type: conc
+    titre: Dans le noir
+    texte: '<mark>La photosynthèse s''arrête, seule la respiration continue</mark> : elle consomme du O₂ et rejette du CO₂.'
+- titre: Les plantes la nuit
+  difficulte: 2
+  type: piege
+  enonce: |
+    « Les plantes font la photosynthèse le jour et respirent la nuit. » Qu'est-ce qui est faux ?
+  indice: La respiration s'arrête-t-elle le jour ?
+  etapes:
+  - type: piege
+    titre: L'erreur
+    texte: Elle laisse croire que la respiration ne se fait que la nuit.
+  - type: conc
+    titre: La correction
+    texte: <mark>Les plantes respirent jour et nuit</mark> ; le jour, la photosynthèse est simplement plus forte.
+- titre: La levure et le pain
+  difficulte: 3
+  type: bac
+  enonce: |
+    Dans une pâte à pain, la levure dispose d'abord d'un peu de dioxygène, puis plus du tout. La pâte gonfle grâce au CO₂ produit.
+    1. Quelle voie la levure utilise-t-elle au début ? Et ensuite ?
+    2. Pourquoi peut-on dire que le métabolisme dépend du milieu ?
+  indice: Respiration avec O₂, fermentation sans.
+  etapes:
+  - type: calcul
+    titre: Les deux voies
+    texte: D'abord la respiration (avec O₂), puis la fermentation (sans O₂). Les deux produisent du CO₂.
+  - type: conc
+    titre: Le milieu
+    texte: <mark>La même cellule, avec les mêmes gènes, change de voie selon la présence de dioxygène</mark>.

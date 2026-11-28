@@ -1,0 +1,52 @@
+exercices:
+- titre: Le brin complémentaire
+  difficulte: 1
+  type: application
+  enonce: |
+    Un brin d'ADN porte la séquence ATGCCTA. Écrire le brin complémentaire.
+  indice: A face à T, C face à G.
+  etapes:
+  - type: conc
+    titre: Le brin
+    texte: <mark>TACGGAT</mark>.
+- titre: Compter les bases
+  difficulte: 2
+  type: methode
+  enonce: |
+    Dans un ADN double brin, 30 % des bases sont des A. Quel est le pourcentage de T, de C et de G ?
+  indice: Autant de A que de T, autant de C que de G.
+  etapes:
+  - type: calcul
+    titre: A et T
+    texte: '30 % de A, donc 30 % de T : 60 % au total.'
+  - type: conc
+    titre: C et G
+    texte: '<mark>Il reste 40 %, partagés : 20 % de C et 20 % de G</mark>.'
+- titre: Gène ou caractère ?
+  difficulte: 2
+  type: piege
+  enonce: |
+    « Le gène des yeux bleus est une protéine bleue. » Corriger.
+  indice: Qu'est-ce qu'un gène, chimiquement ?
+  etapes:
+  - type: piege
+    titre: L'erreur
+    texte: Elle confond le gène, la protéine et le caractère.
+  - type: conc
+    titre: La correction
+    texte: <mark>Le gène est un morceau d'ADN</mark>. Il permet de fabriquer une protéine, qui participe au caractère « couleur des yeux ».
+- titre: L'insuline des bactéries
+  difficulte: 3
+  type: bac
+  enonce: |
+    Depuis les années 1980, on produit de l'insuline humaine avec des bactéries dans lesquelles on a introduit le gène humain de l'insuline.
+    1. Pourquoi la bactérie peut-elle fabriquer une protéine humaine ?
+    2. Qu'est-ce que cela suggère sur l'histoire du vivant ?
+  indice: Le code est-il le même chez la bactérie et l'humain ?
+  etapes:
+  - type: calcul
+    titre: La fabrication
+    texte: L'ADN de la bactérie et celui de l'humain sont faits des mêmes bases et lus de la même manière.
+  - type: conc
+    titre: L'histoire
+    texte: <mark>Cette universalité suggère que tous les êtres vivants ont une origine commune</mark>.

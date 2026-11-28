@@ -1,0 +1,55 @@
+questions:
+- question: Un tissu est…
+  choix:
+  - une seule cellule
+  - un ensemble de cellules semblables qui ont la même fonction
+  - un organe
+  - une molécule
+  bonne: 1
+  explication: Par exemple le tissu musculaire.
+  revoir: cours
+- question: Un organe est formé…
+  choix:
+  - d'un seul tissu
+  - de plusieurs tissus
+  - d'une seule molécule
+  - d'ADN seulement
+  bonne: 1
+  explication: Le cœur associe muscle, nerfs, vaisseaux.
+  revoir: cours
+- question: Deux cellules d'un même organisme ont…
+  choix:
+  - des ADN différents
+  - le même ADN
+  - la même forme
+  - la même fonction
+  bonne: 1
+  explication: Elles diffèrent par les gènes exprimés.
+  revoir: cours
+- question: Une cellule mesure en général…
+  choix:
+  - quelques nm
+  - 10 à 100 µm
+  - quelques mm
+  - quelques cm
+  bonne: 1
+  explication: Il faut un microscope pour la voir.
+  revoir: cours
+- question: La différenciation, c'est…
+  choix:
+  - la division d'une cellule
+  - la spécialisation d'une cellule
+  - la mort d'une cellule
+  - la copie de l'ADN
+  bonne: 1
+  explication: Elle prend une forme et une fonction particulières.
+  revoir: cours
+- question: Le collagène fait partie…
+  choix:
+  - du noyau
+  - de la matrice extracellulaire
+  - de l'ADN
+  - de la paroi des plantes
+  bonne: 1
+  explication: Il relie et soutient les cellules animales.
+  revoir: cours

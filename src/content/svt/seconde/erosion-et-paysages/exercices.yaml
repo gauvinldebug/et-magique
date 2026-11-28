@@ -1,0 +1,51 @@
+exercices:
+- titre: Remettre dans l'ordre
+  difficulte: 1
+  type: application
+  enonce: |
+    Remettre dans l'ordre : sédimentation, altération, transport, érosion.
+  indice: De la roche en place jusqu'au dépôt.
+  etapes:
+  - type: conc
+    titre: L'ordre
+    texte: <mark>Altération, érosion, transport, sédimentation</mark>.
+- titre: Vitesse de dépôt
+  difficulte: 2
+  type: methode
+  enonce: |
+    Une couche de calcaire de 15 m d'épaisseur s'est déposée en 300 000 ans. Calculer la vitesse moyenne de sédimentation en mm par an.
+  indice: 15 m = 15 000 mm.
+  etapes:
+  - type: calcul
+    titre: La conversion
+    texte: $15\ \mathrm{m} = 15\,000$ mm.
+  - type: conc
+    titre: La vitesse
+    texte: '<mark>$15\,000 / 300\,000 = 0{,}05$ mm par an</mark> : un vingtième de millimètre.'
+- titre: Le quartz fondu ?
+  difficulte: 2
+  type: piege
+  enonce: |
+    Un élève dit : « Le granite devient du sable parce que son quartz est dissous par la pluie. » Corriger.
+  indice: Quel minéral du granite résiste ?
+  etapes:
+  - type: piege
+    titre: L'erreur
+    texte: 'C''est l''inverse : le quartz est le minéral le plus résistant.'
+  - type: conc
+    titre: La correction
+    texte: <mark>Les feldspaths et micas s'altèrent en argile ; les grains de quartz restent</mark> et forment l'arène.
+- titre: Un barrage sur un fleuve
+  difficulte: 3
+  type: bac
+  enonce: |
+    Un grand barrage retient chaque année des millions de tonnes de sédiments. En aval, les plages près de l'embouchure du fleuve reculent.
+    Expliquer ce lien.
+  indice: D'où vient le sable des plages ?
+  etapes:
+  - type: calcul
+    titre: Le sable des plages
+    texte: Une grande partie vient des sédiments apportés par le fleuve.
+  - type: conc
+    titre: Le lien
+    texte: '<mark>Le barrage retient ces sédiments : la plage n''est plus alimentée</mark>, alors que la mer continue de l''éroder. Elle recule.'

@@ -1,0 +1,55 @@
+questions:
+- question: La diversité génétique, c'est…
+  choix:
+  - le nombre d'espèces
+  - la variété des allèles dans une espèce
+  - le nombre d'écosystèmes
+  - le nombre de chromosomes
+  bonne: 1
+  explication: Des versions différentes d'un même gène.
+  revoir: cours
+- question: Les nouveaux allèles apparaissent par…
+  choix:
+  - sélection naturelle
+  - mutation
+  - dérive
+  - migration seulement
+  bonne: 1
+  explication: Au hasard.
+  revoir: cours
+- question: La dérive génétique est due…
+  choix:
+  - à un avantage
+  - au hasard
+  - au climat seulement
+  - aux prédateurs
+  bonne: 1
+  explication: Forte dans les petites populations.
+  revoir: cours
+- question: La sélection naturelle…
+  choix:
+  - transforme un individu
+  - trie des individus déjà différents
+  - crée des mutations
+  - agit au hasard
+  bonne: 1
+  explication: Les avantagés laissent plus de descendants.
+  revoir: cours
+- question: Deux espèces sont différentes si…
+  choix:
+  - elles ne se ressemblent pas
+  - leur descendance n'est pas fertile
+  - elles vivent loin
+  - elles ont des couleurs différentes
+  bonne: 1
+  explication: Cheval et âne donnent un mulet stérile.
+  revoir: cours
+- question: Ce qui évolue, c'est…
+  choix:
+  - l'individu
+  - la population
+  - la cellule
+  - le fossile
+  bonne: 1
+  explication: Les fréquences d'allèles changent dans la population.
+  revoir: cours
