@@ -58,9 +58,8 @@ export const MATIERES: Matiere[] = [
   { slug: 'hggsp', nom: 'HGGSP', nomLong: 'HGGSP', couleur: '#004E64', active: false, specialite: true, niveaux: ['premiere', 'terminale'] },
   { slug: 'hlp', nom: 'HLP', nomLong: 'HLP', couleur: '#E8D3B0', active: false, specialite: true, niveaux: ['premiere', 'terminale'] },
   { slug: 'si', nom: 'Sciences de l\'ingénieur', nomLong: 'sciences de l\'ingénieur', couleur: '#6D4C41', active: false, specialite: true, niveaux: ['premiere', 'terminale'] },
-  { slug: 'arts', nom: 'Arts plastiques', couleur: '#FF4FD8', active: false, niveaux: ['6e', '5e', '4e', '3e'] },
-  { slug: 'musique', nom: 'Musique', couleur: '#3FA9F5', active: false, niveaux: ['6e', '5e', '4e', '3e'] },
-  { slug: 'eps', nom: 'EPS', nomLong: 'EPS', couleur: '#B39DFF', active: false, niveaux: ['6e', '5e', '4e', '3e', 'seconde', 'premiere', 'terminale'] },
+  { slug: 'arts', nom: 'Arts plastiques', couleur: '#FF4FD8', active: false, specialite: true, niveaux: ['6e', '5e', '4e', '3e', 'premiere', 'terminale'] },
+  { slug: 'musique', nom: 'Musique', couleur: '#3FA9F5', active: false, specialite: true, niveaux: ['6e', '5e', '4e', '3e', 'premiere', 'terminale'] },
 ];
 
 export const matiere = (slug: string) => MATIERES.find((m) => m.slug === slug);
