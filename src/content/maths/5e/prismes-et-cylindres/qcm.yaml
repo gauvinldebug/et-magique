@@ -1,0 +1,55 @@
+questions:
+- question: Le volume d'un prisme droit est…
+  choix:
+  - base + hauteur
+  - aire de la base × hauteur
+  - périmètre × hauteur
+  - aire de la base ÷ hauteur
+  bonne: 1
+  explication: Comme une pile de feuilles.
+  revoir: cours
+- question: Les bases d'un cylindre sont des…
+  choix:
+  - rectangles
+  - disques
+  - triangles
+  - carrés
+  bonne: 1
+  explication: Deux disques identiques.
+  revoir: cours
+- question: $\pi r^2$ est…
+  choix:
+  - l'aire d'un disque
+  - le périmètre d'un cercle
+  - le volume d'un cylindre
+  - le diamètre
+  bonne: 0
+  explication: Le périmètre est $2\pi r$.
+  revoir: cours
+- question: Les faces latérales d'un prisme droit sont des…
+  choix:
+  - triangles
+  - rectangles
+  - disques
+  - losanges
+  bonne: 1
+  explication: Toujours.
+  revoir: cours
+- question: 500 cm³ correspondent à…
+  choix:
+  - 5 L
+  - 0,5 L
+  - 50 L
+  - 5 mL
+  bonne: 1
+  explication: 1 000 cm³ = 1 L.
+  revoir: cours
+- question: Un pavé droit est un prisme dont les bases sont des…
+  choix:
+  - triangles
+  - disques
+  - rectangles
+  - hexagones
+  bonne: 2
+  explication: Cas particulier.
+  revoir: cours

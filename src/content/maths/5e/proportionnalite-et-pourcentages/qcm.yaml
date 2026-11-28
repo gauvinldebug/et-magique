@@ -1,0 +1,55 @@
+questions:
+- question: 10 % de 70 vaut…
+  choix:
+  - 0,7
+  - '7'
+  - '70'
+  - '17'
+  bonne: 1
+  explication: $70 \div 10$.
+  revoir: cours
+- question: 3 cahiers coûtent 6 €. 7 cahiers coûtent…
+  choix:
+  - 13 €
+  - 14 €
+  - 21 €
+  - 12 €
+  bonne: 1
+  explication: 2 € l'unité.
+  revoir: cours
+- question: 12 élèves sur 50 représentent…
+  choix:
+  - 12 %
+  - 24 %
+  - 50 %
+  - 6 %
+  bonne: 1
+  explication: $\frac{12}{50} = \frac{24}{100}$.
+  revoir: cours
+- question: Le produit en croix $\frac{a \times c}{b}$ sert à…
+  choix:
+  - trouver une quatrième proportionnelle
+  - additionner des fractions
+  - calculer un pourcentage d'évolution seulement
+  - vérifier un angle
+  bonne: 0
+  explication: Dans un tableau de proportionnalité.
+  revoir: cours
+- question: À l'échelle $\frac{1}{100}$, 3 cm représentent…
+  choix:
+  - 3 cm
+  - 30 cm
+  - 3 m
+  - 300 m
+  bonne: 2
+  explication: 300 cm = 3 m.
+  revoir: cours
+- question: L'âge et la taille d'un enfant sont…
+  choix:
+  - proportionnels
+  - non proportionnels
+  - égaux
+  - inversement proportionnels
+  bonne: 1
+  explication: La croissance ralentit.
+  revoir: cours

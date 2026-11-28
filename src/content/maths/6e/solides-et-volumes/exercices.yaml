@@ -1,0 +1,53 @@
+exercices:
+- titre: Le volume d'une boîte
+  difficulte: 1
+  type: application
+  enonce: |
+    Calculer le volume d'un pavé droit de 8 cm, 5 cm et 3 cm.
+  indice: Longueur × largeur × hauteur.
+  etapes:
+  - type: calcul
+    titre: Calcul
+    texte: $8 \times 5 \times 3 = 120$.
+  - type: conc
+    titre: Réponse
+    texte: <mark>$V = 120 \text{ cm}^3$.</mark>
+- titre: L'aquarium
+  difficulte: 2
+  type: methode
+  enonce: |
+    Un aquarium mesure 50 cm, 30 cm et 40 cm. Combien de litres d'eau peut-il contenir ?
+  indice: Passe par les dm³.
+  etapes:
+  - type: calcul
+    titre: En dm
+    texte: 5 dm, 3 dm, 4 dm, donc $V = 5 \times 3 \times 4 = 60 \text{ dm}^3$.
+  - type: conc
+    titre: En litres
+    texte: <mark>60 L.</mark>
+- titre: Les unités mélangées
+  difficulte: 2
+  type: piege
+  enonce: |
+    Un pavé mesure 2 m, 50 cm et 30 cm. Un élève calcule $2 \times 50 \times 30 = 3\,000$. Corriger.
+  indice: Les unités sont-elles les mêmes ?
+  etapes:
+  - type: piege
+    titre: L'erreur
+    texte: Il a mélangé mètres et centimètres.
+  - type: conc
+    titre: Correction
+    texte: <mark>$200 \times 50 \times 30 = 300\,000 \text{ cm}^3 = 300$ L.</mark>
+- titre: Compter sur un solide
+  difficulte: 2
+  type: application
+  enonce: |
+    Un prisme droit a pour base un triangle. Combien a-t-il de faces, d'arêtes et de sommets ?
+  indice: 2 bases triangulaires et des faces latérales rectangulaires.
+  etapes:
+  - type: calcul
+    titre: Faces
+    texte: 2 triangles + 3 rectangles = 5 faces.
+  - type: conc
+    titre: Arêtes et sommets
+    texte: <mark>9 arêtes (3 + 3 + 3) et 6 sommets.</mark>

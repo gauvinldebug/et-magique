@@ -1,0 +1,55 @@
+questions:
+- question: Les diagonales d'un parallélogramme…
+  choix:
+  - sont toujours égales
+  - se coupent en leur milieu
+  - sont toujours perpendiculaires
+  - ne se coupent pas
+  bonne: 1
+  explication: 'Égales : rectangle ; perpendiculaires : losange.'
+  revoir: cours
+- question: Un parallélogramme avec un angle droit est…
+  choix:
+  - un rectangle
+  - un losange
+  - un trapèze
+  - un triangle
+  bonne: 0
+  explication: Puis ses 4 angles sont droits.
+  revoir: cours
+- question: L'aire d'un parallélogramme de base 6 et de hauteur 3 est…
+  choix:
+  - '9'
+  - '18'
+  - '12'
+  - '36'
+  bonne: 1
+  explication: Base × hauteur.
+  revoir: cours
+- question: Un carré est…
+  choix:
+  - seulement un rectangle
+  - seulement un losange
+  - un rectangle et un losange
+  - un trapèze seulement
+  bonne: 2
+  explication: Et un parallélogramme.
+  revoir: cours
+- question: Dans un parallélogramme, deux angles opposés sont…
+  choix:
+  - égaux
+  - supplémentaires toujours
+  - droits
+  - complémentaires
+  bonne: 0
+  explication: Les angles consécutifs, eux, sont supplémentaires.
+  revoir: cours
+- question: Le centre de symétrie d'un parallélogramme est…
+  choix:
+  - un sommet
+  - le point d'intersection des diagonales
+  - le milieu d'un côté
+  - il n'en a pas
+  bonne: 1
+  explication: Symétrie centrale.
+  revoir: cours

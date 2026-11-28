@@ -1,0 +1,53 @@
+exercices:
+- titre: Une vitesse
+  difficulte: 1
+  type: application
+  enonce: |
+    Un cycliste parcourt 45 km en 2 h 30 min. Quelle est sa vitesse moyenne ?
+  indice: 2 h 30 = 2,5 h.
+  etapes:
+  - type: calcul
+    titre: Conversion
+    texte: $t = 2{,}5$ h.
+  - type: conc
+    titre: Vitesse
+    texte: <mark>$v = 45 \div 2{,}5 = 18$ km/h.</mark>
+- titre: Une baisse
+  difficulte: 1
+  type: application
+  enonce: |
+    Un jeu à 60 € baisse de 30 %. Quel est son nouveau prix ?
+  indice: 'Coefficient : $1 - 0{,}30$.'
+  etapes:
+  - type: calcul
+    titre: Coefficient
+    texte: $0{,}7$.
+  - type: conc
+    titre: Prix
+    texte: <mark>$60 \times 0{,}7 = 42$ €.</mark>
+- titre: Les minutes
+  difficulte: 2
+  type: piege
+  enonce: |
+    Une voiture roule 1 h 45 min à 80 km/h. Un élève calcule $80 \times 1{,}45 = 116$ km. Corriger.
+  indice: 45 min, c'est quelle fraction d'heure ?
+  etapes:
+  - type: piege
+    titre: L'erreur
+    texte: 45 minutes ne font pas 0,45 h.
+  - type: conc
+    titre: Correction
+    texte: <mark>45 min = 0,75 h, donc $d = 80 \times 1{,}75 = 140$ km.</mark>
+- titre: Aller-retour
+  difficulte: 3
+  type: methode
+  enonce: |
+    Un trajet de 60 km se fait à l'aller à 60 km/h et au retour à 30 km/h. Quelle est la vitesse moyenne sur l'aller-retour ?
+  indice: Distance totale sur durée totale.
+  etapes:
+  - type: calcul
+    titre: Durées
+    texte: 'Aller : 1 h. Retour : 2 h. Total : 3 h pour 120 km.'
+  - type: conc
+    titre: Vitesse
+    texte: <mark>$120 \div 3 = 40$ km/h, et non 45 km/h.</mark>

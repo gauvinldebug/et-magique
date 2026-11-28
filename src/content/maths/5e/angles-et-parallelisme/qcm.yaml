@@ -1,0 +1,55 @@
+questions:
+- question: Deux angles opposés par le sommet sont…
+  choix:
+  - égaux
+  - supplémentaires
+  - complémentaires
+  - toujours droits
+  bonne: 0
+  explication: Toujours.
+  revoir: cours
+- question: Le supplémentaire de 130° est…
+  choix:
+  - 60°
+  - 50°
+  - 230°
+  - 40°
+  bonne: 1
+  explication: $180 - 130$.
+  revoir: cours
+- question: La somme des angles d'un triangle vaut…
+  choix:
+  - 90°
+  - 180°
+  - 360°
+  - ça dépend
+  bonne: 1
+  explication: Pour tout triangle.
+  revoir: cours
+- question: Si deux angles correspondants sont égaux, les droites sont…
+  choix:
+  - perpendiculaires
+  - parallèles
+  - sécantes
+  - confondues
+  bonne: 1
+  explication: C'est la réciproque.
+  revoir: cours
+- question: Des angles alternes-internes sont situés…
+  choix:
+  - de part et d'autre de la sécante, entre les deux droites
+  - du même côté, à l'extérieur
+  - sur la même droite
+  - au même sommet
+  bonne: 0
+  explication: D'où leur nom.
+  revoir: cours
+- question: Un triangle équilatéral a des angles de…
+  choix:
+  - 90°
+  - 60°
+  - 45°
+  - 30°
+  bonne: 1
+  explication: $180 \div 3$.
+  revoir: cours

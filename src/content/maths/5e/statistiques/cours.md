@@ -12,6 +12,7 @@ pdf:
   cours: /pdf/maths/5e/statistiques-cours.pdf
   fiche: /pdf/maths/5e/statistiques-fiche.pdf
   exercices: /pdf/maths/5e/statistiques-exercices.pdf
+suivant: proportionnalite-et-pourcentages
 ---
 
 ## Le problème

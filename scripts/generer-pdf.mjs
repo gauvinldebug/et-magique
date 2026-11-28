@@ -24,10 +24,11 @@ for (const m of await readdir(content)) for (const n of await readdir(join(conte
 const exe = process.env.CHROMIUM_PATH || (existsSync('/opt/pw-browsers/chromium') ? '/opt/pw-browsers/chromium' : undefined);
 const browser = await chromium.launch(exe ? { executablePath: exe } : {});
 const page = await browser.newPage();
-// FILTRE=terminale/limites-de-suites ne régénère que les chapitres dont le chemin contient ce texte.
-const filtre = process.env.FILTRE;
+// FILTRE=terminale/limites-de-suites ne régénère que les chapitres dont le chemin contient ce texte
+// (plusieurs filtres séparés par des virgules).
+const filtres = process.env.FILTRE ? process.env.FILTRE.split(',') : null;
 for (const [m, n, c] of chapitres) {
-  if (filtre && !`${m}/${n}/${c}`.includes(filtre)) continue;
+  if (filtres && !filtres.some((f) => `${m}/${n}/${c}`.includes(f))) continue;
   await mkdir(join('public/pdf', m, n), { recursive: true });
   for (const [quoi, chemin] of [['cours', 'cours/'], ['fiche', 'fiche/'], ['exercices', 'exercices/']]) {
     const url = `http://localhost:4399/${m}/${n}/${c}/${chemin}`;

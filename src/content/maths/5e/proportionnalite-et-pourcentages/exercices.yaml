@@ -1,0 +1,53 @@
+exercices:
+- titre: Les œufs
+  difficulte: 1
+  type: application
+  enonce: |
+    Avec la recette du cours (3 œufs pour 4 personnes), combien d'œufs pour 12 personnes ?
+  indice: 12, c'est 3 fois 4.
+  etapes:
+  - type: calcul
+    titre: Rapport
+    texte: $12 = 4 \times 3$.
+  - type: conc
+    titre: Réponse
+    texte: <mark>$3 \times 3 = 9$ œufs.</mark>
+- titre: Un pourcentage
+  difficulte: 1
+  type: application
+  enonce: |
+    Un pull à 40 € est soldé de 25 %. Quel est le montant de la réduction ? Le nouveau prix ?
+  indice: $\frac{25}{100} \times 40$.
+  etapes:
+  - type: calcul
+    titre: Réduction
+    texte: $0{,}25 \times 40 = 10$ €.
+  - type: conc
+    titre: Prix
+    texte: <mark>$40 - 10 = 30$ €.</mark>
+- titre: Proportionnel ?
+  difficulte: 2
+  type: piege
+  enonce: |
+    Un taxi coûte 4 € de prise en charge plus 2 € par km. Un élève dit : « 5 km coûtent 14 €, donc 10 km coûtent 28 €. » Corriger.
+  indice: Les 4 € se paient une seule fois.
+  etapes:
+  - type: piege
+    titre: L'erreur
+    texte: Le prix n'est pas proportionnel à la distance.
+  - type: conc
+    titre: Correction
+    texte: <mark>$4 + 2 \times 10 = 24$ €.</mark>
+- titre: Le plan
+  difficulte: 2
+  type: methode
+  enonce: |
+    Sur un plan à l'échelle $\frac{1}{500}$, un terrain mesure 6 cm de long. Quelle est sa longueur réelle en mètres ?
+  indice: 1 cm sur le plan = 500 cm réels.
+  etapes:
+  - type: calcul
+    titre: Calcul
+    texte: $6 \times 500 = 3\,000$ cm.
+  - type: conc
+    titre: Conversion
+    texte: <mark>3 000 cm = 30 m.</mark>

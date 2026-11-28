@@ -1,0 +1,53 @@
+exercices:
+- titre: Lire un tableau
+  difficulte: 1
+  type: application
+  enonce: |
+    Avec le tableau du cours, quelle température fait-il mercredi à Nice ? Quel jour l'écart entre les deux villes est-il le plus grand ?
+  indice: Calcule les trois écarts.
+  etapes:
+  - type: calcul
+    titre: Lecture
+    texte: 'Mercredi à Nice : 16 °C. Écarts : lundi 6, mardi 4, mercredi 7.'
+  - type: conc
+    titre: Réponse
+    texte: '<mark>L''écart est le plus grand mercredi : 7 °C.</mark>'
+- titre: Le diagramme circulaire
+  difficulte: 2
+  type: methode
+  enonce: |
+    Dans une classe de 24 élèves, 12 viennent à pied, 6 en bus, 6 à vélo. Calculer l'angle de chaque secteur.
+  indice: 24 élèves correspondent à 360°.
+  etapes:
+  - type: calcul
+    titre: Un élève
+    texte: $360 \div 24 = 15$°.
+  - type: conc
+    titre: Les angles
+    texte: '<mark>À pied : 180°. Bus : 90°. Vélo : 90°.</mark>'
+- titre: L'axe trompeur
+  difficulte: 2
+  type: piege
+  enonce: |
+    Un graphique montre deux bâtons de ventes : 98 et 102. L'axe commence à 96, et le second bâton paraît trois fois plus haut. Que penser ?
+  indice: Quelle est la vraie différence ?
+  etapes:
+  - type: piege
+    titre: L'erreur
+    texte: 'L''axe ne commence pas à 0 : les écarts sont grossis.'
+  - type: conc
+    titre: Correction
+    texte: <mark>La différence n'est que de 4 sur environ 100, soit environ 4 %.</mark>
+- titre: Quel graphique ?
+  difficulte: 1
+  type: application
+  enonce: |
+    Quel graphique choisir pour : la taille d'un enfant de 1 à 10 ans ; les médailles de 5 pays ; la part de chaque matière dans l'emploi du temps ?
+  indice: Évolution, comparaison ou répartition ?
+  etapes:
+  - type: calcul
+    titre: Les deux premiers
+    texte: 'Taille : graphique cartésien. Médailles : bâtons.'
+  - type: conc
+    titre: Emploi du temps
+    texte: <mark>Diagramme circulaire.</mark>

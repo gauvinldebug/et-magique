@@ -1,0 +1,55 @@
+questions:
+- question: $7y$ signifie…
+  choix:
+  - 7 + y
+  - 7 × y
+  - 70 + y
+  - y⁷
+  bonne: 1
+  explication: Le × est sous-entendu.
+  revoir: cours
+- question: Pour $a = 3$, $2a + 1$ vaut…
+  choix:
+  - '24'
+  - '7'
+  - '6'
+  - '32'
+  bonne: 1
+  explication: $2 \times 3 + 1$.
+  revoir: cours
+- question: $a^2$ pour $a = 4$ vaut…
+  choix:
+  - '8'
+  - '6'
+  - '16'
+  - '42'
+  bonne: 2
+  explication: $4 \times 4$.
+  revoir: cours
+- question: $3x + 4x =$
+  choix:
+  - $7x$
+  - $12x$
+  - $7x^2$
+  - $12$
+  bonne: 0
+  explication: On ajoute les coefficients.
+  revoir: cours
+- question: $5(x + 2) =$
+  choix:
+  - $5x + 2$
+  - $5x + 10$
+  - $x + 10$
+  - $10x$
+  bonne: 1
+  explication: On distribue le 5.
+  revoir: cours
+- question: L'égalité $3x = 12$ est vraie pour…
+  choix:
+  - $x = 3$
+  - $x = 4$
+  - $x = 9$
+  - $x = 36$
+  bonne: 1
+  explication: $3 \times 4 = 12$.
+  revoir: cours

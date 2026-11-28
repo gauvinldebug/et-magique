@@ -1,0 +1,55 @@
+questions:
+- question: Un cube a…
+  choix:
+  - 4 faces
+  - 8 faces
+  - 6 faces
+  - 12 faces
+  bonne: 2
+  explication: Et 12 arêtes, 8 sommets.
+  revoir: cours
+- question: $1 \text{ dm}^3 =$
+  choix:
+  - 10 cm³
+  - 100 cm³
+  - 1 000 cm³
+  - 1 cm³
+  bonne: 2
+  explication: Facteur 1 000.
+  revoir: cours
+- question: 1 L correspond à…
+  choix:
+  - 1 cm³
+  - 1 dm³
+  - 1 m³
+  - 10 cm³
+  bonne: 1
+  explication: Une brique de lait.
+  revoir: cours
+- question: Le volume d'un cube de 3 cm de côté est…
+  choix:
+  - 9 cm³
+  - 12 cm³
+  - 27 cm³
+  - 18 cm³
+  bonne: 2
+  explication: $3 \times 3 \times 3$.
+  revoir: cours
+- question: Une pyramide à base carrée a…
+  choix:
+  - 4 faces
+  - 5 faces
+  - 6 faces
+  - 8 faces
+  bonne: 1
+  explication: 1 carré + 4 triangles.
+  revoir: cours
+- question: En perspective cavalière, les arêtes cachées sont…
+  choix:
+  - absentes
+  - en pointillés
+  - en couleur
+  - plus épaisses
+  bonne: 1
+  explication: Pour comprendre le volume.
+  revoir: cours

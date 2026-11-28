@@ -1,0 +1,55 @@
+questions:
+- question: $(-5) \times (-6) =$
+  choix:
+  - '-30'
+  - '30'
+  - '-11'
+  - '11'
+  bonne: 1
+  explication: 'Même signe : positif.'
+  revoir: cours
+- question: $(-42) \div 7 =$
+  choix:
+  - '-6'
+  - '6'
+  - '-35'
+  - '49'
+  bonne: 0
+  explication: Signes contraires.
+  revoir: cours
+- question: Un produit avec 3 facteurs négatifs est…
+  choix:
+  - positif
+  - négatif
+  - nul
+  - on ne sait pas
+  bonne: 1
+  explication: Nombre impair.
+  revoir: cours
+- question: L'inverse de $-2$ est…
+  choix:
+  - '2'
+  - $-\frac{1}{2}$
+  - $\frac{1}{2}$
+  - '-2'
+  bonne: 1
+  explication: Même signe.
+  revoir: cours
+- question: $(-1)^4 =$
+  choix:
+  - '1'
+  - '-1'
+  - '4'
+  - '-4'
+  bonne: 0
+  explication: 4 facteurs négatifs.
+  revoir: cours
+- question: $-4 - 3 =$
+  choix:
+  - '7'
+  - '-7'
+  - '-1'
+  - '12'
+  bonne: 1
+  explication: On descend de 3.
+  revoir: cours

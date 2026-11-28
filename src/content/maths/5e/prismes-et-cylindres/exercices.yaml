@@ -1,0 +1,53 @@
+exercices:
+- titre: Le prisme
+  difficulte: 1
+  type: application
+  enonce: |
+    Un prisme droit a pour base un triangle rectangle de côtés de l'angle droit 3 cm et 4 cm. Sa hauteur est 10 cm. Calculer son volume.
+  indice: 'Aire du triangle rectangle : $\frac{3 \times 4}{2}$.'
+  etapes:
+  - type: calcul
+    titre: Aire de la base
+    texte: $\frac{3 \times 4}{2} = 6$ cm².
+  - type: conc
+    titre: Volume
+    texte: <mark>$V = 6 \times 10 = 60$ cm³.</mark>
+- titre: La canette
+  difficulte: 2
+  type: methode
+  enonce: |
+    Un cylindre a un rayon de 4 cm et une hauteur de 10 cm. Calculer son volume au cm³ près, puis en cL.
+  indice: $V = \pi r^2 h$.
+  etapes:
+  - type: calcul
+    titre: Volume
+    texte: $\pi \times 16 \times 10 \approx 503$ cm³.
+  - type: conc
+    titre: En cL
+    texte: <mark>503 mL, soit environ 50 cL.</mark>
+- titre: Aire ou périmètre ?
+  difficulte: 2
+  type: piege
+  enonce: |
+    Pour un cylindre de rayon 5 cm et de hauteur 2 cm, un élève calcule $V = 2 \times \pi \times 5 \times 2$. Corriger.
+  indice: Quelle est l'aire d'un disque ?
+  etapes:
+  - type: piege
+    titre: L'erreur
+    texte: Il a utilisé le périmètre $2\pi r$ au lieu de l'aire $\pi r^2$.
+  - type: conc
+    titre: Correction
+    texte: <mark>$V = \pi \times 25 \times 2 \approx 157$ cm³.</mark>
+- titre: Le patron
+  difficulte: 2
+  type: application
+  enonce: |
+    Dans le patron d'un cylindre de rayon 2 cm et de hauteur 6 cm, quelles sont les dimensions du rectangle ?
+  indice: Le rectangle s'enroule autour du disque.
+  etapes:
+  - type: calcul
+    titre: Longueur
+    texte: 'Périmètre du disque : $2\pi \times 2 \approx 12{,}6$ cm.'
+  - type: conc
+    titre: Dimensions
+    texte: <mark>Environ 12,6 cm sur 6 cm.</mark>

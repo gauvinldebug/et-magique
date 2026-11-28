@@ -1,0 +1,53 @@
+exercices:
+- titre: Un agrandissement
+  difficulte: 1
+  type: application
+  enonce: |
+    Un triangle de côtés 3, 4 et 5 cm est agrandi avec le rapport 2,5. Donner les côtés de l'image.
+  indice: Multiplier chaque longueur par 2,5.
+  etapes:
+  - type: calcul
+    titre: Calcul
+    texte: $3 \times 2{,}5 = 7{,}5$ ; $4 \times 2{,}5 = 10$ ; $5 \times 2{,}5 = 12{,}5$.
+  - type: conc
+    titre: Réponse
+    texte: <mark>7,5 cm ; 10 cm ; 12,5 cm.</mark>
+- titre: L'aire et le volume
+  difficulte: 2
+  type: methode
+  enonce: |
+    Une maquette au $\frac{1}{50}$ d'un bâtiment a une surface au sol de 8 dm². Quelle est la surface réelle ?
+  indice: 'Aires : $k^2$.'
+  etapes:
+  - type: calcul
+    titre: Rapport des aires
+    texte: $50^2 = 2\,500$.
+  - type: conc
+    titre: Surface
+    texte: <mark>$8 \times 2\,500 = 20\,000$ dm², soit 200 m².</mark>
+- titre: L'aire doublée
+  difficulte: 2
+  type: piege
+  enonce: |
+    On double le côté d'un carré de 3 cm. Un élève dit que l'aire passe de 9 à 18 cm². Corriger.
+  indice: Les aires sont multipliées par $k^2$.
+  etapes:
+  - type: piege
+    titre: L'erreur
+    texte: Il a multiplié l'aire par 2.
+  - type: conc
+    titre: Correction
+    texte: '<mark>Côté 6 cm, aire $36$ cm² : multipliée par 4.</mark>'
+- titre: Rapport négatif
+  difficulte: 3
+  type: methode
+  enonce: |
+    $A'$ est l'image de $A$ par l'homothétie de centre $O$ et de rapport $-2$, avec $OA = 3$ cm. Où est $A'$ ?
+  indice: Le signe donne le côté, la valeur absolue donne la distance.
+  etapes:
+  - type: calcul
+    titre: Distance
+    texte: $OA' = 2 \times 3 = 6$ cm.
+  - type: conc
+    titre: Position
+    texte: <mark>$A'$ est sur la droite $(OA)$, de l'autre côté de $O$, à 6 cm de $O$.</mark>

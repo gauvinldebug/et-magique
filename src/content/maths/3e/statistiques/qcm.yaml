@@ -1,0 +1,55 @@
+questions:
+- question: L'étendue mesure…
+  choix:
+  - la position
+  - la dispersion
+  - la moyenne
+  - l'effectif
+  bonne: 1
+  explication: Max − min.
+  revoir: cours
+- question: La médiane de 1 ; 4 ; 6 ; 9 est…
+  choix:
+  - '4'
+  - '6'
+  - '5'
+  - 4,5
+  bonne: 2
+  explication: (4 + 6) ÷ 2.
+  revoir: cours
+- question: 'Moyenne de 10, 10, 10, 30 :'
+  choix:
+  - '10'
+  - '15'
+  - '20'
+  - '30'
+  bonne: 1
+  explication: 60 ÷ 4.
+  revoir: cours
+- question: Les effectifs cumulés servent surtout à trouver…
+  choix:
+  - la médiane
+  - l'étendue
+  - le maximum
+  - la fréquence
+  bonne: 0
+  explication: On repère la valeur de rang voulu.
+  revoir: cours
+- question: Une valeur très grande ajoutée à une série modifie beaucoup…
+  choix:
+  - la moyenne
+  - la médiane
+  - rien
+  - l'effectif seulement
+  bonne: 0
+  explication: La médiane bouge peu.
+  revoir: cours
+- question: Pour 30 valeurs rangées, la médiane est…
+  choix:
+  - la 15e
+  - la 16e
+  - la moyenne des 15e et 16e
+  - la 30e
+  bonne: 2
+  explication: Effectif pair.
+  revoir: cours

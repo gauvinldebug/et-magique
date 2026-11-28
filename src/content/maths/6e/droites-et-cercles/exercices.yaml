@@ -1,0 +1,56 @@
+exercices:
+- titre: Les notations
+  difficulte: 1
+  type: application
+  enonce: |
+    Écrire avec les bonnes notations : la droite passant par $E$ et $F$ ; le segment d'extrémités $E$ et $F$ ; la longueur de ce segment, égale à 5 cm.
+  indice: Parenthèses, crochets, ou rien.
+  etapes:
+  - type: calcul
+    titre: Droite et segment
+    texte: $(EF)$ et $[EF]$.
+  - type: conc
+    titre: Longueur
+    texte: <mark>$EF = 5$ cm.</mark>
+- titre: Le cercle
+  difficulte: 1
+  type: application
+  enonce: |
+    Un cercle a un diamètre de 9 cm. Quel est son rayon ?
+  indice: Le diamètre vaut deux rayons.
+  etapes:
+  - type: calcul
+    titre: Calcul
+    texte: $9 \div 2 = 4{,}5$.
+  - type: conc
+    titre: Réponse
+    texte: <mark>Le rayon mesure 4,5 cm.</mark>
+- titre: Les barreaux
+  difficulte: 2
+  type: piege
+  enonce: |
+    On sait que $(d_1) \perp (d)$ et $(d_2) \perp (d)$. Un élève conclut que $(d_1) \perp (d_2)$. Corriger.
+  indice: Pense aux barreaux d'une échelle.
+  etapes:
+  - type: piege
+    titre: L'erreur
+    texte: Deux perpendiculaires à une même droite ne sont pas perpendiculaires entre elles.
+  - type: conc
+    titre: Correction
+    texte: '<mark>Elles sont parallèles : $(d_1) \parallel (d_2)$.</mark>'
+- titre: Rédiger une preuve
+  difficulte: 3
+  type: methode
+  enonce: |
+    On sait que $(AB) \parallel (CD)$ et $(EF) \perp (AB)$. Que peut-on dire de $(EF)$ et $(CD)$ ? Rédiger.
+  indice: Utilise la troisième propriété.
+  etapes:
+  - type: methode
+    titre: Données
+    texte: $(AB) \parallel (CD)$ et $(EF) \perp (AB)$.
+  - type: calcul
+    titre: Propriété
+    texte: Si deux droites sont parallèles, toute perpendiculaire à l'une est perpendiculaire à l'autre.
+  - type: conc
+    titre: Conclusion
+    texte: <mark>Donc $(EF) \perp (CD)$.</mark>

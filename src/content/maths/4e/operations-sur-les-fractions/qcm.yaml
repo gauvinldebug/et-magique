@@ -1,0 +1,55 @@
+questions:
+- question: $\frac{1}{4} + \frac{1}{4} =$
+  choix:
+  - $\frac{2}{8}$
+  - $\frac{1}{2}$
+  - $\frac{1}{16}$
+  - '1'
+  bonne: 1
+  explication: $\frac{2}{4}$.
+  revoir: cours
+- question: $\frac{2}{3} \times \frac{3}{5} =$
+  choix:
+  - $\frac{5}{8}$
+  - $\frac{2}{5}$
+  - $\frac{6}{8}$
+  - $\frac{10}{9}$
+  bonne: 1
+  explication: $\frac{6}{15}$.
+  revoir: cours
+- question: $\frac{1}{2} \div \frac{1}{4} =$
+  choix:
+  - $\frac{1}{8}$
+  - '2'
+  - $\frac{1}{2}$
+  - '4'
+  bonne: 1
+  explication: $\frac{1}{2} \times 4$.
+  revoir: cours
+- question: $\frac{24}{36}$ simplifiée donne…
+  choix:
+  - $\frac{2}{3}$
+  - $\frac{3}{4}$
+  - $\frac{4}{6}$ seulement
+  - $\frac{12}{36}$
+  bonne: 0
+  explication: Division par 12.
+  revoir: cours
+- question: Les $\frac{3}{4}$ de 20 valent…
+  choix:
+  - '5'
+  - '15'
+  - '12'
+  - '80'
+  bonne: 1
+  explication: $20 \div 4 \times 3$.
+  revoir: cours
+- question: $\frac{5}{6} - \frac{1}{3} =$
+  choix:
+  - $\frac{4}{3}$
+  - $\frac{1}{2}$
+  - $\frac{4}{6}$
+  - $\frac{2}{3}$
+  bonne: 1
+  explication: $\frac{5}{6} - \frac{2}{6} = \frac{3}{6}$.
+  revoir: cours

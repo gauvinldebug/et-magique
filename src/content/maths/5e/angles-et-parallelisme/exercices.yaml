@@ -1,0 +1,56 @@
+exercices:
+- titre: Le troisième angle
+  difficulte: 1
+  type: application
+  enonce: |
+    Dans un triangle $ABC$, $\hat{A} = 48°$ et $\hat{B} = 75°$. Calculer $\hat{C}$.
+  indice: La somme vaut 180°.
+  etapes:
+  - type: calcul
+    titre: Calcul
+    texte: $180 - 48 - 75 = 57$.
+  - type: conc
+    titre: Réponse
+    texte: <mark>$\hat{C} = 57°$.</mark>
+- titre: Les rails
+  difficulte: 2
+  type: methode
+  enonce: |
+    Deux droites parallèles sont coupées par une sécante. Un angle alterne-interne mesure 112°. Que vaut l'autre ? Rédiger.
+  indice: Utilise la propriété des parallèles.
+  etapes:
+  - type: methode
+    titre: Données
+    texte: Les droites sont parallèles, les angles sont alternes-internes.
+  - type: calcul
+    titre: Propriété
+    texte: Si deux droites sont parallèles, les angles alternes-internes sont égaux.
+  - type: conc
+    titre: Conclusion
+    texte: <mark>L'autre angle mesure 112°.</mark>
+- titre: Parallèles ou pas ?
+  difficulte: 2
+  type: piege
+  enonce: |
+    Deux droites coupées par une sécante forment des angles alternes-internes de 70° et 72°. Un élève dit qu'elles sont parallèles. Corriger.
+  indice: Que faut-il pour qu'elles soient parallèles ?
+  etapes:
+  - type: piege
+    titre: L'erreur
+    texte: Les angles ne sont pas égaux.
+  - type: conc
+    titre: Correction
+    texte: '<mark>Les droites ne sont pas parallèles : elles finiront par se couper.</mark>'
+- titre: Supplémentaire
+  difficulte: 1
+  type: application
+  enonce: |
+    Un angle mesure 35°. Quel est son complémentaire ? Son supplémentaire ?
+  indice: 90° et 180°.
+  etapes:
+  - type: calcul
+    titre: Complémentaire
+    texte: $90 - 35 = 55$°.
+  - type: conc
+    titre: Supplémentaire
+    texte: <mark>$180 - 35 = 145$°.</mark>

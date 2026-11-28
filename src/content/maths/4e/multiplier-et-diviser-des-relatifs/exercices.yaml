@@ -1,0 +1,56 @@
+exercices:
+- titre: Calculer
+  difficulte: 1
+  type: application
+  enonce: |
+    Calculer $(-7) \times 6$, $(-8) \times (-9)$ et $(-36) \div (-4)$.
+  indice: 'Même signe : positif.'
+  etapes:
+  - type: calcul
+    titre: Les produits
+    texte: $-42$ et $72$.
+  - type: conc
+    titre: Le quotient
+    texte: <mark>$(-36) \div (-4) = 9$.</mark>
+- titre: Le signe d'un produit
+  difficulte: 2
+  type: methode
+  enonce: |
+    Sans calculer, donner le signe de $A = (-1) \times (-2) \times (-3) \times 4 \times (-5)$, puis calculer $A$.
+  indice: Compte les facteurs négatifs.
+  etapes:
+  - type: calcul
+    titre: Signe
+    texte: '4 facteurs négatifs, nombre pair : $A$ est positif.'
+  - type: conc
+    titre: Valeur
+    texte: <mark>$A = 120$.</mark>
+- titre: Moins et moins
+  difficulte: 2
+  type: piege
+  enonce: |
+    Un élève écrit $-6 + (-4) = 10$ « parce que moins par moins donne plus ». Corriger.
+  indice: Est-ce une multiplication ?
+  etapes:
+  - type: piege
+    titre: L'erreur
+    texte: Il applique la règle des signes à une addition.
+  - type: conc
+    titre: Correction
+    texte: <mark>$-6 + (-4) = -10$.</mark>
+- titre: Avec les priorités
+  difficulte: 3
+  type: methode
+  enonce: |
+    Calculer $B = -3 + (-2) \times (5 - 9)$.
+  indice: Parenthèses, puis multiplication, puis addition.
+  etapes:
+  - type: calcul
+    titre: Parenthèses
+    texte: $5 - 9 = -4$.
+  - type: calcul
+    titre: Produit
+    texte: $(-2) \times (-4) = 8$.
+  - type: conc
+    titre: Fin
+    texte: <mark>$B = -3 + 8 = 5$.</mark>

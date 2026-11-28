@@ -1,0 +1,55 @@
+questions:
+- question: La solution de $2x + 4 = 10$ est…
+  choix:
+  - '7'
+  - '3'
+  - '2'
+  - '5'
+  bonne: 1
+  explication: $2x = 6$.
+  revoir: cours
+- question: $x^2 = 25$ a pour solutions…
+  choix:
+  - 5 seulement
+  - 5 et -5
+  - 12,5
+  - aucune
+  bonne: 1
+  explication: Deux solutions.
+  revoir: cours
+- question: $-x > 3$ équivaut à…
+  choix:
+  - $x > -3$
+  - $x < -3$
+  - $x > 3$
+  - $x < 3$
+  bonne: 1
+  explication: On change le sens.
+  revoir: cours
+- question: $(x - 1)(x + 7) = 0$ a pour solutions…
+  choix:
+  - 1 et -7
+  - -1 et 7
+  - 1 et 7
+  - '0'
+  bonne: 0
+  explication: Un facteur nul.
+  revoir: cours
+- question: $x^2 = -9$ a…
+  choix:
+  - deux solutions
+  - une solution
+  - aucune solution
+  - une infinité
+  bonne: 2
+  explication: Un carré est positif.
+  revoir: cours
+- question: $3x \leqslant 12$ équivaut à…
+  choix:
+  - $x \leqslant 4$
+  - $x \geqslant 4$
+  - $x \leqslant 9$
+  - $x = 4$
+  bonne: 0
+  explication: On divise par 3, positif.
+  revoir: cours
