@@ -1,0 +1,51 @@
+exercices:
+- titre: Quelle limite ?
+  difficulte: 1
+  type: application
+  enonce: |
+    Associer : (a) l'Himalaya, (b) le milieu de l'océan Atlantique, (c) la côte du Chili.
+  indice: Collision, dorsale, subduction.
+  etapes:
+  - type: conc
+    titre: Les réponses
+    texte: <mark>(a) collision, (b) dorsale, (c) subduction</mark>.
+- titre: L'Atlantique s'élargit
+  difficulte: 2
+  type: methode
+  enonce: |
+    L'océan Atlantique s'élargit d'environ 2,5 cm par an. De combien s'est-il élargi en 100 millions d'années ? Donner le résultat en km.
+  indice: 1 km = 100 000 cm.
+  etapes:
+  - type: calcul
+    titre: En cm
+    texte: $2{,}5 \times 100\,000\,000 = 2{,}5 \times 10^{8}$ cm.
+  - type: conc
+    titre: En km
+    texte: <mark>$2{,}5 \times 10^{8} / 10^{5} = 2\,500$ km</mark>.
+- titre: La mer de lave
+  difficulte: 2
+  type: piege
+  enonce: |
+    « Les plaques bougent car elles flottent sur un océan de lave liquide. » Corriger.
+  indice: Sous la lithosphère, la roche est-elle liquide ?
+  etapes:
+  - type: piege
+    titre: L'erreur
+    texte: Le dessous des plaques n'est pas liquide.
+  - type: conc
+    titre: La correction
+    texte: <mark>Les plaques glissent sur une roche solide, très chaude, qui se déforme lentement</mark>. Le magma n'existe que dans certaines zones, comme sous les volcans.
+- titre: Les fossiles de Mesosaurus
+  difficulte: 3
+  type: brevet
+  enonce: |
+    Mesosaurus est un petit reptile d'eau douce qui vivait il y a 280 millions d'années. On trouve ses fossiles au Brésil et en Afrique du Sud, mais nulle part ailleurs. Il ne pouvait pas traverser un océan.
+    Comment expliquer cette répartition ?
+  indice: Les continents ont-ils toujours été à leur place actuelle ?
+  etapes:
+  - type: calcul
+    titre: Le problème
+    texte: Un animal d'eau douce ne peut pas traverser l'Atlantique.
+  - type: conc
+    titre: L'explication
+    texte: <mark>À cette époque, l'Amérique du Sud et l'Afrique étaient collées</mark> ; les continents se sont séparés ensuite. C'est un argument en faveur du mouvement des plaques.

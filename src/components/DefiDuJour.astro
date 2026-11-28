@@ -1,33 +1,35 @@
 ---
-// Le défi du jour : une question par jour et par niveau, la même pour tout le monde.
-// Répondre chaque jour fait grandir la série (comptée sur l'appareil, sans compte ni cookie).
-const niveaux = [
-  ['6e', '6e'], ['5e', '5e'], ['4e', '4e'], ['3e', '3e'], ['seconde', '2de'], ['premiere', '1re'], ['terminale', 'Tle'],
-];
+// Le défi du jour d'une matière : une question par jour et par niveau, la même pour tout le monde.
+// Sur la page d'une matière, l'élève choisit son niveau ; sur la page d'un niveau, le niveau est fixé.
+// La série (jours d'affilée) est commune à toutes les matières, comptée sur l'appareil, sans compte ni cookie.
+interface Props { matiere: string; niveaux: { slug: string; court: string }[]; fixe?: string }
+const { matiere, niveaux, fixe } = Astro.props;
 ---
-<section class="dj" id="defi" aria-labelledby="t-defi" data-defi>
+<section class="dj" id="defi" aria-labelledby="t-defi" data-defi={matiere} data-fixe={fixe} data-seul={niveaux.length === 1 ? niveaux[0].slug : undefined}>
   <div class="dj-tete">
     <div>
-      <span class="dj-k">Une question par jour</span>
+      <span class="dj-k">Une question par jour · la série compte pour toutes les matières</span>
       <h2 id="t-defi">Le défi du jour</h2>
     </div>
     <div class="dj-serie" data-serie title="Ta série : le nombre de jours d'affilée où tu as répondu">
-      <svg viewBox="0 0 40 52" aria-hidden="true"><path d="M20 2 C 30 16 38 24 38 34 A 18 18 0 0 1 2 34 C 2 26 8 20 12 14 C 14 22 18 24 20 24 C 16 16 16 9 20 2 Z" fill="#FF7AA8" /><path d="M20 28 C 25 33 28 37 28 41 A 8 8 0 0 1 12 41 C 12 37 15 33 20 28 Z" fill="#F2E94E" /></svg>
+      <svg viewBox="0 0 40 50" aria-hidden="true"><circle cx="20" cy="33" r="15" fill="#FF7AA8" /><polygon points="20,0 35,30 5,30" fill="#FF7AA8" /><circle cx="20" cy="37" r="7.5" fill="#F2E94E" /><rect x="5" y="46" width="30" height="4" fill="#2B2BD9" /></svg>
       <span><b data-serie-n>0</b><small data-serie-txt>jour d'affilée</small></span>
     </div>
   </div>
-  <div class="dj-niveaux" role="group" aria-label="Ton niveau">
-    {niveaux.map(([slug, court]) => <button type="button" data-niveau={slug} aria-pressed="false">{court}</button>)}
-  </div>
+  {!fixe && niveaux.length > 1 && (
+    <div class="dj-niveaux" role="group" aria-label="Ton niveau">
+      {niveaux.map((n) => <button type="button" data-niveau={n.slug} aria-pressed="false">{n.court}</button>)}
+    </div>
+  )}
   <div class="dj-carte" data-carte aria-live="polite">
-    <p class="dj-attente">Choisis ton niveau pour voir la question du jour.</p>
+    <p class="dj-attente">{fixe || niveaux.length === 1 ? 'Chargement de la question…' : 'Choisis ton niveau pour voir la question du jour.'}</p>
   </div>
 </section>
 
 <script>
   const track = (e: string, d?: object) => (window as any).umami?.track(e, d);
   type Q = { q: string; c: string[]; b: number; e: string; h: string; t: string; m: string };
-  type Etat = { niveau?: string; dernier?: number; serie?: number; record?: number; jour?: number; faits?: Record<string, number>; questions?: Record<string, Q> };
+  type Etat = { niveaux?: Record<string, string>; dernier?: number; serie?: number; record?: number; jour?: number; faits?: Record<string, number>; questions?: Record<string, Q> };
   const CLE = 'defi-du-jour';
   const lire = (): Etat => { try { return JSON.parse(localStorage.getItem(CLE) || '{}'); } catch { return {}; } };
   const ecrire = (e: Etat) => { try { localStorage.setItem(CLE, JSON.stringify(e)); } catch { /* navigation privée */ } };
@@ -37,6 +39,7 @@ const niveaux = [
 
   const racine = document.querySelector<HTMLElement>('[data-defi]');
   if (racine) {
+    const matiere = racine.dataset.defi!;
     const carte = racine.querySelector<HTMLElement>('[data-carte]')!;
     const boutons = [...racine.querySelectorAll<HTMLButtonElement>('[data-niveau]')];
     const jour = aujourdhui();
@@ -55,9 +58,10 @@ const niveaux = [
     };
 
     const dessiner = (niveau: string, q: Q) => {
-      const deja = etat.faits?.[niveau];
+      const cle = `${matiere}/${niveau}`;
+      const deja = etat.faits?.[cle];
       carte.innerHTML = `
-        <a class="dj-source" href="${q.h}">${q.m} · ${q.t}</a>
+        <a class="dj-source" href="${q.h}">${q.t}</a>
         <p class="qtext">${q.q}</p>
         <div class="ans">${q.c.map((c, i) => `<button type="button" data-c="${i}"><span class="lt">${lettres[i]}</span><span>${c}</span></button>`).join('')}</div>
         <div class="fb" data-fb hidden><b data-fb-titre></b><div>${q.e}</div><a href="${q.h}cours/">Revoir le chapitre →</a></div>
@@ -79,7 +83,7 @@ const niveaux = [
       btns.forEach((b) => b.addEventListener('click', () => {
         const choix = Number(b.dataset.c);
         etat = lire();
-        etat.faits = { ...(etat.faits ?? {}), [niveau]: choix };
+        etat.faits = { ...(etat.faits ?? {}), [cle]: choix };
         if (etat.dernier !== jour) {
           etat.serie = etat.dernier === jour - 1 ? (etat.serie ?? 0) + 1 : 1;
           etat.dernier = jour;
@@ -88,25 +92,26 @@ const niveaux = [
         ecrire(etat);
         afficherSerie();
         montrer(choix, true);
-        track('defi-du-jour', { niveau, reussi: choix === q.b, serie: etat.serie });
+        track('defi-du-jour', { matiere, niveau, reussi: choix === q.b, serie: etat.serie });
       }));
       if (deja !== undefined) montrer(deja, false);
     };
 
     const charger = async (niveau: string) => {
       boutons.forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.niveau === niveau)));
-      etat = lire(); etat.niveau = niveau; ecrire(etat);
+      etat = lire(); etat.niveaux = { ...(etat.niveaux ?? {}), [matiere]: niveau }; ecrire(etat);
+      const cle = `${matiere}/${niveau}`;
       // La question du jour est gardée une fois tirée : une mise à jour du site dans la journée ne la change pas.
-      let q = etat.questions?.[niveau];
+      let q = etat.questions?.[cle];
       if (!q) {
         carte.innerHTML = '<p class="dj-attente">Chargement de la question…</p>';
         try {
-          const r = await fetch(`/defi/${niveau}.json`);
+          const r = await fetch(`/defi/${matiere}/${niveau}.json`);
           const { questions } = await r.json() as { questions: Q[] };
           if (!questions.length) { carte.innerHTML = '<p class="dj-attente">Pas encore de question pour ce niveau.</p>'; return; }
           const h = Math.imul(jour ^ 0x9e3779b9, 2654435761) >>> 0;
           q = questions[h % questions.length];
-          etat = lire(); etat.questions = { ...(etat.questions ?? {}), [niveau]: q }; ecrire(etat);
+          etat = lire(); etat.questions = { ...(etat.questions ?? {}), [cle]: q }; ecrire(etat);
         } catch { carte.innerHTML = '<p class="dj-attente">La question n\'a pas pu se charger. Vérifie ta connexion.</p>'; return; }
       }
       dessiner(niveau, q);
@@ -114,7 +119,10 @@ const niveaux = [
 
     boutons.forEach((b) => b.addEventListener('click', () => charger(b.dataset.niveau!)));
     afficherSerie();
-    if (etat.niveau) charger(etat.niveau);
+    const fixe = racine.dataset.fixe || (boutons.length === 0 ? racine.dataset.seul : undefined);
+    const garde = etat.niveaux?.[matiere];
+    if (fixe) charger(fixe);
+    else if (garde && boutons.some((b) => b.dataset.niveau === garde)) charger(garde);
   }
 </script>
 
@@ -124,8 +132,8 @@ const niveaux = [
   .dj-k { font-size: .8rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: var(--encre-2); }
   .dj h2 { font-size: clamp(2.2rem, 5vw, 4rem); font-weight: 800; font-stretch: 75%; letter-spacing: -.035em; line-height: .9; margin-top: 6px; }
   .dj-serie { display: flex; align-items: center; gap: 12px; padding: 10px 16px 10px 12px; background: var(--encre); color: var(--feuille); }
-  .dj-serie svg { width: 34px; height: 44px; flex: none; filter: grayscale(1) opacity(.55); transition: filter .4s; }
-  .dj-serie.vive svg { filter: none; }
+  .dj-serie svg { width: 34px; height: 44px; flex: none; opacity: .4; transition: opacity .4s; }
+  .dj-serie.vive svg { opacity: 1; }
   .dj-serie b { display: block; font-family: var(--f-titre); font-size: 2rem; font-weight: 800; line-height: 1; }
   .dj-serie small { display: block; font-size: .78rem; opacity: .8; max-width: 210px; }
   .dj-niveaux { display: flex; flex-wrap: wrap; gap: 8px; }

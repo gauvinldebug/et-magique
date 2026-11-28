@@ -1,6 +1,7 @@
 ---
 import Base from '../../../layouts/Base.astro';
 import Bandeau from '../../../components/Bandeau.astro';
+import DefiDuJour from '../../../components/DefiDuJour.astro';
 import { MATIERES, niveauxDe, nomDans } from '../../../data/site';
 import { programmeNiveau } from '../../../lib/contenu';
 export async function getStaticPaths() {
@@ -41,6 +42,7 @@ const nbDispo = liste.filter((c) => c.dispo).length;
           </li>
         ))}
       </ul>
+      {nbDispo > 0 && <div class="dj-niveau"><DefiDuJour matiere={matiere.slug} niveaux={[{ slug: niveau.slug, court: niveau.court }]} fixe={niveau.slug} /></div>}
       <div class="nextstep"><span>Un chapitre te manque ?</span><a class="btn ghost" href={`/demandes/?niveau=${niveau.slug}`}>Le demander</a></div>
     </div>
   </div>

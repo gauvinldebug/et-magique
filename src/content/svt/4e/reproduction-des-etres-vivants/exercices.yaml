@@ -1,0 +1,51 @@
+exercices:
+- titre: Sexuée ou asexuée ?
+  difficulte: 1
+  type: application
+  enonce: |
+    Classer : une bouture de géranium, un poussin qui sort d'un œuf, un stolon de fraisier, une graine de haricot.
+  indice: Y a-t-il eu des gamètes et une fécondation ?
+  etapes:
+  - type: conc
+    titre: Le classement
+    texte: '<mark>Asexuée : bouture, stolon. Sexuée : poussin, graine.</mark>'
+- titre: Le rôle des abeilles
+  difficulte: 2
+  type: methode
+  enonce: |
+    On entoure des branches de pommier d'un filet fin qui empêche les insectes de passer. Ces branches donnent 10 fois moins de pommes que les autres. Conclure.
+  indice: Qu'est-ce que le filet empêche ?
+  etapes:
+  - type: calcul
+    titre: L'effet du filet
+    texte: Les insectes ne peuvent plus transporter le pollen d'une fleur à l'autre.
+  - type: conc
+    titre: La conclusion
+    texte: <mark>La pollinisation par les insectes est nécessaire à la formation des pommes</mark>.
+- titre: Pollinisation et fécondation
+  difficulte: 2
+  type: piege
+  enonce: |
+    « La pollinisation, c'est quand le pollen féconde l'ovule. » Corriger.
+  indice: Deux étapes distinctes.
+  etapes:
+  - type: piege
+    titre: L'erreur
+    texte: Elle mélange le transport du pollen et l'union des gamètes.
+  - type: conc
+    titre: La correction
+    texte: <mark>La pollinisation est le transport du pollen ; la fécondation est l'union d'un gamète mâle et d'un ovule</mark>, qui vient après.
+- titre: La pomme de terre
+  difficulte: 3
+  type: brevet
+  enonce: |
+    Un agriculteur plante des tubercules d'une variété de pomme de terre. Toute la récolte a exactement les mêmes caractères. Une maladie apparaît, et tout le champ est touché d'un coup.
+    Expliquer pourquoi, en parlant du mode de reproduction.
+  indice: Les plants issus de tubercules sont-ils différents ?
+  etapes:
+  - type: calcul
+    titre: Le mode
+    texte: 'Les tubercules donnent des plants par reproduction asexuée : tous identiques.'
+  - type: conc
+    titre: La conséquence
+    texte: <mark>Si un plant est sensible à la maladie, tous le sont</mark>. La reproduction sexuée, qui crée de la diversité, rend une population moins fragile.

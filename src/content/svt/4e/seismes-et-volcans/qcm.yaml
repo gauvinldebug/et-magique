@@ -1,0 +1,55 @@
+questions:
+- question: Un séisme est dû à…
+  choix:
+  - une explosion de gaz
+  - la rupture brutale de roches
+  - la pluie
+  - un volcan seulement
+  bonne: 1
+  explication: Le long d'une faille.
+  revoir: cours
+- question: L'épicentre est…
+  choix:
+  - le point de rupture en profondeur
+  - le point en surface au-dessus du foyer
+  - le cratère d'un volcan
+  - une onde
+  bonne: 1
+  explication: Le foyer est en profondeur.
+  revoir: cours
+- question: Le magma qui sort d'un volcan s'appelle…
+  choix:
+  - de la lave
+  - du granite
+  - un séisme
+  - une faille
+  bonne: 0
+  explication: Sous terre, c'est du magma.
+  revoir: cours
+- question: Une éruption explosive est liée à une lave…
+  choix:
+  - fluide
+  - pâteuse
+  - froide
+  - liquide comme de l'eau
+  bonne: 1
+  explication: Les gaz y restent piégés.
+  revoir: cours
+- question: Le sismographe enregistre…
+  choix:
+  - la température
+  - les ondes sismiques
+  - la lave
+  - la pluie
+  bonne: 1
+  explication: Sur un sismogramme.
+  revoir: cours
+- question: Séismes et volcans se trouvent surtout…
+  choix:
+  - au hasard
+  - le long de grandes lignes
+  - au centre des continents
+  - aux pôles
+  bonne: 1
+  explication: Ce sont les limites des plaques.
+  revoir: cours

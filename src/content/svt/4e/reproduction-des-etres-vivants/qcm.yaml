@@ -1,0 +1,55 @@
+questions:
+- question: La reproduction sexuée nécessite…
+  choix:
+  - un seul parent
+  - deux gamètes et une fécondation
+  - une bouture
+  - un tubercule
+  bonne: 1
+  explication: Elle crée des individus uniques.
+  revoir: cours
+- question: Le fruit se forme à partir…
+  choix:
+  - de l'étamine
+  - du pistil
+  - de la feuille
+  - de la racine
+  bonne: 1
+  explication: La graine, de l'ovule.
+  revoir: cours
+- question: La pollinisation, c'est…
+  choix:
+  - l'union des gamètes
+  - le transport du pollen
+  - la germination
+  - la chute des feuilles
+  bonne: 1
+  explication: Par le vent ou les insectes.
+  revoir: cours
+- question: Les individus issus d'une reproduction asexuée sont…
+  choix:
+  - tous différents
+  - identiques au parent
+  - toujours plus grands
+  - stériles
+  bonne: 1
+  explication: Comme des photocopies.
+  revoir: cours
+- question: Le stolon du fraisier est un exemple de…
+  choix:
+  - reproduction sexuée
+  - reproduction asexuée
+  - pollinisation
+  - fécondation
+  bonne: 1
+  explication: Une tige qui donne un nouveau plant.
+  revoir: cours
+- question: Chez les mammifères, la fécondation est…
+  choix:
+  - externe
+  - interne
+  - absente
+  - faite par le vent
+  bonne: 1
+  explication: Dans le corps de la femelle.
+  revoir: cours

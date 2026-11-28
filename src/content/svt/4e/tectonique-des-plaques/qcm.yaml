@@ -1,0 +1,55 @@
+questions:
+- question: La surface de la Terre est découpée en…
+  choix:
+  - une seule plaque
+  - une douzaine de grandes plaques
+  - des milliers de plaques
+  - deux moitiés
+  bonne: 1
+  explication: Elles forment la lithosphère.
+  revoir: cours
+- question: Les plaques se déplacent de…
+  choix:
+  - quelques cm par an
+  - quelques km par an
+  - quelques m par jour
+  - rien du tout
+  bonne: 0
+  explication: Comme la pousse des ongles.
+  revoir: cours
+- question: À une dorsale, les plaques…
+  choix:
+  - se rapprochent
+  - s'écartent
+  - ne bougent pas
+  - fondent
+  bonne: 1
+  explication: Une nouvelle lithosphère se forme.
+  revoir: cours
+- question: L'Himalaya est dû à…
+  choix:
+  - une dorsale
+  - une collision
+  - un volcan
+  - l'érosion
+  bonne: 1
+  explication: L'Inde a heurté l'Asie.
+  revoir: cours
+- question: Dans une subduction…
+  choix:
+  - une plaque plonge sous une autre
+  - deux plaques s'écartent
+  - une montagne s'enfonce
+  - l'océan gèle
+  bonne: 0
+  explication: Comme sous les Andes.
+  revoir: cours
+- question: Qui a proposé la dérive des continents en 1912 ?
+  choix:
+  - Darwin
+  - Wegener
+  - Pasteur
+  - Newton
+  bonne: 1
+  explication: Son idée a été acceptée 50 ans plus tard.
+  revoir: cours
