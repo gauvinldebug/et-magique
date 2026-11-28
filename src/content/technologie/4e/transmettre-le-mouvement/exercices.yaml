@@ -1,0 +1,53 @@
+exercices:
+- titre: Le sens de rotation
+  difficulte: 1
+  type: application
+  enonce: |
+    Trois roues dentées A, B, C engrènent à la suite. A tourne dans le sens des aiguilles d'une montre. Dans quel sens tourne C ?
+  indice: Chaque engrenage inverse le sens.
+  etapes:
+  - type: calcul
+    titre: B
+    texte: B tourne dans le sens inverse de A.
+  - type: conc
+    titre: C
+    texte: <mark>C tourne dans le sens inverse de B, donc dans le même sens que A.</mark>
+- titre: Calculer un rapport
+  difficulte: 2
+  type: methode
+  enonce: |
+    Un moteur tourne à 1200 tr/min. Sa roue de 12 dents entraîne une roue de 48 dents. Calculer le rapport et la vitesse de sortie.
+  indice: Menante sur menée.
+  etapes:
+  - type: calcul
+    titre: Rapport
+    texte: $r = \frac{12}{48} = 0{,}25$.
+  - type: conc
+    titre: Vitesse
+    texte: '<mark>$1200 \times 0{,}25 = 300$ tr/min : ça ralentit et on gagne de la force.</mark>'
+- titre: La courroie
+  difficulte: 2
+  type: piege
+  enonce: |
+    « Avec une courroie, les deux poulies tournent en sens contraires, comme un engrenage. » Corriger.
+  indice: Dessine la courroie autour des deux poulies.
+  etapes:
+  - type: piege
+    titre: L'erreur
+    texte: Confondre courroie et engrenage.
+  - type: conc
+    titre: Correction
+    texte: <mark>Avec une courroie droite, les deux poulies tournent dans le même sens.</mark>
+- titre: Le portail coulissant
+  difficulte: 3
+  type: methode
+  enonce: |
+    Un portail coulissant est ouvert par un moteur. Quel système transforme la rotation du moteur en translation du portail ? Expliquer.
+  indice: Une roue dentée et une barre dentée.
+  etapes:
+  - type: calcul
+    titre: Le système
+    texte: Un pignon fixé au moteur engrène sur une crémaillère fixée au portail.
+  - type: conc
+    titre: Le fonctionnement
+    texte: '<mark>Quand le pignon tourne, ses dents poussent celles de la crémaillère : le portail avance en ligne droite.</mark>'

@@ -1,0 +1,53 @@
+exercices:
+- titre: Quel réseau ?
+  difficulte: 1
+  type: application
+  enonce: |
+    Quel moyen de communication choisir pour : des écouteurs sans fil ; un capteur d'humidité au milieu d'un champ ; une enceinte dans le salon ?
+  indice: Compare les portées.
+  etapes:
+  - type: calcul
+    titre: Les deux premiers
+    texte: 'Écouteurs : Bluetooth. Capteur dans un champ : réseau longue portée.'
+  - type: conc
+    titre: L'enceinte
+    texte: <mark>Le Wi-Fi de la maison.</mark>
+- titre: Le trajet d'une donnée
+  difficulte: 2
+  type: methode
+  enonce: |
+    Une montre mesure ton rythme cardiaque, et tu vois la courbe sur ton téléphone. Décrire le trajet de la donnée.
+  indice: Objet, réseau, serveur, application.
+  etapes:
+  - type: calcul
+    titre: Les étapes
+    texte: La montre mesure, envoie par Bluetooth au téléphone, qui transmet au serveur du fabricant par Internet.
+  - type: conc
+    titre: L'affichage
+    texte: <mark>L'application récupère les données traitées sur le serveur et trace la courbe.</mark>
+- titre: Le Bluetooth du jardin
+  difficulte: 2
+  type: piege
+  enonce: |
+    Un élève veut recevoir chez lui, à 300 m, les mesures d'une station météo en Bluetooth. Pourquoi ça ne marchera pas ?
+  indice: Quelle est la portée du Bluetooth ?
+  etapes:
+  - type: piege
+    titre: L'erreur
+    texte: La portée du Bluetooth est d'une dizaine de mètres.
+  - type: conc
+    titre: Correction
+    texte: '<mark>Il faut un réseau à plus longue portée : Wi-Fi avec répéteur, réseau mobile ou réseau longue portée.</mark>'
+- titre: Données personnelles
+  difficulte: 3
+  type: methode
+  enonce: |
+    Une sonnette connectée filme toutes les personnes qui passent devant la porte. Quels problèmes cela pose-t-il ? Proposer deux précautions.
+  indice: Pense aux passants et au piratage.
+  etapes:
+  - type: calcul
+    titre: Les problèmes
+    texte: Elle filme des passants sans leur accord, et ses images peuvent être piratées.
+  - type: conc
+    titre: Les précautions
+    texte: <mark>Limiter le champ de la caméra à sa propriété, changer le mot de passe d'origine et faire les mises à jour.</mark>

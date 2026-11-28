@@ -1,0 +1,55 @@
+questions:
+- question: Un capteur transforme…
+  choix:
+  - une grandeur physique en signal électrique
+  - un signal électrique en mouvement
+  - de la lumière en son
+  - un programme en action
+  bonne: 0
+  explication: C'est l'actionneur qui agit.
+  revoir: cours
+- question: Lequel est un capteur logique ?
+  choix:
+  - capteur de température
+  - bouton-poussoir
+  - capteur de distance
+  - capteur de luminosité
+  bonne: 1
+  explication: Deux états seulement.
+  revoir: cours
+- question: Un servomoteur sert à…
+  choix:
+  - mesurer un angle
+  - tourner jusqu'à un angle précis
+  - éclairer
+  - émettre un son
+  bonne: 1
+  explication: C'est un actionneur.
+  revoir: cours
+- question: Un buzzer est…
+  choix:
+  - un capteur
+  - un actionneur
+  - un microcontrôleur
+  - une source d'énergie
+  bonne: 1
+  explication: Il émet un son.
+  revoir: cours
+- question: Le seuil est…
+  choix:
+  - une valeur à laquelle on compare la mesure
+  - un capteur
+  - une pile
+  - une erreur
+  bonne: 0
+  explication: Le programme décide grâce à lui.
+  revoir: cours
+- question: Qui décide d'allumer la lampe ?
+  choix:
+  - le capteur
+  - le programme
+  - la lampe
+  - la pile
+  bonne: 1
+  explication: Le capteur ne fait que mesurer.
+  revoir: cours

@@ -1,0 +1,53 @@
+exercices:
+- titre: Les rôles
+  difficulte: 1
+  type: application
+  enonce: |
+    Dans un collège, quel élément : relie les 30 ordinateurs d'une salle ? relie le collège à Internet ? stocke les fichiers des élèves ?
+  indice: Commutateur, routeur, serveur.
+  etapes:
+  - type: calcul
+    titre: Les deux premiers
+    texte: 'Les ordinateurs de la salle : un commutateur. Le lien vers Internet : un routeur.'
+  - type: conc
+    titre: Les fichiers
+    texte: <mark>Un serveur de fichiers.</mark>
+- titre: Le temps de téléchargement
+  difficulte: 2
+  type: methode
+  enonce: |
+    On télécharge un fichier de 100 Mo avec un débit de 40 Mbit/s. Combien de temps faut-il ?
+  indice: Convertir les octets en bits.
+  etapes:
+  - type: calcul
+    titre: Conversion
+    texte: $100 \text{ Mo} = 800 \text{ Mbit}$.
+  - type: conc
+    titre: Temps
+    texte: <mark>$800 \div 40 = 20$ secondes.</mark>
+- titre: Mo ou Mbit ?
+  difficulte: 2
+  type: piege
+  enonce: |
+    « Avec 100 Mbit/s, je télécharge un film de 1 000 Mo en 10 secondes. » Corriger.
+  indice: 1 octet = 8 bits.
+  etapes:
+  - type: piege
+    titre: L'erreur
+    texte: Il oublie que 1 Mo = 8 Mbit.
+  - type: conc
+    titre: Correction
+    texte: <mark>1 000 Mo = 8 000 Mbit, donc $8\,000 \div 100 = 80$ secondes.</mark>
+- titre: Un schéma de réseau
+  difficulte: 3
+  type: methode
+  enonce: |
+    Décrire le réseau d'une maison avec un ordinateur fixe, deux téléphones, une imprimante Wi-Fi et la box.
+  indice: Qui est relié par câble, qui par Wi-Fi ?
+  etapes:
+  - type: calcul
+    titre: Les liaisons
+    texte: L'ordinateur fixe est relié à la box par câble Ethernet ; les téléphones et l'imprimante par Wi-Fi.
+  - type: conc
+    titre: Le rôle de la box
+    texte: <mark>Elle forme le réseau local (commutateur et Wi-Fi) et le relie à Internet (routeur).</mark>

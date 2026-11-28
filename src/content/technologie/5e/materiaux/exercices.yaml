@@ -1,0 +1,53 @@
+exercices:
+- titre: Classer
+  difficulte: 1
+  type: application
+  enonce: |
+    Classer dans leur famille : verre, cuivre, PVC, chêne, fibre de carbone, porcelaine.
+  indice: 'Cinq familles : métaux, plastiques, organiques, céramiques et verres, composites.'
+  etapes:
+  - type: calcul
+    titre: Classement
+    texte: 'Cuivre : métal. PVC : plastique. Chêne : organique. Verre et porcelaine : céramiques et verres.'
+  - type: conc
+    titre: Le dernier
+    texte: <mark>La fibre de carbone est un composite.</mark>
+- titre: La casserole
+  difficulte: 2
+  type: methode
+  enonce: |
+    Expliquer le choix des matériaux d'une casserole : fond en inox, poignée en bakélite (plastique).
+  indice: Quelle propriété thermique est utile à chaque partie ?
+  etapes:
+  - type: calcul
+    titre: Le fond
+    texte: L'inox conduit la chaleur vers les aliments et ne rouille pas.
+  - type: conc
+    titre: La poignée
+    texte: '<mark>La bakélite est un isolant thermique : on peut la tenir sans se brûler.</mark>'
+- titre: Le meilleur matériau
+  difficulte: 2
+  type: piege
+  enonce: |
+    « Pour un cadre de vélo, il faut toujours prendre le carbone, c'est le meilleur. » Corriger.
+  indice: Pense au prix et aux chocs.
+  etapes:
+  - type: piege
+    titre: L'erreur
+    texte: Croire qu'un matériau est meilleur en tout.
+  - type: conc
+    titre: Correction
+    texte: <mark>Le carbone est très léger, mais cher, difficile à réparer et mal recyclé. Pour un vélo de ville, l'acier ou l'aluminium conviennent mieux.</mark>
+- titre: Une bouteille
+  difficulte: 3
+  type: methode
+  enonce: |
+    On hésite entre une bouteille en verre et une bouteille en plastique PET. Comparer selon trois critères.
+  indice: Masse, solidité, recyclage.
+  etapes:
+  - type: calcul
+    titre: Masse et casse
+    texte: Le PET est bien plus léger et ne casse pas ; le verre est lourd et fragile.
+  - type: conc
+    titre: Environnement
+    texte: <mark>Le verre se recycle à l'infini et peut être consigné ; le PET se recycle moins bien. Le choix dépend du critère prioritaire.</mark>

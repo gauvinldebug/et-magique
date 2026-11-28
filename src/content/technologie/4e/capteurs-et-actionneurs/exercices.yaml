@@ -1,0 +1,53 @@
+exercices:
+- titre: Logique ou analogique ?
+  difficulte: 1
+  type: application
+  enonce: |
+    Classer : bouton de sonnette, capteur de température, interrupteur de fin de course, capteur de distance à ultrasons.
+  indice: Deux états ou une valeur qui varie ?
+  etapes:
+  - type: calcul
+    titre: Logiques
+    texte: Bouton de sonnette, fin de course.
+  - type: conc
+    titre: Analogiques
+    texte: <mark>Capteur de température, capteur de distance.</mark>
+- titre: L'éclairage du couloir
+  difficulte: 2
+  type: methode
+  enonce: |
+    Un couloir doit s'éclairer quand quelqu'un passe et qu'il fait sombre. Quels capteurs et quel actionneur ? Écrire la condition.
+  indice: Deux capteurs sont nécessaires.
+  etapes:
+  - type: calcul
+    titre: Les composants
+    texte: Détecteur de présence (logique), capteur de luminosité (analogique), lampe (actionneur).
+  - type: conc
+    titre: La condition
+    texte: <mark>Si présence détectée ET luminosité inférieure au seuil, alors allumer la lampe.</mark>
+- titre: La force du bouton
+  difficulte: 2
+  type: piege
+  enonce: |
+    Un élève veut savoir avec quelle force on appuie sur un bouton-poussoir. Pourquoi est-ce impossible avec ce capteur ?
+  indice: Combien d'états a un bouton ?
+  etapes:
+  - type: piege
+    titre: L'erreur
+    texte: Un bouton est un capteur logique.
+  - type: conc
+    titre: Correction
+    texte: <mark>Il ne donne que « appuyé » ou « relâché ». Il faut un capteur de force analogique.</mark>
+- titre: Régler le seuil
+  difficulte: 3
+  type: methode
+  enonce: |
+    Un capteur de luminosité donne 800 en plein jour, 450 par temps couvert, 120 la nuit. On veut allumer l'éclairage extérieur seulement la nuit. Proposer un seuil et justifier.
+  indice: Le seuil doit séparer la nuit du jour couvert.
+  etapes:
+  - type: calcul
+    titre: Comparer
+    texte: 'La nuit donne 120 et le jour couvert 450 : le seuil doit être entre les deux.'
+  - type: conc
+    titre: Choix
+    texte: '<mark>Un seuil vers 250 : on allume si la mesure est inférieure à 250, avec une marge des deux côtés.</mark>'

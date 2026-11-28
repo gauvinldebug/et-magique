@@ -1,0 +1,55 @@
+questions:
+- question: Le routeur…
+  choix:
+  - relie des réseaux différents
+  - relie les machines d'un même réseau
+  - stocke les fichiers
+  - imprime
+  bonne: 0
+  explication: Le commutateur relie dans un réseau.
+  revoir: cours
+- question: L'adresse gravée dans la carte réseau est…
+  choix:
+  - l'adresse IP
+  - l'adresse MAC
+  - l'URL
+  - le DNS
+  bonne: 1
+  explication: Elle ne change pas.
+  revoir: cours
+- question: 1 octet vaut…
+  choix:
+  - 2 bits
+  - 4 bits
+  - 8 bits
+  - 10 bits
+  bonne: 2
+  explication: À retenir pour les débits.
+  revoir: cours
+- question: Une machine qui fournit un service est…
+  choix:
+  - un client
+  - un serveur
+  - un commutateur
+  - un câble
+  bonne: 1
+  explication: Le client demande.
+  revoir: cours
+- question: Une box contient…
+  choix:
+  - seulement un modem
+  - un routeur, un commutateur et une borne Wi-Fi
+  - un serveur web
+  - une imprimante
+  bonne: 1
+  explication: Elle fait plusieurs choses.
+  revoir: cours
+- question: La fibre optique transporte les données grâce à…
+  choix:
+  - l'électricité
+  - la lumière
+  - le son
+  - les ondes radio
+  bonne: 1
+  explication: D'où son débit élevé.
+  revoir: cours

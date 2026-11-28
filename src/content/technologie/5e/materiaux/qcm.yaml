@@ -1,0 +1,55 @@
+questions:
+- question: Le béton armé est…
+  choix:
+  - un métal
+  - une céramique
+  - un composite
+  - un plastique
+  bonne: 2
+  explication: Béton et acier mélangés.
+  revoir: cours
+- question: Un isolant thermique…
+  choix:
+  - laisse passer la chaleur
+  - retient la chaleur
+  - conduit l'électricité
+  - est toujours un métal
+  bonne: 1
+  explication: Laine, bois, plastique.
+  revoir: cours
+- question: Quelle famille conduit l'électricité ?
+  choix:
+  - les métaux
+  - les plastiques
+  - le verre
+  - le bois sec
+  bonne: 0
+  explication: D'où les fils de cuivre.
+  revoir: cours
+- question: Le PET est…
+  choix:
+  - un métal
+  - une matière plastique
+  - un bois
+  - un verre
+  bonne: 1
+  explication: Les bouteilles d'eau.
+  revoir: cours
+- question: Lequel se recycle très bien ?
+  choix:
+  - un composite carbone
+  - l'aluminium
+  - le polystyrène
+  - un mélange de plastiques
+  bonne: 1
+  explication: On le recycle sans perte de qualité.
+  revoir: cours
+- question: Choisir un matériau se fait d'après…
+  choix:
+  - sa couleur seulement
+  - le cahier des charges
+  - le plus cher
+  - le plus léger toujours
+  bonne: 1
+  explication: Plusieurs critères à comparer.
+  revoir: cours

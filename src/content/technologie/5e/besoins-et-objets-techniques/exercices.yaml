@@ -1,0 +1,53 @@
+exercices:
+- titre: La fonction d'usage
+  difficulte: 1
+  type: application
+  enonce: |
+    Donner la fonction d'usage d'une lampe de poche, d'un réveil et d'une gourde.
+  indice: 'Une phrase : « sert à… ».'
+  etapes:
+  - type: calcul
+    titre: Les deux premiers
+    texte: 'Lampe de poche : éclairer en se déplaçant. Réveil : réveiller à une heure choisie.'
+  - type: conc
+    titre: La gourde
+    texte: <mark>Transporter de l'eau pour boire partout.</mark>
+- titre: Fonctions et solutions
+  difficulte: 2
+  type: methode
+  enonce: |
+    Pour une trottinette, associer chaque fonction technique à une solution : se déplacer en roulant, freiner, se diriger, se replier.
+  indice: Regarde chaque partie de la trottinette.
+  etapes:
+  - type: calcul
+    titre: Associer
+    texte: 'Rouler : roues avec roulements. Freiner : frein au pied sur la roue arrière. Se diriger : guidon relié à la roue avant.'
+  - type: conc
+    titre: Se replier
+    texte: <mark>Une charnière avec un verrou au niveau du plateau.</mark>
+- titre: Le critère flou
+  difficulte: 2
+  type: piege
+  enonce: |
+    Un cahier des charges dit : « Le sac doit être solide. » Pourquoi est-ce insuffisant ? Proposer une meilleure formulation.
+  indice: Comment vérifier « solide » ?
+  etapes:
+  - type: piege
+    titre: L'erreur
+    texte: « Solide » n'est ni mesurable ni chiffré.
+  - type: conc
+    titre: Correction
+    texte: '<mark>Critère : masse supportée ; niveau : au moins 10 kg sans se déchirer.</mark>'
+- titre: L'évolution du téléphone
+  difficulte: 3
+  type: methode
+  enonce: |
+    Citer trois étapes de l'évolution du téléphone et, pour chacune, ce qui a permis le changement.
+  indice: Pense aux matériaux et à l'électronique.
+  etapes:
+  - type: calcul
+    titre: Fixe puis portable
+    texte: Téléphone fixe à fil, puis téléphone portable grâce aux réseaux radio et aux batteries.
+  - type: conc
+    titre: Smartphone
+    texte: <mark>Le smartphone grâce aux écrans tactiles, aux processeurs miniaturisés et à Internet mobile.</mark>

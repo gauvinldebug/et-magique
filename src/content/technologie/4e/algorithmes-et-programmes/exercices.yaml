@@ -1,0 +1,56 @@
+exercices:
+- titre: Lire un programme
+  difficulte: 1
+  type: application
+  enonce: |
+    Que fait ce programme ? « mettre score à 0 ; répéter 3 fois : ajouter 2 à score ». Quelle est la valeur finale de score ?
+  indice: Suis la variable à chaque tour.
+  etapes:
+  - type: calcul
+    titre: Les tours
+    texte: 0, puis 2, puis 4, puis 6.
+  - type: conc
+    titre: Réponse
+    texte: <mark>score vaut 6.</mark>
+- titre: Le ventilateur
+  difficulte: 2
+  type: methode
+  enonce: |
+    Écrire l'algorithme d'un ventilateur qui tourne quand la température dépasse 26 °C et s'arrête sinon.
+  indice: Boucle infinie et condition à l'intérieur.
+  etapes:
+  - type: calcul
+    titre: Structure
+    texte: 'Répéter indéfiniment : lire la température.'
+  - type: conc
+    titre: Condition
+    texte: <mark>Si température > 26 alors démarrer le moteur, sinon arrêter le moteur.</mark>
+- titre: La condition oubliée
+  difficulte: 2
+  type: piege
+  enonce: |
+    Un élève écrit : « si bouton appuyé alors allumer la LED », puis « répéter indéfiniment : attendre 1 s ». La LED ne s'allume jamais quand il appuie. Pourquoi ?
+  indice: Quand la condition est-elle testée ?
+  etapes:
+  - type: piege
+    titre: L'erreur
+    texte: 'La condition est hors de la boucle : elle n''est testée qu''au démarrage.'
+  - type: conc
+    titre: Correction
+    texte: <mark>Mettre le test du bouton à l'intérieur de la boucle.</mark>
+- titre: Le robot aspirateur
+  difficulte: 3
+  type: methode
+  enonce: |
+    Décrire l'algorithme simplifié d'un robot aspirateur qui avance, tourne s'il touche un obstacle et rentre à sa base si sa batterie passe sous 15 %.
+  indice: Deux conditions dans une boucle.
+  etapes:
+  - type: calcul
+    titre: La boucle
+    texte: 'Répéter indéfiniment : avancer.'
+  - type: calcul
+    titre: Obstacle
+    texte: Si capteur de contact appuyé alors reculer un peu et tourner.
+  - type: conc
+    titre: Batterie
+    texte: <mark>Si batterie < 15 % alors rejoindre la base et arrêter la boucle.</mark>

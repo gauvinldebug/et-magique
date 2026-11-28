@@ -1,0 +1,53 @@
+exercices:
+- titre: Classer les fonctions
+  difficulte: 1
+  type: application
+  enonce: |
+    Pour un sèche-mains automatique, associer : détecteur infrarouge, carte électronique, relais, moteur et résistance chauffante, réseau 230 V.
+  indice: Acquérir, traiter, alimenter, distribuer, convertir.
+  etapes:
+  - type: calcul
+    titre: Information
+    texte: 'Détecteur : acquérir. Carte électronique : traiter.'
+  - type: conc
+    titre: Énergie
+    texte: '<mark>Réseau : alimenter. Relais : distribuer. Moteur et résistance : convertir.</mark>'
+- titre: Le store automatique
+  difficulte: 2
+  type: methode
+  enonce: |
+    Un store descend quand le soleil est fort. Décrire les deux chaînes.
+  indice: Quel capteur ? Quel actionneur ?
+  etapes:
+  - type: calcul
+    titre: Information
+    texte: 'Acquérir : capteur de luminosité. Traiter : microcontrôleur compare à un seuil. Communiquer : ordre au distributeur.'
+  - type: conc
+    titre: Énergie
+    texte: '<mark>Alimenter : secteur. Distribuer : relais. Convertir : moteur. Transmettre : enrouleur du store.</mark>'
+- titre: Le relais qui convertit
+  difficulte: 2
+  type: piege
+  enonce: |
+    « Le relais convertit l'énergie électrique pour le moteur. » Corriger.
+  indice: Que fait un relais ?
+  etapes:
+  - type: piege
+    titre: L'erreur
+    texte: Confondre distribuer et convertir.
+  - type: conc
+    titre: Correction
+    texte: '<mark>Le relais laisse passer ou coupe l''énergie électrique : il distribue. C''est le moteur qui convertit.</mark>'
+- titre: Le feu clignotant
+  difficulte: 3
+  type: methode
+  enonce: |
+    Le portail allume un feu orange pendant qu'il bouge. À quelle chaîne et quelle fonction appartient ce feu ? Pourquoi est-il utile ?
+  indice: À qui s'adresse-t-il ?
+  etapes:
+  - type: calcul
+    titre: Sa place
+    texte: Il appartient à la chaîne d'information, fonction communiquer.
+  - type: conc
+    titre: Son utilité
+    texte: '<mark>Il prévient les personnes autour que le portail bouge : c''est une sécurité.</mark>'
