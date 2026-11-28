@@ -1,0 +1,56 @@
+exercices:
+- titre: Fibonacci à la main
+  difficulte: 1
+  type: application
+  enonce: |
+    Remplir le tableau ascendant de Fibonacci jusqu'à $F_{10}$.
+  indice: Chaque case est la somme des deux précédentes.
+  etapes:
+  - type: calcul
+    titre: Le tableau
+    texte: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55.
+  - type: conc
+    titre: La réponse
+    texte: <mark>$F_{10} = 55$.</mark>
+- titre: Compter les appels
+  difficulte: 2
+  type: methode
+  enonce: |
+    Avec la version naïve `fibo(n) = fibo(n-1) + fibo(n-2)`, combien de fois `fibo(2)` est-il appelé lors du calcul de `fibo(5)` ?
+  indice: Dessiner l'arbre des appels.
+  etapes:
+  - type: calcul
+    titre: L'arbre
+    texte: '`fibo(5)` appelle `fibo(4)` et `fibo(3)`. `fibo(4)` appelle `fibo(3)` et `fibo(2)`. Chaque `fibo(3)` appelle `fibo(2)` et `fibo(1)`.'
+  - type: conc
+    titre: Le compte
+    texte: <mark>`fibo(2)` est appelé 3 fois</mark> (une par `fibo(4)`, une par chacun des deux `fibo(3)`). Avec la mémoïsation, une seule fois.
+- titre: Le glouton trompé
+  difficulte: 2
+  type: piege
+  enonce: |
+    Pièces de 1, 3 et 4. Un élève applique l'algorithme glouton pour rendre 6. Combien de pièces obtient-il ? Est-ce optimal ?
+  indice: Le glouton prend la plus grosse pièce possible.
+  etapes:
+  - type: piege
+    titre: Le glouton
+    texte: '4, puis 1, puis 1 : 3 pièces.'
+  - type: conc
+    titre: L'optimum
+    texte: '<mark>3 + 3 n''utilise que 2 pièces</mark> : le glouton n''est pas optimal ici, la programmation dynamique trouve la bonne réponse.'
+- titre: Rendu de monnaie
+  difficulte: 3
+  type: bac
+  enonce: |
+    Avec les pièces 1, 3 et 4, remplir le tableau `nb[s]` du cours pour $s$ de 0 à 6 et en déduire le nombre minimal de pièces pour 6.
+  indice: '`nb[s]` = 1 + le minimum de `nb[s - p]` pour chaque pièce `p ≤ s`.'
+  etapes:
+  - type: calcul
+    titre: Les premières cases
+    texte: nb[0] = 0, nb[1] = 1, nb[2] = 2, nb[3] = 1, nb[4] = 1.
+  - type: calcul
+    titre: La suite
+    texte: nb[5] = 1 + min(nb[4], nb[2], nb[1]) = 2. nb[6] = 1 + min(nb[5], nb[3], nb[2]) = 1 + 1 = 2.
+  - type: conc
+    titre: La réponse
+    texte: <mark>2 pièces pour rendre 6</mark> (3 + 3).

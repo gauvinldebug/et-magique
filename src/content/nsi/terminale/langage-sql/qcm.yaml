@@ -1,0 +1,55 @@
+questions:
+- question: Quel mot-clé filtre les lignes ?
+  choix:
+  - SELECT
+  - FROM
+  - WHERE
+  - ORDER BY
+  bonne: 2
+  explication: La condition sur les lignes.
+  revoir: cours
+- question: '`ORDER BY annee DESC` trie…'
+  choix:
+  - par année croissante
+  - par année décroissante
+  - par ordre alphabétique
+  - au hasard
+  bonne: 1
+  explication: 'DESC : décroissant.'
+  revoir: cours
+- question: 'Pour compter les lignes d''une table :'
+  choix:
+  - SUM(*)
+  - COUNT(*)
+  - TOTAL(*)
+  - NUMBER(*)
+  bonne: 1
+  explication: COUNT compte.
+  revoir: cours
+- question: Une jointure sert à…
+  choix:
+  - supprimer des lignes
+  - croiser les données de deux tables
+  - trier une table
+  - créer une base
+  bonne: 1
+  explication: On relie clé étrangère et clé primaire.
+  revoir: cours
+- question: '`SELECT DISTINCT ville FROM Client` donne…'
+  choix:
+  - toutes les villes avec doublons
+  - chaque ville une seule fois
+  - le nombre de villes
+  - la première ville
+  bonne: 1
+  explication: DISTINCT supprime les doublons.
+  revoir: cours
+- question: '`UPDATE Client SET ville = ''Lyon''` sans WHERE…'
+  choix:
+  - ne fait rien
+  - modifie tous les clients
+  - modifie le premier client
+  - provoque une erreur
+  bonne: 1
+  explication: Toute la table est touchée.
+  revoir: cours

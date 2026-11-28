@@ -1,0 +1,55 @@
+questions:
+- question: Dans un graphe orienté, les liens s'appellent…
+  choix:
+  - des arêtes
+  - des arcs
+  - des feuilles
+  - des racines
+  bonne: 1
+  explication: Ils ont un sens.
+  revoir: cours
+- question: Le degré d'un sommet est…
+  choix:
+  - son numéro
+  - son nombre de voisins
+  - la longueur du plus long chemin
+  - la somme des poids
+  bonne: 1
+  explication: On compte les voisins.
+  revoir: cours
+- question: La matrice d'adjacence d'un graphe non orienté est…
+  choix:
+  - diagonale
+  - symétrique
+  - nulle
+  - triangulaire
+  bonne: 1
+  explication: Si i est relié à j, j est relié à i.
+  revoir: cours
+- question: Pour un réseau social de millions de membres ayant peu d'amis chacun, on préfère…
+  choix:
+  - la matrice d'adjacence
+  - la liste d'adjacence
+  - un tableau trié
+  - une pile
+  bonne: 1
+  explication: Mémoire proportionnelle au nombre de liens.
+  revoir: cours
+- question: Un cycle est…
+  choix:
+  - un chemin qui revient à son départ
+  - un sommet sans voisin
+  - une arête pondérée
+  - un arbre
+  bonne: 0
+  explication: On revient au point de départ.
+  revoir: cours
+- question: Un graphe pondéré a…
+  choix:
+  - des sommets colorés
+  - des arêtes qui portent une valeur
+  - forcément un cycle
+  - un seul sommet
+  bonne: 1
+  explication: Distance, durée ou coût.
+  revoir: cours

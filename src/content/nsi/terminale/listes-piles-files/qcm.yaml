@@ -1,0 +1,55 @@
+questions:
+- question: Une pile fonctionne en…
+  choix:
+  - FIFO
+  - LIFO
+  - ordre alphabétique
+  - ordre aléatoire
+  bonne: 1
+  explication: Dernier entré, premier sorti.
+  revoir: cours
+- question: Le bouton « Annuler » utilise plutôt…
+  choix:
+  - une file
+  - une pile
+  - un dictionnaire
+  - un arbre
+  bonne: 1
+  explication: On défait la dernière action d'abord.
+  revoir: cours
+- question: On enfile A, B, C dans une file puis on défile. On obtient…
+  choix:
+  - A
+  - B
+  - C
+  - rien
+  bonne: 0
+  explication: Premier arrivé, premier servi.
+  revoir: cours
+- question: 'En Python, pour dépiler une liste utilisée comme pile :'
+  choix:
+  - pop(0)
+  - pop()
+  - remove()
+  - insert()
+  bonne: 1
+  explication: On retire le dernier élément.
+  revoir: cours
+- question: L'interface d'une structure de données décrit…
+  choix:
+  - comment elle est codée
+  - les opérations qu'on peut faire
+  - sa taille en mémoire
+  - son nom
+  bonne: 1
+  explication: L'implémentation décrit le comment.
+  revoir: cours
+- question: Dans une liste chaînée, accéder au 1000e élément demande…
+  choix:
+  - une opération
+  - de suivre environ 1000 liens
+  - de trier la liste
+  - rien
+  bonne: 1
+  explication: On part de la tête et on suit les liens.
+  revoir: cours

@@ -1,0 +1,55 @@
+questions:
+- question: Le problème de l'arrêt est…
+  choix:
+  - décidable
+  - indécidable
+  - résolu par Python
+  - un problème de réseau
+  bonne: 1
+  explication: Prouvé par Turing en 1936.
+  revoir: cours
+- question: La preuve de l'indécidabilité est une preuve…
+  choix:
+  - par récurrence
+  - par l'absurde
+  - expérimentale
+  - statistique
+  bonne: 1
+  explication: On suppose que arret existe et on obtient une contradiction.
+  revoir: cours
+- question: Un problème décidable est un problème…
+  choix:
+  - facile
+  - pour lequel un algorithme répond toujours correctement en temps fini
+  - déjà résolu à la main
+  - sans réponse
+  bonne: 1
+  explication: Oui ou non, pour toute entrée.
+  revoir: cours
+- question: La machine de Turing est…
+  choix:
+  - un ordinateur des années 1990
+  - un modèle abstrait de calcul
+  - un langage de programmation
+  - un routeur
+  bonne: 1
+  explication: Un ruban, une tête, des règles.
+  revoir: cours
+- question: Un compilateur montre qu'un programme peut être…
+  choix:
+  - une donnée d'un autre programme
+  - un processus
+  - un fichier image
+  - un réseau
+  bonne: 0
+  explication: Il lit du code.
+  revoir: cours
+- question: Peut-on savoir si certains programmes particuliers s'arrêtent ?
+  choix:
+  - jamais
+  - oui, dans certains cas
+  - seulement avec une IA
+  - seulement en C
+  bonne: 1
+  explication: C'est le cas général qui est impossible.
+  revoir: cours

@@ -1,0 +1,55 @@
+questions:
+- question: Dans une table, une ligne s'appelle…
+  choix:
+  - un attribut
+  - un n-uplet
+  - un domaine
+  - un schéma
+  bonne: 1
+  explication: On dit aussi enregistrement.
+  revoir: cours
+- question: Une clé primaire…
+  choix:
+  - peut se répéter
+  - identifie chaque ligne de façon unique
+  - est toujours un nom
+  - est facultative
+  bonne: 1
+  explication: Unique et non vide.
+  revoir: cours
+- question: Une clé étrangère renvoie à…
+  choix:
+  - une autre base
+  - la clé primaire d'une autre table
+  - un fichier texte
+  - un attribut vide
+  bonne: 1
+  explication: Elle relie deux tables.
+  revoir: cours
+- question: Le domaine d'un attribut, c'est…
+  choix:
+  - son nom
+  - le type de ses valeurs
+  - sa position
+  - sa table
+  bonne: 1
+  explication: Entier, texte, date…
+  revoir: cours
+- question: Pourquoi ne pas recopier l'adresse d'un lecteur dans chaque emprunt ?
+  choix:
+  - c'est interdit en SQL
+  - pour éviter les incohérences lors d'une modification
+  - pour aller plus vite à l'écrit
+  - les adresses sont secrètes
+  bonne: 1
+  explication: Une seule copie, une seule correction.
+  revoir: cours
+- question: SQLite est…
+  choix:
+  - un langage de programmation
+  - un système de gestion de bases de données
+  - un navigateur
+  - un protocole réseau
+  bonne: 1
+  explication: Un SGBD léger.
+  revoir: cours

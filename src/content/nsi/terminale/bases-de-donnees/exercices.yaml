@@ -1,0 +1,56 @@
+exercices:
+- titre: Lire un schéma
+  difficulte: 1
+  type: application
+  enonce: |
+    Schéma : `Eleve(id_eleve, nom, prenom, #id_classe)` et `Classe(id_classe, niveau, salle)`. Donner les clés primaires et la clé étrangère. Que représente `#id_classe` ?
+  indice: 'Le # signale une clé étrangère.'
+  etapes:
+  - type: calcul
+    titre: Les clés
+    texte: 'Clés primaires : `id_eleve` et `id_classe`. Clé étrangère : `id_classe` dans `Eleve`.'
+  - type: conc
+    titre: Le sens
+    texte: <mark>`#id_classe` indique la classe de l'élève</mark>, en renvoyant à une ligne de la table `Classe`.
+- titre: Concevoir un schéma
+  difficulte: 2
+  type: methode
+  enonce: |
+    Un club de sport veut enregistrer ses adhérents (nom, téléphone), ses activités (nom, tarif) et les inscriptions (un adhérent à une activité, à une date). Proposer un schéma relationnel.
+  indice: Une table par type d'objet, et une table pour les inscriptions qui relie les deux.
+  etapes:
+  - type: calcul
+    titre: Les tables
+    texte: '`Adherent(id_adherent, nom, telephone)` et `Activite(id_activite, nom, tarif)`.'
+  - type: conc
+    titre: La table de liaison
+    texte: '<mark>`Inscription(id_inscription, #id_adherent, #id_activite, date)`</mark> : chaque inscription renvoie à un adhérent et à une activité.'
+- titre: La mauvaise clé
+  difficulte: 2
+  type: piege
+  enonce: |
+    Un élève propose `Client(nom, prenom, ville)` avec `nom` comme clé primaire. Que se passe-t-il quand deux clients s'appellent Martin ?
+  indice: Que garantit une clé primaire ?
+  etapes:
+  - type: piege
+    titre: L'erreur
+    texte: 'Une clé primaire doit être unique : le SGBD refusera d''enregistrer le deuxième Martin.'
+  - type: conc
+    titre: La correction
+    texte: '<mark>Ajouter un identifiant unique</mark> : `Client(id_client, nom, prenom, ville)`.'
+- titre: Contraintes d'intégrité
+  difficulte: 3
+  type: bac
+  enonce: |
+    Avec les tables `Livre`, `Lecteur` et `Emprunt` du cours, dire quelle contrainte est violée par chaque opération : (a) insérer un livre avec un `id_livre` déjà utilisé ; (b) insérer un emprunt avec `id_lecteur = 999` alors qu'aucun lecteur n'a ce numéro ; (c) supprimer un lecteur qui a des emprunts enregistrés.
+  indice: Domaine, relation ou référence ?
+  etapes:
+  - type: calcul
+    titre: (a)
+    texte: 'Contrainte de relation : la clé primaire doit être unique.'
+  - type: calcul
+    titre: (b)
+    texte: 'Contrainte de référence : la clé étrangère doit exister dans `Lecteur`.'
+  - type: conc
+    titre: (c)
+    texte: '<mark>Contrainte de référence</mark> : des emprunts pointeraient vers un lecteur disparu.'

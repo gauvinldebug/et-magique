@@ -1,0 +1,56 @@
+exercices:
+- titre: Coûts OSPF
+  difficulte: 1
+  type: application
+  enonce: |
+    Calculer le coût OSPF d'une liaison à 1 Gbit/s, à 100 Mbit/s et à 10 Mbit/s.
+  indice: Coût = $10^8$ / débit en bit/s.
+  etapes:
+  - type: calcul
+    titre: Les calculs
+    texte: $10^8 / 10^9 = 0{,}1$ ; $10^8 / 10^8 = 1$ ; $10^8 / 10^7 = 10$.
+  - type: conc
+    titre: Les coûts
+    texte: <mark>0,1, 1 et 10.</mark> En pratique, le coût est arrondi à 1 au minimum.
+- titre: RIP ou OSPF
+  difficulte: 2
+  type: methode
+  enonce: |
+    Pour aller de A à D, deux routes : A → B → D, avec deux liaisons à 10 Mbit/s ; A → C → E → D, avec trois liaisons à 1 Gbit/s (coût 1 chacune après arrondi). Quelle route choisit RIP ? Et OSPF ?
+  indice: RIP compte les sauts, OSPF additionne les coûts.
+  etapes:
+  - type: calcul
+    titre: RIP
+    texte: 'A → B → D : 2 sauts. A → C → E → D : 3 sauts. RIP choisit A → B → D.'
+  - type: calcul
+    titre: OSPF
+    texte: 'A → B → D : 10 + 10 = 20. A → C → E → D : 1 + 1 + 1 = 3. OSPF choisit A → C → E → D.'
+  - type: conc
+    titre: La conclusion
+    texte: <mark>RIP choisit le chemin court, OSPF le chemin rapide.</mark>
+- titre: Le coût à l'envers
+  difficulte: 2
+  type: piege
+  enonce: |
+    « Une liaison à 1 Gbit/s a un plus gros coût OSPF qu'une liaison à 10 Mbit/s, puisque le débit est plus grand. » Corriger.
+  indice: Où est le débit dans la formule ?
+  etapes:
+  - type: piege
+    titre: L'erreur
+    texte: 'Le débit est au dénominateur : plus il est grand, plus le coût est petit.'
+  - type: conc
+    titre: La correction
+    texte: '<mark>La liaison rapide coûte moins</mark> (environ 1) que la lente (10) : OSPF la préfère.'
+- titre: Mettre à jour une table RIP
+  difficulte: 3
+  type: bac
+  enonce: |
+    Le routeur R1 a dans sa table : réseau N à distance 4 par R3. Son voisin R2 lui annonce : « je joins N en 2 sauts ». Que fait R1 ?
+  indice: Par R2, la distance est celle annoncée plus un saut.
+  etapes:
+  - type: calcul
+    titre: La comparaison
+    texte: 'Par R2 : 2 + 1 = 3 sauts, contre 4 par R3.'
+  - type: conc
+    titre: La mise à jour
+    texte: '<mark>R1 remplace sa route : N à distance 3, passerelle R2.</mark>'

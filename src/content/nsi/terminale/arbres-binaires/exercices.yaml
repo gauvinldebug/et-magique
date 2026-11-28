@@ -1,0 +1,56 @@
+exercices:
+- titre: Vocabulaire
+  difficulte: 1
+  type: application
+  enonce: |
+    On considère l'arbre de racine A, avec A → gauche B, droit C ; B → gauche D ; C → gauche E, droit F. Donner la taille, la hauteur (racine seule : hauteur 1) et les feuilles.
+  indice: Compter les nœuds, puis le plus long chemin.
+  etapes:
+  - type: calcul
+    titre: Taille et hauteur
+    texte: 6 nœuds. Le plus long chemin, par exemple A, B, D, contient 3 nœuds.
+  - type: conc
+    titre: La réponse
+    texte: <mark>Taille 6, hauteur 3, feuilles D, E et F.</mark>
+- titre: Les trois parcours
+  difficulte: 2
+  type: methode
+  enonce: |
+    Donner les parcours préfixe, infixe et suffixe de l'arbre de l'exercice précédent.
+  indice: Appliquer la règle récursivement à chaque sous-arbre.
+  etapes:
+  - type: calcul
+    titre: Préfixe
+    texte: A B D C E F.
+  - type: calcul
+    titre: Infixe
+    texte: D B A E C F.
+  - type: conc
+    titre: Suffixe
+    texte: <mark>D B E F C A.</mark>
+- titre: La hauteur décalée
+  difficulte: 2
+  type: piege
+  enonce: |
+    Un sujet dit : « la hauteur d'un arbre réduit à sa racine vaut 0 ». Un élève utilise la fonction `hauteur` du cours. Que doit-il changer ?
+  indice: Comparer les deux conventions sur un exemple.
+  etapes:
+  - type: piege
+    titre: Le décalage
+    texte: 'Avec la convention du cours, la racine seule a une hauteur de 1. Avec celle du sujet, 0 : tous les résultats sont décalés de 1.'
+  - type: conc
+    titre: La correction
+    texte: '<mark>L''arbre vide doit alors avoir une hauteur de −1</mark> : on remplace `return 0` par `return -1` dans le cas de base.'
+- titre: Compter les feuilles
+  difficulte: 3
+  type: bac
+  enonce: |
+    Écrire une fonction récursive `nb_feuilles(a)` qui renvoie le nombre de feuilles d'un arbre binaire construit avec la classe `Noeud` du cours.
+  indice: 'Trois cas : arbre vide, feuille, nœud interne.'
+  etapes:
+  - type: methode
+    titre: Les cas
+    texte: 'Arbre vide : 0. Feuille (deux fils à None) : 1. Sinon, on additionne les feuilles des deux sous-arbres.'
+  - type: conc
+    titre: La fonction
+    texte: "```python\ndef nb_feuilles(a):\n    if a is None:\n        return 0\n    if a.gauche is None and a.droit is None:\n        return 1\n    return nb_feuilles(a.gauche) + nb_feuilles(a.droit)\n```"

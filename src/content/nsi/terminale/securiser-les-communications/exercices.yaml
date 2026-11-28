@@ -1,0 +1,59 @@
+exercices:
+- titre: Chiffre de César
+  difficulte: 1
+  type: application
+  enonce: |
+    Chiffrer le mot NSI avec le chiffre de César de clé 3, puis déchiffrer QXLW.
+  indice: Décaler de 3 vers l'avant pour chiffrer, vers l'arrière pour déchiffrer.
+  etapes:
+  - type: calcul
+    titre: Chiffrer
+    texte: 'N → Q, S → V, I → L : QVL.'
+  - type: conc
+    titre: Déchiffrer
+    texte: <mark>NSI devient QVL, et QXLW se déchiffre en NUIT.</mark>
+- titre: Le XOR
+  difficulte: 2
+  type: methode
+  enonce: |
+    Message 1011, clé 0110. Calculer le message chiffré avec XOR, puis montrer qu'un deuxième XOR avec la clé redonne le message.
+  indice: 'XOR : 1 si les deux bits sont différents.'
+  etapes:
+  - type: calcul
+    titre: Chiffrer
+    texte: 1011 XOR 0110 = 1101.
+  - type: calcul
+    titre: Déchiffrer
+    texte: 1101 XOR 0110 = 1011.
+  - type: conc
+    titre: La conclusion
+    texte: '<mark>On retrouve 1011</mark> : la même clé chiffre et déchiffre, c''est un chiffrement symétrique.'
+- titre: La mauvaise clé
+  difficulte: 2
+  type: piege
+  enonce: |
+    Alice veut envoyer un message secret à Bob. Elle le chiffre avec sa propre clé publique. Bob peut-il le lire ?
+  indice: Quelle clé déchiffre ce qu'a chiffré la clé publique d'Alice ?
+  etapes:
+  - type: piege
+    titre: L'erreur
+    texte: 'Seule la clé privée d''Alice peut déchiffrer ce message : Bob ne l''a pas.'
+  - type: conc
+    titre: La correction
+    texte: '<mark>Alice doit chiffrer avec la clé publique de Bob</mark> : seul Bob, avec sa clé privée, pourra lire.'
+- titre: Pourquoi HTTPS mélange les deux
+  difficulte: 3
+  type: bac
+  enonce: |
+    Expliquer pourquoi HTTPS n'utilise pas seulement le chiffrement asymétrique, ni seulement le symétrique.
+  indice: Penser à la vitesse et à l'échange de clé.
+  etapes:
+  - type: calcul
+    titre: Seulement symétrique
+    texte: 'Il faudrait transmettre la clé secrète au serveur sans protection : un espion la capterait.'
+  - type: calcul
+    titre: Seulement asymétrique
+    texte: 'Il est beaucoup plus lent : chiffrer toute une page ou une vidéo serait trop coûteux.'
+  - type: conc
+    titre: La solution
+    texte: <mark>L'asymétrique sert uniquement à échanger une clé symétrique</mark> ; tout le reste est chiffré en symétrique, rapide.

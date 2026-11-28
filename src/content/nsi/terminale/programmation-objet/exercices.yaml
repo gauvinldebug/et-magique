@@ -1,0 +1,67 @@
+exercices:
+- titre: Créer un objet
+  difficulte: 1
+  type: application
+  enonce: |
+    Avec la classe `Compte` du cours, que vaut `c.solde` après ces lignes ?
+
+    ```python
+    c = Compte("Tom")
+    c.deposer(100)
+    c.retirer(30)
+    c.retirer(200)
+    ```
+  indice: Le solde par défaut vaut 0. Un retrait trop gros est refusé.
+  etapes:
+  - type: calcul
+    titre: Ligne par ligne
+    texte: Solde 0, puis 100, puis 70. Le retrait de 200 est refusé (renvoie False).
+  - type: conc
+    titre: La réponse
+    texte: <mark>`c.solde` vaut 70.</mark>
+- titre: Une classe Point
+  difficulte: 2
+  type: methode
+  enonce: |
+    Écrire une classe `Point` avec deux attributs `x` et `y`, et une méthode `distance_origine` qui renvoie la distance du point à l'origine.
+  indice: 'Distance : $\sqrt{x^2 + y^2}$.'
+  etapes:
+  - type: conc
+    titre: La classe
+    texte: "```python\nfrom math import sqrt\n\nclass Point:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\n\n    def distance_origine(self):\n        return sqrt(self.x ** 2 + self.y ** 2)\n```"
+- titre: Le self oublié
+  difficulte: 2
+  type: piege
+  enonce: |
+    Un élève écrit :
+
+    ```python
+    class Chat:
+        def __init__(self, nom):
+            nom = nom
+        def miauler(self):
+            return self.nom + " miaule"
+    ```
+
+    `Chat("Félix").miauler()` provoque une erreur. Pourquoi ?
+  indice: Où l'attribut est-il créé ?
+  etapes:
+  - type: piege
+    titre: L'erreur
+    texte: '`nom = nom` crée une variable locale, pas un attribut : l''objet n''a pas d''attribut `nom`.'
+  - type: conc
+    titre: La correction
+    texte: <mark>Il faut écrire `self.nom = nom`</mark> dans le constructeur.
+- titre: Un chronomètre
+  difficulte: 3
+  type: bac
+  enonce: |
+    Écrire une classe `Duree` qui stocke des heures, minutes et secondes, avec une méthode `en_secondes()` et une méthode `ajouter(s)` qui ajoute `s` secondes en gardant minutes et secondes entre 0 et 59.
+  indice: Passer par le total en secondes, puis reconvertir avec // et %.
+  etapes:
+  - type: methode
+    titre: L'idée
+    texte: 'On convertit tout en secondes, on ajoute, puis on redécoupe : heures = total // 3600, minutes = (total % 3600) // 60, secondes = total % 60.'
+  - type: conc
+    titre: La classe
+    texte: "```python\nclass Duree:\n    def __init__(self, h, m, s):\n        self.h, self.m, self.s = h, m, s\n\n    def en_secondes(self):\n        return 3600 * self.h + 60 * self.m + self.s\n\n    def ajouter(self, s):\n        t = self.en_secondes() + s\n        self.h = t // 3600\n        self.m = (t % 3600) // 60\n        self.s = t % 60\n```"

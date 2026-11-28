@@ -1,0 +1,55 @@
+questions:
+- question: Une feuille est un nœud…
+  choix:
+  - sans parent
+  - sans sous-arbre non vide
+  - avec deux fils
+  - à la racine
+  bonne: 1
+  explication: Ses deux sous-arbres sont vides.
+  revoir: cours
+- question: La taille d'un arbre est…
+  choix:
+  - son nombre de nœuds
+  - sa hauteur
+  - son nombre de feuilles
+  - la valeur de la racine
+  bonne: 0
+  explication: On compte tous les nœuds.
+  revoir: cours
+- question: Le parcours infixe visite…
+  choix:
+  - racine, gauche, droit
+  - gauche, racine, droit
+  - gauche, droit, racine
+  - niveau par niveau
+  bonne: 1
+  explication: La racine au milieu.
+  revoir: cours
+- question: Le parcours en largeur utilise…
+  choix:
+  - une pile
+  - une file
+  - un tri
+  - un dictionnaire
+  bonne: 1
+  explication: On traite les nœuds niveau par niveau.
+  revoir: cours
+- question: 'Un arbre binaire de hauteur 3 (racine seule : 1) a au plus…'
+  choix:
+  - 3 nœuds
+  - 6 nœuds
+  - 7 nœuds
+  - 8 nœuds
+  bonne: 2
+  explication: 1 + 2 + 4 = 7.
+  revoir: cours
+- question: Le parcours suffixe de l'arbre de (3 + 4) × 2 donne…
+  choix:
+  - '* + 3 4 2'
+  - 3 4 + 2 *
+  - 3 + 4 * 2
+  - 2 * 3 + 4
+  bonne: 1
+  explication: Gauche, droit, puis racine.
+  revoir: cours

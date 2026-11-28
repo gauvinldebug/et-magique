@@ -1,0 +1,53 @@
+exercices:
+- titre: Lire une liste d'adjacence
+  difficulte: 1
+  type: application
+  enonce: |
+    Avec `g = {"A": ["B", "C", "D"], "B": ["A"], "C": ["A", "D"], "D": ["A", "C"]}`, donner le degré de chaque sommet et un cycle.
+  indice: Le degré est la longueur de la liste.
+  etapes:
+  - type: calcul
+    titre: Les degrés
+    texte: 'A : 3, B : 1, C : 2, D : 2.'
+  - type: conc
+    titre: Un cycle
+    texte: <mark>A, C, D, A</mark> est un cycle.
+- titre: Matrice d'adjacence
+  difficulte: 2
+  type: methode
+  enonce: |
+    Écrire la matrice d'adjacence du graphe précédent, en numérotant A, B, C, D de 0 à 3.
+  indice: Case (i, j) à 1 si i et j sont voisins.
+  etapes:
+  - type: calcul
+    titre: Les lignes
+    texte: 'A (0) : voisins 1, 2, 3. B (1) : voisin 0. C (2) : voisins 0, 3. D (3) : voisins 0, 2.'
+  - type: conc
+    titre: La matrice
+    texte: '$$\begin{pmatrix} 0 & 1 & 1 & 1 \\ 1 & 0 & 0 & 0 \\ 1 & 0 & 0 & 1 \\ 1 & 0 & 1 & 0 \end{pmatrix}$$ <mark>Elle est symétrique : le graphe est non orienté.</mark>'
+- titre: L'arête à sens unique
+  difficulte: 2
+  type: piege
+  enonce: |
+    Un élève code un graphe non orienté de villes : `g = {"Paris": ["Lyon"], "Lyon": []}`. Son programme dit qu'on ne peut pas aller de Lyon à Paris. Pourquoi ?
+  indice: Que contient la liste de Lyon ?
+  etapes:
+  - type: piege
+    titre: L'erreur
+    texte: 'L''arête n''a été écrite que dans un sens : le graphe est devenu orienté.'
+  - type: conc
+    titre: La correction
+    texte: '<mark>`g = {"Paris": ["Lyon"], "Lyon": ["Paris"]}`</mark> : chaque arête est écrite dans les deux sens.'
+- titre: Ajouter une arête
+  difficulte: 3
+  type: bac
+  enonce: |
+    Écrire une fonction `ajouter_arete(g, a, b)` qui ajoute une arête entre `a` et `b` dans un graphe non orienté représenté par un dictionnaire, en créant les sommets s'ils n'existent pas et sans créer de doublon.
+  indice: Tester l'existence de la clé, puis du voisin.
+  etapes:
+  - type: methode
+    titre: L'idée
+    texte: On crée la liste vide si le sommet manque, puis on ajoute chaque extrémité dans la liste de l'autre si elle n'y est pas.
+  - type: conc
+    titre: La fonction
+    texte: "```python\ndef ajouter_arete(g, a, b):\n    for s in (a, b):\n        if s not in g:\n            g[s] = []\n    if b not in g[a]:\n        g[a].append(b)\n    if a not in g[b]:\n        g[b].append(a)\n```"

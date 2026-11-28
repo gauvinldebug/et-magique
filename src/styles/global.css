@@ -26,7 +26,7 @@
   --ok-doux: rgba(30, 158, 104, .11);
   --piege-doux: rgba(214, 69, 69, .09);
   --indice-doux: rgba(217, 130, 43, .13);
-  --physique: #0E8C8C; --svt: #4C8F2F; --histoire: #B5562F; --francais: #8A3FA0;
+  --physique: #0E8C8C; --svt: #4C8F2F; --histoire: #B5562F; --francais: #8A3FA0; --nsi: #1A1A40;
   --matiere: var(--terme);
   --f-titre: "Bricolage Grotesque Variable", "Bricolage Grotesque", "Arial Narrow", sans-serif;
   --f-texte: "Bricolage Grotesque Variable", "Bricolage Grotesque", system-ui, sans-serif;
@@ -46,7 +46,7 @@
     --encre: #FFFFFF; --encre-2: #B4B4D0; --nuit: #08081A;
     --terme: #5B9BEB; --indice: #EBA35A; --ok: #3DC48C; --piege: #EF6B6B; --surligneur: rgba(242, 233, 78, .32); --sur-texte: #FFFFFF;
     --terme-doux: rgba(91, 155, 235, .15); --ok-doux: rgba(61, 196, 140, .14); --piege-doux: rgba(239, 107, 107, .14); --indice-doux: rgba(235, 163, 90, .15);
-    --physique: #3DB8B8; --svt: #7CC05A; --histoire: #E0825A; --francais: #C07AD4;
+    --physique: #3DB8B8; --svt: #7CC05A; --histoire: #E0825A; --francais: #C07AD4; --nsi: #F2E94E;
     color-scheme: dark;
   }
 }
@@ -55,7 +55,7 @@
     --encre: #FFFFFF; --encre-2: #B4B4D0; --nuit: #08081A;
     --terme: #5B9BEB; --indice: #EBA35A; --ok: #3DC48C; --piege: #EF6B6B; --surligneur: rgba(242, 233, 78, .32); --sur-texte: #FFFFFF;
     --terme-doux: rgba(91, 155, 235, .15); --ok-doux: rgba(61, 196, 140, .14); --piege-doux: rgba(239, 107, 107, .14); --indice-doux: rgba(235, 163, 90, .15);
-    --physique: #3DB8B8; --svt: #7CC05A; --histoire: #E0825A; --francais: #C07AD4;
+    --physique: #3DB8B8; --svt: #7CC05A; --histoire: #E0825A; --francais: #C07AD4; --nsi: #F2E94E;
     color-scheme: dark;
 }
 
@@ -1023,6 +1023,8 @@ a.poster:hover { color: var(--txt); transform: translate(-4px, -4px); box-shadow
 .s-nav { --nav-fond: var(--bleu); background: var(--nav-fond); color: #fff; border-bottom: 0; }
 html[data-matiere="physique"] .s-nav { --nav-fond: #0E7C7C; }
 html[data-matiere="svt"] .s-nav { --nav-fond: #127C59; }
+html[data-matiere="nsi"] .s-nav { --nav-fond: #1A1A40; }
+html[data-matiere="technologie"] .s-nav { --nav-fond: #B8442A; }
 .s-nav::after { content: ""; position: absolute; left: 0; right: 0; bottom: -8px; height: 8px; pointer-events: none;
   background: linear-gradient(90deg, var(--jaune) 0 22%, var(--rose) 22% 31%, #1A1A40 31% 34%, transparent 34% 66%, var(--jaune) 66% 69%, var(--rose) 69% 100%); }
 .s-nav .wordmark { color: #fff; }
@@ -1056,3 +1058,9 @@ html[data-matiere="svt"] .s-nav { --nav-fond: #127C59; }
 .cours-video p { margin: 4px 0 0; color: var(--encre-2); font-size: .92rem; }
 @media (max-width: 560px) { .cours-video { grid-template-columns: 1fr; } }
 .dj-niveau { margin: 48px 0 8px; }
+
+/* Code coloré (cours) : thème clair par défaut, sombre avec le site */
+.astro-code { background: var(--carte) !important; }
+.astro-code, .astro-code span { color: var(--shiki-light); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .astro-code span { color: var(--shiki-dark); } }
+:root[data-theme="dark"] .astro-code span { color: var(--shiki-dark); }

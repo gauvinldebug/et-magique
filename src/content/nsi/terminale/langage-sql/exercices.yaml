@@ -1,0 +1,82 @@
+exercices:
+- titre: Une requête simple
+  difficulte: 1
+  type: application
+  enonce: |
+    Table `Film(id, titre, realisateur, annee, duree)`. Écrire la requête qui donne le titre et l'année des films de plus de 120 minutes, du plus récent au plus ancien.
+  indice: Filtre sur `duree`, tri décroissant sur `annee`.
+  etapes:
+  - type: conc
+    titre: La requête
+    texte: '```sql
+
+      SELECT titre, annee
+
+      FROM Film
+
+      WHERE duree > 120
+
+      ORDER BY annee DESC;
+
+      ```'
+- titre: Une jointure
+  difficulte: 2
+  type: methode
+  enonce: |
+    Tables `Eleve(id_eleve, nom, #id_classe)` et `Classe(id_classe, niveau, salle)`. Écrire la requête qui donne le nom des élèves qui ont cours en salle B12.
+  indice: Relier `Eleve.id_classe` à `Classe.id_classe`.
+  etapes:
+  - type: methode
+    titre: La jointure
+    texte: On joint les deux tables sur l'identifiant de classe, puis on filtre sur la salle.
+  - type: conc
+    titre: La requête
+    texte: '```sql
+
+      SELECT Eleve.nom
+
+      FROM Eleve
+
+      JOIN Classe ON Eleve.id_classe = Classe.id_classe
+
+      WHERE Classe.salle = ''B12'';
+
+      ```'
+- titre: Le DELETE de trop
+  difficulte: 2
+  type: piege
+  enonce: |
+    Pour supprimer le film d'identifiant 8, un élève tape `DELETE FROM Film;`. Que se passe-t-il ?
+  indice: Quelle ligne est visée ?
+  etapes:
+  - type: piege
+    titre: L'erreur
+    texte: 'Sans `WHERE`, la condition est vraie pour toutes les lignes : tous les films sont supprimés.'
+  - type: conc
+    titre: La correction
+    texte: <mark>`DELETE FROM Film WHERE id = 8;`</mark>
+- titre: Statistiques
+  difficulte: 3
+  type: bac
+  enonce: |
+    Avec la table `Film`, écrire les requêtes qui donnent : (a) le nombre de films de 2023 ; (b) la durée moyenne des films de Varda ; (c) la liste sans doublon des réalisateurs ; (d) passer la durée du film d'identifiant 3 à 95 minutes.
+  indice: COUNT, AVG, DISTINCT, UPDATE.
+  etapes:
+  - type: calcul
+    titre: (a) et (b)
+    texte: '```sql
+
+      SELECT COUNT(*) FROM Film WHERE annee = 2023;
+
+      SELECT AVG(duree) FROM Film WHERE realisateur = ''Varda'';
+
+      ```'
+  - type: conc
+    titre: (c) et (d)
+    texte: '```sql
+
+      SELECT DISTINCT realisateur FROM Film;
+
+      UPDATE Film SET duree = 95 WHERE id = 3;
+
+      ```'

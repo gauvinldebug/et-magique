@@ -1,0 +1,56 @@
+exercices:
+- titre: Recherche naïve
+  difficulte: 1
+  type: application
+  enonce: |
+    Combien de positions la recherche naïve teste-t-elle pour chercher un motif de 3 lettres dans un texte de 10 lettres ?
+  indice: Le motif doit tenir entièrement dans le texte.
+  etapes:
+  - type: calcul
+    titre: Le compte
+    texte: Positions de 0 à 10 − 3 = 7.
+  - type: conc
+    titre: La réponse
+    texte: <mark>8 positions.</mark>
+- titre: Table des décalages
+  difficulte: 2
+  type: methode
+  enonce: |
+    Construire la table des décalages de Boyer-Moore-Horspool pour le motif `MAMAN`.
+  indice: 'Pour chaque lettre sauf la dernière case : longueur − 1 − indice de sa dernière occurrence.'
+  etapes:
+  - type: calcul
+    titre: Les positions
+    texte: 'M A M A N, indices 0 à 4. Sans la dernière case : dernière occurrence de M en 2, de A en 3.'
+  - type: conc
+    titre: La table
+    texte: '<mark>M : 5 − 1 − 2 = 2. A : 5 − 1 − 3 = 1. Autres lettres (dont N) : 5.</mark>'
+- titre: Le mauvais sens
+  difficulte: 2
+  type: piege
+  enonce: |
+    Un élève compare le motif de gauche à droite et décale avec la lettre sous la première case du motif. Pourquoi est-ce une erreur ?
+  indice: Sur quelle lettre se base la table ?
+  etapes:
+  - type: piege
+    titre: L'erreur
+    texte: 'La table des décalages est construite par rapport à la fin du motif : utiliser la première case donne des sauts faux, qui peuvent rater des occurrences.'
+  - type: conc
+    titre: La règle
+    texte: <mark>On compare de droite à gauche et on décale selon la lettre alignée avec la dernière case du motif.</mark>
+- titre: Dérouler Horspool
+  difficulte: 3
+  type: bac
+  enonce: |
+    Chercher `CGAT` dans `ATCGTCGATG` avec Boyer-Moore-Horspool (table du cours). Donner les positions testées.
+  indice: Lettre du texte sous la dernière case du motif, puis décalage.
+  etapes:
+  - type: calcul
+    titre: Position 0
+    texte: 'ATCG contre CGAT : sous la dernière case, G, différent de T. Décalage de G : 2.'
+  - type: calcul
+    titre: Position 2
+    texte: 'CGTC : sous la dernière case, C. Échec. Décalage de C : 3.'
+  - type: conc
+    titre: Position 5
+    texte: '<mark>CGAT : correspondance complète, le motif est trouvé en position 5</mark>, après seulement 3 alignements.'

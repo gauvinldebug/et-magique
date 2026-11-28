@@ -1,0 +1,55 @@
+questions:
+- question: Un module Python est…
+  choix:
+  - une fonction
+  - un fichier .py qui regroupe des fonctions
+  - une boucle
+  - une variable
+  bonne: 1
+  explication: On l'utilise avec import.
+  revoir: cours
+- question: '`assert x > 0` …'
+  choix:
+  - affiche x
+  - ne fait rien si x > 0 et lève une erreur sinon
+  - rend x positif
+  - teste toutes les valeurs
+  bonne: 1
+  explication: AssertionError si la condition est fausse.
+  revoir: cours
+- question: La docstring d'une fonction sert à…
+  choix:
+  - l'accélérer
+  - la spécifier
+  - la cacher
+  - la tester automatiquement à chaque appel
+  bonne: 1
+  explication: Elle dit ce qu'elle fait et ce qu'elle attend.
+  revoir: cours
+- question: Un test qui passe prouve que la fonction…
+  choix:
+  - est toujours juste
+  - est juste sur ce cas
+  - est rapide
+  - n'a pas d'effet de bord
+  bonne: 1
+  explication: Il faut aussi tester les cas limites.
+  revoir: cours
+- question: '`int("douze")` lève une…'
+  choix:
+  - AssertionError
+  - ValueError
+  - RecursionError
+  - IndexError
+  bonne: 1
+  explication: Le texte n'est pas un entier.
+  revoir: cours
+- question: L'API d'un module, c'est…
+  choix:
+  - son code source
+  - les fonctions qu'il met à disposition et leur documentation
+  - son nom de fichier
+  - son auteur
+  bonne: 1
+  explication: On s'en sert sans lire le code.
+  revoir: cours

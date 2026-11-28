@@ -1,0 +1,55 @@
+questions:
+- question: Dans un ABR, le sous-arbre gauche d'un nœud contient…
+  choix:
+  - des valeurs plus grandes
+  - des valeurs plus petites
+  - n'importe quelles valeurs
+  - uniquement des feuilles
+  bonne: 1
+  explication: Propriété d'ordre.
+  revoir: cours
+- question: Le parcours qui donne les valeurs triées d'un ABR est…
+  choix:
+  - préfixe
+  - infixe
+  - suffixe
+  - en largeur
+  bonne: 1
+  explication: Gauche, racine, droit.
+  revoir: cours
+- question: Le nombre de comparaisons d'une recherche est au plus…
+  choix:
+  - la taille
+  - la hauteur
+  - le nombre de feuilles
+  - '1'
+  bonne: 1
+  explication: On descend d'un seul côté.
+  revoir: cours
+- question: On insère 1, 2, 3, 4, 5 dans un ABR vide. Sa hauteur vaut…
+  choix:
+  - '2'
+  - '3'
+  - '5'
+  - '1'
+  bonne: 2
+  explication: Arbre filiforme.
+  revoir: cours
+- question: Un ABR équilibré d'un million de valeurs a une hauteur d'environ…
+  choix:
+  - '20'
+  - 1 000
+  - 500 000
+  - 1 000 000
+  bonne: 0
+  explication: 2²⁰ ≈ 1 million.
+  revoir: cours
+- question: Une nouvelle valeur insérée dans un ABR devient…
+  choix:
+  - la racine
+  - une feuille
+  - le minimum
+  - le fils de la racine
+  bonne: 1
+  explication: On la place à l'endroit vide atteint.
+  revoir: cours

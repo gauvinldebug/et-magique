@@ -1,0 +1,55 @@
+questions:
+- question: Une fonction récursive doit toujours avoir…
+  choix:
+  - une boucle while
+  - un cas de base
+  - deux paramètres
+  - une variable globale
+  bonne: 1
+  explication: Sinon, elle ne s'arrête pas.
+  revoir: cours
+- question: Que renvoie `factorielle(4)` ?
+  choix:
+  - '4'
+  - '10'
+  - '24'
+  - '16'
+  bonne: 2
+  explication: 4 × 3 × 2 × 1 = 24.
+  revoir: cours
+- question: Une RecursionError signale…
+  choix:
+  - une erreur de syntaxe
+  - une pile d'appels qui déborde
+  - une division par zéro
+  - un fichier manquant
+  bonne: 1
+  explication: Trop d'appels en attente.
+  revoir: cours
+- question: Les appels en attente sont stockés dans…
+  choix:
+  - une file
+  - la pile d'appels
+  - un dictionnaire
+  - le disque dur
+  bonne: 1
+  explication: Le dernier appelé répond le premier.
+  revoir: cours
+- question: Pour prouver la terminaison, on cherche une quantité…
+  choix:
+  - qui augmente
+  - entière positive qui diminue strictement
+  - constante
+  - aléatoire
+  bonne: 1
+  explication: Elle atteint forcément le cas de base.
+  revoir: cours
+- question: La puissance rapide calcule $x^{1024}$ en environ…
+  choix:
+  - 1 024 appels
+  - 512 appels
+  - 11 appels
+  - 2 appels
+  bonne: 2
+  explication: 'On divise n par 2 à chaque fois : 1024 = 2¹⁰.'
+  revoir: cours

@@ -1,0 +1,67 @@
+exercices:
+- titre: Somme des entiers
+  difficulte: 1
+  type: application
+  enonce: |
+    Écrire une fonction récursive `somme(n)` qui renvoie $1 + 2 + \dots + n$, avec `somme(0) = 0`.
+  indice: $somme(n) = n + somme(n - 1)$.
+  etapes:
+  - type: methode
+    titre: Le cas de base
+    texte: Si `n == 0`, on renvoie 0.
+  - type: conc
+    titre: La fonction
+    texte: "```python\ndef somme(n):\n    if n == 0:\n        return 0\n    return n + somme(n - 1)\n```"
+- titre: La pile d'appels
+  difficulte: 2
+  type: methode
+  enonce: |
+    Écrire la suite des appels et des retours lors de `puissance(2, 5)` avec la fonction de puissance rapide du cours.
+  indice: 5 est impair, 4 est pair, 2 est pair, 1 est impair.
+  etapes:
+  - type: calcul
+    titre: La descente
+    texte: '`puissance(2, 5)` appelle `puissance(2, 4)`, qui appelle `puissance(2, 2)`, qui appelle `puissance(2, 1)`, qui appelle `puissance(2, 0)`.'
+  - type: calcul
+    titre: La remontée
+    texte: '`puissance(2, 0)` = 1, puis `puissance(2, 1)` = 2 × 1 = 2, `puissance(2, 2)` = 2 × 2 = 4, `puissance(2, 4)` = 4 × 4 = 16, `puissance(2, 5)` = 2 × 16 = 32.'
+  - type: conc
+    titre: Le résultat
+    texte: <mark>On obtient 32 en 5 appels.</mark>
+- titre: La fonction qui ne s'arrête pas
+  difficulte: 2
+  type: piege
+  enonce: |
+    Un élève écrit :
+
+    ```python
+    def compte(n):
+        print(n)
+        compte(n - 1)
+    ```
+
+    Que se passe-t-il pour `compte(3)` ? Corriger pour afficher 3, 2, 1.
+  indice: Où est le cas de base ?
+  etapes:
+  - type: piege
+    titre: L'erreur
+    texte: 'Il n''y a pas de cas de base : la fonction affiche 3, 2, 1, 0, −1… jusqu''à la RecursionError.'
+  - type: conc
+    titre: La correction
+    texte: "<mark>On ajoute un cas de base :</mark>\n\n```python\ndef compte(n):\n    if n == 0:\n        return\n    print(n)\n    compte(n - 1)\n```"
+- titre: Nombre de chiffres
+  difficulte: 3
+  type: bac
+  enonce: |
+    Écrire une fonction récursive `nb_chiffres(n)` qui renvoie le nombre de chiffres d'un entier `n` positif (par exemple 3 pour 507). Justifier qu'elle termine.
+  indice: '`n // 10` retire le dernier chiffre.'
+  etapes:
+  - type: methode
+    titre: L'idée
+    texte: Un nombre inférieur à 10 a 1 chiffre. Sinon, il a un chiffre de plus que `n // 10`.
+  - type: calcul
+    titre: La fonction
+    texte: "```python\ndef nb_chiffres(n):\n    if n < 10:\n        return 1\n    return 1 + nb_chiffres(n // 10)\n```"
+  - type: conc
+    titre: La terminaison
+    texte: '<mark>`n // 10` est un entier positif strictement plus petit que `n` quand `n ≥ 10`</mark> : on atteint forcément le cas `n < 10`.'

@@ -1,0 +1,55 @@
+questions:
+- question: Le parcours en largeur utilise…
+  choix:
+  - une pile
+  - une file
+  - un arbre binaire de recherche
+  - un tri
+  bonne: 1
+  explication: On traite les sommets par ordre d'arrivée.
+  revoir: cours
+- question: Le parcours en profondeur peut s'écrire avec…
+  choix:
+  - une file
+  - une pile ou la récursivité
+  - un dictionnaire seulement
+  - une matrice
+  bonne: 1
+  explication: On va au bout d'une branche avant de revenir.
+  revoir: cours
+- question: Pour trouver le plus court chemin en nombre d'étapes, on utilise…
+  choix:
+  - le parcours en largeur
+  - le parcours en profondeur
+  - un tri fusion
+  - la recherche dichotomique
+  bonne: 0
+  explication: Les sommets sont atteints par distance croissante.
+  revoir: cours
+- question: Pourquoi mémorise-t-on les sommets visités ?
+  choix:
+  - pour aller plus vite
+  - pour ne pas tourner en rond
+  - pour trier les sommets
+  - pour compter les arêtes
+  bonne: 1
+  explication: Sinon, un cycle fait boucler le parcours.
+  revoir: cours
+- question: Dans un graphe pondéré, le parcours en largeur donne le chemin le plus court…
+  choix:
+  - en distance totale
+  - en nombre d'arêtes
+  - en temps
+  - toujours
+  bonne: 1
+  explication: Il ignore les poids.
+  revoir: cours
+- question: Explorer un labyrinthe couloir par couloir ressemble au parcours…
+  choix:
+  - en largeur
+  - en profondeur
+  - infixe
+  - suffixe
+  bonne: 1
+  explication: On va au bout avant de revenir en arrière.
+  revoir: cours

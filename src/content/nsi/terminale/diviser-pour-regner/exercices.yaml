@@ -1,0 +1,56 @@
+exercices:
+- titre: Une fusion
+  difficulte: 1
+  type: application
+  enonce: |
+    Fusionner les listes triées [2, 5, 9] et [1, 6, 7, 10] en détaillant les comparaisons.
+  indice: Comparer les deux premiers éléments restants.
+  etapes:
+  - type: calcul
+    titre: Les comparaisons
+    texte: '1 < 2 : on prend 1. 2 < 6 : 2. 5 < 6 : 5. 6 < 9 : 6. 7 < 9 : 7. 9 < 10 : 9. Il reste 10.'
+  - type: conc
+    titre: Le résultat
+    texte: <mark>[1, 2, 5, 6, 7, 9, 10].</mark>
+- titre: Dérouler le tri fusion
+  difficulte: 2
+  type: methode
+  enonce: |
+    Dérouler le tri fusion sur [7, 3, 8, 1].
+  indice: Couper jusqu'aux listes d'un élément, puis fusionner en remontant.
+  etapes:
+  - type: calcul
+    titre: Diviser
+    texte: '[7, 3, 8, 1] → [7, 3] et [8, 1] → [7], [3], [8], [1].'
+  - type: calcul
+    titre: Fusionner
+    texte: '[7] et [3] donnent [3, 7] ; [8] et [1] donnent [1, 8].'
+  - type: conc
+    titre: La dernière fusion
+    texte: <mark>[3, 7] et [1, 8] donnent [1, 3, 7, 8].</mark>
+- titre: La fausse fusion
+  difficulte: 2
+  type: piege
+  enonce: |
+    Un élève écrit `def fusion(a, b): return a + b`. Que renvoie `tri_fusion([3, 1, 2])` avec cette fonction ?
+  indice: Suivre les appels.
+  etapes:
+  - type: piege
+    titre: L'erreur
+    texte: '[3, 1, 2] est coupé en [3] et [1, 2]. [1, 2] est coupé en [1] et [2], « fusionnés » en [1, 2]. Puis [3] + [1, 2] = [3, 1, 2].'
+  - type: conc
+    titre: La conclusion
+    texte: '<mark>La liste n''est pas triée</mark> : la fusion doit comparer les éléments, pas les mettre bout à bout.'
+- titre: Maximum en diviser pour régner
+  difficulte: 3
+  type: bac
+  enonce: |
+    Écrire une fonction récursive `maxi(t)` qui renvoie le maximum d'une liste non vide selon le principe diviser pour régner.
+  indice: Le maximum de la liste est le plus grand des maximums des deux moitiés.
+  etapes:
+  - type: methode
+    titre: Les trois étapes
+    texte: 'Diviser : couper en deux moitiés. Résoudre : maximum de chaque moitié. Combiner : garder le plus grand des deux.'
+  - type: conc
+    titre: La fonction
+    texte: "```python\ndef maxi(t):\n    if len(t) == 1:\n        return t[0]\n    m = len(t) // 2\n    return max(maxi(t[:m]), maxi(t[m:]))\n```"

@@ -1,0 +1,53 @@
+exercices:
+- titre: Suivre une pile
+  difficulte: 1
+  type: application
+  enonce: |
+    On part d'une pile vide. On empile 3, 7, 2, on dépile, on empile 5, on dépile deux fois. Que contient la pile ? Quelles valeurs ont été dépilées ?
+  indice: On retire toujours le sommet.
+  etapes:
+  - type: calcul
+    titre: Étape par étape
+    texte: '[3, 7, 2] → dépile 2 → [3, 7] → [3, 7, 5] → dépile 5 → dépile 7 → [3].'
+  - type: conc
+    titre: La réponse
+    texte: '<mark>La pile contient 3. Valeurs dépilées : 2, 5, 7.</mark>'
+- titre: Les parenthèses bien placées
+  difficulte: 2
+  type: methode
+  enonce: |
+    Écrire une fonction `bien_parenthesee(s)` qui vérifie, avec une pile, qu'une chaîne ne contenant que `(` et `)` est bien parenthésée.
+  indice: Empiler à chaque ouvrante, dépiler à chaque fermante.
+  etapes:
+  - type: methode
+    titre: L'idée
+    texte: Une fermante doit correspondre à une ouvrante encore ouverte. À la fin, la pile doit être vide.
+  - type: conc
+    titre: La fonction
+    texte: "```python\ndef bien_parenthesee(s):\n    pile = []\n    for c in s:\n        if c == \"(\":\n            pile.append(c)\n        else:\n            if pile == []:\n                return False\n            pile.pop()\n    return pile == []\n```"
+- titre: La file trop lente
+  difficulte: 2
+  type: piege
+  enonce: |
+    Un programme gère une file de 100 000 clients avec `file.pop(0)`. Il est très lent. Pourquoi, et que faire ?
+  indice: Que fait `pop(0)` aux autres éléments ?
+  etapes:
+  - type: piege
+    titre: L'erreur
+    texte: '`pop(0)` retire le premier élément puis décale tous les autres d''une case : 100 000 décalages à chaque fois.'
+  - type: conc
+    titre: La solution
+    texte: <mark>Utiliser `collections.deque` et `popleft()`</mark>, qui retire en temps constant.
+- titre: Une file avec deux piles
+  difficulte: 3
+  type: bac
+  enonce: |
+    On implémente une file avec deux piles `entree` et `sortie`. Enfiler : empiler sur `entree`. Défiler : si `sortie` est vide, on y transvase toute la pile `entree`, puis on dépile `sortie`. Écrire `defiler` et vérifier l'ordre sur l'exemple : enfiler 1, 2, 3, puis défiler deux fois.
+  indice: Transvaser renverse l'ordre.
+  etapes:
+  - type: calcul
+    titre: L'exemple
+    texte: '`entree` = [1, 2, 3]. Défiler : `sortie` vide, on transvase : `sortie` = [3, 2, 1]. On dépile 1, puis 2.'
+  - type: conc
+    titre: La fonction
+    texte: "<mark>On obtient 1 puis 2 : c'est bien une file.</mark>\n\n```python\ndef defiler(entree, sortie):\n    if sortie == []:\n        while entree != []:\n            sortie.append(entree.pop())\n    return sortie.pop()\n```"

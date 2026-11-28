@@ -1,0 +1,55 @@
+questions:
+- question: Dans le paradigme impératif, un programme est…
+  choix:
+  - une composition de fonctions
+  - une suite d'instructions qui modifient l'état
+  - un ensemble d'objets seulement
+  - une base de données
+  bonne: 1
+  explication: Des ordres successifs.
+  revoir: cours
+- question: Une fonction pure…
+  choix:
+  - affiche toujours quelque chose
+  - renvoie le même résultat pour les mêmes entrées, sans effet de bord
+  - modifie une variable globale
+  - ne prend pas de paramètre
+  bonne: 1
+  explication: Facile à tester.
+  revoir: cours
+- question: '`filter(f, liste)` garde…'
+  choix:
+  - les éléments pour lesquels f renvoie True
+  - les éléments transformés par f
+  - le premier élément
+  - la somme
+  bonne: 0
+  explication: On filtre.
+  revoir: cours
+- question: '`map(f, liste)` produit…'
+  choix:
+  - f appliquée à chaque élément
+  - les éléments filtrés
+  - la liste triée
+  - la longueur
+  bonne: 0
+  explication: On transforme chaque élément.
+  revoir: cours
+- question: Modifier une liste passée en paramètre est…
+  choix:
+  - une fonction pure
+  - un effet de bord
+  - interdit en Python
+  - un paradigme objet
+  bonne: 1
+  explication: La liste est modifiée hors de la fonction.
+  revoir: cours
+- question: Python est un langage…
+  choix:
+  - seulement impératif
+  - seulement fonctionnel
+  - multi-paradigme
+  - seulement objet
+  bonne: 2
+  explication: Il permet les trois.
+  revoir: cours
