@@ -60,6 +60,8 @@ L'atmosphère laisse passer la plus grande partie de la lumière visible du Sole
 
 <mark>Ajouter des gaz à effet de serre, c'est boucher un peu plus la bonde</mark> : la Terre doit se réchauffer pour retrouver l'équilibre.
 
+<div class="labo" data-labo="bilan-radiatif"></div>
+
 ## Les pièges
 
 - L'albédo est un nombre sans unité, entre 0 et 1.

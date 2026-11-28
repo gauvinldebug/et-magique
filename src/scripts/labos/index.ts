@@ -4,6 +4,7 @@
 const MATHS = ['tangente', 'parabole', 'exponentielle', 'cercle', 'cercle-courbe', 'suite', 'produit-scalaire', 'arbre', 'epsilon', 'gendarmes', 'tvi', 'convexite', 'ln', 'rectangles', 'binomiale', 'grands-nombres', 'dominos', 'eq-diff'];
 
 const MATHS2 = ['droite', 'reference', 'vecteurs', 'evolution', 'statistiques', 'complexe', 'markov', 'regression'];
+const SVT = ['enzyme', 'derive', 'datation', 'meiose', 'photosynthese', 'bilan-radiatif'];
 const PHYSIQUE2 = ['chrono', 'son', 'refraction', 'spectre', 'beer', 'synthese', 'doppler', 'orbite', 'titrage'];
 
 const labos = [...document.querySelectorAll<HTMLElement>('.labo[data-labo]')];
@@ -14,6 +15,7 @@ if (labos.length) {
       const mod = nom.startsWith('defi-') ? await import('./defis')
         : MATHS.includes(nom) ? await import('./maths')
         : MATHS2.includes(nom) ? await import('./maths2')
+          : SVT.includes(nom) ? await import('./svt')
           : PHYSIQUE2.includes(nom) ? await import('./physique2') : await import('./physique');
       const f = mod.LABOS[nom] ?? (nom.startsWith('defi-') ? (await import('./defis2')).LABOS2[nom] : undefined);
       if (!f) { r.hidden = true; return; }

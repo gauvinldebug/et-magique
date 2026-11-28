@@ -239,6 +239,7 @@ mark, .hl { background: linear-gradient(transparent 52%, var(--surligneur) 52%, 
 .dl.exo .ic { background: var(--ok-doux); color: var(--ok); }
 .nextstep { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; min-height: 40px; border-top: 1px dashed var(--trait); padding-top: 19px; }
 .nextstep span { font-size: .9rem; color: var(--encre-2); }
+.nextstep .btn { white-space: normal; max-width: 100%; text-align: center; }
 
 /* Cours écrit (Markdown) */
 .prose { display: grid; gap: 20px; max-width: 72ch; }
@@ -394,10 +395,12 @@ a.thumb:hover .play i { transform: scale(1.06); }
 .play i { transition: transform .15s; }
 
 /* ---------- Recherche rapide ---------- */
-.rq { position: relative; }
-.rq-pop { position: absolute; left: 0; right: 0; top: calc(100% + 6px); z-index: 50; background: var(--carte); border: 1px solid var(--trait); border-radius: 0; box-shadow: 0 18px 40px -20px rgba(27, 36, 51, .45); padding: 6px; display: grid; max-height: 60vh; overflow-y: auto; font-size: .92rem; line-height: 20px; }
+.rq { position: relative; scroll-margin-top: 84px; }
+.rq:focus-within { z-index: 60; }
+.rq-pop { position: absolute; left: 0; right: 0; top: calc(100% + 6px); z-index: 50; background: var(--carte); border: 1px solid var(--trait); border-radius: 0; box-shadow: 0 18px 40px -20px rgba(27, 36, 51, .45); padding: 6px; display: grid; grid-template-columns: minmax(0, 1fr); max-height: 60vh; overflow-y: auto; font-size: .92rem; line-height: 20px; }
 .rq-pop a { display: flex; justify-content: space-between; gap: 12px; padding: 8px 10px; border-radius: 0; color: var(--encre); text-decoration: none; }
-.rq-pop a small { color: var(--encre-2); white-space: nowrap; }
+.rq-pop a b { min-width: 0; flex: 1 1 auto; }
+.rq-pop a small { color: var(--encre-2); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 0; flex: 0 1 auto; max-width: 48%; }
 .rq-pop a:hover, .rq-pop a[aria-selected="true"] { background: var(--terme-doux); }
 .rq-titre { font-size: .7rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--encre-2); padding: 6px 10px 2px; }
 .rq-vide { padding: 10px; color: var(--encre-2); }
@@ -701,8 +704,10 @@ a.poster:hover { color: var(--txt); transform: translate(-4px, -4px); box-shadow
 .p-chaine .chaine-qr svg { width: 140px; height: 140px; }
 
 /* Accueil d'une matière : une affiche bleue */
-.m-hero { position: relative; overflow: hidden; display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: 24px; row-gap: 28px; align-items: end; background: var(--bleu); color: #fff; border-radius: 4px; padding: clamp(28px, 5vw, 64px); }
-.m-hero-formes { position: absolute; right: 0; top: 0; height: 100%; width: min(56%, 720px); pointer-events: none; }
+.m-hero { position: relative; overflow: visible; display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: 24px; row-gap: 28px; align-items: end; background: var(--bleu); color: #fff; border-radius: 4px; padding: clamp(28px, 5vw, 64px); }
+.m-hero-formes { position: absolute; right: 0; top: 0; height: 100%; width: min(56%, 720px); pointer-events: none; overflow: hidden; border-radius: 0 4px 4px 0; }
+/* la liste de suggestions de la recherche doit pouvoir dépasser du bandeau */
+.m-hero:focus-within { z-index: 20; }
 .m-hero h1 { position: relative; grid-column: 1 / span 8; font-size: clamp(3rem, 7.4vw, 6.8rem) !important; line-height: .86 !important; color: #fff; }
 .m-hero-txt { position: relative; grid-column: 1 / span 6; display: grid; gap: 16px; }
 .m-hero-txt p { font-size: 1.1rem; line-height: 1.45; }
@@ -724,7 +729,7 @@ a.poster:hover { color: var(--txt); transform: translate(-4px, -4px); box-shadow
   .ah-tete nav { margin-left: 0; width: 100%; font-size: .95rem; }
   .ah-formes { top: auto; bottom: 0; width: 100%; height: 230px; }
   .ah-corps { padding-bottom: 250px; }
-  .m-hero-formes { width: 100%; height: 180px; top: auto; bottom: 0; }
+  .m-hero-formes { width: 100%; height: 180px; top: auto; bottom: 0; border-radius: 0 0 4px 4px; }
   .m-hero { padding-bottom: 200px; }
   .som-grille { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .som-grille li:last-child { grid-column: 1 / -1; }

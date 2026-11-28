@@ -83,7 +83,11 @@ const placeholder = Astro.props.placeholder ?? (matiere === 'physique' ? 'Cherch
       opts.forEach((o, j) => o.setAttribute('aria-selected', String(j === actif)));
       input.setAttribute('aria-activedescendant', opts[actif].id);
     };
-    input.addEventListener('focus', maj);
+    input.addEventListener('focus', () => {
+      maj();
+      // sur téléphone, le clavier cache le bas de l'écran : on remonte la barre pour voir les suggestions
+      if (innerWidth < 760 && !box.closest('.s-nav, .ph-menu')) setTimeout(() => box.scrollIntoView({ block: 'start', behavior: 'smooth' }), 250);
+    });
     input.addEventListener('input', maj);
     input.addEventListener('keydown', (e) => {
       if (e.key === 'ArrowDown') { e.preventDefault(); surligner(actif + 1); }

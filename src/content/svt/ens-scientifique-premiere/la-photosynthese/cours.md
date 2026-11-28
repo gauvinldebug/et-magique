@@ -40,6 +40,8 @@ Le CO₂ de l'air et l'eau du sol donnent du glucose et du dioxygène, grâce à
 
 La photosynthèse a lieu dans les **chloroplastes**, qui contiennent la **chlorophylle**. Ce pigment absorbe surtout le bleu et le rouge, et renvoie le vert : c'est pour ça que les feuilles sont vertes. Un spectre d'action montre que la photosynthèse est la plus forte justement dans le bleu et le rouge.
 
+<div class="labo" data-labo="photosynthese"></div>
+
 ## Un rendement faible
 
 <div class="encadre">
