@@ -1,0 +1,55 @@
+exercices:
+- titre: Météo ou climat ?
+  difficulte: 1
+  type: application
+  enonce: |
+    Classer chaque phrase : (a) « Il a neigé à Lyon le 3 février. » (b) « Les étés en France sont en moyenne 1,5 °C plus chauds qu'il y a 50 ans. »
+  indice: Un événement ponctuel ou une moyenne sur une longue durée ?
+  etapes:
+  - type: conc
+    titre: Le classement
+    texte: '<mark>(a) météo, (b) climat</mark> : la seconde compare des moyennes sur des décennies.'
+- titre: Le glaçon dans le verre
+  difficulte: 2
+  type: piege
+  enonce: |
+    « Si toute la banquise arctique fond, le niveau de la mer va monter de plusieurs mètres. » Qu'en penser ?
+  indice: La banquise flotte. Que devient le niveau d'un verre quand un glaçon fond ?
+  etapes:
+  - type: piege
+    titre: L'erreur
+    texte: On confond la banquise (glace de mer qui flotte) avec les calottes posées sur un continent.
+  - type: conc
+    titre: La réponse
+    texte: <mark>La banquise qui fond ne fait presque pas monter la mer</mark>, comme un glaçon qui fond ne fait pas déborder le verre. Ce sont le Groenland et l'Antarctique qui comptent.
+- titre: Positive ou négative ?
+  difficulte: 2
+  type: methode
+  enonce: |
+    Un sol gelé en permanence (pergélisol) contient de la matière organique. Quand il dégèle, des bactéries la décomposent et libèrent du méthane, un gaz à effet de serre. Cette rétroaction est-elle positive ou négative ?
+  indice: 'Suivre la chaîne : réchauffement, dégel, méthane, puis ?'
+  etapes:
+  - type: calcul
+    titre: La chaîne
+    texte: Réchauffement, dégel, méthane libéré, effet de serre renforcé, réchauffement plus fort.
+  - type: conc
+    titre: La conclusion
+    texte: '<mark>Rétroaction positive</mark> : elle amplifie la perturbation de départ.'
+- titre: La dilatation de l'océan
+  difficulte: 3
+  type: bac
+  enonce: |
+    On modélise les 700 premiers mètres de l'océan, qui se réchauffent de 0,5 °C. Le volume de l'eau augmente d'environ $2 \times 10^{-4}$ fois son volume initial par degré.
+    1. Calculer la hausse relative de volume.
+    2. En supposant que l'eau ne peut s'étendre que vers le haut, en déduire la hausse du niveau de la mer.
+  indice: Hausse de hauteur = hauteur × hausse relative.
+  etapes:
+  - type: calcul
+    titre: Hausse relative
+    texte: $2 \times 10^{-4} \times 0{,}5 = 1 \times 10^{-4}$.
+  - type: calcul
+    titre: Hausse du niveau
+    texte: $700 \times 1 \times 10^{-4} = 0{,}07$ m.
+  - type: conc
+    titre: Le résultat
+    texte: <mark>Environ 7 cm</mark>, juste parce que l'eau a chauffé, sans aucune fonte.

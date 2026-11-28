@@ -1,0 +1,48 @@
+questions:
+  - question: La méiose produit, à partir d'une cellule diploïde…
+    choix: ["deux cellules diploïdes", "deux cellules haploïdes", "quatre cellules haploïdes", "quatre cellules diploïdes"]
+    bonne: 2
+    explication: Deux divisions successives, et le nombre de chromosomes est divisé par deux.
+    revoir: cours
+
+  - question: Le brassage interchromosomique a lieu…
+    choix: ["en prophase I", "en anaphase I", "en anaphase II", "pendant la fécondation"]
+    bonne: 1
+    explication: Les paires de chromosomes homologues se séparent indépendamment les unes des autres en anaphase I.
+    revoir: cours
+
+  - question: Le crossing-over est…
+    choix: ["un échange de portions entre chromatides homologues", "la séparation des chromatides sœurs", "la duplication de l'ADN", "la fusion de deux gamètes"]
+    bonne: 0
+    explication: Il a lieu en prophase I et crée des chromatides recombinées.
+    revoir: cours
+
+  - question: Chez l'humain, le brassage interchromosomique seul permet environ…
+    choix: ["46 gamètes différents", "23 gamètes différents", "8 millions de gamètes différents", "un seul type de gamète"]
+    bonne: 2
+    explication: $2^{23} \approx 8{,}4$ millions.
+    revoir: cours
+
+  - question: Un croisement test se fait avec un individu…
+    choix: ["hétérozygote", "homozygote dominant", "homozygote récessif", "de phénotype quelconque"]
+    bonne: 2
+    explication: Ses gamètes n'apportent que des allèles récessifs, le phénotype des descendants révèle les gamètes de l'autre parent.
+    revoir: cours
+
+  - question: "Croisement test : 4 phénotypes à 25 %. Les deux gènes sont…"
+    choix: ["liés", "indépendants", "sur les chromosomes sexuels", "identiques"]
+    bonne: 1
+    explication: Quatre types de gamètes équiprobables, c'est le brassage interchromosomique de deux gènes sur des chromosomes différents.
+    revoir: exercices
+
+  - question: Les phénotypes recombinés minoritaires d'un croisement test s'expliquent par…
+    choix: ["la fécondation", "le crossing-over", "la mitose", "une mutation"]
+    bonne: 1
+    explication: Les gènes sont liés, et un crossing-over entre eux crée de nouvelles associations d'allèles.
+    revoir: exercices
+
+  - question: La trisomie 21 peut venir…
+    choix: ["d'un crossing-over", "d'une mauvaise séparation des chromosomes pendant la méiose", "d'une mutation du chromosome 21", "d'une double fécondation"]
+    bonne: 1
+    explication: Une non-disjonction donne un gamète à 24 chromosomes.
+    revoir: cours

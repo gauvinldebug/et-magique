@@ -1,0 +1,67 @@
+exercices:
+  - titre: Xylème ou phloème ?
+    difficulte: 1
+    type: application
+    enonce: |
+      On marque radioactivement le CO₂ fourni à une feuille. Quelques heures plus tard, la radioactivité se retrouve dans les racines. Par quel tissu les molécules marquées ont-elles voyagé, et sous quelle forme ?
+    etapes:
+      - type: conc
+        titre: La réponse
+        texte: >-
+          <mark>Par le phloème, sous forme de sucres</mark> : le carbone du CO₂ a été intégré par photosynthèse, puis transporté dans la sève élaborée.
+
+  - titre: Pourquoi tant de surface ?
+    difficulte: 2
+    type: methode
+    enonce: |
+      Expliquer en quoi la grande surface des feuilles et des racines est liée à la vie fixée.
+    etapes:
+      - type: calcul
+        titre: La contrainte
+        texte: La plante ne peut pas se déplacer pour chercher ses ressources, elle doit les capter là où elle est.
+      - type: conc
+        titre: La réponse
+        texte: >-
+          <mark>Une grande surface augmente les échanges</mark> avec l'air (lumière, CO₂) et le sol (eau, sels minéraux), ce qui compense l'immobilité.
+
+  - titre: Fleur et pollinisateur
+    difficulte: 2
+    type: bac
+    enonce: |
+      Une orchidée a un éperon de 30 cm contenant du nectar au fond. On découvre plus tard un papillon à trompe de 30 cm. Comment expliquer cette correspondance ?
+    etapes:
+      - type: calcul
+        titre: Le bénéfice mutuel
+        texte: Le papillon se nourrit du nectar, l'orchidée est pollinisée car le papillon touche les étamines en enfonçant sa trompe.
+      - type: conc
+        titre: L'explication
+        texte: >-
+          <mark>Une coévolution</mark> : les orchidées à éperon long et les papillons à trompe longue ont été favorisés ensemble par la sélection naturelle.
+
+  - titre: Le blé cultivé, plus fort ?
+    difficulte: 2
+    type: piege
+    enonce: |
+      Un élève affirme que le blé cultivé est plus adapté à la nature que le blé sauvage puisqu'il a été amélioré. Qu'en penser ?
+    etapes:
+      - type: piege
+        titre: L'erreur
+        texte: L'amélioration est faite pour l'humain, pas pour la survie de la plante.
+      - type: conc
+        titre: La réponse
+        texte: >-
+          <mark>C'est souvent l'inverse</mark> : ses épis ne se cassent pas, ses grains ne se dispersent donc pas seuls. Sans semis humain, le blé cultivé disparaîtrait vite.
+
+  - titre: Variétés uniformes et maladie
+    difficulte: 3
+    type: bac
+    enonce: |
+      En 1970, aux États-Unis, une maladie du maïs a détruit 15 % de la récolte. Presque toutes les variétés cultivées descendaient d'une même lignée sensible. Expliquer le risque lié à la perte de diversité génétique.
+    etapes:
+      - type: calcul
+        titre: Le lien
+        texte: Des plantes génétiquement presque identiques ont les mêmes points faibles face à un pathogène.
+      - type: conc
+        titre: La réponse
+        texte: >-
+          <mark>Une population uniforme peut être détruite en entier par une seule maladie</mark>. Conserver la diversité (variétés anciennes, espèces sauvages apparentées) garde des allèles de résistance disponibles.

@@ -1,0 +1,72 @@
+exercices:
+  - titre: Ordonner des événements
+    difficulte: 1
+    type: application
+    enonce: |
+      Une coupe montre trois couches sédimentaires empilées A (en bas), B, C (en haut), toutes recoupées par une faille F, elle-même recoupée par un filon de basalte G. Ranger ces événements du plus ancien au plus récent.
+    indice: Superposition, puis recoupement.
+    etapes:
+      - type: calcul
+        titre: Les couches
+        texte: Superposition, A est plus ancienne que B, elle-même plus ancienne que C.
+      - type: conc
+        titre: La chronologie
+        texte: >-
+          <mark>A, B, C, puis F, puis G</mark>. La faille recoupe les trois couches, le filon recoupe la faille.
+
+  - titre: Combien de demi-vies ?
+    difficulte: 1
+    type: methode
+    enonce: |
+      Un échantillon de bois ne contient plus que 25 % du carbone 14 qu'il avait à sa mort. Quel est son âge ? ($t_{1/2} = 5\,730$ ans)
+    etapes:
+      - type: calcul
+        titre: Le nombre de demi-vies
+        texte: 100 % puis 50 % puis 25 %, soit deux demi-vies.
+      - type: conc
+        titre: L'âge
+        texte: >-
+          <mark>$2 \times 5\,730 = 11\,460$ ans</mark>.
+
+  - titre: Dater une coulée de lave
+    difficulte: 2
+    type: bac
+    enonce: |
+      Dans un basalte, on mesure $\dfrac{^{40}\mathrm{Ar}}{^{40}\mathrm{K}} = 0{,}0035$. On sait que l'argon fils est absent au départ et que $\lambda = 5{,}54 \times 10^{-10}\ \text{an}^{-1}$ pour la part de $^{40}$K qui donne de l'argon. Calculer l'âge, en utilisant $t = \dfrac{1}{\lambda}\ln\left(1 + \dfrac{F}{P}\right)$ (approximation).
+    etapes:
+      - type: calcul
+        titre: Le calcul
+        texte: $t = \dfrac{\ln(1{,}0035)}{5{,}54 \times 10^{-10}} \approx \dfrac{3{,}49 \times 10^{-3}}{5{,}54 \times 10^{-10}} \approx 6{,}3 \times 10^{6}$ ans.
+      - type: conc
+        titre: La réponse
+        texte: >-
+          <mark>La coulée a environ 6,3 millions d'années</mark>. Le K-Ar convient : l'argon, gazeux, s'échappe de la lave en fusion et le chronomètre part de zéro.
+
+  - titre: Le carbone 14 pour un granite ?
+    difficulte: 2
+    type: piege
+    enonce: |
+      Un élève veut dater au carbone 14 un granite qu'il pense âgé de 300 millions d'années. Pourquoi est-ce impossible ?
+    etapes:
+      - type: piege
+        titre: L'erreur
+        texte: Un granite n'est pas un reste d'être vivant, il ne contient pas le carbone 14 de l'atmosphère.
+      - type: conc
+        titre: La raison chiffrée
+        texte: >-
+          <mark>Au bout de 300 millions d'années, il ne resterait plus de carbone 14 mesurable</mark> : cela fait plus de 50 000 demi-vies. Il faut une méthode à longue demi-vie, comme Rb-Sr.
+
+  - titre: Lire une isochrone
+    difficulte: 3
+    type: bac
+    enonce: |
+      Les minéraux d'un granite donnent une isochrone Rb-Sr de coefficient directeur $a = 0{,}0045$. Calculer l'âge du granite, avec $\lambda = 1{,}42 \times 10^{-11}\ \text{an}^{-1}$.
+    indice: $t = \ln(a + 1)/\lambda$.
+    etapes:
+      - type: calcul
+        titre: Le calcul
+        texte: $t = \dfrac{\ln(1{,}0045)}{1{,}42 \times 10^{-11}} \approx \dfrac{4{,}49 \times 10^{-3}}{1{,}42 \times 10^{-11}} \approx 3{,}2 \times 10^{8}$ ans.
+      - type: conc
+        titre: La réponse
+        texte: >-
+          <mark>Le granite a environ 320 millions d'années</mark> : il a cristallisé au Carbonifère.

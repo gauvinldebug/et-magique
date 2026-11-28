@@ -119,6 +119,49 @@ export const PROGRAMME: Record<string, Record<string, ChapitreProgramme[]>> = {
   // Physique-chimie. Lycée : programmes du BO spécial n° 1 du 22 janvier 2019 (seconde, spécialité de première)
   // et du BO spécial n° 8 du 25 juillet 2019 (spécialité de terminale). Collège : cycle 4, BO n° 31 du 30 juillet 2020.
   // 6e : sciences et technologie (cycle 3, BO du 22 juin 2023), partie matière, mouvement, énergie et signaux.
+  // SVT, spécialité : 1re BO spécial n°1 du 22/01/2019, Tle BO spécial n°8 du 25/07/2019.
+  svt: {
+    premiere: [
+      { slug: 'divisions-cellulaires', titre: "Réplication de l'ADN et divisions cellulaires" },
+      { slug: 'mutations-et-variabilite', titre: "Mutations de l'ADN et variabilité génétique" },
+      { slug: 'expression-du-genome', titre: 'L\'expression du patrimoine génétique' },
+      { slug: 'enzymes', titre: 'Les enzymes, des catalyseurs biologiques' },
+      { slug: 'structure-du-globe', titre: 'La structure du globe terrestre' },
+      { slug: 'dynamique-de-la-lithosphere', titre: 'La dynamique de la lithosphère' },
+      { slug: 'ecosystemes', titre: 'Écosystèmes et services environnementaux' },
+      { slug: 'genetique-et-sante', titre: 'Variation génétique et santé' },
+      { slug: 'immunite-innee', titre: "L'immunité innée" },
+      { slug: 'immunite-adaptative', titre: "L'immunité adaptative et la vaccination" },
+    ],
+    terminale: [
+      { slug: 'origine-du-genotype', titre: "L'origine du génotype des individus" },
+      { slug: 'complexification-des-genomes', titre: 'La complexification des génomes' },
+      { slug: 'evolution-des-populations', titre: 'L\'évolution des génomes dans les populations' },
+      { slug: 'autres-mecanismes-de-diversite', titre: "D'autres mécanismes de diversification du vivant" },
+      { slug: 'le-temps-et-les-roches', titre: 'Le temps et les roches' },
+      { slug: 'passe-mouvemente-de-la-terre', titre: 'Les traces du passé mouvementé de la Terre' },
+      { slug: 'plante-domestiquee', titre: 'De la plante sauvage à la plante domestiquée' },
+      { slug: 'climats-du-passe', titre: 'Reconstituer les climats du passé' },
+      { slug: 'climat-de-demain', titre: 'Le réchauffement climatique actuel et futur' },
+      { slug: 'reflexe-et-mouvement', titre: 'Réflexe, mouvement volontaire et système nerveux' },
+      { slug: 'contraction-musculaire', titre: "La contraction musculaire et l'énergie" },
+      { slug: 'comportements-et-stress', titre: 'Comportements et stress' },
+    ],
+    // Enseignement scientifique (tronc commun), partie SVT : BO spécial n°1 du 22/01/2019 et n°8 du 25/07/2019.
+    'ens-scientifique-premiere': [
+      { slug: 'la-cellule-vivante', titre: 'Une structure complexe : la cellule vivante' },
+      { slug: 'la-photosynthese', titre: 'Une conversion biologique : la photosynthèse' },
+      { slug: 'bilan-thermique-du-corps', titre: 'Le bilan thermique du corps humain' },
+      { slug: 'l-age-de-la-terre', titre: "Une histoire de l'âge de la Terre" },
+      { slug: 'l-audition', titre: 'Entendre la musique : l\'audition' },
+    ],
+    'ens-scientifique-terminale': [
+      { slug: 'atmosphere-et-vie', titre: "L'atmosphère terrestre et la vie" },
+      { slug: 'biodiversite-et-evolution', titre: 'La biodiversité et son évolution' },
+      { slug: 'evolution-grille-de-lecture', titre: "L'évolution comme grille de lecture du monde" },
+      { slug: 'evolution-humaine', titre: "L'évolution humaine" },
+    ],
+  },
   physique: {
     '6e': [
       { slug: 'la-matiere-et-ses-etats', titre: 'La matière et ses états' },
@@ -200,6 +243,18 @@ export const PROGRAMME: Record<string, Record<string, ChapitreProgramme[]>> = {
       { slug: 'lunette-astronomique', titre: 'La lunette astronomique' },
       { slug: 'effet-photoelectrique', titre: 'Le photon et l\'effet photoélectrique' },
       { slug: 'circuit-rc', titre: 'Condensateur et circuit RC' },
+    ],
+    // Enseignement scientifique (tronc commun), partie physique-chimie.
+    'ens-scientifique-premiere': [
+      { slug: 'les-elements-chimiques', titre: 'Les éléments chimiques : une longue histoire' },
+      { slug: 'le-rayonnement-solaire', titre: 'Le rayonnement solaire' },
+      { slug: 'le-bilan-radiatif-terrestre', titre: 'Le bilan radiatif terrestre' },
+      { slug: 'le-son-phenomene-vibratoire', titre: 'Le son, un phénomène vibratoire' },
+    ],
+    'ens-scientifique-terminale': [
+      { slug: 'atmosphere-et-climat', titre: 'Atmosphère, effet de serre et climat' },
+      { slug: 'produire-l-electricite', titre: "Deux siècles d'énergie électrique" },
+      { slug: 'choix-energetiques', titre: 'Les choix énergétiques et le climat' },
     ],
   },
 };

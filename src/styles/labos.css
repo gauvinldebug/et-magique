@@ -190,3 +190,4 @@ html:not(.js) .labo { display: none; }
 .lb-verifier { position: relative; }
 svg .lb-cible { fill: var(--ok); opacity: .35; stroke: none; }
 @media (prefers-reduced-motion: reduce) { .lb-retour { transition: none; } }
+svg .lb-aplat { fill: var(--terme-doux); stroke: none; }

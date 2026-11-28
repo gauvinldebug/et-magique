@@ -1,0 +1,55 @@
+exercices:
+- titre: L'énergie d'une nuit
+  difficulte: 1
+  type: application
+  enonce: |
+    Pendant une nuit de 8 h, ton corps dégage en moyenne 80 W. Calculer l'énergie libérée en joules.
+  indice: $E = P \times \Delta t$ avec $\Delta t$ en secondes.
+  etapes:
+  - type: calcul
+    titre: La durée
+    texte: $8 \times 3\,600 = 28\,800$ s.
+  - type: conc
+    titre: Le calcul
+    texte: <mark>$E = 80 \times 28\,800 \approx 2{,}3 \times 10^{6}$ J</mark>, soit environ 550 kcal.
+- titre: Quel mode d'échange ?
+  difficulte: 2
+  type: methode
+  enonce: |
+    Associer à chaque situation un mode d'échange : (a) tu t'assois sur un banc de pierre froid ; (b) un ventilateur te souffle dessus ; (c) tu sors de la piscine au soleil et tu frissonnes.
+  indice: Contact, air qui bouge, ou eau qui s'évapore ?
+  etapes:
+  - type: conc
+    titre: Les réponses
+    texte: <mark>(a) conduction, (b) convection, (c) évaporation</mark> de l'eau sur la peau.
+- titre: Le froid qui rentre
+  difficulte: 2
+  type: piege
+  enonce: |
+    « Ferme la fenêtre, le froid rentre ! » Que dirait un physicien ?
+  indice: Dans quel sens va la chaleur ?
+  etapes:
+  - type: piege
+    titre: L'erreur
+    texte: Le froid n'est pas quelque chose qui se déplace.
+  - type: conc
+    titre: La correction
+    texte: <mark>C'est la chaleur de la pièce qui sort</mark>, du plus chaud vers le plus froid.
+- titre: Courir et suer
+  difficulte: 3
+  type: bac
+  enonce: |
+    Pendant une course, un coureur dégage 600 W, dont 75 % doivent être évacués par l'évaporation de la sueur. Évaporer 1 g de sueur absorbe environ 2 400 J.
+    1. Quelle puissance doit être évacuée par la sueur ?
+    2. Quelle masse de sueur doit s'évaporer en une heure ?
+  indice: Énergie en une heure, puis divisée par 2 400 J/g.
+  etapes:
+  - type: calcul
+    titre: La puissance
+    texte: $0{,}75 \times 600 = 450$ W.
+  - type: calcul
+    titre: L'énergie en une heure
+    texte: $450 \times 3\,600 = 1{,}62 \times 10^{6}$ J.
+  - type: conc
+    titre: La masse de sueur
+    texte: <mark>$1{,}62 \times 10^{6} / 2\,400 \approx 675$ g</mark>, presque 0,7 L à boire pour compenser.

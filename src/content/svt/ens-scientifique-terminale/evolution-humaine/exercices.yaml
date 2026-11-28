@@ -1,0 +1,51 @@
+exercices:
+- titre: Comparer des génomes
+  difficulte: 1
+  type: application
+  enonce: |
+    Le génome humain compte environ 3 milliards de paires de bases. Il est identique à 98,8 % à celui du chimpanzé. Combien de paires de bases diffèrent environ ?
+  indice: 1,2 % de 3 milliards.
+  etapes:
+  - type: conc
+    titre: Le calcul
+    texte: '<mark>$0{,}012 \times 3 \times 10^{9} \approx 3{,}6 \times 10^{7}$</mark>, environ 36 millions de différences : peu en proportion, beaucoup en nombre.'
+- titre: Lire un arbre
+  difficulte: 2
+  type: methode
+  enonce: |
+    Dans un arbre de parenté, l'humain et le chimpanzé partagent un ancêtre commun récent ; le gorille se rattache plus bas, à un ancêtre plus ancien. Qui est le plus proche parent de l'humain ? Le chimpanzé est-il plus proche du gorille ou de l'humain ?
+  indice: Le plus proche parent est celui avec qui on partage l'ancêtre le plus récent.
+  etapes:
+  - type: calcul
+    titre: L'humain
+    texte: Son ancêtre commun le plus récent est partagé avec le chimpanzé.
+  - type: conc
+    titre: Le chimpanzé
+    texte: <mark>Le chimpanzé est plus proche de l'humain que du gorille</mark>, contrairement à l'intuition.
+- titre: L'humain descend du singe ?
+  difficulte: 2
+  type: piege
+  enonce: |
+    « Si l'homme descend du chimpanzé, pourquoi y a-t-il encore des chimpanzés ? » Répondre.
+  indice: Toi et ton cousin, qui descend de qui ?
+  etapes:
+  - type: piege
+    titre: L'erreur
+    texte: La question suppose que l'humain descend du chimpanzé actuel.
+  - type: conc
+    titre: La réponse
+    texte: '<mark>L''humain ne descend pas du chimpanzé</mark> : les deux lignées descendent d''un ancêtre commun et ont évolué chacune de leur côté pendant 7 millions d''années.'
+- titre: Néandertal en nous
+  difficulte: 3
+  type: bac
+  enonce: |
+    Les humains actuels d'Europe et d'Asie portent environ 2 % d'ADN néandertalien, alors que les populations d'Afrique subsaharienne n'en portent presque pas. Néandertal vivait en Europe et au Proche-Orient et s'est éteint il y a environ 40 000 ans.
+    Proposer une explication cohérente avec la sortie d'Afrique d'Homo sapiens.
+  indice: Où et quand Sapiens et Néandertal se sont-ils rencontrés ?
+  etapes:
+  - type: calcul
+    titre: La rencontre
+    texte: En sortant d'Afrique, Sapiens a rencontré Néandertal au Proche-Orient et en Europe. Ils ont eu des enfants ensemble.
+  - type: conc
+    titre: L'explication
+    texte: <mark>Les descendants de ces Sapiens sortis d'Afrique portent un peu d'ADN néandertalien</mark>. Les populations restées en Afrique n'ont pas rencontré Néandertal.

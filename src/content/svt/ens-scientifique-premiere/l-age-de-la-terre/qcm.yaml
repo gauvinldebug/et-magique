@@ -1,0 +1,55 @@
+questions:
+- question: Buffon a estimé l'âge de la Terre en étudiant…
+  choix:
+  - les fossiles
+  - le refroidissement de boulets de fer
+  - la radioactivité
+  - les étoiles
+  bonne: 1
+  explication: Il a agrandi le résultat à la taille de la Terre.
+  revoir: cours
+- question: Kelvin a obtenu un âge trop faible car il ignorait…
+  choix:
+  - la gravité
+  - la radioactivité
+  - la conduction
+  - l'existence des océans
+  bonne: 1
+  explication: Elle chauffe l'intérieur de la Terre.
+  revoir: cours
+- question: Darwin avait besoin d'une Terre…
+  choix:
+  - très jeune
+  - très ancienne
+  - de 6 000 ans
+  - sans fossiles
+  bonne: 1
+  explication: L'évolution demande beaucoup de temps.
+  revoir: cours
+- question: La radiochronologie repose sur…
+  choix:
+  - la vitesse de dépôt des sédiments
+  - la désintégration de noyaux radioactifs
+  - la température des roches
+  - la taille des fossiles
+  bonne: 1
+  explication: Une horloge naturelle à rythme fixe.
+  revoir: cours
+- question: L'âge retenu pour la Terre est d'environ…
+  choix:
+  - 6 000 ans
+  - 100 millions d'années
+  - 4,57 milliards d'années
+  - 13,8 milliards d'années
+  bonne: 2
+  explication: 13,8 milliards, c'est l'Univers.
+  revoir: cours
+- question: On date la formation de la Terre surtout grâce…
+  choix:
+  - aux roches de surface
+  - aux météorites
+  - aux fossiles de dinosaures
+  - aux glaces polaires
+  bonne: 1
+  explication: Elles n'ont pas été recyclées.
+  revoir: cours

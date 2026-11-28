@@ -1,0 +1,48 @@
+questions:
+  - question: Pour un gène à deux allèles de fréquences $p$ et $q$…
+    choix: ["$p \\times q = 1$", "$p + q = 1$", "$p^2 + q^2 = 1$", "$p = q$"]
+    bonne: 1
+    explication: Les deux fréquences se partagent la totalité des allèles.
+    revoir: cours
+
+  - question: À l'équilibre de Hardy-Weinberg, la fréquence des hétérozygotes vaut…
+    choix: ["$pq$", "$2pq$", "$p^2$", "$p + q$"]
+    bonne: 1
+    explication: "$f(AA) = p^2$, $f(Aa) = 2pq$, $f(aa) = q^2$."
+    revoir: cours
+
+  - question: La dérive génétique est plus forte quand la population est…
+    choix: ["grande", "petite", "en équilibre", "soumise à la sélection"]
+    bonne: 1
+    explication: Dans un petit effectif, le hasard des tirages pèse davantage.
+    revoir: cours
+
+  - question: La sélection naturelle est…
+    choix: ["aléatoire", "orientée par le milieu", "toujours lente", "sans effet sur les fréquences"]
+    bonne: 1
+    explication: Elle favorise les allèles qui augmentent la survie ou la reproduction dans un milieu donné.
+    revoir: cours
+
+  - question: "Population : $f(AA) = 0{,}36$, $f(Aa) = 0{,}48$, $f(aa) = 0{,}16$. La fréquence de $A$ est…"
+    choix: ["0,36", "0,48", "0,60", "0,84"]
+    bonne: 2
+    explication: $p = 0{,}36 + 0{,}48/2 = 0{,}60$.
+    revoir: exercices
+
+  - question: Un écart aux fréquences de Hardy-Weinberg indique que…
+    choix: ["le calcul est faux", "une force évolutive agit", "la population est immense", "le gène n'a qu'un allèle"]
+    bonne: 1
+    explication: Le modèle sert de référence, un écart signale sélection, dérive, migration ou choix du partenaire.
+    revoir: cours
+
+  - question: Un effet fondateur se produit quand…
+    choix: ["quelques individus fondent une nouvelle population", "une mutation apparaît", "deux espèces s'hybrident", "un allèle devient dominant"]
+    bonne: 0
+    explication: Les fréquences de ces quelques individus peuvent être très différentes de celles de la population d'origine.
+    revoir: cours
+
+  - question: Deux populations deviennent deux espèces quand…
+    choix: ["elles vivent dans deux lieux différents", "elles ne peuvent plus avoir de descendants fertiles ensemble", "elles ont des couleurs différentes", "l'une est plus grande que l'autre"]
+    bonne: 1
+    explication: C'est le critère d'interfécondité.
+    revoir: cours

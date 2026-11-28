@@ -1,0 +1,55 @@
+questions:
+- question: Quelle ressource est renouvelable ?
+  choix:
+  - le charbon
+  - l'uranium
+  - le vent
+  - le gaz naturel
+  bonne: 2
+  explication: Le vent se renouvelle sans cesse.
+  revoir: cours
+- question: Le nucléaire est une énergie…
+  choix:
+  - renouvelable et carbonée
+  - bas carbone mais non renouvelable
+  - fossile
+  - intermittente
+  bonne: 1
+  explication: Peu de CO₂, mais l'uranium s'épuise.
+  revoir: cours
+- question: La source qui émet le plus de CO₂ par kWh est…
+  choix:
+  - l'éolien
+  - le nucléaire
+  - le gaz
+  - le charbon
+  bonne: 3
+  explication: Environ 1 000 g par kWh.
+  revoir: cours
+- question: Sur un réseau électrique, à chaque instant…
+  choix:
+  - la production dépasse toujours la consommation
+  - production et consommation doivent être égales
+  - on peut stocker sans limite
+  - la consommation est constante
+  bonne: 1
+  explication: Le budget doit tomber juste.
+  revoir: cours
+- question: Une station de pompage sert à…
+  choix:
+  - produire de l'uranium
+  - stocker de l'énergie
+  - refroidir une centrale
+  - mesurer le vent
+  bonne: 1
+  explication: On remonte de l'eau quand l'électricité abonde.
+  revoir: cours
+- question: L'énergie primaire est…
+  choix:
+  - celle qui arrive à la prise
+  - celle qu'on trouve dans la nature
+  - toujours électrique
+  - toujours renouvelable
+  bonne: 1
+  explication: Charbon, vent, uranium avant toute conversion.
+  revoir: cours

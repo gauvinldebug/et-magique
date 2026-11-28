@@ -1,0 +1,66 @@
+exercices:
+  - titre: Vertical ou horizontal ?
+    difficulte: 1
+    type: application
+    enonce: |
+      Classer en transmission verticale ou transfert horizontal : (a) un enfant hérite d'un allèle de sa mère ; (b) une bactérie reçoit un plasmide d'une autre bactérie ; (c) un virus insère un gène dans le génome d'une cellule de mammifère.
+    etapes:
+      - type: conc
+        titre: Le classement
+        texte: >-
+          <mark>(a) verticale ; (b) et (c) horizontales</mark>, car il n'y a pas de reproduction entre les deux organismes.
+
+  - titre: La résistance qui se propage
+    difficulte: 2
+    type: methode
+    enonce: |
+      Dans un hôpital, une souche de bactérie *E. coli* résistante à un antibiotique apparaît. Quelques semaines plus tard, une bactérie d'une autre espèce, *Klebsiella*, présente exactement le même gène de résistance, porté par un plasmide. Expliquer.
+    indice: Le gène est porté par un plasmide.
+    etapes:
+      - type: calcul
+        titre: Ce qui exclut la mutation
+        texte: Le gène est identique chez deux espèces différentes, une mutation indépendante identique est très improbable.
+      - type: conc
+        titre: L'explication
+        texte: >-
+          <mark>Le plasmide portant le gène a été transféré par conjugaison</mark> d'*E. coli* à *Klebsiella* : c'est un transfert horizontal.
+
+  - titre: Les preuves de l'endosymbiose
+    difficulte: 2
+    type: bac
+    enonce: |
+      Citer trois arguments montrant que les mitochondries descendent de bactéries.
+    etapes:
+      - type: conc
+        titre: Trois arguments
+        texte: >-
+          <mark>Un ADN propre et circulaire, une double membrane, des ribosomes de type bactérien</mark>. On peut aussi citer leur division par scission, comme une bactérie, et la parenté de leur ADN avec celui des alpha-protéobactéries.
+
+  - titre: Un gène viral dans le placenta ?
+    difficulte: 2
+    type: piege
+    enonce: |
+      Un élève affirme que tous nos gènes viennent de nos ancêtres humains et préhumains, par transmission verticale. Que lui répondre avec l'exemple de la syncytine ?
+    etapes:
+      - type: piege
+        titre: L'erreur
+        texte: Le génome n'est pas seulement hérité et muté, il s'enrichit aussi par transferts horizontaux.
+      - type: conc
+        titre: L'exemple
+        texte: >-
+          <mark>La syncytine est un ancien gène de virus</mark>, intégré dans le génome d'un ancêtre des mammifères puis transmis verticalement. Il est aujourd'hui indispensable à la formation du placenta.
+
+  - titre: Quel organite ?
+    difficulte: 3
+    type: bac
+    enonce: |
+      Une algue unicellulaire possède un chloroplaste entouré de quatre membranes, contenant un petit noyau résiduel. Proposer une hypothèse sur son origine.
+    indice: Une endosymbiose donne deux membranes. Et si l'organisme intégré avait lui-même un chloroplaste ?
+    etapes:
+      - type: calcul
+        titre: Une première endosymbiose
+        texte: Une cyanobactérie intégrée par une cellule donne une algue avec un chloroplaste à deux membranes.
+      - type: conc
+        titre: Une seconde endosymbiose
+        texte: >-
+          <mark>Cette algue a elle-même été intégrée par une autre cellule</mark> : c'est une endosymbiose secondaire. Le noyau résiduel est celui de l'algue intégrée, les membranes supplémentaires viennent d'elle et de la vésicule de l'hôte.

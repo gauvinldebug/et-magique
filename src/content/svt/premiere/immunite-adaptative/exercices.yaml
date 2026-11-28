@@ -1,0 +1,67 @@
+exercices:
+  - titre: B ou T ?
+    difficulte: 1
+    type: application
+    enonce: |
+      Associer chaque rôle au bon lymphocyte : (a) sécréter des anticorps ; (b) détruire une cellule infectée par un virus ; (c) stimuler les autres lymphocytes.
+    etapes:
+      - type: conc
+        titre: Les associations
+        texte: >-
+          <mark>(a) lymphocyte B devenu plasmocyte ; (b) lymphocyte T CD8 devenu cytotoxique ; (c) lymphocyte T CD4 auxiliaire</mark>.
+
+  - titre: Comparer deux réponses
+    difficulte: 2
+    type: methode
+    enonce: |
+      Après un premier contact avec un antigène, les anticorps apparaissent au bout de 10 jours et atteignent 10 unités. Après un second contact, ils apparaissent en 3 jours et atteignent 1 000 unités. Expliquer.
+    etapes:
+      - type: calcul
+        titre: Le premier contact
+        texte: Les rares lymphocytes spécifiques doivent être sélectionnés, se multiplier et se différencier, ce qui prend du temps.
+      - type: conc
+        titre: Le second contact
+        texte: >-
+          <mark>Des lymphocytes mémoire, nombreux et prêts, réagissent immédiatement</mark> : la réponse est plus rapide et cent fois plus intense.
+
+  - titre: Un vaccin à ARN messager
+    difficulte: 2
+    type: bac
+    enonce: |
+      Un vaccin contient un ARNm codant une protéine de surface d'un virus. Expliquer comment il protège de la maladie.
+    etapes:
+      - type: calcul
+        titre: Ce que fait l'ARNm
+        texte: Des cellules du vacciné traduisent l'ARNm et fabriquent la protéine virale, qui joue le rôle d'antigène, sans virus entier.
+      - type: conc
+        titre: La protection
+        texte: >-
+          <mark>L'organisme développe une réponse adaptative et des cellules mémoire contre cette protéine</mark> : lors d'une vraie infection, il réagit vite et fort, avant que la maladie s'installe.
+
+  - titre: Un vaccin, des anticorps tout prêts ?
+    difficulte: 2
+    type: piege
+    enonce: |
+      Un élève affirme : « Un vaccin, c'est une injection d'anticorps contre la maladie. » Corriger.
+    etapes:
+      - type: piege
+        titre: L'erreur
+        texte: Il confond vaccin et sérothérapie (injection d'anticorps, qui protège seulement quelques semaines).
+      - type: conc
+        titre: La correction
+        texte: >-
+          <mark>Un vaccin contient un antigène inoffensif</mark> : c'est l'organisme qui fabrique ses anticorps et surtout ses cellules mémoire, d'où une protection durable.
+
+  - titre: L'immunité de groupe
+    difficulte: 3
+    type: bac
+    enonce: |
+      Un nourrisson de 2 mois, trop jeune pour être vacciné contre la rougeole, vit dans une ville où 95 % des habitants sont vaccinés. Pourquoi est-il peu exposé ?
+    etapes:
+      - type: calcul
+        titre: La circulation du virus
+        texte: Une personne infectée rencontre surtout des personnes vaccinées, qui ne tombent pas malades et ne transmettent pas le virus.
+      - type: conc
+        titre: La réponse
+        texte: >-
+          <mark>Le virus ne trouve pas assez de personnes réceptives pour circuler</mark> : c'est l'immunité de groupe, qui protège aussi ceux qui ne peuvent pas être vaccinés.

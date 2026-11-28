@@ -1,0 +1,48 @@
+questions:
+  - question: Au niveau d'une dorsale, les plaques…
+    choix: ["convergent", "divergent", "coulissent", "ne bougent pas"]
+    bonne: 1
+    explication: La nouvelle lithosphère océanique s'y forme.
+    revoir: cours
+
+  - question: À une dorsale, le manteau fond partiellement à cause…
+    choix: ["d'un apport d'eau", "de la décompression", "d'une collision", "de la pluie"]
+    bonne: 1
+    explication: En remontant, la pression diminue et une partie fond.
+    revoir: cours
+
+  - question: L'âge des roches du fond océanique…
+    choix: ["est le même partout", "augmente en s'éloignant de la dorsale", "diminue en s'éloignant de la dorsale", "est toujours supérieur à 1 milliard d'années"]
+    bonne: 1
+    explication: Le plancher le plus jeune est à l'axe.
+    revoir: cours
+
+  - question: Les anomalies magnétiques sont…
+    choix: ["aléatoires", "symétriques par rapport à la dorsale", "seulement sur les continents", "dues aux séismes"]
+    bonne: 1
+    explication: Elles enregistrent les inversions du champ magnétique.
+    revoir: cours
+
+  - question: La lithosphère océanique plonge en subduction car elle devient…
+    choix: ["plus légère", "plus dense que l'asthénosphère", "liquide", "plus chaude"]
+    bonne: 1
+    explication: En vieillissant, elle refroidit et s'épaissit.
+    revoir: cours
+
+  - question: Le volcanisme des zones de subduction est surtout…
+    choix: ["effusif", "explosif", "absent", "sous-marin"]
+    bonne: 1
+    explication: Les magmas riches en eau et en gaz sont visqueux.
+    revoir: cours
+
+  - question: Un point chaud est…
+    choix: ["fixe sous la plaque qui se déplace", "toujours sur une dorsale", "une zone de subduction", "un séisme"]
+    bonne: 0
+    explication: Il laisse une chaîne d'îles d'âge croissant.
+    revoir: cours
+
+  - question: "200 km en 10 Ma, c'est une vitesse de…"
+    choix: ["0,2 cm/an", "2 cm/an", "20 cm/an", "200 cm/an"]
+    bonne: 1
+    explication: $2 \times 10^7$ cm divisés par $10^7$ ans.
+    revoir: exercices

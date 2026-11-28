@@ -1,0 +1,55 @@
+questions:
+- question: L'albédo de la Terre vaut environ…
+  choix:
+  - 0,03
+  - 0,30
+  - 0,70
+  - '3'
+  bonne: 1
+  explication: Environ 30 % de la puissance reçue est réfléchie.
+  revoir: cours
+- question: Une surface à fort albédo…
+  choix:
+  - absorbe beaucoup
+  - réfléchit beaucoup
+  - émet de la lumière visible
+  - est toujours sombre
+  bonne: 1
+  explication: Neige et nuages ont un fort albédo.
+  revoir: cours
+- question: La Terre rayonne principalement dans…
+  choix:
+  - l'ultraviolet
+  - le visible
+  - l'infrarouge
+  - les rayons X
+  bonne: 2
+  explication: Un corps vers 15 °C émet surtout de l'infrarouge.
+  revoir: cours
+- question: À l'équilibre radiatif…
+  choix:
+  - la Terre ne reçoit plus rien
+  - la puissance absorbée égale la puissance émise
+  - la température augmente sans cesse
+  - l'albédo est nul
+  bonne: 1
+  explication: Autant d'énergie sort qu'il en entre.
+  revoir: cours
+- question: Sans effet de serre, la température moyenne de la Terre serait d'environ…
+  choix:
+  - −18 °C
+  - 0 °C
+  - 15 °C
+  - 30 °C
+  bonne: 0
+  explication: L'effet de serre naturel ajoute environ 33 °C.
+  revoir: cours
+- question: Les gaz à effet de serre absorbent surtout…
+  choix:
+  - la lumière visible du Soleil
+  - l'infrarouge émis par le sol
+  - les ondes radio
+  - les ultraviolets uniquement
+  bonne: 1
+  explication: Ils laissent passer le visible et retiennent l'infrarouge.
+  revoir: cours

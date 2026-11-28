@@ -1,0 +1,52 @@
+exercices:
+- titre: Hasard ou besoin ?
+  difficulte: 1
+  type: application
+  enonce: |
+    Dans la phrase « les bactéries mutent pour résister à l'antibiotique », quel mot est faux ? Corriger.
+  indice: Les mutations ont-elles un but ?
+  etapes:
+  - type: conc
+    titre: La correction
+    texte: <mark>« pour »</mark> est faux. Les mutations se produisent au hasard ; l'antibiotique sélectionne celles qui permettent de survivre.
+- titre: Une population de bactéries
+  difficulte: 2
+  type: methode
+  enonce: |
+    Une culture contient $10^{9}$ bactéries, dont une sur un million est résistante à un antibiotique. On ajoute l'antibiotique, qui tue toutes les bactéries sensibles. Combien de bactéries survivent ? Que devient la culture le lendemain ?
+  indice: Calculer le nombre de résistantes au départ.
+  etapes:
+  - type: calcul
+    titre: Les survivantes
+    texte: $10^{9} / 10^{6} = 1\,000$ bactéries résistantes.
+  - type: conc
+    titre: Le lendemain
+    texte: '<mark>Ces 1 000 bactéries se multiplient : la culture devient entièrement résistante</mark>.'
+- titre: L'œil parfait
+  difficulte: 2
+  type: piege
+  enonce: |
+    « L'œil humain est si bien fait qu'il ne peut pas être le produit de l'évolution. » Donner un argument qui montre qu'il n'est pas parfait.
+  indice: Que se passe-t-il là où le nerf optique traverse la rétine ?
+  etapes:
+  - type: piege
+    titre: L'erreur
+    texte: On prend un organe efficace pour un organe parfait.
+  - type: conc
+    titre: L'argument
+    texte: <mark>La rétine est montée à l'envers, ce qui crée une tache aveugle</mark>. Le poulpe, dont l'œil a évolué autrement, n'en a pas. C'est la trace d'une histoire, pas un plan.
+- titre: Le paludisme et les moustiques
+  difficulte: 3
+  type: bac
+  enonce: |
+    Dans les années 1950, on a massivement répandu un insecticide, le DDT, contre les moustiques porteurs du paludisme. Dix ans plus tard, dans beaucoup de régions, les moustiques n'y étaient presque plus sensibles.
+    1. Expliquer ce résultat par la sélection naturelle.
+    2. Proposer une stratégie pour ralentir ce phénomène.
+  indice: Que deviennent les rares moustiques résistants ?
+  etapes:
+  - type: calcul
+    titre: L'explication
+    texte: Quelques moustiques portaient déjà, par mutation, un allèle de résistance. Le DDT a tué les autres ; les résistants se sont reproduits et l'allèle est devenu fréquent.
+  - type: conc
+    titre: Une stratégie
+    texte: <mark>Limiter l'usage, alterner des insecticides différents, combiner avec d'autres moyens</mark> (moustiquaires, assèchement des eaux stagnantes) pour ne pas exercer toujours la même sélection.

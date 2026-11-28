@@ -1,0 +1,48 @@
+questions:
+  - question: La sève brute contient surtout…
+    choix: ["des sucres", "de l'eau et des sels minéraux", "des protéines", "de l'amidon"]
+    bonne: 1
+    explication: Elle monte des racines vers les feuilles dans le xylème.
+    revoir: cours
+
+  - question: Les sucres produits par la photosynthèse circulent dans…
+    choix: ["le xylème", "le phloème", "les stomates", "les poils absorbants"]
+    bonne: 1
+    explication: C'est la sève élaborée.
+    revoir: cours
+
+  - question: Les stomates permettent…
+    choix: ["l'absorption de l'eau du sol", "les échanges gazeux entre la feuille et l'air", "la pollinisation", "le transport des sucres"]
+    bonne: 1
+    explication: CO₂, O₂ et vapeur d'eau passent par ces petits orifices.
+    revoir: cours
+
+  - question: La photosynthèse produit…
+    choix: ["du CO₂ et de l'eau", "des sucres et du dioxygène", "des sels minéraux", "de la lumière"]
+    bonne: 1
+    explication: À partir de CO₂, d'eau et d'énergie lumineuse.
+    revoir: cours
+
+  - question: Après fécondation, l'ovule devient…
+    choix: ["un fruit", "une graine", "une fleur", "du pollen"]
+    bonne: 1
+    explication: Le pistil, lui, devient le fruit.
+    revoir: cours
+
+  - question: La coévolution fleur et pollinisateur, c'est…
+    choix: ["une évolution conjointe, chacun influençant l'autre", "une mutation identique", "une symbiose obligatoire", "une domestication"]
+    bonne: 0
+    explication: Les caractères de l'un sont sélectionnés en lien avec ceux de l'autre.
+    revoir: exercices
+
+  - question: La domestication des plantes a commencé il y a environ…
+    choix: ["1 000 ans", "10 000 ans", "100 000 ans", "1 million d'années"]
+    bonne: 1
+    explication: Au Néolithique, avec les débuts de l'agriculture.
+    revoir: cours
+
+  - question: Une variété très uniforme génétiquement est…
+    choix: ["plus résistante aux maladies", "plus fragile face à une maladie nouvelle", "impossible à cultiver", "sauvage"]
+    bonne: 1
+    explication: Tous les individus partagent les mêmes faiblesses.
+    revoir: exercices

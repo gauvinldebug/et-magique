@@ -1,0 +1,55 @@
+questions:
+- question: Le son peut se propager…
+  choix:
+  - dans le vide
+  - seulement dans l'air
+  - dans tout milieu matériel
+  - seulement dans les solides
+  bonne: 2
+  explication: Il faut de la matière qui vibre, comme des spectateurs pour la ola.
+  revoir: cours
+- question: Dans l'air, la vitesse du son vaut environ…
+  choix:
+  - 3 m/s
+  - 340 m/s
+  - 3 000 km/s
+  - 300 000 km/s
+  bonne: 1
+  explication: 300 000 km/s, c'est la lumière.
+  revoir: cours
+- question: Un son de période $T = 1$ ms a pour fréquence…
+  choix:
+  - 1 Hz
+  - 100 Hz
+  - 1 000 Hz
+  - 0,001 Hz
+  bonne: 2
+  explication: $f = 1 / 0{,}001 = 1\,000$ Hz.
+  revoir: cours
+- question: Ce qui distingue deux instruments jouant la même note, c'est…
+  choix:
+  - la fréquence fondamentale
+  - le timbre
+  - la vitesse du son
+  - la période
+  bonne: 1
+  explication: Le timbre vient des harmoniques.
+  revoir: cours
+- question: Quand l'intensité sonore est multipliée par 10, le niveau…
+  choix:
+  - est multiplié par 10
+  - augmente de 10 dB
+  - augmente de 3 dB
+  - ne change pas
+  bonne: 1
+  explication: $10\log(10) = 10$.
+  revoir: cours
+- question: Les cellules ciliées de l'oreille interne détruites par un bruit trop fort…
+  choix:
+  - repoussent en une semaine
+  - ne repoussent pas
+  - repoussent avec l'âge
+  - sont remplacées par le tympan
+  bonne: 1
+  explication: Les dégâts sont définitifs, d'où les protections auditives.
+  revoir: cours

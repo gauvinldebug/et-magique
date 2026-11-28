@@ -1,0 +1,71 @@
+exercices:
+  - titre: Vitesse d'expansion
+    difficulte: 1
+    type: application
+    enonce: |
+      Un basalte situé à 200 km de l'axe d'une dorsale a 10 millions d'années. Calculer la vitesse d'expansion de ce côté de la dorsale, en cm/an.
+    indice: 1 km = 100 000 cm.
+    etapes:
+      - type: calcul
+        titre: La conversion
+        texte: 200 km $= 2 \times 10^7$ cm et 10 Ma $= 10^7$ ans.
+      - type: conc
+        titre: La vitesse
+        texte: >-
+          <mark>$v = 2 \times 10^7 / 10^7 = 2$ cm/an</mark>.
+
+  - titre: Des bandes symétriques
+    difficulte: 2
+    type: methode
+    enonce: |
+      De part et d'autre d'une dorsale, on observe des bandes d'anomalies magnétiques identiques et symétriques. Expliquer leur origine.
+    etapes:
+      - type: calcul
+        titre: L'enregistrement
+        texte: En refroidissant à l'axe, le basalte garde l'orientation du champ magnétique du moment, normal ou inversé.
+      - type: conc
+        titre: La symétrie
+        texte: >-
+          <mark>La croûte formée à l'axe est emportée moitié d'un côté, moitié de l'autre</mark> : chaque période d'inversion forme deux bandes symétriques.
+
+  - titre: Lire une zone de subduction
+    difficulte: 2
+    type: bac
+    enonce: |
+      Au large du Chili, les foyers des séismes sont superficiels près de la fosse et de plus en plus profonds vers l'est, jusqu'à 600 km sous les Andes, où se trouvent des volcans explosifs. Interpréter.
+    etapes:
+      - type: calcul
+        titre: Les séismes
+        texte: Les foyers dessinent un plan incliné qui plonge vers l'est, c'est la trace de la plaque océanique qui s'enfonce sous l'Amérique du Sud.
+      - type: conc
+        titre: Les volcans
+        texte: >-
+          <mark>C'est une zone de subduction</mark> : la plaque plongeante libère de l'eau qui provoque la fusion partielle du manteau sus-jacent, d'où le volcanisme des Andes.
+
+  - titre: La dorsale qui pousse ?
+    difficulte: 2
+    type: piege
+    enonce: |
+      Un élève explique que le magma des dorsales pousse les plaques, comme un piston. Qu'en penser ?
+    etapes:
+      - type: piege
+        titre: L'erreur
+        texte: Le magma remonte parce que les plaques s'écartent, pas l'inverse.
+      - type: conc
+        titre: Le vrai moteur
+        texte: >-
+          <mark>La plaque océanique plongeante, plus dense, tire le reste de la plaque</mark>. C'est la force principale du mouvement.
+
+  - titre: La chaîne d'Hawaï
+    difficulte: 3
+    type: bac
+    enonce: |
+      L'île d'Hawaï est active (âge 0). L'île de Kauai, à 520 km au nord-ouest, a 5 millions d'années. En supposant le point chaud fixe, calculer la vitesse et la direction de la plaque Pacifique.
+    etapes:
+      - type: calcul
+        titre: La vitesse
+        texte: $520$ km en $5$ Ma, soit $5{,}2 \times 10^7$ cm en $5 \times 10^6$ ans, donc $v \approx 10$ cm/an.
+      - type: conc
+        titre: La direction
+        texte: >-
+          <mark>Environ 10 cm/an, vers le nord-ouest</mark> : les îles les plus vieilles sont emportées dans la direction du mouvement de la plaque.

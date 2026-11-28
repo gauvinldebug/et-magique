@@ -1,0 +1,48 @@
+questions:
+  - question: Un écosystème, c'est…
+    choix: ["seulement les êtres vivants d'un lieu", "un biotope, une biocénose et leurs interactions", "un seul être vivant", "le climat d'une région"]
+    bonne: 1
+    explication: Le milieu et les êtres vivants forment un tout.
+    revoir: cours
+
+  - question: Les producteurs primaires sont…
+    choix: ["les herbivores", "les plantes et les algues", "les décomposeurs", "les carnivores"]
+    bonne: 1
+    explication: Ils fabriquent de la matière organique par photosynthèse.
+    revoir: cours
+
+  - question: À chaque niveau trophique, la part d'énergie transmise est d'environ…
+    choix: ["100 %", "50 %", "10 %", "0 %"]
+    bonne: 2
+    explication: Environ 90 % est perdue.
+    revoir: cours
+
+  - question: Les décomposeurs…
+    choix: ["recyclent l'énergie", "transforment la matière organique en matière minérale", "font la photosynthèse", "mangent les carnivores"]
+    bonne: 1
+    explication: Ils bouclent le cycle de la matière.
+    revoir: cours
+
+  - question: La résilience d'un écosystème est…
+    choix: ["sa capacité à revenir à un état proche après une perturbation", "sa taille", "sa production de bois", "sa température"]
+    bonne: 0
+    explication: "Elle a des limites : une perturbation trop forte le fait basculer."
+    revoir: cours
+
+  - question: La pollinisation est un service…
+    choix: ["d'approvisionnement", "de régulation", "culturel", "économique uniquement"]
+    bonne: 1
+    explication: Elle permet la production de fruits et de graines.
+    revoir: cours
+
+  - question: Deux espèces qui utilisent la même ressource limitée sont en…
+    choix: ["symbiose", "compétition", "prédation", "parasitisme"]
+    bonne: 1
+    explication: Par exemple, des arbres pour la lumière.
+    revoir: cours
+
+  - question: Dans un écosystème, la matière…
+    choix: ["est perdue en chaleur", "est recyclée", "vient uniquement du Soleil", "n'existe pas"]
+    bonne: 1
+    explication: C'est l'énergie qui est perdue en chaleur.
+    revoir: exercices

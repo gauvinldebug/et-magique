@@ -3,7 +3,7 @@
 // Entrée = va directement au premier chapitre trouvé.
 interface Props { placeholder?: string; id: string; autofocus?: boolean; compact?: boolean; matiere?: string }
 const { id, autofocus = false, compact = false, matiere = 'maths' } = Astro.props;
-const placeholder = Astro.props.placeholder ?? (matiere === 'physique' ? 'Cherche un chapitre : ondes, pH, forces…' : 'Cherche un chapitre : récurrence, fractions…');
+const placeholder = Astro.props.placeholder ?? (matiere === 'physique' ? 'Cherche un chapitre : ondes, pH, forces…' : matiere === 'svt' ? 'Cherche un chapitre : méiose, immunité, climat…' : 'Cherche un chapitre : récurrence, fractions…');
 ---
 <div class:list={['rq', { compact }]} data-rq>
   <form class="s-search" role="search" action={`/${matiere}/recherche/`} method="get" style="margin:0">

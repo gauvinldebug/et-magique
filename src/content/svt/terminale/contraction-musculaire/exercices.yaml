@@ -1,0 +1,64 @@
+exercices:
+  - titre: Ce qui raccourcit
+    difficulte: 1
+    type: application
+    enonce: |
+      Lors d'une contraction, un sarcomère passe de 2,5 µm à 2,0 µm. La longueur des filaments d'actine et de myosine change-t-elle ?
+    etapes:
+      - type: conc
+        titre: La réponse
+        texte: >-
+          <mark>Non</mark> : les filaments gardent leur longueur, ils glissent les uns sur les autres. Seule la longueur du sarcomère diminue.
+
+  - titre: Quelle voie pour quel effort ?
+    difficulte: 1
+    type: methode
+    enonce: |
+      Associer à chaque effort la voie principale de régénération de l'ATP : un saut en hauteur, un 400 m, un marathon.
+    etapes:
+      - type: conc
+        titre: Les associations
+        texte: >-
+          <mark>Saut : phosphocréatine. 400 m : fermentation lactique. Marathon : respiration.</mark>
+
+  - titre: Rendement comparé
+    difficulte: 2
+    type: bac
+    enonce: |
+      Pour produire 64 ATP, combien de molécules de glucose faut-il par respiration, puis par fermentation lactique ? Quelle conséquence pour un effort long ?
+    etapes:
+      - type: calcul
+        titre: Le calcul
+        texte: Respiration, $64 / 32 = 2$ glucoses. Fermentation, $64 / 2 = 32$ glucoses.
+      - type: conc
+        titre: La conséquence
+        texte: >-
+          <mark>La fermentation consomme seize fois plus de glucose</mark> pour la même énergie : elle épuiserait vite les réserves, l'effort long repose donc sur la respiration.
+
+  - titre: L'ATP pour tirer ?
+    difficulte: 2
+    type: piege
+    enonce: |
+      Un élève explique que, sans ATP, la myosine ne peut plus se fixer sur l'actine et que le muscle devient mou. Pourquoi la rigidité cadavérique montre-t-elle le contraire ?
+    etapes:
+      - type: piege
+        titre: L'erreur
+        texte: L'ATP sert surtout à détacher la tête de myosine de l'actine.
+      - type: conc
+        titre: La réponse
+        texte: >-
+          <mark>Sans ATP, les têtes de myosine restent accrochées à l'actine</mark> : le muscle se bloque. C'est la rigidité cadavérique.
+
+  - titre: Effet de l'entraînement
+    difficulte: 3
+    type: bac
+    enonce: |
+      Après six mois d'entraînement en endurance, une biopsie montre davantage de mitochondries et de capillaires dans les fibres. Expliquer l'intérêt de ces changements.
+    etapes:
+      - type: calcul
+        titre: Le lien
+        texte: La respiration a lieu dans les mitochondries et a besoin de dioxygène et de glucose, apportés par le sang.
+      - type: conc
+        titre: L'intérêt
+        texte: >-
+          <mark>Plus de mitochondries et de capillaires, c'est plus de respiration possible</mark> : la fibre régénère plus d'ATP par voie aérobie et recourt moins à la fermentation, elle fatigue moins vite.

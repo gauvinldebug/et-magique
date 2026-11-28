@@ -43,7 +43,7 @@ const titre = titrePage ?? (onglet === 'video' ? chapitre.data.titre : `${chapit
       <slot />
       <div class="fini no-print" hidden data-fini={`${matiere.slug}/${niveau.slug}`} data-ch={chapitre.slug}>
         <button type="button" class="fini-case" aria-pressed="false"><i aria-hidden="true"></i><span>J'ai terminé ce chapitre</span></button>
-        <p>Coche quand tu as lu le cours et fait les exercices. La liste des chapitres le retient, sur cet appareil.</p>
+        <p>Coche quand tu as lu le cours et fait les exercices. Ta progression s'affiche dans la liste des chapitres, sur cet appareil.</p>
       </div>
       <div class="nextstep">
         <span set:html={phrases[onglet]} />

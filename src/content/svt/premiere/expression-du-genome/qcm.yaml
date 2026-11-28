@@ -1,0 +1,48 @@
+questions:
+  - question: La transcription a lieu…
+    choix: ["dans le cytoplasme", "dans le noyau", "dans les ribosomes", "dans la membrane"]
+    bonne: 1
+    explication: L'ADN ne quitte pas le noyau.
+    revoir: cours
+
+  - question: L'enzyme de la transcription est…
+    choix: ["l'ADN polymérase", "l'ARN polymérase", "le ribosome", "l'amylase"]
+    bonne: 1
+    explication: Elle fabrique l'ARN à partir d'un brin d'ADN.
+    revoir: cours
+
+  - question: Dans l'ARN, en face d'un A de l'ADN, on trouve…
+    choix: ["T", "U", "G", "C"]
+    bonne: 1
+    explication: L'uracile remplace la thymine.
+    revoir: exercices
+
+  - question: L'épissage consiste à…
+    choix: ["retirer les introns et rabouter les exons", "copier l'ADN", "assembler les acides aminés", "réparer l'ADN"]
+    bonne: 0
+    explication: C'est la maturation de l'ARN pré-messager.
+    revoir: cours
+
+  - question: Un codon est formé de…
+    choix: ["un nucléotide", "deux nucléotides", "trois nucléotides", "un acide aminé"]
+    bonne: 2
+    explication: Les ribosomes lisent l'ARNm trois par trois.
+    revoir: cours
+
+  - question: La traduction commence au codon…
+    choix: ["UAA", "AUG", "UGA", "GGG"]
+    bonne: 1
+    explication: AUG code la méthionine et sert de codon initiateur.
+    revoir: cours
+
+  - question: Le code génétique est dit redondant car…
+    choix: ["il est le même chez tous les êtres vivants", "plusieurs codons codent le même acide aminé", "il se répète dans l'ADN", "il change selon les cellules"]
+    bonne: 1
+    explication: 64 codons pour 20 acides aminés.
+    revoir: cours
+
+  - question: La forme en faucille des globules rouges est un phénotype…
+    choix: ["moléculaire", "cellulaire", "macroscopique", "environnemental"]
+    bonne: 1
+    explication: Elle concerne la forme de la cellule.
+    revoir: exercices

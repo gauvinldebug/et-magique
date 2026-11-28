@@ -1,0 +1,55 @@
+questions:
+- question: L'atmosphère primitive ne contenait presque pas…
+  choix:
+  - de diazote
+  - de dioxyde de carbone
+  - de dioxygène
+  - de vapeur d'eau
+  bonne: 2
+  explication: Il a été produit plus tard par le vivant.
+  revoir: cours
+- question: Le dioxygène de l'air a été produit d'abord par…
+  choix:
+  - les volcans
+  - les cyanobactéries
+  - les animaux
+  - la foudre
+  bonne: 1
+  explication: Par photosynthèse.
+  revoir: cours
+- question: Les stromatolithes sont construits par…
+  choix:
+  - des coraux
+  - des cyanobactéries
+  - des volcans
+  - des poissons
+  bonne: 1
+  explication: On en trouve encore aujourd'hui.
+  revoir: cours
+- question: La grande oxydation de l'atmosphère date d'environ…
+  choix:
+  - 4,5 milliards d'années
+  - 2,4 milliards d'années
+  - 450 millions d'années
+  - 65 millions d'années
+  bonne: 1
+  explication: Le dioxygène s'accumule enfin dans l'air.
+  revoir: cours
+- question: La couche d'ozone…
+  choix:
+  - produit du dioxygène
+  - absorbe les ultraviolets
+  - réchauffe les océans
+  - contient du CO₂
+  bonne: 1
+  explication: Elle protège l'ADN des UV.
+  revoir: cours
+- question: Le pétrole provient…
+  choix:
+  - de roches volcaniques
+  - de matière organique enfouie
+  - de l'ozone
+  - du noyau terrestre
+  bonne: 1
+  explication: C'est du vivant du passé.
+  revoir: cours

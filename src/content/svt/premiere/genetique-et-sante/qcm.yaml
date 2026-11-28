@@ -1,0 +1,48 @@
+questions:
+  - question: La mucoviscidose est due à des mutations du gène…
+    choix: ["de l'hémoglobine", "CFTR", "BRCA1", "de l'insuline"]
+    bonne: 1
+    explication: Il code un canal à ions chlorure.
+    revoir: cours
+
+  - question: Une maladie récessive se manifeste quand on a…
+    choix: ["un allèle muté", "deux allèles mutés", "aucun allèle muté", "trois allèles"]
+    bonne: 1
+    explication: Un seul allèle muté fait de la personne un porteur sain.
+    revoir: cours
+
+  - question: Deux parents porteurs sains ont, à chaque naissance, un risque d'enfant malade de…
+    choix: ["1/2", "1/4", "1/8", "0"]
+    bonne: 1
+    explication: Chaque parent transmet l'allèle muté avec une probabilité 1/2.
+    revoir: exercices
+
+  - question: La thérapie génique consiste à…
+    choix: ["supprimer un chromosome", "apporter une copie fonctionnelle d'un gène", "prendre des antibiotiques", "greffer un organe"]
+    bonne: 1
+    explication: Pour compenser l'allèle défectueux.
+    revoir: cours
+
+  - question: Un cancer résulte surtout…
+    choix: ["d'une seule mutation germinale", "de l'accumulation de mutations somatiques", "d'une infection bactérienne", "d'un manque de vitamines"]
+    bonne: 1
+    explication: La cellule finit par se diviser sans contrôle.
+    revoir: cours
+
+  - question: Le vaccin contre le papillomavirus prévient…
+    choix: ["la mucoviscidose", "certains cancers", "la grippe", "la résistance aux antibiotiques"]
+    bonne: 1
+    explication: Notamment le cancer du col de l'utérus.
+    revoir: cours
+
+  - question: Les antibiotiques agissent sur…
+    choix: ["les virus", "les bactéries", "les cellules cancéreuses", "les allèles"]
+    bonne: 1
+    explication: Ils sont inutiles contre les virus.
+    revoir: exercices
+
+  - question: L'apparition de bactéries résistantes s'explique par…
+    choix: ["une sélection de mutants préexistants", "un apprentissage", "la vaccination", "le froid"]
+    bonne: 0
+    explication: L'antibiotique élimine les sensibles.
+    revoir: cours

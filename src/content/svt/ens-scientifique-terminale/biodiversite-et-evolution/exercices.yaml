@@ -1,0 +1,55 @@
+exercices:
+- titre: Quel niveau ?
+  difficulte: 1
+  type: application
+  enonce: |
+    Pour chaque cas, dire de quel niveau de biodiversité il s'agit : (a) des coccinelles à 2 points et à 7 points dans un jardin ; (b) des coccinelles à 2 points de couleurs différentes ; (c) un jardin, une mare, une haie.
+  indice: Espèces, gènes ou écosystèmes ?
+  etapes:
+  - type: conc
+    titre: Les réponses
+    texte: <mark>(a) espèces, (b) génétique, (c) écosystèmes</mark>.
+- titre: Estimer par échantillon
+  difficulte: 2
+  type: methode
+  enonce: |
+    Dans une prairie de 10 hectares, on compte 36 orchidées sur 5 parcelles de 100 m² chacune. Estimer le nombre d'orchidées dans toute la prairie (1 hectare = 10 000 m²).
+  indice: Densité sur les parcelles, puis multiplication par la surface totale.
+  etapes:
+  - type: calcul
+    titre: La densité
+    texte: $36 / 500 = 0{,}072$ orchidée par m².
+  - type: calcul
+    titre: La surface
+    texte: $10 \times 10\,000 = 100\,000$ m².
+  - type: conc
+    titre: L'estimation
+    texte: <mark>Environ $0{,}072 \times 100\,000 = 7\,200$ orchidées</mark>, à condition que les parcelles soient représentatives.
+- titre: La vie a disparu ?
+  difficulte: 2
+  type: piege
+  enonce: |
+    « À la fin du Crétacé, une météorite a détruit presque toute la vie sur Terre. » Corriger.
+  indice: Qu'est-il arrivé aux mammifères, aux oiseaux ?
+  etapes:
+  - type: piege
+    titre: L'erreur
+    texte: Une extinction de masse n'efface pas toute la vie.
+  - type: conc
+    titre: La correction
+    texte: <mark>Environ 75 % des espèces ont disparu</mark>, mais d'autres ont survécu, dont les ancêtres des mammifères et des oiseaux actuels, qui se sont ensuite diversifiés.
+- titre: Une île et un serpent
+  difficulte: 3
+  type: bac
+  enonce: |
+    Sur l'île de Guam, un serpent arboricole introduit par accident vers 1950 a fait disparaître 10 des 12 espèces d'oiseaux de la forêt en quarante ans.
+    1. Quelle cause d'érosion de la biodiversité est illustrée ?
+    2. Pourquoi les îles sont-elles particulièrement vulnérables ?
+  indice: Les oiseaux de Guam avaient-ils déjà rencontré ce prédateur ?
+  etapes:
+  - type: calcul
+    titre: La cause
+    texte: Une espèce introduite devenue envahissante.
+  - type: conc
+    titre: Les îles
+    texte: <mark>Les espèces insulaires ont évolué sans ce prédateur</mark> et n'ont pas de défense ; leurs populations sont petites et ne peuvent pas se réfugier ailleurs.

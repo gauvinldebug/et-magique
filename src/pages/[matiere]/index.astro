@@ -19,7 +19,13 @@ const TEXTES: Record<string, { titre: string; description: string; h1: string; c
     titre: 'Physique-chimie et Magique : la physique-chimie de la 6e à la terminale, enfin claire',
     description: 'Tout le programme de physique-chimie de la 6e à la terminale : cours avec une image pour chaque notion, exercices corrigés pas à pas, QCM et fiches à imprimer. Gratuit, sans compte, sans publicité.',
     h1: 'Toute la physique-chimie, expliquée simplement.',
-    chapeau: 'De la 6e (sciences et technologie) à la terminale spécialité. Cours, exercices corrigés et QCM pour chaque chapitre. Gratuit, sans compte, sans publicité.',
+    chapeau: 'De la 6e (sciences et technologie) à la terminale spécialité, avec la partie physique-chimie de l\'enseignement scientifique. Cours, exercices corrigés et QCM pour chaque chapitre. Gratuit, sans compte, sans publicité.',
+  },
+  svt: {
+    titre: 'SVT et Magique : les SVT de première et terminale, enfin claires',
+    description: 'Le programme de SVT de spécialité et d\'enseignement scientifique, première et terminale : cours avec une image pour chaque notion, exercices corrigés pas à pas, QCM et fiches à imprimer. Gratuit, sans compte, sans publicité.',
+    h1: 'Les SVT, expliquées simplement.',
+    chapeau: 'Première et terminale spécialité, et la partie SVT de l\'enseignement scientifique. Le collège et la seconde arrivent ensuite. Cours, exercices corrigés et QCM pour chaque chapitre. Gratuit, sans compte, sans publicité.',
   },
 };
 const tx = TEXTES[matiere.slug] ?? TEXTES.maths;
@@ -31,7 +37,9 @@ const tx = TEXTES[matiere.slug] ?? TEXTES.maths;
         <svg class="m-hero-formes" viewBox="0 0 700 520" preserveAspectRatio="xMaxYMax slice" aria-hidden="true">
           <circle class="f-rond" cx="520" cy="170" r="250" fill="#F2E94E" />
           <polygon class="f-tri" points="180,520 360,210 540,520" fill="#FF7AA8" />
-          {matiere.slug === 'physique'
+          {matiere.slug === 'svt'
+            ? <path class="f-courbe" d="M300 40 C 300 160, 520 160, 520 280 S 300 400, 300 520" fill="none" stroke="#fff" stroke-width="9" pathLength="1" />
+            : matiere.slug === 'physique'
             ? <path class="f-courbe" d="M230 300 Q 310 140 390 300 T 550 300 T 710 300" fill="none" stroke="#fff" stroke-width="9" pathLength="1" />
             : <path class="f-courbe" d="M40 560 Q 380 -140 760 420" fill="none" stroke="#fff" stroke-width="9" pathLength="1" />}
           <rect class="f-carre" x="560" y="390" width="110" height="110" fill="#1A1A40" />

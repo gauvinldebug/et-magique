@@ -1,0 +1,71 @@
+exercices:
+  - titre: Faille normale ou inverse ?
+    difficulte: 1
+    type: application
+    enonce: |
+      Sur un affleurement, une faille fait remonter le compartiment supérieur (au-dessus du plan de faille) par rapport à l'autre. De quel type de faille s'agit-il, et quelle contrainte traduit-elle ?
+    etapes:
+      - type: conc
+        titre: La réponse
+        texte: >-
+          <mark>Une faille inverse, qui traduit une compression</mark> : les deux compartiments se rapprochent et se chevauchent.
+
+  - titre: Lire les ophiolites
+    difficulte: 2
+    type: methode
+    enonce: |
+      Au Chenaillet, on observe de bas en haut des péridotites, des gabbros, puis des basaltes en coussins. Que représente cet ensemble ?
+    indice: Compare avec la structure de la lithosphère océanique actuelle.
+    etapes:
+      - type: calcul
+        titre: La comparaison
+        texte: La lithosphère océanique actuelle montre, de bas en haut, le manteau (péridotite), puis la croûte (gabbros, basaltes en coussins formés au contact de l'eau).
+      - type: conc
+        titre: L'interprétation
+        texte: >-
+          <mark>C'est un morceau d'ancienne lithosphère océanique</mark>, une ophiolite, témoin d'un océan aujourd'hui disparu.
+
+  - titre: Une roche qui a voyagé en profondeur
+    difficulte: 2
+    type: bac
+    enonce: |
+      Un métagabbro des Alpes contient de la glaucophane et du grenat, minéraux stables à haute pression et basse température. Retracer l'histoire de cette roche.
+    etapes:
+      - type: calcul
+        titre: L'origine
+        texte: Un métagabbro est un ancien gabbro, roche de la croûte océanique formée à la dorsale.
+      - type: calcul
+        titre: La descente
+        texte: La glaucophane et le grenat indiquent qu'il a été soumis à une forte pression, donc enfoui profondément, tout en restant relativement froid. Ce sont les conditions d'une subduction.
+      - type: conc
+        titre: L'histoire
+        texte: >-
+          <mark>Formé à la dorsale, entraîné en subduction, transformé en profondeur, puis remonté</mark> lors de la collision et de l'érosion de la chaîne.
+
+  - titre: Un océan au sommet ?
+    difficulte: 2
+    type: piege
+    enonce: |
+      Un randonneur trouve des basaltes en coussins à 2 600 m d'altitude et conclut que l'océan arrivait jusque-là. Qu'en penser ?
+    etapes:
+      - type: piege
+        titre: L'erreur
+        texte: Les basaltes en coussins se forment bien sous l'eau, mais au fond de l'océan, pas à 2 600 m.
+      - type: conc
+        titre: La bonne explication
+        texte: >-
+          <mark>Ce sont des ophiolites charriées</mark> : la lithosphère océanique a été arrachée et poussée sur le continent pendant la fermeture de l'océan, puis soulevée avec la chaîne.
+
+  - titre: Raconter les Alpes
+    difficulte: 3
+    type: bac
+    enonce: |
+      Remettre dans l'ordre et associer à chaque étape un indice de terrain : collision, rifting, expansion océanique, subduction.
+    etapes:
+      - type: calcul
+        titre: L'ordre
+        texte: Rifting, puis expansion océanique, puis subduction, puis collision.
+      - type: conc
+        titre: Les indices
+        texte: >-
+          <mark>Rifting : failles normales et blocs basculés. Expansion : ophiolites. Subduction : schistes bleus et éclogites. Collision : plis, failles inverses, nappes de charriage, racine crustale.</mark>

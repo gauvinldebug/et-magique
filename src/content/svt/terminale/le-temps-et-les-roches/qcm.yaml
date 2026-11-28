@@ -1,0 +1,48 @@
+questions:
+  - question: La datation relative permet de…
+    choix: ["donner un âge en années", "ordonner des événements", "mesurer une demi-vie", "dater au carbone 14"]
+    bonne: 1
+    explication: Elle dit ce qui est plus ancien ou plus récent, sans âge chiffré.
+    revoir: cours
+
+  - question: Un filon qui traverse une couche est…
+    choix: ["plus ancien qu'elle", "plus récent qu'elle", "du même âge", "impossible à dater"]
+    bonne: 1
+    explication: Principe de recoupement.
+    revoir: cours
+
+  - question: Un bon fossile stratigraphique a vécu…
+    choix: ["longtemps, sur une petite zone", "peu de temps, sur une grande zone, en grand nombre", "uniquement dans l'océan profond", "jusqu'à aujourd'hui"]
+    bonne: 1
+    explication: Il caractérise ainsi une période courte, reconnaissable partout.
+    revoir: cours
+
+  - question: La demi-vie est la durée au bout de laquelle…
+    choix: ["tous les atomes pères ont disparu", "la moitié des atomes pères a disparu", "la roche se forme", "le nombre d'atomes fils est divisé par deux"]
+    bonne: 1
+    explication: Elle est propre à chaque élément radioactif.
+    revoir: cours
+
+  - question: Après trois demi-vies, il reste…
+    choix: ["1/3 des atomes pères", "1/6", "1/8", "0"]
+    bonne: 2
+    explication: $\frac{1}{2} \times \frac{1}{2} \times \frac{1}{2} = \frac{1}{8}$.
+    revoir: exercices
+
+  - question: Le chronomètre radioactif démarre quand…
+    choix: ["les atomes sont créés", "le minéral cristallise et piège les atomes", "on prélève l'échantillon", "la roche est érodée"]
+    bonne: 1
+    explication: C'est la fermeture du système.
+    revoir: cours
+
+  - question: Pour dater un granite de 300 Ma, on utilise plutôt…
+    choix: ["le carbone 14", "le rubidium-strontium", "la superposition", "la dendrochronologie"]
+    bonne: 1
+    explication: Il faut une demi-vie longue, adaptée à des centaines de millions d'années.
+    revoir: exercices
+
+  - question: Sur une isochrone Rb-Sr, l'âge se lit grâce…
+    choix: ["à l'ordonnée à l'origine", "au coefficient directeur", "au nombre de points", "à la longueur de la droite"]
+    bonne: 1
+    explication: "$a = \\mathrm{e}^{\\lambda t} - 1$, donc $t = \\ln(a + 1)/\\lambda$."
+    revoir: cours

@@ -1,0 +1,55 @@
+questions:
+- question: Un alternateur convertit de l'énergie…
+  choix:
+  - chimique en électrique
+  - mécanique en électrique
+  - lumineuse en électrique
+  - électrique en mécanique
+  bonne: 1
+  explication: Une rotation devient du courant.
+  revoir: cours
+- question: Le principe physique de l'alternateur est…
+  choix:
+  - l'effet Joule
+  - l'induction
+  - la fusion
+  - la photosynthèse
+  bonne: 1
+  explication: Un champ magnétique qui varie dans une bobine crée une tension.
+  revoir: cours
+- question: Quelle centrale n'utilise pas d'alternateur ?
+  choix:
+  - nucléaire
+  - hydraulique
+  - éolienne
+  - photovoltaïque
+  bonne: 3
+  explication: La cellule convertit directement la lumière.
+  revoir: cours
+- question: Le rendement d'une chaîne de convertisseurs est…
+  choix:
+  - la somme des rendements
+  - le produit des rendements
+  - le plus grand des rendements
+  - toujours 1
+  bonne: 1
+  explication: Chaque maillon garde une fraction.
+  revoir: cours
+- question: Le kilowattheure est une unité…
+  choix:
+  - de puissance
+  - d'énergie
+  - de tension
+  - d'intensité
+  bonne: 1
+  explication: $1\ \mathrm{kWh} = 3{,}6 \times 10^6$ J.
+  revoir: cours
+- question: Une centrale thermique a un rendement d'environ…
+  choix:
+  - 5 %
+  - 33 %
+  - 80 %
+  - 100 %
+  bonne: 1
+  explication: Les deux tiers partent en chaleur.
+  revoir: cours

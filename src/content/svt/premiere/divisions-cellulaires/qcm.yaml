@@ -1,0 +1,48 @@
+questions:
+  - question: La réplication de l'ADN a lieu…
+    choix: ["pendant la prophase", "pendant la phase S de l'interphase", "pendant l'anaphase", "après la mitose"]
+    bonne: 1
+    explication: La cellule double son ADN avant de se diviser.
+    revoir: cours
+
+  - question: La réplication est dite semi-conservative car…
+    choix: ["la moitié de l'ADN est perdue", "chaque molécule fille garde un brin parental", "elle s'arrête à mi-chemin", "seule la moitié des gènes est copiée"]
+    bonne: 1
+    explication: Chaque copie associe un brin ancien et un brin nouveau.
+    revoir: cours
+
+  - question: L'enzyme qui fabrique le nouveau brin d'ADN est…
+    choix: ["l'ARN polymérase", "l'ADN polymérase", "l'amylase", "la ligase"]
+    bonne: 1
+    explication: Elle ajoute les nucléotides complémentaires au brin modèle.
+    revoir: cours
+
+  - question: En face d'un G, on trouve toujours…
+    choix: ["A", "T", "C", "G"]
+    bonne: 2
+    explication: G s'associe à C, A à T.
+    revoir: exercices
+
+  - question: Les chromosomes s'alignent au centre de la cellule pendant…
+    choix: ["la prophase", "la métaphase", "l'anaphase", "la télophase"]
+    bonne: 1
+    explication: Ils forment la plaque équatoriale.
+    revoir: cours
+
+  - question: Pendant l'anaphase de mitose…
+    choix: ["les chromosomes homologues se séparent", "les chromatides sœurs se séparent", "l'ADN se réplique", "le noyau se reforme"]
+    bonne: 1
+    explication: Chaque pôle reçoit une chromatide de chaque chromosome.
+    revoir: cours
+
+  - question: Une cellule à 46 chromosomes donne par mitose…
+    choix: ["deux cellules à 23 chromosomes", "deux cellules à 46 chromosomes", "quatre cellules à 23 chromosomes", "une cellule à 92 chromosomes"]
+    bonne: 1
+    explication: La mitose conserve le nombre de chromosomes.
+    revoir: cours
+
+  - question: Deux chromatides sœurs sont…
+    choix: ["un chromosome paternel et un maternel", "deux copies identiques du même chromosome", "deux chromosomes différents", "deux gènes"]
+    bonne: 1
+    explication: Elles sont issues de la réplication et reliées par le centromère.
+    revoir: cours

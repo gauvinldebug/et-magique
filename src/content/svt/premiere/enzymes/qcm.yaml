@@ -1,0 +1,48 @@
+questions:
+  - question: Une enzyme est…
+    choix: ["un lipide", "une protéine catalyseur", "un sucre", "un acide nucléique"]
+    bonne: 1
+    explication: Elle accélère une réaction sans être consommée.
+    revoir: cours
+
+  - question: Le substrat se fixe sur…
+    choix: ["le noyau", "le site actif", "la membrane", "le ribosome"]
+    bonne: 1
+    explication: Une poche de forme complémentaire.
+    revoir: cours
+
+  - question: Après la réaction, l'enzyme…
+    choix: ["est détruite", "ressort intacte", "devient le produit", "change de forme définitivement"]
+    bonne: 1
+    explication: Elle peut catalyser de nouveau.
+    revoir: cours
+
+  - question: Au-delà de sa température optimale, une enzyme…
+    choix: ["fonctionne de plus en plus vite", "se dénature", "se multiplie", "change de substrat"]
+    bonne: 1
+    explication: Son site actif se déforme.
+    revoir: cours
+
+  - question: La spécificité de substrat s'explique par…
+    choix: ["la couleur de l'enzyme", "la complémentarité de forme entre site actif et substrat", "la taille de la cellule", "la température"]
+    bonne: 1
+    explication: Seul un substrat de forme complémentaire entre dans le site actif.
+    revoir: cours
+
+  - question: Le pH optimal de la pepsine de l'estomac est d'environ…
+    choix: ["2", "7", "10", "14"]
+    bonne: 0
+    explication: Elle travaille dans un milieu très acide.
+    revoir: cours
+
+  - question: Quand tous les sites actifs sont occupés, la vitesse de réaction…
+    choix: ["augmente toujours", "est maximale", "devient nulle", "diminue"]
+    bonne: 1
+    explication: Ajouter du substrat ne l'accélère plus.
+    revoir: cours
+
+  - question: Une enzyme refroidie à 0 °C puis remise à 37 °C…
+    choix: ["est détruite", "fonctionne de nouveau", "change de spécificité", "devient un substrat"]
+    bonne: 1
+    explication: Le froid ralentit sans dénaturer.
+    revoir: exercices

@@ -1,0 +1,55 @@
+questions:
+- question: Le climat est une moyenne sur environ…
+  choix:
+  - 1 jour
+  - 1 an
+  - 30 ans
+  - 1 000 ans
+  bonne: 2
+  explication: Une période assez longue pour gommer la météo.
+  revoir: cours
+- question: Depuis 1850, la température moyenne du globe a augmenté d'environ…
+  choix:
+  - 0,1 °C
+  - 1,2 °C
+  - 5 °C
+  - 10 °C
+  bonne: 1
+  explication: C'est une moyenne sur toute la planète.
+  revoir: cours
+- question: La plus grande partie de l'énergie en plus a été stockée…
+  choix:
+  - dans l'air
+  - dans l'océan
+  - dans les glaciers
+  - dans les sols
+  bonne: 1
+  explication: Plus de 90 %, la marmite.
+  revoir: cours
+- question: Laquelle ne fait presque pas monter le niveau de la mer ?
+  choix:
+  - la dilatation de l'eau
+  - la fonte du Groenland
+  - la fonte de la banquise
+  - la fonte des glaciers de montagne
+  bonne: 2
+  explication: La banquise flotte déjà.
+  revoir: cours
+- question: Une rétroaction positive…
+  choix:
+  - atténue le réchauffement
+  - amplifie la perturbation
+  - n'a aucun effet
+  - refroidit toujours
+  bonne: 1
+  explication: Elle renforce sa propre cause.
+  revoir: cours
+- question: Si les émissions s'arrêtaient demain, la mer…
+  choix:
+  - baisserait aussitôt
+  - continuerait de monter longtemps
+  - resterait au niveau de 1850
+  - monterait deux fois plus vite
+  bonne: 1
+  explication: L'océan et les calottes réagissent avec retard.
+  revoir: cours

@@ -1,0 +1,68 @@
+exercices:
+  - titre: Remettre l'arc réflexe dans l'ordre
+    difficulte: 1
+    type: application
+    enonce: |
+      Ordonner les éléments de l'arc réflexe myotatique : motoneurone, fuseau neuromusculaire, muscle, neurone sensoriel, moelle épinière.
+    etapes:
+      - type: conc
+        titre: L'ordre
+        texte: >-
+          <mark>Fuseau neuromusculaire, neurone sensoriel, moelle épinière, motoneurone, muscle</mark>.
+
+  - titre: Un stimulus plus fort
+    difficulte: 2
+    type: methode
+    enonce: |
+      On étire un muscle faiblement puis fortement, en enregistrant le neurone sensoriel. Que va-t-on observer sur les enregistrements ?
+    indice: Les potentiels d'action ont tous la même amplitude.
+    etapes:
+      - type: conc
+        titre: L'observation attendue
+        texte: >-
+          <mark>Des potentiels d'action de même amplitude, mais plus fréquents pour l'étirement fort</mark> : l'intensité est codée en fréquence.
+
+  - titre: Un curare sur la synapse
+    difficulte: 2
+    type: bac
+    enonce: |
+      Le curare se fixe sur les récepteurs à acétylcholine des fibres musculaires sans les activer. Expliquer pourquoi il provoque une paralysie.
+    etapes:
+      - type: calcul
+        titre: Le fonctionnement normal
+        texte: L'acétylcholine libérée par le motoneurone se fixe sur ses récepteurs et déclenche la contraction de la fibre musculaire.
+      - type: conc
+        titre: L'effet du curare
+        texte: >-
+          <mark>Le curare occupe les récepteurs</mark> : l'acétylcholine ne peut plus s'y fixer, le message ne passe plus au muscle, qui ne se contracte plus.
+
+  - titre: Lésion à gauche, paralysie à gauche ?
+    difficulte: 2
+    type: piege
+    enonce: |
+      Après un AVC dans le cortex moteur de l'hémisphère gauche, un patient a du mal à bouger la main. Laquelle ?
+    etapes:
+      - type: piege
+        titre: L'erreur fréquente
+        texte: On pense spontanément à la main gauche.
+      - type: conc
+        titre: La réponse
+        texte: >-
+          <mark>La main droite</mark> : les voies motrices se croisent, l'hémisphère gauche commande le côté droit du corps.
+
+  - titre: Le motoneurone fait ses comptes
+    difficulte: 3
+    type: bac
+    enonce: |
+      Un motoneurone reçoit en même temps des potentiels d'action d'un neurone excitateur (qui seul le dépolarise de 8 mV) et d'un neurone inhibiteur (qui seul l'hyperpolarise de 5 mV). Son seuil est atteint pour une dépolarisation de 15 mV. Émet-il un potentiel d'action ? Et si le neurone excitateur double sa fréquence (+16 mV) ?
+    etapes:
+      - type: calcul
+        titre: Premier cas
+        texte: Sommation, $+8 - 5 = +3$ mV, sous le seuil de 15 mV. Pas de potentiel d'action.
+      - type: calcul
+        titre: Second cas
+        texte: $+16 - 5 = +11$ mV, toujours sous le seuil.
+      - type: conc
+        titre: La conclusion
+        texte: >-
+          <mark>Dans les deux cas, le motoneurone reste silencieux</mark> : l'inhibition empêche le message excitateur d'atteindre le seuil. C'est l'intégration.

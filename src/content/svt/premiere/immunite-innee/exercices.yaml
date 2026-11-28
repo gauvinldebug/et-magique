@@ -1,0 +1,64 @@
+exercices:
+  - titre: Les quatre signes
+    difficulte: 1
+    type: application
+    enonce: |
+      Une épine plantée dans le doigt provoque une zone rouge et gonflée. Citer les quatre signes de l'inflammation et la cause de la rougeur.
+    etapes:
+      - type: conc
+        titre: La réponse
+        texte: >-
+          <mark>Rougeur, chaleur, gonflement, douleur</mark>. La rougeur vient de la dilatation des vaisseaux sanguins, sous l'effet des médiateurs chimiques.
+
+  - titre: Ordonner la phagocytose
+    difficulte: 1
+    type: methode
+    enonce: |
+      Remettre dans l'ordre : digestion, adhésion, rejet des débris, ingestion.
+    etapes:
+      - type: conc
+        titre: L'ordre
+        texte: >-
+          <mark>Adhésion, ingestion, digestion, rejet des débris</mark>.
+
+  - titre: Des souris sans récepteur
+    difficulte: 2
+    type: bac
+    enonce: |
+      Des souris dont les macrophages n'ont pas de récepteur capable de reconnaître un motif des parois bactériennes développent des infections graves, même avec des bactéries habituellement inoffensives. Interpréter.
+    etapes:
+      - type: calcul
+        titre: Le rôle du récepteur
+        texte: Le récepteur permet aux sentinelles de détecter les bactéries et de déclencher la réaction inflammatoire.
+      - type: conc
+        titre: L'interprétation
+        texte: >-
+          <mark>Sans reconnaissance, pas d'inflammation ni de recrutement de phagocytes</mark> : les bactéries se multiplient sans être freinées.
+
+  - titre: Supprimer l'inflammation ?
+    difficulte: 2
+    type: piege
+    enonce: |
+      Un élève pense qu'il faut toujours prendre un anti-inflammatoire dès qu'une plaie devient rouge, puisque l'inflammation est un problème. Qu'en penser ?
+    etapes:
+      - type: piege
+        titre: L'erreur
+        texte: L'inflammation n'est pas la maladie, c'est la défense contre l'infection.
+      - type: conc
+        titre: La réponse
+        texte: >-
+          <mark>L'inflammation est utile</mark> : elle recrute les phagocytes qui détruisent les microbes. Un anti-inflammatoire peut soulager une douleur forte, mais il ne soigne pas l'infection et peut freiner la défense.
+
+  - titre: Le lien avec l'immunité adaptative
+    difficulte: 3
+    type: bac
+    enonce: |
+      Expliquer pourquoi les cellules dendritiques sont considérées comme un pont entre immunité innée et immunité adaptative.
+    etapes:
+      - type: calcul
+        titre: Dans l'immunité innée
+        texte: Elles détectent et capturent les microbes au lieu de l'infection, comme les autres sentinelles.
+      - type: conc
+        titre: Vers l'immunité adaptative
+        texte: >-
+          <mark>Elles migrent vers les ganglions lymphatiques et y présentent des fragments du microbe aux lymphocytes</mark>, ce qui déclenche la réponse adaptative, spécifique de ce microbe.

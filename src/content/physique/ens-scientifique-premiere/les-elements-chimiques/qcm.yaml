@@ -1,0 +1,55 @@
+questions:
+- question: Un élément chimique est défini par…
+  choix:
+  - son nombre de nucléons $A$
+  - son numéro atomique $Z$
+  - son nombre de neutrons
+  - sa masse
+  bonne: 1
+  explication: Même $Z$, même élément, quel que soit $A$.
+  revoir: cours
+- question: Deux isotopes ont…
+  choix:
+  - le même $A$
+  - le même $Z$ et des $A$ différents
+  - le même nombre de neutrons
+  - des $Z$ différents
+  bonne: 1
+  explication: Même élément, nombre de neutrons différent.
+  revoir: cours
+- question: Dans une réaction nucléaire, on conserve…
+  choix:
+  - les éléments
+  - le nombre de molécules
+  - $A$ et $Z$
+  - la masse exacte
+  bonne: 2
+  explication: Les éléments changent ; $A$ et $Z$ totaux sont conservés.
+  revoir: cours
+- question: Au cœur du Soleil, l'hydrogène fusionne en…
+  choix:
+  - carbone
+  - hélium
+  - fer
+  - oxygène
+  bonne: 1
+  explication: C'est la première étape de la cuisine des étoiles.
+  revoir: cours
+- question: L'élément le plus abondant dans l'Univers est…
+  choix:
+  - l'oxygène
+  - le fer
+  - l'hélium
+  - l'hydrogène
+  bonne: 3
+  explication: Environ 92 % des atomes.
+  revoir: cours
+- question: Les éléments plus lourds que le fer se forment surtout…
+  choix:
+  - dans le cœur du Soleil
+  - lors de supernovas et de collisions d'étoiles à neutrons
+  - dans la croûte terrestre
+  - dans les océans
+  bonne: 1
+  explication: La fusion tranquille s'arrête au fer.
+  revoir: cours

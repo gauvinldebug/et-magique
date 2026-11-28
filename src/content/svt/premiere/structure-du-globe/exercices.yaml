@@ -1,0 +1,68 @@
+exercices:
+  - titre: Calculer une distance
+    difficulte: 1
+    type: application
+    enonce: |
+      Des ondes P se propagent à 6 km/s dans la croûte. Elles arrivent à une station 20 s après le séisme. À quelle distance est l'épicentre ?
+    etapes:
+      - type: conc
+        titre: Le calcul
+        texte: >-
+          <mark>$d = v \times t = 6 \times 20 = 120$ km</mark>.
+
+  - titre: Pourquoi les ondes S disparaissent
+    difficulte: 2
+    type: methode
+    enonce: |
+      Les sismographes situés de l'autre côté de la Terre par rapport à un séisme reçoivent des ondes P, mais aucune onde S directe. Que peut-on en déduire ?
+    etapes:
+      - type: calcul
+        titre: Le principe
+        texte: Les ondes S ne traversent pas les liquides.
+      - type: conc
+        titre: La déduction
+        texte: >-
+          <mark>Une couche liquide se trouve sur leur trajet</mark> : c'est le noyau externe, sous la discontinuité de Gutenberg.
+
+  - titre: Épaisseur de croûte
+    difficulte: 2
+    type: bac
+    enonce: |
+      Sous la Bretagne, le Moho est à 30 km ; sous les Alpes, il descend à 55 km ; sous l'Atlantique, il est à 7 km. Expliquer ces différences.
+    etapes:
+      - type: calcul
+        titre: Les deux croûtes
+        texte: La croûte océanique est fine (environ 7 km), la croûte continentale est épaisse (environ 30 km).
+      - type: conc
+        titre: Sous les Alpes
+        texte: >-
+          <mark>Sous une chaîne de montagnes, la croûte continentale est épaissie</mark> : c'est la racine crustale, due à la collision.
+
+  - titre: Un océan de lave sous nos pieds ?
+    difficulte: 2
+    type: piege
+    enonce: |
+      Un élève dit que les plaques flottent sur un manteau liquide. Qu'en penser ?
+    etapes:
+      - type: piege
+        titre: L'erreur
+        texte: Les ondes S traversent tout le manteau, il n'est donc pas liquide.
+      - type: conc
+        titre: La bonne description
+        texte: >-
+          <mark>Le manteau est solide</mark> ; l'asthénosphère est seulement ductile, elle se déforme lentement et permet aux plaques lithosphériques de se déplacer.
+
+  - titre: Densités et altitudes
+    difficulte: 3
+    type: bac
+    enonce: |
+      La croûte continentale a une densité de 2,7, la croûte océanique de 3,0, le manteau de 3,3. Expliquer pourquoi les continents sont en moyenne plus hauts que les fonds océaniques.
+    indice: Pense à un bloc de bois et un bloc plus dense posés sur l'eau.
+    etapes:
+      - type: calcul
+        titre: Le principe
+        texte: La lithosphère repose en équilibre sur l'asthénosphère ; un matériau plus léger et plus épais s'élève davantage.
+      - type: conc
+        titre: La conclusion
+        texte: >-
+          <mark>La croûte continentale, plus légère et plus épaisse, « flotte » plus haut</mark> que la croûte océanique, plus dense et plus fine.

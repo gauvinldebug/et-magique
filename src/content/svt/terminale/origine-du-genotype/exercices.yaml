@@ -1,0 +1,80 @@
+exercices:
+  - titre: Compter les gamètes possibles
+    difficulte: 1
+    type: application
+    enonce: |
+      Chez la drosophile, $2n = 8$. Combien de gamètes génétiquement différents une drosophile peut-elle produire par le seul brassage interchromosomique ?
+    indice: Chaque paire de chromosomes se répartit au hasard, indépendamment des autres.
+    etapes:
+      - type: init
+        titre: Le nombre de paires
+        texte: $2n = 8$, donc $n = 4$ paires de chromosomes.
+      - type: conc
+        titre: Le calcul
+        texte: >-
+          Chaque paire donne 2 possibilités, donc <mark>$2^4 = 16$ gamètes différents</mark>.
+
+  - titre: Méiose ou mitose ?
+    difficulte: 1
+    type: methode
+    enonce: |
+      Une cellule à $2n = 6$ se divise et donne quatre cellules à 3 chromosomes chacune. S'agit-il d'une mitose ou d'une méiose ? Justifier.
+    indice: Compte les cellules et les chromosomes.
+    etapes:
+      - type: calcul
+        titre: Ce qu'on observe
+        texte: Quatre cellules filles, et le nombre de chromosomes est divisé par deux ($6 \to 3$).
+      - type: conc
+        titre: La réponse
+        texte: >-
+          <mark>C'est une méiose</mark> : une mitose donnerait deux cellules à 6 chromosomes.
+
+  - titre: Un croisement test à interpréter
+    difficulte: 2
+    type: bac
+    enonce: |
+      On croise une drosophile hétérozygote [corps gris, ailes longues] avec une drosophile [corps noir, ailes vestigiales], homozygote récessive. On obtient 1 000 descendants : 415 [gris, longues], 410 [noir, vestigiales], 88 [gris, vestigiales], 87 [noir, longues]. Les deux gènes sont-ils indépendants ou liés ?
+    indice: Compare les proportions aux 25 % attendus pour des gènes indépendants.
+    etapes:
+      - type: init
+        titre: Pourquoi un croisement test
+        texte: Le parent homozygote récessif ne donne que des allèles récessifs. Le phénotype de chaque descendant traduit donc le gamète de l'hétérozygote.
+      - type: calcul
+        titre: Les proportions
+        texte: Phénotypes parentaux, 825 sur 1 000 soit 82,5 %. Phénotypes recombinés, 175 sur 1 000 soit 17,5 %. On est loin de quatre fois 25 %.
+      - type: conc
+        titre: La conclusion
+        texte: >-
+          <mark>Les deux gènes sont liés</mark>, portés par le même chromosome. Les phénotypes recombinés viennent de crossing-over en prophase I chez le parent hétérozygote.
+
+  - titre: Brassage inter, donc allèles mélangés ?
+    difficulte: 2
+    type: piege
+    enonce: |
+      Un élève affirme : « Grâce au brassage interchromosomique, deux allèles portés par le même chromosome peuvent se retrouver séparés dans les gamètes. » A-t-il raison ?
+    etapes:
+      - type: piege
+        titre: L'erreur
+        texte: Le brassage interchromosomique répartit des chromosomes entiers. Deux allèles d'un même chromosome restent ensemble.
+      - type: conc
+        titre: La bonne réponse
+        texte: >-
+          <mark>Non</mark> : seul le crossing-over (brassage intrachromosomique) peut séparer deux allèles portés par un même chromosome.
+
+  - titre: Trisomie 21
+    difficulte: 3
+    type: bac
+    enonce: |
+      Un enfant possède 47 chromosomes dont trois chromosomes 21. Proposer une explication à l'origine de cette anomalie, chez l'un des parents.
+    indice: Pense à la séparation des chromosomes pendant la méiose.
+    etapes:
+      - type: calcul
+        titre: Le gamète anormal
+        texte: L'enfant a reçu deux chromosomes 21 de l'un des parents. Un gamète de ce parent contenait donc 24 chromosomes au lieu de 23.
+      - type: calcul
+        titre: Quand est-ce arrivé
+        texte: Les deux chromosomes 21 homologues ne se sont pas séparés en anaphase I, ou les deux chromatides d'un chromosome 21 ne se sont pas séparées en anaphase II.
+      - type: conc
+        titre: La conclusion
+        texte: >-
+          <mark>Une non-disjonction pendant la méiose</mark> a produit un gamète à 24 chromosomes ; fécondé par un gamète normal, il donne une cellule-œuf à 47 chromosomes.

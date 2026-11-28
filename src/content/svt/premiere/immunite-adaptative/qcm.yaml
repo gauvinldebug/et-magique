@@ -1,0 +1,48 @@
+questions:
+  - question: Les anticorps sont sécrétés par…
+    choix: ["les macrophages", "les plasmocytes", "les lymphocytes T CD8", "les globules rouges"]
+    bonne: 1
+    explication: Ce sont des lymphocytes B différenciés.
+    revoir: cours
+
+  - question: Un anticorps reconnaît…
+    choix: ["tous les microbes", "un antigène précis", "les cellules du corps", "uniquement les virus"]
+    bonne: 1
+    explication: Il est spécifique d'un seul antigène.
+    revoir: cours
+
+  - question: La sélection clonale, c'est…
+    choix: ["la fabrication d'un nouveau lymphocyte adapté au microbe", "l'activation des lymphocytes dont le récepteur reconnaît l'antigène", "la phagocytose", "la vaccination"]
+    bonne: 1
+    explication: Les lymphocytes spécifiques existaient avant l'infection.
+    revoir: cours
+
+  - question: Les lymphocytes T cytotoxiques…
+    choix: ["sécrètent des anticorps", "détruisent les cellules infectées", "présentent les antigènes", "produisent de l'histamine"]
+    bonne: 1
+    explication: Ils empêchent ainsi la multiplication des virus.
+    revoir: cours
+
+  - question: Les lymphocytes T CD4 auxiliaires…
+    choix: ["stimulent la multiplication des autres lymphocytes", "tuent les bactéries", "forment les anticorps", "font la phagocytose"]
+    bonne: 0
+    explication: Ils sécrètent des interleukines.
+    revoir: cours
+
+  - question: Un vaccin contient…
+    choix: ["des anticorps", "un antigène inoffensif", "des antibiotiques", "des lymphocytes"]
+    bonne: 1
+    explication: L'organisme fabrique lui-même sa réponse.
+    revoir: exercices
+
+  - question: Lors d'un second contact avec un antigène, la réponse est…
+    choix: ["plus lente", "identique", "plus rapide et plus intense", "absente"]
+    bonne: 2
+    explication: Grâce aux cellules mémoire.
+    revoir: cours
+
+  - question: Un complexe immun est formé…
+    choix: ["d'un anticorps fixé sur son antigène", "de deux lymphocytes", "d'un macrophage et d'un virus", "d'un vaccin et d'un antibiotique"]
+    bonne: 0
+    explication: Il neutralise le microbe et facilite sa phagocytose.
+    revoir: cours

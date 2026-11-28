@@ -1,0 +1,51 @@
+exercices:
+- titre: Remettre le trajet dans l'ordre
+  difficulte: 1
+  type: application
+  enonce: |
+    Remettre dans l'ordre : nerf auditif, tympan, cochlée, pavillon, osselets, cortex auditif.
+  indice: De l'extérieur vers le cerveau.
+  etapes:
+  - type: conc
+    titre: L'ordre
+    texte: <mark>Pavillon, tympan, osselets, cochlée, nerf auditif, cortex auditif</mark>.
+- titre: Une perte dans les aigus
+  difficulte: 2
+  type: methode
+  enonce: |
+    Un audiogramme montre qu'une personne entend mal les sons aigus, mais bien les graves. Quelle partie de la cochlée est probablement abîmée ?
+  indice: Où sont codés les aigus ?
+  etapes:
+  - type: calcul
+    titre: Le codage
+    texte: Les aigus sont captés à la base de la cochlée.
+  - type: conc
+    titre: La conclusion
+    texte: <mark>Les cellules ciliées de la base de la cochlée</mark>. C'est souvent la première zone touchée par l'âge ou le bruit.
+- titre: Ça va revenir
+  difficulte: 2
+  type: piege
+  enonce: |
+    Après un concert, tu entends un sifflement. Un ami te dit : « Pas grave, tes oreilles vont se réparer. » A-t-il raison ?
+  indice: Les cellules ciliées se renouvellent-elles ?
+  etapes:
+  - type: piege
+    titre: L'erreur
+    texte: Le sifflement peut disparaître, mais les cellules détruites, elles, ne repoussent pas.
+  - type: conc
+    titre: La réponse
+    texte: '<mark>Non, pas forcément</mark> : c''est un signe que des cellules ont souffert. À force, la perte devient définitive.'
+- titre: Musiciens et cortex
+  difficulte: 3
+  type: bac
+  enonce: |
+    Des études d'imagerie montrent que la zone du cortex qui traite les sons des instruments est plus étendue chez les musiciens professionnels que chez les non-musiciens. Elle l'est d'autant plus qu'ils ont commencé jeunes.
+    Expliquer ces observations.
+  indice: Le cerveau se modifie selon ce qu'il fait souvent.
+  etapes:
+  - type: calcul
+    titre: L'observation
+    texte: L'entraînement répété modifie la taille de la zone qui traite les sons.
+  - type: conc
+    titre: L'explication
+    texte: '<mark>C''est la plasticité cérébrale</mark> : le cortex se réorganise avec l''expérience, et il est plus malléable chez l''enfant.'

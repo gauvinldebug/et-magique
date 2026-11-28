@@ -1,0 +1,67 @@
+exercices:
+  - titre: Biotope ou biocénose ?
+    difficulte: 1
+    type: application
+    enonce: |
+      Classer pour une mare : l'eau, les grenouilles, la température, les algues, la vase, les bactéries.
+    etapes:
+      - type: conc
+        titre: Le classement
+        texte: >-
+          <mark>Biotope : l'eau, la température, la vase. Biocénose : les grenouilles, les algues, les bactéries.</mark>
+
+  - titre: Combien d'énergie arrive au sommet ?
+    difficulte: 2
+    type: methode
+    enonce: |
+      Des plantes fixent 10 000 kJ. En considérant que 10 % de l'énergie passe d'un niveau au suivant, quelle énergie arrive au carnivore qui mange l'herbivore ?
+    etapes:
+      - type: calcul
+        titre: Herbivore
+        texte: $10\,000 \times 0{,}1 = 1\,000$ kJ.
+      - type: conc
+        titre: Carnivore
+        texte: >-
+          <mark>$1\,000 \times 0{,}1 = 100$ kJ</mark>, soit 1 % de l'énergie de départ.
+
+  - titre: Une forêt sans décomposeurs
+    difficulte: 2
+    type: bac
+    enonce: |
+      On imagine une forêt dans laquelle tous les champignons et bactéries du sol disparaissent. Que se passerait-il au bout de quelques années ?
+    etapes:
+      - type: calcul
+        titre: Ce qui s'arrête
+        texte: Feuilles mortes et cadavres ne seraient plus décomposés, la matière organique s'accumulerait.
+      - type: conc
+        titre: La conséquence
+        texte: >-
+          <mark>Le sol s'appauvrirait en éléments minéraux</mark> (azote, phosphore), les plantes pousseraient de moins en moins, et tout l'écosystème déclinerait.
+
+  - titre: L'énergie qui tourne en rond ?
+    difficulte: 2
+    type: piege
+    enonce: |
+      Un élève affirme que, grâce aux décomposeurs, l'énergie est recyclée dans l'écosystème. Qu'en penser ?
+    etapes:
+      - type: piege
+        titre: L'erreur
+        texte: Il confond matière et énergie.
+      - type: conc
+        titre: La réponse
+        texte: >-
+          <mark>Les décomposeurs recyclent la matière, pas l'énergie</mark>. L'énergie est perdue sous forme de chaleur à chaque étape, l'écosystème a besoin d'un apport permanent de lumière.
+
+  - titre: Un service écosystémique chiffré
+    difficulte: 3
+    type: bac
+    enonce: |
+      New York a choisi de protéger les forêts des montagnes Catskill, qui filtrent naturellement son eau potable, plutôt que de construire une usine de filtration estimée à 6 milliards de dollars. Quel service écosystémique est en jeu, et pourquoi ce choix est-il intéressant ?
+    etapes:
+      - type: calcul
+        titre: Le service
+        texte: C'est un service de régulation, l'épuration de l'eau par les sols et la végétation.
+      - type: conc
+        titre: L'intérêt
+        texte: >-
+          <mark>Protéger l'écosystème coûte moins cher que remplacer le service qu'il rend</mark>, et conserve en plus les autres services (biodiversité, carbone, loisirs).

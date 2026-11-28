@@ -28,10 +28,14 @@ export const MATIERES: Matiere[] = [
   { slug: 'maths', nom: 'Maths', couleur: 'var(--terme)', youtube: 'https://www.youtube.com/@mathsetmagique', youtubeId: 'UChNsi3Kbyr6fey6cAJy6I5A', instagram: 'https://www.instagram.com/maths_et_magique/', active: true, bac: true },
   {
     slug: 'physique', nom: 'Physique-chimie', nomLong: 'physique-chimie', couleur: 'var(--physique)', active: true,
-    niveaux: ['6e', '5e', '4e', '3e', 'seconde', 'premiere', 'terminale'],
-    sousTitres: { '6e': 'sciences et technologie' },
+    niveaux: ['6e', '5e', '4e', '3e', 'seconde', 'premiere', 'terminale', 'ens-scientifique-premiere', 'ens-scientifique-terminale'],
+    sousTitres: { '6e': 'sciences et technologie', 'ens-scientifique-premiere': 'partie physique-chimie', 'ens-scientifique-terminale': 'partie physique-chimie' },
   },
-  { slug: 'svt', nom: 'SVT', couleur: 'var(--svt)', active: false },
+  {
+    slug: 'svt', nom: 'SVT', nomLong: 'SVT', couleur: 'var(--svt)', active: true,
+    niveaux: ['premiere', 'terminale', 'ens-scientifique-premiere', 'ens-scientifique-terminale'],
+    sousTitres: { 'ens-scientifique-premiere': 'partie SVT', 'ens-scientifique-terminale': 'partie SVT' },
+  },
   { slug: 'histoire', nom: 'Histoire', couleur: 'var(--histoire)', active: false },
   { slug: 'francais', nom: 'Français', couleur: 'var(--francais)', active: false },
 ];

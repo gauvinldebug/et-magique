@@ -6,7 +6,7 @@ type Defi = (r: HTMLElement) => void;
 const f2 = (x: number) => nb(x, 2);
 
 /** Ajoute « Vérifier », la zone de correction, l'indice et le souvenir du défi réussi. */
-function verif(r: HTMLElement, c: Cadre, test: () => { ok: boolean; msg: string }, indice: string) {
+export function verif(r: HTMLElement, c: Cadre, test: () => { ok: boolean; msg: string }, indice: string) {
   const retour = el('div', 'lb-retour');
   retour.setAttribute('aria-live', 'polite');
   retour.hidden = true;
