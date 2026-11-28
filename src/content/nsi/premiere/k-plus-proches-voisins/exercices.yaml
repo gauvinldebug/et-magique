@@ -1,0 +1,56 @@
+exercices:
+- titre: Calculer des distances
+  difficulte: 1
+  type: application
+  enonce: |
+    Calculer la distance entre A(1, 2) et B(4, 6).
+  indice: Appliquer la formule.
+  etapes:
+  - type: calcul
+    titre: Le calcul
+    texte: $\sqrt{(4 - 1)^2 + (6 - 2)^2} = \sqrt{9 + 16} = \sqrt{25}$.
+  - type: conc
+    titre: La distance
+    texte: <mark>5.</mark>
+- titre: Classer un point
+  difficulte: 2
+  type: methode
+  enonce: |
+    Données : (1, 1) rouge, (2, 1) rouge, (4, 4) bleu, (5, 4) bleu, (3, 2) rouge. Classer le point (3, 3) avec k = 3.
+  indice: Calculer les 5 distances, garder les 3 plus petites.
+  etapes:
+  - type: calcul
+    titre: Les distances
+    texte: '(1, 1) : $\sqrt8 \approx 2{,}8$. (2, 1) : $\sqrt5 \approx 2{,}2$. (4, 4) : $\sqrt2 \approx 1{,}4$. (5, 4) : $\sqrt5 \approx 2{,}2$. (3, 2) : 1.'
+  - type: calcul
+    titre: Les 3 plus proches
+    texte: (3, 2) rouge, (4, 4) bleu, puis (2, 1) rouge et (5, 4) bleu à égalité à 2,2.
+  - type: conc
+    titre: Le vote
+    texte: '<mark>Le résultat dépend du voisin retenu en cas d''égalité de distance</mark> : avec (2, 1), rouge l''emporte 2 contre 1 ; avec (5, 4), bleu l''emporte. Il faut une règle pour départager, ou un autre k.'
+- titre: k = 1
+  difficulte: 2
+  type: piege
+  enonce: |
+    Dans un jeu de données de fruits, une pomme a été notée « poire » par erreur. Un nouveau fruit est très proche de cette donnée. Que prédit k-NN avec k = 1 ? Avec k = 5 ?
+  indice: Combien de voisins votent ?
+  etapes:
+  - type: piege
+    titre: k = 1
+    texte: 'Le seul voisin est la donnée erronée : le fruit est classé « poire ».'
+  - type: conc
+    titre: k = 5
+    texte: '<mark>Les quatre autres voisins, des pommes, l''emportent</mark> : un k plus grand atténue l''effet d''une erreur isolée.'
+- titre: Les échelles
+  difficulte: 3
+  type: bac
+  enonce: |
+    On classe des personnes selon l'âge (en années, de 10 à 80) et le revenu (en euros, de 0 à 80 000). Pourquoi la distance euclidienne directe pose-t-elle problème ? Proposer une correction.
+  indice: Comparer une différence de 30 ans et une différence de 1 000 €.
+  etapes:
+  - type: calcul
+    titre: Le problème
+    texte: 'Un écart de 1 000 € pèse beaucoup plus dans la distance qu''un écart de 30 ans : l''âge ne compte presque plus.'
+  - type: conc
+    titre: La correction
+    texte: <mark>Ramener chaque caractéristique entre 0 et 1</mark>, par exemple (valeur − min) / (max − min), avant de calculer les distances.

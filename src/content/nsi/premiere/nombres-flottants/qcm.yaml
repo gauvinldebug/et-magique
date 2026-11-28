@@ -1,0 +1,55 @@
+questions:
+- question: Que renvoie `0.1 + 0.2 == 0.3` en Python ?
+  choix:
+  - 'True'
+  - 'False'
+  - une erreur
+  - '0.3'
+  bonne: 1
+  explication: 0,1 et 0,2 sont approchés.
+  revoir: cours
+- question: $0{,}1_2$ vaut…
+  choix:
+  - 0,1
+  - 0,5
+  - 0,2
+  - '1'
+  bonne: 1
+  explication: Le premier bit après la virgule vaut 1/2.
+  revoir: cours
+- question: Un flottant en double précision occupe…
+  choix:
+  - 8 bits
+  - 32 bits
+  - 64 bits
+  - 128 bits
+  bonne: 2
+  explication: Norme IEEE 754.
+  revoir: cours
+- question: Pour comparer deux flottants, on…
+  choix:
+  - utilise ==
+  - teste si leur écart est très petit
+  - les convertit en texte
+  - les multiplie
+  bonne: 1
+  explication: abs(a - b) < tolérance.
+  revoir: cours
+- question: Lequel est stocké exactement ?
+  choix:
+  - 0,1
+  - 0,3
+  - 0,25
+  - 0,2
+  bonne: 2
+  explication: 0,25 = 1/4.
+  revoir: cours
+- question: Les entiers Python (int) sont…
+  choix:
+  - approchés
+  - exacts
+  - limités à 255
+  - des flottants
+  bonne: 1
+  explication: Seuls les float sont approchés.
+  revoir: cours

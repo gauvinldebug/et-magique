@@ -1,0 +1,47 @@
+exercices:
+- titre: Lire une ligne
+  difficulte: 1
+  type: application
+  enonce: |
+    Avec la table du cours, que vaut `table[2]["quartier"]` ? Et `table[1]["hauteur"] + 1` avant conversion ?
+  indice: Les valeurs lues sont des chaînes.
+  etapes:
+  - type: calcul
+    titre: La première
+    texte: '`table[2]` est le troisième arbre : "Sud".'
+  - type: conc
+    titre: La seconde
+    texte: '<mark>Une erreur (TypeError)</mark> : "12" est une chaîne, on ne peut pas lui ajouter 1 sans `int()`.'
+- titre: Sélection et moyenne
+  difficulte: 2
+  type: methode
+  enonce: |
+    Après conversion des hauteurs, écrire une fonction `hauteur_moyenne(table, espece)` qui renvoie la hauteur moyenne des arbres d'une espèce donnée.
+  indice: Sélectionner d'abord, puis faire la moyenne.
+  etapes:
+  - type: conc
+    titre: La fonction
+    texte: "```python\ndef hauteur_moyenne(table, espece):\n    h = [a[\"hauteur\"] for a in table if a[\"espece\"] == espece]\n    return sum(h) / len(h)\n```\n\n<mark>Sur la table du cours, `hauteur_moyenne(table, \"platane\")` vaut 21.</mark>"
+- titre: Le tri bizarre
+  difficulte: 2
+  type: piege
+  enonce: |
+    Un élève trie les arbres par hauteur sans conversion et obtient l'ordre 12, 18, 24, 9. Pourquoi 9 est-il à la fin ?
+  indice: Comment Python compare-t-il deux chaînes ?
+  etapes:
+  - type: piege
+    titre: L'erreur
+    texte: 'Les hauteurs sont des chaînes, comparées caractère par caractère : "9" vient après "2" et après "1".'
+  - type: conc
+    titre: La correction
+    texte: '<mark>`sorted(table, key=lambda a: int(a["hauteur"]))`</mark>'
+- titre: Compter par quartier
+  difficulte: 3
+  type: bac
+  enonce: |
+    Écrire une fonction `nb_par_quartier(table)` qui renvoie un dictionnaire donnant le nombre d'arbres de chaque quartier.
+  indice: Un dictionnaire compteur.
+  etapes:
+  - type: conc
+    titre: La fonction
+    texte: "```python\ndef nb_par_quartier(table):\n    c = {}\n    for a in table:\n        q = a[\"quartier\"]\n        c[q] = c.get(q, 0) + 1\n    return c\n```"

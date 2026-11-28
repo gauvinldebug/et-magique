@@ -1,0 +1,77 @@
+exercices:
+- titre: Suivre une boucle
+  difficulte: 1
+  type: application
+  enonce: |
+    Que vaut `s` à la fin ?
+
+    ```python
+    s = 0
+    for i in range(1, 5):
+        s = s + i
+    ```
+  indice: '`range(1, 5)` donne 1, 2, 3, 4.'
+  etapes:
+  - type: calcul
+    titre: Les tours
+    texte: s vaut 1, puis 3, puis 6, puis 10.
+  - type: conc
+    titre: La réponse
+    texte: <mark>`s` vaut 10.</mark>
+- titre: Écrire une fonction
+  difficulte: 2
+  type: methode
+  enonce: |
+    Écrire une fonction `est_bissextile(a)` qui renvoie True si l'année `a` est bissextile : divisible par 4 mais pas par 100, sauf si elle est divisible par 400. Donner trois tests.
+  indice: Traduire la règle avec and, or et %.
+  etapes:
+  - type: calcul
+    titre: La fonction
+    texte: "```python\ndef est_bissextile(a):\n    \"\"\"Renvoie True si l'année a est bissextile.\"\"\"\n    return (a % 4 == 0 and a % 100 != 0) or a % 400 == 0\n```"
+  - type: conc
+    titre: Les tests
+    texte: '<mark>Un cas de chaque sorte :</mark>
+
+
+      ```python
+
+      assert est_bissextile(2024)
+
+      assert not est_bissextile(1900)
+
+      assert est_bissextile(2000)
+
+      ```'
+- titre: Le None mystérieux
+  difficulte: 2
+  type: piege
+  enonce: |
+    Pourquoi `total` vaut-il `None` ?
+
+    ```python
+    def double(x):
+        print(2 * x)
+
+    total = double(5) + 1
+    ```
+  indice: Que renvoie `double` ?
+  etapes:
+  - type: piege
+    titre: L'erreur
+    texte: '`double` affiche 10 mais ne renvoie rien, donc `None`. Et `None + 1` provoque même une erreur.'
+  - type: conc
+    titre: La correction
+    texte: <mark>Remplacer `print(2 * x)` par `return 2 * x`.</mark>
+- titre: Une boucle while
+  difficulte: 3
+  type: bac
+  enonce: |
+    Écrire une fonction `nb_divisions(n)` qui renvoie combien de fois on peut diviser l'entier `n ≥ 1` par 2 (division entière) avant d'arriver à 1. Justifier qu'elle termine.
+  indice: Une boucle while et un compteur.
+  etapes:
+  - type: calcul
+    titre: La fonction
+    texte: "```python\ndef nb_divisions(n):\n    c = 0\n    while n > 1:\n        n = n // 2\n        c = c + 1\n    return c\n```"
+  - type: conc
+    titre: La terminaison
+    texte: '<mark>`n` est un entier qui diminue strictement à chaque tour tant que n > 1</mark> : il finit par valoir 1, la boucle s''arrête.'

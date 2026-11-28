@@ -1,0 +1,55 @@
+questions:
+- question: Sur Internet, les données voyagent en…
+  choix:
+  - un seul bloc
+  - paquets
+  - fichiers PDF
+  - courriers
+  bonne: 1
+  explication: Découpées et numérotées.
+  revoir: cours
+- question: Le protocole qui garantit que les paquets arrivent est…
+  choix:
+  - IP
+  - TCP
+  - DNS
+  - HTML
+  bonne: 1
+  explication: Accusés de réception et renvois.
+  revoir: cours
+- question: Le DNS sert à…
+  choix:
+  - chiffrer
+  - traduire un nom de domaine en adresse IP
+  - compresser
+  - router
+  bonne: 1
+  explication: L'annuaire du réseau.
+  revoir: cours
+- question: Dans 10.0.0.5/8, la partie réseau est…
+  choix:
+  - '10'
+  - '10.0'
+  - 10.0.0
+  - '5'
+  bonne: 0
+  explication: '8 bits : le premier octet.'
+  revoir: cours
+- question: Un routeur relie…
+  choix:
+  - des machines d'un même réseau
+  - des réseaux différents
+  - un clavier et un écran
+  - deux processeurs
+  bonne: 1
+  explication: Il fait passer d'un réseau à l'autre.
+  revoir: cours
+- question: Dans le bit alterné, le bit sert à…
+  choix:
+  - chiffrer
+  - repérer les doublons
+  - accélérer
+  - compresser
+  bonne: 1
+  explication: Il alterne d'un message au suivant.
+  revoir: cours

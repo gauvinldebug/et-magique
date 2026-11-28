@@ -1,0 +1,55 @@
+questions:
+- question: L'algorithme des k plus proches voisins sert à…
+  choix:
+  - trier
+  - classer une donnée nouvelle
+  - chiffrer
+  - compresser
+  bonne: 1
+  explication: D'après les exemples connus.
+  revoir: cours
+- question: La classe attribuée est…
+  choix:
+  - celle du point le plus lointain
+  - la classe majoritaire parmi les k plus proches
+  - tirée au hasard
+  - toujours la première
+  bonne: 1
+  explication: Vote majoritaire.
+  revoir: cours
+- question: La distance entre (0, 0) et (3, 4) vaut…
+  choix:
+  - '5'
+  - '7'
+  - '12'
+  - '25'
+  bonne: 0
+  explication: √(9 + 16).
+  revoir: cours
+- question: On choisit souvent k impair pour…
+  choix:
+  - aller plus vite
+  - éviter les égalités
+  - avoir moins de voisins
+  - trier
+  bonne: 1
+  explication: Deux classes ne peuvent pas être à égalité.
+  revoir: cours
+- question: Avec k = 1, l'algorithme est…
+  choix:
+  - insensible aux erreurs
+  - très sensible à une donnée isolée
+  - impossible
+  - toujours juste
+  bonne: 1
+  explication: Un seul voisin décide.
+  revoir: cours
+- question: k-NN est un exemple…
+  choix:
+  - d'apprentissage automatique
+  - de routage
+  - de chiffrement
+  - de compilation
+  bonne: 0
+  explication: Il apprend à partir d'exemples.
+  revoir: cours

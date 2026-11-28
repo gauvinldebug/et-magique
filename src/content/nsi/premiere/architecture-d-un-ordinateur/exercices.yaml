@@ -1,0 +1,50 @@
+exercices:
+- titre: Les composants
+  difficulte: 1
+  type: application
+  enonce: |
+    Associer chaque rôle à un composant : (a) fait les additions ; (b) lit et décode les instructions ; (c) stocke le programme en cours ; (d) relie les composants.
+  indice: UAL, unité de commande, mémoire, bus.
+  etapes:
+  - type: conc
+    titre: Les associations
+    texte: <mark>(a) UAL ; (b) unité de commande ; (c) mémoire ; (d) bus.</mark>
+- titre: Suivre un programme assembleur
+  difficulte: 2
+  type: methode
+  enonce: |
+    La mémoire contient 7 à l'adresse 20 et 4 à l'adresse 21. Que contient l'adresse 22 après : `LOAD R1, 20` ; `LOAD R2, 21` ; `ADD R1, R1, R2` ; `STORE R1, 22` ?
+  indice: Suivre les registres ligne par ligne.
+  etapes:
+  - type: calcul
+    titre: Les registres
+    texte: R1 = 7, R2 = 4, puis R1 = 7 + 4 = 11.
+  - type: conc
+    titre: Le résultat
+    texte: <mark>L'adresse 22 contient 11.</mark>
+- titre: La RAM et le disque
+  difficulte: 2
+  type: piege
+  enonce: |
+    « Mon ordinateur a 16 Go de mémoire, donc je peux y enregistrer 16 Go de photos pour toujours. » Corriger.
+  indice: Que devient le contenu de la RAM à l'extinction ?
+  etapes:
+  - type: piege
+    titre: L'erreur
+    texte: Les 16 Go désignent la mémoire vive, qui s'efface quand on éteint l'ordinateur.
+  - type: conc
+    titre: La correction
+    texte: <mark>Les photos sont enregistrées sur le stockage</mark> (disque, SSD), une mémoire permanente bien plus grande.
+- titre: Le demi-additionneur
+  difficulte: 3
+  type: bac
+  enonce: |
+    Un demi-additionneur reçoit deux bits a et b et donne la somme S et la retenue R. Dresser sa table et exprimer S et R avec des portes logiques.
+  indice: 1 + 1 = 10 en binaire.
+  etapes:
+  - type: calcul
+    titre: La table
+    texte: '(0, 0) : S = 0, R = 0. (0, 1) et (1, 0) : S = 1, R = 0. (1, 1) : S = 0, R = 1.'
+  - type: conc
+    titre: Les portes
+    texte: <mark>S = a XOR b et R = a ET b.</mark>

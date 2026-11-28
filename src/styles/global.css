@@ -657,7 +657,7 @@ mark, .hl { background: none; color: inherit; padding: 0 .05em; box-shadow: inse
 /* ---------- Portail etmagique.fr ---------- */
 .portail-p { background: var(--feuille); color: var(--encre); }
 .portail-p > .wrap { max-width: var(--maxw); display: grid; gap: clamp(72px, 9vw, 120px); padding-top: clamp(56px, 7vw, 96px); padding-bottom: 104px; }
-.ah { position: relative; overflow: hidden; background: var(--bleu); color: #fff; min-height: min(760px, 92vh); display: flex; flex-direction: column; }
+.ah { position: relative; overflow: visible; background: var(--bleu); color: #fff; min-height: min(760px, 92vh); display: flex; flex-direction: column; }
 .ah-formes { position: absolute; right: 0; top: 0; width: min(60%, 860px); height: 100%; pointer-events: none; }
 .ah > .wrap { position: relative; width: 100%; max-width: var(--maxw); flex: 1; display: flex; flex-direction: column; }
 .ah-tete { display: flex; align-items: center; gap: 28px; padding: 26px 0; }
@@ -1064,3 +1064,7 @@ html[data-matiere="technologie"] .s-nav { --nav-fond: #B8442A; }
 .astro-code, .astro-code span { color: var(--shiki-light); }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .astro-code span { color: var(--shiki-dark); } }
 :root[data-theme="dark"] .astro-code span { color: var(--shiki-dark); }
+
+/* Recherche de l'accueil : toutes les matières */
+.ah-rq { position: relative; max-width: 560px; margin-top: 22px; }
+.ah:focus-within { z-index: 20; }

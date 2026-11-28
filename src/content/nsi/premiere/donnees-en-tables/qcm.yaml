@@ -1,0 +1,55 @@
+questions:
+- question: Un fichier CSV est…
+  choix:
+  - une image
+  - un fichier texte de valeurs séparées
+  - un programme
+  - une base SQL
+  bonne: 1
+  explication: Comma-separated values.
+  revoir: cours
+- question: La première ligne d'un CSV contient en général…
+  choix:
+  - le premier enregistrement
+  - les noms des colonnes
+  - le nombre de lignes
+  - rien
+  bonne: 1
+  explication: Les descripteurs.
+  revoir: cours
+- question: Avec `csv.DictReader`, chaque ligne devient…
+  choix:
+  - une liste
+  - un dictionnaire
+  - un entier
+  - un p-uplet
+  bonne: 1
+  explication: Clés = descripteurs.
+  revoir: cours
+- question: Les valeurs lues dans un CSV sont…
+  choix:
+  - des entiers
+  - des chaînes
+  - des flottants
+  - des booléens
+  bonne: 1
+  explication: Il faut convertir.
+  revoir: cours
+- question: '`sorted(t, key=lambda x: x["age"])` trie…'
+  choix:
+  - par ordre alphabétique des clés
+  - selon la colonne age
+  - au hasard
+  - par longueur
+  bonne: 1
+  explication: key désigne le critère.
+  revoir: cours
+- question: Pour trier du plus grand au plus petit, on ajoute…
+  choix:
+  - reverse=True
+  - desc=True
+  - key=-1
+  - sort=False
+  bonne: 0
+  explication: Ordre décroissant.
+  revoir: cours

@@ -1,0 +1,62 @@
+exercices:
+- titre: Conversions
+  difficulte: 1
+  type: application
+  enonce: |
+    Convertir $10110_2$ en base 10, puis 37 en base 2.
+  indice: Poids 16, 8, 4, 2, 1 ; divisions successives par 2.
+  etapes:
+  - type: calcul
+    titre: Vers la base 10
+    texte: $16 + 4 + 2 = 22$.
+  - type: calcul
+    titre: Vers la base 2
+    texte: 37 = 32 + 4 + 1, donc $100101_2$.
+  - type: conc
+    titre: Les réponses
+    texte: <mark>$10110_2 = 22$ et $37 = 100101_2$.</mark>
+- titre: Hexadécimal
+  difficulte: 2
+  type: methode
+  enonce: |
+    Convertir $\mathrm{3C}_{16}$ en base 2 puis en base 10. Écrire 200 en hexadécimal.
+  indice: Un chiffre hexadécimal = 4 bits.
+  etapes:
+  - type: calcul
+    titre: 3C
+    texte: '3 = 0011, C = 1100 : $0011\,1100_2$. En base 10 : $3 \times 16 + 12 = 60$.'
+  - type: calcul
+    titre: '200'
+    texte: 200 = 12 × 16 + 8, soit C8.
+  - type: conc
+    titre: Les réponses
+    texte: <mark>$\mathrm{3C}_{16} = 111100_2 = 60$ et $200 = \mathrm{C8}_{16}$.</mark>
+- titre: Le 256 de trop
+  difficulte: 2
+  type: piege
+  enonce: |
+    « Avec un octet, on peut coder les entiers de 0 à 256. » Corriger.
+  indice: Combien de valeurs, et laquelle est la première ?
+  etapes:
+  - type: piege
+    titre: L'erreur
+    texte: Un octet code $2^8 = 256$ valeurs, mais on commence à 0.
+  - type: conc
+    titre: La correction
+    texte: <mark>De 0 à 255</mark> ($1111\,1111_2$).
+- titre: Complément à deux
+  difficulte: 3
+  type: bac
+  enonce: |
+    Écrire −20 en complément à deux sur 8 bits. Vérifier en additionnant avec 20.
+  indice: Écrire 20, inverser, ajouter 1.
+  etapes:
+  - type: calcul
+    titre: La construction
+    texte: '20 = 0001 0100. Inversé : 1110 1011. Plus 1 : 1110 1100.'
+  - type: calcul
+    titre: La vérification
+    texte: '0001 0100 + 1110 1100 = 1 0000 0000 : sur 8 bits, la retenue est perdue, il reste 0000 0000.'
+  - type: conc
+    titre: La réponse
+    texte: <mark>−20 = 1110 1100.</mark>

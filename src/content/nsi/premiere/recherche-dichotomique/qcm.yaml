@@ -1,0 +1,55 @@
+questions:
+- question: La recherche dichotomique exige un tableau…
+  choix:
+  - de nombres
+  - trié
+  - de taille paire
+  - sans doublon
+  bonne: 1
+  explication: Sinon, éliminer une moitié n'a pas de sens.
+  revoir: cours
+- question: Pour un million d'éléments, la dichotomie fait au plus environ…
+  choix:
+  - 20 tours
+  - 1 000 tours
+  - 500 000 tours
+  - 1 million de tours
+  bonne: 0
+  explication: 2²⁰ ≈ 1 million.
+  revoir: cours
+- question: Le coût de la recherche séquentielle est…
+  choix:
+  - logarithmique
+  - linéaire
+  - quadratique
+  - constant
+  bonne: 1
+  explication: On peut parcourir tout le tableau.
+  revoir: cours
+- question: Un variant de boucle sert à prouver…
+  choix:
+  - la correction
+  - la terminaison
+  - le coût
+  - le tri
+  bonne: 1
+  explication: Une quantité entière qui diminue.
+  revoir: cours
+- question: Si `t[m] < x`, la nouvelle borne gauche est…
+  choix:
+  - m
+  - m + 1
+  - m − 1
+  - '0'
+  bonne: 1
+  explication: x est forcément après m.
+  revoir: cours
+- question: Doubler la taille du tableau ajoute à la dichotomie…
+  choix:
+  - un tour
+  - deux fois plus de tours
+  - rien
+  - dix tours
+  bonne: 0
+  explication: Une division par 2 de plus.
+  revoir: cours

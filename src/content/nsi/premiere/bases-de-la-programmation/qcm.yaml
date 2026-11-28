@@ -1,0 +1,55 @@
+questions:
+- question: '`range(3)` produit…'
+  choix:
+  - 1, 2, 3
+  - 0, 1, 2
+  - 0, 1, 2, 3
+  - '3'
+  bonne: 1
+  explication: On commence à 0, on s'arrête avant 3.
+  revoir: cours
+- question: Une fonction sans return renvoie…
+  choix:
+  - '0'
+  - None
+  - une erreur
+  - la dernière valeur calculée
+  bonne: 1
+  explication: Par défaut.
+  revoir: cours
+- question: '`return` …'
+  choix:
+  - affiche une valeur
+  - renvoie une valeur et termine la fonction
+  - recommence la fonction
+  - crée une variable globale
+  bonne: 1
+  explication: La fonction s'arrête là.
+  revoir: cours
+- question: Pour un nombre de tours inconnu à l'avance, on utilise…
+  choix:
+  - for
+  - while
+  - def
+  - return
+  bonne: 1
+  explication: Tant qu'une condition est vraie.
+  revoir: cours
+- question: '`assert x > 0` sert à…'
+  choix:
+  - afficher x
+  - vérifier une condition
+  - rendre x positif
+  - créer x
+  bonne: 1
+  explication: Erreur si la condition est fausse.
+  revoir: cours
+- question: '`a == b` …'
+  choix:
+  - affecte b à a
+  - compare a et b
+  - additionne
+  - copie a
+  bonne: 1
+  explication: Comparaison.
+  revoir: cours

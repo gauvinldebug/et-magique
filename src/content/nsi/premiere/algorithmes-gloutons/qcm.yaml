@@ -1,0 +1,55 @@
+questions:
+- question: Un algorithme glouton…
+  choix:
+  - essaie toutes les solutions
+  - fait le meilleur choix immédiat à chaque étape
+  - revient toujours en arrière
+  - est toujours optimal
+  bonne: 1
+  explication: Sans retour en arrière.
+  revoir: cours
+- question: Avec les pièces en euros, le glouton…
+  choix:
+  - donne toujours le minimum de pièces
+  - ne marche jamais
+  - donne le maximum de pièces
+  - dépend de l'heure
+  bonne: 0
+  explication: Le système européen s'y prête.
+  revoir: cours
+- question: Avec des pièces de 1, 3 et 4, le glouton rend 6 avec…
+  choix:
+  - 2 pièces
+  - 3 pièces
+  - 4 pièces
+  - 6 pièces
+  bonne: 1
+  explication: 4 + 1 + 1.
+  revoir: cours
+- question: Un avantage des algorithmes gloutons est…
+  choix:
+  - leur rapidité
+  - leur optimalité garantie
+  - qu'ils testent tout
+  - qu'ils n'ont pas besoin de données
+  bonne: 0
+  explication: Un seul passage.
+  revoir: cours
+- question: Pour le sac à dos, le critère glouton habituel est…
+  choix:
+  - le poids le plus lourd
+  - le meilleur rapport valeur/poids
+  - l'ordre alphabétique
+  - le hasard
+  bonne: 1
+  explication: La valeur par kilo.
+  revoir: cours
+- question: Avant d'appliquer le glouton au rendu de monnaie, on…
+  choix:
+  - mélange les pièces
+  - trie les pièces par valeur décroissante
+  - supprime les petites pièces
+  - compte les pièces
+  bonne: 1
+  explication: On commence par la plus grosse.
+  revoir: cours

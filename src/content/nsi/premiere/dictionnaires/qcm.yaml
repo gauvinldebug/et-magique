@@ -1,0 +1,55 @@
+questions:
+- question: 'Dans `{"a": 3}`, "a" est…'
+  choix:
+  - la valeur
+  - la clé
+  - l'indice
+  - le type
+  bonne: 1
+  explication: On accède à 3 par "a".
+  revoir: cours
+- question: '`len({"x": 1, "y": 2})` vaut…'
+  choix:
+  - '1'
+  - '2'
+  - '3'
+  - '4'
+  bonne: 1
+  explication: Deux couples.
+  revoir: cours
+- question: Lire une clé absente provoque…
+  choix:
+  - None
+  - une KeyError
+  - '0'
+  - une IndexError
+  bonne: 1
+  explication: Il faut tester avant.
+  revoir: cours
+- question: '`for k in d:` parcourt…'
+  choix:
+  - les valeurs
+  - les clés
+  - les couples
+  - les indices
+  bonne: 1
+  explication: Par défaut, les clés.
+  revoir: cours
+- question: Laquelle ne peut pas être une clé ?
+  choix:
+  - '"nom"'
+  - '42'
+  - (1, 2)
+  - '[1, 2]'
+  bonne: 3
+  explication: Une liste est modifiable.
+  revoir: cours
+- question: '`d.get("z", 0)` renvoie 0 si…'
+  choix:
+  - la clé "z" vaut 0
+  - la clé "z" est absente
+  - d est vide seulement
+  - jamais
+  bonne: 1
+  explication: Valeur par défaut.
+  revoir: cours

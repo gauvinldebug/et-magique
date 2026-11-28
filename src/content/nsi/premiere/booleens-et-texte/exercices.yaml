@@ -1,0 +1,53 @@
+exercices:
+- titre: Table de vérité
+  difficulte: 1
+  type: application
+  enonce: |
+    Dresser la table de vérité de `not a or b`.
+  indice: Calculer d'abord `not a`.
+  etapes:
+  - type: calcul
+    titre: Les lignes
+    texte: 'a = F, b = F : V. a = F, b = V : V. a = V, b = F : F. a = V, b = V : V.'
+  - type: conc
+    titre: La remarque
+    texte: <mark>L'expression n'est fausse que si a est vrai et b faux.</mark>
+- titre: Codes ASCII
+  difficulte: 2
+  type: methode
+  enonce: |
+    Sachant que `A` vaut 65, donner le code de `E`. Écrire une fonction `majuscule(c)` qui transforme une lettre minuscule non accentuée en majuscule avec `ord` et `chr`.
+  indice: L'écart entre `a` (97) et `A` (65) est 32.
+  etapes:
+  - type: calcul
+    titre: Le code de E
+    texte: 'E est 4 lettres après A : 69.'
+  - type: conc
+    titre: La fonction
+    texte: "```python\ndef majuscule(c):\n    return chr(ord(c) - 32)\n```"
+- titre: Les accents cassés
+  difficulte: 2
+  type: piege
+  enonce: |
+    Une page web affiche « CafÃ© » au lieu de « Café ». Que s'est-il passé ?
+  indice: « é » s'écrit sur deux octets en UTF-8.
+  etapes:
+  - type: piege
+    titre: L'erreur
+    texte: Le texte a été enregistré en UTF-8, où « é » occupe deux octets. Le navigateur l'a lu en Latin-1 et a affiché chaque octet comme un caractère.
+  - type: conc
+    titre: La correction
+    texte: <mark>Déclarer le bon encodage</mark>, par exemple `<meta charset="utf-8">` dans la page.
+- titre: L'évaluation paresseuse
+  difficulte: 3
+  type: bac
+  enonce: |
+    Expliquer pourquoi `while i < len(t) and t[i] != x:` ne provoque pas d'erreur quand `i` atteint `len(t)`, alors que `while t[i] != x and i < len(t):` en provoque une.
+  indice: Dans quel ordre Python évalue-t-il les conditions ?
+  etapes:
+  - type: calcul
+    titre: Premier cas
+    texte: 'Quand `i == len(t)`, `i < len(t)` est faux : Python n''évalue pas `t[i]`.'
+  - type: conc
+    titre: Second cas
+    texte: '<mark>`t[i]` est évalué en premier</mark> avec `i == len(t)` : IndexError. L''ordre des conditions compte.'

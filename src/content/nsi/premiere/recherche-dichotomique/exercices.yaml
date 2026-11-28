@@ -1,0 +1,56 @@
+exercices:
+- titre: Dérouler
+  difficulte: 1
+  type: application
+  enonce: |
+    Dérouler la recherche dichotomique de 23 dans [2, 5, 8, 12, 16, 23, 38, 56, 72, 91].
+  indice: Noter g, d et m à chaque tour.
+  etapes:
+  - type: calcul
+    titre: Tour 1
+    texte: 'g = 0, d = 9, m = 4 : t[4] = 16 < 23, donc g = 5.'
+  - type: calcul
+    titre: Tour 2
+    texte: 'g = 5, d = 9, m = 7 : t[7] = 56 > 23, donc d = 6.'
+  - type: conc
+    titre: Tour 3
+    texte: '<mark>g = 5, d = 6, m = 5 : t[5] = 23, trouvé à l''indice 5 en 3 tours.</mark>'
+- titre: Nombre d'étapes
+  difficulte: 2
+  type: methode
+  enonce: |
+    Combien de tours faut-il au plus pour chercher dans un tableau trié de 4 000 éléments ? Et pour la recherche séquentielle ?
+  indice: Combien de fois peut-on diviser 4 000 par 2 ?
+  etapes:
+  - type: calcul
+    titre: Dichotomie
+    texte: '$2^{12} = 4\,096 > 4\,000$ : au plus 12 tours.'
+  - type: conc
+    titre: Séquentielle
+    texte: <mark>12 tours contre 4 000 comparaisons au pire.</mark>
+- titre: Le tableau en désordre
+  difficulte: 2
+  type: piege
+  enonce: |
+    On cherche 8 dans [9, 3, 8, 1, 6] avec la dichotomie. Que se passe-t-il ?
+  indice: Dérouler à partir du milieu.
+  etapes:
+  - type: piege
+    titre: Le déroulement
+    texte: 'm = 2 : t[2] = 8, trouvé par chance. Mais si on cherche 9 : m = 2, t[2] = 8 < 9, on garde [1, 6] à droite, et on ne trouve jamais 9, pourtant présent.'
+  - type: conc
+    titre: La règle
+    texte: <mark>La dichotomie exige un tableau trié</mark> ; sinon le résultat n'est pas fiable.
+- titre: Premier indice
+  difficulte: 3
+  type: bac
+  enonce: |
+    Dans un tableau trié qui peut contenir des doublons, modifier la dichotomie pour renvoyer le plus petit indice où se trouve `x`, ou −1.
+  indice: Quand on trouve x, on note l'indice mais on continue à chercher à gauche.
+  etapes:
+  - type: methode
+    titre: L'idée
+    texte: Au lieu de s'arrêter dès qu'on trouve `x`, on mémorise l'indice et on continue dans la moitié gauche.
+  - type: conc
+    titre: La fonction
+    texte: "```python\ndef premier_indice(t, x):\n    g, d = 0, len(t) - 1\n    res = -1\n    while g <= d:\n        m = (g + d) // 2\n        if t[m] == x:\n            res = m\n            d = m - 1\n        elif t[m] < x:\n            g = m + 1\n        else:\n            d = m - 1\n    return res\n```"

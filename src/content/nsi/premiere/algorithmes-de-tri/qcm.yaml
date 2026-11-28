@@ -1,0 +1,55 @@
+questions:
+- question: Le tri par sélection cherche à chaque tour…
+  choix:
+  - le maximum de tout le tableau
+  - le minimum de la partie non triée
+  - l'élément du milieu
+  - deux voisins mal rangés
+  bonne: 1
+  explication: Puis il l'échange.
+  revoir: cours
+- question: Le tri par insertion est très rapide sur un tableau…
+  choix:
+  - à l'envers
+  - presque trié
+  - aléatoire
+  - vide seulement
+  bonne: 1
+  explication: Peu de décalages.
+  revoir: cours
+- question: Le coût de ces deux tris est…
+  choix:
+  - linéaire
+  - quadratique
+  - logarithmique
+  - constant
+  bonne: 1
+  explication: Environ n²/2 comparaisons.
+  revoir: cours
+- question: Un invariant de boucle est…
+  choix:
+  - une variable qui ne change pas
+  - une propriété vraie à chaque tour
+  - une erreur
+  - une boucle infinie
+  bonne: 1
+  explication: Il sert à prouver la correction.
+  revoir: cours
+- question: Si on triple la taille du tableau, le temps d'un tri par insertion est multiplié par environ…
+  choix:
+  - '3'
+  - '6'
+  - '9'
+  - '27'
+  bonne: 2
+  explication: 3² = 9.
+  revoir: cours
+- question: '`tri_insertion(t)` renvoie…'
+  choix:
+  - le tableau trié
+  - None, mais t est trié
+  - une copie
+  - le minimum
+  bonne: 1
+  explication: Il trie en place.
+  revoir: cours
