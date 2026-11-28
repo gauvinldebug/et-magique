@@ -21,7 +21,7 @@ const types = { application: 'Application', methode: 'Méthode', bac: 'Type bac'
   {defis.length > 0 && (
     <section class="defis no-print">
       <h2>À toi de jouer</h2>
-      <p class="defis-intro">Pas de calcul à écrire : manipule la figure jusqu'à la bonne réponse, puis vérifie.</p>
+      <p class="defis-intro">Ici, on répond en bougeant la figure. Clique sur Vérifier quand tu penses avoir trouvé.</p>
       {defis.map((d) => <div class="labo defi" data-labo={d}></div>)}
     </section>
   )}

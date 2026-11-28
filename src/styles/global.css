@@ -659,10 +659,11 @@ mark, .hl { background: none; color: inherit; padding: 0 .05em; box-shadow: inse
 .ah > .wrap { position: relative; width: 100%; max-width: var(--maxw); flex: 1; display: flex; flex-direction: column; }
 .ah-tete { display: flex; align-items: center; gap: 28px; padding: 26px 0; }
 .ah-tete .wordmark { font-size: 1.9rem; color: #fff; text-decoration: none; }
-.ah-tete nav { margin-left: auto; display: flex; flex-wrap: wrap; gap: 6px 26px; font-size: 1rem; font-weight: 600; }
-.ah-tete nav a { color: #fff; text-decoration: none; }
-.ah-tete nav a:hover { color: var(--jaune); }
-.ah-tete nav span { color: rgba(255, 255, 255, .55); }
+.ah-tete nav { margin-left: auto; display: flex; flex-wrap: wrap; gap: 8px; font-size: .95rem; font-weight: 700; position: relative; z-index: 1; }
+/* Pastilles pleines : lisibles sur le bleu comme sur le rond jaune, au repos comme au survol */
+.ah-tete nav a, .ah-tete nav span { padding: 7px 14px; line-height: 1.2; background: #1A1A40; color: #fff; text-decoration: none; transition: background-color .15s var(--ease), color .15s var(--ease), transform .15s var(--ease); }
+.ah-tete nav a:hover, .ah-tete nav a:focus-visible { background: var(--rose); color: #1A1A40; transform: translateY(-2px); }
+.ah-tete nav span { background: rgba(26, 26, 64, .45); color: rgba(255, 255, 255, .8); }
 .ah-corps { display: grid; gap: 32px; max-width: 920px; padding: clamp(32px, 5vw, 64px) 0 clamp(56px, 7vw, 96px); margin-top: auto; margin-bottom: auto; }
 .ah h1 { font-size: clamp(3.6rem, 10.4vw, 9.4rem); font-weight: 800; font-stretch: 75%; line-height: .86; letter-spacing: -.04em; color: #fff; }
 .ah-cta { display: flex; flex-wrap: wrap; gap: 14px 18px; align-items: center; font-size: 1.08rem; font-weight: 500; }
@@ -1012,3 +1013,20 @@ a.poster:hover { color: var(--txt); transform: translate(-4px, -4px); box-shadow
 /* Bouton « Choisir ma matière » de l'accueil : descente douce jusqu'aux matières */
 @media (prefers-reduced-motion: no-preference) { html:has(#matieres) { scroll-behavior: smooth; } }
 #matieres { scroll-margin-top: 24px; }
+
+/* En-tête des matières en aplat de couleur (DA Affiche) : on sait toujours dans quelle matière on est */
+.s-nav { --nav-fond: var(--bleu); background: var(--nav-fond); color: #fff; border-bottom: 0; }
+html[data-matiere="physique"] .s-nav { --nav-fond: #0E7C7C; }
+html[data-matiere="svt"] .s-nav { --nav-fond: #127C59; }
+.s-nav::after { content: ""; position: absolute; left: 0; right: 0; bottom: -8px; height: 8px; pointer-events: none;
+  background: linear-gradient(90deg, var(--jaune) 0 22%, var(--rose) 22% 31%, #1A1A40 31% 34%, transparent 34% 66%, var(--jaune) 66% 69%, var(--rose) 69% 100%); }
+.s-nav .wordmark { color: #fff; }
+.s-nav nav a, .s-nav nav button { color: #fff; }
+.s-nav nav a:hover, .s-nav nav button:hover { background: rgba(255, 255, 255, .16); color: #fff; }
+.s-nav nav [aria-expanded="true"], .s-nav nav [aria-current="page"] { background: var(--jaune); color: #1A1A40; }
+.s-nav .chev { border-color: currentColor; }
+.s-nav .burger span { background: #fff; box-shadow: 0 -5px 0 #fff, 0 5px 0 #fff; }
+.s-nav .btn-yt { background: #fff; color: #1A1A40; border-color: #fff; }
+.s-nav .btn-yt:hover { background: var(--jaune); border-color: var(--jaune); color: #1A1A40; }
+.s-nav .burger { background: transparent; border-color: #fff; }
+.s-nav .burger:hover { background: rgba(255, 255, 255, .16); }
