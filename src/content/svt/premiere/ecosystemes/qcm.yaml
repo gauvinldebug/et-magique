@@ -26,7 +26,7 @@ questions:
   - question: La résilience d'un écosystème est…
     choix: ["sa capacité à revenir à un état proche après une perturbation", "sa taille", "sa production de bois", "sa température"]
     bonne: 0
-    explication: Elle a des limites : une perturbation trop forte le fait basculer.
+    explication: "Elle a des limites : une perturbation trop forte le fait basculer."
     revoir: cours
 
   - question: La pollinisation est un service…
