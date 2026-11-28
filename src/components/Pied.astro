@@ -32,11 +32,12 @@ const annee = new Date().getFullYear();
     <nav class="pied-col" aria-label="Matières">
       <h2>Matières</h2>
       <ul>
-        {MATIERES.map((m) => {
+        {MATIERES.filter((m) => m.active).map((m) => {
           const a = AFFICHES[m.slug];
           const mini = <span class="gbar-mini" style={`--fond:${a?.fond ?? 'var(--ink)'}`} aria-hidden="true"><Fragment set:html={a?.forme ?? ''} /></span>;
-          return <li>{m.active ? <a href={`/${m.slug}/`}>{mini}{m.nom}</a> : <span class="pied-bientot">{mini}{m.nom}<small>bientôt</small></span>}</li>;
+          return <li><a href={`/${m.slug}/`}>{mini}{m.nom}</a></li>;
         })}
+        <li><a class="pied-toutes" href="/#matieres">Toutes les matières<small>{MATIERES.filter((m) => !m.active).length} bientôt</small></a></li>
       </ul>
     </nav>
     <nav class="pied-col" aria-label="Le site">

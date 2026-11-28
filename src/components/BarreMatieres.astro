@@ -49,7 +49,10 @@ const miniIci = mini(ici.slug);
               );
             })}
           </ul>
-          <button type="button" class="profil-tout-b" data-profil-tout hidden>Tout afficher</button>
+          <div class="gbar-pied">
+            <button type="button" class="perso-b petit" data-profil-ouvrir><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h10M18 7h2M4 17h4M12 17h8" /><circle cx="16" cy="7" r="2" /><circle cx="10" cy="17" r="2" /></svg><span data-profil-libelle>Personnaliser</span></button>
+            <button type="button" class="profil-tout-b" data-profil-tout hidden>Tout afficher</button>
+          </div>
         </nav>
       </div>
     </div>
@@ -67,6 +70,7 @@ const miniIci = mini(ici.slug);
       if (oui) panneau.querySelector<HTMLElement>('a[aria-current], a')?.focus({ preventScroll: true });
     };
     bouton.addEventListener('click', () => ouvrir(panneau.hidden));
+    panneau.querySelector('[data-profil-ouvrir]')?.addEventListener('click', () => ouvrir(false));
     document.addEventListener('click', (e) => { if (!panneau.hidden && !racine.contains(e.target as Node)) ouvrir(false); });
     document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && !panneau.hidden) { ouvrir(false); bouton.focus(); } });
   });

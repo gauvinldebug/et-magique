@@ -6,6 +6,7 @@ import '../styles/impression.css';
 import Entete from '../components/Entete.astro';
 import Pied from '../components/Pied.astro';
 import BarreMatieres from '../components/BarreMatieres.astro';
+import Personnaliser from '../components/Personnaliser.astro';
 import { MATIERES, matiere as getMatiere, marque, SITE } from '../data/site';
 
 interface Props {
@@ -129,6 +130,7 @@ const pleinTitre = titre.toLowerCase().includes(SITE.nom.toLowerCase()) ? titre 
         addEventListener('scroll', () => { if (!boucle) boucle = requestAnimationFrame(maj); }, { passive: true });
       }
     </script>
+    <Personnaliser />
     <script>
       // Profil de l'élève : masque ce qui ne le concerne pas (bouton « Tout afficher » pour revenir).
       import { appliquer, brancherBoutons } from '../scripts/profil';

@@ -1,0 +1,156 @@
+---
+// « Personnaliser » : trois questions (classe, spécialités, difficultés) dans une fenêtre qui s'ouvre
+// depuis un bouton [data-profil-ouvrir] (accueil, panneau des matières), ou depuis une petite suggestion
+// qui apparaît après quelques pages vues. Rien n'est envoyé : tout reste dans le navigateur.
+import { MATIERES } from '../data/site';
+const NOMS = Object.fromEntries(MATIERES.map((m) => [m.slug, m.nom]));
+---
+<dialog class="perso" id="perso" aria-labelledby="perso-q" data-noms={JSON.stringify(NOMS)}>
+  <div class="perso-boite">
+    <div class="perso-tete">
+      <p class="perso-k">Personnaliser</p>
+      <div class="perso-barre" data-barre aria-hidden="true"></div>
+      <button type="button" class="perso-x" data-fermer aria-label="Fermer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18" /></svg></button>
+    </div>
+    <h2 id="perso-q" class="perso-q" data-q></h2>
+    <p class="perso-aide" data-aide></p>
+    <div class="perso-choix" data-choix role="group" aria-labelledby="perso-q"></div>
+    <div class="perso-pied">
+      <button type="button" class="perso-retour" data-retour>Retour</button>
+      <button type="button" class="perso-effacer" data-effacer hidden>Effacer mes réponses</button>
+      <button type="button" class="btn" data-suivant>Suivant</button>
+    </div>
+  </div>
+</dialog>
+
+<div class="perso-toast" data-toast hidden role="status">
+  <p>Tu veux ne voir que tes matières ?</p>
+  <button type="button" class="perso-toast-oui" data-profil-ouvrir>Personnaliser</button>
+  <button type="button" class="perso-x" data-toast-non aria-label="Non merci"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18" /></svg></button>
+</div>
+
+<script>
+  import { lire, ecrire, CLASSES, SPECIALITES, avecSpecialites, matieresDeClasse, type Profil } from '../scripts/profil';
+
+  const dlg = document.querySelector<HTMLDialogElement>('#perso');
+  if (dlg) {
+    const NOMS: Record<string, string> = JSON.parse(dlg.dataset.noms || '{}');
+    const $ = <T extends HTMLElement>(s: string) => dlg.querySelector<T>(s)!;
+    const COURT: Record<string, string> = Object.fromEntries(CLASSES.map((c) => [c.slug, c.court]));
+    const local = {
+      lire: (k: string) => { try { return localStorage.getItem(k); } catch { return null; } },
+      ecrire: (k: string, v: string) => { try { localStorage.setItem(k, v); } catch { /* navigation privée */ } },
+    };
+
+    let brouillon: Profil = { classe: '', specialites: [], difficultes: [] };
+    let etape = 0;
+    const etapes = () => (avecSpecialites(brouillon.classe) ? ['classe', 'specialites', 'difficultes'] : ['classe', 'difficultes']);
+
+    function puce(texte: string, actif: boolean, quand: () => void) {
+      const b = document.createElement('button');
+      b.type = 'button';
+      b.className = 'perso-puce';
+      b.textContent = texte;
+      b.setAttribute('aria-pressed', String(actif));
+      b.addEventListener('click', quand);
+      return b;
+    }
+
+    function afficher() {
+      const liste = etapes();
+      const q = liste[etape];
+      const choix = $<HTMLElement>('[data-choix]');
+      const suivant = $<HTMLButtonElement>('[data-suivant]');
+      choix.replaceChildren();
+      choix.classList.toggle('serre', q === 'specialites');
+      $<HTMLElement>('[data-barre]').innerHTML = liste.map((_, i) => `<i class="${i <= etape ? 'fait' : ''}"></i>`).join('');
+      $<HTMLElement>('[data-retour]').hidden = etape === 0;
+      $<HTMLElement>('[data-effacer]').hidden = etape !== 0 || !lire();
+      $<HTMLElement>('.perso-pied').hidden = etape === 0 && !lire();
+      if (q === 'classe') {
+        $<HTMLElement>('[data-q]').textContent = 'Tu es en quelle classe ?';
+        $<HTMLElement>('[data-aide]').textContent = 'Le site te montrera d\'abord ce qui te concerne. Tes réponses restent sur ton appareil.';
+        suivant.hidden = true;
+        CLASSES.forEach((c) => choix.append(puce(c.court, brouillon.classe === c.slug, () => {
+          if (brouillon.classe !== c.slug) brouillon = { classe: c.slug, specialites: [], difficultes: [] };
+          etape = 1;
+          afficher();
+        })));
+        return;
+      }
+      const multi = (cle: 'specialites' | 'difficultes', options: { slug: string; nom: string }[]) => {
+        options.forEach((o) => {
+          const b = puce(o.nom, brouillon[cle].includes(o.slug), () => {
+            const l = brouillon[cle];
+            brouillon[cle] = l.includes(o.slug) ? l.filter((x) => x !== o.slug) : [...l, o.slug];
+            b.setAttribute('aria-pressed', String(brouillon[cle].includes(o.slug)));
+          });
+          choix.append(b);
+        });
+      };
+      suivant.hidden = false;
+      if (q === 'specialites') {
+        $<HTMLElement>('[data-q]').textContent = 'Quelles sont tes spécialités ?';
+        $<HTMLElement>('[data-aide]').textContent = brouillon.classe === 'terminale' ? 'Tu en gardes deux en terminale.' : 'Tu en as trois en première.';
+        multi('specialites', SPECIALITES);
+        suivant.textContent = 'Suivant';
+      } else {
+        $<HTMLElement>('[data-q]').textContent = 'Où as-tu le plus de mal ?';
+        $<HTMLElement>('[data-aide]').textContent = 'Plusieurs choix possibles, ou aucun.';
+        const mats = matieresDeClasse(brouillon.classe).filter((m) => !avecSpecialites(brouillon.classe) || !SPECIALITES.some((s) => s.slug === m) || brouillon.specialites.includes(m));
+        multi('difficultes', mats.map((m) => ({ slug: m, nom: NOMS[m] ?? m })));
+        suivant.textContent = 'Terminer';
+      }
+    }
+
+    function ouvrir() {
+      cacherToast();
+      brouillon = { ...(lire() ?? { classe: '', specialites: [], difficultes: [] }) };
+      brouillon.specialites = [...brouillon.specialites];
+      brouillon.difficultes = [...brouillon.difficultes];
+      etape = 0;
+      afficher();
+      dlg!.showModal();
+    }
+
+    function libelles() {
+      const p = lire();
+      document.querySelectorAll<HTMLElement>('[data-profil-libelle]').forEach((e) => {
+        e.textContent = p ? `Mon profil : ${COURT[p.classe] ?? p.classe}` : 'Personnaliser';
+      });
+    }
+
+    $<HTMLButtonElement>('[data-suivant]').addEventListener('click', () => {
+      if (etape < etapes().length - 1) { etape++; afficher(); return; }
+      ecrire({ ...brouillon, tout: false });
+      (window as any).umami?.track('profil-rempli', { classe: brouillon.classe });
+      dispatchEvent(new Event('profil-change'));
+      dlg.close();
+    });
+    $<HTMLButtonElement>('[data-retour]').addEventListener('click', () => { if (etape > 0) { etape--; afficher(); } });
+    $<HTMLButtonElement>('[data-effacer]').addEventListener('click', () => {
+      ecrire(null);
+      dispatchEvent(new Event('profil-change'));
+      dlg.close();
+    });
+    $<HTMLButtonElement>('[data-fermer]').addEventListener('click', () => dlg.close());
+    dlg.addEventListener('click', (e) => { if (e.target === dlg) dlg.close(); });
+    document.addEventListener('click', (e) => {
+      const b = (e.target as HTMLElement).closest('[data-profil-ouvrir]');
+      if (b) { e.preventDefault(); ouvrir(); }
+    });
+    addEventListener('profil-change', libelles);
+    libelles();
+
+    // Petite suggestion, une seule fois : après quelques pages vues, si aucun profil.
+    const toast = document.querySelector<HTMLElement>('[data-toast]');
+    function cacherToast() { if (toast) toast.hidden = true; }
+    const vues = Number(local.lire('pages-vues') || 0) + 1;
+    local.ecrire('pages-vues', String(vues));
+    if (toast && !lire() && vues >= 4 && !local.lire('profil-plus-tard')) {
+      setTimeout(() => { toast.hidden = false; }, 1500);
+      toast.querySelector('[data-toast-non]')!.addEventListener('click', () => { cacherToast(); local.ecrire('profil-plus-tard', '1'); });
+      toast.querySelector('[data-profil-ouvrir]')!.addEventListener('click', () => local.ecrire('profil-plus-tard', '1'));
+    }
+  }
+</script>

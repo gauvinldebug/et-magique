@@ -1,0 +1,58 @@
+---
+// Accueil : une fois le profil rempli, une rangée « Pour toi » sous le titre des matières :
+// ses niveaux, puis les premiers chapitres qu'il n'a pas encore validés (d'abord là où il a du mal).
+import { MATIERES } from '../data/site';
+const NOMS = Object.fromEntries(MATIERES.map((m) => [m.slug, m.nom]));
+---
+<div class="pt" data-pour-toi data-noms={JSON.stringify(NOMS)} hidden>
+  <p class="pt-resume"><b>Pour toi</b> <span data-resume></span></p>
+  <ul class="pt-liste" data-sugg></ul>
+</div>
+
+<script>
+  import { lire, CLASSES, matieresUtiles } from '../scripts/profil';
+  type Item = { t: string; u: string; d: 0 | 1; m?: string };
+  const racine = document.querySelector<HTMLElement>('[data-pour-toi]');
+  if (racine) {
+    const NOMS: Record<string, string> = JSON.parse(racine.dataset.noms || '{}');
+    let items: Item[] | null = null;
+    async function remplir() {
+      const p = lire();
+      racine!.hidden = !p;
+      if (!p) return;
+      const classe = CLASSES.find((c) => c.slug === p.classe)?.court ?? p.classe;
+      const parties = [classe, ...p.specialites.map((m) => NOMS[m] ?? m)];
+      if (p.difficultes.length) parties.push('à renforcer : ' + p.difficultes.map((m) => NOMS[m] ?? m).join(', '));
+      racine!.querySelector('[data-resume]')!.textContent = parties.join(' · ');
+      if (!items) { try { items = await (await fetch('/recherche.json')).json(); } catch { items = []; } }
+      const ul = racine!.querySelector<HTMLElement>('[data-sugg]')!;
+      ul.replaceChildren();
+      const mats = matieresUtiles(p);
+      const carte = (href: string, petit: string, titre: string, niv = false) => {
+        const li = document.createElement('li');
+        if (niv) li.className = 'pt-niv';
+        const a = document.createElement('a');
+        a.href = href;
+        a.innerHTML = '<small></small><b></b>';
+        a.querySelector('small')!.textContent = petit;
+        a.querySelector('b')!.textContent = titre;
+        li.append(a);
+        ul.append(li);
+      };
+      for (const m of mats) if (items!.some((i) => i.u === `/${m}/${p.classe}/`)) carte(`/${m}/${p.classe}/`, NOMS[m] ?? m, `Mes chapitres de ${classe}`, true);
+      const ordre = [...new Set([...p.difficultes, ...mats])];
+      let n = 0;
+      for (const m of ordre) {
+        let faits: string[] = [];
+        try { faits = JSON.parse(localStorage.getItem(`faits:${m}/${p.classe}`) || '[]'); } catch { /* rien */ }
+        const dispo = items!.filter((i) => i.d && i.m === m && new RegExp(`^/${m}/${p.classe}/[^/]+/$`).test(i.u) && !faits.includes(i.u.split('/')[3]));
+        for (const i of dispo.slice(0, p.difficultes.includes(m) ? 2 : 1)) {
+          if (n++ >= 6) break;
+          carte(i.u, (NOMS[m] ?? m) + (p.difficultes.includes(m) ? ' · à renforcer' : ''), i.t);
+        }
+      }
+    }
+    remplir();
+    addEventListener('profil-change', remplir);
+  }
+</script>

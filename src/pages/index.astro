@@ -8,7 +8,7 @@ import Pied from '../components/Pied.astro';
 import QRCode from 'qrcode';
 import { MATIERES, SITE } from '../data/site';
 import Recherche from '../components/Recherche.astro';
-import Profil from '../components/Profil.astro';
+import PourToi from '../components/PourToi.astro';
 import DerniereVideo from '../components/DerniereVideo.astro';
 import { AFFICHES } from '../data/affiches';
 import { chapitresPublies } from '../lib/contenu';
@@ -45,7 +45,6 @@ const qr = abonnement ? await QRCode.toString(abonnement, { type: 'svg', margin:
       </div>
     </div>
   </header>
-  <Profil />
   {principale.youtube && (
     <section class="nv-accueil" aria-labelledby="t-nv">
       <div class="wrap">
@@ -58,7 +57,11 @@ const qr = abonnement ? await QRCode.toString(abonnement, { type: 'svg', margin:
   <div class="portail-p">
     <div class="wrap">
       <section class="bloc" id="matieres" aria-labelledby="t-matieres">
-        <h2 id="t-matieres" data-rv>Choisis ta matière.</h2>
+        <div class="mat-tete" data-rv>
+          <h2 id="t-matieres">Choisis ta matière.</h2>
+          <button type="button" class="perso-b" data-profil-ouvrir><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h10M18 7h2M4 17h4M12 17h8" /><circle cx="16" cy="7" r="2" /><circle cx="10" cy="17" r="2" /></svg><span data-profil-libelle>Personnaliser</span></button>
+        </div>
+        <PourToi />
         <div class="bloc-c" data-profil-groupe><ul class="p-affiches">
           {MATIERES.map((m, i) => {
             const a = AFFICHES[m.slug] ?? { fond: 'var(--ink)', txt: '#fff', forme: '' };

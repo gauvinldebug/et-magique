@@ -58,8 +58,17 @@ export const MATIERES: Matiere[] = [
   { slug: 'hggsp', nom: 'HGGSP', nomLong: 'HGGSP', couleur: '#004E64', active: false, specialite: true, niveaux: ['premiere', 'terminale'] },
   { slug: 'hlp', nom: 'HLP', nomLong: 'HLP', couleur: '#E8D3B0', active: false, specialite: true, niveaux: ['premiere', 'terminale'] },
   { slug: 'si', nom: 'Sciences de l\'ingénieur', nomLong: 'sciences de l\'ingénieur', couleur: '#6D4C41', active: false, specialite: true, niveaux: ['premiere', 'terminale'] },
+  { slug: 'llcer', nom: 'LLCER', nomLong: 'LLCER', couleur: '#D8DCE3', active: false, specialite: true, niveaux: ['premiere', 'terminale'] },
+  { slug: 'llca', nom: 'LLCA', nomLong: 'LLCA', couleur: '#E09F3E', active: false, specialite: true, niveaux: ['premiere', 'terminale'] },
+  { slug: 'biologie-ecologie', nom: 'Biologie-écologie', couleur: '#556B2F', active: false, specialite: true, niveaux: ['premiere', 'terminale'] },
+  { slug: 'eppcs', nom: 'EPPCS', nomLong: 'EPPCS', couleur: '#FFB5A7', active: false, specialite: true, niveaux: ['premiere', 'terminale'] },
   { slug: 'arts', nom: 'Arts plastiques', couleur: '#FF4FD8', active: false, specialite: true, niveaux: ['6e', '5e', '4e', '3e', 'premiere', 'terminale'] },
   { slug: 'musique', nom: 'Musique', couleur: '#3FA9F5', active: false, specialite: true, niveaux: ['6e', '5e', '4e', '3e', 'premiere', 'terminale'] },
+  { slug: 'cinema', nom: 'Cinéma-audiovisuel', couleur: '#B39DFF', active: false, specialite: true, niveaux: ['premiere', 'terminale'] },
+  { slug: 'theatre', nom: 'Théâtre', couleur: '#8E1B3A', active: false, specialite: true, niveaux: ['premiere', 'terminale'] },
+  { slug: 'danse', nom: 'Danse', couleur: '#3DDC97', active: false, specialite: true, niveaux: ['premiere', 'terminale'] },
+  { slug: 'histoire-des-arts', nom: 'Histoire des arts', couleur: '#4B1D6B', active: false, specialite: true, niveaux: ['premiere', 'terminale'] },
+  { slug: 'cirque', nom: 'Arts du cirque', couleur: '#C1E1FF', active: false, specialite: true, niveaux: ['premiere', 'terminale'] },
 ];
 
 export const matiere = (slug: string) => MATIERES.find((m) => m.slug === slug);

@@ -38,6 +38,24 @@ export const AFFICHES: Record<string, { fond: string; txt: string; forme: string
   arts: { fond: '#FF4FD8', txt: 'var(--ink)', forme: '<svg viewBox="0 0 200 200" preserveAspectRatio="xMaxYMin meet"><circle class="f-a" cx="80" cy="120" r="64" fill="#F2E94E"/><g class="f-b"><g transform="rotate(-40 130 80)"><rect x="122" y="-10" width="16" height="110" fill="#1A1A40"/><path d="M116 100 H144 L140 140 Q130 160 120 140 Z" fill="#2B2BD9"/></g></g></svg>' },
   // deux croches
   musique: { fond: '#3FA9F5', txt: 'var(--ink)', forme: '<svg viewBox="0 0 200 200" preserveAspectRatio="xMaxYMin meet"><g fill="#1A1A40"><ellipse class="f-a" cx="52" cy="160" rx="30" ry="22"/><ellipse class="f-b" cx="146" cy="140" rx="30" ry="22"/><rect x="70" y="30" width="12" height="132"/><rect x="164" y="10" width="12" height="132"/><path d="M70 30 L176 10 V40 L70 60 Z"/></g></svg>' },
+  // des livres rangés
+  'llcer': { fond: '#D8DCE3', txt: 'var(--ink)', forme: '<svg viewBox="0 0 200 180" preserveAspectRatio="xMaxYMin meet"><rect class="f-a" x="30" y="30" width="34" height="140" fill="#1A1A40"/><rect x="72" y="50" width="30" height="120" fill="#E0263C"/><rect class="f-b" x="110" y="40" width="34" height="130" fill="#2B2BD9"/><g transform="rotate(14 165 170)"><rect x="150" y="60" width="28" height="110" fill="#F2E94E"/></g><rect x="20" y="168" width="170" height="10" fill="#1A1A40"/></svg>' },
+  // un oméga grec
+  'llca': { fond: '#E09F3E', txt: 'var(--ink)', forme: '<svg viewBox="0 0 200 200" preserveAspectRatio="xMaxYMin meet"><text class="f-a" x="100" y="170" text-anchor="middle" font-family="Georgia,serif" font-weight="700" font-size="200" fill="#1A1A40">Ω</text></svg>' },
+  // une feuille
+  'biologie-ecologie': { fond: '#556B2F', txt: '#fff', forme: '<svg viewBox="0 0 200 200" preserveAspectRatio="xMaxYMin meet"><path class="f-a" d="M40 170 C 30 80, 100 20, 180 20 C 180 110, 120 170, 40 170 Z" fill="#F2E94E"/><path class="f-b" d="M40 170 Q 100 110 150 50" fill="none" stroke="#556B2F" stroke-width="9" stroke-linecap="round"/></svg>' },
+  // un chronomètre
+  'eppcs': { fond: '#FFB5A7', txt: 'var(--ink)', forme: '<svg viewBox="0 0 200 200" preserveAspectRatio="xMaxYMin meet"><rect x="86" y="8" width="28" height="22" fill="#1A1A40"/><circle class="f-a" cx="100" cy="112" r="78" fill="#fff" stroke="#1A1A40" stroke-width="10"/><path class="f-b" d="M100 112 L100 56 M100 112 L140 130" stroke="#1A1A40" stroke-width="10" stroke-linecap="round"/><circle cx="100" cy="112" r="10" fill="#E0263C"/></svg>' },
+  // un clap
+  'cinema': { fond: '#B39DFF', txt: 'var(--ink)', forme: '<svg viewBox="0 0 200 180" preserveAspectRatio="xMaxYMin meet"><rect class="f-a" x="20" y="70" width="160" height="100" fill="#1A1A40"/><g class="f-b"><g transform="rotate(-14 20 62)"><rect x="20" y="36" width="160" height="28" fill="#1A1A40"/><path d="M40 36 L60 64 M80 36 L100 64 M120 36 L140 64 M160 36 L180 64" stroke="#fff" stroke-width="12"/></g></g><rect x="20" y="70" width="160" height="10" fill="#fff"/></svg>' },
+  // un masque
+  'theatre': { fond: '#8E1B3A', txt: '#fff', forme: '<svg viewBox="0 0 200 200" preserveAspectRatio="xMaxYMin meet"><path class="f-a" d="M30 30 H170 V110 A70 70 0 0 1 30 110 Z" fill="#F2E94E"/><g class="f-b" fill="#8E1B3A"><ellipse cx="70" cy="80" rx="18" ry="12"/><ellipse cx="130" cy="80" rx="18" ry="12"/><path d="M60 128 Q100 168 140 128 Z"/></g></svg>' },
+  // un ruban qui tourne
+  'danse': { fond: '#3DDC97', txt: 'var(--ink)', forme: '<svg viewBox="0 0 220 200" preserveAspectRatio="xMaxYMin meet"><path class="f-a" d="M20 170 C 60 40, 120 40, 110 110 S 160 190, 200 30" fill="none" stroke="#1A1A40" stroke-width="14" stroke-linecap="round"/><circle class="f-b" cx="200" cy="30" r="14" fill="#FF7AA8"/></svg>' },
+  // un tableau encadré
+  'histoire-des-arts': { fond: '#4B1D6B', txt: '#fff', forme: '<svg viewBox="0 0 200 180" preserveAspectRatio="xMaxYMin meet"><rect class="f-a" x="20" y="20" width="160" height="140" fill="#F2E94E"/><rect x="38" y="38" width="124" height="104" fill="#2B2BD9"/><polygon class="f-b" points="38,142 90,80 125,120 145,100 162,142" fill="#FF7AA8"/><circle cx="135" cy="62" r="12" fill="#F2E94E"/></svg>' },
+  // un chapiteau
+  'cirque': { fond: '#C1E1FF', txt: 'var(--ink)', forme: '<svg viewBox="0 0 200 200" preserveAspectRatio="xMaxYMin meet"><polygon class="f-a" points="100,20 180,100 20,100" fill="#E0263C"/><g class="f-b"><rect x="30" y="100" width="140" height="80" fill="#fff"/><g fill="#E0263C"><rect x="30" y="100" width="20" height="80"/><rect x="70" y="100" width="20" height="80"/><rect x="110" y="100" width="20" height="80"/><rect x="150" y="100" width="20" height="80"/></g></g><path d="M100 20 V4 L120 10 L100 16" fill="#1A1A40" stroke="#1A1A40" stroke-width="3"/></svg>' },
 };
 
 // Une couleur d'affiche par niveau (la même que sur les tuiles du sommaire), avec les quatre formes
