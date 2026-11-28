@@ -1,0 +1,53 @@
+exercices:
+- titre: Les trois indicateurs
+  difficulte: 1
+  type: application
+  enonce: |
+    Notes : 8 ; 11 ; 11 ; 13 ; 14 ; 15 ; 19. Calculer moyenne, médiane, étendue.
+  indice: 7 valeurs, déjà rangées.
+  etapes:
+  - type: calcul
+    titre: Moyenne
+    texte: $91 \div 7 = 13$.
+  - type: conc
+    titre: Médiane et étendue
+    texte: '<mark>Médiane : 4e valeur, 13. Étendue : $19 - 8 = 11$.</mark>'
+- titre: Avec un tableau
+  difficulte: 2
+  type: methode
+  enonce: |
+    Pointures : 37 (4 élèves), 38 (7), 39 (8), 40 (5), 41 (1). Trouver la médiane.
+  indice: 'Effectif total 25 : la 13e valeur.'
+  etapes:
+  - type: calcul
+    titre: Effectifs cumulés
+    texte: 4 ; 11 ; 19 ; 24 ; 25.
+  - type: conc
+    titre: Médiane
+    texte: '<mark>La 13e valeur est entre la 12e et la 19e : 39.</mark>'
+- titre: Le milieu des extrêmes
+  difficulte: 2
+  type: piege
+  enonce: |
+    Série : 2 ; 3 ; 3 ; 4 ; 20. Un élève dit que la médiane est $\frac{2 + 20}{2} = 11$. Corriger.
+  indice: Quelle est la valeur du milieu ?
+  etapes:
+  - type: piege
+    titre: L'erreur
+    texte: Il fait la moyenne des extrêmes.
+  - type: conc
+    titre: Correction
+    texte: '<mark>La médiane est la 3e valeur : 3.</mark>'
+- titre: Comparer
+  difficulte: 3
+  type: methode
+  enonce: |
+    3eA : moyenne 14 min, étendue 3 min. 3eB : moyenne 14 min, étendue 9 min. Comparer.
+  indice: Même position, dispersion différente.
+  etapes:
+  - type: calcul
+    titre: Position
+    texte: 'Même moyenne : les classes sont aussi rapides en moyenne.'
+  - type: conc
+    titre: Dispersion
+    texte: <mark>La 3eA est plus homogène ; en 3eB, les écarts entre coureurs sont bien plus grands.</mark>

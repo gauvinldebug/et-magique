@@ -12,6 +12,7 @@ pdf:
   cours: /pdf/maths/6e/perimetres-et-aires-cours.pdf
   fiche: /pdf/maths/6e/perimetres-et-aires-fiche.pdf
   exercices: /pdf/maths/6e/perimetres-et-aires-exercices.pdf
+suivant: operations-et-calcul
 ---
 
 ## Le problème

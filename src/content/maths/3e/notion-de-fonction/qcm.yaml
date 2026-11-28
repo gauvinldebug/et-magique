@@ -1,0 +1,55 @@
+questions:
+- question: Si $f(5) = 2$, alors…
+  choix:
+  - 2 est l'image de 5
+  - 5 est l'image de 2
+  - 2 est un antécédent de 5
+  - f vaut 10
+  bonne: 0
+  explication: Et 5 est un antécédent de 2.
+  revoir: cours
+- question: Avec $f(x) = x + 4$, $f(-4) =$
+  choix:
+  - '0'
+  - '8'
+  - '-8'
+  - '4'
+  bonne: 0
+  explication: -4 + 4.
+  revoir: cours
+- question: Un nombre a…
+  choix:
+  - une seule image
+  - plusieurs images
+  - aucune image
+  - deux images
+  bonne: 0
+  explication: Par définition.
+  revoir: cours
+- question: Sur une courbe, l'image se lit sur…
+  choix:
+  - l'axe horizontal
+  - l'axe vertical
+  - la légende
+  - l'origine
+  bonne: 1
+  explication: Les antécédents, sur l'axe horizontal.
+  revoir: cours
+- question: Avec $f(x) = x^2$, les antécédents de 49 sont…
+  choix:
+  - '7'
+  - 7 et -7
+  - 2 401
+  - aucun
+  bonne: 1
+  explication: Deux antécédents.
+  revoir: cours
+- question: $f(x)$ se lit…
+  choix:
+  - f fois x
+  - f de x
+  - f plus x
+  - fx
+  bonne: 1
+  explication: C'est l'image de x.
+  revoir: cours

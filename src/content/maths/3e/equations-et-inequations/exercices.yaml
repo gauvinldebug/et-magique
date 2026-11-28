@@ -1,0 +1,53 @@
+exercices:
+- titre: Une équation
+  difficulte: 1
+  type: application
+  enonce: |
+    Résoudre $5x + 3 = 2x - 9$.
+  indice: Regroupe les $x$ d'un côté.
+  etapes:
+  - type: calcul
+    titre: Regrouper
+    texte: $3x = -12$.
+  - type: conc
+    titre: Solution
+    texte: <mark>$x = -4$.</mark>
+- titre: Produit nul
+  difficulte: 2
+  type: methode
+  enonce: |
+    Résoudre $(3x - 6)(x + 5) = 0$.
+  indice: Un des facteurs est nul.
+  etapes:
+  - type: calcul
+    titre: Les deux cas
+    texte: $3x - 6 = 0$ donne $x = 2$ ; $x + 5 = 0$ donne $x = -5$.
+  - type: conc
+    titre: Solutions
+    texte: <mark>$x = 2$ ou $x = -5$.</mark>
+- titre: Le sens oublié
+  difficulte: 2
+  type: piege
+  enonce: |
+    Un élève résout $-4x \geqslant 8$ et trouve $x \geqslant -2$. Corriger.
+  indice: Teste $x = 0$.
+  etapes:
+  - type: piege
+    titre: L'erreur
+    texte: Il a divisé par $-4$ sans changer le sens.
+  - type: conc
+    titre: Correction
+    texte: '<mark>$x \leqslant -2$. Vérification : $x = 0$ donne $0 \geqslant 8$, faux.</mark>'
+- titre: Le rectangle
+  difficulte: 3
+  type: methode
+  enonce: |
+    Un rectangle a une longueur égale au double de sa largeur, et un périmètre de 54 cm. Trouver ses dimensions.
+  indice: Appelle $\ell$ la largeur.
+  etapes:
+  - type: calcul
+    titre: Mise en équation
+    texte: $2(\ell + 2\ell) = 54$, soit $6\ell = 54$.
+  - type: conc
+    titre: Solution
+    texte: <mark>$\ell = 9$ cm et longueur 18 cm.</mark>

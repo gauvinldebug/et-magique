@@ -1,0 +1,59 @@
+exercices:
+- titre: Moyenne pondérée
+  difficulte: 1
+  type: application
+  enonce: |
+    Calculer la moyenne de 14 (coefficient 2), 9 (coefficient 1) et 16 (coefficient 3).
+  indice: 'Somme des coefficients : 6.'
+  etapes:
+  - type: calcul
+    titre: Numérateur
+    texte: $28 + 9 + 48 = 85$.
+  - type: conc
+    titre: Moyenne
+    texte: <mark>$85 \div 6 \approx 14{,}2$.</mark>
+- titre: Médiane et étendue
+  difficulte: 2
+  type: methode
+  enonce: |
+    Série : 12 ; 7 ; 15 ; 9 ; 18 ; 10. Donner la médiane et l'étendue.
+  indice: Range d'abord la série.
+  etapes:
+  - type: calcul
+    titre: Rangée
+    texte: 7 ; 9 ; 10 ; 12 ; 15 ; 18. Effectif 6.
+  - type: calcul
+    titre: Médiane
+    texte: 'Moyenne des 3e et 4e valeurs : $\frac{10 + 12}{2} = 11$.'
+  - type: conc
+    titre: Étendue
+    texte: <mark>Médiane 11, étendue $18 - 7 = 11$.</mark>
+- titre: La médiane non rangée
+  difficulte: 2
+  type: piege
+  enonce: |
+    Pour la série 5 ; 14 ; 3 ; 8 ; 11, un élève dit que la médiane est 3, « la valeur du milieu ». Corriger.
+  indice: La série est-elle rangée ?
+  etapes:
+  - type: piege
+    titre: L'erreur
+    texte: Il n'a pas rangé la série.
+  - type: conc
+    titre: Correction
+    texte: '<mark>Rangée : 3 ; 5 ; 8 ; 11 ; 14. La médiane est 8.</mark>'
+- titre: La valeur extrême
+  difficulte: 3
+  type: methode
+  enonce: |
+    Les salaires d'une petite entreprise : 1 800, 1 900, 2 000, 2 100 et 12 000 €. Calculer la moyenne et la médiane. Laquelle décrit le mieux un salaire habituel ?
+  indice: Une valeur est très éloignée des autres.
+  etapes:
+  - type: calcul
+    titre: Moyenne
+    texte: $19\,800 \div 5 = 3\,960$ €.
+  - type: calcul
+    titre: Médiane
+    texte: 2 000 €.
+  - type: conc
+    titre: Conclusion
+    texte: '<mark>La médiane décrit mieux un salaire habituel : la moyenne est tirée vers le haut par le salaire de 12 000 €.</mark>'

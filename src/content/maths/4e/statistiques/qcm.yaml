@@ -1,0 +1,55 @@
+questions:
+- question: L'étendue de 4 ; 9 ; 15 ; 2 est…
+  choix:
+  - '11'
+  - '13'
+  - '15'
+  - '30'
+  bonne: 1
+  explication: 15 − 2.
+  revoir: cours
+- question: La médiane de 3 ; 6 ; 8 ; 10 ; 20 est…
+  choix:
+  - '6'
+  - '8'
+  - 9,4
+  - '10'
+  bonne: 1
+  explication: La 3e valeur.
+  revoir: cours
+- question: La moyenne de 10 (coef. 1) et 16 (coef. 2) est…
+  choix:
+  - '13'
+  - '14'
+  - '12'
+  - '26'
+  bonne: 1
+  explication: $(10 + 32) \div 3$.
+  revoir: cours
+- question: Une valeur extrême influence surtout…
+  choix:
+  - la moyenne
+  - la médiane
+  - l'effectif
+  - rien
+  bonne: 0
+  explication: La médiane résiste.
+  revoir: cours
+- question: Dans une classe de 25, 5 élèves ont 12. La fréquence de 12 est…
+  choix:
+  - 5 %
+  - 20 %
+  - 12 %
+  - 25 %
+  bonne: 1
+  explication: 5/25.
+  revoir: cours
+- question: Pour 8 valeurs rangées, la médiane est…
+  choix:
+  - la 4e
+  - la 5e
+  - la moyenne des 4e et 5e
+  - la 8e
+  bonne: 2
+  explication: Effectif pair.
+  revoir: cours

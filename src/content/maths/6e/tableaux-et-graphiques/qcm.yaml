@@ -1,0 +1,55 @@
+questions:
+- question: Pour suivre la température heure par heure, on choisit…
+  choix:
+  - un diagramme circulaire
+  - un graphique cartésien
+  - un tableau sans titre
+  - des bâtons
+  bonne: 1
+  explication: Il montre l'évolution.
+  revoir: cours
+- question: Un diagramme circulaire représente un total de…
+  choix:
+  - 100°
+  - 180°
+  - 360°
+  - 90°
+  bonne: 2
+  explication: Le tour complet.
+  revoir: cours
+- question: Un quart du total occupe un angle de…
+  choix:
+  - 90°
+  - 45°
+  - 25°
+  - 180°
+  bonne: 0
+  explication: $360 \div 4$.
+  revoir: cours
+- question: Dans un diagramme en bâtons, la valeur se lit…
+  choix:
+  - à la hauteur du bâton
+  - à sa largeur
+  - à sa couleur
+  - à sa position
+  bonne: 0
+  explication: Sur l'axe vertical.
+  revoir: cours
+- question: Avant de conclure sur un graphique, on lit d'abord…
+  choix:
+  - la couleur
+  - le titre, les unités et l'échelle
+  - le dernier point
+  - le nombre de points
+  bonne: 1
+  explication: Sinon on se fait piéger.
+  revoir: cours
+- question: Dans un tableau à double entrée, une case se lit…
+  choix:
+  - au croisement d'une ligne et d'une colonne
+  - en haut à gauche
+  - dans le titre
+  - en bas
+  bonne: 0
+  explication: Deux informations croisées.
+  revoir: cours

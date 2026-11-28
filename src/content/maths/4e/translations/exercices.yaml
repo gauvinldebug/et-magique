@@ -1,0 +1,53 @@
+exercices:
+- titre: Sur quadrillage
+  difficulte: 1
+  type: application
+  enonce: |
+    La translation transforme $A(1\,;1)$ en $B(4\,;3)$. Quelle est l'image de $C(2\,;5)$ ?
+  indice: Calcule le déplacement de $A$ à $B$.
+  etapes:
+  - type: calcul
+    titre: Déplacement
+    texte: 3 à droite et 2 en haut.
+  - type: conc
+    titre: Image
+    texte: <mark>$C'(5\,;7)$.</mark>
+- titre: Le parallélogramme
+  difficulte: 2
+  type: methode
+  enonce: |
+    $M'$ est l'image de $M$ par la translation qui transforme $E$ en $F$. Quelle est la nature de $EFM'M$ ? Que peut-on dire de $(EF)$ et $(MM')$ ?
+  indice: Utilise la propriété du cours.
+  etapes:
+  - type: calcul
+    titre: Nature
+    texte: $EFM'M$ est un parallélogramme.
+  - type: conc
+    titre: Conséquence
+    texte: '<mark>Ses côtés opposés sont parallèles et de même longueur : $(EF) \parallel (MM'')$ et $EF = MM''$.</mark>'
+- titre: La figure qui tourne
+  difficulte: 2
+  type: piege
+  enonce: |
+    Un élève dit qu'un triangle et son image retournée sont images l'un de l'autre par une translation. Qu'en penser ?
+  indice: Une translation peut-elle retourner une figure ?
+  etapes:
+  - type: piege
+    titre: L'erreur
+    texte: Une translation ne retourne ni ne fait tourner.
+  - type: conc
+    titre: Correction
+    texte: <mark>C'est peut-être une symétrie ou une rotation, pas une translation.</mark>
+- titre: Conservation
+  difficulte: 2
+  type: application
+  enonce: |
+    Un carré de côté 5 cm est transformé par une translation. Quelle est l'aire de son image ?
+  indice: Que conserve une translation ?
+  etapes:
+  - type: calcul
+    titre: Conservation
+    texte: 'La translation conserve les longueurs : l''image est un carré de côté 5 cm.'
+  - type: conc
+    titre: Aire
+    texte: <mark>25 cm².</mark>

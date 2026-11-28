@@ -1,0 +1,55 @@
+questions:
+- question: $3{,}6 \times 100 =$
+  choix:
+  - 3,600
+  - 0,036
+  - '360'
+  - '36'
+  bonne: 2
+  explication: On décale de deux rangs.
+  revoir: cours
+- question: Dans $50 = 7 \times 7 + 1$, le reste est…
+  choix:
+  - '7'
+  - '1'
+  - '50'
+  - '49'
+  bonne: 1
+  explication: Le reste est plus petit que 7.
+  revoir: cours
+- question: $1{,}5 \times 0{,}2 =$
+  choix:
+  - '3'
+  - 0,3
+  - 0,03
+  - '30'
+  bonne: 1
+  explication: '$15 \times 2 = 30$, deux décimales : 0,30.'
+  revoir: cours
+- question: Quel nombre est divisible par 3 ?
+  choix:
+  - '104'
+  - '222'
+  - '401'
+  - 1 000
+  bonne: 1
+  explication: 2 + 2 + 2 = 6.
+  revoir: cours
+- question: Un ordre de grandeur de $49{,}7 \times 2{,}1$ est…
+  choix:
+  - '10'
+  - '100'
+  - 1 000
+  - '50'
+  bonne: 1
+  explication: $50 \times 2 = 100$.
+  revoir: cours
+- question: 6 est un diviseur de…
+  choix:
+  - '20'
+  - '33'
+  - '54'
+  - '40'
+  bonne: 2
+  explication: $54 = 6 \times 9$.
+  revoir: cours

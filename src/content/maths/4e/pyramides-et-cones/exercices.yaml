@@ -1,0 +1,53 @@
+exercices:
+- titre: Une pyramide
+  difficulte: 1
+  type: application
+  enonce: |
+    Une pyramide a une base carrée de côté 6 cm et une hauteur de 10 cm. Calculer son volume.
+  indice: 'Aire de la base : $6 \times 6$.'
+  etapes:
+  - type: calcul
+    titre: Base
+    texte: $36$ cm².
+  - type: conc
+    titre: Volume
+    texte: <mark>$V = \frac{36 \times 10}{3} = 120$ cm³.</mark>
+- titre: Le cornet
+  difficulte: 2
+  type: methode
+  enonce: |
+    Un cône a un rayon de 4 cm et une hauteur de 9 cm. Calculer son volume exact, puis arrondi au cm³.
+  indice: $V = \frac{\pi r^2 h}{3}$.
+  etapes:
+  - type: calcul
+    titre: Exact
+    texte: $\frac{\pi \times 16 \times 9}{3} = 48\pi$.
+  - type: conc
+    titre: Arrondi
+    texte: <mark>$48\pi \approx 151$ cm³.</mark>
+- titre: Le tiers oublié
+  difficulte: 2
+  type: piege
+  enonce: |
+    Un élève calcule le volume d'un cône de rayon 2 cm et de hauteur 6 cm : $\pi \times 4 \times 6 \approx 75$ cm³. Corriger.
+  indice: Il a calculé le volume d'un autre solide.
+  etapes:
+  - type: piege
+    titre: L'erreur
+    texte: Il a calculé le volume du cylindre.
+  - type: conc
+    titre: Correction
+    texte: <mark>$V = \frac{24\pi}{3} = 8\pi \approx 25$ cm³.</mark>
+- titre: La pyramide du Louvre
+  difficulte: 3
+  type: methode
+  enonce: |
+    La pyramide du Louvre a une base carrée d'environ 35 m de côté et une hauteur d'environ 21 m. Estimer son volume.
+  indice: Aire de la base puis formule.
+  etapes:
+  - type: calcul
+    titre: Base
+    texte: $35^2 = 1\,225$ m².
+  - type: conc
+    titre: Volume
+    texte: <mark>$V = \frac{1\,225 \times 21}{3} = 8\,575$ m³ environ.</mark>

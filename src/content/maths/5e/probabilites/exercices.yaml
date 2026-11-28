@@ -1,0 +1,53 @@
+exercices:
+- titre: Le dé
+  difficulte: 1
+  type: application
+  enonce: |
+    On lance un dé à 6 faces. Quelle est la probabilité d'obtenir un nombre supérieur ou égal à 5 ?
+  indice: Quelles issues sont favorables ?
+  etapes:
+  - type: calcul
+    titre: Issues
+    texte: '5 et 6 : 2 issues sur 6.'
+  - type: conc
+    titre: Réponse
+    texte: <mark>$P = \frac{2}{6} = \frac{1}{3}$.</mark>
+- titre: Le sac
+  difficulte: 2
+  type: methode
+  enonce: |
+    Un sac contient 4 billes vertes, 5 jaunes et 1 noire. Calculer la probabilité de tirer une jaune, puis de ne pas tirer la noire.
+  indice: 10 billes en tout.
+  etapes:
+  - type: calcul
+    titre: Jaune
+    texte: $P = \frac{5}{10} = \frac{1}{2}$.
+  - type: conc
+    titre: Pas noire
+    texte: '<mark>9 billes ne sont pas noires : $P = \frac{9}{10}$.</mark>'
+- titre: La série de pile
+  difficulte: 2
+  type: piege
+  enonce: |
+    Une pièce est tombée 4 fois sur pile. Un élève parie sur face « parce que ça doit arriver ». A-t-il plus de chances ?
+  indice: La pièce se souvient-elle des lancers ?
+  etapes:
+  - type: piege
+    titre: L'erreur
+    texte: Croire que le hasard compense.
+  - type: conc
+    titre: Correction
+    texte: '<mark>Non : la probabilité de face reste $\frac{1}{2}$ à chaque lancer.</mark>'
+- titre: Fréquence
+  difficulte: 3
+  type: methode
+  enonce: |
+    On lance 200 fois une punaise : elle tombe 130 fois pointe en l'air. Que peut-on dire de la probabilité de « pointe en l'air » ?
+  indice: Les issues ne sont pas équiprobables.
+  etapes:
+  - type: calcul
+    titre: Fréquence
+    texte: $\frac{130}{200} = 0{,}65$.
+  - type: conc
+    titre: Estimation
+    texte: '<mark>La probabilité est d''environ 0,65 : on l''estime par la fréquence car on ne peut pas la calculer avec une formule.</mark>'

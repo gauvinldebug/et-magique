@@ -1,0 +1,53 @@
+exercices:
+- titre: Un débit
+  difficulte: 1
+  type: application
+  enonce: |
+    Une pompe vide une piscine de 60 m³ en 5 h. Calculer son débit en m³/h.
+  indice: Volume ÷ durée.
+  etapes:
+  - type: calcul
+    titre: Calcul
+    texte: $60 \div 5 = 12$.
+  - type: conc
+    titre: Réponse
+    texte: <mark>12 m³/h.</mark>
+- titre: La masse volumique
+  difficulte: 2
+  type: methode
+  enonce: |
+    Un bloc d'aluminium de 50 cm³ pèse 135 g. Calculer sa masse volumique en g/cm³ puis en kg/m³.
+  indice: 1 m³ = 1 000 000 cm³.
+  etapes:
+  - type: calcul
+    titre: En g/cm³
+    texte: $135 \div 50 = 2{,}7$ g/cm³.
+  - type: conc
+    titre: En kg/m³
+    texte: <mark>$2{,}7 \times 1\,000\,000 \div 1\,000 = 2\,700$ kg/m³.</mark>
+- titre: La conversion directe
+  difficulte: 2
+  type: piege
+  enonce: |
+    Un élève dit qu'un coureur à 5 m/s court à 5 km/h. Corriger.
+  indice: En une heure, combien de mètres ?
+  etapes:
+  - type: piege
+    titre: L'erreur
+    texte: Il ne convertit qu'une partie de l'unité.
+  - type: conc
+    titre: Correction
+    texte: <mark>$5 \times 3{,}6 = 18$ km/h.</mark>
+- titre: La facture
+  difficulte: 3
+  type: methode
+  enonce: |
+    Une console de 150 W est utilisée 4 h par jour pendant 30 jours. Le kWh coûte 0,25 €. Combien coûte cette consommation ?
+  indice: Énergie = puissance × durée, en kW et en h.
+  etapes:
+  - type: calcul
+    titre: Énergie
+    texte: $0{,}15 \times 4 \times 30 = 18$ kWh.
+  - type: conc
+    titre: Coût
+    texte: <mark>$18 \times 0{,}25 = 4{,}50$ €.</mark>

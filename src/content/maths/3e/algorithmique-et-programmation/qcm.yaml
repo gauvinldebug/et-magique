@@ -1,0 +1,55 @@
+questions:
+- question: Pour dessiner un triangle équilatéral, on tourne de…
+  choix:
+  - 60 degrés
+  - 120 degrés
+  - 90 degrés
+  - 180 degrés
+  bonne: 1
+  explication: 360 ÷ 3.
+  revoir: cours
+- question: '« répéter 5 fois : ajouter 3 à x » avec x = 0 donne x ='
+  choix:
+  - '8'
+  - '15'
+  - '5'
+  - '3'
+  bonne: 1
+  explication: 5 × 3.
+  revoir: cours
+- question: « répéter jusqu'à x = 10 » s'arrête…
+  choix:
+  - tant que x = 10
+  - dès que x = 10
+  - jamais
+  - au premier tour
+  bonne: 1
+  explication: Quand la condition devient vraie.
+  revoir: cours
+- question: Un bloc personnalisé sert à…
+  choix:
+  - réutiliser un morceau de programme
+  - dessiner seulement
+  - arrêter le programme
+  - changer de lutin
+  bonne: 0
+  explication: Comme une fonction.
+  revoir: cours
+- question: L'orientation 90 correspond à…
+  choix:
+  - vers le haut
+  - vers la droite
+  - vers le bas
+  - vers la gauche
+  bonne: 1
+  explication: 0 est vers le haut.
+  revoir: cours
+- question: Un tableau de suivi sert à…
+  choix:
+  - lire un programme pas à pas
+  - dessiner
+  - compiler
+  - trouver un bug automatiquement
+  bonne: 0
+  explication: Une colonne par variable.
+  revoir: cours

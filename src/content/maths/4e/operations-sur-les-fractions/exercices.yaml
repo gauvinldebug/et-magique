@@ -1,0 +1,53 @@
+exercices:
+- titre: Additionner
+  difficulte: 1
+  type: application
+  enonce: |
+    Calculer $\frac{2}{3} + \frac{1}{4}$.
+  indice: 'Dénominateur commun : 12.'
+  etapes:
+  - type: calcul
+    titre: Même dénominateur
+    texte: $\frac{8}{12} + \frac{3}{12}$.
+  - type: conc
+    titre: Résultat
+    texte: <mark>$\frac{11}{12}$</mark>
+- titre: Multiplier et simplifier
+  difficulte: 2
+  type: methode
+  enonce: |
+    Calculer $\frac{5}{6} \times \frac{9}{10}$ et simplifier.
+  indice: Simplifie avant de multiplier.
+  etapes:
+  - type: calcul
+    titre: Simplifier
+    texte: $\frac{5 \times 9}{6 \times 10} = \frac{5 \times 3 \times 3}{2 \times 3 \times 2 \times 5}$.
+  - type: conc
+    titre: Résultat
+    texte: <mark>$\frac{3}{4}$</mark>
+- titre: Les dénominateurs ajoutés
+  difficulte: 2
+  type: piege
+  enonce: |
+    Un élève écrit $\frac{3}{5} + \frac{1}{5} = \frac{4}{10}$. Corriger.
+  indice: Les parts sont déjà de même taille.
+  etapes:
+  - type: piege
+    titre: L'erreur
+    texte: Il a additionné les dénominateurs.
+  - type: conc
+    titre: Correction
+    texte: <mark>$\frac{3}{5} + \frac{1}{5} = \frac{4}{5}$.</mark>
+- titre: Le ruban
+  difficulte: 3
+  type: methode
+  enonce: |
+    Un ruban de $\frac{9}{2}$ m est coupé en morceaux de $\frac{3}{4}$ m. Combien de morceaux obtient-on ?
+  indice: On cherche combien de fois $\frac{3}{4}$ entre dans $\frac{9}{2}$.
+  etapes:
+  - type: calcul
+    titre: Division
+    texte: $\frac{9}{2} \div \frac{3}{4} = \frac{9}{2} \times \frac{4}{3}$.
+  - type: conc
+    titre: Résultat
+    texte: <mark>$= \frac{36}{6} = 6$ morceaux.</mark>

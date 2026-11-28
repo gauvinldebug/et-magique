@@ -1,0 +1,53 @@
+exercices:
+- titre: Un tableau de suivi
+  difficulte: 1
+  type: application
+  enonce: |
+    « mettre a à 2 ; répéter 3 fois : mettre a à a × 3 ». Quelle est la valeur finale de a ?
+  indice: Suis a à chaque tour.
+  etapes:
+  - type: calcul
+    titre: Tours
+    texte: 2, puis 6, puis 18, puis 54.
+  - type: conc
+    titre: Réponse
+    texte: <mark>a vaut 54.</mark>
+- titre: L'hexagone
+  difficulte: 2
+  type: methode
+  enonce: |
+    Écrire un script qui dessine un hexagone régulier de côté 40.
+  indice: 6 côtés, angle de rotation $\frac{360}{6}$.
+  etapes:
+  - type: calcul
+    titre: Angle
+    texte: $360 \div 6 = 60$ degrés.
+  - type: conc
+    titre: Script
+    texte: '<mark>Stylo en position d''écriture ; répéter 6 fois : avancer de 40, tourner de 60 degrés.</mark>'
+- titre: Jusqu'à quand ?
+  difficulte: 2
+  type: piege
+  enonce: |
+    « mettre n à 1 ; répéter jusqu'à n > 20 : mettre n à n × 2 ». Un élève dit que n finit à 16. Corriger.
+  indice: Quand la boucle s'arrête-t-elle ?
+  etapes:
+  - type: piege
+    titre: L'erreur
+    texte: 16 n'est pas supérieur à 20, la boucle continue.
+  - type: conc
+    titre: Correction
+    texte: '<mark>n prend 2, 4, 8, 16, 32 : la boucle s''arrête à 32.</mark>'
+- titre: La condition
+  difficulte: 3
+  type: methode
+  enonce: |
+    Un programme demande un nombre $x$. Si $x$ est pair, il affiche $x \div 2$, sinon il affiche $3x + 1$. Qu'affiche-t-il pour 7 ? pour 12 ?
+  indice: Un nombre est pair si le reste de sa division par 2 vaut 0.
+  etapes:
+  - type: calcul
+    titre: Pour 7
+    texte: '7 est impair : $3 \times 7 + 1 = 22$.'
+  - type: conc
+    titre: Pour 12
+    texte: '<mark>12 est pair : il affiche 6.</mark>'

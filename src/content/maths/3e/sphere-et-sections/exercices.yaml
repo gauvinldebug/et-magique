@@ -1,0 +1,53 @@
+exercices:
+- titre: Le ballon
+  difficulte: 1
+  type: application
+  enonce: |
+    Un ballon a un rayon de 11 cm. Calculer son volume au cm³ près.
+  indice: $V = \frac{4}{3}\pi r^3$.
+  etapes:
+  - type: calcul
+    titre: Calcul
+    texte: $\frac{4}{3} \times \pi \times 1\,331 \approx 5\,575$.
+  - type: conc
+    titre: Réponse
+    texte: <mark>Environ 5 575 cm³, soit 5,6 L.</mark>
+- titre: La section de la sphère
+  difficulte: 2
+  type: methode
+  enonce: |
+    Une sphère de rayon 10 cm est coupée par un plan à 6 cm du centre. Quel est le rayon de la section ?
+  indice: Pythagore.
+  etapes:
+  - type: calcul
+    titre: Calcul
+    texte: $r'^2 = 10^2 - 6^2 = 64$.
+  - type: conc
+    titre: Rayon
+    texte: <mark>$r' = 8$ cm.</mark>
+- titre: Sphère ou boule ?
+  difficulte: 2
+  type: piege
+  enonce: |
+    Un élève calcule « le volume de la sphère » avec $4\pi r^2$. Que corriger ?
+  indice: Quelle formule est une aire ?
+  etapes:
+  - type: piege
+    titre: L'erreur
+    texte: Il confond aire et volume, et sphère et boule.
+  - type: conc
+    titre: Correction
+    texte: <mark>$4\pi r^2$ est l'aire de la sphère ; le volume de la boule est $\frac{4}{3}\pi r^3$.</mark>
+- titre: La pyramide tranchée
+  difficulte: 3
+  type: methode
+  enonce: |
+    Une pyramide de hauteur 12 cm a une base carrée de côté 6 cm. On la coupe parallèlement à la base, à 4 cm du sommet. Quelle est la section ?
+  indice: La petite pyramide est une réduction de rapport $\frac{4}{12}$.
+  etapes:
+  - type: calcul
+    titre: Rapport
+    texte: $k = \frac{4}{12} = \frac{1}{3}$.
+  - type: conc
+    titre: Section
+    texte: <mark>Un carré de côté $6 \times \frac{1}{3} = 2$ cm.</mark>

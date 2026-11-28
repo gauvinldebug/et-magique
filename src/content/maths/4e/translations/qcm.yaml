@@ -1,0 +1,55 @@
+questions:
+- question: Une translation conserve…
+  choix:
+  - seulement les angles
+  - les longueurs, les angles et les aires
+  - rien
+  - seulement l'alignement
+  bonne: 1
+  explication: Elle fait juste glisser.
+  revoir: cours
+- question: Si $M'$ est l'image de $M$ par la translation de $A$ vers $B$, alors $ABM'M$ est…
+  choix:
+  - un triangle
+  - un parallélogramme
+  - un trapèze quelconque
+  - un cercle
+  bonne: 1
+  explication: Éventuellement aplati.
+  revoir: cours
+- question: L'image d'une droite par une translation est…
+  choix:
+  - perpendiculaire
+  - parallèle à la droite de départ
+  - un cercle
+  - un point
+  bonne: 1
+  explication: Ou confondue.
+  revoir: cours
+- question: Une translation fait-elle tourner une figure ?
+  choix:
+  - oui
+  - non
+  - parfois
+  - seulement les triangles
+  bonne: 1
+  explication: C'est la rotation qui fait tourner.
+  revoir: cours
+- question: En répétant une même translation, on obtient…
+  choix:
+  - une frise
+  - une rotation
+  - une homothétie
+  - un agrandissement
+  bonne: 0
+  explication: Motif répété en ligne.
+  revoir: cours
+- question: La translation est définie par…
+  choix:
+  - un centre
+  - un axe
+  - une direction, un sens et une longueur
+  - un angle
+  bonne: 2
+  explication: La flèche de A vers B.
+  revoir: cours

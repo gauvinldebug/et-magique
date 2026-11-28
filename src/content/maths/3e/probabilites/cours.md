@@ -12,6 +12,7 @@ pdf:
   cours: /pdf/maths/3e/probabilites-cours.pdf
   fiche: /pdf/maths/3e/probabilites-fiche.pdf
   exercices: /pdf/maths/3e/probabilites-exercices.pdf
+suivant: equations-et-inequations
 ---
 
 ## Le problème

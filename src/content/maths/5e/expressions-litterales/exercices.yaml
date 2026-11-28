@@ -1,0 +1,53 @@
+exercices:
+- titre: Substituer
+  difficulte: 1
+  type: application
+  enonce: |
+    Calculer $A = 4x - 7$ pour $x = 3$, puis pour $x = 2{,}5$.
+  indice: Remplace $x$ puis applique les priorités.
+  etapes:
+  - type: calcul
+    titre: $x = 3$
+    texte: $4 \times 3 - 7 = 5$.
+  - type: conc
+    titre: $x = 2{,}5$
+    texte: <mark>$4 \times 2{,}5 - 7 = 3$.</mark>
+- titre: Écrire une expression
+  difficulte: 2
+  type: methode
+  enonce: |
+    Un abonnement de téléphone coûte 10 € par mois plus 0,5 € par SMS. Écrire le prix $P$ pour $s$ SMS, puis le calculer pour 30 SMS.
+  indice: Une part fixe et une part qui dépend de $s$.
+  etapes:
+  - type: calcul
+    titre: Expression
+    texte: $P = 10 + 0{,}5s$.
+  - type: conc
+    titre: Pour 30 SMS
+    texte: <mark>$P = 10 + 0{,}5 \times 30 = 25$ €.</mark>
+- titre: Le carré
+  difficulte: 2
+  type: piege
+  enonce: |
+    Un élève calcule $x^2$ pour $x = 6$ et trouve 12. Corriger.
+  indice: Que signifie l'exposant 2 ?
+  etapes:
+  - type: piege
+    titre: L'erreur
+    texte: Il a calculé $2 \times 6$.
+  - type: conc
+    titre: Correction
+    texte: <mark>$x^2 = 6 \times 6 = 36$.</mark>
+- titre: Réduire et développer
+  difficulte: 2
+  type: application
+  enonce: |
+    Réduire $B = 5a + 3 + 2a - 1$, puis développer $C = 4(2y + 3)$.
+  indice: Regroupe les $a$ entre eux et les nombres entre eux.
+  etapes:
+  - type: calcul
+    titre: Réduire
+    texte: $B = 7a + 2$.
+  - type: conc
+    titre: Développer
+    texte: <mark>$C = 8y + 12$.</mark>

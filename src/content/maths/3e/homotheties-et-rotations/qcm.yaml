@@ -1,0 +1,55 @@
+questions:
+- question: Une rotation conserve…
+  choix:
+  - les longueurs
+  - seulement les angles
+  - rien
+  - seulement le centre
+  bonne: 0
+  explication: Et les angles, les aires.
+  revoir: cours
+- question: Une homothétie de rapport 0,5 est…
+  choix:
+  - un agrandissement
+  - une réduction
+  - une rotation
+  - une translation
+  bonne: 1
+  explication: $|k| < 1$.
+  revoir: cours
+- question: Si les longueurs sont multipliées par 3, les volumes le sont par…
+  choix:
+  - '3'
+  - '9'
+  - '27'
+  - '6'
+  bonne: 2
+  explication: $3^3$.
+  revoir: cours
+- question: La symétrie centrale est une rotation d'angle…
+  choix:
+  - 90°
+  - 180°
+  - 360°
+  - 45°
+  bonne: 1
+  explication: Un demi-tour.
+  revoir: cours
+- question: Avec $k = -1$, l'homothétie est…
+  choix:
+  - l'identité
+  - une symétrie centrale
+  - une translation
+  - une réduction
+  bonne: 1
+  explication: Même distance, de l'autre côté.
+  revoir: cours
+- question: Une réduction de rapport $\frac{1}{2}$ divise les aires par…
+  choix:
+  - '2'
+  - '4'
+  - '8'
+  - '1'
+  bonne: 1
+  explication: $\left(\frac{1}{2}\right)^2$.
+  revoir: cours

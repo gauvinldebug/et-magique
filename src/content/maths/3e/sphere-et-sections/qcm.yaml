@@ -1,0 +1,55 @@
+questions:
+- question: L'aire d'une sphère de rayon r est…
+  choix:
+  - $4\pi r^2$
+  - $\frac{4}{3}\pi r^3$
+  - $\pi r^2$
+  - $2\pi r$
+  bonne: 0
+  explication: Le volume de la boule est $\frac{4}{3}\pi r^3$.
+  revoir: cours
+- question: La section d'un cylindre parallèle à sa base est…
+  choix:
+  - un rectangle
+  - un disque
+  - un triangle
+  - une ellipse
+  bonne: 1
+  explication: Identique à la base.
+  revoir: cours
+- question: La section d'une sphère par un plan est…
+  choix:
+  - un cercle
+  - un carré
+  - un triangle
+  - une droite
+  bonne: 0
+  explication: Plus ou moins grand.
+  revoir: cours
+- question: La latitude de l'équateur est…
+  choix:
+  - 0°
+  - 90°
+  - 180°
+  - 45°
+  bonne: 0
+  explication: Les pôles sont à 90°.
+  revoir: cours
+- question: La section d'un pavé parallèle à une face est…
+  choix:
+  - un triangle
+  - un rectangle
+  - un disque
+  - un trapèze
+  bonne: 1
+  explication: Identique à la face.
+  revoir: cours
+- question: Si le rayon d'une boule double, son volume est multiplié par…
+  choix:
+  - '2'
+  - '4'
+  - '8'
+  - '6'
+  bonne: 2
+  explication: $2^3$.
+  revoir: cours

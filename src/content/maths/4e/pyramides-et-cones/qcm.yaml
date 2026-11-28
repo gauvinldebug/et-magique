@@ -1,0 +1,55 @@
+questions:
+- question: Le volume d'une pyramide est…
+  choix:
+  - base × hauteur
+  - (aire de la base × hauteur) ÷ 3
+  - base + hauteur
+  - (base × hauteur) ÷ 2
+  bonne: 1
+  explication: Le tiers du prisme.
+  revoir: cours
+- question: Les faces latérales d'une pyramide sont des…
+  choix:
+  - triangles
+  - rectangles
+  - carrés toujours
+  - disques
+  bonne: 0
+  explication: Elles se rejoignent au sommet.
+  revoir: cours
+- question: La base d'un cône est…
+  choix:
+  - un carré
+  - un disque
+  - un triangle
+  - un rectangle
+  bonne: 1
+  explication: Cône de révolution.
+  revoir: cours
+- question: Combien de cônes remplissent le cylindre de même base et hauteur ?
+  choix:
+  - '2'
+  - '3'
+  - '4'
+  - π
+  bonne: 1
+  explication: D'où le ÷ 3.
+  revoir: cours
+- question: Une pyramide à base triangulaire a…
+  choix:
+  - 3 faces
+  - 4 faces
+  - 5 faces
+  - 6 faces
+  bonne: 1
+  explication: 1 base + 3 triangles.
+  revoir: cours
+- question: La hauteur d'un cône relie le sommet…
+  choix:
+  - au centre de la base
+  - à un point du cercle
+  - au milieu d'une génératrice
+  - à rien
+  bonne: 0
+  explication: Perpendiculairement à la base.
+  revoir: cours

@@ -1,0 +1,56 @@
+exercices:
+- titre: Les longueurs
+  difficulte: 1
+  type: application
+  enonce: |
+    $EFGH$ est un parallélogramme avec $EF = 7$ cm et $FG = 4$ cm. Donner $GH$ et $HE$.
+  indice: Côtés opposés de même longueur.
+  etapes:
+  - type: calcul
+    titre: Côtés opposés
+    texte: $GH$ est opposé à $EF$, $HE$ est opposé à $FG$.
+  - type: conc
+    titre: Réponse
+    texte: <mark>$GH = 7$ cm et $HE = 4$ cm.</mark>
+- titre: Prouver
+  difficulte: 2
+  type: methode
+  enonce: |
+    Dans le quadrilatère $ABCD$, les diagonales $[AC]$ et $[BD]$ se coupent en $O$, avec $OA = OC$ et $OB = OD$. Montrer que $ABCD$ est un parallélogramme.
+  indice: Que dit l'égalité des longueurs sur le point $O$ ?
+  etapes:
+  - type: methode
+    titre: Données
+    texte: $O$ est le milieu de $[AC]$ et de $[BD]$.
+  - type: calcul
+    titre: Propriété
+    texte: Si les diagonales d'un quadrilatère se coupent en leur milieu, c'est un parallélogramme.
+  - type: conc
+    titre: Conclusion
+    texte: <mark>$ABCD$ est un parallélogramme.</mark>
+- titre: Le côté penché
+  difficulte: 2
+  type: piege
+  enonce: |
+    Un parallélogramme a une base de 8 cm, un côté oblique de 5 cm et une hauteur de 4 cm. Un élève calcule l'aire $8 \times 5 = 40$ cm². Corriger.
+  indice: Quelle longueur est perpendiculaire à la base ?
+  etapes:
+  - type: piege
+    titre: L'erreur
+    texte: Il a pris le côté oblique au lieu de la hauteur.
+  - type: conc
+    titre: Correction
+    texte: <mark>$\mathcal{A} = 8 \times 4 = 32$ cm².</mark>
+- titre: Losange ou rectangle ?
+  difficulte: 3
+  type: methode
+  enonce: |
+    Un parallélogramme a des diagonales perpendiculaires et de même longueur. Quelle est sa nature exacte ?
+  indice: 'Diagonales perpendiculaires : losange. Même longueur : rectangle.'
+  etapes:
+  - type: calcul
+    titre: Deux propriétés
+    texte: C'est un losange et un rectangle à la fois.
+  - type: conc
+    titre: Réponse
+    texte: <mark>C'est un carré.</mark>

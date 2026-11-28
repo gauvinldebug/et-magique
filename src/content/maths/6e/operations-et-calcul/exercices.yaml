@@ -1,0 +1,53 @@
+exercices:
+- titre: Poser une soustraction
+  difficulte: 1
+  type: application
+  enonce: |
+    Calculer $15{,}4 - 6{,}75$.
+  indice: Compléter avec un zéro pour avoir autant de décimales.
+  etapes:
+  - type: calcul
+    titre: Aligner
+    texte: $15{,}40 - 6{,}75$.
+  - type: conc
+    titre: Résultat
+    texte: <mark>$8{,}65$</mark>
+- titre: Les sachets
+  difficulte: 1
+  type: application
+  enonce: |
+    On range 158 œufs dans des boîtes de 12. Combien de boîtes pleines, et combien d'œufs restent ?
+  indice: Cherche le plus grand multiple de 12 inférieur à 158.
+  etapes:
+  - type: calcul
+    titre: Division
+    texte: $12 \times 13 = 156$ et $158 - 156 = 2$.
+  - type: conc
+    titre: Réponse
+    texte: '<mark>$158 = 12 \times 13 + 2$ : 13 boîtes pleines, 2 œufs restent.</mark>'
+- titre: Placer la virgule
+  difficulte: 2
+  type: piege
+  enonce: |
+    Un élève écrit $0{,}4 \times 0{,}2 = 0{,}8$. Corriger.
+  indice: Combien de chiffres après la virgule en tout ?
+  etapes:
+  - type: piege
+    titre: L'erreur
+    texte: Il a gardé une seule décimale.
+  - type: conc
+    titre: Correction
+    texte: '<mark>$4 \times 2 = 8$, avec deux décimales : $0{,}08$.</mark>'
+- titre: Divisible ?
+  difficulte: 2
+  type: methode
+  enonce: |
+    Le nombre 1 035 est-il divisible par 2 ? par 3 ? par 5 ? par 9 ?
+  indice: Utilise les critères.
+  etapes:
+  - type: calcul
+    titre: 2 et 5
+    texte: 'Il finit par 5 : divisible par 5, pas par 2.'
+  - type: conc
+    titre: 3 et 9
+    texte: '<mark>$1 + 0 + 3 + 5 = 9$ : divisible par 3 et par 9.</mark>'

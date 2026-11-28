@@ -12,6 +12,7 @@ pdf:
   cours: /pdf/maths/4e/probabilites-cours.pdf
   fiche: /pdf/maths/4e/probabilites-fiche.pdf
   exercices: /pdf/maths/4e/probabilites-exercices.pdf
+suivant: multiplier-et-diviser-des-relatifs
 ---
 
 ## Le problème

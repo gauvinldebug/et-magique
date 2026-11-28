@@ -1,0 +1,55 @@
+questions:
+- question: '36 km/h en m/s :'
+  choix:
+  - 3,6
+  - '10'
+  - 129,6
+  - '36'
+  bonne: 1
+  explication: 36 ÷ 3,6.
+  revoir: cours
+- question: Un débit s'exprime en…
+  choix:
+  - L/min
+  - km/h
+  - g/cm³
+  - kWh
+  bonne: 0
+  explication: Volume par durée.
+  revoir: cours
+- question: Un appareil de 1 kW pendant 2 h consomme…
+  choix:
+  - 0,5 kWh
+  - 2 kWh
+  - 2 kW
+  - 1 kWh
+  bonne: 1
+  explication: P × t.
+  revoir: cours
+- question: La masse volumique de l'eau est d'environ…
+  choix:
+  - 1 g/cm³
+  - 10 g/cm³
+  - 1 kg/cm³
+  - 100 g/L
+  bonne: 0
+  explication: 1 000 kg/m³.
+  revoir: cours
+- question: 1 m³ =
+  choix:
+  - 100 L
+  - 1 000 L
+  - 10 L
+  - 1 L
+  bonne: 1
+  explication: 1 dm³ = 1 L.
+  revoir: cours
+- question: Une grandeur produit est par exemple…
+  choix:
+  - la vitesse
+  - l'énergie en kWh
+  - le débit
+  - la densité
+  bonne: 1
+  explication: Puissance × durée.
+  revoir: cours
