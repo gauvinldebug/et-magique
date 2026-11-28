@@ -55,6 +55,8 @@ $(u_n)$ est **géométrique** de raison $q$ si $u_{n+1} = q \times u_n$ pour tou
 
 **Suite arithmético-géométrique** $u_{n+1} = au_n + b$ : on cherche le nombre $\ell$ tel que $\ell = a\ell + b$, puis $v_n = u_n - \ell$ est géométrique de raison $a$.
 
+<div class="labo" data-labo="suite"></div>
+
 ## Retour au problème
 
 La population vérifie $u_n = 20\,000 \times 1{,}03^n$. On cherche $n$ tel que $1{,}03^n > 1{,}5$.

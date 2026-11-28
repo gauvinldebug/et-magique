@@ -52,6 +52,8 @@ $E(X) = np$ et $V(X) = np(1 - p)$.
 
 $\binom{n}{k}$ est le nombre de chemins de l'arbre avec $k$ succès (calculatrice).
 
+<div class="labo" data-labo="binomiale"></div>
+
 ## Loi géométrique
 
 <div class="encadre">

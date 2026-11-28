@@ -63,6 +63,8 @@ Exemples : $+15\,\%$ donne $\corange{CM} = 1{,}15$ ; $-30\,\%$ donne $\corange{C
 
 </div>
 
+<div class="labo" data-labo="evolution"></div>
+
 ## Retour au problème
 
 - Hausse puis baisse de 20 % : $\corange{CM} = 1{,}2 \times 0{,}8 = 0{,}96$. Le pull coûte $50 \times 0{,}96 = 48$ €. <mark>Il a perdu 4 %</mark>, il ne revient pas à 50 €.

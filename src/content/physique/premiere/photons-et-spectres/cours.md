@@ -66,6 +66,8 @@ avec $h = 6{,}63 \times 10^{-34}\ \mathrm{J \cdot s}$, la constante de Planck.
 
 Ces énergies sont minuscules en joules. On utilise souvent l'**électronvolt** : $1\ \mathrm{eV} = 1{,}60 \times 10^{-19}\ \mathrm{J}$. Un photon visible porte entre 1,6 et 3,1 eV.
 
+<div class="labo" data-labo="spectre"></div>
+
 ## Les niveaux d'énergie de l'atome
 
 L'énergie d'un atome est **quantifiée** : elle ne peut prendre que certaines valeurs, les **niveaux d'énergie**, notés $E_1, E_2, E_3, \dots$ Le niveau le plus bas est l'**état fondamental**, les autres sont des **états excités**. Ce sont les marches de l'escalier.

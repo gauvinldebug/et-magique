@@ -61,6 +61,8 @@ Un **graphe probabiliste** est un graphe orienté dont chaque arc porte une prob
 
 Pour un graphe probabiliste à deux états dont la matrice $P$ n'a aucun coefficient nul, l'état $\pi_n$ converge vers l'état stable, quel que soit le départ.
 
+<div class="labo" data-labo="markov"></div>
+
 ## Retour au problème
 
 Les états sont V (vélo) et B (bus), dans cet ordre :

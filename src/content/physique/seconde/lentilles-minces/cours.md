@@ -66,6 +66,8 @@ $$
 
 On l'affecte d'un signe moins quand l'image est renversée. Pour un objet placé à $2f'$ avant la lentille, l'image est à $2f'$ après, renversée, de même taille : $\gamma = -1$.
 
+<div class="labo" data-labo="lentille"></div>
+
 ## L'œil, un appareil photo vivant
 
 | Œil | Modèle |

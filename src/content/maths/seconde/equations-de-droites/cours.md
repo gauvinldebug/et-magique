@@ -45,6 +45,8 @@ Une droite **verticale** a une équation de la forme $x = c$.
 
 Lecture graphique : depuis un point de la droite, on avance de 1, on monte de $\corange{m}$ (ou on descend si $\corange{m} < 0$).
 
+<div class="labo" data-labo="droite"></div>
+
 ## Vecteur directeur et équation cartésienne
 
 <div class="encadre">

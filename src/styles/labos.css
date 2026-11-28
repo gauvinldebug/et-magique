@@ -147,3 +147,26 @@ html:not(.js) .labo { display: none; }
   .lb-titre { font-size: 1.25rem; }
   .lb-c { flex-basis: 100%; grid-template-columns: minmax(2.6em, auto) 1fr minmax(5.5em, auto); }
 }
+
+/* Deuxième série de figures */
+.lb-fantome { opacity: .3; }
+.lb-vec-pale { color: var(--encre-2); opacity: .6; }
+.lb-ecart { stroke: var(--piege); stroke-width: 1.5; stroke-dasharray: 3 3; }
+.lb-etat { fill: var(--carte); stroke: var(--encre); stroke-width: 2.5; }
+.lb-etat-t { fill: var(--terme-doux); stroke: var(--terme); }
+.lb-milieu { fill: var(--terme-doux); }
+.lb-milieu-pale { fill: var(--gris); }
+.lb-photon { stroke: var(--ink); stroke-width: 2; }
+.lb-cuve { fill: none; stroke: var(--encre); stroke-width: 2; }
+.lb-solution { stroke: none; }
+.lb-solution-pale { fill: var(--terme-doux); stroke: none; }
+.lb-noir { fill: #0b0b1a; }
+.lb-pastille { display: inline-block; width: 1em; height: 1em; vertical-align: -.15em; border: 1.5px solid var(--encre); }
+.lb-onde { fill: none; stroke: var(--terme); stroke-width: 2; }
+.lb-recepteur { fill: var(--jaune); stroke: var(--ink); stroke-width: 2; }
+.lb-terre { fill: var(--bleu); stroke: var(--ink); stroke-width: 2; }
+.lb-orbite { fill: none; stroke: var(--indice); stroke-width: 2; stroke-dasharray: 2 5; stroke-linecap: round; }
+.lb-poignee-petite .lb-rond { r: 7px; }
+.lb-poignee-petite:hover .lb-rond, .lb-poignee-petite.tenu .lb-rond { r: 10px; }
+@media (min-width: 560px) { .lb-duo-cuve { grid-template-columns: 1fr 1.6fr; } }
+.lb-moy { stroke: var(--indice); stroke-width: 2.5; stroke-dasharray: 8 5; }

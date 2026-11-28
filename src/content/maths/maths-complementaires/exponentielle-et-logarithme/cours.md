@@ -56,6 +56,8 @@ $$
 
 **Résoudre** : $e^{x} = 5 \iff x = \ln 5$. Et $q^n > S$ (avec $q > 1$) $\iff n > \frac{\ln S}{\ln q}$.
 
+<div class="labo" data-labo="ln"></div>
+
 ## Retour au problème
 
 Le capital après $n$ années vaut $1000 \times 1{,}04^n$. On cherche $1{,}04^n \ge 2$, soit $n \ln 1{,}04 \ge \ln 2$ :

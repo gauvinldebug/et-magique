@@ -80,6 +80,8 @@ On retrouve la troisième loi de Kepler, et on apprend ce que vaut la constante 
 
 Plus le satellite est loin, plus il est lent et plus sa période est longue. La station spatiale, à environ 400 km d'altitude, fait un tour en une heure et demie ; la Lune, à 384 000 km, en un peu plus de 27 jours.
 
+<div class="labo" data-labo="orbite"></div>
+
 ## Le satellite géostationnaire
 
 Un satellite **géostationnaire** reste immobile pour un observateur terrestre. Il faut pour cela :
