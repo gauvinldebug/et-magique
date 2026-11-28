@@ -1,0 +1,55 @@
+questions:
+- question: Le message nerveux va du récepteur vers…
+  choix:
+  - le muscle directement
+  - un centre nerveux
+  - le cœur
+  - l'estomac
+  bonne: 1
+  explication: Cerveau ou moelle épinière.
+  revoir: cours
+- question: La synapse est…
+  choix:
+  - un muscle
+  - la zone de contact entre deux neurones
+  - un os
+  - un récepteur
+  bonne: 1
+  explication: Le passage y est chimique.
+  revoir: cours
+- question: Un réflexe est commandé par…
+  choix:
+  - le cerveau
+  - la moelle épinière
+  - l'œil
+  - le muscle
+  bonne: 1
+  explication: Trajet court, réaction rapide.
+  revoir: cours
+- question: On voit avec…
+  choix:
+  - l'œil seul
+  - le cerveau
+  - le nerf
+  - la peau
+  bonne: 1
+  explication: L'œil est le capteur.
+  revoir: cours
+- question: L'alcool…
+  choix:
+  - accélère les réflexes
+  - perturbe le fonctionnement des synapses
+  - n'a aucun effet
+  - améliore la mémoire
+  bonne: 1
+  explication: Temps de réaction plus long.
+  revoir: cours
+- question: Un adolescent a besoin de dormir environ…
+  choix:
+  - 4 à 5 h
+  - 8 à 10 h
+  - 12 à 14 h
+  - 2 h
+  bonne: 1
+  explication: Le sommeil sert à la mémoire et à l'attention.
+  revoir: cours

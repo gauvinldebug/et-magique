@@ -1,0 +1,51 @@
+exercices:
+- titre: Groupe de parenté
+  difficulte: 1
+  type: application
+  enonce: |
+    La chauve-souris a des poils, des mamelles et allaite ses petits. Dans quel groupe la classe-t-on : oiseaux ou mammifères ?
+  indice: Poils et mamelles.
+  etapes:
+  - type: conc
+    titre: La réponse
+    texte: '<mark>Les mammifères</mark>, même si elle vole : les ailes ne suffisent pas à en faire un oiseau.'
+- titre: Lire un tableau de caractères
+  difficulte: 2
+  type: methode
+  enonce: |
+    Le chat a des poils et 4 membres. Le lézard a 4 membres mais pas de poils. Le requin n'a ni poils ni 4 membres. Avec qui le chat partage-t-il le plus de caractères ?
+  indice: Compter les caractères partagés.
+  etapes:
+  - type: calcul
+    titre: Le décompte
+    texte: 'Chat-lézard : 4 membres (1 caractère). Chat-requin : aucun de ces deux.'
+  - type: conc
+    titre: La conclusion
+    texte: <mark>Le chat est plus proche du lézard que du requin</mark>.
+- titre: L'humain descend du singe ?
+  difficulte: 2
+  type: piege
+  enonce: |
+    « L'humain descend du chimpanzé. » Corriger.
+  indice: Pense à toi et ton cousin.
+  etapes:
+  - type: piege
+    titre: L'erreur
+    texte: Le chimpanzé actuel n'est pas notre ancêtre.
+  - type: conc
+    titre: La correction
+    texte: <mark>L'humain et le chimpanzé ont un ancêtre commun</mark>, qui vivait il y a environ 7 millions d'années.
+- titre: Les lapins d'Australie
+  difficulte: 3
+  type: brevet
+  enonce: |
+    Dans les années 1950, on a répandu un virus mortel pour lutter contre les lapins en Australie. Il a tué plus de 99 % des lapins. Quelques années plus tard, les lapins étaient de nouveau nombreux, et la plupart résistaient au virus.
+    Expliquer cette évolution.
+  indice: Tous les lapins étaient-ils identiques au départ ?
+  etapes:
+  - type: calcul
+    titre: Au départ
+    texte: Quelques rares lapins étaient déjà résistants, grâce à leurs allèles.
+  - type: conc
+    titre: La sélection
+    texte: '<mark>Seuls les résistants ont survécu et se sont reproduits</mark> : leurs descendants ont hérité de la résistance. C''est la sélection naturelle.'

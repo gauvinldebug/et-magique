@@ -1,0 +1,55 @@
+questions:
+- question: Les nutriments sont…
+  choix:
+  - de gros aliments
+  - les petites molécules issues de la digestion
+  - des enzymes
+  - des bactéries
+  bonne: 1
+  explication: Glucose, acides aminés, acides gras.
+  revoir: cours
+- question: L'amidon est digéré en…
+  choix:
+  - acides aminés
+  - glucose
+  - acides gras
+  - eau
+  bonne: 1
+  explication: Grâce à une enzyme de la salive notamment.
+  revoir: cours
+- question: L'absorption des nutriments se fait surtout dans…
+  choix:
+  - l'estomac
+  - l'intestin grêle
+  - la bouche
+  - le foie
+  bonne: 1
+  explication: Sa surface atteint 200 m².
+  revoir: cours
+- question: Les nutriments sont distribués aux cellules par…
+  choix:
+  - l'air
+  - le sang
+  - les nerfs
+  - les os
+  bonne: 1
+  explication: Le sang, comme un camion de livraison.
+  revoir: cours
+- question: Les enzymes digestives…
+  choix:
+  - découpent les grosses molécules
+  - fabriquent des aliments
+  - sont des vitamines
+  - tuent les bactéries
+  bonne: 0
+  explication: Elles accélèrent la digestion.
+  revoir: cours
+- question: Les besoins en énergie dépendent…
+  choix:
+  - seulement de l'âge
+  - de l'âge, du sexe et de l'activité
+  - de la couleur des yeux
+  - de rien
+  bonne: 1
+  explication: Un sportif a besoin de plus.
+  revoir: cours

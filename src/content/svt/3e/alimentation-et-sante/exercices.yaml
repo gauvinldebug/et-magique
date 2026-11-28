@@ -1,0 +1,52 @@
+exercices:
+- titre: Aliment ou nutriment ?
+  difficulte: 1
+  type: application
+  enonce: |
+    Classer : glucose, pain, acides aminés, steak, eau.
+  indice: Un nutriment peut passer dans le sang.
+  etapes:
+  - type: conc
+    titre: Le classement
+    texte: '<mark>Nutriments : glucose, acides aminés, eau. Aliments : pain, steak.</mark>'
+- titre: L'expérience du tube
+  difficulte: 2
+  type: methode
+  enonce: |
+    Dans un tube à 37 °C, on met de l'empois d'amidon et de la salive. Au bout de 20 minutes, il n'y a plus d'amidon et il y a du glucose (sucre). Dans un tube témoin sans salive, l'amidon reste. Conclure.
+  indice: Qu'est-ce qui diffère entre les deux tubes ?
+  etapes:
+  - type: calcul
+    titre: La comparaison
+    texte: Seule la présence de salive change.
+  - type: conc
+    titre: La conclusion
+    texte: <mark>La salive contient une enzyme qui transforme l'amidon en glucose</mark>.
+- titre: Le pain dans le sang
+  difficulte: 2
+  type: piege
+  enonce: |
+    « Après le repas, le pain passe dans le sang pour nourrir les muscles. » Corriger.
+  indice: Qu'est-ce qui traverse la paroi de l'intestin ?
+  etapes:
+  - type: piege
+    titre: L'erreur
+    texte: Le pain est un aliment, trop gros pour passer.
+  - type: conc
+    titre: La correction
+    texte: <mark>L'amidon du pain est digéré en glucose, et c'est le glucose qui passe dans le sang</mark>.
+- titre: Les besoins d'un sportif
+  difficulte: 3
+  type: brevet
+  enonce: |
+    Un collégien de 14 ans dépense environ 10 000 kJ par jour. Les jours de match, il dépense 3 000 kJ de plus.
+    1. Calculer ses besoins un jour de match.
+    2. De combien de pourcents augmentent-ils ?
+  indice: Ajouter, puis comparer à 10 000.
+  etapes:
+  - type: calcul
+    titre: Les besoins
+    texte: $10\,000 + 3\,000 = 13\,000$ kJ.
+  - type: conc
+    titre: L'augmentation
+    texte: <mark>$3\,000 / 10\,000 = 0{,}30$, soit 30 % de plus</mark>.

@@ -1,0 +1,51 @@
+exercices:
+- titre: Aléa ou enjeu ?
+  difficulte: 1
+  type: application
+  enonce: |
+    Classer : une crue de la rivière, une école au bord de la rivière, un pont, une éruption volcanique.
+  indice: Le phénomène naturel, ou ce qui peut être touché ?
+  etapes:
+  - type: conc
+    titre: Le classement
+    texte: '<mark>Aléas : la crue, l''éruption. Enjeux : l''école, le pont.</mark>'
+- titre: Comparer deux séismes
+  difficulte: 2
+  type: methode
+  enonce: |
+    Deux séismes de même force frappent deux villes. Dans la ville A, les bâtiments sont parasismiques et la population s'entraîne chaque année. Dans la ville B, non. Où le risque est-il le plus grand ? Pourquoi ?
+  indice: L'aléa est le même ; qu'est-ce qui change ?
+  etapes:
+  - type: calcul
+    titre: L'aléa
+    texte: Il est identique dans les deux villes.
+  - type: conc
+    titre: Le risque
+    texte: '<mark>Il est plus grand dans la ville B</mark> : les enjeux y sont plus vulnérables, faute de prévention.'
+- titre: Prévoir un séisme
+  difficulte: 2
+  type: piege
+  enonce: |
+    « Les scientifiques savent prévoir la date des séismes, comme la météo. » Corriger.
+  indice: Que sait-on prévoir, et que ne sait-on pas prévoir ?
+  etapes:
+  - type: piege
+    titre: L'erreur
+    texte: On sait où les séismes sont probables, pas quand ils auront lieu.
+  - type: conc
+    titre: La correction
+    texte: '<mark>On ne sait pas prévoir la date d''un séisme</mark>. C''est pour ça qu''on mise sur la prévention : constructions, consignes, exercices.'
+- titre: La pêche à la morue
+  difficulte: 3
+  type: brevet
+  enonce: |
+    Au large du Canada, la morue a été pêchée pendant des siècles. Dans les années 1980, la pêche a fortement augmenté. En 1992, il ne restait presque plus de morues, et la pêche a dû être interdite.
+    La morue est-elle une ressource renouvelable ? Expliquer ce qui s'est passé.
+  indice: Renouvelable, à quelle condition ?
+  etapes:
+  - type: calcul
+    titre: La ressource
+    texte: 'La morue se reproduit : c''est une ressource renouvelable.'
+  - type: conc
+    titre: L'explication
+    texte: '<mark>On a pêché plus vite que les morues ne se reproduisaient</mark> : la ressource s''est effondrée. Une ressource renouvelable peut s''épuiser si elle est surexploitée.'

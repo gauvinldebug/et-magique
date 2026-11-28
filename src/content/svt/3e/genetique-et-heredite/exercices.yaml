@@ -1,0 +1,51 @@
+exercices:
+- titre: Compter les chromosomes
+  difficulte: 1
+  type: application
+  enonce: |
+    Combien de chromosomes y a-t-il dans une cellule de peau, un spermatozoïde et une cellule-œuf humaine ?
+  indice: 23 paires dans une cellule normale.
+  etapes:
+  - type: conc
+    titre: Les réponses
+    texte: <mark>46, 23 et 46</mark>.
+- titre: Lire un caryotype
+  difficulte: 2
+  type: methode
+  enonce: |
+    Un caryotype montre 46 chromosomes, dont une 23e paire formée d'un grand chromosome et d'un petit. Est-ce le caryotype d'une fille ou d'un garçon ?
+  indice: X est grand, Y est petit.
+  etapes:
+  - type: calcul
+    titre: La 23e paire
+    texte: 'Un grand (X) et un petit (Y) : XY.'
+  - type: conc
+    titre: La conclusion
+    texte: <mark>C'est un garçon</mark>.
+- titre: Gène ou allèle ?
+  difficulte: 2
+  type: piege
+  enonce: |
+    « Le groupe sanguin A est un gène. » Corriger.
+  indice: Quelle est la différence entre le gène et ses versions ?
+  etapes:
+  - type: piege
+    titre: L'erreur
+    texte: A n'est pas le gène, c'est une version du gène.
+  - type: conc
+    titre: La correction
+    texte: <mark>Le gène, c'est « groupe sanguin » ; A est un allèle de ce gène</mark>, comme B et O.
+- titre: Frères et sœurs différents
+  difficulte: 3
+  type: brevet
+  enonce: |
+    Léa et Tom ont les mêmes parents mais ne se ressemblent pas beaucoup.
+    Expliquer pourquoi, en parlant des cellules reproductrices et de la fécondation.
+  indice: Chaque spermatozoïde reçoit-il les mêmes chromosomes ?
+  etapes:
+  - type: calcul
+    titre: Les cellules reproductrices
+    texte: 'Chaque spermatozoïde et chaque ovule reçoivent au hasard un chromosome de chaque paire : ils sont tous différents.'
+  - type: conc
+    titre: La fécondation
+    texte: '<mark>Léa et Tom viennent de la rencontre de cellules reproductrices différentes</mark> : ils ont des combinaisons d''allèles différentes.'
