@@ -1,27 +1,73 @@
 ---
-// Barre du haut des sites de matière : revenir à l'accueil Et Magique, ou passer d'une matière à l'autre.
-// Chaque matière est une petite affiche (son aplat et sa forme), comme sur l'accueil.
-import { MATIERES } from '../data/site';
+// Barre du haut des sites de matière : revenir à l'accueil, ou changer de matière.
+// Un seul bouton (la matière en cours) ouvre un panneau avec toutes les matières, en petites affiches.
+// Le panneau tient sur téléphone même avec beaucoup de matières.
+import { MATIERES, NIVEAUX } from '../data/site';
 import { AFFICHES } from '../data/affiches';
 interface Props { matiere?: string }
 const { matiere = 'maths' } = Astro.props;
+const court = (s: string) => NIVEAUX.find((n) => n.slug === s)?.court ?? s;
+const PRINCIPAUX = ['6e', '5e', '4e', '3e', 'seconde', 'premiere', 'terminale'];
+const etendue = (niveaux: string[] = PRINCIPAUX) => {
+  const n = niveaux.filter((x) => PRINCIPAUX.includes(x));
+  return n.length ? (n.length === 1 ? court(n[0]) : `${court(n[0])} à ${court(n[n.length - 1])}`) : '';
+};
+const mini = (slug: string) => {
+  const a = AFFICHES[slug];
+  return { fond: a?.fond ?? 'var(--ink)', forme: a?.forme ?? '' };
+};
+const ici = MATIERES.find((m) => m.slug === matiere) ?? MATIERES[0];
+const miniIci = mini(ici.slug);
 ---
 <div class="gbar">
   <div class="wrap">
     <a class="gbar-home" href="/" data-umami-event="retour-accueil">
       <span class="gbar-fleche" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M14 6 8 12l6 6" /></svg></span>
-      <span class="gbar-long">Toutes les matières</span><span class="gbar-court">Matières</span>
+      <span>Accueil</span>
     </a>
-    <nav aria-label="Matières" data-profil-groupe>
-      {MATIERES.map((m) => {
-        const a = AFFICHES[m.slug];
-        const mini = <span class="gbar-mini" style={`--fond:${a?.fond ?? 'var(--ink)'}`} aria-hidden="true"><Fragment set:html={a?.forme ?? ''} /></span>;
-        return m.active ? (
-          <a href={`/${m.slug}/`} data-matiere={m.slug} aria-current={m.slug === matiere ? 'page' : undefined}>{mini}<span>{m.nom}</span></a>
-        ) : (
-          <span class="gbar-bientot" data-matiere={m.slug} title="Bientôt">{mini}<span>{m.nom}</span></span>
-        );
-      })}
-    </nav>
+    <div class="gbar-choix" data-gbar>
+      <button type="button" class="gbar-bouton" aria-expanded="false" aria-controls="gbar-panneau" data-gbar-bouton>
+        <span class="gbar-mini" style={`--fond:${miniIci.fond}`} aria-hidden="true"><Fragment set:html={miniIci.forme} /></span>
+        <span>{ici.nom}</span>
+        <svg class="gbar-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg>
+        <span class="sr-only">, changer de matière</span>
+      </button>
+      <div class="gbar-panneau" id="gbar-panneau" hidden data-gbar-panneau>
+        <p class="gbar-titre">Changer de matière</p>
+        <nav aria-label="Matières" data-profil-groupe>
+          <ul>
+            {MATIERES.map((m) => {
+              const x = mini(m.slug);
+              const vignette = <span class="gbar-mini" style={`--fond:${x.fond}`} aria-hidden="true"><Fragment set:html={x.forme} /></span>;
+              const texte = <span class="gbar-nom"><b>{m.nom}</b><small>{m.active ? etendue(m.niveaux) : 'Bientôt'}</small></span>;
+              return (
+                <li data-matiere={m.slug} class:list={{ 'gbar-bientot': !m.active }}>
+                  {m.active
+                    ? <a href={`/${m.slug}/`} aria-current={m.slug === matiere ? 'page' : undefined} data-umami-event="changer-matiere">{vignette}{texte}</a>
+                    : <span>{vignette}{texte}</span>}
+                </li>
+              );
+            })}
+          </ul>
+          <button type="button" class="profil-tout-b" data-profil-tout hidden>Tout afficher</button>
+        </nav>
+      </div>
+    </div>
   </div>
 </div>
+
+<script>
+  document.querySelectorAll<HTMLElement>('[data-gbar]').forEach((racine) => {
+    const bouton = racine.querySelector<HTMLButtonElement>('[data-gbar-bouton]')!;
+    const panneau = racine.querySelector<HTMLElement>('[data-gbar-panneau]')!;
+    const ouvrir = (oui: boolean) => {
+      panneau.hidden = !oui;
+      bouton.setAttribute('aria-expanded', String(oui));
+      document.documentElement.classList.toggle('gbar-ouvert', oui);
+      if (oui) panneau.querySelector<HTMLElement>('a[aria-current], a')?.focus({ preventScroll: true });
+    };
+    bouton.addEventListener('click', () => ouvrir(panneau.hidden));
+    document.addEventListener('click', (e) => { if (!panneau.hidden && !racine.contains(e.target as Node)) ouvrir(false); });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && !panneau.hidden) { ouvrir(false); bouton.focus(); } });
+  });
+</script>
