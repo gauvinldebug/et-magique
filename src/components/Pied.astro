@@ -2,7 +2,7 @@
 // Pied de page en affiche : une frise de formes, puis trois colonnes (la marque, les matières, le site)
 // et la mention des droits sur une ligne à part.
 import Reseaux from './Reseaux.astro';
-import { MATIERES, matiere as getMatiere, marque } from '../data/site';
+import { MATIERES, matiere as getMatiere, marque, SITE } from '../data/site';
 import { AFFICHES } from '../data/affiches';
 interface Props { matiere?: string }
 const { matiere = 'maths' } = Astro.props;
@@ -25,7 +25,7 @@ const annee = new Date().getFullYear();
   </svg>
   <div class="wrap pied-grille">
     <div class="pied-marque">
-      <a class="pied-logo" href="/" aria-label="Et Magique, accueil">Et Magique</a>
+      <a class="pied-logo" href="/" aria-label={`${SITE.nom}, accueil`}>{SITE.nom}</a>
       <p>Les cours de la 6e à la terminale, enfin clairs. Gratuit, sans compte, sans publicité.</p>
       <Reseaux libelles matiere={m} />
     </div>

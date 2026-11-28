@@ -44,10 +44,32 @@ const umamiShare = import.meta.env.PUBLIC_UMAMI_SHARE_URL;
           <iframe src={umamiShare} title="Statistiques Umami" class="adm-frame" loading="lazy"></iframe>
         ) : (
           <div class="panel">
-            <h2>Les statistiques arrivent avec Umami</h2>
-            <p>Crée le site sur Umami Cloud, puis ajoute dans Netlify les variables <code>PUBLIC_UMAMI_ID</code> et <code>PUBLIC_UMAMI_SHARE_URL</code> (le lien de partage du tableau de bord). Les stats s'afficheront ici : visiteurs, pages, provenance (YouTube, QR code, Google) et le parcours vidéo → exercices → QCM.</p>
+            <h2>Brancher les statistiques (gratuit, 10 minutes)</h2>
+            <ol class="adm-etapes">
+              <li>Crée un compte gratuit sur <a href="https://cloud.umami.is/signup" target="_blank" rel="noopener">cloud.umami.is</a> (offre Hobby).</li>
+              <li><b>Settings › Websites › Add website</b> : nom « Et Magique », domaine <code>etmagique.fr</code>. Copie le <b>Website ID</b>.</li>
+              <li>Dans ce site Umami : <b>Edit › Share URL</b>, active le partage et copie le lien.</li>
+              <li>Cloudflare › Workers › <b>et-magique</b> › Settings › <b>Build › Variables</b> : ajoute <code>PUBLIC_UMAMI_ID</code> (le Website ID) et <code>PUBLIC_UMAMI_SHARE_URL</code> (le lien de partage). Type texte, pas secret.</li>
+              <li>Relance un déploiement (Deployments › Retry). Le tableau s'affiche ici.</li>
+            </ol>
           </div>
         )}
+        <div class="panel adm-legende">
+          <h2>Ce que le site mesure</h2>
+          <p>Sans cookie et sans rien d'identifiant : Umami compte les visites sans suivre une personne d'un jour à l'autre. Pas de bandeau de consentement à afficher.</p>
+          <p>Onglet <b>Visites</b> : visiteurs, pages vues, durée, provenance (YouTube, QR code, Google, Instagram), pays, appareil. Onglet <b>Événements</b> : ce que les élèves font.</p>
+          <dl>
+            <dt>figure-manipulee</dt><dd>un élève a bougé une figure d'un cours ou d'un défi</dd>
+            <dt>defi-reussi / defi-rate</dt><dd>réponse vérifiée à un défi des exercices, avec le nombre d'essais</dd>
+            <dt>exercice-ouvert</dt><dd>première étape de correction affichée</dd>
+            <dt>correction-entiere / indice-exercice</dt><dd>correction affichée d'un coup, indice demandé</dd>
+            <dt>qcm-termine</dt><dd>QCM fini, avec le score</dd>
+            <dt>chapitre-termine</dt><dd>l'élève a coché « J'ai terminé ce chapitre »</dd>
+            <dt>cours-pdf, exercices-pdf, fiche-telechargee</dt><dd>téléchargements</dd>
+            <dt>video-youtube, chaine-…, reseau-…</dt><dd>clics vers la chaîne et les réseaux</dd>
+            <dt>demande-envoyee, inscription-planning</dt><dd>formulaires envoyés</dd>
+          </dl>
+        </div>
       </section>
 
       <section class="wrap adm-body" data-panel="ins" hidden>
@@ -66,6 +88,12 @@ const umamiShare = import.meta.env.PUBLIC_UMAMI_SHARE_URL;
 </Base>
 
 <style is:global>
+  .adm-etapes { display: grid; gap: 8px; padding-left: 22px; line-height: 1.55; }
+  .adm-legende { margin-top: 24px; }
+  .adm-legende dl { display: grid; grid-template-columns: max-content 1fr; gap: 6px 18px; margin: 12px 0 0; font-size: .92rem; }
+  .adm-legende dt { font-family: var(--mono, monospace); font-size: .85rem; font-weight: 700; }
+  .adm-legende dd { margin: 0; color: var(--encre-2); }
+  @media (max-width: 640px) { .adm-legende dl { grid-template-columns: 1fr; } .adm-legende dd { margin-bottom: 6px; } }
   .adm { min-height: 100vh; background: var(--papier); padding-bottom: 60px; }
   .adm-top { display: flex; align-items: center; gap: 14px; height: 64px; border-bottom: 1px solid var(--trait); }
   .adm-top .wordmark { font-size: 1.2rem; }

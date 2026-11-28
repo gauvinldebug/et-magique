@@ -996,3 +996,19 @@ a.poster:hover { color: var(--txt); transform: translate(-4px, -4px); box-shadow
 @keyframes eclat { from { transform: translate(var(--x0), var(--y0)) scale(.4) rotate(0); opacity: 1; } 70% { opacity: 1; } to { transform: translate(var(--x1), var(--y1)) scale(1) rotate(var(--r)); opacity: 0; } }
 @media (prefers-reduced-motion: reduce) { .eclat { display: none; } }
 .dl .som-fig { margin-left: auto; flex: none; }
+
+/* Case « J'ai terminé ce chapitre » : c'est l'élève qui coche */
+.fini { display: flex; align-items: center; gap: 14px 18px; flex-wrap: wrap; margin: 28px 0 22px; padding: 14px 16px; border: 2px solid var(--encre); background: var(--carte); }
+.fini p { margin: 0; flex: 1 1 260px; font-size: .88rem; color: var(--encre-2); }
+.fini-case { display: inline-flex; align-items: center; gap: 10px; border: 0; background: none; padding: 4px 0; font: inherit; font-weight: 800; color: var(--encre); cursor: pointer; }
+.fini-case i { width: 26px; height: 26px; border: 2px solid var(--encre); background: var(--carte); position: relative; flex: none; transition: background-color .2s var(--ease), transform .25s cubic-bezier(.2, .9, .3, 1.5); }
+.fini-case i::after { content: ""; position: absolute; inset: 3px; background: #fff; clip-path: polygon(14% 52%, 0 66%, 38% 100%, 100% 22%, 86% 8%, 38% 72%); transform: scale(0); transition: transform .25s cubic-bezier(.2, .9, .3, 1.5); }
+.fini-case:hover i { box-shadow: 3px 3px 0 var(--jaune); }
+.fini-case[aria-pressed="true"] i { background: var(--ok); border-color: var(--ok); transform: rotate(-6deg); }
+.fini-case[aria-pressed="true"] i::after { transform: scale(1); }
+.fini:has([aria-pressed="true"]) { box-shadow: 6px 6px 0 var(--ok); }
+@media (prefers-reduced-motion: reduce) { .fini-case i, .fini-case i::after { transition: none; } }
+
+/* Bouton « Choisir ma matière » de l'accueil : descente douce jusqu'aux matières */
+@media (prefers-reduced-motion: no-preference) { html:has(#matieres) { scroll-behavior: smooth; } }
+#matieres { scroll-margin-top: 24px; }

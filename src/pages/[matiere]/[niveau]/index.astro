@@ -43,7 +43,10 @@ const nbDispo = liste.filter((c) => c.dispo).length;
   const bloc = document.querySelector<HTMLElement>('[data-parcours]');
   if (bloc) {
     let vus: string[] = [];
-    try { vus = JSON.parse(localStorage.getItem('vus:' + bloc.dataset.parcours) || '[]'); } catch { /* rien */ }
+    try {
+      vus = JSON.parse(localStorage.getItem('faits:' + bloc.dataset.parcours) || '[]');
+      localStorage.removeItem('vus:' + bloc.dataset.parcours); // ancien suivi automatique, abandonné
+    } catch { /* rien */ }
     const cases = [...bloc.querySelectorAll<HTMLElement>('[data-c]')];
     const faits = cases.filter((c) => vus.includes(c.dataset.c!));
     if (faits.length) {
@@ -53,8 +56,8 @@ const nbDispo = liste.filter((c) => c.dispo).length;
       const t = bloc.querySelector<HTMLElement>('[data-parcours-texte]')!;
       const n = faits.length, total = cases.length;
       t.innerHTML = n === total
-        ? `<b>Tu as ouvert les ${total} chapitres.</b> Il ne reste plus qu'à tout réviser avec les QCM.`
-        : `<b>${n} chapitre${n > 1 ? 's' : ''} sur ${total}</b> déjà ouvert${n > 1 ? 's' : ''} sur cet appareil.`;
+        ? `<b>Les ${total} chapitres sont cochés.</b> Il ne reste plus qu'à tout réviser avec les QCM.`
+        : `<b>${n} chapitre${n > 1 ? 's' : ''} sur ${total}</b> terminé${n > 1 ? 's' : ''}, d'après tes coches sur cet appareil.`;
       if (suivant && n < total) {
         const a = document.createElement('a');
         a.href = `${location.pathname.replace(/\/?$/, '/')}${suivant.dataset.c}/`;

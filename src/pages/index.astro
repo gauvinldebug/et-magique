@@ -6,7 +6,7 @@ import Reseaux from '../components/Reseaux.astro';
 import Histoire from '../components/Histoire.astro';
 import Pied from '../components/Pied.astro';
 import QRCode from 'qrcode';
-import { MATIERES } from '../data/site';
+import { MATIERES, SITE } from '../data/site';
 import { AFFICHES } from '../data/affiches';
 import { chapitresPublies } from '../lib/contenu';
 
@@ -17,7 +17,7 @@ const abonnement = principale.youtube ? `${principale.youtube}?sub_confirmation=
 const qr = abonnement ? await QRCode.toString(abonnement, { type: 'svg', margin: 1, errorCorrectionLevel: 'M', color: { dark: '#000000', light: '#FFFFFF' } }) : '';
 
 ---
-<Base titre="Et Magique : les cours de la 6e à la terminale, enfin clairs" description="Maths et Magique : vidéos, cours, exercices corrigés et QCM de maths gratuits, de la 6e à la terminale et pour le bac. Sans compte, sans publicité." sansEntete>
+<Base titre={`${SITE.nom} : les cours de la 6e à la terminale, enfin clairs`} description={`${SITE.nom} : vidéos, cours, exercices corrigés et QCM de maths gratuits, de la 6e à la terminale et pour le bac. Sans compte, sans publicité.`} sansEntete>
   <header class="ah" data-scroll>
     <svg class="ah-formes" viewBox="0 0 800 760" preserveAspectRatio="xMaxYMax slice" aria-hidden="true">
       <circle class="f-rond" cx="540" cy="250" r="330" fill="#F2E94E" />
@@ -27,7 +27,7 @@ const qr = abonnement ? await QRCode.toString(abonnement, { type: 'svg', margin:
     </svg>
     <div class="wrap">
       <div class="ah-tete">
-        <a class="wordmark" href="/" aria-label="Et Magique, accueil">Et Magique</a>
+        <a class="wordmark" href="/" aria-label={`${SITE.nom}, accueil`}>{SITE.nom}</a>
         <nav aria-label="Matières">
           {MATIERES.map((m) => m.active ? <a href={`/${m.slug}/`}>{m.nom}</a> : <span>{m.nom}</span>)}
         </nav>
@@ -35,7 +35,7 @@ const qr = abonnement ? await QRCode.toString(abonnement, { type: 'svg', margin:
       <div class="ah-corps">
         <h1>Les cours de la 6e à la terminale, enfin clairs.</h1>
         <div class="ah-cta">
-          <a class="btn jaune grand" href={`/${principale.slug}/`}>Commencer avec les maths</a>
+          <a class="btn jaune grand" href="#matieres">Choisir ma matière</a>
           <span>Gratuit, sans compte, sans publicité.</span>
         </div>
       </div>
@@ -44,7 +44,7 @@ const qr = abonnement ? await QRCode.toString(abonnement, { type: 'svg', margin:
   <Histoire />
   <div class="portail-p">
     <div class="wrap">
-      <section class="bloc" aria-labelledby="t-matieres">
+      <section class="bloc" id="matieres" aria-labelledby="t-matieres">
         <h2 id="t-matieres" data-rv>Choisis ta matière.</h2>
         <ul class="bloc-c p-affiches">
           {MATIERES.map((m, i) => {

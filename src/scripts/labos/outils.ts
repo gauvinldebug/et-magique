@@ -36,10 +36,10 @@ export interface Cadre {
 }
 
 /** Monte la structure de l'encadré : titre, consigne, scène, lecture des valeurs, commandes. */
-export function cadre(racine: HTMLElement, titre: string, consigne: string): Cadre {
+export function cadre(racine: HTMLElement, titre: string, consigne: string, tag = 'Manipule'): Cadre {
   racine.innerHTML = '';
   const tete = el('div', 'lb-tete');
-  tete.append(el('span', 'lb-tag', 'Manipule'), el('p', 'lb-titre', titre));
+  tete.append(el('span', 'lb-tag', tag), el('p', 'lb-titre', titre));
   const scene = el('div', 'lb-scene');
   const lecture = el('div', 'lb-lecture');
   lecture.setAttribute('aria-live', 'polite');
