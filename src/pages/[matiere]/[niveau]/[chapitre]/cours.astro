@@ -1,6 +1,7 @@
 ---
 import { render } from 'astro:content';
 import Chapitre from '../../../../layouts/Chapitre.astro';
+import Video from '../../../../components/Video.astro';
 import { cheminsChapitres } from '../../../../lib/routes';
 import { existe } from '../../../../lib/fichiers';
 import { md } from '../../../../lib/markdown';
@@ -19,12 +20,20 @@ const avecFigure = new Set<string>();
   const decal = blocs[0].trimStart().startsWith('## ') ? 0 : 1;
   blocs.forEach((b, i) => { if (b.includes('data-labo') && h2[i - decal]) avecFigure.add(h2[i - decal].slug); });
 }
-const { pdf, piege } = p.chapitre.data;
+const { pdf, piege, video } = p.chapitre.data;
 ---
 <Chapitre {...p} onglet="cours">
   <div class="barre-lecture no-print" aria-hidden="true" data-barre></div>
   <div class="ch-grid">
-    <article class="prose"><Content /></article>
+    <div class="cours-col">
+      {video.youtube && (
+        <div class="cours-video no-print">
+          <Video youtube={video.youtube} titre={p.chapitre.data.titre} />
+          <div><span class="k">La vidéo du chapitre</span><p>Quelques minutes pour avoir l'idée en tête. Le cours se lit ensuite beaucoup plus vite.</p></div>
+        </div>
+      )}
+      <article class="prose"><Content /></article>
+    </div>
     <aside class="side" style="position:sticky;top:80px">
       {existe(pdf.cours) && <a class="dl" href={pdf.cours} download data-umami-event="cours-pdf"><span class="ic">PDF</span><div><b>Le cours en PDF</b><small>à imprimer ou garder</small></div></a>}
       {existe(pdf.fiche) && <a class="dl fiche" href={pdf.fiche} download data-umami-event="fiche-telechargee"><span class="ic">FICHE</span><div><b>Fiche de révision</b><small>1 page</small></div></a>}
