@@ -1024,7 +1024,7 @@ a.poster:hover { color: var(--txt); transform: translate(-4px, -4px); box-shadow
 html[data-matiere="physique"] .s-nav { --nav-fond: #0E7C7C; }
 html[data-matiere="svt"] .s-nav { --nav-fond: #127C59; }
 html[data-matiere="nsi"] .s-nav { --nav-fond: #1A1A40; }
-html[data-matiere="technologie"] .s-nav { --nav-fond: #B8442A; }
+html[data-matiere="technologie"] .s-nav { --nav-fond: #C2185B; }
 .s-nav::after { content: ""; position: absolute; left: 0; right: 0; bottom: -8px; height: 8px; pointer-events: none;
   background: linear-gradient(90deg, var(--jaune) 0 22%, var(--rose) 22% 31%, #1A1A40 31% 34%, transparent 34% 66%, var(--jaune) 66% 69%, var(--rose) 69% 100%); }
 .s-nav .wordmark { color: #fff; }

@@ -1,7 +1,7 @@
 // Image du score à partager (1080 × 1350, le format portrait d'Instagram), aux couleurs de l'affiche.
 // Tout est dessiné sur l'appareil : aucune donnée ne part nulle part.
 
-const FONDS: Record<string, string> = { maths: '#2B2BD9', physique: '#0E7C7C', svt: '#127C59', nsi: '#1A1A40', technologie: '#B8442A' };
+const FONDS: Record<string, string> = { maths: '#2B2BD9', physique: '#0E7C7C', svt: '#127C59', nsi: '#1A1A40', technologie: '#C2185B' };
 const JAUNE = '#F2E94E', ROSE = '#FF7AA8', ENCRE = '#1A1A40';
 
 interface Donnees { score: number; total: number; titre: string; sousTitre: string; matiere: string }
