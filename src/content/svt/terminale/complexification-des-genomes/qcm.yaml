@@ -1,0 +1,48 @@
+questions:
+  - question: Un transfert horizontal de gènes, c'est…
+    choix: ["le passage d'un gène des parents aux enfants", "le passage d'un gène entre organismes sans reproduction", "une mutation", "un crossing-over"]
+    bonne: 1
+    explication: Il peut avoir lieu entre organismes d'espèces différentes.
+    revoir: cours
+
+  - question: La conjugaison bactérienne échange…
+    choix: ["un plasmide", "un chromosome entier", "une mitochondrie", "des protéines"]
+    bonne: 0
+    explication: Deux bactéries en contact se transmettent un plasmide.
+    revoir: cours
+
+  - question: La transduction utilise…
+    choix: ["un plasmide", "un virus", "un gamète", "une enzyme de restriction"]
+    bonne: 1
+    explication: Un bactériophage transporte un fragment d'ADN d'une bactérie à une autre.
+    revoir: cours
+
+  - question: Les mitochondries descendent…
+    choix: ["d'une cyanobactérie", "d'une alpha-protéobactérie", "d'un virus", "du noyau"]
+    bonne: 1
+    explication: Les chloroplastes, eux, descendent d'une cyanobactérie.
+    revoir: cours
+
+  - question: Lequel n'est PAS un argument en faveur de l'origine bactérienne des chloroplastes ?
+    choix: ["leur ADN circulaire", "leur double membrane", "leurs ribosomes de type bactérien", "leur couleur verte"]
+    bonne: 3
+    explication: La couleur vient de la chlorophylle, elle ne dit rien de l'origine de l'organite.
+    revoir: cours
+
+  - question: La syncytine, nécessaire au placenta, est un gène d'origine…
+    choix: ["bactérienne", "virale", "végétale", "mitochondriale"]
+    bonne: 1
+    explication: C'est un ancien gène viral intégré au génome d'un ancêtre des mammifères.
+    revoir: cours
+
+  - question: La résistance aux antibiotiques se répand vite chez les bactéries surtout parce que…
+    choix: ["les antibiotiques créent des mutations", "les gènes de résistance passent d'une bactérie à l'autre", "les bactéries se reproduisent sexuellement", "les bactéries apprennent"]
+    bonne: 1
+    explication: Les transferts horizontaux, notamment par plasmides, diffusent ces gènes.
+    revoir: exercices
+
+  - question: Avec les transferts horizontaux, l'histoire évolutive ressemble plutôt à…
+    choix: ["un arbre strict", "un réseau", "une ligne droite", "un cercle"]
+    bonne: 1
+    explication: Des branches éloignées se reconnectent par échange de gènes.
+    revoir: cours

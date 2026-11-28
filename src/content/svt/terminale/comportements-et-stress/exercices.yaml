@@ -1,0 +1,65 @@
+exercices:
+  - titre: Adrénaline ou cortisol ?
+    difficulte: 1
+    type: application
+    enonce: |
+      Une personne évite de justesse un accident de vélo. Dans les secondes qui suivent, son cœur bat très vite. Quelle hormone est responsable, et quelle glande la sécrète ?
+    etapes:
+      - type: conc
+        titre: La réponse
+        texte: >-
+          <mark>L'adrénaline, sécrétée par la médullosurrénale</mark> : c'est la réponse rapide, en quelques secondes.
+
+  - titre: Ordonner l'axe du stress
+    difficulte: 1
+    type: methode
+    enonce: |
+      Remettre dans l'ordre : ACTH, cortisol, hypophyse, CRH, hypothalamus, corticosurrénale.
+    etapes:
+      - type: conc
+        titre: L'ordre
+        texte: >-
+          <mark>Hypothalamus, CRH, hypophyse, ACTH, corticosurrénale, cortisol</mark>.
+
+  - titre: Un rétrocontrôle à démontrer
+    difficulte: 2
+    type: bac
+    enonce: |
+      On injecte du cortisol de synthèse à un patient en bonne santé. Quelques heures plus tard, sa concentration sanguine d'ACTH a fortement diminué. Interpréter.
+    etapes:
+      - type: calcul
+        titre: Ce qu'on observe
+        texte: Plus de cortisol dans le sang conduit à moins d'ACTH.
+      - type: conc
+        titre: L'interprétation
+        texte: >-
+          <mark>Le cortisol exerce un rétrocontrôle négatif sur l'hypophyse</mark> (et l'hypothalamus) : il freine la sécrétion d'ACTH, donc sa propre production.
+
+  - titre: Le stress, toujours mauvais ?
+    difficulte: 2
+    type: piege
+    enonce: |
+      Un élève affirme qu'il faudrait supprimer complètement la réponse au stress. Qu'en penser ?
+    etapes:
+      - type: piege
+        titre: L'erreur
+        texte: Il confond stress aigu et stress chronique.
+      - type: conc
+        titre: La réponse
+        texte: >-
+          <mark>La réponse au stress aigu est utile</mark> : elle mobilise de l'énergie pour faire face à un danger. C'est sa persistance qui devient nocive.
+
+  - titre: Le cercle vicieux du stress chronique
+    difficulte: 3
+    type: bac
+    enonce: |
+      Chez des rats soumis à un stress chronique, on observe une diminution du nombre de récepteurs au cortisol dans l'hippocampe et une concentration de cortisol qui reste élevée. Expliquer le lien entre ces deux observations.
+    indice: L'hippocampe participe au rétrocontrôle.
+    etapes:
+      - type: calcul
+        titre: Le rôle de l'hippocampe
+        texte: Les récepteurs au cortisol de l'hippocampe détectent l'excès de cortisol et participent au freinage de l'axe hypothalamus, hypophyse, surrénales.
+      - type: conc
+        titre: Le cercle vicieux
+        texte: >-
+          <mark>Moins de récepteurs, rétrocontrôle moins efficace, cortisol qui reste élevé</mark>, ce qui fragilise encore l'hippocampe : le stress s'auto-entretient.

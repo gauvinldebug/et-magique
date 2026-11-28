@@ -1,0 +1,64 @@
+exercices:
+  - titre: Météo ou climat ?
+    difficulte: 1
+    type: application
+    enonce: |
+      Un hiver très froid en France permet-il de dire que le réchauffement climatique n'existe pas ?
+    etapes:
+      - type: conc
+        titre: La réponse
+        texte: >-
+          <mark>Non</mark> : un hiver est de la météo, locale et ponctuelle. Le climat se mesure sur 30 ans au moins et à l'échelle du globe, où la tendance est nettement au réchauffement.
+
+  - titre: D'où vient le CO₂ en plus ?
+    difficulte: 2
+    type: methode
+    enonce: |
+      Depuis 1850, la proportion de carbone 13 dans le CO₂ atmosphérique diminue, alors que la teneur en CO₂ augmente. Les combustibles fossiles sont pauvres en carbone 13. Que peut-on conclure ?
+    etapes:
+      - type: calcul
+        titre: Le raisonnement
+        texte: Si le CO₂ ajouté était pauvre en carbone 13, il diluerait le carbone 13 de l'atmosphère, ce qu'on observe.
+      - type: conc
+        titre: La conclusion
+        texte: >-
+          <mark>Le CO₂ supplémentaire vient majoritairement des combustibles fossiles</mark>.
+
+  - titre: Une rétroaction à expliquer
+    difficulte: 2
+    type: bac
+    enonce: |
+      La banquise arctique a perdu environ 40 % de sa surface d'été depuis 1980. Expliquer pourquoi cette fonte accélère le réchauffement de la région.
+    etapes:
+      - type: calcul
+        titre: Les albédos
+        texte: La glace réfléchit environ 60 % de la lumière solaire, l'océan sombre moins de 10 %.
+      - type: conc
+        titre: La rétroaction
+        texte: >-
+          <mark>Moins de glace, plus d'énergie absorbée par l'océan, plus de réchauffement, encore moins de glace</mark> : c'est une rétroaction positive.
+
+  - titre: L'effet de serre, à supprimer ?
+    difficulte: 2
+    type: piege
+    enonce: |
+      Un élève propose de supprimer complètement l'effet de serre pour régler le problème du réchauffement. Qu'en penser ?
+    etapes:
+      - type: piege
+        titre: L'erreur
+        texte: L'effet de serre n'est pas un problème en soi.
+      - type: conc
+        titre: La réponse
+        texte: >-
+          <mark>Sans effet de serre, la Terre serait à −18 °C en moyenne</mark>, invivable. Le problème est son renforcement par nos émissions.
+
+  - titre: Atténuer ou s'adapter ?
+    difficulte: 2
+    type: bac
+    enonce: |
+      Classer en atténuation ou adaptation : (a) isoler les logements pour moins chauffer ; (b) planter des arbres dans les cours d'école pour faire de l'ombre ; (c) remplacer une centrale à charbon par des éoliennes ; (d) relever une digue.
+    etapes:
+      - type: conc
+        titre: Le classement
+        texte: >-
+          <mark>Atténuation : (a) et (c). Adaptation : (b) et (d).</mark> Planter des arbres stocke aussi un peu de carbone, mais le but ici est l'ombre.

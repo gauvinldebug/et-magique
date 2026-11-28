@@ -1,0 +1,48 @@
+questions:
+  - question: La réponse la plus rapide au stress est due à…
+    choix: ["le cortisol", "l'adrénaline", "l'insuline", "la CRH"]
+    bonne: 1
+    explication: Elle agit en quelques secondes.
+    revoir: cours
+
+  - question: Le cortisol est sécrété par…
+    choix: ["l'hypophyse", "la médullosurrénale", "la corticosurrénale", "l'hypothalamus"]
+    bonne: 2
+    explication: Sous l'action de l'ACTH venue de l'hypophyse.
+    revoir: cours
+
+  - question: L'ACTH est libérée par…
+    choix: ["l'hypothalamus", "l'hypophyse", "la surrénale", "le cœur"]
+    bonne: 1
+    explication: Elle est stimulée par la CRH de l'hypothalamus.
+    revoir: cours
+
+  - question: Le cortisol freine l'hypothalamus et l'hypophyse. C'est…
+    choix: ["un rétrocontrôle positif", "un rétrocontrôle négatif", "un réflexe", "une réponse immunitaire"]
+    bonne: 1
+    explication: Il limite sa propre production.
+    revoir: cours
+
+  - question: Lors d'un stress aigu, la glycémie…
+    choix: ["baisse", "augmente", "ne change pas", "devient nulle"]
+    bonne: 1
+    explication: Adrénaline et cortisol libèrent du glucose pour fournir de l'énergie.
+    revoir: cours
+
+  - question: Le stress chronique peut entraîner…
+    choix: ["une meilleure mémoire", "des défenses immunitaires affaiblies", "une baisse durable du cortisol", "une croissance musculaire"]
+    bonne: 1
+    explication: Le cortisol en excès prolongé freine notamment l'immunité.
+    revoir: cours
+
+  - question: Les benzodiazépines renforcent l'action…
+    choix: ["de l'adrénaline", "du GABA", "du cortisol", "de l'acétylcholine"]
+    bonne: 1
+    explication: Le GABA est un neurotransmetteur inhibiteur.
+    revoir: cours
+
+  - question: Laquelle est une approche non médicamenteuse contre le stress ?
+    choix: ["l'activité physique régulière", "plus de café", "moins de sommeil", "l'isolement"]
+    bonne: 0
+    explication: Avec le sommeil, la relaxation et le soutien social.
+    revoir: cours

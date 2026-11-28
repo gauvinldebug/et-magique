@@ -1,0 +1,48 @@
+questions:
+  - question: Une ophiolite est…
+    choix: ["un fossile marin", "un morceau de lithosphère océanique charrié sur un continent", "une roche volcanique de continent", "un minéral de haute pression"]
+    bonne: 1
+    explication: Elle témoigne d'un ancien océan refermé.
+    revoir: cours
+
+  - question: Les failles normales traduisent…
+    choix: ["une compression", "un étirement", "une subduction", "une collision"]
+    bonne: 1
+    explication: On les trouve lors du rifting, quand un continent se fracture.
+    revoir: cours
+
+  - question: La glaucophane indique un métamorphisme…
+    choix: ["haute température, basse pression", "haute pression, basse température", "de surface", "de contact avec un magma"]
+    bonne: 1
+    explication: Ce sont les conditions d'une subduction.
+    revoir: cours
+
+  - question: Pendant une collision, la croûte continentale…
+    choix: ["plonge dans le manteau", "se raccourcit et s'épaissit", "s'amincit", "fond entièrement"]
+    bonne: 1
+    explication: Trop légère pour plonger, elle forme une racine crustale.
+    revoir: cours
+
+  - question: Une nappe de charriage est…
+    choix: ["une nappe d'eau souterraine", "un ensemble de roches déplacé sur des dizaines de kilomètres", "une coulée de lave", "un pli très petit"]
+    bonne: 1
+    explication: Elle glisse le long d'un chevauchement et s'empile sur d'autres roches.
+    revoir: cours
+
+  - question: L'ordre de l'histoire d'une chaîne de collision est…
+    choix: ["collision, subduction, rifting", "rifting, océan, subduction, collision", "subduction, rifting, collision", "océan, collision, rifting"]
+    bonne: 1
+    explication: Un océan s'ouvre, se ferme, puis les continents se percutent.
+    revoir: exercices
+
+  - question: Sous une chaîne de montagnes, la croûte peut atteindre…
+    choix: ["7 km", "30 km", "50 à 70 km", "300 km"]
+    bonne: 2
+    explication: C'est la racine crustale, contre environ 30 km en moyenne.
+    revoir: cours
+
+  - question: Des basaltes en coussins se forment…
+    choix: ["dans l'air", "sous l'eau, au contact de la lave", "en profondeur dans la croûte", "par sédimentation"]
+    bonne: 1
+    explication: La lave se fige au contact de l'eau en formant des coussins.
+    revoir: exercices

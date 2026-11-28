@@ -1,0 +1,66 @@
+exercices:
+  - titre: Symbiose ou pas ?
+    difficulte: 1
+    type: application
+    enonce: |
+      Dire si chaque association est une symbiose : (a) le ténia dans l'intestin humain ; (b) le champignon et l'algue d'un lichen ; (c) le champignon mycorhizien et la racine d'un chêne.
+    indice: Les deux partenaires y gagnent-ils ?
+    etapes:
+      - type: conc
+        titre: La réponse
+        texte: >-
+          <mark>(a) non, c'est un parasite ; (b) et (c) oui</mark>, associations durables où chaque partenaire tire un bénéfice.
+
+  - titre: Le corail qui blanchit
+    difficulte: 2
+    type: methode
+    enonce: |
+      Quand l'eau devient trop chaude, les coraux expulsent leurs zooxanthelles, blanchissent, et meurent souvent quelques semaines plus tard. Expliquer.
+    indice: Que fournissent les zooxanthelles au corail ?
+    etapes:
+      - type: calcul
+        titre: Le rôle des algues
+        texte: Les zooxanthelles réalisent la photosynthèse et fournissent au corail l'essentiel de ses sucres.
+      - type: conc
+        titre: L'explication
+        texte: >-
+          <mark>Sans ses algues, le corail perd sa principale source de matière organique</mark> et finit par mourir de faim : la symbiose était vitale.
+
+  - titre: Le chant des pinsons
+    difficulte: 2
+    type: bac
+    enonce: |
+      Des pinsons élevés isolément dès l'éclosion produisent un chant simplifié. Élevés en entendant des adultes, ils chantent comme eux. Que montre cette expérience ?
+    etapes:
+      - type: conc
+        titre: La conclusion
+        texte: >-
+          <mark>Le chant complet est en partie appris</mark> : il se transmet par apprentissage auprès des adultes, c'est une transmission culturelle, en plus d'une base innée.
+
+  - titre: Nouveau comportement, nouvelle mutation ?
+    difficulte: 2
+    type: piege
+    enonce: |
+      En quelques années, des mésanges de toute une région ont appris à percer les bouchons des bouteilles de lait. Un élève y voit la diffusion d'une mutation. Qu'en penser ?
+    etapes:
+      - type: piege
+        titre: L'erreur
+        texte: Une mutation ne se diffuserait pas en quelques années dans toute une région, et elle ne passerait pas d'un individu adulte à un autre.
+      - type: conc
+        titre: La bonne explication
+        texte: >-
+          <mark>C'est une transmission culturelle</mark> : les mésanges ont imité celles qui savaient faire.
+
+  - titre: Des plantes sans champignons
+    difficulte: 3
+    type: bac
+    enonce: |
+      Des pins cultivés dans un sol stérilisé poussent deux fois moins vite que dans un sol forestier. Si on ajoute au sol stérilisé un champignon mycorhizien, la croissance redevient normale. Interpréter.
+    etapes:
+      - type: calcul
+        titre: Ce qui change
+        texte: La seule différence entre les deux sols stérilisés est la présence du champignon.
+      - type: conc
+        titre: L'interprétation
+        texte: >-
+          <mark>La mycorhize favorise la croissance du pin</mark> : le champignon augmente l'absorption d'eau et de sels minéraux, et reçoit en échange des sucres de la plante.

@@ -1,0 +1,76 @@
+exercices:
+  - titre: Calculer une fréquence allélique
+    difficulte: 1
+    type: application
+    enonce: |
+      Dans une population de 1 000 individus, on compte 490 $AA$, 420 $Aa$ et 90 $aa$. Calculer les fréquences $p$ de $A$ et $q$ de $a$.
+    indice: $p = f(AA) + f(Aa)/2$.
+    etapes:
+      - type: calcul
+        titre: Les fréquences des génotypes
+        texte: $f(AA) = 0{,}49$, $f(Aa) = 0{,}42$, $f(aa) = 0{,}09$.
+      - type: conc
+        titre: Les fréquences des allèles
+        texte: >-
+          <mark>$p = 0{,}49 + 0{,}21 = 0{,}70$ et $q = 1 - 0{,}70 = 0{,}30$</mark>.
+
+  - titre: La population est-elle à l'équilibre ?
+    difficulte: 2
+    type: methode
+    enonce: |
+      Avec la population précédente, les fréquences génotypiques sont-elles celles prévues par Hardy-Weinberg ?
+    indice: Calcule $p^2$, $2pq$ et $q^2$.
+    etapes:
+      - type: calcul
+        titre: Les fréquences attendues
+        texte: $p^2 = 0{,}49$, $2pq = 0{,}42$, $q^2 = 0{,}09$.
+      - type: conc
+        titre: La comparaison
+        texte: >-
+          <mark>Elles sont égales aux fréquences observées</mark> : la population est à l'équilibre de Hardy-Weinberg pour ce gène.
+
+  - titre: Un écart à expliquer
+    difficulte: 2
+    type: bac
+    enonce: |
+      Dans une région où le paludisme est fréquent, on observe chez les adultes 0 % de $SS$ (drépanocytose grave), 30 % de $AS$ et 70 % de $AA$. Calculer la fréquence de $S$, comparer aux fréquences attendues et proposer une explication.
+    indice: Les porteurs $AS$ résistent mieux au paludisme.
+    etapes:
+      - type: calcul
+        titre: La fréquence de S
+        texte: $q = 0 + 0{,}30/2 = 0{,}15$, et $p = 0{,}85$.
+      - type: calcul
+        titre: Les fréquences attendues
+        texte: $q^2 \approx 0{,}02$, $2pq \approx 0{,}26$, $p^2 \approx 0{,}72$. On observe moins de $SS$ et plus de $AS$ qu'attendu.
+      - type: conc
+        titre: L'explication
+        texte: >-
+          <mark>Une sélection naturelle</mark> : les $SS$ meurent jeunes de la drépanocytose, les $AA$ meurent plus du paludisme, les $AS$ sont avantagés. L'allèle $S$ se maintient dans la population.
+
+  - titre: La dérive, une sélection au hasard ?
+    difficulte: 2
+    type: piege
+    enonce: |
+      Sur une petite île, un allèle sans effet sur la survie passe de 50 % à 100 % en 30 générations. Un élève parle de sélection naturelle. Qu'en penser ?
+    etapes:
+      - type: piege
+        titre: L'erreur
+        texte: La sélection suppose un avantage de survie ou de reproduction. Ici, l'allèle n'en a aucun.
+      - type: conc
+        titre: La bonne explication
+        texte: >-
+          <mark>C'est la dérive génétique</mark>, très forte dans une petite population : le hasard des tirages a fixé l'allèle.
+
+  - titre: Deux populations, deux espèces ?
+    difficulte: 3
+    type: bac
+    enonce: |
+      Deux populations de grenouilles séparées par une montagne depuis 2 millions d'années se ressemblent beaucoup. En laboratoire, leurs croisements donnent des têtards qui meurent avant la métamorphose. Sont-elles de la même espèce ? Expliquer comment cette situation a pu apparaître.
+    etapes:
+      - type: calcul
+        titre: Le critère
+        texte: Leurs descendants ne sont pas viables, ils ne peuvent donc pas se reproduire. Le critère d'interfécondité n'est pas rempli.
+      - type: conc
+        titre: La réponse
+        texte: >-
+          <mark>Ce sont deux espèces différentes</mark> : isolées par la montagne, les deux populations ont accumulé des différences génétiques (dérive, sélection) jusqu'à perdre leur interfécondité.

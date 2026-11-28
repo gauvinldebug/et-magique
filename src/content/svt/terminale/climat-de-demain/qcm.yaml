@@ -1,0 +1,48 @@
+questions:
+  - question: Sans effet de serre, la température moyenne de la Terre serait d'environ…
+    choix: ["+15 °C", "0 °C", "−18 °C", "−100 °C"]
+    bonne: 2
+    explication: L'effet de serre naturel la porte à 15 °C.
+    revoir: cours
+
+  - question: Avant l'ère industrielle, la teneur en CO₂ était d'environ…
+    choix: ["180 ppm", "280 ppm", "420 ppm", "1 000 ppm"]
+    bonne: 1
+    explication: Elle dépasse aujourd'hui 420 ppm.
+    revoir: cours
+
+  - question: Depuis 1850, la température moyenne a augmenté d'environ…
+    choix: ["0,1 °C", "1,2 °C", "5 °C", "10 °C"]
+    bonne: 1
+    explication: Une hausse très rapide à l'échelle des variations naturelles.
+    revoir: cours
+
+  - question: Un forçage radiatif positif…
+    choix: ["refroidit la Terre", "réchauffe la Terre", "n'a pas d'effet", "concerne seulement l'ozone"]
+    bonne: 1
+    explication: La Terre reçoit plus d'énergie qu'elle n'en perd.
+    revoir: cours
+
+  - question: La fonte de la banquise est une rétroaction…
+    choix: ["négative", "positive", "neutre", "astronomique"]
+    bonne: 1
+    explication: Moins de glace, moins de lumière réfléchie, plus de réchauffement.
+    revoir: exercices
+
+  - question: Le CO₂ en excès vient surtout…
+    choix: ["des volcans", "des combustibles fossiles et de la déforestation", "des océans", "de la respiration humaine"]
+    bonne: 1
+    explication: Sa signature isotopique le confirme.
+    revoir: cours
+
+  - question: Isoler un logement relève…
+    choix: ["de l'adaptation", "de l'atténuation", "d'une rétroaction", "d'un forçage"]
+    bonne: 1
+    explication: On réduit la consommation d'énergie, donc les émissions.
+    revoir: exercices
+
+  - question: Le climat se définit comme…
+    choix: ["le temps qu'il fait aujourd'hui", "la moyenne des conditions météo sur au moins 30 ans", "la température d'un jour", "la quantité de pluie d'un orage"]
+    bonne: 1
+    explication: La météo, elle, décrit un jour en un lieu.
+    revoir: exercices

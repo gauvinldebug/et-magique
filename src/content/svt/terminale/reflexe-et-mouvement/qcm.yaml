@@ -1,0 +1,48 @@
+questions:
+  - question: Le récepteur du réflexe myotatique est…
+    choix: ["la peau", "le fuseau neuromusculaire", "le cortex moteur", "le tendon"]
+    bonne: 1
+    explication: Il est sensible à l'étirement du muscle.
+    revoir: cours
+
+  - question: Le réflexe myotatique est monosynaptique car…
+    choix: ["il n'y a qu'un muscle", "il n'y a qu'une synapse entre neurone sensoriel et motoneurone", "il n'y a qu'un neurone", "il passe par le cerveau"]
+    bonne: 1
+    explication: Le neurone sensoriel fait directement synapse avec le motoneurone dans la moelle.
+    revoir: cours
+
+  - question: L'intensité d'un message nerveux est codée par…
+    choix: ["l'amplitude des potentiels d'action", "la fréquence des potentiels d'action", "la vitesse du neurone", "la taille du neurone"]
+    bonne: 1
+    explication: Tous les potentiels d'action ont la même amplitude.
+    revoir: cours
+
+  - question: Le neurotransmetteur de la synapse neuromusculaire est…
+    choix: ["la dopamine", "l'acétylcholine", "l'adrénaline", "le glucose"]
+    bonne: 1
+    explication: Il est libéré par le motoneurone et agit sur la fibre musculaire.
+    revoir: cours
+
+  - question: Le cortex moteur de l'hémisphère droit commande…
+    choix: ["le côté droit du corps", "le côté gauche du corps", "les deux côtés", "seulement les jambes"]
+    bonne: 1
+    explication: La commande motrice est croisée.
+    revoir: exercices
+
+  - question: L'intégration par le motoneurone, c'est…
+    choix: ["la somme des messages excitateurs et inhibiteurs qu'il reçoit", "la contraction du muscle", "la libération d'acétylcholine", "un réflexe"]
+    bonne: 0
+    explication: Il n'émet un potentiel d'action que si le total dépasse son seuil.
+    revoir: cours
+
+  - question: Pendant le réflexe myotatique, le muscle antagoniste…
+    choix: ["se contracte aussi", "se relâche", "s'étire seul", "n'est pas concerné"]
+    bonne: 1
+    explication: Un interneurone inhibiteur empêche sa contraction.
+    revoir: cours
+
+  - question: La plasticité cérébrale, c'est…
+    choix: ["la rigidité du cerveau", "le remodelage des réseaux de neurones", "la fabrication de neurones moteurs dans les muscles", "le réflexe myotatique"]
+    bonne: 1
+    explication: Les cartes motrices évoluent avec l'apprentissage et après une lésion.
+    revoir: cours

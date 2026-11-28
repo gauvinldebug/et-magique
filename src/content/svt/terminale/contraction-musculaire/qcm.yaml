@@ -1,0 +1,48 @@
+questions:
+  - question: L'unité contractile d'une myofibrille est…
+    choix: ["la fibre", "le sarcomère", "le noyau", "la mitochondrie"]
+    bonne: 1
+    explication: Elle est délimitée par deux stries Z.
+    revoir: cours
+
+  - question: Pendant la contraction…
+    choix: ["l'actine raccourcit", "la myosine raccourcit", "les filaments glissent et le sarcomère raccourcit", "la fibre se divise"]
+    bonne: 2
+    explication: Les filaments gardent leur longueur.
+    revoir: cours
+
+  - question: Le signal qui déclenche la contraction dans la fibre est…
+    choix: ["l'ATP", "le calcium", "le glucose", "le CO₂"]
+    bonne: 1
+    explication: Il démasque les sites de fixation de la myosine sur l'actine.
+    revoir: cours
+
+  - question: L'ATP permet surtout à la myosine de…
+    choix: ["se fixer sur l'actine", "se détacher de l'actine", "fabriquer du calcium", "raccourcir"]
+    bonne: 1
+    explication: Sans ATP, elle reste accrochée (rigidité cadavérique).
+    revoir: exercices
+
+  - question: La respiration produit environ…
+    choix: ["2 ATP par glucose", "32 ATP par glucose", "100 ATP par glucose", "aucun ATP"]
+    bonne: 1
+    explication: Contre 2 ATP pour la fermentation.
+    revoir: cours
+
+  - question: La respiration a lieu…
+    choix: ["dans le noyau", "dans les mitochondries", "dans les stries Z", "dans le sang"]
+    bonne: 1
+    explication: Le glucose y est oxydé complètement en CO₂ et eau.
+    revoir: cours
+
+  - question: La fermentation lactique produit…
+    choix: ["du CO₂", "du lactate", "de l'éthanol", "du dioxygène"]
+    bonne: 1
+    explication: Elle a lieu dans le cytoplasme, sans dioxygène.
+    revoir: cours
+
+  - question: Pour un effort de quelques secondes, l'ATP vient surtout…
+    choix: ["de la respiration", "de la phosphocréatine", "des graisses", "de la digestion"]
+    bonne: 1
+    explication: C'est la réserve immédiate, épuisée en quelques secondes.
+    revoir: cours

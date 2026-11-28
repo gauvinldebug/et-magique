@@ -1,0 +1,48 @@
+questions:
+  - question: Les bulles d'air piégées dans la glace renseignent sur…
+    choix: ["la température de l'eau", "la composition de l'atmosphère passée", "l'âge des roches", "la végétation"]
+    bonne: 1
+    explication: On y mesure notamment le CO₂ et le méthane.
+    revoir: cours
+
+  - question: Dans la glace polaire, un δ¹⁸O plus bas indique…
+    choix: ["un climat plus chaud", "un climat plus froid", "plus de CO₂", "une erreur de mesure"]
+    bonne: 1
+    explication: La neige tombée par grand froid est appauvrie en oxygène 18.
+    revoir: cours
+
+  - question: Dans les carbonates des foraminifères, un δ¹⁸O plus haut indique…
+    choix: ["un climat plus chaud", "un climat plus froid", "une éruption", "un océan plus petit"]
+    bonne: 1
+    explication: Les calottes stockent l'oxygène 16, l'océan s'enrichit en oxygène 18.
+    revoir: exercices
+
+  - question: Le rythme principal des glaciations depuis 800 000 ans est d'environ…
+    choix: ["10 000 ans", "41 000 ans", "100 000 ans", "1 million d'années"]
+    bonne: 2
+    explication: Il correspond à la variation de la forme de l'orbite terrestre.
+    revoir: cours
+
+  - question: En période glaciaire, la teneur en CO₂ était d'environ…
+    choix: ["180 ppm", "280 ppm", "420 ppm", "1 000 ppm"]
+    bonne: 0
+    explication: Contre 280 ppm en interglaciaire et plus de 420 ppm aujourd'hui.
+    revoir: cours
+
+  - question: L'albédo, c'est…
+    choix: ["la part de lumière réfléchie par une surface", "la quantité de CO₂", "la vitesse des glaciers", "un isotope"]
+    bonne: 0
+    explication: La glace a un fort albédo, elle renvoie beaucoup de lumière.
+    revoir: cours
+
+  - question: Un bloc erratique est un indice…
+    choix: ["d'un ancien glacier", "d'un ancien volcan", "d'un ancien océan", "d'une météorite"]
+    bonne: 0
+    explication: C'est un rocher transporté par un glacier loin de son lieu d'origine.
+    revoir: cours
+
+  - question: L'altération des silicates…
+    choix: ["libère du CO₂", "consomme du CO₂", "n'a pas d'effet sur le climat", "fait fondre les glaces"]
+    bonne: 1
+    explication: Sur des millions d'années, elle refroidit le climat.
+    revoir: cours

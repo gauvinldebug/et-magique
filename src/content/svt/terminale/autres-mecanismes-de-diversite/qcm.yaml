@@ -1,0 +1,48 @@
+questions:
+  - question: Une symbiose est une association…
+    choix: ["brève et au profit d'un seul", "durable et à bénéfice réciproque", "entre deux individus de même espèce", "toujours parasitaire"]
+    bonne: 1
+    explication: Les deux partenaires y gagnent, et l'association dure.
+    revoir: cours
+
+  - question: Un lichen associe…
+    choix: ["une plante et un animal", "un champignon et une algue", "deux bactéries", "un virus et une cellule"]
+    bonne: 1
+    explication: L'algue fait la photosynthèse, le champignon apporte eau et sels minéraux.
+    revoir: cours
+
+  - question: Les mycorhizes aident surtout la plante à…
+    choix: ["faire la photosynthèse", "absorber eau et sels minéraux", "se reproduire", "se défendre contre les herbivores"]
+    bonne: 1
+    explication: Le réseau du champignon prolonge les racines.
+    revoir: cours
+
+  - question: Le blanchissement des coraux correspond à…
+    choix: ["la perte de leurs algues symbiotiques", "une maladie génétique", "une mue", "leur reproduction"]
+    bonne: 0
+    explication: Sous l'effet de la chaleur, ils expulsent leurs zooxanthelles.
+    revoir: exercices
+
+  - question: Une transmission culturelle se fait…
+    choix: ["par les gènes", "par apprentissage", "par mutation", "par symbiose"]
+    bonne: 1
+    explication: Le comportement est appris auprès d'autres individus.
+    revoir: cours
+
+  - question: Lequel est un exemple de transmission culturelle ?
+    choix: ["la couleur des yeux", "l'utilisation d'outils par un groupe de chimpanzés", "la résistance aux antibiotiques", "les mycorhizes"]
+    bonne: 1
+    explication: Chaque groupe a ses propres techniques, apprises par les jeunes.
+    revoir: cours
+
+  - question: Le ténia dans l'intestin humain est…
+    choix: ["un symbiote", "un parasite", "un mutualiste", "une partie du microbiote utile"]
+    bonne: 1
+    explication: Il profite de son hôte sans rien lui apporter.
+    revoir: exercices
+
+  - question: Un comportement appris peut participer à la spéciation car…
+    choix: ["il modifie l'ADN", "il peut empêcher deux populations de se reproduire ensemble", "il crée des mutations", "il supprime la sélection"]
+    bonne: 1
+    explication: Par exemple, deux groupes d'oiseaux au chant différent ne se reconnaissent plus comme partenaires.
+    revoir: cours

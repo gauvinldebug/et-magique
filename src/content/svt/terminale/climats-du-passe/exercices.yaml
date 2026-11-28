@@ -1,0 +1,72 @@
+exercices:
+  - titre: Lire un δ¹⁸O dans la glace
+    difficulte: 1
+    type: application
+    enonce: |
+      Dans une carotte de glace antarctique, le δ¹⁸O vaut −58 ‰ vers 20 000 ans et −53 ‰ aujourd'hui. Quelle époque était la plus froide ?
+    etapes:
+      - type: conc
+        titre: La réponse
+        texte: >-
+          <mark>Il y a 20 000 ans</mark> : dans la glace, un δ¹⁸O plus bas traduit une température plus basse. C'était le dernier maximum glaciaire.
+
+  - titre: Pollens et climat
+    difficulte: 1
+    type: methode
+    enonce: |
+      Dans une tourbière du Jura, une couche datée de 15 000 ans contient surtout des pollens de bouleau nain et de graminées. Une couche de 7 000 ans contient surtout des pollens de chêne et de noisetier. Que peut-on en conclure ?
+    indice: Le bouleau nain vit aujourd'hui dans la toundra.
+    etapes:
+      - type: calcul
+        titre: Le principe
+        texte: On suppose que les plantes avaient les mêmes exigences climatiques qu'aujourd'hui (actualisme).
+      - type: conc
+        titre: La conclusion
+        texte: >-
+          <mark>Il y a 15 000 ans, un climat froid de toundra ; il y a 7 000 ans, un climat tempéré</mark>, proche de l'actuel.
+
+  - titre: Pourquoi tout change tous les 100 000 ans
+    difficulte: 2
+    type: bac
+    enonce: |
+      Les glaciations du Quaternaire reviennent environ tous les 100 000 ans. Expliquer le rôle des paramètres orbitaux et des rétroactions.
+    etapes:
+      - type: calcul
+        titre: Le déclencheur
+        texte: Les variations de l'orbite et de l'axe de la Terre changent l'énergie solaire reçue en été aux hautes latitudes de l'hémisphère Nord.
+      - type: calcul
+        titre: L'amplification
+        texte: Moins d'énergie, donc la neige persiste ; la glace renvoie plus de lumière (albédo), l'océan plus froid absorbe du CO₂, l'effet de serre baisse.
+      - type: conc
+        titre: La réponse
+        texte: >-
+          <mark>Les paramètres orbitaux déclenchent, les rétroactions amplifient</mark> : une petite variation d'énergie reçue aboutit à une glaciation.
+
+  - titre: Le sens du δ¹⁸O dans l'océan
+    difficulte: 2
+    type: piege
+    enonce: |
+      Dans des foraminifères marins, le δ¹⁸O est plus élevé il y a 20 000 ans qu'aujourd'hui. Un élève conclut qu'il faisait plus chaud. Qu'en penser ?
+    etapes:
+      - type: piege
+        titre: L'erreur
+        texte: L'élève applique le sens de la glace aux carbonates marins.
+      - type: conc
+        titre: La bonne lecture
+        texte: >-
+          <mark>Il faisait plus froid</mark> : en période glaciaire, l'oxygène 16 est stocké dans les calottes, l'océan s'enrichit en oxygène 18, et les foraminifères aussi.
+
+  - titre: Le refroidissement depuis 50 millions d'années
+    difficulte: 3
+    type: bac
+    enonce: |
+      Depuis environ 50 Ma, la teneur en CO₂ atmosphérique baisse et le climat se refroidit, alors que la chaîne himalayenne se forme. Proposer un lien.
+    indice: L'altération des roches silicatées consomme du CO₂.
+    etapes:
+      - type: calcul
+        titre: Le mécanisme
+        texte: La surrection de l'Himalaya expose de grandes surfaces de roches silicatées à l'érosion et à l'altération, qui consomment du CO₂ atmosphérique, ensuite stocké sous forme de carbonates dans les océans.
+      - type: conc
+        titre: La conclusion
+        texte: >-
+          <mark>Plus d'altération, moins de CO₂, moins d'effet de serre</mark>, donc un refroidissement global sur des millions d'années.
