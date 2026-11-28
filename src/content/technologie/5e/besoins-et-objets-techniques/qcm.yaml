@@ -1,0 +1,55 @@
+questions:
+- question: La fonction d'usage d'un objet dit…
+  choix:
+  - à quoi il sert
+  - comment il est fabriqué
+  - combien il coûte
+  - en quoi il est fait
+  bonne: 0
+  explication: Une phrase simple.
+  revoir: cours
+- question: « La chaîne transmet le mouvement du pédalier à la roue » est…
+  choix:
+  - une fonction d'usage
+  - une solution technique
+  - un besoin
+  - un critère
+  bonne: 1
+  explication: Elle réalise la fonction technique « transmettre le mouvement ».
+  revoir: cours
+- question: Dans un cahier des charges, « moins de 200 g » est…
+  choix:
+  - un critère
+  - un niveau
+  - une fonction
+  - un besoin
+  bonne: 1
+  explication: Le critère est la masse.
+  revoir: cours
+- question: Un objet technique est fabriqué pour…
+  choix:
+  - décorer seulement
+  - répondre à un besoin
+  - être vendu cher
+  - remplacer la nature
+  bonne: 1
+  explication: C'est sa raison d'être.
+  revoir: cours
+- question: Lequel ne fait pas évoluer un objet ?
+  choix:
+  - les nouveaux matériaux
+  - les nouveaux besoins
+  - la mode
+  - la couleur des yeux de l'inventeur
+  bonne: 3
+  explication: Les autres causes sont réelles.
+  revoir: cours
+- question: Une même fonction technique peut avoir…
+  choix:
+  - une seule solution
+  - plusieurs solutions possibles
+  - aucune solution
+  - deux besoins
+  bonne: 1
+  explication: 'Freiner : patins ou disques.'
+  revoir: cours

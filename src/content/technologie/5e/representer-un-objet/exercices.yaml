@@ -1,0 +1,53 @@
+exercices:
+- titre: Quelle représentation ?
+  difficulte: 1
+  type: application
+  enonce: |
+    Quelle représentation choisir pour : expliquer un circuit électrique ; montrer une idée de lampe à un ami ; donner les plans à un fabricant ?
+  indice: Croquis, schéma ou dessin technique.
+  etapes:
+  - type: calcul
+    titre: Les deux premiers
+    texte: 'Le circuit : un schéma. L''idée de lampe : un croquis.'
+  - type: conc
+    titre: Le fabricant
+    texte: <mark>Un dessin technique avec vues et cotes.</mark>
+- titre: Calculer avec l'échelle
+  difficulte: 2
+  type: methode
+  enonce: |
+    Sur un dessin à l'échelle 1:5, une pièce mesure 4 cm. Quelle est sa taille réelle ?
+  indice: 1 cm dessiné vaut 5 cm réels.
+  etapes:
+  - type: calcul
+    titre: Calcul
+    texte: $4 \times 5 = 20$ cm.
+  - type: conc
+    titre: Réponse
+    texte: <mark>La pièce mesure 20 cm.</mark>
+- titre: 2:1 ou 1:2 ?
+  difficulte: 2
+  type: piege
+  enonce: |
+    Une vis de 8 mm est dessinée avec une longueur de 16 mm. Un élève écrit « échelle 1:2 ». Corriger.
+  indice: Le dessin est-il plus grand ou plus petit que l'objet ?
+  etapes:
+  - type: piege
+    titre: L'erreur
+    texte: Le dessin est plus grand, donc ce n'est pas une réduction.
+  - type: conc
+    titre: Correction
+    texte: '<mark>Le dessin est 2 fois plus grand : échelle 2:1.</mark>'
+- titre: Modéliser un porte-crayon
+  difficulte: 3
+  type: methode
+  enonce: |
+    Décrire les étapes pour modéliser en 3D un porte-crayon cylindrique de diamètre 60 mm et de hauteur 90 mm, avec un trou de diamètre 50 mm et profond de 85 mm.
+  indice: Esquisse, extrusion, enlèvement de matière.
+  etapes:
+  - type: calcul
+    titre: Le cylindre
+    texte: Dessiner un cercle de 60 mm, puis l'extruder de 90 mm.
+  - type: conc
+    titre: Le trou
+    texte: '<mark>Sur la face du dessus, dessiner un cercle de 50 mm et enlever la matière sur 85 mm : il reste un fond de 5 mm.</mark>'

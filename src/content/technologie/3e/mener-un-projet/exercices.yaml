@@ -1,0 +1,53 @@
+exercices:
+- titre: Remettre dans l'ordre
+  difficulte: 1
+  type: application
+  enonce: |
+    Remettre dans l'ordre : tester, cahier des charges, présenter, prototype, rechercher des solutions, besoin.
+  indice: On part du besoin.
+  etapes:
+  - type: calcul
+    titre: Ordre
+    texte: Besoin, cahier des charges, rechercher des solutions, prototype, tester.
+  - type: conc
+    titre: Fin
+    texte: <mark>Puis présenter.</mark>
+- titre: Le tableau de choix
+  difficulte: 2
+  type: methode
+  enonce: |
+    Pour un distributeur de croquettes, trois solutions sont notées sur 5 (fiabilité, coût, facilité). A : 4, 3, 4. B : 5, 2, 3. C : 3, 5, 5, mais C ne tient pas 3 jours de croquettes, ce qui est obligatoire. Laquelle choisir ?
+  indice: Un critère obligatoire non respecté élimine la solution.
+  etapes:
+  - type: calcul
+    titre: Totaux
+    texte: 'A : 11. B : 10. C : 13 mais éliminée.'
+  - type: conc
+    titre: Choix
+    texte: <mark>La solution A.</mark>
+- titre: La première idée
+  difficulte: 2
+  type: piege
+  enonce: |
+    Un groupe commence à fabriquer dès le premier jour, sur la première idée. Quel risque prend-il ?
+  indice: Qu'est-ce qui a été sauté ?
+  etapes:
+  - type: piege
+    titre: L'erreur
+    texte: Sauter le cahier des charges et la comparaison des solutions.
+  - type: conc
+    titre: Correction
+    texte: <mark>Il risque de découvrir trop tard que l'objet ne répond pas au besoin, et de devoir tout recommencer.</mark>
+- titre: Le planning
+  difficulte: 3
+  type: methode
+  enonce: |
+    Un projet dure 6 séances. Il faut : cahier des charges (1 séance), recherche et choix (1), fabrication (2), programmation (1, en même temps que la fabrication), tests (1), présentation (1). Proposer un planning qui tient.
+  indice: Certaines tâches peuvent se faire en parallèle.
+  etapes:
+  - type: calcul
+    titre: Les séances 1 à 4
+    texte: 'Séance 1 : cahier des charges. Séance 2 : recherche et choix. Séances 3 et 4 : fabrication par une partie du groupe, programmation par l''autre pendant la séance 3.'
+  - type: conc
+    titre: Les séances 5 et 6
+    texte: '<mark>Séance 5 : tests et corrections. Séance 6 : présentation. Le travail en parallèle laisse la séance 4 de programmation comme marge.</mark>'

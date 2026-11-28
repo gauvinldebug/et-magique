@@ -1,0 +1,55 @@
+questions:
+- question: La première étape du cycle de vie est…
+  choix:
+  - l'extraction des matières premières
+  - la fabrication
+  - l'utilisation
+  - le recyclage
+  bonne: 0
+  explication: On commence par la matière.
+  revoir: cours
+- question: ACV signifie…
+  choix:
+  - achat de consommation verte
+  - analyse du cycle de vie
+  - appareil connecté vérifié
+  - aucun changement visible
+  bonne: 1
+  explication: Elle mesure les impacts.
+  revoir: cours
+- question: Pour un smartphone, l'étape la plus polluante est souvent…
+  choix:
+  - l'utilisation
+  - la fabrication
+  - le transport
+  - la fin de vie
+  bonne: 1
+  explication: Matières premières et usines.
+  revoir: cours
+- question: Écoconcevoir, c'est…
+  choix:
+  - peindre en vert
+  - réduire l'impact dès la conception
+  - recycler à la fin
+  - vendre moins cher
+  bonne: 1
+  explication: Penser à tout le cycle de vie.
+  revoir: cours
+- question: L'action la plus efficace est en général de…
+  choix:
+  - recycler vite
+  - garder l'objet plus longtemps
+  - en racheter un
+  - le jeter
+  bonne: 1
+  explication: Puis réparer, puis recycler.
+  revoir: cours
+- question: L'empreinte carbone se mesure en…
+  choix:
+  - litres
+  - kg équivalent CO₂
+  - watts
+  - euros
+  bonne: 1
+  explication: Gaz à effet de serre émis.
+  revoir: cours

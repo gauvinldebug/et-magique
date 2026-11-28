@@ -1,0 +1,56 @@
+exercices:
+- titre: Découper une URL
+  difficulte: 1
+  type: application
+  enonce: |
+    Dans l'URL `https://www.lycee-exemple.fr/cdi/horaires.html`, donner le protocole, le nom de domaine et le chemin.
+  indice: L'URL se lit de gauche à droite.
+  etapes:
+  - type: calcul
+    titre: Lecture
+    texte: 'Protocole : `https`. Nom de domaine : `www.lycee-exemple.fr`. Chemin : `/cdi/horaires.html`.'
+  - type: conc
+    titre: Réponse
+    texte: <mark>Le navigateur demande le fichier horaires.html, rangé dans le dossier cdi du serveur du lycée, en HTTPS.</mark>
+- titre: Lire du HTML
+  difficulte: 2
+  type: methode
+  enonce: |
+    Que s'affiche-t-il avec ce code ? `<h1>Menu</h1><p>Frites <i>maison</i></p>`
+  indice: '`<h1>` est un grand titre, `<i>` met en italique.'
+  etapes:
+  - type: calcul
+    titre: Les balises
+    texte: « Menu » s'affiche en grand titre, puis un paragraphe « Frites maison ».
+  - type: conc
+    titre: Le détail
+    texte: <mark>Le mot « maison » est en italique.</mark>
+- titre: Le cadenas
+  difficulte: 2
+  type: piege
+  enonce: |
+    Un site affiche un cadenas et commence par https. Ton camarade en conclut qu'il peut y donner son code de carte bancaire sans risque. Que lui répondre ?
+  indice: Que garantit exactement HTTPS ?
+  etapes:
+  - type: piege
+    titre: L'erreur
+    texte: Le cadenas ne dit rien des intentions du site.
+  - type: conc
+    titre: La bonne idée
+    texte: '<mark>HTTPS chiffre l''échange, mais un faux site peut aussi être en HTTPS : il faut vérifier l''adresse exacte du site.</mark>'
+- titre: Requête et réponse
+  difficulte: 3
+  type: methode
+  enonce: |
+    Décrire dans l'ordre ce qui se passe entre le moment où tu tapes `www.exemple.fr` et celui où la page s'affiche.
+  indice: Pense au DNS, puis à HTTP.
+  etapes:
+  - type: calcul
+    titre: Trouver le serveur
+    texte: Le navigateur demande au DNS l'adresse IP de `www.exemple.fr`.
+  - type: calcul
+    titre: Demander la page
+    texte: Il envoie une requête HTTP à ce serveur.
+  - type: conc
+    titre: Afficher
+    texte: <mark>Le serveur renvoie le fichier HTML (et les images, le CSS) ; le navigateur l'interprète et affiche la page.</mark>

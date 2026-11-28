@@ -1,0 +1,53 @@
+exercices:
+- titre: Ranger les étapes
+  difficulte: 1
+  type: application
+  enonce: |
+    Remettre dans l'ordre : utilisation, extraction, fin de vie, fabrication, transport.
+  indice: On part de la matière première.
+  etapes:
+  - type: calcul
+    titre: Ordre
+    texte: Extraction, fabrication, transport, utilisation, fin de vie.
+  - type: conc
+    titre: Réponse
+    texte: <mark>C'est le cycle de vie complet de l'objet.</mark>
+- titre: Lire une ACV
+  difficulte: 2
+  type: methode
+  enonce: |
+    Pour un ordinateur portable, une étude donne : fabrication 75 %, transport 5 %, utilisation 18 %, fin de vie 2 % de l'empreinte carbone. Quelle action est la plus efficace pour réduire l'impact ?
+  indice: Où est la plus grosse part ?
+  etapes:
+  - type: calcul
+    titre: Lecture
+    texte: La fabrication représente les trois quarts.
+  - type: conc
+    titre: Action
+    texte: '<mark>Garder l''ordinateur plus longtemps, le réparer, ou acheter reconditionné : on évite une nouvelle fabrication.</mark>'
+- titre: Le Wi-Fi coupé
+  difficulte: 2
+  type: piege
+  enonce: |
+    « Pour réduire l'impact de mon téléphone, il suffit de couper le Wi-Fi la nuit. » Que penser de cette idée ?
+  indice: Quelle étape pèse le plus ?
+  etapes:
+  - type: piege
+    titre: L'erreur
+    texte: L'utilisation ne représente qu'une petite part de l'impact.
+  - type: conc
+    titre: Correction
+    texte: <mark>Le geste est minime. Le plus efficace est de garder son téléphone plusieurs années de plus.</mark>
+- titre: Écoconcevoir une lampe
+  difficulte: 3
+  type: methode
+  enonce: |
+    Proposer trois choix d'écoconception pour une lampe de bureau.
+  indice: Pense à la matière, à la réparation, à l'énergie.
+  etapes:
+  - type: calcul
+    titre: Matière et assemblage
+    texte: Utiliser peu de matériaux, faciles à recycler, et des vis plutôt que de la colle pour pouvoir démonter.
+  - type: conc
+    titre: Énergie et durée
+    texte: <mark>Une ampoule LED remplaçable et des pièces détachées disponibles.</mark>

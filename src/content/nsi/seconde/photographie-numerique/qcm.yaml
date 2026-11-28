@@ -1,0 +1,55 @@
+questions:
+- question: Un pixel est…
+  choix:
+  - le plus petit élément d'une image
+  - un capteur
+  - un format de fichier
+  - une métadonnée
+  bonne: 0
+  explication: Un carreau de la mosaïque.
+  revoir: cours
+- question: En RVB, chaque couleur est codée par une valeur entre…
+  choix:
+  - 0 et 100
+  - 0 et 255
+  - 0 et 1000
+  - 1 et 16
+  bonne: 1
+  explication: '8 bits : 256 valeurs.'
+  revoir: cours
+- question: (0, 0, 0) correspond au…
+  choix:
+  - blanc
+  - noir
+  - rouge
+  - gris
+  bonne: 1
+  explication: Aucune lumière.
+  revoir: cours
+- question: Une image de 10 mégapixels non compressée en RVB pèse environ…
+  choix:
+  - 10 Mo
+  - 30 Mo
+  - 3 Mo
+  - 1 Mo
+  bonne: 1
+  explication: 3 octets par pixel.
+  revoir: cours
+- question: La résolution d'une image est…
+  choix:
+  - son nombre total de pixels
+  - son nombre de pixels par pouce
+  - son poids
+  - sa couleur moyenne
+  bonne: 1
+  explication: Le nombre total, c'est la définition.
+  revoir: cours
+- question: Les métadonnées EXIF peuvent contenir…
+  choix:
+  - le mot de passe du téléphone
+  - la position GPS de la prise
+  - la liste des contacts
+  - le code de la carte SIM
+  bonne: 1
+  explication: Ainsi que la date et le modèle d'appareil.
+  revoir: cours

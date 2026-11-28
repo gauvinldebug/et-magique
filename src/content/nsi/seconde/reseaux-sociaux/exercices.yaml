@@ -1,0 +1,53 @@
+exercices:
+- titre: Lire un graphe
+  difficulte: 1
+  type: application
+  enonce: |
+    Dans un groupe, Ana est amie avec Bob et Chloé, Bob avec Dan, Dan avec Eva. Quelle est la distance entre Ana et Eva ?
+  indice: Compte les arêtes du plus court chemin.
+  etapes:
+  - type: calcul
+    titre: Le chemin
+    texte: Ana, Bob, Dan, Eva.
+  - type: conc
+    titre: Réponse
+    texte: '<mark>3 arêtes : la distance vaut 3.</mark>'
+- titre: Rayon et diamètre
+  difficulte: 2
+  type: methode
+  enonce: |
+    Avec le graphe précédent (Ana–Bob, Ana–Chloé, Bob–Dan, Dan–Eva), calculer l'excentricité de chaque sommet, puis le rayon, le diamètre et le centre.
+  indice: Pour chaque sommet, cherche le sommet le plus loin.
+  etapes:
+  - type: calcul
+    titre: Excentricités
+    texte: 'Ana : 3 (Eva). Bob : 2 (Chloé ou Eva). Chloé : 4 (Eva). Dan : 3 (Chloé). Eva : 4 (Chloé).'
+  - type: conc
+    titre: Bilan
+    texte: '<mark>Rayon 2, diamètre 4, centre : Bob.</mark>'
+- titre: Gratuit ?
+  difficulte: 2
+  type: piege
+  enonce: |
+    « Ce réseau social est gratuit, donc il ne gagne rien sur moi. » Expliquer l'erreur.
+  indice: Qui paie le réseau social ?
+  etapes:
+  - type: piege
+    titre: L'erreur
+    texte: Le réseau n'est pas payé par l'utilisateur, mais par les annonceurs.
+  - type: conc
+    titre: Correction
+    texte: <mark>Il vend aux annonceurs l'attention de l'utilisateur et un ciblage fondé sur ses données.</mark>
+- titre: La bulle
+  difficulte: 3
+  type: methode
+  enonce: |
+    Expliquer comment un algorithme de recommandation peut enfermer un utilisateur dans une bulle, et proposer deux façons d'en sortir.
+  indice: L'algorithme propose ce qui ressemble à ce que tu as aimé.
+  etapes:
+  - type: calcul
+    titre: Le mécanisme
+    texte: Plus tu regardes un type de contenu, plus l'algorithme t'en propose, et moins tu vois le reste.
+  - type: conc
+    titre: En sortir
+    texte: <mark>Chercher volontairement d'autres sources, suivre des comptes aux avis variés, réinitialiser ou désactiver les recommandations quand c'est possible.</mark>

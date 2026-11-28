@@ -1,0 +1,55 @@
+questions:
+- question: Un programme est…
+  choix:
+  - un algorithme écrit dans un langage
+  - un capteur
+  - un organigramme seulement
+  - une recette de cuisine
+  bonne: 0
+  explication: Scratch, Python…
+  revoir: cours
+- question: Dans un organigramme, une condition est représentée par…
+  choix:
+  - un rectangle
+  - un ovale
+  - un losange
+  - un cercle
+  bonne: 2
+  explication: 'Deux sorties : oui et non.'
+  revoir: cours
+- question: Une variable…
+  choix:
+  - ne change jamais
+  - contient une valeur qui peut changer
+  - est un capteur
+  - est une boucle
+  bonne: 1
+  explication: Score, vitesse, compteur.
+  revoir: cours
+- question: '« répéter 4 fois : avancer de 10 » fait avancer de…'
+  choix:
+  - '10'
+  - '14'
+  - '40'
+  - '4'
+  bonne: 2
+  explication: 4 × 10.
+  revoir: cours
+- question: Un bug est…
+  choix:
+  - un capteur
+  - une erreur dans un programme
+  - un type de boucle
+  - un actionneur
+  bonne: 1
+  explication: Le corriger, c'est déboguer.
+  revoir: cours
+- question: Pour qu'un objet réagisse en permanence, la condition doit être…
+  choix:
+  - avant la boucle
+  - dans la boucle
+  - après la boucle
+  - dans un autre programme
+  bonne: 1
+  explication: Sinon elle n'est testée qu'une fois.
+  revoir: cours

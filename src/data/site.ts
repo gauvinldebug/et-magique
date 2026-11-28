@@ -43,7 +43,7 @@ export const MATIERES: Matiere[] = [
     sousTitres: { seconde: 'SNT' },
   },
   {
-    slug: 'technologie', nom: 'Technologie', nomLong: 'technologie', couleur: 'var(--rose)', active: false,
+    slug: 'technologie', nom: 'Technologie', nomLong: 'technologie', couleur: 'var(--rose)', active: true,
     niveaux: ['5e', '4e', '3e'],
   },
   // Matières à venir : affichées « Bientôt » (pictogramme et couleur dans affiches.ts).

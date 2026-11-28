@@ -1,0 +1,53 @@
+exercices:
+- titre: Lire un CSV
+  difficulte: 1
+  type: application
+  enonce: |
+    Voici un fichier : `nom;classe;moyenne` puis `Léa;2A;14`, `Tom;2B;11`, `Inès;2A;16`. Combien d'objets et de descripteurs ? Quelle est la moyenne d'Inès ?
+  indice: La première ligne donne les descripteurs.
+  etapes:
+  - type: calcul
+    titre: Compter
+    texte: '3 lignes de données, donc 3 objets ; 3 descripteurs : nom, classe, moyenne.'
+  - type: conc
+    titre: Réponse
+    texte: <mark>Inès a 16 de moyenne.</mark>
+- titre: Filtrer et trier
+  difficulte: 2
+  type: methode
+  enonce: |
+    Avec la table précédente, garder les élèves de 2A, puis les trier par moyenne décroissante.
+  indice: Filtrer d'abord, trier ensuite.
+  etapes:
+  - type: calcul
+    titre: Filtre
+    texte: Il reste Léa (14) et Inès (16).
+  - type: conc
+    titre: Tri
+    texte: <mark>Inès (16), puis Léa (14).</mark>
+- titre: La photo bavarde
+  difficulte: 2
+  type: piege
+  enonce: |
+    Un élève publie une photo de sa chambre en disant : « On ne voit rien de personnel. » Pourquoi peut-il se tromper ?
+  indice: Pense à ce qui n'est pas visible à l'écran.
+  etapes:
+  - type: piege
+    titre: L'erreur
+    texte: Il ne pense qu'à l'image.
+  - type: conc
+    titre: Correction
+    texte: '<mark>Les métadonnées de la photo peuvent contenir la date, l''heure et les coordonnées GPS : on peut savoir où il habite.</mark>'
+- titre: Croiser deux tables
+  difficulte: 3
+  type: methode
+  enonce: |
+    Une table donne (code postal, date de naissance, sexe) pour des patients anonymes. Une liste électorale publique donne (nom, code postal, date de naissance, sexe). Expliquer le risque.
+  indice: Que se passe-t-il si une seule personne a ces trois valeurs ?
+  etapes:
+  - type: calcul
+    titre: Le croisement
+    texte: On rapproche les deux tables grâce aux trois descripteurs communs.
+  - type: conc
+    titre: Le risque
+    texte: '<mark>Si une combinaison est unique, on retrouve le nom du patient : les données « anonymes » ne le sont plus.</mark>'

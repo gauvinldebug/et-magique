@@ -1,0 +1,55 @@
+questions:
+- question: La latitude de l'équateur est…
+  choix:
+  - 0°
+  - 90°
+  - 180°
+  - 45°
+  bonne: 0
+  explication: Elle vaut 90° aux pôles.
+  revoir: cours
+- question: Le méridien de Greenwich a pour longitude…
+  choix:
+  - 90° E
+  - 0°
+  - 180°
+  - 48° N
+  bonne: 1
+  explication: C'est la référence des longitudes.
+  revoir: cours
+- question: Combien de satellites faut-il au minimum pour se localiser ?
+  choix:
+  - '1'
+  - '2'
+  - '3'
+  - '4'
+  bonne: 3
+  explication: 3 pour la position, 1 pour l'horloge.
+  revoir: cours
+- question: Galileo est le système de localisation…
+  choix:
+  - américain
+  - européen
+  - russe
+  - chinois
+  bonne: 1
+  explication: Le GPS est américain.
+  revoir: cours
+- question: Dans le graphe routier, un carrefour est…
+  choix:
+  - un sommet
+  - une arête
+  - un poids
+  - une couche
+  bonne: 0
+  explication: Les routes sont les arêtes.
+  revoir: cours
+- question: La vitesse des signaux GPS est d'environ…
+  choix:
+  - 340 m/s
+  - 3 000 km/s
+  - 300 000 km/s
+  - 30 km/s
+  bonne: 2
+  explication: C'est la vitesse de la lumière.
+  revoir: cours

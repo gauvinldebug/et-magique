@@ -1,0 +1,53 @@
+exercices:
+- titre: Renouvelable ou non ?
+  difficulte: 1
+  type: application
+  enonce: |
+    Classer : charbon, soleil, vent, gaz naturel, bois, uranium.
+  indice: Se reconstitue-t-elle à l'échelle d'une vie humaine ?
+  etapes:
+  - type: calcul
+    titre: Renouvelables
+    texte: Soleil, vent, bois.
+  - type: conc
+    titre: Non renouvelables
+    texte: <mark>Charbon, gaz naturel, uranium.</mark>
+- titre: La chaîne de la lampe de poche
+  difficulte: 2
+  type: methode
+  enonce: |
+    Décrire les conversions d'énergie dans une lampe de poche à piles.
+  indice: Où est stockée l'énergie au départ ?
+  etapes:
+  - type: calcul
+    titre: La pile
+    texte: Énergie chimique convertie en énergie électrique.
+  - type: conc
+    titre: La lampe
+    texte: <mark>Énergie électrique convertie en énergie lumineuse, avec un peu de chaleur perdue.</mark>
+- titre: L'éolienne qui crée
+  difficulte: 2
+  type: piege
+  enonce: |
+    « Une éolienne fabrique de l'énergie à partir de rien. » Corriger.
+  indice: D'où vient l'énergie de l'éolienne ?
+  etapes:
+  - type: piege
+    titre: L'erreur
+    texte: Croire qu'on crée de l'énergie.
+  - type: conc
+    titre: Correction
+    texte: <mark>Elle convertit l'énergie mécanique du vent en énergie électrique.</mark>
+- titre: LED ou filament
+  difficulte: 3
+  type: methode
+  enonce: |
+    Une ampoule à filament de 60 W et une LED de 8 W éclairent autant. Quelle énergie chacune consomme-t-elle en 5 heures ? Conclure.
+  indice: Énergie (Wh) = puissance (W) × durée (h).
+  etapes:
+  - type: calcul
+    titre: Calcul
+    texte: 'Filament : $60 \times 5 = 300$ Wh. LED : $8 \times 5 = 40$ Wh.'
+  - type: conc
+    titre: Conclusion
+    texte: '<mark>La LED consomme environ 7 fois moins : le filament perd l''essentiel en chaleur.</mark>'

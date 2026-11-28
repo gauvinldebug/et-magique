@@ -1,0 +1,55 @@
+questions:
+- question: Laquelle est renouvelable ?
+  choix:
+  - le pétrole
+  - le vent
+  - l'uranium
+  - le charbon
+  bonne: 1
+  explication: Il se renouvelle en permanence.
+  revoir: cours
+- question: Un moteur électrique convertit l'énergie électrique en énergie…
+  choix:
+  - lumineuse
+  - mécanique
+  - chimique
+  - nucléaire
+  bonne: 1
+  explication: Il produit un mouvement.
+  revoir: cours
+- question: L'énergie perdue dans une conversion l'est souvent sous forme de…
+  choix:
+  - chaleur
+  - lumière
+  - son uniquement
+  - électricité
+  bonne: 0
+  explication: Le moteur chauffe.
+  revoir: cours
+- question: Une batterie…
+  choix:
+  - ne se recharge pas
+  - se recharge
+  - produit de l'énergie
+  - est une source fossile
+  bonne: 1
+  explication: Une pile ne se recharge pas.
+  revoir: cours
+- question: Un panneau solaire convertit…
+  choix:
+  - l'énergie lumineuse en énergie électrique
+  - l'énergie électrique en énergie lumineuse
+  - la chaleur en mouvement
+  - le vent en électricité
+  bonne: 0
+  explication: C'est un convertisseur.
+  revoir: cours
+- question: Énergie (Wh) =
+  choix:
+  - puissance + durée
+  - puissance × durée
+  - puissance ÷ durée
+  - durée ÷ puissance
+  bonne: 1
+  explication: En W et en h.
+  revoir: cours

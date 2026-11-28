@@ -1,0 +1,55 @@
+questions:
+- question: Un capteur appartient à la fonction…
+  choix:
+  - acquérir
+  - traiter
+  - convertir
+  - transmettre
+  bonne: 0
+  explication: Chaîne d'information.
+  revoir: cours
+- question: Le moteur réalise la fonction…
+  choix:
+  - distribuer
+  - convertir
+  - acquérir
+  - alimenter
+  bonne: 1
+  explication: Électrique vers mécanique.
+  revoir: cours
+- question: Le microcontrôleur réalise la fonction…
+  choix:
+  - alimenter
+  - traiter
+  - transmettre
+  - convertir
+  bonne: 1
+  explication: Il exécute le programme.
+  revoir: cours
+- question: Une batterie réalise la fonction…
+  choix:
+  - alimenter
+  - distribuer
+  - traiter
+  - communiquer
+  bonne: 0
+  explication: Elle fournit l'énergie.
+  revoir: cours
+- question: Des engrenages réalisent la fonction…
+  choix:
+  - convertir
+  - transmettre
+  - acquérir
+  - traiter
+  bonne: 1
+  explication: Ils amènent le mouvement.
+  revoir: cours
+- question: Le relais est un composant qui…
+  choix:
+  - convertit l'énergie
+  - distribue l'énergie
+  - mesure la lumière
+  - stocke l'énergie
+  bonne: 1
+  explication: Il laisse passer ou coupe.
+  revoir: cours

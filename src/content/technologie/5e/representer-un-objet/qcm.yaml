@@ -1,0 +1,55 @@
+questions:
+- question: Pour fabriquer une pièce, on utilise…
+  choix:
+  - un croquis
+  - un dessin technique
+  - une photo
+  - une perspective seule
+  bonne: 1
+  explication: Avec vues et cotes.
+  revoir: cours
+- question: À l'échelle 1:10, 3 cm sur le dessin valent…
+  choix:
+  - 0,3 cm
+  - 13 cm
+  - 30 cm
+  - 3 cm
+  bonne: 2
+  explication: 3 × 10.
+  revoir: cours
+- question: Les cotes indiquent…
+  choix:
+  - les dimensions réelles
+  - les dimensions du dessin
+  - les couleurs
+  - les matériaux
+  bonne: 0
+  explication: En millimètres.
+  revoir: cours
+- question: Les arêtes cachées se dessinent…
+  choix:
+  - en rouge
+  - en pointillés
+  - en gras
+  - pas du tout
+  bonne: 1
+  explication: Pour les distinguer des arêtes visibles.
+  revoir: cours
+- question: CAO signifie…
+  choix:
+  - calcul automatique d'objets
+  - conception assistée par ordinateur
+  - croquis à l'œil
+  - coupe en arrière-plan
+  bonne: 1
+  explication: Logiciel de modélisation 3D.
+  revoir: cours
+- question: Une échelle 2:1 signifie que le dessin est…
+  choix:
+  - deux fois plus petit
+  - deux fois plus grand
+  - à taille réelle
+  - coupé en deux
+  bonne: 1
+  explication: 2 cm dessinés pour 1 cm réel.
+  revoir: cours

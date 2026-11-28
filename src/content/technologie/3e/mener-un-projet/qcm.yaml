@@ -1,0 +1,55 @@
+questions:
+- question: La première étape d'un projet est…
+  choix:
+  - identifier le besoin
+  - fabriquer
+  - tester
+  - présenter
+  bonne: 0
+  explication: Tout part du besoin.
+  revoir: cours
+- question: Un prototype est…
+  choix:
+  - le produit final vendu
+  - un premier modèle pour tester
+  - un croquis
+  - un planning
+  bonne: 1
+  explication: On l'améliore après les tests.
+  revoir: cours
+- question: Un carnet de bord sert à…
+  choix:
+  - garder la trace du travail et des décisions
+  - dessiner l'objet
+  - programmer
+  - calculer le prix
+  bonne: 0
+  explication: Utile en équipe.
+  revoir: cours
+- question: Une solution qui ne respecte pas un critère obligatoire…
+  choix:
+  - est quand même choisie si elle a la meilleure note
+  - est éliminée
+  - est améliorée plus tard
+  - n'a pas d'importance
+  bonne: 1
+  explication: Le critère est obligatoire.
+  revoir: cours
+- question: On teste un prototype en vérifiant…
+  choix:
+  - s'il est joli
+  - le cahier des charges
+  - s'il plaît au professeur
+  - sa couleur
+  bonne: 1
+  explication: Critères et niveaux.
+  revoir: cours
+- question: Dans un planning, il faut prévoir…
+  choix:
+  - une marge pour les imprévus
+  - aucune marge
+  - seulement la présentation
+  - les vacances
+  bonne: 0
+  explication: Les imprévus arrivent toujours.
+  revoir: cours

@@ -1,0 +1,55 @@
+questions:
+- question: Un objet connecté se distingue par…
+  choix:
+  - un capteur
+  - un module de communication
+  - une batterie
+  - un écran
+  bonne: 1
+  explication: Il échange des données.
+  revoir: cours
+- question: La portée du Bluetooth est d'environ…
+  choix:
+  - 10 m
+  - 1 km
+  - 100 km
+  - 1 cm
+  bonne: 0
+  explication: Pour une montre, des écouteurs.
+  revoir: cours
+- question: Les données d'un objet connecté sont souvent stockées…
+  choix:
+  - dans l'objet seulement
+  - sur un serveur
+  - dans le Bluetooth
+  - nulle part
+  bonne: 1
+  explication: Dans le cloud.
+  revoir: cours
+- question: Le RGPD protège…
+  choix:
+  - les objets
+  - les données personnelles
+  - les réseaux Wi-Fi
+  - les batteries
+  bonne: 1
+  explication: En Europe.
+  revoir: cours
+- question: Plus de portée et de débit signifie en général…
+  choix:
+  - plus de consommation d'énergie
+  - moins de consommation
+  - moins de sécurité
+  - un objet plus léger
+  bonne: 0
+  explication: Il faut choisir.
+  revoir: cours
+- question: « Quand un message est reçu, allumer la LED » est…
+  choix:
+  - une boucle
+  - un événement
+  - un capteur
+  - une variable
+  bonne: 1
+  explication: Un déclencheur.
+  revoir: cours
