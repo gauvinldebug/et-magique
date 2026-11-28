@@ -129,5 +129,12 @@ const pleinTitre = titre.toLowerCase().includes(SITE.nom.toLowerCase()) ? titre 
         addEventListener('scroll', () => { if (!boucle) boucle = requestAnimationFrame(maj); }, { passive: true });
       }
     </script>
+    <script>
+      // Profil de l'élève : masque ce qui ne le concerne pas (bouton « Tout afficher » pour revenir).
+      import { appliquer, brancherBoutons } from '../scripts/profil';
+      appliquer();
+      brancherBoutons();
+      addEventListener('profil-change', () => appliquer());
+    </script>
   </body>
 </html>
