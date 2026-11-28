@@ -1,0 +1,64 @@
+exercices:
+  - titre: Nommer la mutation
+    difficulte: 1
+    type: application
+    enonce: |
+      Séquence de référence, ATG GCA TTC. Allèle muté, ATG GCA TTT. De quel type de mutation s'agit-il ?
+    etapes:
+      - type: conc
+        titre: La réponse
+        texte: >-
+          <mark>Une substitution</mark> : le C final est remplacé par un T, la longueur ne change pas.
+
+  - titre: Une mutation silencieuse
+    difficulte: 2
+    type: methode
+    enonce: |
+      Dans l'exercice précédent, le codon TTC (ARNm UUC) devient TTT (ARNm UUU). Les deux codons codent la phénylalanine. Quel est l'effet sur la protéine ?
+    etapes:
+      - type: conc
+        titre: L'effet
+        texte: >-
+          <mark>Aucun</mark> : le même acide aminé est placé, la protéine est identique. C'est une mutation silencieuse, permise par la redondance du code génétique.
+
+  - titre: Le décalage du cadre de lecture
+    difficulte: 2
+    type: bac
+    enonce: |
+      Un gène commence par ATG AAA CCC GGG. Une délétion du premier A du deuxième codon donne ATG AAC CCG GG… Expliquer pourquoi la protéine produite est très différente.
+    etapes:
+      - type: calcul
+        titre: Ce qui se passe
+        texte: Les codons sont lus trois par trois à partir du début. La perte d'un nucléotide décale tous les codons suivants.
+      - type: conc
+        titre: La conséquence
+        texte: >-
+          <mark>Tous les acides aminés après la délétion sont changés</mark>, et un codon stop peut apparaître : la protéine est le plus souvent non fonctionnelle.
+
+  - titre: Un coup de soleil, transmis aux enfants ?
+    difficulte: 2
+    type: piege
+    enonce: |
+      Un élève craint que les mutations provoquées par les UV sur sa peau soient transmises à ses futurs enfants. A-t-il raison ?
+    etapes:
+      - type: piege
+        titre: L'erreur
+        texte: Il confond cellules somatiques et cellules germinales.
+      - type: conc
+        titre: La réponse
+        texte: >-
+          <mark>Non</mark> : les cellules de la peau sont somatiques, leurs mutations ne passent pas dans les gamètes. Elles peuvent en revanche favoriser un cancer de la peau.
+
+  - titre: Mutagène et fréquence
+    difficulte: 3
+    type: bac
+    enonce: |
+      On expose des levures à des doses croissantes d'UV. Le nombre de colonies mutantes passe de 2 pour 10⁶ cellules (sans UV) à 50 pour 10⁶ (forte dose). Les mutations obtenues touchent des gènes variés. Que montrent ces résultats ?
+    etapes:
+      - type: calcul
+        titre: Premier constat
+        texte: Sans UV, il y a déjà quelques mutants, donc des mutations spontanées existent.
+      - type: conc
+        titre: La conclusion
+        texte: >-
+          <mark>Les UV augmentent la fréquence des mutations, sans en choisir la nature</mark> : les gènes touchés sont variés, les mutations restent aléatoires.

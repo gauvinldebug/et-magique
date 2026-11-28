@@ -1,0 +1,48 @@
+questions:
+  - question: Une mutation est…
+    choix: ["une modification de la séquence de l'ADN", "une modification de la protéine sans changement d'ADN", "un changement de chromosome sexuel", "toujours une maladie"]
+    bonne: 0
+    explication: Elle peut ensuite modifier la protéine, ou non.
+    revoir: cours
+
+  - question: Une substitution…
+    choix: ["ajoute un nucléotide", "remplace un nucléotide par un autre", "supprime un gène", "duplique un chromosome"]
+    bonne: 1
+    explication: La longueur de la séquence ne change pas.
+    revoir: cours
+
+  - question: Une insertion d'un nucléotide provoque en général…
+    choix: ["une mutation silencieuse", "un décalage du cadre de lecture", "aucun changement", "une réplication"]
+    bonne: 1
+    explication: Tous les codons suivants sont décalés.
+    revoir: cours
+
+  - question: Les rayons UV sont…
+    choix: ["sans effet sur l'ADN", "un agent mutagène", "une enzyme de réparation", "un type de mutation"]
+    bonne: 1
+    explication: Ils augmentent la fréquence des mutations.
+    revoir: cours
+
+  - question: Une mutation dans une cellule du foie…
+    choix: ["se transmet aux enfants", "ne se transmet pas aux enfants", "se transmet à la moitié des enfants", "est impossible"]
+    bonne: 1
+    explication: C'est une mutation somatique.
+    revoir: exercices
+
+  - question: Une mutation silencieuse…
+    choix: ["supprime la protéine", "ne change pas l'acide aminé", "décale le cadre de lecture", "empêche la réplication"]
+    bonne: 1
+    explication: Plusieurs codons codent le même acide aminé.
+    revoir: exercices
+
+  - question: Les mutations sont à l'origine…
+    choix: ["des nouveaux allèles", "des nouveaux chromosomes uniquement", "de la réplication", "de la mitose"]
+    bonne: 0
+    explication: Elles diversifient les allèles d'un gène.
+    revoir: cours
+
+  - question: Après correction, la réplication fait environ…
+    choix: ["une erreur par nucléotide", "une erreur pour mille nucléotides", "une erreur par milliard de nucléotides", "aucune erreur"]
+    bonne: 2
+    explication: Les systèmes de réparation rattrapent presque toutes les erreurs.
+    revoir: cours

@@ -1,0 +1,71 @@
+exercices:
+  - titre: Le risque d'un couple
+    difficulte: 1
+    type: application
+    enonce: |
+      Deux parents sains ont un premier enfant atteint de mucoviscidose. Quel est le risque que leur deuxième enfant soit malade ?
+    indice: La maladie est récessive.
+    etapes:
+      - type: calcul
+        titre: Les génotypes des parents
+        texte: L'enfant malade a deux allèles mutés, un de chaque parent ; les parents, sains, sont donc hétérozygotes.
+      - type: conc
+        titre: Le risque
+        texte: >-
+          <mark>1 sur 4</mark> à chaque naissance : chaque parent transmet l'allèle muté avec une probabilité 1/2, $\frac12 \times \frac12 = \frac14$.
+
+  - titre: Lire un arbre généalogique
+    difficulte: 2
+    type: methode
+    enonce: |
+      Dans une famille, une maladie touche un enfant dont les deux parents sont sains, ainsi qu'un cousin dont les parents sont aussi sains. L'allèle de la maladie est-il dominant ou récessif ?
+    etapes:
+      - type: calcul
+        titre: Le raisonnement
+        texte: Si l'allèle était dominant, au moins un parent de chaque enfant malade serait malade.
+      - type: conc
+        titre: La conclusion
+        texte: >-
+          <mark>L'allèle est récessif</mark> : les parents sains sont des porteurs hétérozygotes.
+
+  - titre: Âge et cancer
+    difficulte: 2
+    type: bac
+    enonce: |
+      La fréquence de la plupart des cancers augmente fortement après 50 ans. Proposer une explication.
+    etapes:
+      - type: calcul
+        titre: Le mécanisme
+        texte: Un cancer demande en général l'accumulation de plusieurs mutations dans une même cellule.
+      - type: conc
+        titre: L'explication
+        texte: >-
+          <mark>Plus on vit longtemps, plus les cellules ont eu le temps d'accumuler des mutations</mark>, spontanées ou dues à des agents mutagènes : le risque augmente avec l'âge.
+
+  - titre: L'antibiotique crée la résistance ?
+    difficulte: 2
+    type: piege
+    enonce: |
+      Un élève dit : « En prenant des antibiotiques, les bactéries apprennent à leur résister. » Corriger.
+    etapes:
+      - type: piege
+        titre: L'erreur
+        texte: Les bactéries n'apprennent pas, et l'antibiotique ne provoque pas la mutation de résistance.
+      - type: conc
+        titre: La bonne explication
+        texte: >-
+          <mark>Des bactéries résistantes existent déjà par mutation au hasard ; l'antibiotique tue les sensibles et laisse les résistantes se multiplier</mark>. C'est une sélection.
+
+  - titre: Antibiotiques contre la grippe ?
+    difficulte: 2
+    type: bac
+    enonce: |
+      Pourquoi un médecin ne prescrit-il pas d'antibiotique pour une grippe, et en quoi ce choix aide-t-il à lutter contre les résistances ?
+    etapes:
+      - type: calcul
+        titre: Contre un virus
+        texte: La grippe est causée par un virus, les antibiotiques n'agissent que sur les bactéries.
+      - type: conc
+        titre: L'intérêt
+        texte: >-
+          <mark>Un antibiotique inutile ne soigne pas la grippe mais sélectionne des bactéries résistantes</mark> dans l'organisme. Moins on en prend sans raison, moins les résistances se répandent.

@@ -1,0 +1,69 @@
+exercices:
+  - titre: Compléter un brin
+    difficulte: 1
+    type: application
+    enonce: |
+      Un brin d'ADN porte la séquence ATGCCTAG. Écrire la séquence du brin complémentaire fabriqué lors de la réplication.
+    indice: A s'associe à T, G à C.
+    etapes:
+      - type: conc
+        titre: La séquence
+        texte: >-
+          <mark>TACGGATC</mark>.
+
+  - titre: Lire une courbe de quantité d'ADN
+    difficulte: 2
+    type: methode
+    enonce: |
+      La quantité d'ADN d'une cellule passe de 6 pg à 12 pg en quelques heures, reste à 12 pg, puis chute brusquement à 6 pg. Nommer les étapes correspondantes.
+    etapes:
+      - type: calcul
+        titre: La hausse
+        texte: Le doublement de 6 à 12 pg correspond à la réplication, en phase S de l'interphase.
+      - type: conc
+        titre: La chute
+        texte: >-
+          <mark>La chute brutale correspond à la fin de la mitose</mark> : l'ADN est partagé entre deux cellules filles.
+
+  - titre: Meselson et Stahl
+    difficulte: 2
+    type: bac
+    enonce: |
+      Des bactéries cultivées longtemps avec de l'azote lourd ¹⁵N sont transférées dans un milieu à azote léger ¹⁴N. Après une réplication, tout l'ADN a une densité intermédiaire. Après deux réplications, la moitié est intermédiaire, la moitié légère. Quel mode de réplication cela démontre-t-il ?
+    etapes:
+      - type: calcul
+        titre: Première génération
+        texte: Densité intermédiaire, donc chaque molécule a un brin lourd (ancien) et un brin léger (nouveau).
+      - type: conc
+        titre: Le mode
+        texte: >-
+          <mark>La réplication est semi-conservative</mark> : la deuxième génération donne alors des molécules hybrides et des molécules entièrement légères, en quantités égales, comme observé.
+
+  - titre: Deux chromatides, une paire ?
+    difficulte: 2
+    type: piege
+    enonce: |
+      En métaphase, un élève compte 46 chromosomes à deux chromatides dans une cellule humaine et conclut qu'il y a 92 chromosomes. Qu'en penser ?
+    etapes:
+      - type: piege
+        titre: L'erreur
+        texte: Il compte chaque chromatide comme un chromosome.
+      - type: conc
+        titre: La réponse
+        texte: >-
+          <mark>Il y a 46 chromosomes, chacun formé de deux chromatides identiques</mark>. Après l'anaphase, chaque cellule fille en recevra 46, à une chromatide.
+
+  - titre: Durée des phases
+    difficulte: 3
+    type: bac
+    enonce: |
+      Dans une racine d'oignon, sur 1 000 cellules observées, 900 sont en interphase, 60 en prophase, 15 en métaphase, 10 en anaphase et 15 en télophase. Le cycle dure 24 h. Estimer la durée de la mitose.
+    indice: La proportion de cellules dans une phase est proportionnelle à sa durée.
+    etapes:
+      - type: calcul
+        titre: La proportion
+        texte: Cellules en mitose, $60 + 15 + 10 + 15 = 100$, soit 10 %.
+      - type: conc
+        titre: La durée
+        texte: >-
+          <mark>La mitose dure environ $0{,}10 \times 24 = 2{,}4$ h</mark>, l'interphase environ 21,6 h.

@@ -1,0 +1,68 @@
+exercices:
+  - titre: Transcrire
+    difficulte: 1
+    type: application
+    enonce: |
+      Le brin transcrit d'un gène est TAC GGA TTC. Écrire l'ARNm correspondant.
+    indice: Complémentarité, avec U en face de A.
+    etapes:
+      - type: conc
+        titre: L'ARNm
+        texte: >-
+          <mark>AUG CCU AAG</mark>.
+
+  - titre: Traduire
+    difficulte: 1
+    type: methode
+    enonce: |
+      Traduire l'ARNm AUG CCU AAG UAA, sachant que AUG = méthionine, CCU = proline, AAG = lysine, UAA = stop.
+    etapes:
+      - type: conc
+        titre: La séquence
+        texte: >-
+          <mark>Méthionine, proline, lysine</mark>, puis arrêt au codon stop.
+
+  - titre: Un gène, plusieurs protéines
+    difficulte: 2
+    type: bac
+    enonce: |
+      Le gène de la calcitonine donne une hormone dans la thyroïde et un neuropeptide différent dans le cerveau. Comment un même gène peut-il donner deux protéines ?
+    etapes:
+      - type: calcul
+        titre: Le mécanisme
+        texte: Le pré-ARNm est le même, mais les exons conservés lors de la maturation diffèrent selon le tissu.
+      - type: conc
+        titre: La réponse
+        texte: >-
+          <mark>Par épissage alternatif</mark> : deux ARNm différents, donc deux protéines différentes.
+
+  - titre: T dans l'ARN ?
+    difficulte: 1
+    type: piege
+    enonce: |
+      Un élève écrit l'ARNm d'un gène : ATG TTA CCG. Qu'est-ce qui ne va pas ?
+    etapes:
+      - type: piege
+        titre: L'erreur
+        texte: L'ARN ne contient pas de thymine.
+      - type: conc
+        titre: La correction
+        texte: >-
+          <mark>Il fallait écrire AUG UUA CCG</mark> : U remplace T dans l'ARN.
+
+  - titre: De l'allèle au phénotype
+    difficulte: 3
+    type: bac
+    enonce: |
+      Dans l'allèle de la drépanocytose, le codon GAG (acide glutamique) du gène de la β-globine devient GTG (valine). Décrire le phénotype aux trois échelles.
+    etapes:
+      - type: calcul
+        titre: Échelle moléculaire
+        texte: Un seul acide aminé change dans la β-globine, mais l'hémoglobine S formée a tendance à s'agréger en longues fibres quand elle manque d'oxygène.
+      - type: calcul
+        titre: Échelle cellulaire
+        texte: Les globules rouges se déforment en faucille, deviennent rigides et fragiles.
+      - type: conc
+        titre: Échelle de l'organisme
+        texte: >-
+          <mark>Anémie, douleurs, obstruction des petits vaisseaux</mark> : une substitution d'un seul nucléotide suffit à changer le phénotype à toutes les échelles.

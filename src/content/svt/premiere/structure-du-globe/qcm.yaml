@@ -1,0 +1,48 @@
+questions:
+  - question: Les ondes S ne traversent pas…
+    choix: ["les roches solides", "les liquides", "le manteau", "la croûte"]
+    bonne: 1
+    explication: Ce sont des ondes de cisaillement.
+    revoir: cours
+
+  - question: La discontinuité de Gutenberg sépare…
+    choix: ["la croûte et le manteau", "le manteau et le noyau", "le noyau externe et la graine", "la lithosphère et l'asthénosphère"]
+    bonne: 1
+    explication: Elle est vers 2 900 km de profondeur.
+    revoir: cours
+
+  - question: Le noyau externe est…
+    choix: ["solide", "liquide", "gazeux", "en granite"]
+    bonne: 1
+    explication: Les ondes S n'y passent pas.
+    revoir: cours
+
+  - question: La croûte continentale est surtout formée de…
+    choix: ["basalte", "granite", "péridotite", "fer"]
+    bonne: 1
+    explication: La croûte océanique est en basalte et gabbro.
+    revoir: cours
+
+  - question: Le manteau est formé de…
+    choix: ["granite", "péridotite", "basalte", "nickel"]
+    bonne: 1
+    explication: Une roche dense, riche en olivine.
+    revoir: cours
+
+  - question: La lithosphère comprend…
+    choix: ["seulement la croûte", "la croûte et le haut du manteau", "le manteau entier", "le noyau"]
+    bonne: 1
+    explication: Elle est rigide et découpée en plaques.
+    revoir: cours
+
+  - question: L'asthénosphère est…
+    choix: ["liquide", "solide et ductile", "gazeuse", "en granite"]
+    bonne: 1
+    explication: Elle se déforme lentement.
+    revoir: exercices
+
+  - question: Sous un océan, le Moho est à environ…
+    choix: ["7 km", "30 km", "70 km", "2 900 km"]
+    bonne: 0
+    explication: La croûte océanique est fine.
+    revoir: cours

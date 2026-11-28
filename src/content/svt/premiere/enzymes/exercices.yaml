@@ -1,0 +1,67 @@
+exercices:
+  - titre: Lire un optimum
+    difficulte: 1
+    type: application
+    enonce: |
+      L'activité d'une enzyme vaut 10 % à 10 °C, 100 % à 40 °C et 0 % à 70 °C. Quel est approximativement son optimum, et que s'est-il passé à 70 °C ?
+    etapes:
+      - type: conc
+        titre: La réponse
+        texte: >-
+          <mark>Optimum vers 40 °C ; à 70 °C, l'enzyme est dénaturée</mark>, son site actif a perdu sa forme.
+
+  - titre: Froid ou chaud, réversible ?
+    difficulte: 2
+    type: methode
+    enonce: |
+      On place une amylase à 0 °C pendant une heure, puis à 37 °C : elle fonctionne normalement. On la place à 90 °C pendant une heure, puis à 37 °C : elle ne fonctionne plus. Interpréter.
+    etapes:
+      - type: calcul
+        titre: Le froid
+        texte: Au froid, les molécules bougent lentement, les rencontres enzyme-substrat sont rares, mais la structure de l'enzyme est intacte.
+      - type: conc
+        titre: La chaleur
+        texte: >-
+          <mark>La chaleur forte dénature l'enzyme de façon irréversible</mark>, alors que le froid ne fait que la ralentir.
+
+  - titre: Amidon ou cellulose
+    difficulte: 2
+    type: bac
+    enonce: |
+      L'amylase hydrolyse l'amidon mais pas la cellulose, alors que les deux sont formés uniquement de glucose. Expliquer.
+    etapes:
+      - type: calcul
+        titre: La différence
+        texte: Les molécules de glucose n'y sont pas liées de la même façon, les deux polymères n'ont donc pas la même forme.
+      - type: conc
+        titre: L'explication
+        texte: >-
+          <mark>Le site actif de l'amylase est complémentaire de la forme de l'amidon, pas de celle de la cellulose</mark> : c'est la spécificité de substrat.
+
+  - titre: L'enzyme s'use ?
+    difficulte: 1
+    type: piege
+    enonce: |
+      Un élève pense qu'il faut autant de molécules d'enzyme que de molécules de substrat à transformer. Qu'en penser ?
+    etapes:
+      - type: piege
+        titre: L'erreur
+        texte: Il considère l'enzyme comme un réactif consommé.
+      - type: conc
+        titre: La réponse
+        texte: >-
+          <mark>Une enzyme ressort intacte de chaque réaction</mark> et peut en catalyser des milliers par seconde : une petite quantité suffit.
+
+  - titre: Une maladie métabolique
+    difficulte: 3
+    type: bac
+    enonce: |
+      Dans la phénylcétonurie, une mutation rend inactive l'enzyme qui transforme la phénylalanine en tyrosine. La phénylalanine s'accumule et devient toxique pour le cerveau. Pourquoi un régime pauvre en phénylalanine limite-t-il les troubles ?
+    etapes:
+      - type: calcul
+        titre: Le blocage
+        texte: Sans enzyme fonctionnelle, la phénylalanine apportée par l'alimentation n'est plus transformée et s'accumule.
+      - type: conc
+        titre: Le régime
+        texte: >-
+          <mark>Moins de phénylalanine apportée, moins d'accumulation</mark> : on compense l'enzyme absente en limitant son substrat.

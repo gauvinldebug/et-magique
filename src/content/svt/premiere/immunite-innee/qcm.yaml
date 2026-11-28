@@ -1,0 +1,48 @@
+questions:
+  - question: L'immunité innée est…
+    choix: ["lente et spécifique", "rapide et non spécifique", "acquise par la vaccination", "réservée aux adultes"]
+    bonne: 1
+    explication: Elle est présente dès la naissance et réagit en quelques minutes.
+    revoir: cours
+
+  - question: La rougeur d'une inflammation est due…
+    choix: ["à la dilatation des vaisseaux sanguins", "aux bactéries", "aux anticorps", "à la fièvre"]
+    bonne: 0
+    explication: Le sang afflue vers la zone infectée.
+    revoir: cours
+
+  - question: Les sentinelles reconnaissent les microbes grâce…
+    choix: ["aux anticorps", "à des récepteurs de motifs moléculaires communs", "à leur couleur", "à l'ADN humain"]
+    bonne: 1
+    explication: Ces motifs sont partagés par de nombreux microbes.
+    revoir: cours
+
+  - question: La phagocytose consiste à…
+    choix: ["fabriquer des anticorps", "englober et digérer un microbe", "dilater les vaisseaux", "produire de l'histamine"]
+    bonne: 1
+    explication: Réalisée par les macrophages et les granulocytes.
+    revoir: cours
+
+  - question: L'histamine est…
+    choix: ["un médiateur de l'inflammation", "un antibiotique", "une bactérie", "un anticorps"]
+    bonne: 0
+    explication: Libérée notamment par les mastocytes.
+    revoir: cours
+
+  - question: L'ibuprofène agit en…
+    choix: ["tuant les bactéries", "bloquant la fabrication des prostaglandines", "produisant des anticorps", "renforçant l'inflammation"]
+    bonne: 1
+    explication: Il soulage la douleur et la fièvre.
+    revoir: cours
+
+  - question: Laquelle n'est PAS une barrière naturelle ?
+    choix: ["la peau", "le mucus", "l'acidité de l'estomac", "les anticorps"]
+    bonne: 3
+    explication: Les anticorps appartiennent à l'immunité adaptative.
+    revoir: cours
+
+  - question: Les cellules dendritiques font le lien avec l'immunité adaptative car elles…
+    choix: ["fabriquent des anticorps", "présentent des fragments du microbe aux lymphocytes", "font la photosynthèse", "bloquent les prostaglandines"]
+    bonne: 1
+    explication: Elles migrent vers les ganglions lymphatiques.
+    revoir: exercices
