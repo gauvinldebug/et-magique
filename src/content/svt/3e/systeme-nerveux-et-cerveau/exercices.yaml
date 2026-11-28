@@ -1,0 +1,51 @@
+exercices:
+- titre: Remettre le trajet dans l'ordre
+  difficulte: 1
+  type: application
+  enonce: |
+    Remettre dans l'ordre : muscle, nerf sensitif, récepteur, cerveau, nerf moteur.
+  indice: Du capteur jusqu'à l'action.
+  etapes:
+  - type: conc
+    titre: L'ordre
+    texte: <mark>Récepteur, nerf sensitif, cerveau, nerf moteur, muscle</mark>.
+- titre: Le temps de réaction
+  difficulte: 2
+  type: methode
+  enonce: |
+    Pour attraper une règle qu'on lâche, Nina met 0,18 s. Après une nuit de 4 heures, elle met 0,26 s. De combien de pourcents son temps de réaction a-t-il augmenté ?
+  indice: Différence divisée par le temps de départ.
+  etapes:
+  - type: calcul
+    titre: La différence
+    texte: $0{,}26 - 0{,}18 = 0{,}08$ s.
+  - type: conc
+    titre: Le pourcentage
+    texte: <mark>$0{,}08 / 0{,}18 \approx 0{,}44$, soit environ 44 % de plus</mark>.
+- titre: L'œil qui voit
+  difficulte: 2
+  type: piege
+  enonce: |
+    « Quand on regarde un objet, c'est l'œil qui voit l'image. » Corriger.
+  indice: Que fait l'œil, exactement ?
+  etapes:
+  - type: piege
+    titre: L'erreur
+    texte: L'œil est un capteur, il ne « voit » pas.
+  - type: conc
+    titre: La correction
+    texte: <mark>L'œil transforme la lumière en message nerveux ; c'est le cerveau qui construit l'image</mark>.
+- titre: Le réflexe de la plaque chaude
+  difficulte: 3
+  type: brevet
+  enonce: |
+    Quand on touche une plaque brûlante, on retire la main avant même d'avoir ressenti la douleur.
+    Expliquer cette observation en comparant le trajet du message dans un réflexe et dans un mouvement volontaire.
+  indice: Quel centre nerveux commande le réflexe ?
+  etapes:
+  - type: calcul
+    titre: Le réflexe
+    texte: 'Le message va du récepteur à la moelle épinière, qui commande directement le muscle : trajet court.'
+  - type: conc
+    titre: La douleur
+    texte: '<mark>Le message de douleur arrive au cerveau un peu plus tard</mark> : la main est déjà retirée quand on prend conscience de la brûlure.'

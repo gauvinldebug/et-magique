@@ -1,0 +1,55 @@
+questions:
+- question: Une cellule humaine normale contient…
+  choix:
+  - 23 chromosomes
+  - 46 chromosomes
+  - 92 chromosomes
+  - 2 chromosomes
+  bonne: 1
+  explication: Soit 23 paires.
+  revoir: cours
+- question: Un spermatozoïde contient…
+  choix:
+  - 46 chromosomes
+  - 23 chromosomes
+  - 1 chromosome
+  - aucun chromosome
+  bonne: 1
+  explication: Un chromosome de chaque paire.
+  revoir: cours
+- question: Chez un garçon, la 23e paire est…
+  choix:
+  - XX
+  - XY
+  - YY
+  - X seul
+  bonne: 1
+  explication: 'Chez une fille : XX.'
+  revoir: cours
+- question: Un allèle est…
+  choix:
+  - un chromosome
+  - une version d'un gène
+  - une cellule
+  - un caryotype
+  bonne: 1
+  explication: A, B et O sont des allèles du groupe sanguin.
+  revoir: cours
+- question: La mitose donne des cellules…
+  choix:
+  - avec 23 chromosomes
+  - avec les mêmes chromosomes que la cellule mère
+  - toutes différentes
+  - sans ADN
+  bonne: 1
+  explication: La cellule copie ses chromosomes avant.
+  revoir: cours
+- question: Les chromosomes sont faits…
+  choix:
+  - de sucre
+  - d'ADN
+  - de graisse
+  - d'eau
+  bonne: 1
+  explication: L'ADN porte les gènes.
+  revoir: cours

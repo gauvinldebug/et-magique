@@ -1,0 +1,55 @@
+questions:
+- question: L'altération, c'est…
+  choix:
+  - le transport des débris
+  - la dégradation de la roche sur place
+  - le dépôt en couches
+  - la formation d'un volcan
+  bonne: 1
+  explication: Puis vient l'érosion.
+  revoir: cours
+- question: Dans le granite, le minéral le plus résistant est…
+  choix:
+  - le feldspath
+  - le mica
+  - le quartz
+  - l'argile
+  bonne: 2
+  explication: Il reste en grains.
+  revoir: cours
+- question: Le grès se forme à partir…
+  choix:
+  - de coquilles
+  - de sable
+  - de lave
+  - de glace
+  bonne: 1
+  explication: Des grains de sable cimentés.
+  revoir: cours
+- question: Les sédiments se déposent surtout…
+  choix:
+  - au sommet des montagnes
+  - dans les bassins (lacs, mers)
+  - dans les volcans
+  - dans le noyau
+  bonne: 1
+  explication: Là où le courant ralentit.
+  revoir: cours
+- question: Une vallée en U a été creusée par…
+  choix:
+  - une rivière
+  - un glacier
+  - le vent
+  - un volcan
+  bonne: 1
+  explication: La rivière creuse en V.
+  revoir: cours
+- question: En général, dans une pile de couches, la plus ancienne est…
+  choix:
+  - en haut
+  - en bas
+  - au milieu
+  - impossible à savoir
+  bonne: 1
+  explication: Elle s'est déposée la première.
+  revoir: cours

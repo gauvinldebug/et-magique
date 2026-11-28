@@ -1,0 +1,51 @@
+exercices:
+- titre: Lire un cycle
+  difficulte: 1
+  type: application
+  enonce: |
+    Un cycle dure 28 jours. Les règles commencent le 1er mars. Vers quelle date se produit l'ovulation, en moyenne ?
+  indice: L'ovulation a lieu vers le 14e jour.
+  etapes:
+  - type: conc
+    titre: La date
+    texte: <mark>Vers le 14 mars</mark>, en sachant que cette date varie d'un cycle à l'autre.
+- titre: Le rôle de la testostérone
+  difficulte: 2
+  type: methode
+  enonce: |
+    Un embryon XY dont les cellules ne réagissent pas à la testostérone développe un appareil génital externe de type féminin. Que montre cette observation ?
+  indice: Qui fabrique la testostérone, et qui doit y répondre ?
+  etapes:
+  - type: calcul
+    titre: L'observation
+    texte: Les testicules se forment et produisent de la testostérone, mais les tissus ne la perçoivent pas.
+  - type: conc
+    titre: La conclusion
+    texte: <mark>C'est la testostérone, et la réponse des cellules à cette hormone, qui masculinise l'appareil génital</mark>.
+- titre: La pilule suffit ?
+  difficulte: 2
+  type: piege
+  enonce: |
+    « Je prends la pilule, donc je suis protégée de tout. » Corriger.
+  indice: La pilule agit-elle sur les virus et les bactéries ?
+  etapes:
+  - type: piege
+    titre: L'erreur
+    texte: La pilule agit sur l'ovulation, pas sur les microbes.
+  - type: conc
+    titre: La correction
+    texte: <mark>Elle protège d'une grossesse, pas des IST</mark>. Pour se protéger des IST, il faut le préservatif.
+- titre: La pilule et l'horloge
+  difficulte: 3
+  type: bac
+  enonce: |
+    Une pilule contient des hormones proches des œstrogènes et de la progestérone. Prises en continu, ces hormones freinent l'activité de l'hypothalamus et de l'hypophyse.
+    Expliquer comment cette pilule empêche une grossesse.
+  indice: Que commandent l'hypothalamus et l'hypophyse ?
+  etapes:
+  - type: calcul
+    titre: Le frein
+    texte: L'hypothalamus et l'hypophyse commandent la maturation des follicules et l'ovulation.
+  - type: conc
+    titre: L'effet
+    texte: '<mark>Freinés, ils ne déclenchent pas d''ovulation : sans ovocyte, pas de fécondation</mark>.'

@@ -1,0 +1,55 @@
+questions:
+- question: Ce qui oriente l'embryon vers un appareil génital masculin, c'est…
+  choix:
+  - le chromosome X
+  - un gène du chromosome Y
+  - les œstrogènes
+  - l'utérus
+  bonne: 1
+  explication: Il entraîne la formation des testicules.
+  revoir: cours
+- question: La puberté est déclenchée par…
+  choix:
+  - l'estomac
+  - l'hypothalamus et l'hypophyse
+  - les poumons
+  - le cœur
+  bonne: 1
+  explication: À la base du cerveau.
+  revoir: cours
+- question: L'ovulation a lieu en moyenne…
+  choix:
+  - le 1er jour du cycle
+  - vers le 14e jour
+  - le 28e jour
+  - tous les jours
+  bonne: 1
+  explication: La date varie.
+  revoir: cours
+- question: Quelle méthode protège aussi des IST ?
+  choix:
+  - la pilule
+  - l'implant
+  - le préservatif
+  - la contraception d'urgence
+  bonne: 2
+  explication: C'est la seule.
+  revoir: cours
+- question: Chez l'homme, les spermatozoïdes sont produits…
+  choix:
+  - une fois par mois
+  - en continu à partir de la puberté
+  - seulement avant la naissance
+  - jamais après 30 ans
+  bonne: 1
+  explication: Contrairement au cycle féminin.
+  revoir: cours
+- question: Une relation sexuelle suppose…
+  choix:
+  - l'accord d'un seul partenaire
+  - le consentement libre des deux partenaires
+  - un âge précis seulement
+  - un contrat
+  bonne: 1
+  explication: Il peut être retiré à tout moment.
+  revoir: cours

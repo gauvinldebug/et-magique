@@ -1,0 +1,55 @@
+questions:
+- question: Deux espèces qui partagent des caractères ont…
+  choix:
+  - aucun lien
+  - un ancêtre commun
+  - toujours le même habitat
+  - la même taille
+  bonne: 1
+  explication: Elles ont hérité de ces caractères.
+  revoir: cours
+- question: Un fossile est…
+  choix:
+  - un animal vivant
+  - un reste ou une trace d'être vivant conservé dans une roche
+  - un minéral
+  - une plante actuelle
+  bonne: 1
+  explication: Il raconte l'histoire de la vie.
+  revoir: cours
+- question: La sélection naturelle a été décrite par…
+  choix:
+  - Pasteur
+  - Darwin
+  - Newton
+  - Mendel
+  bonne: 1
+  explication: En 1859.
+  revoir: cours
+- question: Ce qui évolue, c'est…
+  choix:
+  - un individu
+  - une population
+  - un fossile
+  - une roche
+  bonne: 1
+  explication: Les allèles changent de fréquence.
+  revoir: cours
+- question: Le plus proche parent actuel de l'humain est…
+  choix:
+  - le gorille
+  - le chimpanzé
+  - le chien
+  - le dauphin
+  bonne: 1
+  explication: Avec le bonobo.
+  revoir: cours
+- question: Archaeopteryx avait…
+  choix:
+  - des plumes et des dents
+  - des écailles seulement
+  - des nageoires
+  - des branchies
+  bonne: 0
+  explication: Des caractères intermédiaires entre reptiles et oiseaux.
+  revoir: cours

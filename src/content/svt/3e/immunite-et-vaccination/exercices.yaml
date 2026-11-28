@@ -1,0 +1,51 @@
+exercices:
+- titre: Les signes de l'inflammation
+  difficulte: 1
+  type: application
+  enonce: |
+    Citer les quatre signes d'une réaction inflammatoire.
+  indice: Ce que tu vois et ressens autour d'une plaie.
+  etapes:
+  - type: conc
+    titre: La réponse
+    texte: <mark>Rougeur, chaleur, gonflement, douleur</mark>.
+- titre: Lire une courbe d'anticorps
+  difficulte: 2
+  type: methode
+  enonce: |
+    Après un premier contact avec un microbe, les anticorps apparaissent au bout de 10 jours et restent en petite quantité. Lors d'un second contact, ils apparaissent en 3 jours et en quantité dix fois plus grande. Expliquer la différence.
+  indice: Qu'est-ce qui reste après le premier contact ?
+  etapes:
+  - type: calcul
+    titre: Le premier contact
+    texte: 'La réponse est lente : il faut le temps que les lymphocytes reconnaissent le microbe.'
+  - type: conc
+    titre: Le second contact
+    texte: '<mark>Des lymphocytes mémoire existent déjà : la réponse est plus rapide et plus forte</mark>.'
+- titre: Le vaccin pour guérir
+  difficulte: 2
+  type: piege
+  enonce: |
+    « J'ai la grippe, je vais me faire vacciner pour guérir plus vite. » Corriger.
+  indice: Le vaccin agit-il avant ou après la maladie ?
+  etapes:
+  - type: piege
+    titre: L'erreur
+    texte: Le vaccin met plusieurs jours à créer une mémoire ; il ne soigne pas une maladie déjà là.
+  - type: conc
+    titre: La correction
+    texte: <mark>Le vaccin se fait avant, pour ne pas tomber malade</mark>. Quand on est malade, c'est le système immunitaire qui combat.
+- titre: Pourquoi tout le monde ?
+  difficulte: 3
+  type: brevet
+  enonce: |
+    Un bébé de 2 mois est trop jeune pour être vacciné contre la rougeole. Sa famille et ses camarades de crèche, eux, sont tous vaccinés.
+    Expliquer pourquoi le bébé est quand même protégé.
+  indice: Par qui le bébé pourrait-il attraper la rougeole ?
+  etapes:
+  - type: calcul
+    titre: La transmission
+    texte: La rougeole se transmet d'une personne malade à une autre.
+  - type: conc
+    titre: La protection collective
+    texte: <mark>Les personnes autour de lui, vaccinées, ne tombent pas malades et ne lui transmettent pas le virus</mark>.

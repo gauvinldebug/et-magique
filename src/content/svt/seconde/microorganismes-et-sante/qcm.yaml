@@ -1,0 +1,55 @@
+questions:
+- question: Le microbiote, c'est…
+  choix:
+  - un virus
+  - l'ensemble des microorganismes qui vivent dans et sur le corps
+  - un organe
+  - un vaccin
+  bonne: 1
+  explication: Surtout des bactéries.
+  revoir: cours
+- question: Un antibiotique agit sur…
+  choix:
+  - les virus
+  - les bactéries
+  - toutes les maladies
+  - les cellules humaines
+  bonne: 1
+  explication: Jamais sur les virus.
+  revoir: cours
+- question: Un virus…
+  choix:
+  - est une cellule
+  - se multiplie seulement dans une cellule hôte
+  - mesure 1 mm
+  - se soigne par antibiotiques
+  bonne: 1
+  explication: Il détourne la cellule.
+  revoir: cours
+- question: Le vaccin…
+  choix:
+  - soigne une maladie en cours
+  - crée une mémoire immunitaire
+  - tue les bactéries
+  - remplace le microbiote
+  bonne: 1
+  explication: Il prépare l'organisme à l'avance.
+  revoir: cours
+- question: La protection collective…
+  choix:
+  - ne concerne que les vaccinés
+  - protège aussi ceux qui ne peuvent pas être vaccinés
+  - n'existe pas
+  - remplace l'hygiène
+  bonne: 1
+  explication: Le pathogène circule mal.
+  revoir: cours
+- question: Utiliser trop d'antibiotiques…
+  choix:
+  - rend les bactéries plus faibles
+  - sélectionne des bactéries résistantes
+  - protège des virus
+  - n'a aucun effet
+  bonne: 1
+  explication: Il faut les réserver aux bonnes indications.
+  revoir: cours

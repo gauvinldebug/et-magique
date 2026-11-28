@@ -1,0 +1,55 @@
+questions:
+- question: L'ADN est formé de…
+  choix:
+  - un brin
+  - deux brins en double hélice
+  - trois brins
+  - protéines seulement
+  bonne: 1
+  explication: Les deux brins sont complémentaires.
+  revoir: cours
+- question: La base complémentaire de A est…
+  choix:
+  - C
+  - G
+  - T
+  - A
+  bonne: 2
+  explication: A avec T, C avec G.
+  revoir: cours
+- question: Un gène est…
+  choix:
+  - une protéine
+  - une portion d'ADN
+  - un chromosome entier
+  - une cellule
+  bonne: 1
+  explication: Sa séquence code une protéine.
+  revoir: cours
+- question: L'ADN humain compte environ…
+  choix:
+  - 20 000 gènes
+  - 3 gènes
+  - 3 milliards de gènes
+  - 46 gènes
+  bonne: 0
+  explication: 46, c'est le nombre de chromosomes.
+  revoir: cours
+- question: Chez une bactérie, l'ADN est…
+  choix:
+  - dans le noyau
+  - libre dans le cytoplasme
+  - absent
+  - dans les chloroplastes
+  bonne: 1
+  explication: Les bactéries n'ont pas de noyau.
+  revoir: cours
+- question: La transgenèse est possible car…
+  choix:
+  - l'ADN est universel
+  - les bactéries ont un noyau
+  - toutes les protéines sont identiques
+  - les gènes sont des protéines
+  bonne: 0
+  explication: Même alphabet, même lecture.
+  revoir: cours

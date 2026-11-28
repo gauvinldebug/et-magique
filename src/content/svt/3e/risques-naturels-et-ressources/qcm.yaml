@@ -1,0 +1,55 @@
+questions:
+- question: Le risque naît de la rencontre…
+  choix:
+  - de deux séismes
+  - d'un aléa et d'enjeux
+  - de deux volcans
+  - de la pluie et du vent
+  bonne: 1
+  explication: Sans enjeux, pas de risque majeur.
+  revoir: cours
+- question: Un enjeu, c'est…
+  choix:
+  - un phénomène naturel
+  - ce qui peut être touché
+  - une prévision
+  - un volcan
+  bonne: 1
+  explication: Personnes, maisons, routes.
+  revoir: cours
+- question: On sait prévoir quelques jours à l'avance…
+  choix:
+  - la date d'un séisme
+  - une éruption ou une crue
+  - tous les risques
+  - aucun risque
+  bonne: 1
+  explication: Pas la date des séismes.
+  revoir: cours
+- question: Une construction parasismique est un moyen de…
+  choix:
+  - prévision
+  - prévention
+  - pollution
+  - surveillance
+  bonne: 1
+  explication: Elle réduit la vulnérabilité.
+  revoir: cours
+- question: Quelle ressource n'est pas renouvelable ?
+  choix:
+  - le bois
+  - le pétrole
+  - l'eau douce
+  - les poissons
+  bonne: 1
+  explication: Il met des millions d'années à se former.
+  revoir: cours
+- question: Une ressource renouvelable peut s'épuiser si…
+  choix:
+  - on la protège
+  - on la prélève plus vite qu'elle ne se renouvelle
+  - il pleut
+  - elle est loin
+  bonne: 1
+  explication: Comme la morue au Canada.
+  revoir: cours

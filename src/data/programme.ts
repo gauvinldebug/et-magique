@@ -121,6 +121,26 @@ export const PROGRAMME: Record<string, Record<string, ChapitreProgramme[]>> = {
   // 6e : sciences et technologie (cycle 3, BO du 22 juin 2023), partie matière, mouvement, énergie et signaux.
   // SVT, spécialité : 1re BO spécial n°1 du 22/01/2019, Tle BO spécial n°8 du 25/07/2019.
   svt: {
+    // Collège, cycle 4 : BO n°31 du 30/07/2020, réparti par année.
+    '3e': [
+      { slug: 'genetique-et-heredite', titre: 'Chromosomes, gènes et hérédité' },
+      { slug: 'evolution-des-especes', titre: "L'évolution des êtres vivants" },
+      { slug: 'immunite-et-vaccination', titre: 'Le système immunitaire et la vaccination' },
+      { slug: 'alimentation-et-sante', titre: 'Alimentation, digestion et santé' },
+      { slug: 'systeme-nerveux-et-cerveau', titre: 'Le système nerveux et le cerveau' },
+      { slug: 'risques-naturels-et-ressources', titre: 'Risques naturels, ressources et activités humaines' },
+    ],
+    // Seconde : BO spécial n°1 du 22/01/2019.
+    seconde: [
+      { slug: 'organisme-pluricellulaire', titre: "L'organisme pluricellulaire, un ensemble de cellules spécialisées" },
+      { slug: 'metabolisme-cellulaire', titre: 'Le métabolisme des cellules' },
+      { slug: 'l-adn', titre: "L'ADN, support de l'information génétique" },
+      { slug: 'biodiversite-et-evolution', titre: "La biodiversité, résultat et étape de l'évolution" },
+      { slug: 'erosion-et-paysages', titre: 'Géosciences et dynamique des paysages' },
+      { slug: 'agrosystemes-et-sols', titre: 'Agrosystèmes et développement durable' },
+      { slug: 'reproduction-et-sexualite', titre: 'Procréation et sexualité humaine' },
+      { slug: 'microorganismes-et-sante', titre: 'Microorganismes et santé' },
+    ],
     premiere: [
       { slug: 'divisions-cellulaires', titre: "Réplication de l'ADN et divisions cellulaires" },
       { slug: 'mutations-et-variabilite', titre: "Mutations de l'ADN et variabilité génétique" },

@@ -1,0 +1,55 @@
+questions:
+- question: Une cellule autotrophe…
+  choix:
+  - prélève de la matière organique
+  - fabrique sa matière organique à partir de matière minérale
+  - ne respire pas
+  - n'a pas de chloroplastes
+  bonne: 1
+  explication: Grâce à la lumière pour les plantes.
+  revoir: cours
+- question: La photosynthèse a lieu dans…
+  choix:
+  - les mitochondries
+  - les chloroplastes
+  - le noyau
+  - la membrane
+  bonne: 1
+  explication: Ils contiennent la chlorophylle.
+  revoir: cours
+- question: La respiration consomme…
+  choix:
+  - du CO₂
+  - du glucose et du dioxygène
+  - de la lumière
+  - de l'ADN
+  bonne: 1
+  explication: Et produit CO₂, eau et énergie.
+  revoir: cours
+- question: Les plantes respirent…
+  choix:
+  - jamais
+  - seulement la nuit
+  - jour et nuit
+  - seulement en hiver
+  bonne: 2
+  explication: Le jour, la photosynthèse masque la respiration.
+  revoir: cours
+- question: La fermentation se fait…
+  choix:
+  - avec beaucoup de dioxygène
+  - sans dioxygène
+  - seulement dans les chloroplastes
+  - seulement chez les animaux
+  bonne: 1
+  explication: Elle produit moins d'énergie.
+  revoir: cours
+- question: Une enzyme est…
+  choix:
+  - un sucre
+  - une protéine qui accélère une réaction précise
+  - un lipide
+  - un gène
+  bonne: 1
+  explication: Elle est spécifique.
+  revoir: cours

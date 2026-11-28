@@ -1,0 +1,55 @@
+questions:
+- question: La première barrière contre les microbes est…
+  choix:
+  - le cœur
+  - la peau et les muqueuses
+  - les os
+  - le cerveau
+  bonne: 1
+  explication: Elles empêchent les microbes d'entrer.
+  revoir: cours
+- question: La phagocytose, c'est…
+  choix:
+  - fabriquer des anticorps
+  - avaler et détruire un microbe
+  - se faire vacciner
+  - une maladie
+  bonne: 1
+  explication: Réalisée par les phagocytes.
+  revoir: cours
+- question: Les anticorps sont fabriqués par…
+  choix:
+  - les globules rouges
+  - certains lymphocytes
+  - la peau
+  - les microbes
+  bonne: 1
+  explication: Ils sont spécifiques.
+  revoir: cours
+- question: Un vaccin contient…
+  choix:
+  - un antibiotique
+  - un microbe rendu inoffensif ou un morceau de microbe
+  - des globules rouges
+  - du sucre seulement
+  bonne: 1
+  explication: Il crée une mémoire sans maladie.
+  revoir: cours
+- question: Les antibiotiques agissent sur…
+  choix:
+  - les virus
+  - les bactéries
+  - tous les microbes
+  - les anticorps
+  bonne: 1
+  explication: Jamais sur les virus.
+  revoir: cours
+- question: Après une première infection, il reste…
+  choix:
+  - des lymphocytes mémoire
+  - des antibiotiques
+  - des virus
+  - rien
+  bonne: 0
+  explication: La réponse suivante sera plus rapide.
+  revoir: cours
