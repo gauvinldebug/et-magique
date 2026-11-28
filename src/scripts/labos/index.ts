@@ -11,13 +11,20 @@ if (labos.length) {
   const monte = async (r: HTMLElement) => {
     const nom = r.dataset.labo!;
     try {
-      const mod = MATHS.includes(nom) ? await import('./maths')
+      const mod = nom.startsWith('defi-') ? await import('./defis')
+        : MATHS.includes(nom) ? await import('./maths')
         : MATHS2.includes(nom) ? await import('./maths2')
           : PHYSIQUE2.includes(nom) ? await import('./physique2') : await import('./physique');
       const f = mod.LABOS[nom];
       if (!f) { r.hidden = true; return; }
       f(r);
       r.classList.add('pret');
+      // statistiques sans cookie : une seule mesure par figure, au premier geste
+      const geste = () => {
+        r.removeEventListener('pointerdown', geste); r.removeEventListener('input', geste);
+        (window as any).umami?.track('figure-manipulee', { figure: nom, page: location.pathname });
+      };
+      r.addEventListener('pointerdown', geste); r.addEventListener('input', geste);
     } catch (e) {
       console.error('Encadré interactif', nom, e);
       r.hidden = true;

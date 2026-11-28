@@ -4,10 +4,13 @@ import { cheminsChapitres } from '../../../../lib/routes';
 import { existe } from '../../../../lib/fichiers';
 import { md } from '../../../../lib/markdown';
 import { sujetsDuChapitre } from '../../../../lib/annales';
+import { DEFIS } from '../../../../data/defis';
+import '../../../../styles/labos.css';
 export const getStaticPaths = cheminsChapitres;
 const p = Astro.props;
 const { pdf } = p.chapitre.data;
 const annales = p.matiere.slug === 'maths' && p.niveau.slug === 'terminale' ? sujetsDuChapitre(p.chapitre.slug) : [];
+const defis = DEFIS[`${p.matiere.slug}/${p.niveau.slug}/${p.chapitre.slug}`] ?? [];
 const types = { application: 'Application', methode: 'Méthode', bac: 'Type bac', brevet: 'Type brevet', piege: 'Piège' };
 ---
 <Chapitre {...p} onglet="exercices">
@@ -15,6 +18,13 @@ const types = { application: 'Application', methode: 'Méthode', bac: 'Type bac'
     <span style="color:var(--encre-2);font-size:.92rem">Cherche d'abord. Ouvre la correction une étape à la fois, seulement quand tu bloques.</span>
     {existe(pdf.exercices) && <a class="btn ghost" href={pdf.exercices} download data-umami-event="exercices-pdf">Télécharger en PDF</a>}
   </div>
+  {defis.length > 0 && (
+    <section class="defis no-print">
+      <h2>À toi de jouer</h2>
+      <p class="defis-intro">Pas de calcul à écrire : manipule la figure jusqu'à la bonne réponse, puis vérifie.</p>
+      {defis.map((d) => <div class="labo defi" data-labo={d}></div>)}
+    </section>
+  )}
   <div class="exos">
     {p.exercices.map((ex, n) => (
       <article class="exo cahier" id={`exercice-${n + 1}`} data-exo={n + 1}>
@@ -63,6 +73,7 @@ const types = { application: 'Application', methode: 'Méthode', bac: 'Type bac'
 </Chapitre>
 
 <script>
+  import '../../../../scripts/labos/index';
   const track = (e: string, d?: object) => (window as any).umami?.track(e, d);
   document.querySelectorAll<HTMLElement>('[data-exo]').forEach((exo) => {
     const steps = [...exo.querySelectorAll<HTMLElement>('.stp')];
@@ -87,10 +98,11 @@ const types = { application: 'Application', methode: 'Méthode', bac: 'Type bac'
       update();
       if (shown === 1) track('exercice-ouvert', { exercice: exo.dataset.exo });
     });
-    all.addEventListener('click', () => { shown = steps.length; update(); });
+    all.addEventListener('click', () => { shown = steps.length; update(); track('correction-entiere', { exercice: exo.dataset.exo }); });
     exo.querySelector('[data-hint]')?.addEventListener('click', (e) => {
       const box = exo.querySelector<HTMLElement>('[data-indice]');
       if (box) box.hidden = false;
+      track('indice-exercice', { exercice: exo.dataset.exo });
       (e.currentTarget as HTMLElement).hidden = true;
     });
   });

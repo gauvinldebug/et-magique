@@ -1,7 +1,9 @@
 // Réglages généraux. Une matière = une chaîne YouTube = une section du site (/maths, /physique…).
 
 export const SITE = {
+  // Nom du site : le changer ici suffit pour l'accueil, le pied de page, les titres et les partages.
   nom: 'Et Magique',
+  autresNoms: ['Maths et Magique', 'Maths & Magique', 'mathsetmagique'],
   domaine: 'etmagique.fr',
   url: 'https://etmagique.fr',
   // Contact affiché dans les mentions légales.

@@ -6,7 +6,7 @@ import '../styles/impression.css';
 import Entete from '../components/Entete.astro';
 import Pied from '../components/Pied.astro';
 import BarreMatieres from '../components/BarreMatieres.astro';
-import { MATIERES, matiere as getMatiere, marque } from '../data/site';
+import { MATIERES, matiere as getMatiere, marque, SITE } from '../data/site';
 
 interface Props {
   titre: string;
@@ -26,13 +26,13 @@ const m = MATIERES[0];
 const ld = {
   '@context': 'https://schema.org',
   '@graph': [
-    { '@type': 'EducationalOrganization', '@id': `${site.origin}/#org`, name: 'Maths et Magique', alternateName: ['Et Magique', 'Maths & Magique', 'mathsetmagique'], url: site.origin, logo: new URL('/favicon.svg', site).href, sameAs: [m.youtube, m.instagram].filter(Boolean) },
-    { '@type': 'WebSite', '@id': `${site.origin}/#site`, name: 'Maths et Magique', alternateName: 'Et Magique', url: site.origin, inLanguage: 'fr-FR', publisher: { '@id': `${site.origin}/#org` } },
+    { '@type': 'EducationalOrganization', '@id': `${site.origin}/#org`, name: SITE.nom, alternateName: SITE.autresNoms, url: site.origin, logo: new URL('/favicon.svg', site).href, sameAs: [m.youtube, m.instagram].filter(Boolean) },
+    { '@type': 'WebSite', '@id': `${site.origin}/#site`, name: SITE.nom, alternateName: SITE.autresNoms, url: site.origin, inLanguage: 'fr-FR', publisher: { '@id': `${site.origin}/#org` } },
   ],
 };
 const umamiId = import.meta.env.PUBLIC_UMAMI_ID;
 const umamiSrc = import.meta.env.PUBLIC_UMAMI_SRC || 'https://cloud.umami.is/script.js';
-const pleinTitre = titre.includes('Magique') ? titre : `${titre} · ${marque(getMatiere(matiere) ? matiere : 'maths')}`;
+const pleinTitre = titre.toLowerCase().includes(SITE.nom.toLowerCase()) ? titre : `${titre} · ${marque(getMatiere(matiere) ? matiere : 'maths')}`;
 ---
 <!doctype html>
 <html lang="fr" data-matiere={matiere}>
@@ -51,7 +51,7 @@ const pleinTitre = titre.includes('Magique') ? titre : `${titre} · ${marque(get
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="fr_FR" />
     <meta property="og:url" content={canonical} />
-    <meta property="og:site_name" content="Maths et Magique" />
+    <meta property="og:site_name" content={SITE.nom} />
     <meta property="og:image" content={ogImage} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -59,7 +59,7 @@ const pleinTitre = titre.includes('Magique') ? titre : `${titre} · ${marque(get
     {verifGoogle && <meta name="google-site-verification" content={verifGoogle} />}
     {indexer && <script type="application/ld+json" set:html={JSON.stringify(ld)} />}
     {!indexer && <meta name="robots" content="noindex" />}
-    {umamiId && <script defer src={umamiSrc} data-website-id={umamiId} data-domains={`etmagique.fr,www.etmagique.fr,${site.host}`}></script>}
+    {umamiId && <script defer src={umamiSrc} data-website-id={umamiId} data-domains={`etmagique.fr,www.etmagique.fr,et-magique.etmagique.workers.dev,${site.host}`}></script>}
     <slot name="head" />
   </head>
   <body>
