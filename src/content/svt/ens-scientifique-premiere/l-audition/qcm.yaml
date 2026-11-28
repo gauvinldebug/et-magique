@@ -1,0 +1,55 @@
+questions:
+- question: L'organe qui transforme la vibration en message nerveux est…
+  choix:
+  - le tympan
+  - le pavillon
+  - la cochlée
+  - l'étrier
+  bonne: 2
+  explication: Ses cellules ciliées déclenchent le message.
+  revoir: cours
+- question: Les osselets servent à…
+  choix:
+  - capter le son
+  - transmettre et amplifier la vibration
+  - percevoir la hauteur
+  - produire le message nerveux
+  bonne: 1
+  explication: Marteau, enclume, étrier.
+  revoir: cours
+- question: Les sons aigus sont codés…
+  choix:
+  - au sommet de la cochlée
+  - à la base de la cochlée
+  - dans le tympan
+  - dans le pavillon
+  bonne: 1
+  explication: Les graves, au sommet.
+  revoir: cours
+- question: Le son est perçu dans…
+  choix:
+  - l'oreille interne
+  - le cortex auditif
+  - le nerf auditif
+  - le tympan
+  bonne: 1
+  explication: On entend avec le cerveau.
+  revoir: cours
+- question: Les cellules ciliées détruites…
+  choix:
+  - repoussent en quelques jours
+  - ne repoussent pas
+  - sont remplacées par les osselets
+  - repoussent après 18 ans
+  bonne: 1
+  explication: D'où l'importance de se protéger.
+  revoir: cours
+- question: Le risque pour l'audition dépend…
+  choix:
+  - du niveau sonore seulement
+  - de la durée seulement
+  - du niveau et de la durée
+  - de la couleur de l'enceinte
+  bonne: 2
+  explication: Un niveau élevé peu de temps ou moins élevé longtemps.
+  revoir: cours

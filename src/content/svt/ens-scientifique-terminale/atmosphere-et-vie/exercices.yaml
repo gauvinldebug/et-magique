@@ -1,0 +1,54 @@
+exercices:
+- titre: Lire une composition
+  difficulte: 1
+  type: application
+  enonce: |
+    Citer les trois principaux gaz de l'atmosphère primitive, et le gaz qui manquait par rapport à l'air actuel.
+  indice: Pense aux gaz rejetés par les volcans.
+  etapes:
+  - type: conc
+    titre: La réponse
+    texte: <mark>Diazote, dioxyde de carbone, vapeur d'eau ; il manquait le dioxygène</mark>.
+- titre: Lire les roches
+  difficulte: 2
+  type: methode
+  enonce: |
+    Des fers rubanés se forment jusqu'à 1,8 milliard d'années, et les paléosols rouges apparaissent vers 2,2 milliards d'années. Que nous apprennent ces deux roches sur l'histoire du dioxygène ?
+  indice: Où le fer s'oxyde-t-il dans chaque cas ?
+  etapes:
+  - type: calcul
+    titre: Les fers rubanés
+    texte: Le fer dissous dans l'océan réagit avec le dioxygène produit dans l'eau.
+  - type: conc
+    titre: Les paléosols
+    texte: <mark>Les paléosols rouges montrent que le dioxygène est présent dans l'atmosphère</mark>, puisque le fer des sols s'oxyde à l'air libre.
+- titre: Les volcans ont fait l'oxygène ?
+  difficulte: 2
+  type: piege
+  enonce: |
+    « Le dioxygène de l'air vient des gaz rejetés par les volcans au début de la Terre. » Corriger.
+  indice: Les volcans rejettent-ils du dioxygène ?
+  etapes:
+  - type: piege
+    titre: L'erreur
+    texte: Les volcans rejettent surtout de l'eau, du CO₂ et du diazote, pas de dioxygène.
+  - type: conc
+    titre: La correction
+    texte: <mark>Le dioxygène a été produit par la photosynthèse des cyanobactéries</mark>, puis des algues et des plantes.
+- titre: Pourquoi si tard sur la terre ferme ?
+  difficulte: 3
+  type: bac
+  enonce: |
+    La vie existe dans les océans depuis plus de 3,5 milliards d'années, mais les premières plantes terrestres n'apparaissent qu'il y a environ 450 millions d'années.
+    Expliquer ce délai à l'aide de l'histoire du dioxygène et de l'ozone.
+  indice: Que fait l'eau pour les êtres vivants face aux UV ?
+  etapes:
+  - type: calcul
+    titre: Le danger
+    texte: Les UV abîment l'ADN. L'eau en absorbe une partie, ce qui protégeait la vie aquatique.
+  - type: calcul
+    titre: La protection
+    texte: L'ozone se forme à partir du dioxygène. Il fallait d'abord assez de dioxygène dans l'air pour former une couche d'ozone efficace.
+  - type: conc
+    titre: La conclusion
+    texte: <mark>La vie n'a pu quitter l'eau qu'une fois la couche d'ozone formée</mark>, des centaines de millions d'années après la grande oxydation.

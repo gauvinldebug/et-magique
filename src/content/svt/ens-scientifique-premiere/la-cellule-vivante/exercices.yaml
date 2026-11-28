@@ -1,0 +1,51 @@
+exercices:
+- titre: Ordres de grandeur
+  difficulte: 1
+  type: application
+  enonce: |
+    Une cellule de joue mesure 60 µm. Combien de ces cellules faudrait-il aligner pour faire 1 mm ?
+  indice: 1 mm = 1 000 µm.
+  etapes:
+  - type: conc
+    titre: Le calcul
+    texte: <mark>$1\,000 / 60 \approx 17$ cellules</mark>.
+- titre: Une idée qui se construit
+  difficulte: 2
+  type: methode
+  enonce: |
+    Hooke observe des « cellules » dans le liège en 1665, mais la théorie cellulaire n'est formulée qu'en 1839. Expliquer pourquoi il a fallu si longtemps.
+  indice: Le liège est un tissu mort. Que manquait-il pour généraliser ?
+  etapes:
+  - type: calcul
+    titre: L'observation de Hooke
+    texte: Il voit des cases vides dans un tissu mort, sans savoir qu'il s'agit d'unités vivantes.
+  - type: conc
+    titre: La généralisation
+    texte: <mark>Il a fallu de meilleurs microscopes et beaucoup d'observations</mark> chez les plantes et les animaux pour affirmer que tout le vivant est fait de cellules.
+- titre: Pas de noyau, pas de cellule ?
+  difficulte: 2
+  type: piege
+  enonce: |
+    Un élève affirme : « La bactérie n'a pas de noyau, ce n'est donc pas une cellule. » Corriger.
+  indice: Qu'est-ce qui définit une cellule ?
+  etapes:
+  - type: piege
+    titre: L'erreur
+    texte: Il prend le noyau pour la définition de la cellule.
+  - type: conc
+    titre: La correction
+    texte: '<mark>La bactérie est une cellule</mark> : elle a une membrane, un cytoplasme, de l''ADN, et elle se divise. Son ADN n''est simplement pas enfermé dans un noyau.'
+- titre: Pourquoi une bicouche ?
+  difficulte: 3
+  type: bac
+  enonce: |
+    Les lipides de la membrane ont une tête qui attire l'eau et deux queues qui la fuient. Le milieu intérieur et le milieu extérieur de la cellule sont tous deux aqueux.
+    Expliquer pourquoi ces lipides forment une double couche, et pas une couche simple.
+  indice: Où peuvent se cacher les queues, si de l'eau est des deux côtés ?
+  etapes:
+  - type: calcul
+    titre: Les contraintes
+    texte: Les têtes doivent toucher l'eau, les queues doivent l'éviter. Il y a de l'eau des deux côtés.
+  - type: conc
+    titre: La solution
+    texte: '<mark>Deux couches tête-bêche</mark> : têtes vers l''eau de chaque côté, queues cachées au milieu. Cette organisation se forme toute seule dans l''eau.'

@@ -1,0 +1,55 @@
+exercices:
+- titre: Lire une notation
+  difficulte: 1
+  type: application
+  enonce: |
+    Le noyau d'oxygène le plus courant se note $^{16}_{8}\mathrm{O}$. Donner son nombre de protons, de nucléons et de neutrons.
+  indice: $Z$ protons, $A$ nucléons, $A - Z$ neutrons.
+  etapes:
+  - type: conc
+    titre: Le décompte
+    texte: <mark>8 protons, 16 nucléons, donc 8 neutrons</mark>.
+- titre: Compléter une équation
+  difficulte: 2
+  type: methode
+  enonce: |
+    Dans une étoile massive, trois noyaux d'hélium $^{4}_{2}\mathrm{He}$ fusionnent pour donner un seul noyau $^{A}_{Z}\mathrm{X}$. Trouver $A$ et $Z$, puis identifier l'élément (C : $Z = 6$, N : $Z = 7$, O : $Z = 8$).
+  indice: Conservation de $A$ et de $Z$.
+  etapes:
+  - type: calcul
+    titre: Les nucléons
+    texte: $A = 3 \times 4 = 12$.
+  - type: calcul
+    titre: La charge
+    texte: $Z = 3 \times 2 = 6$.
+  - type: conc
+    titre: L'élément
+    texte: <mark>$^{12}_{6}\mathrm{C}$, du carbone</mark>. C'est ainsi qu'est fabriqué le carbone de nos cellules.
+- titre: Isotope ou pas ?
+  difficulte: 2
+  type: piege
+  enonce: |
+    Un élève affirme que $^{14}_{6}\mathrm{C}$ et $^{14}_{7}\mathrm{N}$ sont des isotopes, puisqu'ils ont le même nombre de nucléons. A-t-il raison ?
+  indice: Qu'est-ce qui définit un élément ?
+  etapes:
+  - type: piege
+    titre: L'erreur
+    texte: Il compare les $A$. Or des isotopes ont le même $Z$, pas le même $A$.
+  - type: conc
+    titre: La réponse
+    texte: '<mark>Non</mark> : $Z = 6$ pour l''un (carbone), $Z = 7$ pour l''autre (azote). Ce sont deux éléments différents.'
+- titre: D'où vient l'or ?
+  difficulte: 3
+  type: bac
+  enonce: |
+    Le fer 56 est le noyau le plus stable. Fusionner des noyaux pour aller au-delà du fer coûte de l'énergie au lieu d'en libérer.
+    1. Pourquoi une étoile ne peut-elle pas fabriquer d'or par fusion dans son cœur pendant sa vie tranquille ?
+    2. Où se forme alors l'or ?
+  indice: Une étoile brille grâce à l'énergie que libère la fusion.
+  etapes:
+  - type: calcul
+    titre: Le cœur
+    texte: 'Une étoile tient parce que la fusion lui fournit de l''énergie. Au-delà du fer, la fusion en consomme : le four s''arrête.'
+  - type: conc
+    titre: Les lieux
+    texte: '<mark>L''or se forme lors d''événements violents</mark> : explosions d''étoiles massives (supernovas) et surtout collisions d''étoiles à neutrons, qui fournissent l''énergie et les neutrons nécessaires.'

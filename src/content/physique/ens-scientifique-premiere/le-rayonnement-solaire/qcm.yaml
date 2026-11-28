@@ -1,0 +1,55 @@
+questions:
+- question: L'énergie du Soleil vient…
+  choix:
+  - d'une combustion
+  - de la fusion nucléaire
+  - de la fission nucléaire
+  - de réactions chimiques
+  bonne: 1
+  explication: Des noyaux d'hydrogène fusionnent en hélium.
+  revoir: cours
+- question: Dans $E = \Delta m\, c^2$, $\Delta m$ est…
+  choix:
+  - la masse du Soleil
+  - la masse perdue
+  - la masse d'un proton
+  - la masse de la Terre
+  bonne: 1
+  explication: C'est la masse qui disparaît pendant la réaction.
+  revoir: cours
+- question: Le spectre de la lumière solaire est…
+  choix:
+  - un spectre de raies d'émission seul
+  - continu, avec des raies sombres
+  - limité au visible
+  - monochromatique
+  bonne: 1
+  explication: Spectre de corps chaud, avec les raies d'absorption de son atmosphère.
+  revoir: cours
+- question: D'après la loi de Wien, une étoile plus chaude émet le plus…
+  choix:
+  - vers les grandes longueurs d'onde
+  - vers les courtes longueurs d'onde
+  - toujours à 500 nm
+  - uniquement en infrarouge
+  bonne: 1
+  explication: $\lambda_{\max} \times T$ est constant.
+  revoir: cours
+- question: La température de surface du Soleil est d'environ…
+  choix:
+  - 580 K
+  - 5 800 K
+  - 58 000 K
+  - 15 millions de K
+  bonne: 1
+  explication: 15 millions de K, c'est son cœur.
+  revoir: cours
+- question: Dans la loi de Wien, la température s'exprime en…
+  choix:
+  - degrés Celsius
+  - kelvins
+  - joules
+  - watts
+  bonne: 1
+  explication: On ajoute 273 à la température en °C.
+  revoir: cours

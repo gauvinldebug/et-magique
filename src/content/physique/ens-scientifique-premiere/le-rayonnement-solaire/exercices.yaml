@@ -1,0 +1,58 @@
+exercices:
+- titre: Température d'une étoile
+  difficulte: 1
+  type: application
+  enonce: |
+    L'étoile Bételgeuse émet le plus vers $\lambda_{\max} = 830$ nm. Calculer sa température de surface.
+  indice: $T = 2{,}90 \times 10^{-3} / \lambda_{\max}$, avec $\lambda$ en mètres.
+  etapes:
+  - type: calcul
+    titre: La conversion
+    texte: $\lambda_{\max} = 830 \times 10^{-9}$ m.
+  - type: conc
+    titre: Le calcul
+    texte: '<mark>$T = \dfrac{2{,}90 \times 10^{-3}}{830 \times 10^{-9}} \approx 3\,500$ K</mark> : une étoile rouge, plus froide que le Soleil.'
+- titre: La masse perdue par seconde
+  difficulte: 2
+  type: methode
+  enonce: |
+    Le Soleil rayonne une puissance $P = 3{,}8 \times 10^{26}$ W. Calculer la masse qu'il perd chaque seconde.
+  indice: En une seconde, il libère $E = 3{,}8 \times 10^{26}$ J, et $\Delta m = E / c^2$.
+  etapes:
+  - type: calcul
+    titre: L'énergie en une seconde
+    texte: $E = P \times 1 = 3{,}8 \times 10^{26}$ J.
+  - type: conc
+    titre: La masse
+    texte: <mark>$\Delta m = \dfrac{3{,}8 \times 10^{26}}{(3{,}00 \times 10^8)^2} \approx 4{,}2 \times 10^{9}$ kg</mark>, plus de 4 millions de tonnes par seconde.
+- titre: L'étoile rouge est-elle la plus chaude ?
+  difficulte: 2
+  type: piege
+  enonce: |
+    Un élève dit : « Sirius est blanc-bleu, Antarès est rouge ; Antarès est donc la plus chaude, comme une braise rouge. » Corriger.
+  indice: 'Loi de Wien : $\lambda_{\max}$ courte, température élevée.'
+  etapes:
+  - type: piege
+    titre: L'erreur
+    texte: Il confond avec le langage courant. Une braise rouge est en fait plus froide qu'une flamme bleue.
+  - type: conc
+    titre: La correction
+    texte: <mark>Sirius, qui émet vers le bleu (courtes longueurs d'onde), est la plus chaude</mark>. Antarès, rouge, est plus froide.
+- titre: Combien de temps encore ?
+  difficulte: 3
+  type: bac
+  enonce: |
+    Le Soleil a une masse de $2{,}0 \times 10^{30}$ kg et perd $4{,}2 \times 10^{9}$ kg par seconde.
+    1. Quelle fraction de sa masse perd-il en un an ($3{,}2 \times 10^{7}$ s) ?
+    2. Commenter.
+  indice: Masse perdue en un an, divisée par la masse totale.
+  etapes:
+  - type: calcul
+    titre: En un an
+    texte: $4{,}2 \times 10^{9} \times 3{,}2 \times 10^{7} \approx 1{,}3 \times 10^{17}$ kg.
+  - type: calcul
+    titre: La fraction
+    texte: $\dfrac{1{,}3 \times 10^{17}}{2{,}0 \times 10^{30}} \approx 7 \times 10^{-14}$.
+  - type: conc
+    titre: Le commentaire
+    texte: '<mark>Une fraction minuscule</mark> : même en 4,6 milliards d''années, le Soleil n''a perdu qu''environ 0,03 % de sa masse par rayonnement.'

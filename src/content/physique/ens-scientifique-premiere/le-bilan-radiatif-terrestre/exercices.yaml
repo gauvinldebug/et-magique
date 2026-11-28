@@ -1,0 +1,55 @@
+exercices:
+- titre: Calculer un albédo
+  difficulte: 1
+  type: application
+  enonce: |
+    Une surface reçoit $500\ \mathrm{W/m^2}$ et en réfléchit $450\ \mathrm{W/m^2}$. Calculer son albédo et dire de quelle surface il peut s'agir.
+  indice: Albédo = réfléchie / reçue.
+  etapes:
+  - type: conc
+    titre: Le calcul
+    texte: '<mark>albédo $= 450 / 500 = 0{,}90$</mark> : c''est très réfléchissant, comme de la neige fraîche.'
+- titre: La puissance absorbée
+  difficulte: 2
+  type: methode
+  enonce: |
+    La Terre reçoit en moyenne $340\ \mathrm{W/m^2}$ et son albédo vaut 0,30. Calculer la puissance réfléchie et la puissance absorbée par mètre carré.
+  indice: Réfléchie = albédo × reçue ; absorbée = reçue − réfléchie.
+  etapes:
+  - type: calcul
+    titre: Réfléchie
+    texte: $0{,}30 \times 340 = 102\ \mathrm{W/m^2}$.
+  - type: conc
+    titre: Absorbée
+    texte: <mark>$340 - 102 = 238\ \mathrm{W/m^2}$</mark>, soit environ 240.
+- titre: Il faut supprimer l'effet de serre ?
+  difficulte: 2
+  type: piege
+  enonce: |
+    Un élève propose : « Pour arrêter le réchauffement, il faudrait supprimer complètement l'effet de serre. » Qu'en penser ?
+  indice: Quelle serait la température moyenne sans effet de serre ?
+  etapes:
+  - type: piege
+    titre: L'erreur
+    texte: Il confond l'effet de serre naturel et son renforcement par les activités humaines.
+  - type: conc
+    titre: La réponse
+    texte: <mark>Sans effet de serre, la Terre serait à −18 °C en moyenne</mark>, gelée. L'objectif est de ne pas renforcer l'effet de serre, pas de le supprimer.
+- titre: La fonte de la banquise
+  difficulte: 3
+  type: bac
+  enonce: |
+    Une région de banquise (albédo 0,6) reçoit $200\ \mathrm{W/m^2}$. La glace fond et laisse place à l'océan (albédo 0,06).
+    1. Calculer la puissance absorbée avant et après.
+    2. Expliquer pourquoi on parle de rétroaction qui amplifie le réchauffement.
+  indice: Absorbée = $(1 - \text{albédo}) \times$ reçue.
+  etapes:
+  - type: calcul
+    titre: Avant
+    texte: $(1 - 0{,}6) \times 200 = 80\ \mathrm{W/m^2}$.
+  - type: calcul
+    titre: Après
+    texte: $(1 - 0{,}06) \times 200 = 188\ \mathrm{W/m^2}$.
+  - type: conc
+    titre: La rétroaction
+    texte: '<mark>L''océan absorbe plus du double</mark> : il se réchauffe, ce qui fait fondre encore plus de glace. Le réchauffement s''entretient lui-même.'

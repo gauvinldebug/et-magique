@@ -1030,3 +1030,4 @@ html[data-matiere="svt"] .s-nav { --nav-fond: #127C59; }
 .s-nav .btn-yt:hover { background: var(--jaune); border-color: var(--jaune); color: #1A1A40; }
 .s-nav .burger { background: transparent; border-color: #fff; }
 .s-nav .burger:hover { background: rgba(255, 255, 255, .16); }
+.s-nav .burger.x span::before, .s-nav .burger.x span::after { background: #fff; }

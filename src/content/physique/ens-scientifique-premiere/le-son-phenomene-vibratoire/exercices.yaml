@@ -1,0 +1,55 @@
+exercices:
+- titre: Fréquence d'un son
+  difficulte: 1
+  type: application
+  enonce: |
+    Un son a une période de 2,5 ms. Calculer sa fréquence. Est-il audible ?
+  indice: $f = 1/T$ avec $T$ en secondes.
+  etapes:
+  - type: calcul
+    titre: La conversion
+    texte: $T = 2{,}5 \times 10^{-3}$ s.
+  - type: conc
+    titre: Le calcul
+    texte: '<mark>$f = 1 / (2{,}5 \times 10^{-3}) = 400$ Hz</mark>, entre 20 Hz et 20 kHz : audible.'
+- titre: L'orage
+  difficulte: 2
+  type: methode
+  enonce: |
+    On voit un éclair, puis on entend le tonnerre 6,0 s plus tard. La lumière arrive presque instantanément. À quelle distance est l'orage ?
+  indice: $d = v \times \Delta t$ avec $v = 340$ m/s.
+  etapes:
+  - type: calcul
+    titre: Le calcul
+    texte: $d = 340 \times 6{,}0 = 2\,040$ m.
+  - type: conc
+    titre: La réponse
+    texte: '<mark>Environ 2 km</mark>. D''où la règle pratique : 3 secondes par kilomètre.'
+- titre: Deux tondeuses
+  difficulte: 2
+  type: piege
+  enonce: |
+    Une tondeuse produit 80 dB à l'endroit où tu te trouves. Le voisin en démarre une identique. Un élève annonce 160 dB. Corriger.
+  indice: L'intensité double, et doubler l'intensité ajoute 3 dB.
+  etapes:
+  - type: piege
+    titre: L'erreur
+    texte: Il additionne les décibels. Or ce sont les intensités qui s'additionnent.
+  - type: conc
+    titre: Le bon résultat
+    texte: <mark>Environ 83 dB</mark>. 160 dB serait bien au-delà du seuil de douleur.
+- titre: Harmoniques d'une corde
+  difficulte: 3
+  type: bac
+  enonce: |
+    Une corde de guitare joue un la de fréquence fondamentale $f_1 = 110$ Hz.
+    1. Donner les fréquences des trois premiers harmoniques après la fondamentale.
+    2. Un diapason joue aussi 110 Hz. Qu'est-ce qui distingue les deux sons ?
+  indice: 'Harmoniques : $2f_1$, $3f_1$, $4f_1$.'
+  etapes:
+  - type: calcul
+    titre: Les harmoniques
+    texte: $220$ Hz, $330$ Hz, $440$ Hz.
+  - type: conc
+    titre: La différence
+    texte: '<mark>Même hauteur, timbre différent</mark> : le diapason donne un son pur (110 Hz seul), la guitare un son composé avec ses harmoniques.'

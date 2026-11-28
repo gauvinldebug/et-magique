@@ -1,0 +1,55 @@
+questions:
+- question: Le carbone d'une plante vient surtout…
+  choix:
+  - du sol
+  - de l'eau
+  - du CO₂ de l'air
+  - des engrais
+  bonne: 2
+  explication: Le sol n'apporte que de l'eau et des sels minéraux.
+  revoir: cours
+- question: La photosynthèse produit…
+  choix:
+  - du CO₂ et de l'eau
+  - du glucose et du dioxygène
+  - de l'azote
+  - de la chlorophylle
+  bonne: 1
+  explication: C'est la batterie qui se charge.
+  revoir: cours
+- question: La photosynthèse a lieu dans…
+  choix:
+  - les mitochondries
+  - les chloroplastes
+  - le noyau
+  - les racines
+  bonne: 1
+  explication: Ils contiennent la chlorophylle.
+  revoir: cours
+- question: La chlorophylle absorbe surtout…
+  choix:
+  - le vert
+  - le bleu et le rouge
+  - l'infrarouge
+  - le jaune
+  bonne: 1
+  explication: Elle renvoie le vert.
+  revoir: cours
+- question: Le rendement moyen de la photosynthèse est d'environ…
+  choix:
+  - 1 %
+  - 25 %
+  - 50 %
+  - 90 %
+  bonne: 0
+  explication: Très faible, mais il nourrit presque tout le vivant.
+  revoir: cours
+- question: Le pétrole provient…
+  choix:
+  - de roches volcaniques
+  - de matière organique enfouie
+  - du noyau terrestre
+  - de l'eau de mer
+  bonne: 1
+  explication: C'est de l'énergie solaire du passé.
+  revoir: cours

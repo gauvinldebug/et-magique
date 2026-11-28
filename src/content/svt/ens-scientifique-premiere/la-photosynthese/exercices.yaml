@@ -1,0 +1,52 @@
+exercices:
+- titre: Lire l'équation
+  difficulte: 1
+  type: application
+  enonce: |
+    Combien de molécules de CO₂ faut-il pour fabriquer une molécule de glucose ? Et combien de dioxygène est libéré ?
+  indice: Lire les coefficients de l'équation.
+  etapes:
+  - type: conc
+    titre: La lecture
+    texte: <mark>6 molécules de CO₂, et 6 molécules de O₂ libérées</mark>.
+- titre: L'expérience de Van Helmont
+  difficulte: 2
+  type: methode
+  enonce: |
+    Vers 1640, Van Helmont plante un saule de 2,3 kg dans 90 kg de terre. Il n'ajoute que de l'eau. Cinq ans plus tard, le saule pèse 77 kg et la terre n'a perdu que 60 g. Que peut-on en conclure ?
+  indice: Comparer le gain du saule et la perte de la terre.
+  etapes:
+  - type: calcul
+    titre: Le bilan
+    texte: Le saule a gagné environ 75 kg ; la terre a perdu 0,06 kg.
+  - type: conc
+    titre: La conclusion
+    texte: <mark>La matière du saule ne vient pas de la terre</mark>. Van Helmont pensait qu'elle venait de l'eau ; on sait aujourd'hui qu'elle vient aussi, et surtout, du CO₂ de l'air.
+- titre: Pourquoi vert ?
+  difficulte: 2
+  type: piege
+  enonce: |
+    « Les feuilles sont vertes parce que la chlorophylle utilise la lumière verte. » Corriger.
+  indice: Une couleur qu'on voit est une couleur renvoyée.
+  etapes:
+  - type: piege
+    titre: L'erreur
+    texte: Elle confond couleur absorbée et couleur renvoyée.
+  - type: conc
+    titre: La correction
+    texte: <mark>La chlorophylle absorbe le bleu et le rouge et renvoie le vert</mark>. Le vert est justement la couleur qu'elle utilise le moins.
+- titre: Le rendement d'un champ de blé
+  difficulte: 3
+  type: bac
+  enonce: |
+    Un hectare de blé reçoit en une saison environ $2{,}5 \times 10^{13}$ J d'énergie solaire. La récolte (grains et paille) contient $2{,}0 \times 10^{11}$ J d'énergie chimique.
+    1. Calculer le rendement.
+    2. Que devient le reste de l'énergie ?
+  indice: Rendement = énergie stockée / énergie reçue.
+  etapes:
+  - type: calcul
+    titre: Le rendement
+    texte: $\dfrac{2{,}0 \times 10^{11}}{2{,}5 \times 10^{13}} = 0{,}008$.
+  - type: conc
+    titre: Le bilan
+    texte: <mark>Moins de 1 %</mark>. Le reste est réfléchi, transmis, ou part en chaleur et en évaporation de l'eau par les feuilles.

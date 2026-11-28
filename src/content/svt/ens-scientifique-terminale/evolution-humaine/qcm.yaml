@@ -1,0 +1,55 @@
+questions:
+- question: Le plus proche parent actuel de l'humain est…
+  choix:
+  - le gorille
+  - le chimpanzé et le bonobo
+  - l'orang-outan
+  - le macaque
+  bonne: 1
+  explication: Génomes identiques à environ 98,8 %.
+  revoir: cours
+- question: L'ancêtre commun humain-chimpanzé vivait il y a environ…
+  choix:
+  - 70 000 ans
+  - 300 000 ans
+  - 7 millions d'années
+  - 65 millions d'années
+  bonne: 2
+  explication: En Afrique.
+  revoir: cours
+- question: Chez les premiers représentants de la lignée humaine, est apparu en premier…
+  choix:
+  - le gros cerveau
+  - la bipédie
+  - l'écriture
+  - l'agriculture
+  bonne: 1
+  explication: Lucy était bipède avec un petit cerveau.
+  revoir: cours
+- question: Homo sapiens est apparu…
+  choix:
+  - en Europe
+  - en Asie
+  - en Afrique
+  - en Amérique
+  bonne: 2
+  explication: Les plus anciens fossiles viennent du Maroc.
+  revoir: cours
+- question: Les non-Africains actuels portent environ…
+  choix:
+  - 0 %
+  - 2 %
+  - 50 %
+  - 98 %
+  bonne: 1
+  explication: D'ADN néandertalien, trace de métissages.
+  revoir: cours
+- question: L'évolution culturelle se transmet…
+  choix:
+  - par les gènes
+  - par l'apprentissage
+  - par les mutations
+  - par les fossiles
+  bonne: 1
+  explication: Elle va bien plus vite que l'évolution biologique.
+  revoir: cours

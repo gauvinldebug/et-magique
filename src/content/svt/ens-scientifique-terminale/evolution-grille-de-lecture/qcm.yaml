@@ -1,0 +1,55 @@
+questions:
+- question: Le nerf laryngé de la girafe fait un long détour parce que…
+  choix:
+  - c'est plus efficace
+  - il est hérité d'ancêtres sans cou
+  - il protège le cœur
+  - il a été mal mesuré
+  bonne: 1
+  explication: La maison a été agrandie sans être rasée.
+  revoir: cours
+- question: Les mutations apparaissent…
+  choix:
+  - quand l'organisme en a besoin
+  - au hasard
+  - uniquement avec un antibiotique
+  - seulement chez l'humain
+  bonne: 1
+  explication: Le milieu trie ensuite.
+  revoir: cours
+- question: Un antibiotique utilisé trop souvent…
+  choix:
+  - crée des mutations de résistance
+  - sélectionne les bactéries résistantes
+  - rend les bactéries plus faibles
+  - n'a aucun effet sur l'évolution
+  bonne: 1
+  explication: Il élimine les sensibles.
+  revoir: cours
+- question: La tache aveugle de l'œil s'explique par…
+  choix:
+  - une maladie
+  - l'histoire évolutive de la rétine
+  - la lumière trop forte
+  - un défaut de fabrication récent
+  bonne: 1
+  explication: Les fibres nerveuses passent devant les cellules sensibles.
+  revoir: cours
+- question: « Le plus adapté », en évolution, c'est…
+  choix:
+  - le plus fort
+  - le plus gros
+  - celui qui laisse le plus de descendants
+  - le plus rapide
+  bonne: 2
+  explication: Ce qui compte, c'est la reproduction.
+  revoir: cours
+- question: L'évolution produit…
+  choix:
+  - des organismes parfaits
+  - des organismes assez bien adaptés à un milieu
+  - toujours des organismes plus complexes
+  - des organismes selon un plan
+  bonne: 1
+  explication: Avec des compromis.
+  revoir: cours

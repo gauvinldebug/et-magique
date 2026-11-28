@@ -1,0 +1,58 @@
+exercices:
+- titre: Classer des ressources
+  difficulte: 1
+  type: application
+  enonce: |
+    Classer en renouvelable ou non : uranium, vent, gaz naturel, bois, rayonnement solaire.
+  indice: Se renouvelle-t-elle à l'échelle d'une vie humaine ?
+  etapes:
+  - type: conc
+    titre: Le classement
+    texte: '<mark>Renouvelables : vent, bois (si la forêt repousse), solaire. Non renouvelables : uranium, gaz naturel.</mark>'
+- titre: Les émissions d'un foyer
+  difficulte: 2
+  type: methode
+  enonce: |
+    Un foyer consomme 4 500 kWh d'électricité par an. Calculer les émissions correspondantes si l'électricité vient du charbon, puis du nucléaire.
+  indice: Émissions = consommation × émissions par kWh.
+  etapes:
+  - type: calcul
+    titre: Charbon
+    texte: $4\,500 \times 1\,000 = 4{,}5 \times 10^{6}$ g, soit 4,5 t de CO₂.
+  - type: calcul
+    titre: Nucléaire
+    texte: $4\,500 \times 10 = 4{,}5 \times 10^{4}$ g, soit 45 kg.
+  - type: conc
+    titre: La comparaison
+    texte: <mark>Cent fois moins avec le nucléaire</mark> pour la même consommation.
+- titre: Le nucléaire est renouvelable ?
+  difficulte: 2
+  type: piege
+  enonce: |
+    « Le nucléaire émet très peu de CO₂, donc c'est une énergie renouvelable. » Corriger cette phrase.
+  indice: Renouvelable parle de la ressource, bas carbone parle des émissions.
+  etapes:
+  - type: piege
+    titre: L'erreur
+    texte: Elle mélange deux critères différents.
+  - type: conc
+    titre: La correction
+    texte: '<mark>Le nucléaire est bas carbone mais pas renouvelable</mark> : l''uranium est un stock fini.'
+- titre: Stocker l'énergie dans un barrage
+  difficulte: 3
+  type: bac
+  enonce: |
+    Une station de pompage remonte $1{,}0 \times 10^{6}\ \mathrm{m^3}$ d'eau (soit $1{,}0 \times 10^{9}$ kg) de 300 m. On prend $g = 9{,}8$ N/kg.
+    1. Calculer l'énergie potentielle stockée, en joules puis en MWh.
+    2. Le rendement du cycle pompage-turbinage vaut 0,75. Quelle énergie récupère-t-on ?
+  indice: $E_p = m\,g\,h$, et $1\ \mathrm{MWh} = 3{,}6 \times 10^{9}$ J.
+  etapes:
+  - type: calcul
+    titre: L'énergie stockée
+    texte: $E_p = 1{,}0 \times 10^{9} \times 9{,}8 \times 300 \approx 2{,}9 \times 10^{12}$ J, soit environ 820 MWh.
+  - type: calcul
+    titre: Ce qu'on récupère
+    texte: $0{,}75 \times 820 \approx 610$ MWh.
+  - type: conc
+    titre: Le sens
+    texte: '<mark>Environ 610 MWh récupérés</mark> : on perd un quart, mais on déplace de l''électricité produite quand on en a trop vers le moment où l''on en manque.'

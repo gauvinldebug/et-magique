@@ -1,0 +1,55 @@
+exercices:
+- titre: Rendement d'un panneau
+  difficulte: 1
+  type: application
+  enonce: |
+    Un panneau reçoit une puissance lumineuse de 1 000 W et fournit 180 W électriques. Calculer son rendement.
+  indice: $\eta = P_{\text{utile}} / P_{\text{reçue}}$.
+  etapes:
+  - type: conc
+    titre: Le calcul
+    texte: <mark>$\eta = 180 / 1\,000 = 0{,}18$, soit 18 %</mark>.
+- titre: Une chaîne de conversions
+  difficulte: 2
+  type: methode
+  enonce: |
+    Dans une centrale à charbon, la chaudière a un rendement de 0,90, la turbine de 0,40 et l'alternateur de 0,95. Calculer le rendement global.
+  indice: Les rendements se multiplient.
+  etapes:
+  - type: calcul
+    titre: Le produit
+    texte: $\eta = 0{,}90 \times 0{,}40 \times 0{,}95 \approx 0{,}34$.
+  - type: conc
+    titre: Le résultat
+    texte: '<mark>Environ 34 %</mark> : les deux tiers de l''énergie du charbon finissent en chaleur.'
+- titre: Les rendements s'ajoutent ?
+  difficulte: 2
+  type: piege
+  enonce: |
+    Pour la chaîne précédente, un élève calcule $0{,}90 + 0{,}40 + 0{,}95 = 2{,}25$. Qu'est-ce qui cloche ?
+  indice: Un rendement peut-il dépasser 1 ?
+  etapes:
+  - type: piege
+    titre: L'erreur
+    texte: Il additionne. Chaque maillon garde seulement une fraction de ce qu'il reçoit du précédent.
+  - type: conc
+    titre: La correction
+    texte: <mark>On multiplie, et on trouve 0,34</mark>. Un rendement de 2,25 voudrait dire qu'on crée de l'énergie, ce qui est impossible.
+- titre: L'éolienne en kilowattheures
+  difficulte: 3
+  type: bac
+  enonce: |
+    Une éolienne a une puissance nominale de 2,0 MW. Sur une année (8 760 h), elle produit 4 400 MWh.
+    1. Combien produirait-elle si elle tournait toute l'année à pleine puissance ?
+    2. Calculer son facteur de charge (production réelle / production maximale) et commenter.
+  indice: $E = P \times \Delta t$ en MWh.
+  etapes:
+  - type: calcul
+    titre: Le maximum
+    texte: $2{,}0 \times 8\,760 = 17\,520$ MWh.
+  - type: calcul
+    titre: Le facteur de charge
+    texte: $4\,400 / 17\,520 \approx 0{,}25$.
+  - type: conc
+    titre: Le commentaire
+    texte: '<mark>Environ 25 %</mark> : le vent n''est pas toujours là, ni assez fort. Ce n''est pas un rendement, c''est la part du temps « équivalent » à pleine puissance.'

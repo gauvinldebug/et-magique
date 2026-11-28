@@ -1,0 +1,55 @@
+questions:
+- question: La biodiversité se décrit à combien de niveaux ?
+  choix:
+  - un
+  - deux
+  - trois
+  - cinq
+  bonne: 2
+  explication: Écosystèmes, espèces, gènes.
+  revoir: cours
+- question: La diversité génétique, c'est…
+  choix:
+  - le nombre d'espèces
+  - la variété des allèles dans une espèce
+  - le nombre d'écosystèmes
+  - le nombre de cellules
+  bonne: 1
+  explication: Deux individus de la même espèce n'ont pas les mêmes allèles.
+  revoir: cours
+- question: La plus grande crise biologique connue a eu lieu…
+  choix:
+  - à la fin du Crétacé
+  - à la fin du Permien
+  - il y a 10 000 ans
+  - au Jurassique
+  bonne: 1
+  explication: Environ 90 % des espèces marines disparaissent.
+  revoir: cours
+- question: Après une crise biologique…
+  choix:
+  - l'évolution s'arrête
+  - les groupes survivants se diversifient
+  - toutes les espèces réapparaissent
+  - plus rien ne vit
+  bonne: 1
+  explication: Les mammifères après le Crétacé, par exemple.
+  revoir: cours
+- question: Laquelle n'est pas une cause majeure de l'érosion actuelle ?
+  choix:
+  - la destruction des milieux
+  - les espèces envahissantes
+  - la surexploitation
+  - la tectonique des plaques
+  bonne: 3
+  explication: Elle agit en millions d'années.
+  revoir: cours
+- question: On estime le nombre d'êtres vivants d'un milieu…
+  choix:
+  - en les comptant tous
+  - par échantillonnage
+  - au hasard
+  - par la taille du milieu seule
+  bonne: 1
+  explication: Puis on extrapole, avec une incertitude.
+  revoir: cours

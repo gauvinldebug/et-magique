@@ -1,0 +1,55 @@
+questions:
+- question: Au repos, un adulte dégage une puissance d'environ…
+  choix:
+  - 1 W
+  - 100 W
+  - 1 000 W
+  - 10 000 W
+  bonne: 1
+  explication: Comme une ampoule d'autrefois.
+  revoir: cours
+- question: L'énergie du corps vient…
+  choix:
+  - de l'air uniquement
+  - de la respiration cellulaire des nutriments
+  - de la peau
+  - du soleil directement
+  bonne: 1
+  explication: On décharge la batterie chargée par les plantes.
+  revoir: cours
+- question: La respiration cellulaire consomme…
+  choix:
+  - du CO₂
+  - du dioxygène
+  - de l'azote
+  - de la lumière
+  bonne: 1
+  explication: Et rejette du CO₂ et de l'eau.
+  revoir: cours
+- question: La sueur refroidit le corps par…
+  choix:
+  - conduction
+  - rayonnement
+  - évaporation
+  - convection
+  bonne: 2
+  explication: Évaporer de l'eau absorbe de l'énergie.
+  revoir: cours
+- question: La chaleur se déplace…
+  choix:
+  - du froid vers le chaud
+  - du chaud vers le froid
+  - au hasard
+  - uniquement par contact
+  bonne: 1
+  explication: C'est toujours dans ce sens.
+  revoir: cours
+- question: La température du corps reste stable quand…
+  choix:
+  - il ne produit plus de chaleur
+  - production et pertes sont égales
+  - il fait 37 °C dehors
+  - on ne mange plus
+  bonne: 1
+  explication: La chaudière compense les fuites.
+  revoir: cours

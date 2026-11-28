@@ -147,6 +147,20 @@ export const PROGRAMME: Record<string, Record<string, ChapitreProgramme[]>> = {
       { slug: 'contraction-musculaire', titre: "La contraction musculaire et l'énergie" },
       { slug: 'comportements-et-stress', titre: 'Comportements et stress' },
     ],
+    // Enseignement scientifique (tronc commun), partie SVT : BO spécial n°1 du 22/01/2019 et n°8 du 25/07/2019.
+    'ens-scientifique-premiere': [
+      { slug: 'la-cellule-vivante', titre: 'Une structure complexe : la cellule vivante' },
+      { slug: 'la-photosynthese', titre: 'Une conversion biologique : la photosynthèse' },
+      { slug: 'bilan-thermique-du-corps', titre: 'Le bilan thermique du corps humain' },
+      { slug: 'l-age-de-la-terre', titre: "Une histoire de l'âge de la Terre" },
+      { slug: 'l-audition', titre: 'Entendre la musique : l\'audition' },
+    ],
+    'ens-scientifique-terminale': [
+      { slug: 'atmosphere-et-vie', titre: "L'atmosphère terrestre et la vie" },
+      { slug: 'biodiversite-et-evolution', titre: 'La biodiversité et son évolution' },
+      { slug: 'evolution-grille-de-lecture', titre: "L'évolution comme grille de lecture du monde" },
+      { slug: 'evolution-humaine', titre: "L'évolution humaine" },
+    ],
   },
   physique: {
     '6e': [
@@ -229,6 +243,18 @@ export const PROGRAMME: Record<string, Record<string, ChapitreProgramme[]>> = {
       { slug: 'lunette-astronomique', titre: 'La lunette astronomique' },
       { slug: 'effet-photoelectrique', titre: 'Le photon et l\'effet photoélectrique' },
       { slug: 'circuit-rc', titre: 'Condensateur et circuit RC' },
+    ],
+    // Enseignement scientifique (tronc commun), partie physique-chimie.
+    'ens-scientifique-premiere': [
+      { slug: 'les-elements-chimiques', titre: 'Les éléments chimiques : une longue histoire' },
+      { slug: 'le-rayonnement-solaire', titre: 'Le rayonnement solaire' },
+      { slug: 'le-bilan-radiatif-terrestre', titre: 'Le bilan radiatif terrestre' },
+      { slug: 'le-son-phenomene-vibratoire', titre: 'Le son, un phénomène vibratoire' },
+    ],
+    'ens-scientifique-terminale': [
+      { slug: 'atmosphere-et-climat', titre: 'Atmosphère, effet de serre et climat' },
+      { slug: 'produire-l-electricite', titre: "Deux siècles d'énergie électrique" },
+      { slug: 'choix-energetiques', titre: 'Les choix énergétiques et le climat' },
     ],
   },
 };

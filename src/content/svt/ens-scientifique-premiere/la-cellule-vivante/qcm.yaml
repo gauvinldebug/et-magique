@@ -1,0 +1,55 @@
+questions:
+- question: Qui a établi que toute cellule provient d'une autre cellule ?
+  choix:
+  - Hooke
+  - Virchow
+  - Pasteur
+  - Darwin
+  bonne: 1
+  explication: Virchow, en 1855.
+  revoir: cours
+- question: La théorie cellulaire affirme que…
+  choix:
+  - seuls les animaux ont des cellules
+  - tout être vivant est fait de cellules
+  - les cellules apparaissent spontanément
+  - toutes les cellules ont un noyau
+  bonne: 1
+  explication: 'Plantes, animaux, bactéries : tout le vivant.'
+  revoir: cours
+- question: La membrane plasmique est constituée…
+  choix:
+  - d'une couche de protéines seule
+  - d'une bicouche de lipides avec des protéines
+  - de cellulose
+  - d'ADN
+  bonne: 1
+  explication: Les protéines sont les portes du rempart.
+  revoir: cours
+- question: Une bactérie mesure environ…
+  choix:
+  - 1 nm
+  - 1 µm
+  - 1 mm
+  - 1 cm
+  bonne: 1
+  explication: Un millionième de mètre.
+  revoir: cours
+- question: La molécule la plus abondante dans une cellule est…
+  choix:
+  - l'ADN
+  - l'eau
+  - le glucose
+  - les lipides
+  bonne: 1
+  explication: Environ 70 % de la masse.
+  revoir: cours
+- question: Les bactéries…
+  choix:
+  - n'ont pas de membrane
+  - n'ont pas de noyau
+  - ne sont pas des cellules
+  - n'ont pas d'ADN
+  bonne: 1
+  explication: Leur ADN est libre dans le cytoplasme.
+  revoir: cours

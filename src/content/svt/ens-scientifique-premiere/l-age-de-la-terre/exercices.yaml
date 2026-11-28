@@ -1,0 +1,52 @@
+exercices:
+- titre: Remettre dans l'ordre
+  difficulte: 1
+  type: application
+  enonce: |
+    Classer du plus récent au plus ancien ces âges proposés pour la Terre : 4,57 milliards d'années, 75 000 ans, 100 millions d'années, 6 000 ans.
+  indice: Suivre la chronologie des méthodes.
+  etapes:
+  - type: conc
+    titre: L'ordre des propositions
+    texte: <mark>6 000 ans (Bible), 75 000 ans (Buffon), 100 millions (Kelvin), 4,57 milliards (radiochronologie)</mark>.
+- titre: La méthode des sédiments
+  difficulte: 2
+  type: methode
+  enonce: |
+    Une pile de couches sédimentaires mesure 30 km d'épaisseur au total. On estime qu'il se dépose 0,3 mm de sédiments par an. Calculer le temps nécessaire.
+  indice: Durée = épaisseur / vitesse, dans la même unité.
+  etapes:
+  - type: calcul
+    titre: Les unités
+    texte: $30\ \mathrm{km} = 3 \times 10^{7}$ mm.
+  - type: conc
+    titre: La durée
+    texte: <mark>$3 \times 10^{7} / 0{,}3 = 10^{8}$ ans</mark>, 100 millions d'années, déjà bien plus que Buffon.
+- titre: Kelvin s'est trompé dans ses calculs ?
+  difficulte: 2
+  type: piege
+  enonce: |
+    « Kelvin trouvait 100 millions d'années parce qu'il calculait mal. » Corriger.
+  indice: Que ne connaissait-il pas en 1862 ?
+  etapes:
+  - type: piege
+    titre: L'erreur
+    texte: On confond un calcul faux et un modèle incomplet.
+  - type: conc
+    titre: La correction
+    texte: <mark>Son calcul était juste, mais il ignorait la radioactivité</mark>, qui chauffe l'intérieur de la Terre et ralentit son refroidissement.
+- titre: Pourquoi les météorites ?
+  difficulte: 3
+  type: bac
+  enonce: |
+    Les plus vieux minéraux trouvés sur Terre ont 4,4 milliards d'années, mais on donne 4,57 milliards d'années à la Terre.
+    1. Proposer une explication à l'absence de roches terrestres plus anciennes.
+    2. Pourquoi les météorites permettent-elles de dater la formation de la Terre ?
+  indice: 'La surface de la Terre est active : érosion, subduction, fusion.'
+  etapes:
+  - type: calcul
+    titre: Les roches manquantes
+    texte: 'Les roches les plus anciennes ont été détruites : érosion, enfouissement dans les zones de subduction, fusion.'
+  - type: conc
+    titre: Les météorites
+    texte: '<mark>Les météorites se sont formées en même temps que les planètes et n''ont pas été recyclées</mark> : leur âge radiochronologique donne celui du système solaire, donc de la Terre.'
