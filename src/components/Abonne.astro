@@ -1,0 +1,20 @@
+---
+// Encart sous la vidéo d'un chapitre : renvoie vers la chaîne YouTube de la matière.
+// Le texte change selon que la vidéo du chapitre est sortie ou non.
+import { MATIERES } from '../data/site';
+interface Props { matiere: string; sortie: boolean }
+const { matiere, sortie } = Astro.props;
+const m = MATIERES.find((x) => x.slug === matiere);
+const url = m?.youtube ? `${m.youtube}?sub_confirmation=1` : '';
+---
+{url && (
+  <div class="abonne" data-abonne>
+    <p data-abonne-txt>{sortie
+      ? `Une vidéo par chapitre, sur la chaîne ${m!.nom} et Magique.`
+      : 'La vidéo de ce chapitre arrive bientôt. Abonne-toi pour la voir dès sa sortie.'}</p>
+    <a class="btn-abonne" href={url} target="_blank" rel="noopener" data-umami-event="abonne-chapitre">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8Z" fill="#FF0033"/><path d="m9.75 15.02 5.75-3.02-5.75-3.02z" fill="#fff"/></svg>
+      S'abonner
+    </a>
+  </div>
+)}

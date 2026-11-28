@@ -2,7 +2,7 @@
 // La dernière vidéo mise en ligne sur la chaîne (remplace l'ancien encadré « Nouveau chapitre » / « Vidéo bientôt en ligne »).
 // Clic : la vidéo s'ouvre sur YouTube. Au chargement, la page demande à /api/video la dernière vidéo :
 // si une nouvelle est sortie depuis la construction du site, la carte se met à jour toute seule.
-import { NIVEAUX } from '../data/site';
+import { NIVEAUX, MATIERES } from '../data/site';
 import { derniereVideo } from '../lib/contenu';
 interface Props { matiere: string; grand?: boolean }
 const { matiere, grand = false } = Astro.props;
@@ -10,6 +10,7 @@ const v = await derniereVideo(matiere);
 const jour = (d?: string) => (d ? new Date(d).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'Europe/Paris' }) : '');
 const ch = v?.chapitre;
 const nv = ch && NIVEAUX.find((n) => n.slug === ch.niveau);
+const yt = MATIERES.find((m) => m.slug === matiere)?.youtube;
 const lien = ch ? `/${matiere}/${ch.niveau}/${ch.slug}/` : '';
 ---
 {v && (
@@ -24,6 +25,7 @@ const lien = ch ? `/${matiere}/${ch.niveau}/${ch.slug}/` : '';
       <div class="dv-actions">
         <a class="btn noir" href={`https://www.youtube.com/watch?v=${v.id}`} target="_blank" rel="noopener" data-dv-lien>Regarder sur YouTube</a>
         <a href={lien || `/${matiere}/`} data-dv-chap hidden={!lien} style="font-weight:700">{nv ? `Cours et exercices (${nv.court})` : 'Cours et exercices'}</a>
+        {yt && <a class="btn-abonne" href={`${yt}?sub_confirmation=1`} target="_blank" rel="noopener" data-umami-event="abonne-derniere-video"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8Z" fill="#FF0033"/><path d="m9.75 15.02 5.75-3.02-5.75-3.02z" fill="#fff"/></svg>S'abonner</a>}
       </div>
     </div>
   </article>

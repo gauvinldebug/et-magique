@@ -1,6 +1,7 @@
 ---
 import Chapitre from '../../../../layouts/Chapitre.astro';
 import Video from '../../../../components/Video.astro';
+import Abonne from '../../../../components/Abonne.astro';
 import { cheminsChapitres } from '../../../../lib/routes';
 import { existe } from '../../../../lib/fichiers';
 export const getStaticPaths = cheminsChapitres;
@@ -13,6 +14,7 @@ const base = `/${p.matiere.slug}/${p.niveau.slug}/${p.chapitre.slug}`;
   <div class="ch-grid">
     <div style="display:grid;gap:20px">
       <Video youtube={video.youtube} titre={p.chapitre.data.titre} matiere={p.matiere.slug} niveau={p.niveau.slug} chapitre={p.chapitre.slug} court={p.chapitre.data.court} />
+      <Abonne matiere={p.matiere.slug} sortie={!!video.youtube} />
       <p style="color:var(--encre-2)">{p.chapitre.data.description}</p>
     </div>
     <div class="side">
