@@ -1,138 +1,20 @@
 ---
 import Chapitre from '../../../../layouts/Chapitre.astro';
+import Qcm from '../../../../components/Qcm.astro';
 import { cheminsChapitres } from '../../../../lib/routes';
-import { md } from '../../../../lib/markdown';
 export const getStaticPaths = cheminsChapitres;
 const p = Astro.props;
 const base = `/${p.matiere.slug}/${p.niveau.slug}/${p.chapitre.slug}`;
 const revoir = { video: { href: `${base}/`, t: 'Revoir la vidéo' }, cours: { href: `${base}/cours/`, t: 'Relire le cours' }, exercices: { href: `${base}/exercices/`, t: 'Refaire les exercices' } };
-const lettres = 'ABCDE';
+const questions = p.qcm.map((q) => ({ ...q, revoir: q.revoir ? revoir[q.revoir] : undefined }));
 ---
 <Chapitre {...p} onglet="qcm">
-  <div class="qcm" data-qcm={p.chapitre.id} data-total={p.qcm.length}>
-    <div>
-      <div class="qcm-top"><span>Question <b data-num>1</b> sur {p.qcm.length}</span><span data-best></span></div>
-      <div class="prog" style="margin-top:7px"><i data-prog></i></div>
-    </div>
-    {p.qcm.map((q, n) => (
-      <section class="qcm-q" data-q={n} data-bonne={q.bonne} hidden={n > 0}>
-        <div style="display:grid;gap:20px">
-          <p class="qtext" set:html={md(q.question, true)} />
-          <div class="ans">
-            {q.choix.map((c, i) => (
-              <button type="button" data-c={i}><span class="lt">{lettres[i]}</span><span set:html={md(c, true)} /></button>
-            ))}
-          </div>
-          <div class="fb" data-fb hidden>
-            <b data-fb-titre></b>
-            <div set:html={md(q.explication)} />
-            {q.revoir && <a href={revoir[q.revoir].href} data-fb-revoir hidden>{revoir[q.revoir].t} →</a>}
-          </div>
-          <div style="display:flex;justify-content:flex-end"><button type="button" class="btn" data-suivante hidden>{n + 1 < p.qcm.length ? 'Question suivante →' : 'Voir mon score →'}</button></div>
-        </div>
-      </section>
-    ))}
-    <section data-fin hidden style="display:grid;gap:20px">
-      <span class="k">Ton score</span>
-      <div class="score"><span data-score></span> / {p.qcm.length}</div>
-      <p data-message></p>
-      <div style="display:flex;gap:10px;flex-wrap:wrap">
-        <button type="button" class="btn ghost" data-recommencer>Recommencer</button>
-        <a class="btn" href={`${base}/exercices/`}>Refaire les exercices</a>
-      </div>
-      <p class="aide">Ton score reste sur ton appareil. Rien n'est envoyé.</p>
-    </section>
-  </div>
+  <Qcm
+    questions={questions}
+    cle={p.chapitre.id}
+    matiere={p.matiere.slug}
+    titreImage={p.chapitre.data.court}
+    sousTitreImage={`QCM · ${p.niveau.nom} · ${p.matiere.nom}`}
+    refaire={{ href: `${base}/exercices/`, t: 'Refaire les exercices' }}
+  />
 </Chapitre>
-
-<script>
-  const track = (e: string, d?: object) => (window as any).umami?.track(e, d);
-  // Bonne réponse : une poignée de formes de l'affiche jaillit du bouton.
-  const eclat = (el: HTMLElement, n = 9) => {
-    if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-    const r = el.getBoundingClientRect();
-    const x = r.left + Math.min(r.width - 20, 60), y = r.top + r.height / 2;
-    for (let i = 0; i < n; i++) {
-      const s = document.createElement('span');
-      s.className = 'eclat ' + 'ctk'[i % 3];
-      const a = (i / n) * Math.PI * 2 + Math.random() * .5, d = 50 + Math.random() * 50;
-      s.style.setProperty('--x0', `${x}px`); s.style.setProperty('--y0', `${y}px`);
-      s.style.setProperty('--x1', `${x + Math.cos(a) * d}px`); s.style.setProperty('--y1', `${y + Math.sin(a) * d - 20}px`);
-      s.style.setProperty('--r', `${(Math.random() - .5) * 360}deg`);
-      document.body.append(s);
-      s.addEventListener('animationend', () => s.remove());
-    }
-  };
-  const root = document.querySelector<HTMLElement>('[data-qcm]');
-  if (root) {
-    const total = Number(root.dataset.total);
-    const key = `qcm:${root.dataset.qcm}`;
-    const qs = [...root.querySelectorAll<HTMLElement>('[data-q]')];
-    const fin = root.querySelector<HTMLElement>('[data-fin]')!;
-    const num = root.querySelector<HTMLElement>('[data-num]')!;
-    const prog = root.querySelector<HTMLElement>('[data-prog]')!;
-    const bestEl = root.querySelector<HTMLElement>('[data-best]')!;
-    const lire = () => { try { return Number(localStorage.getItem(key) ?? NaN); } catch { return NaN; } };
-    const ecrire = (v: number) => { try { localStorage.setItem(key, String(v)); } catch { /* navigation privée */ } };
-    const showBest = () => { const b = lire(); bestEl.textContent = Number.isFinite(b) ? `Ton record : ${b}/${total}` : ''; };
-    let cur = 0, score = 0;
-    const go = (i: number) => {
-      qs.forEach((q, j) => (q.hidden = j !== i));
-      fin.hidden = i < total;
-      num.textContent = String(Math.min(i + 1, total));
-      prog.style.width = `${(i / total) * 100}%`;
-    };
-    qs.forEach((q, i) => {
-      const bonne = Number(q.dataset.bonne);
-      const btns = [...q.querySelectorAll<HTMLButtonElement>('[data-c]')];
-      btns.forEach((b) =>
-        b.addEventListener('click', () => {
-          const c = Number(b.dataset.c);
-          const ok = c === bonne;
-          if (ok) score++;
-          btns.forEach((x) => { x.disabled = true; });
-          btns[bonne].classList.add('good');
-          if (!ok) b.classList.add('bad'); else eclat(b);
-          const fb = q.querySelector<HTMLElement>('[data-fb]')!;
-          fb.hidden = false;
-          fb.classList.add(ok ? 'ok' : 'ko');
-          q.querySelector<HTMLElement>('[data-fb-titre]')!.textContent = ok ? 'Bien joué !' : 'Pas tout à fait.';
-          const rv = q.querySelector<HTMLElement>('[data-fb-revoir]');
-          if (rv && !ok) rv.hidden = false;
-          q.querySelector<HTMLElement>('[data-suivante]')!.hidden = false;
-          q.querySelector<HTMLElement>('[data-suivante]')!.focus({ preventScroll: true });
-        }),
-      );
-      q.querySelector('[data-suivante]')!.addEventListener('click', () => {
-        cur = i + 1;
-        if (cur >= total) {
-          // le score défile de 0 à sa valeur
-          const sc = root.querySelector<HTMLElement>('[data-score]')!;
-          let k = 0; sc.textContent = '0';
-          const monte = () => { if (k < score) { sc.textContent = String(++k); setTimeout(monte, 90); } else if (score / total >= .7) eclat(sc, 14); };
-          setTimeout(monte, 350);
-          const r = score / total;
-          root.querySelector<HTMLElement>('[data-message]')!.textContent =
-            r === 1 ? 'Parfait. Tu maîtrises ce chapitre.' : r >= 0.7 ? 'Très bien. Revois les questions ratées et tu seras prêt.' : r >= 0.4 ? "C'est un début. Relis le cours, puis refais les exercices." : 'Pas de panique : revois la vidéo et le cours, puis réessaie.';
-          const b = lire();
-          if (!Number.isFinite(b) || score > b) ecrire(score);
-          showBest();
-          track('qcm-termine', { score, total });
-        }
-        go(cur);
-        root.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      });
-    });
-    root.querySelector('[data-recommencer]')!.addEventListener('click', () => {
-      score = 0; cur = 0;
-      qs.forEach((q) => {
-        q.querySelectorAll<HTMLButtonElement>('[data-c]').forEach((x) => { x.disabled = false; x.classList.remove('good', 'bad'); });
-        const fb = q.querySelector<HTMLElement>('[data-fb]')!; fb.hidden = true; fb.classList.remove('ok', 'ko');
-        q.querySelector<HTMLElement>('[data-fb-revoir]')?.setAttribute('hidden', '');
-        q.querySelector<HTMLElement>('[data-suivante]')!.hidden = true;
-      });
-      go(0);
-    });
-    showBest();
-  }
-</script>

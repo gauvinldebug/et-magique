@@ -19,6 +19,12 @@ const nbDispo = liste.filter((c) => c.dispo).length;
         <p>{nbDispo === 0 ? 'Les chapitres arrivent bientôt. Dis-nous lequel tu veux en premier.' : nbDispo === liste.length ? `Les ${nbDispo} chapitres du programme, tous en ligne.` : `${nbDispo} chapitre${nbDispo > 1 ? 's' : ''} en ligne, les autres arrivent.`}</p>
       </Bandeau>
       {nbDispo > 1 && (
+        <a class="hasard-cta" href={`/${matiere.slug}/${niveau.slug}/hasard/`} data-umami-event="hasard-ouvert">
+          <span><b>10 questions au hasard</b><small>Sur tous les chapitres de {niveau.nom}. Idéal pour réviser.</small></span>
+          <span class="btn jaune">C'est parti →</span>
+        </a>
+      )}
+      {nbDispo > 1 && (
         <div class="parcours" hidden data-parcours={`${matiere.slug}/${niveau.slug}`}>
           <div class="parcours-cases">{liste.filter((c) => c.dispo).map((c, i) => <i data-c={c.slug} style={`--i:${i}`} title={c.titre}></i>)}</div>
           <p data-parcours-texte></p>
