@@ -1,0 +1,56 @@
+exercices:
+- titre: Classer
+  difficulte: 1
+  type: application
+  enonce: |
+    Classer en capteur ou actionneur : moteur, micro, haut-parleur, caméra, lampe, thermomètre.
+  indice: Mesurer ou agir ?
+  etapes:
+  - type: calcul
+    titre: Capteurs
+    texte: 'Micro, caméra, thermomètre : ils mesurent.'
+  - type: conc
+    titre: Actionneurs
+    texte: '<mark>Moteur, haut-parleur, lampe : ils agissent.</mark>'
+- titre: L'arrosage automatique
+  difficulte: 2
+  type: methode
+  enonce: |
+    Écrire en français l'algorithme d'un arrosage automatique qui arrose quand l'humidité du sol est inférieure à 40 %.
+  indice: Pense à la boucle infinie.
+  etapes:
+  - type: calcul
+    titre: Les éléments
+    texte: 'Capteur : humidité du sol. Actionneur : vanne d''eau.'
+  - type: conc
+    titre: L'algorithme
+    texte: '<mark>Répéter sans fin : lire l''humidité ; si elle est inférieure à 40 %, ouvrir la vanne, sinon la fermer.</mark>'
+- titre: Embarqué donc connecté ?
+  difficulte: 2
+  type: piege
+  enonce: |
+    « Ma calculatrice contient un microcontrôleur, c'est donc un objet connecté. » Vrai ou faux ?
+  indice: Qu'est-ce qui distingue un objet connecté ?
+  etapes:
+  - type: piege
+    titre: L'erreur
+    texte: Confondre embarqué et connecté.
+  - type: conc
+    titre: Correction
+    texte: '<mark>Faux : elle est embarquée mais ne communique par aucun réseau.</mark>'
+- titre: Sécuriser une caméra
+  difficulte: 3
+  type: methode
+  enonce: |
+    Une famille installe une caméra connectée. Proposer trois mesures de sécurité et expliquer chacune.
+  indice: Pense au mot de passe, aux mises à jour, au réseau.
+  etapes:
+  - type: calcul
+    titre: Mot de passe
+    texte: Remplacer le mot de passe d'origine, connu des pirates, par un mot de passe long.
+  - type: calcul
+    titre: Mises à jour
+    texte: Les installer, car elles corrigent des failles.
+  - type: conc
+    titre: Réseau
+    texte: <mark>Protéger le Wi-Fi et désactiver l'accès à distance s'il ne sert pas.</mark>

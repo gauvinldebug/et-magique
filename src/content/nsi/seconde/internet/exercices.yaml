@@ -1,0 +1,53 @@
+exercices:
+- titre: Une adresse valide ?
+  difficulte: 1
+  type: application
+  enonce: |
+    Parmi ces adresses, lesquelles sont des adresses IPv4 valides ? `192.168.0.1`, `10.300.2.4`, `8.8.8.8`, `172.16.4`.
+  indice: Une adresse IPv4 a 4 nombres, chacun entre 0 et 255.
+  etapes:
+  - type: calcul
+    titre: Vérifier
+    texte: '`10.300.2.4` contient 300, trop grand. `172.16.4` n''a que 3 nombres.'
+  - type: conc
+    titre: Réponse
+    texte: <mark>Seules `192.168.0.1` et `8.8.8.8` sont valides.</mark>
+- titre: Le paquet perdu
+  difficulte: 2
+  type: methode
+  enonce: |
+    Un fichier est découpé en 5 paquets. Le paquet 3 se perd en route. Que se passe-t-il, et quel protocole s'en occupe ?
+  indice: Quel protocole numérote et vérifie les paquets ?
+  etapes:
+  - type: calcul
+    titre: Constater
+    texte: L'ordinateur qui reçoit voit qu'il a les paquets 1, 2, 4 et 5, mais pas le 3.
+  - type: conc
+    titre: Réagir
+    texte: <mark>TCP redemande le paquet 3, puis remet les 5 paquets dans l'ordre.</mark>
+- titre: Internet ou Web ?
+  difficulte: 2
+  type: piege
+  enonce: |
+    Un élève dit : « Quand j'envoie un message sur une messagerie, j'utilise le Web. » A-t-il raison ?
+  indice: Le Web, c'est les pages consultées avec un navigateur.
+  etapes:
+  - type: piege
+    titre: L'erreur
+    texte: Il confond Internet et le Web.
+  - type: conc
+    titre: Correction
+    texte: '<mark>Il utilise Internet, mais pas forcément le Web : une application de messagerie échange des données sans passer par des pages web.</mark>'
+- titre: Combien d'adresses ?
+  difficulte: 3
+  type: methode
+  enonce: |
+    Une adresse IPv4 est codée sur 32 bits. Combien d'adresses différentes existe-t-il ? Pourquoi a-t-on créé IPv6 ?
+  indice: Avec 32 bits, on a 2 possibilités pour chaque bit.
+  etapes:
+  - type: calcul
+    titre: Le calcul
+    texte: $2^{32} = 4\,294\,967\,296$, soit environ 4,3 milliards d'adresses.
+  - type: conc
+    titre: La raison
+    texte: '<mark>Il y a plus d''objets connectés que d''adresses IPv4 : IPv6, sur 128 bits, en offre largement assez.</mark>'

@@ -1,0 +1,55 @@
+questions:
+- question: Dans un graphe social, une personne est…
+  choix:
+  - un sommet
+  - une arête
+  - un diamètre
+  - un centre
+  bonne: 0
+  explication: Les relations sont les arêtes.
+  revoir: cours
+- question: Le diamètre d'un graphe est…
+  choix:
+  - la plus petite excentricité
+  - la plus grande excentricité
+  - le nombre de sommets
+  - le nombre d'arêtes
+  bonne: 1
+  explication: Le rayon est la plus petite.
+  revoir: cours
+- question: L'effet petit monde dit que…
+  choix:
+  - les réseaux sont petits
+  - deux personnes sont reliées par une chaîne courte
+  - chacun a peu d'amis
+  - les graphes sont ronds
+  bonne: 1
+  explication: Souvent moins de 6 intermédiaires.
+  revoir: cours
+- question: Un réseau social gratuit gagne surtout de l'argent grâce…
+  choix:
+  - aux abonnements
+  - à la publicité ciblée
+  - à l'État
+  - aux dons
+  bonne: 1
+  explication: Il vend ton attention aux annonceurs.
+  revoir: cours
+- question: Le numéro contre le cyberharcèlement en France est…
+  choix:
+  - le 15
+  - le 112
+  - le 3018
+  - le 17
+  bonne: 2
+  explication: Gratuit et anonyme.
+  revoir: cours
+- question: Une relation « je te suis, tu ne me suis pas » se dessine avec…
+  choix:
+  - une arête sans sens
+  - une flèche
+  - un cercle
+  - rien
+  bonne: 1
+  explication: La relation n'est pas réciproque.
+  revoir: cours

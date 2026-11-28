@@ -1,0 +1,53 @@
+exercices:
+- titre: Compter les pixels
+  difficulte: 1
+  type: application
+  enonce: |
+    Une image fait 1920 pixels de large et 1080 de haut. Quelle est sa définition ?
+  indice: Multiplie la largeur par la hauteur.
+  etapes:
+  - type: calcul
+    titre: Calcul
+    texte: $1920 \times 1080 = 2\,073\,600$ pixels.
+  - type: conc
+    titre: Réponse
+    texte: <mark>Environ 2 mégapixels.</mark>
+- titre: Le poids brut
+  difficulte: 2
+  type: methode
+  enonce: |
+    Quel est le poids non compressé de cette image en RVB ? Et après une compression JPEG qui divise le poids par 10 ?
+  indice: 3 octets par pixel.
+  etapes:
+  - type: calcul
+    titre: Brut
+    texte: $2\,073\,600 \times 3 = 6\,220\,800$ octets, environ 6,2 Mo.
+  - type: conc
+    titre: Compressé
+    texte: <mark>Environ 0,6 Mo après compression.</mark>
+- titre: Le code d'une couleur
+  difficulte: 2
+  type: application
+  enonce: |
+    Quelle couleur correspond à (0, 255, 0) ? À (255, 255, 0) ? À (128, 128, 128) ?
+  indice: Mélange additif de la lumière.
+  etapes:
+  - type: calcul
+    titre: Les deux premières
+    texte: (0, 255, 0) est vert pur ; (255, 255, 0) est jaune (rouge + vert).
+  - type: conc
+    titre: La dernière
+    texte: '<mark>(128, 128, 128) : trois valeurs égales et moyennes, c''est un gris.</mark>'
+- titre: 200 mégapixels
+  difficulte: 3
+  type: piege
+  enonce: |
+    Un téléphone annonce 200 mégapixels. Un élève dit qu'il fera forcément de meilleures photos qu'un appareil de 24 mégapixels à grand capteur. Que lui répondre ?
+  indice: De quoi dépend la qualité d'une photo ?
+  etapes:
+  - type: piege
+    titre: L'erreur
+    texte: Croire que seule la définition compte.
+  - type: conc
+    titre: Correction
+    texte: '<mark>Sur un petit capteur, les photosites sont minuscules et captent peu de lumière : l''image est plus bruitée. La qualité dépend aussi du capteur, de l''objectif et des algorithmes.</mark>'

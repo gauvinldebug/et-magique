@@ -1,0 +1,53 @@
+exercices:
+- titre: Calculer une distance
+  difficulte: 1
+  type: application
+  enonce: |
+    Un signal met 0,07 s pour aller du satellite au récepteur. Quelle est la distance ?
+  indice: $d = c \times t$ avec $c = 300\,000$ km/s.
+  etapes:
+  - type: calcul
+    titre: Calcul
+    texte: $d = 300\,000 \times 0{,}07 = 21\,000$ km.
+  - type: conc
+    titre: Réponse
+    texte: <mark>Le satellite est à 21 000 km.</mark>
+- titre: Le meilleur itinéraire
+  difficulte: 2
+  type: methode
+  enonce: |
+    De A à D : A–B 4 min, B–D 6 min, A–C 3 min, C–D 9 min, B–C 1 min. Quel est le trajet le plus rapide ?
+  indice: Compare tous les chemins possibles.
+  etapes:
+  - type: calcul
+    titre: Les chemins
+    texte: 'A–B–D : 10 min. A–C–D : 12 min. A–C–B–D : 3 + 1 + 6 = 10 min. A–B–C–D : 14 min.'
+  - type: conc
+    titre: Réponse
+    texte: <mark>10 min, par A–B–D ou A–C–B–D.</mark>
+- titre: Le GPS qui espionne
+  difficulte: 2
+  type: piege
+  enonce: |
+    « Mon GPS envoie ma position aux satellites, donc ils savent où je suis. » Corriger.
+  indice: Dans quel sens va le signal ?
+  etapes:
+  - type: piege
+    titre: L'erreur
+    texte: Le récepteur GPS ne fait que recevoir.
+  - type: conc
+    titre: Correction
+    texte: <mark>Les satellites ne savent rien. Ce sont les applications du téléphone qui peuvent envoyer la position calculée à des serveurs.</mark>
+- titre: Pourquoi 4 satellites ?
+  difficulte: 3
+  type: methode
+  enonce: |
+    Expliquer pourquoi le récepteur a besoin d'au moins 4 satellites et pas seulement 3.
+  indice: Combien d'inconnues le récepteur doit-il trouver ?
+  etapes:
+  - type: calcul
+    titre: Les inconnues
+    texte: 'La position comporte 3 inconnues (latitude, longitude, altitude), et l''horloge du récepteur n''est pas parfaite : c''est une 4e inconnue.'
+  - type: conc
+    titre: Conclusion
+    texte: <mark>4 inconnues demandent 4 mesures, donc 4 satellites.</mark>

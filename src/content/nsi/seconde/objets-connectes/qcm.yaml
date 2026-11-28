@@ -1,0 +1,55 @@
+questions:
+- question: Un capteur sert à…
+  choix:
+  - mesurer
+  - agir
+  - afficher
+  - stocker
+  bonne: 0
+  explication: L'actionneur agit.
+  revoir: cours
+- question: Lequel est un actionneur ?
+  choix:
+  - un thermomètre
+  - un micro
+  - un moteur
+  - une caméra
+  bonne: 2
+  explication: Il produit un mouvement.
+  revoir: cours
+- question: Le programme d'un objet embarqué…
+  choix:
+  - s'exécute une seule fois
+  - tourne en boucle
+  - est sur internet
+  - est écrit en HTML
+  bonne: 1
+  explication: Il lit, décide, agit, sans fin.
+  revoir: cours
+- question: IHM signifie…
+  choix:
+  - Internet haut mobile
+  - interface homme-machine
+  - information humaine mesurée
+  - installation hors mémoire
+  bonne: 1
+  explication: Boutons, écran, voyants.
+  revoir: cours
+- question: Un objet connecté se distingue parce qu'il…
+  choix:
+  - a un capteur
+  - communique par un réseau
+  - a un écran
+  - est cher
+  bonne: 1
+  explication: Wi-Fi, Bluetooth ou réseau mobile.
+  revoir: cours
+- question: Pour protéger un objet connecté, il faut d'abord…
+  choix:
+  - le laisser tel quel
+  - changer le mot de passe d'origine
+  - le débrancher la nuit
+  - enlever les capteurs
+  bonne: 1
+  explication: Les mots de passe d'origine sont connus.
+  revoir: cours

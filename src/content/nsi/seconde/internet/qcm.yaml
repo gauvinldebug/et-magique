@@ -1,0 +1,55 @@
+questions:
+- question: Internet est…
+  choix:
+  - un site web
+  - un réseau de réseaux
+  - un logiciel
+  - une entreprise
+  bonne: 1
+  explication: Il relie des millions de réseaux.
+  revoir: cours
+- question: Le rôle d'un routeur est de…
+  choix:
+  - stocker les pages web
+  - aiguiller les paquets
+  - traduire les noms de domaine
+  - afficher les pages
+  bonne: 1
+  explication: Il lit l'adresse d'arrivée du paquet.
+  revoir: cours
+- question: Le DNS sert à…
+  choix:
+  - traduire un nom de domaine en adresse IP
+  - chiffrer les données
+  - découper les fichiers
+  - accélérer la connexion
+  bonne: 0
+  explication: C'est l'annuaire d'Internet.
+  revoir: cours
+- question: Quel protocole remet les paquets dans l'ordre ?
+  choix:
+  - IP
+  - TCP
+  - DNS
+  - HTML
+  bonne: 1
+  explication: TCP numérote et vérifie les paquets.
+  revoir: cours
+- question: Laquelle est une adresse IPv4 valide ?
+  choix:
+  - 256.1.1.1
+  - 12.4.8
+  - 90.12.0.255
+  - 1.2.3.4.5
+  bonne: 2
+  explication: 4 nombres entre 0 et 255.
+  revoir: cours
+- question: Dans un réseau pair à pair, chaque machine est…
+  choix:
+  - seulement cliente
+  - seulement serveur
+  - cliente et serveur
+  - un routeur
+  bonne: 2
+  explication: Elle télécharge et partage en même temps.
+  revoir: cours

@@ -1,0 +1,55 @@
+questions:
+- question: Dans une table, une ligne représente…
+  choix:
+  - un objet
+  - un descripteur
+  - un fichier
+  - une métadonnée
+  bonne: 0
+  explication: Les colonnes sont les descripteurs.
+  revoir: cours
+- question: Dans un fichier CSV, les valeurs sont séparées par…
+  choix:
+  - des espaces uniquement
+  - une virgule ou un point-virgule
+  - des balises
+  - des lignes vides
+  bonne: 1
+  explication: 'CSV : valeurs séparées par des virgules.'
+  revoir: cours
+- question: La date de prise de vue d'une photo est…
+  choix:
+  - une donnée cachée par erreur
+  - une métadonnée
+  - un descripteur de table
+  - un cookie
+  bonne: 1
+  explication: Elle décrit la donnée qu'est la photo.
+  revoir: cours
+- question: Filtrer une table, c'est…
+  choix:
+  - la ranger dans l'ordre
+  - garder les lignes qui vérifient une condition
+  - supprimer une colonne
+  - la convertir en CSV
+  bonne: 1
+  explication: Trier, c'est ranger.
+  revoir: cours
+- question: Les données du cloud sont stockées…
+  choix:
+  - nulle part
+  - dans les nuages
+  - dans des centres de données
+  - sur ton téléphone uniquement
+  bonne: 2
+  explication: Des bâtiments remplis de serveurs.
+  revoir: cours
+- question: Croiser deux tables permet parfois de…
+  choix:
+  - les effacer
+  - identifier une personne
+  - les chiffrer
+  - réduire leur taille
+  bonne: 1
+  explication: D'où l'importance de protéger les données.
+  revoir: cours

@@ -1,0 +1,55 @@
+questions:
+- question: Le Web a été inventé…
+  choix:
+  - en 1969 aux États-Unis
+  - en 1989 au CERN
+  - en 2004 par un réseau social
+  - en 1995 par un moteur de recherche
+  bonne: 1
+  explication: Par Tim Berners-Lee.
+  revoir: cours
+- question: Le langage qui décrit l'apparence d'une page est…
+  choix:
+  - HTML
+  - CSS
+  - HTTP
+  - URL
+  bonne: 1
+  explication: HTML décrit le contenu.
+  revoir: cours
+- question: Dans une URL, `www.exemple.fr` est…
+  choix:
+  - le protocole
+  - le nom de domaine
+  - le chemin
+  - un cookie
+  bonne: 1
+  explication: Il désigne le serveur.
+  revoir: cours
+- question: Le navigateur est…
+  choix:
+  - le client
+  - le serveur
+  - le routeur
+  - le DNS
+  bonne: 0
+  explication: Il envoie des requêtes au serveur.
+  revoir: cours
+- question: HTTPS garantit que…
+  choix:
+  - le site est honnête
+  - les échanges sont chiffrés
+  - la page est gratuite
+  - la page charge plus vite
+  bonne: 1
+  explication: Le reste est à vérifier soi-même.
+  revoir: cours
+- question: Un cookie est…
+  choix:
+  - un virus
+  - un petit fichier déposé par un site
+  - une page web
+  - un câble
+  bonne: 1
+  explication: Il peut garder ton panier ou te suivre.
+  revoir: cours
