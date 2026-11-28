@@ -9,6 +9,7 @@ import QRCode from 'qrcode';
 import { MATIERES, SITE } from '../data/site';
 import Recherche from '../components/Recherche.astro';
 import Profil from '../components/Profil.astro';
+import DerniereVideo from '../components/DerniereVideo.astro';
 import { AFFICHES } from '../data/affiches';
 import { chapitresPublies } from '../lib/contenu';
 
@@ -45,6 +46,14 @@ const qr = abonnement ? await QRCode.toString(abonnement, { type: 'svg', margin:
     </div>
   </header>
   <Profil />
+  {principale.youtube && (
+    <section class="nv-accueil" aria-labelledby="t-nv">
+      <div class="wrap">
+        <p class="profil-k" id="t-nv">Nouvelle vidéo</p>
+        <DerniereVideo matiere={principale.slug} />
+      </div>
+    </section>
+  )}
   <Histoire />
   <div class="portail-p">
     <div class="wrap">

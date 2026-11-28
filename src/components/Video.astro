@@ -40,6 +40,8 @@ const { youtube, titre, matiere, niveau, chapitre, court } = Astro.props;
       a.setAttribute('aria-label', `Regarder sur YouTube : ${el.dataset.titre ?? ''}`);
       a.innerHTML = `<img src="https://i.ytimg.com/vi/${id}/hqdefault.jpg" alt="" loading="lazy" referrerpolicy="no-referrer" /><span class="play"><i></i></span><span class="bientot yt">Regarder sur YouTube</span>`;
       el.replaceWith(a);
+      const t = document.querySelector('[data-abonne-txt]');
+      if (t) t.textContent = 'Une vidéo par chapitre, sur la chaîne YouTube.';
     } catch { /* hors ligne : on garde « Vidéo bientôt en ligne » */ }
   });
 </script>
