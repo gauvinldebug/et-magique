@@ -32,7 +32,7 @@ const qr = abonnement ? await QRCode.toString(abonnement, { type: 'svg', margin:
       <div class="ah-tete">
         <a class="wordmark" href="/" aria-label={`${SITE.nom}, accueil`}>{SITE.nom}</a>
         <nav aria-label="Matières">
-          {MATIERES.map((m) => m.active ? <a href={`/${m.slug}/`}>{m.nom}</a> : <span>{m.nom}</span>)}
+          {MATIERES.filter((m) => m.active).map((m) => <a href={`/${m.slug}/`}>{m.nom}</a>)}
         </nav>
       </div>
       <div class="ah-corps">
