@@ -53,7 +53,7 @@ const qr = abonnement ? await QRCode.toString(abonnement, { type: 'svg', margin:
             const contenu = (
               <>
                 <span class="poster-forme" aria-hidden="true"><Fragment set:html={a.forme} /></span>
-                <span class="poster-txt"><b>{m.nom}</b><span>{m.active ? `${nb(m.slug)} chapitres en ligne, de la 6e à la terminale.` : 'Bientôt'}</span></span>
+                <span class="poster-txt"><b>{m.nom}</b><span>{m.active ? `${nb(m.slug)} chapitres en ligne, ${({ nsi: 'de la seconde à la terminale', technologie: 'de la 5e à la 3e' } as Record<string, string>)[m.slug] ?? 'de la 6e à la terminale'}.` : 'Bientôt'}</span></span>
               </>
             );
             return (

@@ -1,0 +1,56 @@
+exercices:
+- titre: Un programme comme donnée
+  difficulte: 1
+  type: application
+  enonce: |
+    Citer trois programmes courants qui prennent un autre programme en entrée.
+  indice: Qui lit du code ?
+  etapes:
+  - type: conc
+    titre: Des exemples
+    texte: <mark>L'interpréteur Python, un compilateur, un antivirus</mark> (on peut aussi citer un éditeur de code qui colore la syntaxe).
+- titre: Le raisonnement par l'absurde
+  difficulte: 2
+  type: methode
+  enonce: |
+    Expliquer en trois phrases la structure de la preuve de l'indécidabilité du problème de l'arrêt.
+  indice: Supposer, construire, contredire.
+  etapes:
+  - type: calcul
+    titre: Supposer
+    texte: On suppose qu'un programme `arret` existe et répond toujours juste.
+  - type: calcul
+    titre: Construire
+    texte: On écrit `paradoxe`, qui fait le contraire de ce que prédit `arret` quand on l'applique à lui-même.
+  - type: conc
+    titre: Contredire
+    texte: '<mark>`paradoxe(paradoxe)` s''arrête si et seulement s''il ne s''arrête pas : absurde</mark>, donc `arret` n''existe pas.'
+- titre: Pas encore trouvé ?
+  difficulte: 2
+  type: piege
+  enonce: |
+    « Le problème de l'arrêt est indécidable, mais avec les progrès de l'intelligence artificielle, on finira par le résoudre. » Corriger.
+  indice: Que dit exactement la preuve ?
+  etapes:
+  - type: piege
+    titre: L'erreur
+    texte: 'La preuve ne dépend pas de la puissance des machines ni des méthodes : elle montre qu''aucun programme ne peut exister.'
+  - type: conc
+    titre: La correction
+    texte: <mark>C'est impossible par principe, pour toujours</mark> ; une IA reste un programme. On peut seulement traiter certains cas particuliers.
+- titre: Décidable ou non
+  difficulte: 3
+  type: bac
+  enonce: |
+    Pour chaque problème, dire s'il est décidable : (a) « cet entier est-il pair ? » ; (b) « ce programme Python sans boucle ni appel de fonction s'arrête-t-il ? » ; (c) « ce programme quelconque s'arrête-t-il sur cette entrée ? ».
+  indice: Existe-t-il un algorithme qui répond toujours ?
+  etapes:
+  - type: calcul
+    titre: (a)
+    texte: 'Décidable : on regarde le reste de la division par 2.'
+  - type: calcul
+    titre: (b)
+    texte: 'Décidable : sans boucle ni appel, les instructions s''exécutent une fois chacune, le programme s''arrête toujours.'
+  - type: conc
+    titre: (c)
+    texte: '<mark>Indécidable</mark> : c''est exactement le problème de l''arrêt.'

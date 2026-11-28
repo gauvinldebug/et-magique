@@ -30,6 +30,18 @@ const TEXTES: Record<string, { titre: string; description: string; h1: string; c
     h1: 'Les SVT, expliquées simplement.',
     chapeau: 'De la 6e à la terminale spécialité, avec la partie SVT de l\'enseignement scientifique. Cours, exercices corrigés et QCM pour chaque chapitre. Gratuit, sans compte, sans publicité.',
   },
+  nsi: {
+    titre: 'NSI et Magique : SNT et NSI au lycée, enfin claires',
+    description: 'SNT de seconde et spécialité NSI de première et terminale : cours avec du code Python commenté, exercices corrigés pas à pas, QCM et fiches à imprimer. Gratuit, sans compte, sans publicité.',
+    h1: 'L\'informatique, expliquée simplement.',
+    chapeau: 'SNT en seconde, spécialité NSI en première et en terminale. Cours, code Python commenté, exercices corrigés et QCM pour chaque chapitre. Gratuit, sans compte, sans publicité.',
+  },
+  technologie: {
+    titre: 'Techno et Magique : la technologie au collège, enfin claire',
+    description: 'Le programme de technologie du collège, de la 5e à la 3e : objets techniques, énergie, programmation, réseaux. Cours, exercices corrigés pas à pas, QCM et fiches à imprimer. Gratuit, sans compte, sans publicité.',
+    h1: 'La technologie, expliquée simplement.',
+    chapeau: 'De la 5e à la 3e : objets techniques, énergie, programmation et réseaux. Cours, exercices corrigés et QCM pour chaque chapitre. Gratuit, sans compte, sans publicité.',
+  },
 };
 const tx = TEXTES[matiere.slug] ?? TEXTES.maths;
 const publiesIci = (await chapitresPublies()).filter((c) => c.matiere === matiere.slug);
@@ -44,6 +56,10 @@ const niveauxDefi = niveauxDe(matiere.slug).filter((n) => publiesIci.some((c) =>
           <polygon class="f-tri" points="180,520 360,210 540,520" fill="#FF7AA8" />
           {matiere.slug === 'svt'
             ? <path class="f-courbe" d="M300 40 C 300 160, 520 160, 520 280 S 300 400, 300 520" fill="none" stroke="#fff" stroke-width="9" pathLength="1" />
+            : matiere.slug === 'nsi'
+            ? <path class="f-courbe" d="M240 260 L 340 260 L 340 120 L 470 120 L 470 300 L 620 300" fill="none" stroke="#fff" stroke-width="9" pathLength="1" />
+            : matiere.slug === 'technologie'
+            ? <path class="f-courbe" d="M200 330 L 300 330 L 300 230 L 420 230 L 420 330 L 540 330 L 540 230 L 700 230" fill="none" stroke="#fff" stroke-width="9" pathLength="1" />
             : matiere.slug === 'physique'
             ? <path class="f-courbe" d="M230 300 Q 310 140 390 300 T 550 300 T 710 300" fill="none" stroke="#fff" stroke-width="9" pathLength="1" />
             : <path class="f-courbe" d="M40 560 Q 380 -140 760 420" fill="none" stroke="#fff" stroke-width="9" pathLength="1" />}

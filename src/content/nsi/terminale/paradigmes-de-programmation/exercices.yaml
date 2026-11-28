@@ -1,0 +1,72 @@
+exercices:
+- titre: Pure ou pas
+  difficulte: 1
+  type: application
+  enonce: |
+    Ces fonctions sont-elles pures ?
+
+    ```python
+    def f(x):
+        return 2 * x + 1
+
+    def g(liste):
+        liste.append(0)
+        return len(liste)
+    ```
+  indice: Modifie-t-elle quelque chose à l'extérieur ?
+  etapes:
+  - type: calcul
+    titre: f
+    texte: 'f ne dépend que de x et ne modifie rien : elle est pure.'
+  - type: conc
+    titre: g
+    texte: '<mark>g n''est pas pure</mark> : elle modifie la liste reçue (effet de bord), et deux appels sur la même liste donnent des longueurs différentes.'
+- titre: Réécrire en fonctionnel
+  difficulte: 2
+  type: methode
+  enonce: |
+    Réécrire avec `map` et `filter` :
+
+    ```python
+    res = []
+    for mot in mots:
+        if len(mot) > 3:
+            res.append(mot.upper())
+    ```
+  indice: D'abord filtrer, puis transformer.
+  etapes:
+  - type: conc
+    titre: La version fonctionnelle
+    texte: '```python
+
+      longs = filter(lambda m: len(m) > 3, mots)
+
+      res = list(map(lambda m: m.upper(), longs))
+
+      ```'
+- titre: Le map invisible
+  difficulte: 2
+  type: piege
+  enonce: |
+    Un élève écrit `print(map(lambda x: x + 1, [1, 2, 3]))` et obtient `<map object at 0x...>`. Pourquoi ?
+  indice: Que renvoie `map` ?
+  etapes:
+  - type: piege
+    titre: L'erreur
+    texte: '`map` ne renvoie pas une liste mais un objet qui produit les valeurs à la demande.'
+  - type: conc
+    titre: La correction
+    texte: '<mark>`print(list(map(lambda x: x + 1, [1, 2, 3])))`</mark> affiche [2, 3, 4].'
+- titre: Une fonction en paramètre
+  difficulte: 3
+  type: bac
+  enonce: |
+    Écrire une fonction `appliquer_deux_fois(f, x)` qui renvoie f(f(x)). Que vaut `appliquer_deux_fois(lambda n: n * 3, 2)` ?
+  indice: Une fonction est une valeur comme une autre.
+  etapes:
+  - type: calcul
+    titre: La fonction
+    texte: "```python\ndef appliquer_deux_fois(f, x):\n    return f(f(x))\n```"
+  - type: conc
+    titre: Le calcul
+    texte: <mark>f(2) = 6, puis f(6) = 18.</mark>

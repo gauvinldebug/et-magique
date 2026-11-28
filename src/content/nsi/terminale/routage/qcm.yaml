@@ -1,0 +1,55 @@
+questions:
+- question: Une table de routage indique pour chaque destination…
+  choix:
+  - le trajet complet
+  - le prochain routeur
+  - le contenu du paquet
+  - l'adresse e-mail
+  bonne: 1
+  explication: Comme un panneau indicateur.
+  revoir: cours
+- question: La métrique de RIP est…
+  choix:
+  - le débit
+  - le nombre de sauts
+  - le coût en euros
+  - la distance en km
+  bonne: 1
+  explication: Le nombre de routeurs traversés.
+  revoir: cours
+- question: Avec RIP, une distance de 16 signifie…
+  choix:
+  - très proche
+  - injoignable
+  - coût minimal
+  - liaison rapide
+  bonne: 1
+  explication: Cela limite RIP aux petits réseaux.
+  revoir: cours
+- question: Le coût OSPF d'une liaison à 100 Mbit/s vaut…
+  choix:
+  - '100'
+  - '10'
+  - '1'
+  - '0'
+  bonne: 2
+  explication: 10⁸ / 10⁸ = 1.
+  revoir: cours
+- question: OSPF choisit la route qui minimise…
+  choix:
+  - le nombre de sauts
+  - la somme des coûts
+  - le nombre de câbles
+  - le temps de calcul
+  bonne: 1
+  explication: On additionne les coûts des liaisons.
+  revoir: cours
+- question: OSPF calcule ses routes avec l'algorithme de…
+  choix:
+  - Dijkstra
+  - Boyer-Moore
+  - tri fusion
+  - k plus proches voisins
+  bonne: 0
+  explication: Le plus court chemin pondéré.
+  revoir: cours

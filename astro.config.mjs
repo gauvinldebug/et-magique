@@ -19,5 +19,7 @@ export default defineConfig({
   markdown: {
     remarkPlugins: [remarkMath],
     rehypePlugins: [[rehypeKatex, katexOptions]],
+    // code coloré, clair ou sombre selon le thème du site
+    shikiConfig: { themes: { light: 'github-light', dark: 'github-dark' }, defaultColor: false },
   },
 });

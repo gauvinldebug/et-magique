@@ -1,0 +1,55 @@
+questions:
+- question: La programmation dynamique est utile quand…
+  choix:
+  - les sous-problèmes se répètent
+  - le problème est petit
+  - on trie une liste
+  - il n'y a pas de récursivité
+  bonne: 0
+  explication: On évite de recalculer.
+  revoir: cours
+- question: La mémoïsation consiste à…
+  choix:
+  - effacer les calculs
+  - mémoriser les résultats déjà calculés
+  - trier les données
+  - chiffrer les données
+  bonne: 1
+  explication: Souvent dans un dictionnaire.
+  revoir: cours
+- question: La version naïve de Fibonacci est lente car…
+  choix:
+  - les additions sont lentes
+  - elle recalcule les mêmes valeurs
+  - Python est lent
+  - elle n'a pas de cas de base
+  bonne: 1
+  explication: Le nombre d'appels explose.
+  revoir: cours
+- question: La version ascendante remplit…
+  choix:
+  - une pile
+  - un tableau des petits cas vers le grand
+  - un arbre de recherche
+  - une file
+  bonne: 1
+  explication: Du bas vers le haut.
+  revoir: cours
+- question: Avec les pièces 1, 6 et 10, le glouton rend 12 avec…
+  choix:
+  - 2 pièces
+  - 3 pièces
+  - 4 pièces
+  - 12 pièces
+  bonne: 1
+  explication: 10 + 1 + 1, alors que 6 + 6 suffit.
+  revoir: cours
+- question: Fibonacci mémoïsé calcule $F_n$ en environ…
+  choix:
+  - $n$ opérations
+  - $2^n$ opérations
+  - $n^2$ opérations
+  - 1 opération
+  bonne: 0
+  explication: Chaque valeur une fois.
+  revoir: cours

@@ -1,0 +1,55 @@
+questions:
+- question: Un processus est…
+  choix:
+  - un fichier sur le disque
+  - un programme en cours d'exécution
+  - un composant électronique
+  - un câble réseau
+  bonne: 1
+  explication: Avec sa mémoire et son état.
+  revoir: cours
+- question: Un processus qui attend une lecture sur le disque est…
+  choix:
+  - élu
+  - prêt
+  - bloqué
+  - terminé
+  bonne: 2
+  explication: Il attend une ressource.
+  revoir: cours
+- question: Qui choisit le processus élu ?
+  choix:
+  - l'utilisateur
+  - l'ordonnanceur du système d'exploitation
+  - le disque dur
+  - le navigateur
+  bonne: 1
+  explication: Il gère la file des processus prêts.
+  revoir: cours
+- question: Dans le tourniquet, chaque processus s'exécute…
+  choix:
+  - jusqu'à la fin
+  - pendant un quantum de temps
+  - seulement la nuit
+  - deux fois
+  bonne: 1
+  explication: Puis il repasse en fin de file.
+  revoir: cours
+- question: La commande Linux pour lister les processus est…
+  choix:
+  - ls
+  - ps
+  - cd
+  - cp
+  bonne: 1
+  explication: 'ps : process status.'
+  revoir: cours
+- question: Deux processus qui s'attendent mutuellement sont en…
+  choix:
+  - tourniquet
+  - interblocage
+  - récursion
+  - jointure
+  bonne: 1
+  explication: Deadlock en anglais.
+  revoir: cours

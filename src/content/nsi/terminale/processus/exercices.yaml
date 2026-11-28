@@ -1,0 +1,53 @@
+exercices:
+- titre: Les états
+  difficulte: 1
+  type: application
+  enonce: |
+    Un processus lit un fichier sur une clé USB lente. Dans quel état est-il pendant la lecture ? Et quand la lecture est terminée ?
+  indice: Il attend une ressource.
+  etapes:
+  - type: calcul
+    titre: Pendant la lecture
+    texte: 'Il attend une ressource : il est bloqué.'
+  - type: conc
+    titre: Après
+    texte: <mark>Il passe à l'état prêt</mark>, puis sera élu quand l'ordonnanceur le choisira.
+- titre: Le tourniquet
+  difficulte: 2
+  type: methode
+  enonce: |
+    Trois processus arrivent en même temps : A (durée 5), B (durée 2), C (durée 3), dans cet ordre. Avec un tourniquet de quantum 2, donner l'ordre d'exécution et l'instant de fin de chacun.
+  indice: Chacun s'exécute 2 unités au plus, puis passe son tour.
+  etapes:
+  - type: calcul
+    titre: La chronologie
+    texte: '0-2 : A (reste 3). 2-4 : B (fini). 4-6 : C (reste 1). 6-8 : A (reste 1). 8-9 : C (fini). 9-10 : A (fini).'
+  - type: conc
+    titre: Les fins
+    texte: <mark>B finit à 4, C à 9, A à 10.</mark>
+- titre: Le faux parallélisme
+  difficulte: 2
+  type: piege
+  enonce: |
+    « Mon ordinateur à un seul cœur exécute la musique et le navigateur exactement au même instant. » Est-ce vrai ?
+  indice: Combien d'instructions un cœur exécute-t-il à la fois ?
+  etapes:
+  - type: piege
+    titre: L'erreur
+    texte: Un seul cœur n'exécute qu'un processus à un instant donné.
+  - type: conc
+    titre: La réalité
+    texte: '<mark>L''ordonnanceur alterne très vite entre les processus</mark> (quelques millisecondes chacun) : on a l''impression que tout se fait en même temps.'
+- titre: Repérer un interblocage
+  difficulte: 3
+  type: bac
+  enonce: |
+    P1 demande la ressource R1 et l'obtient, P2 demande R2 et l'obtient. Puis P1 demande R2 et P2 demande R1. Que se passe-t-il ? Proposer une règle pour l'éviter.
+  indice: Chacun attend ce que l'autre garde.
+  etapes:
+  - type: calcul
+    titre: La situation
+    texte: P1 attend R2, détenue par P2. P2 attend R1, détenue par P1. Les deux sont bloqués pour toujours.
+  - type: conc
+    titre: Une règle
+    texte: <mark>C'est un interblocage.</mark> On l'évite par exemple en imposant à tous les processus de demander les ressources dans le même ordre (toujours R1 avant R2).

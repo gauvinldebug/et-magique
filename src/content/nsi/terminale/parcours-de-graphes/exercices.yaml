@@ -1,0 +1,62 @@
+exercices:
+- titre: Un parcours en largeur
+  difficulte: 1
+  type: application
+  enonce: |
+    Avec `g = {"A": ["B", "C"], "B": ["A", "D"], "C": ["A", "D", "E"], "D": ["B", "C", "F"], "E": ["C"], "F": ["D"]}`, donner l'ordre de visite du parcours en largeur depuis A.
+  indice: Défiler un sommet, enfiler ses voisins non visités dans l'ordre de la liste.
+  etapes:
+  - type: calcul
+    titre: La file
+    texte: 'A → enfile B, C. B → enfile D. C → enfile E (D déjà vu). D → enfile F. E, F : rien de nouveau.'
+  - type: conc
+    titre: L'ordre
+    texte: <mark>A, B, C, D, E, F.</mark>
+- titre: Un parcours en profondeur
+  difficulte: 2
+  type: methode
+  enonce: |
+    Avec le même graphe, donner l'ordre de visite du parcours en profondeur récursif du cours depuis A.
+  indice: On descend dans le premier voisin non visité avant de regarder les autres.
+  etapes:
+  - type: calcul
+    titre: La descente
+    texte: A, puis B (premier voisin), puis D (premier voisin non visité de B), puis C (premier voisin non visité de D), puis E. On remonte jusqu'à D, qui a encore F.
+  - type: conc
+    titre: L'ordre
+    texte: <mark>A, B, D, C, E, F.</mark>
+- titre: Le parcours qui ne finit pas
+  difficulte: 2
+  type: piege
+  enonce: |
+    Un élève écrit :
+
+    ```python
+    def explore(g, s):
+        print(s)
+        for v in g[s]:
+            explore(g, v)
+    ```
+
+    Sur le graphe précédent, le programme plante. Pourquoi ?
+  indice: Que se passe-t-il entre A et B ?
+  etapes:
+  - type: piege
+    titre: L'erreur
+    texte: 'A appelle B, qui appelle A, qui appelle B… Rien n''empêche de revisiter un sommet : la récursion ne s''arrête jamais.'
+  - type: conc
+    titre: La correction
+    texte: <mark>Il faut mémoriser les sommets visités</mark> et n'explorer que les voisins pas encore vus, comme dans la fonction du cours.
+- titre: Distance minimale
+  difficulte: 3
+  type: bac
+  enonce: |
+    Modifier le parcours en largeur pour qu'il renvoie un dictionnaire donnant, pour chaque sommet atteint, sa distance (en nombre d'arêtes) au départ.
+  indice: Un voisin découvert depuis `s` est à la distance de `s` plus 1.
+  etapes:
+  - type: methode
+    titre: L'idée
+    texte: 'Le dictionnaire des distances sert aussi de liste des visités : un sommet est visité dès qu''il a une distance.'
+  - type: conc
+    titre: La fonction
+    texte: "```python\nfrom collections import deque\n\ndef distances(g, depart):\n    dist = {depart: 0}\n    file = deque([depart])\n    while file:\n        s = file.popleft()\n        for v in g[s]:\n            if v not in dist:\n                dist[v] = dist[s] + 1\n                file.append(v)\n    return dist\n```"

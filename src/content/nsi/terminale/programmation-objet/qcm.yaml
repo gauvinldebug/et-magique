@@ -1,0 +1,55 @@
+questions:
+- question: Un objet est…
+  choix:
+  - une fonction
+  - une instance d'une classe
+  - un module
+  - une boucle
+  bonne: 1
+  explication: Un gâteau sorti du moule.
+  revoir: cours
+- question: La méthode `__init__` sert à…
+  choix:
+  - afficher l'objet
+  - initialiser les attributs à la création
+  - supprimer l'objet
+  - comparer deux objets
+  bonne: 1
+  explication: C'est le constructeur.
+  revoir: cours
+- question: Dans une méthode, `self` désigne…
+  choix:
+  - la classe
+  - l'objet sur lequel on appelle la méthode
+  - le module
+  - la méthode elle-même
+  bonne: 1
+  explication: c.deposer(20) revient à Compte.deposer(c, 20).
+  revoir: cours
+- question: '`c.solde` est…'
+  choix:
+  - une méthode
+  - un attribut
+  - une classe
+  - un module
+  bonne: 1
+  explication: Une donnée de l'objet.
+  revoir: cours
+- question: L'encapsulation consiste à…
+  choix:
+  - tout mettre dans une liste
+  - passer par les méthodes pour modifier l'objet
+  - supprimer les attributs
+  - copier les objets
+  bonne: 1
+  explication: On protège les règles de la classe.
+  revoir: cours
+- question: Combien d'objets peut-on créer à partir d'une classe ?
+  choix:
+  - un seul
+  - deux
+  - autant qu'on veut
+  - aucun
+  bonne: 2
+  explication: Un moule, autant de gâteaux qu'on veut.
+  revoir: cours

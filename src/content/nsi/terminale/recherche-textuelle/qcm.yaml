@@ -1,0 +1,55 @@
+questions:
+- question: La recherche naïve d'un motif de longueur m dans un texte de longueur n coûte au pire environ…
+  choix:
+  - $n$
+  - $m$
+  - $n \times m$
+  - $n + m$
+  bonne: 2
+  explication: m comparaisons pour chacune des n positions.
+  revoir: cours
+- question: Boyer-Moore compare le motif…
+  choix:
+  - de gauche à droite
+  - de droite à gauche
+  - au hasard
+  - par le milieu
+  bonne: 1
+  explication: On part de la fin du motif.
+  revoir: cours
+- question: Si la lettre du texte n'apparaît pas dans le motif de longueur m, on décale de…
+  choix:
+  - '1'
+  - m
+  - '2'
+  - '0'
+  bonne: 1
+  explication: Aucune position qui la recouvre ne peut convenir.
+  revoir: cours
+- question: Dans la table de `CGAT`, le décalage de G vaut…
+  choix:
+  - '1'
+  - '2'
+  - '3'
+  - '4'
+  bonne: 1
+  explication: G est à 2 cases de la fin.
+  revoir: cours
+- question: Boyer-Moore est d'autant plus efficace que…
+  choix:
+  - le motif est court
+  - le motif est long
+  - le texte est court
+  - l'alphabet a une seule lettre
+  bonne: 1
+  explication: Les sauts sont plus grands.
+  revoir: cours
+- question: La recherche de séquences dans l'ADN est un exemple de…
+  choix:
+  - tri
+  - recherche textuelle
+  - routage
+  - chiffrement
+  bonne: 1
+  explication: Un motif dans un très long texte.
+  revoir: cours

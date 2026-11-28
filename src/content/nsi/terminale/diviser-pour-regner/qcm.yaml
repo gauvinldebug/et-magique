@@ -1,0 +1,55 @@
+questions:
+- question: Les trois étapes de diviser pour régner sont…
+  choix:
+  - lire, écrire, compter
+  - diviser, résoudre, combiner
+  - trier, chercher, afficher
+  - empiler, dépiler, vider
+  bonne: 1
+  explication: On combine les solutions des sous-problèmes.
+  revoir: cours
+- question: Le tri fusion a un coût d'environ…
+  choix:
+  - $n$
+  - $n \log_2 n$
+  - $n^2$
+  - $2^n$
+  bonne: 1
+  explication: log₂ n niveaux de n opérations.
+  revoir: cours
+- question: Fusionner [1, 4] et [2, 3] donne…
+  choix:
+  - '[1, 4, 2, 3]'
+  - '[1, 2, 3, 4]'
+  - '[4, 3, 2, 1]'
+  - '[2, 3, 1, 4]'
+  bonne: 1
+  explication: On garde l'ordre en comparant.
+  revoir: cours
+- question: Le cas de base du tri fusion est…
+  choix:
+  - une liste triée
+  - une liste de taille 0 ou 1
+  - une liste de taille 2
+  - une liste vide seulement
+  bonne: 1
+  explication: Elle est déjà triée.
+  revoir: cours
+- question: Pour un million de valeurs, le tri fusion est par rapport au tri par insertion…
+  choix:
+  - un peu plus rapide
+  - des dizaines de milliers de fois plus rapide
+  - plus lent
+  - aussi rapide
+  bonne: 1
+  explication: 2 × 10⁷ contre 10¹² comparaisons.
+  revoir: cours
+- question: La recherche dichotomique est un exemple de…
+  choix:
+  - programmation dynamique
+  - diviser pour régner
+  - algorithme glouton
+  - parcours en largeur
+  bonne: 1
+  explication: On ne garde qu'une moitié.
+  revoir: cours

@@ -36,6 +36,15 @@ export const MATIERES: Matiere[] = [
     niveaux: ['6e', '5e', '4e', '3e', 'seconde', 'premiere', 'terminale', 'ens-scientifique-premiere', 'ens-scientifique-terminale'],
     sousTitres: { '6e': 'sciences et technologie', 'ens-scientifique-premiere': 'partie SVT', 'ens-scientifique-terminale': 'partie SVT' },
   },
+  {
+    slug: 'nsi', nom: 'NSI', nomLong: 'NSI', couleur: 'var(--nsi)', active: true,
+    niveaux: ['seconde', 'premiere', 'terminale'],
+    sousTitres: { seconde: 'SNT' },
+  },
+  {
+    slug: 'technologie', nom: 'Techno', nomLong: 'technologie', couleur: 'var(--brique)', active: false,
+    niveaux: ['5e', '4e', '3e'],
+  },
   { slug: 'histoire', nom: 'Histoire', couleur: 'var(--histoire)', active: false },
   { slug: 'francais', nom: 'Français', couleur: 'var(--francais)', active: false },
 ];

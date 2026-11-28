@@ -1,0 +1,71 @@
+exercices:
+- titre: Écrire des tests
+  difficulte: 1
+  type: application
+  enonce: |
+    Écrire trois tests avec `assert` pour une fonction `maximum(t)` qui renvoie le plus grand élément d'une liste non vide, dont un cas limite.
+  indice: Penser à une liste d'un seul élément et à des nombres négatifs.
+  etapes:
+  - type: conc
+    titre: Des tests
+    texte: '```python
+
+      assert maximum([3, 8, 1]) == 8
+
+      assert maximum([5]) == 5
+
+      assert maximum([-4, -2, -9]) == -2
+
+      ```
+
+
+      <mark>Le dernier test attrape une erreur classique : initialiser le maximum à 0.</mark>'
+- titre: Spécifier une fonction
+  difficulte: 2
+  type: methode
+  enonce: |
+    Écrire la docstring de la fonction `indice(t, x)` qui renvoie l'indice de la première occurrence de `x` dans la liste `t`, ou −1 si `x` est absent.
+  indice: Préciser les entrées, la sortie et le cas particulier.
+  etapes:
+  - type: conc
+    titre: La docstring
+    texte: "```python\ndef indice(t, x):\n    \"\"\"Renvoie l'indice de la première occurrence de x dans la liste t.\n    Renvoie -1 si x n'est pas dans t.\n    t n'est pas modifiée.\"\"\"\n```"
+- titre: Le test trompeur
+  difficulte: 2
+  type: piege
+  enonce: |
+    Un élève teste sa fonction :
+
+    ```python
+    def maximum(t):
+        m = 0
+        for x in t:
+            if x > m:
+                m = x
+        return m
+
+    assert maximum([2, 7, 4]) == 7
+    ```
+
+    Le test passe. La fonction est-elle juste ?
+  indice: Essayer avec une liste de nombres négatifs.
+  etapes:
+  - type: piege
+    titre: L'erreur
+    texte: '`maximum([-3, -1])` renvoie 0, qui n''est même pas dans la liste.'
+  - type: conc
+    titre: La correction
+    texte: <mark>Initialiser `m = t[0]`</mark> et ajouter un test avec des nombres négatifs.
+- titre: Une saisie robuste
+  difficulte: 3
+  type: bac
+  enonce: |
+    Écrire une fonction `demander_note()` qui redemande la saisie tant que l'utilisateur n'a pas tapé un entier entre 0 et 20, en utilisant `try` et `except`.
+  indice: Une boucle while True, un return quand la saisie est bonne.
+  etapes:
+  - type: methode
+    titre: L'idée
+    texte: '`int()` lève une `ValueError` si le texte n''est pas un entier ; on vérifie ensuite l''intervalle.'
+  - type: conc
+    titre: La fonction
+    texte: "```python\ndef demander_note():\n    while True:\n        try:\n            n = int(input(\"Note sur 20 : \"))\n            if 0 <= n <= 20:\n                return n\n            print(\"Entre 0 et 20.\")\n        except ValueError:\n            print(\"Il faut un nombre entier.\")\n```"

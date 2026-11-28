@@ -1,0 +1,55 @@
+questions:
+- question: Dans un chiffrement symétrique…
+  choix:
+  - la même clé chiffre et déchiffre
+  - il y a une clé publique et une privée
+  - il n'y a pas de clé
+  - la clé change à chaque lettre
+  bonne: 0
+  explication: Une seule clé partagée.
+  revoir: cours
+- question: Pour envoyer un secret à Bob, on chiffre avec…
+  choix:
+  - sa propre clé privée
+  - la clé publique de Bob
+  - la clé privée de Bob
+  - aucune clé
+  bonne: 1
+  explication: Seul Bob pourra déchiffrer.
+  revoir: cours
+- question: La clé privée doit être…
+  choix:
+  - publiée
+  - gardée secrète
+  - envoyée au serveur
+  - changée à chaque message
+  bonne: 1
+  explication: C'est elle qui déchiffre.
+  revoir: cours
+- question: RSA repose sur la difficulté de…
+  choix:
+  - trier une liste
+  - factoriser un très grand nombre
+  - additionner
+  - compresser une image
+  bonne: 1
+  explication: Retrouver les deux premiers.
+  revoir: cours
+- question: Le certificat d'un site sert à…
+  choix:
+  - accélérer la page
+  - prouver que la clé publique appartient bien au site
+  - stocker les mots de passe
+  - bloquer la publicité
+  bonne: 1
+  explication: Il protège de l'homme du milieu.
+  revoir: cours
+- question: AES est un chiffrement…
+  choix:
+  - asymétrique
+  - symétrique
+  - cassé
+  - de César
+  bonne: 1
+  explication: Rapide et sûr.
+  revoir: cours
