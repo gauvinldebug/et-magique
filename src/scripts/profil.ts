@@ -2,6 +2,8 @@
 // Tout reste dans le navigateur (localStorage), sans compte ni cookie.
 // Une fois le profil rempli, le site masque ce qui ne concerne pas l'élève, avec un bouton « Tout afficher ».
 
+import { MATIERES } from '../data/site';
+
 export type Profil = { classe: string; specialites: string[]; difficultes: string[]; tout?: boolean };
 
 const CLE = 'profil';
@@ -11,10 +13,10 @@ export const CLASSES: { slug: string; court: string }[] = [
   { slug: 'seconde', court: '2de' }, { slug: 'premiere', court: '1re' }, { slug: 'terminale', court: 'Tle' },
 ];
 
-/** Les spécialités proposées sur le site. */
-export const SPECIALITES: { slug: string; nom: string }[] = [
-  { slug: 'maths', nom: 'Maths' }, { slug: 'physique', nom: 'Physique-chimie' }, { slug: 'svt', nom: 'SVT' }, { slug: 'nsi', nom: 'NSI' },
-];
+/** Les spécialités de 1re et terminale. */
+export const SPECIALITES: { slug: string; nom: string }[] = MATIERES.filter((m) => m.specialite).map((m) => ({ slug: m.slug, nom: m.nom }));
+const SPEC = new Set(SPECIALITES.map((m) => m.slug));
+const CLASSES_SLUGS = ['6e', '5e', '4e', '3e', 'seconde', 'premiere', 'terminale'];
 
 export const avecSpecialites = (classe: string) => classe === 'premiere' || classe === 'terminale';
 
@@ -34,16 +36,14 @@ export function ecrire(p: Profil | null) {
 
 /** Les matières que l'élève a à sa classe (pour la question sur les difficultés). */
 export function matieresDeClasse(classe: string): string[] {
-  if (classe === '6e') return ['maths', 'physique', 'svt'];
-  if (['5e', '4e', '3e'].includes(classe)) return ['maths', 'physique', 'svt', 'technologie'];
-  return ['maths', 'physique', 'svt', 'nsi'];
+  return MATIERES.filter((m) => (m.niveaux ?? CLASSES_SLUGS).includes(classe)).map((m) => m.slug);
 }
 
-/** Les matières à montrer : au lycée (1re, Tle), ses spécialités et les matières où il a du mal. */
+/** Les matières à montrer : au lycée (1re, Tle), le tronc commun, ses spécialités et les matières où il a du mal. */
 export function matieresUtiles(p: Profil): string[] {
-  if (!avecSpecialites(p.classe)) return matieresDeClasse(p.classe);
-  const m = [...new Set([...p.specialites, ...p.difficultes])];
-  return m.length ? m : matieresDeClasse(p.classe);
+  const toutes = matieresDeClasse(p.classe);
+  if (!avecSpecialites(p.classe) || !p.specialites.length) return toutes;
+  return toutes.filter((m) => !SPEC.has(m) || p.specialites.includes(m) || p.difficultes.includes(m));
 }
 
 /** Les niveaux du site qui correspondent à sa classe (options et enseignement scientifique compris). */

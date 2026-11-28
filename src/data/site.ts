@@ -22,22 +22,23 @@ export type Matiere = {
   niveaux?: string[]; // niveaux proposés (par défaut : tous)
   sousTitres?: Record<string, string>; // sous-titre d'un niveau propre à la matière
   bac?: boolean; // annales et planning bac disponibles
+  specialite?: boolean; // spécialité de 1re et terminale (pour la personnalisation)
 };
 
 export const MATIERES: Matiere[] = [
-  { slug: 'maths', nom: 'Maths', couleur: 'var(--terme)', youtube: 'https://www.youtube.com/@mathsetmagique', youtubeId: 'UChNsi3Kbyr6fey6cAJy6I5A', instagram: 'https://www.instagram.com/maths_et_magique/', active: true, bac: true },
+  { slug: 'maths', nom: 'Maths', couleur: 'var(--terme)', specialite: true, youtube: 'https://www.youtube.com/@mathsetmagique', youtubeId: 'UChNsi3Kbyr6fey6cAJy6I5A', instagram: 'https://www.instagram.com/maths_et_magique/', active: true, bac: true },
   {
-    slug: 'physique', nom: 'Physique-chimie', nomLong: 'physique-chimie', couleur: 'var(--physique)', active: true,
+    slug: 'physique', specialite: true, nom: 'Physique-chimie', nomLong: 'physique-chimie', couleur: 'var(--physique)', active: true,
     niveaux: ['6e', '5e', '4e', '3e', 'seconde', 'premiere', 'terminale', 'ens-scientifique-premiere', 'ens-scientifique-terminale'],
     sousTitres: { '6e': 'sciences et technologie', 'ens-scientifique-premiere': 'partie physique-chimie', 'ens-scientifique-terminale': 'partie physique-chimie' },
   },
   {
-    slug: 'svt', nom: 'SVT', nomLong: 'SVT', couleur: 'var(--svt)', active: true,
+    slug: 'svt', specialite: true, nom: 'SVT', nomLong: 'SVT', couleur: 'var(--svt)', active: true,
     niveaux: ['6e', '5e', '4e', '3e', 'seconde', 'premiere', 'terminale', 'ens-scientifique-premiere', 'ens-scientifique-terminale'],
     sousTitres: { '6e': 'sciences et technologie', 'ens-scientifique-premiere': 'partie SVT', 'ens-scientifique-terminale': 'partie SVT' },
   },
   {
-    slug: 'nsi', nom: 'NSI', nomLong: 'NSI', couleur: 'var(--nsi)', active: true,
+    slug: 'nsi', specialite: true, nom: 'NSI', nomLong: 'NSI', couleur: 'var(--nsi)', active: true,
     niveaux: ['seconde', 'premiere', 'terminale'],
     sousTitres: { seconde: 'SNT' },
   },
@@ -45,8 +46,21 @@ export const MATIERES: Matiere[] = [
     slug: 'technologie', nom: 'Technologie', nomLong: 'technologie', couleur: 'var(--rose)', active: false,
     niveaux: ['5e', '4e', '3e'],
   },
-  { slug: 'histoire', nom: 'Histoire', couleur: 'var(--histoire)', active: false },
-  { slug: 'francais', nom: 'Français', couleur: 'var(--francais)', active: false },
+  // Matières à venir : affichées « Bientôt » (pictogramme et couleur dans affiches.ts).
+  { slug: 'francais', nom: 'Français', couleur: 'var(--francais)', active: false, niveaux: ['6e', '5e', '4e', '3e', 'seconde', 'premiere'] },
+  { slug: 'histoire', nom: 'Histoire-géo', nomLong: 'histoire-géo', couleur: 'var(--histoire)', active: false, niveaux: ['6e', '5e', '4e', '3e', 'seconde', 'premiere', 'terminale'] },
+  { slug: 'anglais', nom: 'Anglais', couleur: '#E0263C', active: false, niveaux: ['6e', '5e', '4e', '3e', 'seconde', 'premiere', 'terminale'] },
+  { slug: 'espagnol', nom: 'Espagnol', couleur: '#F2E94E', active: false, niveaux: ['5e', '4e', '3e', 'seconde', 'premiere', 'terminale'] },
+  { slug: 'allemand', nom: 'Allemand', couleur: '#00A6A6', active: false, niveaux: ['5e', '4e', '3e', 'seconde', 'premiere', 'terminale'] },
+  { slug: 'latin', nom: 'Latin', couleur: '#C9A227', active: false, niveaux: ['5e', '4e', '3e', 'seconde', 'premiere', 'terminale'] },
+  { slug: 'philosophie', nom: 'Philosophie', couleur: '#5B6B7F', active: false, niveaux: ['terminale'] },
+  { slug: 'ses', nom: 'SES', nomLong: 'SES', couleur: '#8BC34A', active: false, specialite: true, niveaux: ['seconde', 'premiere', 'terminale'] },
+  { slug: 'hggsp', nom: 'HGGSP', nomLong: 'HGGSP', couleur: '#004E64', active: false, specialite: true, niveaux: ['premiere', 'terminale'] },
+  { slug: 'hlp', nom: 'HLP', nomLong: 'HLP', couleur: '#E8D3B0', active: false, specialite: true, niveaux: ['premiere', 'terminale'] },
+  { slug: 'si', nom: 'Sciences de l\'ingénieur', nomLong: 'sciences de l\'ingénieur', couleur: '#6D4C41', active: false, specialite: true, niveaux: ['premiere', 'terminale'] },
+  { slug: 'arts', nom: 'Arts plastiques', couleur: '#FF4FD8', active: false, niveaux: ['6e', '5e', '4e', '3e'] },
+  { slug: 'musique', nom: 'Musique', couleur: '#3FA9F5', active: false, niveaux: ['6e', '5e', '4e', '3e'] },
+  { slug: 'eps', nom: 'EPS', nomLong: 'EPS', couleur: '#B39DFF', active: false, niveaux: ['6e', '5e', '4e', '3e', 'seconde', 'premiere', 'terminale'] },
 ];
 
 export const matiere = (slug: string) => MATIERES.find((m) => m.slug === slug);
