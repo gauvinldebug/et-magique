@@ -63,6 +63,8 @@ Opérations : $(u + v)' = u' + v'$, $(ku)' = ku'$, $(uv)' = u'v + uv'$, $\left(\
 
 </div>
 
+<div class="labo" data-labo="convexite"></div>
+
 ## Retour au problème
 
 La vitesse de propagation est $N'(t) = -3t^2 + 18t = 3t(6 - t)$, positive sur $[0\,;6]$ : $N$ est croissante.

@@ -46,6 +46,8 @@ Le rouge, le vert et le bleu sont les **couleurs primaires** de la synthèse add
 
 Deux couleurs sont **complémentaires** si leur superposition donne du blanc : rouge et cyan, vert et magenta, bleu et jaune.
 
+<div class="labo" data-labo="synthese"></div>
+
 ## La synthèse soustractive : on retire des lumières
 
 Un filtre ou un pigment **absorbe** une partie de la lumière qui le traverse ou qui l'éclaire. Les primaires de la synthèse soustractive sont le **cyan**, le **magenta** et le **jaune** (les cartouches d'une imprimante).

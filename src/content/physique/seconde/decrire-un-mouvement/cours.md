@@ -86,6 +86,8 @@ On combine la forme de la trajectoire et l'évolution de la vitesse.
 
 Un mouvement **rectiligne uniforme** est le seul pour lequel le **vecteur** vitesse est constant : même valeur, même direction, même sens. Dans un mouvement circulaire uniforme, la valeur est constante mais la direction tourne.
 
+<div class="labo" data-labo="chrono"></div>
+
 ## Les pièges
 
 - Toujours **préciser le référentiel** avant de décrire un mouvement.

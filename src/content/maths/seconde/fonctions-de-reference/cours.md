@@ -79,6 +79,8 @@ $\cbleu{f}(\corange{x}) = \dfrac{1}{\corange{x}}$, définie sur $\mathbb{R}^* = 
 
 </div>
 
+<div class="labo" data-labo="reference"></div>
+
 ## Retour au problème
 
 - $0 < 2{,}7 < 2{,}71$ et le carré est croissant sur $[0\,;+\infty[$ : <mark>$2{,}7^2 < 2{,}71^2$</mark>.

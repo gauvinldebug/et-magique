@@ -73,6 +73,8 @@ L'absorbance est **proportionnelle** à la concentration de l'espèce colorée.
 
 **Dosage par étalonnage** : on mesure l'absorbance de solutions étalons de concentrations connues, on trace la droite $A = f(c)$, et on y lit la concentration de la solution inconnue. Cette méthode est approfondie en [Terminale](/physique/terminale/dosages-et-titrages/cours/).
 
+<div class="labo" data-labo="beer"></div>
+
 ## Les pièges
 
 - $n = m/M$ : la masse en **grammes** si $M$ est en $\mathrm{g \cdot mol^{-1}}$.

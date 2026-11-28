@@ -78,6 +78,8 @@ En passant dans un milieu **plus réfringent** (indice plus grand), le rayon se 
 
 La dispersion par un prisme vient de là : l'indice du verre dépend légèrement de la longueur d'onde. Le violet est plus dévié que le rouge.
 
+<div class="labo" data-labo="refraction"></div>
+
 ## Les pièges
 
 - Angles par rapport à la **normale**.

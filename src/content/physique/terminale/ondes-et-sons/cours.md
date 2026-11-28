@@ -101,6 +101,8 @@ Si $v \ll c$, le décalage Doppler vaut approximativement $|\Delta f| = |f_R - f
 
 On s'en sert pour mesurer des vitesses : radars routiers, échographie Doppler du sang, et en astronomie le décalage des raies d'une étoile qui s'éloigne ou s'approche de nous.
 
+<div class="labo" data-labo="doppler"></div>
+
 ## Les pièges
 
 - Les décibels ne s'additionnent pas : on additionne les **intensités**, puis on recalcule $L$.

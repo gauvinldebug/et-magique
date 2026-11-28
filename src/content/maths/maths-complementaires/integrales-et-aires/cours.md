@@ -60,6 +60,8 @@ $$
 
 **Aire entre deux courbes** : si $f \ge g$ sur $[a\,;b]$, l'aire vaut $\int_a^b (f - g)$.
 
+<div class="labo" data-labo="rectangles"></div>
+
 ## Retour au problème
 
 La vitesse s'annule en $t = 5$. Une primitive de $v$ est $D(t) = 20t - 2t^2$, donc

@@ -54,6 +54,8 @@ $$\cbleu{\vec{AB}} + \corange{\vec{BC}} = \cvert{\vec{AC}}$$
 
 Deux glissades à la suite, de $A$ à $B$ puis de $B$ à $C$, reviennent à une seule glissade de $A$ à $C$. La lettre du milieu « disparaît ».
 
+<div class="labo" data-labo="vecteurs"></div>
+
 ## Coordonnées
 
 <div class="encadre">

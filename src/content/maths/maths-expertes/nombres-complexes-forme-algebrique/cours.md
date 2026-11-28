@@ -68,6 +68,8 @@ $$
 \frac{3 + 4i}{1 - 2i} = \frac{(3 + 4i)(1 + 2i)}{(1 - 2i)(1 + 2i)} = \frac{3 + 6i + 4i - 8}{1 + 4} = \frac{-5 + 10i}{5} = -1 + 2i.
 $$
 
+<div class="labo" data-labo="complexe"></div>
+
 ## Équations du second degré
 
 <div class="encadre">

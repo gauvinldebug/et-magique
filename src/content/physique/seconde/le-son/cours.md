@@ -80,6 +80,8 @@ Sur un oscillogramme, on mesure plusieurs périodes d'un coup pour plus de préc
 
 **Domaine audible.** L'oreille humaine perçoit les sons de **20 Hz à 20 000 Hz** environ. En dessous : infrasons (éléphants). Au-dessus : ultrasons (chauves-souris, échographie).
 
+<div class="labo" data-labo="son"></div>
+
 ## Le niveau d'intensité sonore
 
 On mesure la force d'un son avec un sonomètre, en **décibels** (dB). L'échelle n'est pas proportionnelle : quelques décibels de plus correspondent à une intensité beaucoup plus grande.

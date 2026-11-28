@@ -3,12 +3,17 @@
 // n'est chargé que si la page en contient un.
 const MATHS = ['tangente', 'parabole', 'exponentielle', 'cercle', 'cercle-courbe', 'suite', 'produit-scalaire', 'arbre', 'epsilon', 'gendarmes', 'tvi', 'convexite', 'ln', 'rectangles', 'binomiale', 'grands-nombres', 'dominos', 'eq-diff'];
 
+const MATHS2 = ['droite', 'reference', 'vecteurs', 'evolution', 'statistiques', 'complexe', 'markov', 'regression'];
+const PHYSIQUE2 = ['chrono', 'son', 'refraction', 'spectre', 'beer', 'synthese', 'doppler', 'orbite', 'titrage'];
+
 const labos = [...document.querySelectorAll<HTMLElement>('.labo[data-labo]')];
 if (labos.length) {
   const monte = async (r: HTMLElement) => {
     const nom = r.dataset.labo!;
     try {
-      const mod = MATHS.includes(nom) ? await import('./maths') : await import('./physique');
+      const mod = MATHS.includes(nom) ? await import('./maths')
+        : MATHS2.includes(nom) ? await import('./maths2')
+          : PHYSIQUE2.includes(nom) ? await import('./physique2') : await import('./physique');
       const f = mod.LABOS[nom];
       if (!f) { r.hidden = true; return; }
       f(r);

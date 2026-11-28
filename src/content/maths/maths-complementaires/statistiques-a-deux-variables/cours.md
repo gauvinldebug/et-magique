@@ -59,6 +59,8 @@ Elle **passe par le point moyen** $G$. En pratique, la calculatrice donne $a$, $
 
 **Changement de variable** : si les $y_i$ semblent croître de façon exponentielle, on pose $z_i = \ln y_i$ et on ajuste $z$ par une droite $z = ax + b$. On en déduit $y = e^{b}e^{ax}$.
 
+<div class="labo" data-labo="regression"></div>
+
 ## Retour au problème
 
 $\bar{x} = 3$ et $\bar{y} = 17$. Les écarts donnent $\sum(x_i - \bar{x})(y_i - \bar{y}) = 10 + 2 + 0 + 3 + 8 = 23$ et $\sum(x_i - \bar{x})^2 = 10$.

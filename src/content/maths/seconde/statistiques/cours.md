@@ -41,6 +41,8 @@ Pour une série de valeurs $x_1, \dots, x_p$ d'effectifs $n_1, \dots, n_p$, d'ef
 
 **Linéarité de la moyenne.** Si on ajoute 50 € à tous les salaires, la moyenne augmente de 50 €. Si on les multiplie par 1,02, la moyenne est multipliée par 1,02.
 
+<div class="labo" data-labo="statistiques"></div>
+
 ## Les indicateurs de dispersion
 
 <div class="encadre">

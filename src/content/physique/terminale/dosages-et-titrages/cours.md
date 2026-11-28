@@ -78,6 +78,8 @@ $$
 
 Pour un titrage d'acide faible par une base forte, à la **demi-équivalence** ($V = V_E/2$) on a $[\mathrm{AH}] = [\mathrm{A^-}]$, donc $\mathrm{pH} = \mathrm{p}K_A$. C'est une façon de mesurer un $\mathrm{p}K_A$.
 
+<div class="labo" data-labo="titrage"></div>
+
 ## Comment interpréter les pentes en conductimétrie
 
 On fait l'inventaire des ions avant et après l'équivalence. Exemple : acide chlorhydrique titré par la soude, $\mathrm{H_3O^+} + \mathrm{HO^-} \longrightarrow 2\,\mathrm{H_2O}$.
